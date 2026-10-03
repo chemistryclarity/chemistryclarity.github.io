@@ -4,7 +4,7 @@ title: 'Buffers: Quiz'
 description: 'Seven questions on how buffers work and buffer pH calculations, with explanations.'
 level: advanced
 access: free
-status: review
+status: published
 assisted: true
 questions:
   - id: bu-q1
