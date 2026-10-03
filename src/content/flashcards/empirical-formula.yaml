@@ -1,0 +1,39 @@
+# Flashcards: Empirical and Molecular Formulas
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'Empirical Formulas: Flashcards'
+description: 'Revise empirical and molecular formulas and the steps to find them.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: ef-01
+    front: 'What is an empirical formula?'
+    back: 'The simplest whole-number ratio of the atoms in a compound.'
+  - id: ef-02
+    front: 'What is a molecular formula?'
+    back: 'The actual number of each kind of atom in one molecule of a compound.'
+  - id: ef-03
+    front: 'What is the empirical formula of glucose, $\ce{C6H12O6}$?'
+    back: '$\ce{CH2O}$ (divide every subscript by 6)'
+  - id: ef-04
+    front: 'What is the empirical formula of hydrogen peroxide, $\ce{H2O2}$?'
+    back: '$\ce{HO}$'
+  - id: ef-05
+    front: 'What are the steps from percent composition to an empirical formula?'
+    back: 'Assume 100 g (% → g), divide by atomic masses (g → mol), divide by the smallest number of moles, then make whole numbers.'
+  - id: ef-06
+    front: 'Your mole ratio comes out as 1 : 1.50. What should you do?'
+    back: 'Multiply both by 2 to get 2 : 3. Never round 1.5 to 2.'
+  - id: ef-07
+    front: 'How do you get the molecular formula from the empirical formula?'
+    back: 'Find $n$ = molar mass ÷ empirical formula mass, then multiply every subscript by $n$.'
+  - id: ef-08
+    front: 'A compound has empirical formula $\ce{CH2}$ and molar mass 42.08 g/mol. What is its molecular formula?'
+    back: '$n = 42.08 \div 14.03 = 3$, so $\ce{C3H6}$.'
+  - id: ef-09
+    front: 'Why can''t you use the percentages directly as the atom ratio?'
+    back: 'Percentages compare **masses**. Atoms of different elements have different masses, so you must convert to moles first.'

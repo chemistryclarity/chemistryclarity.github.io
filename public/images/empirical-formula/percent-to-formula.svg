@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 600" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.5; }
+    .goal { fill: #e6f4f1; stroke: #0f766e; stroke-width: 2.5; }
+    .t { fill: #14213d; font-size: 15px; font-weight: 700; }
+    .g { fill: #0f766e; font-size: 15px; font-weight: 750; }
+    .op { fill: #14213d; font-size: 12.5px; font-weight: 650; }
+    .sub { fill: #5b6577; font-size: 11.5px; }
+    .arrow { stroke: #14213d; stroke-width: 2; fill: none; marker-end: url(#hd); }
+    .hd { fill: #14213d; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .box { fill: #1b263d; stroke: #3a4763; }
+      .goal { fill: #123a3a; stroke: #2dd4bf; }
+      .t, .op { fill: #e9edf5; }
+      .g { fill: #2dd4bf; }
+      .sub { fill: #9aa5ba; }
+      .arrow { stroke: #e9edf5; }
+      .hd { fill: #e9edf5; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path class="hd" d="M0 0 10 5 0 10z"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="360" height="600" rx="14"/>
+
+  <rect class="box" x="70" y="18" width="220" height="44" rx="10"/>
+  <text class="t" x="180" y="45" text-anchor="middle">Percent by mass</text>
+  <path class="arrow" d="M180 64 V96"/>
+  <text class="op" x="190" y="84">Assume 100 g: % → g</text>
+
+  <rect class="box" x="70" y="100" width="220" height="44" rx="10"/>
+  <text class="t" x="180" y="127" text-anchor="middle">Grams of each element</text>
+  <path class="arrow" d="M180 146 V178"/>
+  <text class="op" x="190" y="166">÷ atomic mass</text>
+
+  <rect class="box" x="70" y="182" width="220" height="44" rx="10"/>
+  <text class="t" x="180" y="209" text-anchor="middle">Moles of each element</text>
+  <path class="arrow" d="M180 228 V260"/>
+  <text class="op" x="190" y="248">÷ smallest number of moles</text>
+
+  <rect class="box" x="70" y="264" width="220" height="44" rx="10"/>
+  <text class="t" x="180" y="291" text-anchor="middle">Mole ratio</text>
+  <path class="arrow" d="M180 310 V356"/>
+  <text class="op" x="190" y="328">Round to whole numbers</text>
+  <text class="sub" x="190" y="344">(.5 → ×2,  .33 → ×3)</text>
+
+  <rect class="goal" x="70" y="360" width="220" height="50" rx="10"/>
+  <text class="g" x="180" y="380" text-anchor="middle">Empirical formula</text>
+  <text class="sub" x="180" y="399" text-anchor="middle">simplest whole-number ratio</text>
+  <path class="arrow" d="M180 412 V476"/>
+  <text class="op" x="190" y="432">× n, where</text>
+  <text class="sub" x="190" y="449">n = molar mass ÷</text>
+  <text class="sub" x="190" y="464">empirical formula mass</text>
+
+  <rect class="goal" x="70" y="480" width="220" height="50" rx="10"/>
+  <text class="g" x="180" y="500" text-anchor="middle">Molecular formula</text>
+  <text class="sub" x="180" y="519" text-anchor="middle">actual numbers of atoms</text>
+
+  <text class="sub" x="180" y="566" text-anchor="middle">The last step needs the molar mass,</text>
+  <text class="sub" x="180" y="582" text-anchor="middle">measured separately.</text>
+</svg>

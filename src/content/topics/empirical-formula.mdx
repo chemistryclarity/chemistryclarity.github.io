@@ -1,0 +1,132 @@
+---
+title: Empirical and Molecular Formulas
+question: "How do you find an empirical formula?"
+description: "What empirical and molecular formulas are, and how to work them out from percent composition and molar mass, step by step."
+area: reactions-and-stoichiometry
+level: intermediate
+order: 30
+prerequisites: [mole-concept, percent-composition]
+related: [percent-composition]
+flashcards: empirical-formula
+quiz: empirical-formula
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Coverage follows the empirical-formulas-from-analyses material in general chemistry texts such as
+  Chemistry: The Central Science. All calculations checked by computer.
+  Atomic masses: H 1.008, C 12.01, O 16.00, Fe 55.85. REVIEW: compare with your textbook's periodic table.
+  Combustion analysis is mentioned only briefly; it could become its own lesson.
+*/}
+
+## What is it?
+
+An **empirical formula** shows the **simplest whole-number ratio** of the atoms in a compound.
+
+A **molecular formula** shows the **actual number** of each kind of atom in one molecule.
+
+| Compound | Molecular formula | Empirical formula |
+|---|---|---|
+| Glucose | $\ce{C6H12O6}$ | $\ce{CH2O}$ |
+| Hydrogen peroxide | $\ce{H2O2}$ | $\ce{HO}$ |
+| Benzene | $\ce{C6H6}$ | $\ce{CH}$ |
+| Water | $\ce{H2O}$ | $\ce{H2O}$ (already the simplest ratio) |
+
+<KeyIdea>
+The molecular formula is always a whole-number multiple of the empirical formula. Glucose, $\ce{C6H12O6}$, is 6 × $\ce{CH2O}$.
+</KeyIdea>
+
+## Why does it matter?
+
+When chemists analyse an unknown compound, the experiment does not hand them a formula. It tells them **how much of each element** is present, usually as a percentage by mass.
+
+Working out the empirical formula turns those measurements into a ratio of atoms. Add a measured molar mass and you get the molecular formula. This is one of the first steps in identifying a new or unknown substance.
+
+## How does it work?
+
+### From percent composition to empirical formula
+
+1. **Assume a 100 g sample.** Each percentage then becomes a mass in grams (40.00% → 40.00 g).
+2. **Convert grams to moles** by dividing by each element's atomic mass.
+3. **Divide every mole value by the smallest one.** This gives the mole ratio.
+4. **Make whole numbers.** Values very close to whole numbers (such as 1.99 or 2.01) can be rounded. If a ratio ends in about .5, multiply every value by 2; about .33 or .67, multiply by 3; about .25 or .75, multiply by 4.
+5. **Write the formula** using these whole numbers as subscripts.
+
+### From empirical formula to molecular formula
+
+You need the compound's molar mass, which is measured separately. Then:
+
+$$
+n = \frac{\text{molar mass}}{\text{empirical formula mass}}
+$$
+
+Multiply every subscript in the empirical formula by $n$ (which should be a whole number).
+
+<Analogy>
+A recipe that uses 2 cups of flour for every 1 cup of sugar gives the *ratio*, 2 : 1. That's like the empirical formula. A baker who uses 6 cups of flour and 3 cups of sugar has the same ratio but a bigger batch. That's like the molecular formula. To know the batch size you need one more piece of information: for a compound, its molar mass.
+</Analogy>
+
+<MorePrecisely>
+Experimental percentages carry measurement error, so mole ratios rarely come out as exact whole numbers. A value such as 1.98 is safely rounded to 2, but 1.50 is not "nearly 2": it signals a ratio of 3 : 2. For compounds containing carbon and hydrogen, the percentages often come from **combustion analysis**, in which a sample is burned and the masses of $\ce{CO2}$ and $\ce{H2O}$ formed are measured.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/empirical-formula/percent-to-formula.svg" alt="Flow chart. Percent by mass: assume 100 grams so percentages become grams. Grams of each element: divide by atomic mass. Moles of each element: divide by the smallest number of moles. Mole ratio: round to whole numbers, multiplying by 2 if a ratio ends in .5 or by 3 if it ends in .33. This gives the empirical formula, the simplest whole-number ratio. Multiply by n, where n equals the molar mass divided by the empirical formula mass, to get the molecular formula, the actual numbers of atoms." caption="From percentages to a molecular formula. Every route goes through moles." width={360} height={600} />
+
+## Worked example
+
+<Example title="Empirical and molecular formula of a sugar">
+**Question:** A compound is 40.00% C, 6.71% H and 53.29% O by mass. Its molar mass is 180.16 g/mol. Find its empirical and molecular formulas. (C = 12.01, H = 1.008, O = 16.00)
+
+1. In 100 g: 40.00 g C, 6.71 g H, 53.29 g O.
+2. Moles: C: $\dfrac{40.00}{12.01} = 3.331$; H: $\dfrac{6.71}{1.008} = 6.657$; O: $\dfrac{53.29}{16.00} = 3.331$
+3. Divide by the smallest (3.331): C = 1.000, H = 1.999, O = 1.000
+4. Whole numbers: C : H : O = 1 : 2 : 1, so the empirical formula is $\ce{CH2O}$.
+5. Empirical formula mass: 12.01 + 2(1.008) + 16.00 = 30.03 g/mol
+6. $n = \dfrac{180.16}{30.03} = 6.00$, so multiply every subscript by 6.
+
+**Answer:** empirical formula $\ce{CH2O}$; molecular formula $\ce{C6H12O6}$ (glucose).
+</Example>
+
+<Example title="When the ratio isn't a whole number">
+**Question:** An oxide of iron is 69.94% Fe and 30.06% O by mass. Find its empirical formula. (Fe = 55.85, O = 16.00)
+
+1. Moles: Fe: $\dfrac{69.94}{55.85} = 1.252$; O: $\dfrac{30.06}{16.00} = 1.879$
+2. Divide by the smallest: Fe = 1.000, O = 1.500
+3. 1.500 ends in .5, so multiply both by 2: Fe = 2, O = 3
+
+**Answer:** the empirical formula is $\ce{Fe2O3}$.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Rounding 1.5 up to 2">
+A ratio of 1 : 1.5 is **not** "about 1 : 2". Rounding it would give FeO₂, which is wrong. Multiply every value by 2 instead to get 2 : 3. Only round values that are within a few hundredths of a whole number.
+</CommonMistake>
+
+<CommonMistake title="Using the percentages as the ratio">
+The percentages are a ratio of **masses**, not of atoms. In the sugar example, 40.00 : 6.71 : 53.29 says nothing directly about the number of atoms. Always convert to moles first.
+</CommonMistake>
+
+<CommonMistake title="Dividing by the wrong number">
+Divide by the **smallest** number of moles, not the largest. Dividing by the smallest makes the smallest value exactly 1 and the others 1 or more.
+</CommonMistake>
+
+<NotationNote>
+- The empirical formula is also called the **simplest formula**.
+- Formulas of ionic compounds such as $\ce{NaCl}$ and $\ce{Fe2O3}$ are empirical formulas, because ionic compounds are not made of separate molecules.
+- A molecular formula shows *how many* atoms there are, but not how they are connected. That is shown by a **structural formula**.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Empirical formula = simplest whole-number ratio; molecular formula = actual numbers of atoms.
+- Percent → grams (assume 100 g) → moles → divide by the smallest → whole numbers.
+- A ratio ending in .5 means multiply by 2; don't round it.
+- Molecular formula = empirical formula × (molar mass ÷ empirical formula mass).
+</RememberThis>
