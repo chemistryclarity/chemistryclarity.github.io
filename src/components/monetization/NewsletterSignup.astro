@@ -28,6 +28,7 @@ const id = (s: string) => `${idPrefix}-${s}`;
     </aside>
   )
 ) : newsletterEnabled ? (
+  <>
   <form class="nl-form" action={newsletter.formAction} method="post" target="_self">
     {Object.entries(newsletter.hiddenFields).map(([name, value]) => (
       <input type="hidden" name={name} value={value} />
@@ -71,9 +72,25 @@ const id = (s: string) => `${idPrefix}-${s}`;
 
     <button class="btn btn--primary" type="submit">Sign up</button>
     <p class="hint">
-      You'll receive an email asking you to confirm. See our <a href={url('/privacy/')}>privacy policy</a>.
+      {newsletter.doubleOptIn && <>You'll receive an email asking you to confirm. </>}
+      See our <a href={url('/privacy/')}>privacy policy</a>.
     </p>
+    <p class="nl-error" role="alert" hidden></p>
   </form>
+  <div class="nl-success" role="status" tabindex="-1" hidden>
+    {newsletter.doubleOptIn ? (
+      <>
+        <p><strong>Almost done: check your inbox.</strong></p>
+        <p>We've sent you an email. Click the link inside to confirm your subscription. If you can't see it, check your spam or promotions folder.</p>
+      </>
+    ) : (
+      <>
+        <p><strong>You're subscribed. Thank you!</strong></p>
+        <p>Look out for the next Chemistry Clarity newsletter in your inbox.</p>
+      </>
+    )}
+  </div>
+  </>
 ) : (
   <div class="nl-closed" role="status">
     <p><strong>Sign-up opens soon.</strong></p>
@@ -110,6 +127,25 @@ const id = (s: string) => `${idPrefix}-${s}`;
   .hint { font-size: var(--step--1); color: var(--muted); }
   button { justify-self: start; }
 
+  .nl-error {
+    color: var(--mistake);
+    background: var(--mistake-bg);
+    border-left: 3px solid var(--mistake);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: var(--step--1);
+  }
+  .nl-success {
+    max-width: 32rem;
+    padding: var(--space-5);
+    background: var(--remember-bg);
+    border: 1px solid var(--remember);
+    border-radius: var(--radius-lg);
+  }
+  .nl-success p + p { margin-top: var(--space-2); }
+  .nl-success:focus { outline: none; }
+  [hidden] { display: none !important; }
+
   .nl-compact {
     display: flex;
     flex-wrap: wrap;
@@ -123,3 +159,53 @@ const id = (s: string) => `${idPrefix}-${s}`;
   .nl-compact h2 { font-size: var(--step-1); }
   .nl-compact p { color: var(--ink-soft); font-size: var(--step--1); margin-top: var(--space-1); }
 </style>
+
+<script>
+  // Submits the form in the background so visitors stay on the page and see a clear message.
+  // Without JavaScript, the form still posts directly to the email service.
+  document.querySelectorAll<HTMLFormElement>('form.nl-form').forEach((form) => {
+    const error = form.querySelector<HTMLElement>('.nl-error');
+    const success = form.nextElementSibling as HTMLElement | null;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    const showError = (message: string) => {
+      if (!error) return;
+      error.textContent = message;
+      error.hidden = false;
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (error) error.hidden = true;
+      if (button) {
+        button.disabled = true;
+        button.textContent = 'Signing up…';
+      }
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        const result = await response.json().catch(() => null);
+        if (response.ok && result?.success) {
+          form.hidden = true;
+          if (success) {
+            success.hidden = false;
+            success.focus();
+          }
+          return;
+        }
+        const emailErrors = result?.errors?.fields?.email;
+        showError(
+          Array.isArray(emailErrors) && emailErrors.length
+            ? 'Please check your email address and try again.'
+            : 'Sorry, something went wrong. Please try again in a moment.',
+        );
+      } catch {
+        showError('We couldn’t reach the sign-up service. Please check your connection and try again.');
+      } finally {
+        if (button) {
+          button.disabled = false;
+          button.textContent = 'Sign up';
+        }
+      }
+    });
+  });
+</script>

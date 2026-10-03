@@ -45,7 +45,7 @@ export const site = {
    */
   features: {
     showDrafts: true,
-    newsletter: false,
+    newsletter: true,
     shop: false,
     ads: false,
     search: false,
@@ -67,16 +67,19 @@ export const newsletter: {
   emailField: string;
   nameField: string;
   hiddenFields: Record<string, string>;
+  doubleOptIn: boolean;
   frequency: string;
   minimumAge: number;
 } = {
-  provider: '',
-  formAction: '',
-  emailField: 'email',
+  provider: 'mailerlite',
+  formAction: 'https://assets.mailerlite.com/jsonp/2680786/forms/200289109581760489/subscribe',
+  emailField: 'fields[email]',
   /** Leave empty ('') to ask for email only. */
   nameField: '',
   /** Extra hidden values some services require (copied from their embed code). */
-  hiddenFields: {},
+  hiddenFields: { 'ml-submit': '1', anticsrf: 'true' },
+  /** true once double opt-in (confirmation email) is switched on in the email service. */
+  doubleOptIn: false,
   /** Shown on the sign-up page, e.g. 'About twice a month'. Leave empty to hide. */
   frequency: '',
   /** LEGAL REVIEW: minimum age for signing up without parental permission. */
