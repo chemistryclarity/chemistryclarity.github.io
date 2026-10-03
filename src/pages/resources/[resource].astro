@@ -7,11 +7,11 @@ import UsedIn from '../../components/layout/UsedIn.astro';
 import LevelBadge from '../../components/cards/LevelBadge.astro';
 import PremiumBadge from '../../components/monetization/PremiumBadge.astro';
 import ProductCard from '../../components/monetization/ProductCard.astro';
-import { getVisible, getTopicsUsing, isDraft, isVisible, resourceTypeLabel } from '../../lib/content';
+import { getAll, getTopicsUsing, isDraft, isVisible, resourceTypeLabel } from '../../lib/content';
 import { url } from '../../lib/url';
 
 export const getStaticPaths = (async () => {
-  const resources = await getVisible('resources');
+  const resources = await getAll('resources');
   return resources.map((r) => ({ params: { resource: r.id }, props: { resource: r } }));
 }) satisfies GetStaticPaths;
 
@@ -19,7 +19,7 @@ const { resource } = Astro.props;
 const { data } = resource;
 const topics = await getTopicsUsing('resources', resource.id);
 const product = data.product ? await getEntry(data.product) : undefined;
-const showProduct = product && isVisible(product);
+const showProduct = product && (isVisible(product) || isDraft(resource));
 const href = (p?: string) => (p ? (p.startsWith('http') ? p : url(p)) : undefined);
 const fileHref = href(data.file);
 const answerHref = href(data.answerKey);

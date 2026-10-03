@@ -1,0 +1,128 @@
+---
+title: Stoichiometry
+question: "How do you do stoichiometry calculations?"
+description: "How to use a balanced chemical equation to calculate the amounts of reactants and products, step by step, with worked examples."
+area: reactions-and-stoichiometry
+level: intermediate
+order: 40
+prerequisites: [mole-concept, percent-composition]
+related: [mole-concept, empirical-formula]
+flashcards: stoichiometry
+quiz: stoichiometry
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Coverage follows "quantitative information from balanced equations" in general chemistry texts such as
+  Chemistry: The Central Science. All calculations checked by computer.
+  Atomic masses: H 1.008, C 12.01, N 14.01, O 16.00, Fe 55.85. REVIEW: compare with your textbook's table.
+  Limiting reactants and percent yield are left for the next lesson.
+*/}
+
+## What is it?
+
+**Stoichiometry** (stoy-kee-OM-uh-tree) is the part of chemistry that uses a **balanced chemical equation** to calculate **how much** of each substance reacts or is produced.
+
+The key is that the **coefficients** in a balanced equation give the **mole ratio** between the substances. In
+
+$$
+\ce{2H2 + O2 -> 2H2O}
+$$
+
+2 mol of hydrogen react with 1 mol of oxygen to make 2 mol of water.
+
+<KeyIdea>
+The numbers in front of the formulas compare **moles**, not grams. To use them, always convert to moles first.
+</KeyIdea>
+
+## Why does it matter?
+
+- **In the lab:** how much of each starting material should you weigh out, and how much product should you expect?
+- **In industry:** manufacturers of fertilisers, medicines and fuels must know exactly how much raw material they need, because waste costs money.
+- **In everyday life:** the amount of oxygen a fuel needs to burn completely, or the amount of carbon dioxide it produces, is a stoichiometry calculation.
+
+## How does it work?
+
+### The three-step method
+
+1. **Convert what you know into moles.** For a mass, divide by the molar mass.
+2. **Use the mole ratio from the balanced equation** to find moles of the substance you want:
+   $$
+   n_\text{B} = n_\text{A} \times \frac{b}{a}
+   $$
+   where $a$ and $b$ are the coefficients of A (what you have) and B (what you want).
+3. **Convert moles of B into what is asked for.** For a mass, multiply by the molar mass of B.
+
+Before you start, check that the equation is **balanced**. An unbalanced equation gives the wrong mole ratio, and therefore the wrong answer.
+
+<Analogy>
+A sandwich recipe says: **2 slices of bread + 1 slice of cheese → 1 sandwich.** With 10 slices of bread you need 5 slices of cheese and can make 5 sandwiches. You compared *numbers of slices*, not their weights. A balanced equation is a recipe that counts particles, and moles are how chemists count particles.
+</Analogy>
+
+<MorePrecisely>
+These calculations give the **theoretical** amount of product: the most that could form if the reaction went to completion and nothing was lost. Real reactions often give less. Comparing the two (percent yield), and working out which reactant runs out first (the limiting reactant), are covered in the next lesson.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/stoichiometry/road-map.svg" alt="Stoichiometry road map. Grams of A: divide by the molar mass of A to get moles of A. Multiply by the mole ratio, B over A, from the balanced equation, to get moles of B. Multiply by the molar mass of B to get grams of B. The equation connects moles to moles only; never go straight from grams to grams." caption="The stoichiometry road map: grams → moles → moles → grams." width={360} height={520} />
+
+## Worked example
+
+<Example title="Mass of product from mass of reactant">
+**Question:** What mass of water forms when 5.00 g of hydrogen gas reacts completely with oxygen? (H = 1.008, O = 16.00)
+
+$$
+\ce{2H2 + O2 -> 2H2O}
+$$
+
+1. Moles of $\ce{H2}$: $M = 2(1.008) = 2.016$ g/mol, so $n = \dfrac{5.00}{2.016} = 2.480$ mol
+2. Mole ratio: $\dfrac{2\ \text{mol}\ \ce{H2O}}{2\ \text{mol}\ \ce{H2}}$, so moles of $\ce{H2O}$ = 2.480 mol
+3. Mass of $\ce{H2O}$: $2.480\ \text{mol} \times 18.02\ \text{g/mol} = 44.7$ g
+
+**Answer:** **44.7 g** of water.
+
+Check: the reaction also uses 39.7 g of oxygen, and 5.00 g + 39.7 g = 44.7 g. Mass is conserved.
+</Example>
+
+<Example title="Burning propane">
+**Question:** Propane burns in oxygen: $\ce{C3H8 + 5O2 -> 3CO2 + 4H2O}$. What mass of oxygen is needed to burn 22.0 g of propane, and what mass of carbon dioxide forms? (C = 12.01, H = 1.008, O = 16.00)
+
+1. Moles of propane: $M = 3(12.01) + 8(1.008) = 44.09$ g/mol, so $n = \dfrac{22.0}{44.09} = 0.4990$ mol
+2. Oxygen: $0.4990 \times \dfrac{5}{1} = 2.495$ mol, and $2.495 \times 32.00 = 79.8$ g
+3. Carbon dioxide: $0.4990 \times \dfrac{3}{1} = 1.497$ mol, and $1.497 \times 44.01 = 65.9$ g
+
+**Answer:** **79.8 g** of oxygen is needed, and **65.9 g** of carbon dioxide forms.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using the coefficients as a mass ratio">
+In $\ce{2H2 + O2 -> 2H2O}$, the coefficients do **not** mean that 2 g of hydrogen reacts with 1 g of oxygen. They compare moles. Always convert grams to moles before using the ratio.
+</CommonMistake>
+
+<CommonMistake title="Turning the mole ratio upside down">
+Write the ratio as **what you want ÷ what you have**. To find oxygen from propane, multiply moles of propane by 5/1, not 1/5. Writing the units on every number makes the mistake easy to spot.
+</CommonMistake>
+
+<CommonMistake title="Starting from an unbalanced equation">
+The ratio is only correct if the equation is balanced. Check that every element has the same number of atoms on both sides before you calculate.
+</CommonMistake>
+
+<NotationNote>
+- The numbers in front of formulas are called **coefficients** or **stoichiometric coefficients**.
+- The fraction made from two coefficients is called the **mole ratio**, or **stoichiometric factor**.
+- "Reacts completely" or "in excess" in a question tells you there is enough of the *other* reactant, so only the one you're given limits the amount of product.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Balanced equation first; its coefficients give **mole** ratios.
+- Road map: **grams → moles → (mole ratio) → moles → grams**.
+- Mole ratio = **want ÷ have**.
+- Check your answer: total mass of reactants used = total mass of products.
+</RememberThis>

@@ -6,10 +6,10 @@ import UsedIn from '../../components/layout/UsedIn.astro';
 import LevelBadge from '../../components/cards/LevelBadge.astro';
 import MathStyles from '../../components/lesson/MathStyles.astro';
 import Quiz from '../../components/learning/Quiz.astro';
-import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+import { getAll, getTopicsUsing, isDraft } from '../../lib/content';
 
 export const getStaticPaths = (async () => {
-  const quizzes = await getVisible('quizzes');
+  const quizzes = await getAll('quizzes');
   return quizzes.map((quiz) => ({ params: { quiz: quiz.id }, props: { quiz } }));
 }) satisfies GetStaticPaths;
 

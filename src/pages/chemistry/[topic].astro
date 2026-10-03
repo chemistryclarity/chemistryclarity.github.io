@@ -15,12 +15,12 @@ import VideoEmbed from '../../components/media/VideoEmbed.astro';
 import Flashcards from '../../components/learning/Flashcards.astro';
 import Quiz from '../../components/learning/Quiz.astro';
 import { lessonComponents } from '../../components/lesson';
-import { getTopics, getPrevNext, isDraft, isVisible } from '../../lib/content';
+import { getAll, getPrevNext, isDraft, isVisible } from '../../lib/content';
 import { routes, absoluteUrl, url } from '../../lib/url';
 import { site } from '../../config/site';
 
 export const getStaticPaths = (async () => {
-  const topics = await getTopics();
+  const topics = await getAll('topics');
   return topics.map((topic) => ({ params: { topic: topic.id }, props: { topic } }));
 }) satisfies GetStaticPaths;
 
@@ -28,20 +28,22 @@ const { topic } = Astro.props;
 const { data } = topic;
 const path = `/chemistry/${topic.id}/`;
 
+const draft = isDraft(topic);
 const area = await getEntry(data.area);
+// A published lesson only shows published items; a preview also shows its own draft items.
+const canShow = (e: { data: { status: 'draft' | 'review' | 'published' } }) => isVisible(e) || draft;
 const visible = <T extends { data: { status: 'draft' | 'review' | 'published' } }>(e: T | undefined) =>
-  e && isVisible(e) ? e : undefined;
+  e && canShow(e) ? e : undefined;
 const prerequisites = (await getEntries(data.prerequisites)).filter(isVisible);
 const related = (await getEntries(data.related)).filter(isVisible);
 const video = visible(data.video ? await getEntry(data.video) : undefined);
 const notes = visible(data.notes ? await getEntry(data.notes) : undefined);
 const deck = visible(data.flashcards ? await getEntry(data.flashcards) : undefined);
 const quiz = visible(data.quiz ? await getEntry(data.quiz) : undefined);
-const resources = (await getEntries(data.resources)).filter(isVisible);
+const resources = (await getEntries(data.resources)).filter(canShow);
 const references = await getEntries(data.references);
 const { prev, next } = await getPrevNext(topic);
 const { Content, headings } = await render(topic);
-const draft = isDraft(topic);
 
 const hasPractice = Boolean(deck || quiz);
 const hasDownloads = Boolean(notes || resources.length);

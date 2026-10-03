@@ -7,11 +7,11 @@ import UsedIn from '../../components/layout/UsedIn.astro';
 import VideoEmbed from '../../components/media/VideoEmbed.astro';
 import MathStyles from '../../components/lesson/MathStyles.astro';
 import { lessonComponents } from '../../components/lesson';
-import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+import { getAll, getTopicsUsing, isDraft } from '../../lib/content';
 import { absoluteUrl } from '../../lib/url';
 
 export const getStaticPaths = (async () => {
-  const videos = await getVisible('videos');
+  const videos = await getAll('videos');
   return videos.map((video) => ({ params: { video: video.id }, props: { video } }));
 }) satisfies GetStaticPaths;
 

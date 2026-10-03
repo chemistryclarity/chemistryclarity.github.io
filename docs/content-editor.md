@@ -64,6 +64,14 @@ These use a plain-text (Markdown) box so your formatting is kept exactly as type
 
 Full details: [writing-lessons.md](writing-lessons.md) and [flashcards-and-quizzes.md](flashcards-and-quizzes.md).
 
+### Reviewing before publishing (private previews)
+
+Anything with **Status: draft** or **review** is built as a **private preview**: it has its own web
+address (for example `chemistryclarity.com/chemistry/stoichiometry/`) with a yellow **Draft** banner,
+but it is **not listed** anywhere (menus, lesson cards, sitemap, links from published lessons) and is
+hidden from Google. Open the address to review the real page, and share it with a trusted reviewer if
+you like. When it's ready, set **Status: published** and **Save**, and it appears everywhere.
+
 ### Linking things together
 
 In a lesson, the **Video**, **Lecture notes**, **Flashcard deck**, **Quiz** and **Printable resources**

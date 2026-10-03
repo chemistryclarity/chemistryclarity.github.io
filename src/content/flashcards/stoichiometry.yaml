@@ -1,0 +1,39 @@
+# Flashcards: Stoichiometry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'Stoichiometry: Flashcards'
+description: 'Revise mole ratios and the grams → moles → moles → grams method.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: st-01
+    front: 'What is stoichiometry?'
+    back: 'Using a balanced chemical equation to calculate the amounts of substances that react or are produced.'
+  - id: st-02
+    front: 'What do the coefficients in a balanced equation tell you?'
+    back: 'The **mole** ratio between the substances (not the mass ratio).'
+  - id: st-03
+    front: 'What are the three steps of a stoichiometry calculation?'
+    back: '1. Convert what you know to moles. 2. Multiply by the mole ratio from the balanced equation. 3. Convert moles to what is asked for.'
+  - id: st-04
+    front: 'How do you write the mole ratio so it isn''t upside down?'
+    back: 'Want ÷ have: (coefficient of the substance you want) ÷ (coefficient of the substance you know).'
+  - id: st-05
+    front: 'In $\ce{2H2 + O2 -> 2H2O}$, how many moles of $\ce{O2}$ react with 4 mol of $\ce{H2}$?'
+    back: '$4 \times \dfrac{1}{2} = 2$ mol of $\ce{O2}$'
+  - id: st-06
+    front: 'In $\ce{N2 + 3H2 -> 2NH3}$, how many moles of $\ce{NH3}$ form from 3.0 mol of $\ce{H2}$?'
+    back: '$3.0 \times \dfrac{2}{3} = 2.0$ mol of $\ce{NH3}$'
+  - id: st-07
+    front: 'Why must the equation be balanced before you calculate?'
+    back: 'Only a balanced equation gives the correct mole ratio. An unbalanced one gives the wrong answer.'
+  - id: st-08
+    front: 'Can you convert grams of A directly into grams of B using the coefficients?'
+    back: 'No. The equation connects **moles** to moles. Go grams → moles → moles → grams.'
+  - id: st-09
+    front: 'How can you check a stoichiometry answer?'
+    back: 'Mass is conserved: the total mass of reactants used equals the total mass of products formed.'

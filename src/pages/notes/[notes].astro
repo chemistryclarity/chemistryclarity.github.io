@@ -7,11 +7,11 @@ import UsedIn from '../../components/layout/UsedIn.astro';
 import LevelBadge from '../../components/cards/LevelBadge.astro';
 import MathStyles from '../../components/lesson/MathStyles.astro';
 import { lessonComponents } from '../../components/lesson';
-import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+import { getAll, getTopicsUsing, isDraft } from '../../lib/content';
 import { url } from '../../lib/url';
 
 export const getStaticPaths = (async () => {
-  const notes = await getVisible('notes');
+  const notes = await getAll('notes');
   return notes.map((n) => ({ params: { notes: n.id }, props: { notes: n } }));
 }) satisfies GetStaticPaths;
 

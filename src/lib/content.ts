@@ -4,13 +4,23 @@ import { site } from '../config/site';
 type WithStatus = { data: { status: 'draft' | 'review' | 'published' } };
 type StatusCollection = 'topics' | 'flashcards' | 'quizzes' | 'videos' | 'notes' | 'resources' | 'products';
 
-/** Should this entry appear on the site? Drafts only appear while `showDrafts` is on. */
+/**
+ * Should this entry be LISTED on the site (menus, cards, index pages, sitemap, links from other pages)?
+ * Drafts are listed only while `showDrafts` is on.
+ * Note: every entry still gets its own page (a private preview with a Draft banner, hidden from
+ * search engines) so new content can be reviewed at its address before publishing.
+ */
 export function isVisible(entry: WithStatus): boolean {
   return entry.data.status === 'published' || site.features.showDrafts;
 }
 
 export function isDraft(entry: WithStatus): boolean {
   return entry.data.status !== 'published';
+}
+
+/** Every entry of a collection, published or not: used to build pages, including private previews. */
+export async function getAll<C extends StatusCollection>(collection: C): Promise<CollectionEntry<C>[]> {
+  return (await getCollection(collection)) as CollectionEntry<C>[];
 }
 
 /** All visible entries of a collection, sorted by title. */
@@ -51,6 +61,7 @@ export async function getTopicsUsing(
 export async function getPrevNext(topic: CollectionEntry<'topics'>) {
   const siblings = await getTopicsByArea(topic.data.area.id);
   const i = siblings.findIndex((t) => t.id === topic.id);
+  if (i === -1) return { prev: undefined, next: undefined }; // unlisted preview
   return { prev: siblings[i - 1], next: siblings[i + 1] };
 }
 

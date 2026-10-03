@@ -6,10 +6,10 @@ import UsedIn from '../../components/layout/UsedIn.astro';
 import LevelBadge from '../../components/cards/LevelBadge.astro';
 import MathStyles from '../../components/lesson/MathStyles.astro';
 import Flashcards from '../../components/learning/Flashcards.astro';
-import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+import { getAll, getTopicsUsing, isDraft } from '../../lib/content';
 
 export const getStaticPaths = (async () => {
-  const decks = await getVisible('flashcards');
+  const decks = await getAll('flashcards');
   return decks.map((deck) => ({ params: { deck: deck.id }, props: { deck } }));
 }) satisfies GetStaticPaths;
 
