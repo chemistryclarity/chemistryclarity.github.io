@@ -1,0 +1,132 @@
+---
+title: Lewis Structures
+question: "How do you draw Lewis structures?"
+description: "A step-by-step method for drawing Lewis structures: counting valence electrons, the octet rule, multiple bonds, formal charge, resonance and the main exceptions."
+area: bonding
+level: intermediate
+order: 20
+prerequisites: [ionic-and-covalent-bonds, electron-configuration]
+related: [ionic-and-covalent-bonds, molecular-shapes]
+flashcards: lewis-structures
+quiz: lewis-structures
+resources: [lewis-structures-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Valence-electron totals checked by computer.
+  REVIEW: sulfate/expanded-octet "best structure" conventions differ between courses, so they are left out.
+*/}
+
+## What is it?
+
+A **Lewis structure** (or electron-dot structure) shows how the valence electrons are arranged in a molecule or ion:
+
+- a **line** (or a pair of dots) between two atoms is a **shared pair**, i.e. a covalent bond;
+- **pairs of dots** on a single atom are **lone pairs** (non-bonding pairs).
+
+Water, for example, is drawn as H–O–H with two lone pairs on oxygen.
+
+<KeyIdea>
+Most atoms in a stable Lewis structure have a **full outer shell**: 8 electrons (an **octet**) for second-period atoms such as C, N, O and F, but only **2** for hydrogen. Count every bond electron and lone-pair electron around the atom.
+</KeyIdea>
+
+## Why does it matter?
+
+- **It shows bonding at a glance:** which atoms are joined, by single, double or triple bonds.
+- **It is the first step in predicting shape.** VSEPR theory uses the bonds and lone pairs around the central atom to predict the 3D shape.
+- **It helps explain reactivity:** lone pairs and partial charges show where a molecule is likely to react.
+
+## How does it work?
+
+### The step-by-step method
+
+1. **Count the valence electrons** of all atoms. Add one for each negative charge; subtract one for each positive charge.
+2. **Draw the skeleton.** The **least electronegative** atom (never H) usually goes in the centre. Join atoms with single bonds (2 electrons each).
+3. **Complete the octets of the outer atoms** with lone pairs (hydrogen needs only its one bond).
+4. **Put any remaining electrons on the central atom** as lone pairs.
+5. **If the central atom has fewer than 8 electrons,** turn lone pairs on outer atoms into shared pairs to make double or triple bonds.
+
+| Group | 1 | 2 | 13 | 14 | 15 | 16 | 17 | 18 |
+|---|---|---|---|---|---|---|---|---|
+| Valence electrons | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+
+### Formal charge
+
+When more than one structure seems possible, **formal charge** helps choose the best one:
+
+$$
+\text{FC} = V - L - \tfrac{1}{2}B
+$$
+
+where $V$ = valence electrons of the free atom, $L$ = electrons in its lone pairs, and $B$ = electrons in its bonds.
+
+The best structure has formal charges **as close to zero as possible**, with any negative formal charge on the **more electronegative** atom. The formal charges always add up to the overall charge of the species.
+
+### Resonance
+
+Sometimes two or more equally good structures differ only in where the double bond is placed. Ozone, $\ce{O3}$, can be drawn as O=O–O or O–O=O. Neither picture is correct on its own: the real molecule is a **resonance hybrid**, an average of the two, and both O–O bonds are identical, between a single and a double bond in length.
+
+<Analogy>
+Building a Lewis structure is like sharing a fixed number of coins (electrons) among people (atoms) so that everyone ends up with eight. If there aren't enough coins for everyone to have their own, neighbours share more pairs between them: that's a double or triple bond.
+</Analogy>
+
+<MorePrecisely>
+The octet rule has exceptions:
+- **Incomplete octets:** boron and beryllium compounds such as $\ce{BF3}$ (boron has only 6 electrons).
+- **Odd-electron molecules:** $\ce{NO}$ has 11 valence electrons, so one atom must have an unpaired electron.
+- **Expanded octets:** elements in period 3 and below can have more than 8 electrons around them, e.g. phosphorus in $\ce{PCl5}$ (10) and sulfur in $\ce{SF6}$ (12).
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/lewis-structures/examples.svg" alt="Lewis structures of four molecules. Water: H–O–H with two lone pairs on oxygen. Carbon dioxide: O=C=O with two lone pairs on each oxygen. Ammonia: nitrogen bonded to three hydrogens with one lone pair on nitrogen. Nitrogen: N≡N with one lone pair on each nitrogen." caption="Lines are shared pairs; pairs of dots are lone pairs." width={360} height={352} />
+
+## Worked example
+
+<Example title="Carbon dioxide, CO₂">
+1. Valence electrons: C 4 + O 2 × 6 = **16**
+2. Skeleton O–C–O uses 4 electrons; 12 remain.
+3. Give each O three lone pairs (12 electrons). None remain.
+4. Carbon has only 4 electrons around it. Move one lone pair from each O into a bond.
+5. Result: **O=C=O**, two lone pairs on each O. Every atom has an octet; all formal charges are 0.
+</Example>
+
+<Example title="Hydrogen cyanide, HCN">
+1. Valence electrons: H 1 + C 4 + N 5 = **10**
+2. Skeleton H–C–N uses 4; 6 remain. Put 3 lone pairs on N.
+3. Carbon has only 4 electrons. Move two lone pairs from N into bonds: a triple bond.
+4. Result: **H–C≡N:** with one lone pair on N. Formal charges: H 0, C 4 − 0 − 4 = 0, N 5 − 2 − 3 = 0.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Forgetting the ion's charge">
+For $\ce{NH4+}$ the count is 5 + 4 × 1 − 1 = **8**, not 9. For $\ce{CO3^2-}$ it is 4 + 3 × 6 + 2 = **24**.
+</CommonMistake>
+
+<CommonMistake title="Putting hydrogen in the centre">
+Hydrogen forms only one bond, so it is always a terminal (outer) atom.
+</CommonMistake>
+
+<CommonMistake title="Drawing resonance as a back-and-forth flip">
+Resonance structures are not switching between forms. The real molecule is always the single averaged hybrid.
+</CommonMistake>
+
+<NotationNote>
+- Brackets and a charge, e.g. [ … ]⁻, are drawn around Lewis structures of ions.
+- Resonance structures are linked by a double-headed arrow, ↔.
+- Lone pairs are sometimes left off simplified structures. In a full Lewis structure, always include them.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Count valence electrons (adjust for charge), build a skeleton, complete outer octets, then the centre.
+- Not enough electrons for octets? Make double or triple bonds.
+- Formal charge = valence − lone-pair electrons − ½ bonding electrons; aim for zeros.
+- Exceptions: B and Be (fewer than 8), odd-electron molecules, period 3+ elements (more than 8).
+</RememberThis>

@@ -1,0 +1,39 @@
+# Flashcards: Lewis Structures
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Electron counts checked.
+title: 'Lewis Structures: Flashcards'
+description: 'Revise valence-electron counting, the octet rule, multiple bonds, formal charge and resonance.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: lw-01
+    front: 'In a Lewis structure, what does a line between two atoms represent?'
+    back: 'A shared pair of electrons (a single covalent bond).'
+  - id: lw-02
+    front: 'What is a lone pair?'
+    back: 'A pair of valence electrons on one atom that is not shared in a bond.'
+  - id: lw-03
+    front: 'What is the octet rule?'
+    back: 'Atoms tend to bond until they have 8 electrons in their outer shell (hydrogen: 2).'
+  - id: lw-04
+    front: 'How many valence electrons are in $\ce{CO3^2-}$?'
+    back: '4 + 3 × 6 + 2 = 24'
+  - id: lw-05
+    front: 'How many valence electrons are in $\ce{NH4+}$?'
+    back: '5 + 4 × 1 − 1 = 8'
+  - id: lw-06
+    front: 'Which atom usually goes in the centre of a Lewis structure?'
+    back: 'The least electronegative atom, never hydrogen.'
+  - id: lw-07
+    front: 'What is the formula for formal charge?'
+    back: 'Valence electrons − lone-pair electrons − ½ × bonding electrons'
+  - id: lw-08
+    front: 'What is resonance?'
+    back: 'When two or more valid Lewis structures differ only in electron placement; the real species is an average (hybrid) of them.'
+  - id: lw-09
+    front: 'Draw the Lewis structure of $\ce{N2}$ in words.'
+    back: 'N≡N, a triple bond, with one lone pair on each nitrogen (10 valence electrons).'
+  - id: lw-10
+    front: 'Give an example of a molecule with an incomplete octet.'
+    back: '$\ce{BF3}$: boron has only 6 electrons around it.'

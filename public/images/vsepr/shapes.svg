@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 786" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 12px; font-weight: 700; }
+    .num { fill: #14213d; font-size: 10.5px; }
+    .note { fill: #5b6577; font-size: 10px; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .bond { stroke: #14213d; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .wedge { fill: #14213d; }
+    .dash { stroke: #14213d; stroke-width: 2; stroke-dasharray: 2.5 2.5; fill: none; }
+    .atom { fill: #14213d; font-size: 15px; font-weight: 700; }
+    .atomc { fill: #0f766e; font-size: 16px; font-weight: 700; }
+    .dot { fill: #b45309; }
+    .lp { fill: #fdf3e3; stroke: #d6a456; stroke-width: 1; }
+    .cell { fill: #f8f7f3; stroke: #e2dfd5; stroke-width: 1; }
+
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab, .num, .atom { fill: #e9edf5; }
+      .sub, .note { fill: #9aa5ba; }
+      .axis { stroke: #e9edf5; }
+      .bond, .dash { stroke: #e9edf5; } .wedge { fill: #e9edf5; }
+      .atomc { fill: #2dd4bf; }
+      .dot { fill: #fbbf24; }
+      .lp { fill: #3a2f1c; stroke: #b7893d; }
+      .cell { fill: #1b263d; stroke: #2c3854; }
+
+    }
+  </style>
+  <rect class="bg" width="360" height="786" rx="14"/>
+  <text class="t" x="20" y="28">VSEPR shapes</text>
+  <text class="sub" x="20" y="45">Wedge: towards you. Dashes: away from you. Lobes: lone pairs.</text>
+  <rect class="cell" x="20" y="60" width="156" height="168" rx="10"/>
+  <line class="bond" x1="88" y1="117.5" x2="68" y2="117.5"/><line class="bond" x1="88" y1="122.5" x2="68" y2="122.5"/>
+  <text class="atom" x="58" y="125" text-anchor="middle" font-size="13">O</text>
+  <line class="bond" x1="108" y1="117.5" x2="128" y2="117.5"/><line class="bond" x1="108" y1="122.5" x2="128" y2="122.5"/>
+  <text class="atom" x="138" y="125" text-anchor="middle" font-size="13">O</text>
+  <text class="atomc" x="98" y="125.5" text-anchor="middle">C</text>
+  <text class="lab" x="98" y="194" text-anchor="middle">Linear</text>
+  <text class="num" x="98" y="208" text-anchor="middle">CO₂ · 180°</text>
+  <text class="note" x="98" y="221" text-anchor="middle">2 domains, 0 lone pairs</text>
+  <rect class="cell" x="192" y="60" width="156" height="168" rx="10"/>
+  <line class="bond" x1="270" y1="110" x2="270" y2="90"/>
+  <text class="atom" x="270" y="85" text-anchor="middle" font-size="13">F</text>
+  <line class="bond" x1="261.3" y1="125" x2="244" y2="135"/>
+  <text class="atom" x="235.4" y="145" text-anchor="middle" font-size="13">F</text>
+  <line class="bond" x1="278.7" y1="125" x2="296" y2="135"/>
+  <text class="atom" x="304.6" y="145" text-anchor="middle" font-size="13">F</text>
+  <text class="atomc" x="270" y="125.5" text-anchor="middle">B</text>
+  <text class="lab" x="270" y="194" text-anchor="middle">Trigonal planar</text>
+  <text class="num" x="270" y="208" text-anchor="middle">BF₃ · 120°</text>
+  <text class="note" x="270" y="221" text-anchor="middle">3 domains, 0 lone pairs</text>
+  <rect class="cell" x="20" y="240" width="156" height="168" rx="10"/>
+  <ellipse class="lp" cx="98" cy="275" rx="12" ry="7.5" transform="rotate(-90 98 275)"/>
+  <circle class="dot" cx="101" cy="275" r="1.9"/><circle class="dot" cx="95" cy="275" r="1.9"/>
+  <line class="bond" x1="89.3" y1="305" x2="72" y2="315"/>
+  <text class="atom" x="63.4" y="325" text-anchor="middle" font-size="13">O</text>
+  <line class="bond" x1="106.7" y1="305" x2="124" y2="315"/>
+  <text class="atom" x="132.6" y="325" text-anchor="middle" font-size="13">O</text>
+  <text class="atomc" x="98" y="305.5" text-anchor="middle">S</text>
+  <text class="lab" x="98" y="374" text-anchor="middle">Bent</text>
+  <text class="num" x="98" y="388" text-anchor="middle">SO₂ · ≈ 119°</text>
+  <text class="note" x="98" y="401" text-anchor="middle">3 domains, 1 lone pair</text>
+  <rect class="cell" x="192" y="240" width="156" height="168" rx="10"/>
+  <line class="bond" x1="270" y1="290" x2="270" y2="270"/>
+  <text class="atom" x="270" y="265" text-anchor="middle" font-size="13">H</text>
+  <line class="bond" x1="260.6" y1="303.4" x2="241.8" y2="310.3"/>
+  <text class="atom" x="232.4" y="318.7" text-anchor="middle" font-size="13">H</text>
+  <polygon class="wedge" points="279.4,303.4 296.8,314 299.6,306.5"/>
+  <text class="atom" x="307.6" y="318.7" text-anchor="middle" font-size="13">H</text>
+  <line class="dash" x1="272.6" y1="309.7" x2="277.8" y2="329"/>
+  <text class="atom" x="280.4" y="343.6" text-anchor="middle" font-size="13">H</text>
+  <text class="atomc" x="270" y="305.5" text-anchor="middle">C</text>
+  <text class="lab" x="270" y="374" text-anchor="middle">Tetrahedral</text>
+  <text class="num" x="270" y="388" text-anchor="middle">CH₄ · 109.5°</text>
+  <text class="note" x="270" y="401" text-anchor="middle">4 domains, 0 lone pairs</text>
+  <rect class="cell" x="20" y="420" width="156" height="168" rx="10"/>
+  <ellipse class="lp" cx="98" cy="455" rx="12" ry="7.5" transform="rotate(-90 98 455)"/>
+  <circle class="dot" cx="101" cy="455" r="1.9"/><circle class="dot" cx="95" cy="455" r="1.9"/>
+  <line class="bond" x1="88.6" y1="483.4" x2="69.8" y2="490.3"/>
+  <text class="atom" x="60.4" y="498.7" text-anchor="middle" font-size="13">H</text>
+  <polygon class="wedge" points="107.4,483.4 124.8,494 127.6,486.5"/>
+  <text class="atom" x="135.6" y="498.7" text-anchor="middle" font-size="13">H</text>
+  <line class="dash" x1="100.6" y1="489.7" x2="105.8" y2="509"/>
+  <text class="atom" x="108.4" y="523.6" text-anchor="middle" font-size="13">H</text>
+  <text class="atomc" x="98" y="485.5" text-anchor="middle">N</text>
+  <text class="lab" x="98" y="554" text-anchor="middle">Trigonal pyramidal</text>
+  <text class="num" x="98" y="568" text-anchor="middle">NH₃ · ≈ 107°</text>
+  <text class="note" x="98" y="581" text-anchor="middle">4 domains, 1 lone pair</text>
+  <rect class="cell" x="192" y="420" width="156" height="168" rx="10"/>
+  <ellipse class="lp" cx="284.3" cy="459.5" rx="12" ry="7.5" transform="rotate(-55 284.3 459.5)"/>
+  <circle class="dot" cx="286.8" cy="461.2" r="1.9"/><circle class="dot" cx="281.9" cy="457.8" r="1.9"/>
+  <ellipse class="lp" cx="255.7" cy="459.5" rx="12" ry="7.5" transform="rotate(-125 255.7 459.5)"/>
+  <circle class="dot" cx="258.1" cy="457.8" r="1.9"/><circle class="dot" cx="253.2" cy="461.2" r="1.9"/>
+  <line class="bond" x1="261.8" y1="485.7" x2="245.4" y2="497.2"/>
+  <text class="atom" x="237.2" y="507.9" text-anchor="middle" font-size="13">H</text>
+  <line class="bond" x1="278.2" y1="485.7" x2="294.6" y2="497.2"/>
+  <text class="atom" x="302.8" y="507.9" text-anchor="middle" font-size="13">H</text>
+  <text class="atomc" x="270" y="485.5" text-anchor="middle">O</text>
+  <text class="lab" x="270" y="554" text-anchor="middle">Bent</text>
+  <text class="num" x="270" y="568" text-anchor="middle">H₂O · ≈ 104.5°</text>
+  <text class="note" x="270" y="581" text-anchor="middle">4 domains, 2 lone pairs</text>
+  <rect class="cell" x="20" y="600" width="156" height="168" rx="10"/>
+  <line class="bond" x1="98" y1="650" x2="98" y2="634"/>
+  <text class="atom" x="98" y="625" text-anchor="middle" font-size="13">Cl</text>
+  <line class="bond" x1="98" y1="670" x2="98" y2="686"/>
+  <text class="atom" x="98" y="705" text-anchor="middle" font-size="13">Cl</text>
+  <line class="bond" x1="108" y1="660" x2="124" y2="660"/>
+  <text class="atom" x="138" y="665" text-anchor="middle" font-size="13">Cl</text>
+  <polygon class="wedge" points="89.3,665 73.5,669.5 77.5,676.5"/>
+  <text class="atom" x="63.4" y="685" text-anchor="middle" font-size="13">Cl</text>
+  <line class="dash" x1="89.3" y1="655" x2="75.5" y2="647"/>
+  <text class="atom" x="63.4" y="645" text-anchor="middle" font-size="13">Cl</text>
+  <text class="atomc" x="98" y="665.5" text-anchor="middle">P</text>
+  <text class="lab" x="98" y="734" text-anchor="middle">Trigonal bipyramidal</text>
+  <text class="num" x="98" y="748" text-anchor="middle">PCl₅ · 90° and 120°</text>
+  <text class="note" x="98" y="761" text-anchor="middle">5 domains, 0 lone pairs</text>
+  <rect class="cell" x="192" y="600" width="156" height="168" rx="10"/>
+  <line class="bond" x1="270" y1="650" x2="270" y2="630"/>
+  <text class="atom" x="270" y="625" text-anchor="middle" font-size="13">F</text>
+  <line class="bond" x1="270" y1="670" x2="270" y2="690"/>
+  <text class="atom" x="270" y="705" text-anchor="middle" font-size="13">F</text>
+  <polygon class="wedge" points="261.3,665 242,671.5 246,678.5"/>
+  <text class="atom" x="235.4" y="685" text-anchor="middle" font-size="13">F</text>
+  <polygon class="wedge" points="278.7,665 294,678.5 298,671.5"/>
+  <text class="atom" x="304.6" y="685" text-anchor="middle" font-size="13">F</text>
+  <line class="dash" x1="261.3" y1="655" x2="244" y2="645"/>
+  <text class="atom" x="235.4" y="645" text-anchor="middle" font-size="13">F</text>
+  <line class="dash" x1="278.7" y1="655" x2="296" y2="645"/>
+  <text class="atom" x="304.6" y="645" text-anchor="middle" font-size="13">F</text>
+  <text class="atomc" x="270" y="665.5" text-anchor="middle">S</text>
+  <text class="lab" x="270" y="734" text-anchor="middle">Octahedral</text>
+  <text class="num" x="270" y="748" text-anchor="middle">SF₆ · 90°</text>
+  <text class="note" x="270" y="761" text-anchor="middle">6 domains, 0 lone pairs</text>
+
+</svg>

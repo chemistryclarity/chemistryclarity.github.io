@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/lewis-structures-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Lewis Structures Worksheet'
+description: '9 questions on counting valence electrons, drawing Lewis structures, formal charge and resonance. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/lewis-structures-worksheet.pdf'
+answerKey: '/downloads/lewis-structures-worksheet-answers.pdf'
+preview: '/previews/lewis-structures-worksheet.png'
+status: review

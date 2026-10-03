@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 352" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 12px; font-weight: 700; }
+    .num { fill: #14213d; font-size: 10.5px; }
+    .note { fill: #5b6577; font-size: 10px; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .bond { stroke: #14213d; stroke-width: 2; fill: none; stroke-linecap: round; }
+    .wedge { fill: #14213d; }
+    .dash { stroke: #14213d; stroke-width: 2; stroke-dasharray: 2.5 2.5; fill: none; }
+    .atom { fill: #14213d; font-size: 15px; font-weight: 700; }
+    .atomc { fill: #0f766e; font-size: 16px; font-weight: 700; }
+    .dot { fill: #b45309; }
+    .lp { fill: #fdf3e3; stroke: #d6a456; stroke-width: 1; }
+    .cell { fill: #f8f7f3; stroke: #e2dfd5; stroke-width: 1; }
+
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab, .num, .atom { fill: #e9edf5; }
+      .sub, .note { fill: #9aa5ba; }
+      .axis { stroke: #e9edf5; }
+      .bond, .dash { stroke: #e9edf5; } .wedge { fill: #e9edf5; }
+      .atomc { fill: #2dd4bf; }
+      .dot { fill: #fbbf24; }
+      .lp { fill: #3a2f1c; stroke: #b7893d; }
+      .cell { fill: #1b263d; stroke: #2c3854; }
+
+    }
+  </style>
+  <rect class="bg" width="360" height="352" rx="14"/>
+  <text class="t" x="20" y="28">Lewis structures</text>
+  <text class="sub" x="20" y="45">Each line is a shared pair; each pair of dots is a lone pair.</text>
+  <rect class="cell" x="20" y="62" width="156" height="132" rx="10"/>
+  <line class="bond" x1="88" y1="118" x2="68" y2="118"/>
+  <line class="bond" x1="108" y1="118" x2="128" y2="118"/>
+  <circle class="dot" cx="94.8" cy="105" r="2.1"/>
+  <circle class="dot" cx="101.2" cy="105" r="2.1"/>
+  <circle class="dot" cx="101.2" cy="131" r="2.1"/>
+  <circle class="dot" cx="94.8" cy="131" r="2.1"/>
+  <text class="atom" x="98" y="123" text-anchor="middle">O</text>
+  <text class="atom" x="58" y="123" text-anchor="middle">H</text>
+  <text class="atom" x="138" y="123" text-anchor="middle">H</text>
+  <text class="lab" x="98" y="180" text-anchor="middle">Water, H₂O</text>
+  <rect class="cell" x="192" y="62" width="156" height="132" rx="10"/>
+  <line class="bond" x1="260" y1="120" x2="236" y2="120"/>
+  <line class="bond" x1="260" y1="116" x2="236" y2="116"/>
+  <line class="bond" x1="280" y1="116" x2="304" y2="116"/>
+  <line class="bond" x1="280" y1="120" x2="304" y2="120"/>
+  <circle class="dot" cx="222.8" cy="105" r="2.1"/>
+  <circle class="dot" cx="229.2" cy="105" r="2.1"/>
+  <circle class="dot" cx="229.2" cy="131" r="2.1"/>
+  <circle class="dot" cx="222.8" cy="131" r="2.1"/>
+  <circle class="dot" cx="310.8" cy="105" r="2.1"/>
+  <circle class="dot" cx="317.2" cy="105" r="2.1"/>
+  <circle class="dot" cx="317.2" cy="131" r="2.1"/>
+  <circle class="dot" cx="310.8" cy="131" r="2.1"/>
+  <text class="atom" x="270" y="123" text-anchor="middle">C</text>
+  <text class="atom" x="226" y="123" text-anchor="middle">O</text>
+  <text class="atom" x="314" y="123" text-anchor="middle">O</text>
+  <text class="lab" x="270" y="180" text-anchor="middle">Carbon dioxide, CO₂</text>
+  <rect class="cell" x="20" y="208" width="156" height="132" rx="10"/>
+  <line class="bond" x1="88" y1="258" x2="68" y2="258"/>
+  <line class="bond" x1="108" y1="258" x2="128" y2="258"/>
+  <line class="bond" x1="98" y1="268" x2="98" y2="288"/>
+  <circle class="dot" cx="94.8" cy="245" r="2.1"/>
+  <circle class="dot" cx="101.2" cy="245" r="2.1"/>
+  <text class="atom" x="98" y="263" text-anchor="middle">N</text>
+  <text class="atom" x="58" y="263" text-anchor="middle">H</text>
+  <text class="atom" x="138" y="263" text-anchor="middle">H</text>
+  <text class="atom" x="98" y="303" text-anchor="middle">H</text>
+  <text class="lab" x="98" y="326" text-anchor="middle">Ammonia, NH₃</text>
+  <rect class="cell" x="192" y="208" width="156" height="132" rx="10"/>
+  <line class="bond" x1="258" y1="260" x2="282" y2="260"/>
+  <line class="bond" x1="258" y1="264" x2="282" y2="264"/>
+  <line class="bond" x1="258" y1="268" x2="282" y2="268"/>
+  <circle class="dot" cx="235" cy="267.2" r="2.1"/>
+  <circle class="dot" cx="235" cy="260.8" r="2.1"/>
+  <circle class="dot" cx="305" cy="260.8" r="2.1"/>
+  <circle class="dot" cx="305" cy="267.2" r="2.1"/>
+  <text class="atom" x="248" y="269" text-anchor="middle">N</text>
+  <text class="atom" x="292" y="269" text-anchor="middle">N</text>
+  <text class="lab" x="270" y="326" text-anchor="middle">Nitrogen, N₂</text>
+
+</svg>

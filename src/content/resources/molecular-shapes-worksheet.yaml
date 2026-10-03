@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/molecular-shapes-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Molecular Shapes (VSEPR) Worksheet'
+description: '9 questions on electron domains, molecular shapes, bond angles and polarity. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/molecular-shapes-worksheet.pdf'
+answerKey: '/downloads/molecular-shapes-worksheet-answers.pdf'
+preview: '/previews/molecular-shapes-worksheet.png'
+status: review

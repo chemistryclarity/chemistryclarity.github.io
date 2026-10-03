@@ -1,0 +1,79 @@
+# Quiz: Ionic and Covalent Bonds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). ΔEN values checked (Pauling scale).
+title: 'Ionic and Covalent Bonds: Quiz'
+description: 'Seven questions on bond types, electronegativity difference, ionic formulas and properties, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: icb-q1
+    prompt: 'Which pair of elements is most likely to form an ionic compound?'
+    choices:
+      - 'Carbon and oxygen'
+      - 'Potassium and chlorine'
+      - 'Nitrogen and hydrogen'
+      - 'Sulfur and oxygen'
+    answer: 'Potassium and chlorine'
+    explanation: 'A metal (K) and a non-metal (Cl) with a large electronegativity difference (3.16 − 0.82 = 2.34). The others are non-metal pairs, which bond covalently.'
+    difficulty: easy
+  - id: icb-q2
+    prompt: 'In a covalent bond, electrons are…'
+    choices:
+      - 'transferred from one atom to another'
+      - 'shared between two atoms'
+      - 'delocalised throughout a metal lattice'
+      - 'removed from both atoms'
+    answer: 'shared between two atoms'
+    explanation: 'A covalent bond is a shared pair of electrons. Transfer gives ionic bonding; delocalised electrons describe metallic bonding.'
+    difficulty: easy
+  - id: icb-q3
+    prompt: 'Using EN values C 2.55 and O 3.44, the C–O bond is best described as…'
+    choices:
+      - 'nonpolar covalent'
+      - 'polar covalent'
+      - 'ionic'
+      - 'metallic'
+    answer: 'polar covalent'
+    explanation: 'ΔEN = 3.44 − 2.55 = 0.89, between about 0.4 and 1.8, so polar covalent with O δ−.'
+    difficulty: medium
+  - id: icb-q4
+    prompt: 'What is the formula of the ionic compound formed by aluminium and oxygen?'
+    choices:
+      - '$\ce{AlO}$'
+      - '$\ce{Al2O3}$'
+      - '$\ce{Al3O2}$'
+      - '$\ce{AlO3}$'
+    answer: '$\ce{Al2O3}$'
+    explanation: '$\ce{Al^3+}$ and $\ce{O^2-}$: 2 × (+3) = +6 balances 3 × (−2) = −6.'
+    difficulty: medium
+  - id: icb-q5
+    prompt: 'Which property is typical of an ionic compound?'
+    choices:
+      - 'Low melting point'
+      - 'Conducts electricity as a solid'
+      - 'Conducts electricity when dissolved in water'
+      - 'Exists as separate molecules'
+    answer: 'Conducts electricity when dissolved in water'
+    explanation: 'Dissolved (or molten) ions are free to move and carry charge. In the solid the ions are fixed in the lattice, so it does not conduct.'
+    difficulty: medium
+  - id: icb-q6
+    prompt: 'When water boils, what is overcome?'
+    choices:
+      - 'The O–H covalent bonds'
+      - 'The attractions between water molecules'
+      - 'Ionic bonds between H⁺ and O²⁻'
+      - 'The bonds inside the oxygen nucleus'
+    answer: 'The attractions between water molecules'
+    explanation: 'Boiling separates whole molecules; the covalent O–H bonds inside each molecule stay intact.'
+    difficulty: hard
+  - id: icb-q7
+    prompt: 'Which bond is the most polar? (EN: H 2.20, C 2.55, N 3.04, O 3.44, F 3.98)'
+    choices:
+      - 'C–H'
+      - 'N–H'
+      - 'O–H'
+      - 'F–H'
+    answer: 'F–H'
+    explanation: 'ΔEN: C–H 0.35, N–H 0.84, O–H 1.24, F–H 1.78. The largest difference gives the most polar bond.'
+    difficulty: medium

@@ -1,0 +1,79 @@
+# Quiz: Molecular Shapes (VSEPR)
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Domain counts checked.
+title: 'Molecular Shapes (VSEPR): Quiz'
+description: 'Seven questions on electron domains, VSEPR shapes, bond angles and polarity, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ms-q1
+    prompt: 'What is the shape of methane, $\ce{CH4}$?'
+    choices:
+      - 'Square planar'
+      - 'Tetrahedral'
+      - 'Trigonal pyramidal'
+      - 'Trigonal planar'
+    answer: 'Tetrahedral'
+    explanation: '4 bonding domains and no lone pairs on carbon spread out to the corners of a tetrahedron, 109.5° apart.'
+    difficulty: easy
+  - id: ms-q2
+    prompt: 'How many electron domains are on the carbon atom in $\ce{CO2}$?'
+    choices:
+      - '2'
+      - '4'
+      - '6'
+      - '8'
+    answer: '2'
+    explanation: 'Each C=O double bond counts as one domain, and carbon has no lone pairs: 2 domains, linear.'
+    difficulty: easy
+  - id: ms-q3
+    prompt: 'What is the shape of water, $\ce{H2O}$?'
+    choices:
+      - 'Linear'
+      - 'Bent'
+      - 'Tetrahedral'
+      - 'Trigonal planar'
+    answer: 'Bent'
+    explanation: '4 domains (2 bonds, 2 lone pairs) give tetrahedral electron geometry, but the atoms form a bent shape.'
+    difficulty: easy
+  - id: ms-q4
+    prompt: 'Which molecule is trigonal pyramidal?'
+    choices:
+      - '$\ce{BF3}$'
+      - '$\ce{NH3}$'
+      - '$\ce{CH4}$'
+      - '$\ce{SO3}$'
+    answer: '$\ce{NH3}$'
+    explanation: 'N has 3 bonds and 1 lone pair. $\ce{BF3}$ and $\ce{SO3}$ have 3 domains and no lone pairs on the central atom (trigonal planar).'
+    difficulty: medium
+  - id: ms-q5
+    prompt: 'Put the bond angles in order: $\ce{CH4}$, $\ce{NH3}$, $\ce{H2O}$.'
+    choices:
+      - '$\ce{CH4}$ > $\ce{NH3}$ > $\ce{H2O}$'
+      - '$\ce{H2O}$ > $\ce{NH3}$ > $\ce{CH4}$'
+      - 'All are 109.5°'
+      - '$\ce{NH3}$ > $\ce{CH4}$ > $\ce{H2O}$'
+    answer: '$\ce{CH4}$ > $\ce{NH3}$ > $\ce{H2O}$'
+    explanation: '109.5° > about 107° > about 104.5°: each extra lone pair squeezes the angle further.'
+    difficulty: medium
+  - id: ms-q6
+    prompt: 'Which molecule is polar?'
+    choices:
+      - '$\ce{CO2}$'
+      - '$\ce{CCl4}$'
+      - '$\ce{BF3}$'
+      - '$\ce{CHCl3}$'
+    answer: '$\ce{CHCl3}$'
+    explanation: 'The others are symmetrical, so their bond polarities cancel. In $\ce{CHCl3}$ one bond (C–H) differs, so they do not cancel.'
+    difficulty: hard
+  - id: ms-q7
+    prompt: 'What is the shape of $\ce{SF6}$?'
+    choices:
+      - 'Trigonal bipyramidal'
+      - 'Octahedral'
+      - 'Hexagonal planar'
+      - 'Square planar'
+    answer: 'Octahedral'
+    explanation: '6 bonding domains and no lone pairs on sulfur point to the corners of an octahedron, 90° apart.'
+    difficulty: medium

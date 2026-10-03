@@ -1,0 +1,39 @@
+# Flashcards: Molecular Shapes (VSEPR)
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+title: 'Molecular Shapes (VSEPR): Flashcards'
+description: 'Revise electron domains, VSEPR shapes, bond angles and molecular polarity.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ms-01
+    front: 'What does VSEPR stand for?'
+    back: 'Valence-shell electron-pair repulsion.'
+  - id: ms-02
+    front: 'What counts as one electron domain?'
+    back: 'A lone pair, or a bond to another atom. Single, double and triple bonds each count as one domain.'
+  - id: ms-03
+    front: 'Shape and bond angle with 4 domains and 0 lone pairs?'
+    back: 'Tetrahedral, 109.5° (e.g. $\ce{CH4}$)'
+  - id: ms-04
+    front: 'Shape of $\ce{NH3}$?'
+    back: 'Trigonal pyramidal, about 107° (4 domains, 1 lone pair)'
+  - id: ms-05
+    front: 'Shape of $\ce{H2O}$?'
+    back: 'Bent, about 104.5° (4 domains, 2 lone pairs)'
+  - id: ms-06
+    front: 'Shape and bond angle with 3 domains and 0 lone pairs?'
+    back: 'Trigonal planar, 120° (e.g. $\ce{BF3}$)'
+  - id: ms-07
+    front: 'Why do lone pairs make bond angles smaller?'
+    back: 'Lone pairs repel more strongly than bonding pairs, pushing the bonds closer together.'
+  - id: ms-08
+    front: 'Why is $\ce{CO2}$ nonpolar even though C=O bonds are polar?'
+    back: 'It is linear, so the two bond polarities point in opposite directions and cancel.'
+  - id: ms-09
+    front: 'Shape of $\ce{SF6}$?'
+    back: 'Octahedral, 90° (6 domains, 0 lone pairs)'
+  - id: ms-10
+    front: 'Shape of $\ce{PCl5}$?'
+    back: 'Trigonal bipyramidal, 90° and 120° (5 domains, 0 lone pairs)'

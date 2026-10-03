@@ -1,0 +1,79 @@
+# Quiz: Lewis Structures
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Electron counts and formal charges checked.
+title: 'Lewis Structures: Quiz'
+description: 'Seven questions on counting electrons, multiple bonds, formal charge, resonance and octet exceptions, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: lw-q1
+    prompt: 'How many valence electrons are used in the Lewis structure of $\ce{H2O}$?'
+    choices:
+      - '6'
+      - '8'
+      - '10'
+      - '3'
+    answer: '8'
+    explanation: '2 × 1 (H) + 6 (O) = 8: two bonding pairs and two lone pairs.'
+    difficulty: easy
+  - id: lw-q2
+    prompt: 'How many lone pairs are on the nitrogen atom in ammonia, $\ce{NH3}$?'
+    choices:
+      - '0'
+      - '1'
+      - '2'
+      - '3'
+    answer: '1'
+    explanation: '8 valence electrons: three N–H bonds use 6, leaving one lone pair on N.'
+    difficulty: easy
+  - id: lw-q3
+    prompt: 'Which bond is found in the Lewis structure of $\ce{CO2}$?'
+    choices:
+      - 'Two C–O single bonds'
+      - 'Two C=O double bonds'
+      - 'One C–O single bond and one C=O double bond'
+      - 'An ionic bond'
+    answer: 'Two C=O double bonds'
+    explanation: 'With 16 electrons, O=C=O gives every atom an octet and all formal charges are zero.'
+    difficulty: medium
+  - id: lw-q4
+    prompt: 'How many valence electrons are in the nitrate ion, $\ce{NO3-}$?'
+    choices:
+      - '23'
+      - '24'
+      - '22'
+      - '18'
+    answer: '24'
+    explanation: '5 (N) + 3 × 6 (O) + 1 for the negative charge = 24.'
+    difficulty: medium
+  - id: lw-q5
+    prompt: 'In O=C=O, what is the formal charge on carbon?'
+    choices:
+      - '0'
+      - '+1'
+      - '−1'
+      - '+2'
+    answer: '0'
+    explanation: 'Carbon: 4 valence − 0 lone-pair electrons − ½ × 8 bonding electrons = 0.'
+    difficulty: medium
+  - id: lw-q6
+    prompt: 'Why are both O–O bonds in ozone, $\ce{O3}$, the same length?'
+    choices:
+      - 'They are both single bonds'
+      - 'They are both double bonds'
+      - 'The molecule is a resonance hybrid of two structures'
+      - 'The molecule flips quickly between two structures'
+    answer: 'The molecule is a resonance hybrid of two structures'
+    explanation: 'The real molecule is an average of O=O–O and O–O=O, so each bond is between a single and a double bond.'
+    difficulty: hard
+  - id: lw-q7
+    prompt: 'Which molecule has a central atom with fewer than 8 electrons?'
+    choices:
+      - '$\ce{CH4}$'
+      - '$\ce{BF3}$'
+      - '$\ce{NH3}$'
+      - '$\ce{CCl4}$'
+    answer: '$\ce{BF3}$'
+    explanation: 'Boron forms three single bonds and has no lone pairs: only 6 electrons around it.'
+    difficulty: medium

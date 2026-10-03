@@ -1,0 +1,39 @@
+# Flashcards: Ionic and Covalent Bonds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+title: 'Ionic and Covalent Bonds: Flashcards'
+description: 'Revise ionic and covalent bonding, electronegativity difference, polar bonds and properties.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: icb-01
+    front: 'What is an ionic bond?'
+    back: 'The attraction between oppositely charged ions, formed when electrons are transferred from one atom to another.'
+  - id: icb-02
+    front: 'What is a covalent bond?'
+    back: 'A shared pair of electrons between two atoms.'
+  - id: icb-03
+    front: 'What is electronegativity?'
+    back: 'How strongly an atom attracts the shared electrons in a bond.'
+  - id: icb-04
+    front: 'What is a polar covalent bond?'
+    back: 'A covalent bond in which the electrons are shared unequally, giving partial charges δ+ and δ−.'
+  - id: icb-05
+    front: 'Roughly which ΔEN values give nonpolar, polar covalent and ionic bonds?'
+    back: 'Below about 0.4: nonpolar; about 0.4 to 1.8: polar covalent; above about 1.8: ionic (cut-offs vary).'
+  - id: icb-06
+    front: 'Write the formula of the compound of $\ce{Mg^2+}$ and $\ce{N^3-}$.'
+    back: '$\ce{Mg3N2}$ (3 × +2 = +6; 2 × −3 = −6)'
+  - id: icb-07
+    front: 'Why do ionic compounds have high melting points?'
+    back: 'Many strong attractions between oppositely charged ions in the lattice must be overcome.'
+  - id: icb-08
+    front: 'When do ionic compounds conduct electricity?'
+    back: 'When molten or dissolved in water, because the ions are then free to move.'
+  - id: icb-09
+    front: 'Which is shorter and stronger: a C–C single bond or a C≡C triple bond?'
+    back: 'The triple bond: more shared pairs make bonds shorter and stronger.'
+  - id: icb-10
+    front: 'In an O–H bond, which atom carries the partial negative charge?'
+    back: 'Oxygen, because it is more electronegative (3.44 vs 2.20).'

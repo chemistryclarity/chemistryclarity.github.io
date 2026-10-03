@@ -1,0 +1,133 @@
+---
+title: Molecular Shapes (VSEPR)
+question: "How do you predict the shape of a molecule using VSEPR theory?"
+description: "Use VSEPR theory to predict molecular shapes and bond angles from electron domains and lone pairs, and decide whether a molecule is polar."
+area: bonding
+level: intermediate
+order: 30
+prerequisites: [lewis-structures]
+related: [lewis-structures, ionic-and-covalent-bonds]
+flashcards: molecular-shapes
+quiz: molecular-shapes
+resources: [molecular-shapes-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Bond angles: ideal VSEPR angles; experimental NH3 ≈ 107°, H2O ≈ 104.5°, SO2 ≈ 119°.
+*/}
+
+## What is it?
+
+**VSEPR** stands for **valence-shell electron-pair repulsion**. It predicts the 3D shape of a molecule from one simple idea: the regions of electrons around a central atom **repel each other** and spread out to be **as far apart as possible**.
+
+Each region of electrons around the central atom is called an **electron domain**. A domain is:
+
+- a **lone pair**, or
+- a **bond** to another atom: single, double or triple (a multiple bond counts as **one** domain).
+
+<KeyIdea>
+Count the electron domains around the central atom to get the **electron-domain geometry**. Then look only at where the **atoms** are to name the **molecular shape**. Lone pairs affect the shape but are not part of its name.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Shape controls properties.** Whether a molecule is polar, and so how it dissolves and how high it boils, depends on its shape.
+- **Shape controls biology.** Enzymes, drugs and smell receptors work because molecules have particular shapes that fit together.
+- **It's quick.** With a Lewis structure, you can predict shapes and bond angles in seconds.
+
+## How does it work?
+
+### 1. Steps
+
+1. Draw the **Lewis structure**.
+2. Count the **electron domains** on the central atom (bonds + lone pairs; multiple bonds count once).
+3. Find the **electron-domain geometry** from the number of domains.
+4. Name the **molecular shape** from the positions of the atoms.
+
+### 2. The shapes
+
+| Domains | Lone pairs | Molecular shape | Bond angle | Example |
+|---|---|---|---|---|
+| 2 | 0 | linear | 180° | $\ce{CO2}$ |
+| 3 | 0 | trigonal planar | 120° | $\ce{BF3}$ |
+| 3 | 1 | bent | slightly less than 120° | $\ce{SO2}$ |
+| 4 | 0 | tetrahedral | 109.5° | $\ce{CH4}$ |
+| 4 | 1 | trigonal pyramidal | about 107° | $\ce{NH3}$ |
+| 4 | 2 | bent | about 104.5° | $\ce{H2O}$ |
+| 5 | 0 | trigonal bipyramidal | 90° and 120° | $\ce{PCl5}$ |
+| 6 | 0 | octahedral | 90° | $\ce{SF6}$ |
+
+### 3. Why lone pairs squeeze bond angles
+
+A lone pair is held by only one nucleus, so it sits closer to the central atom, takes up more space and **repels more strongly** than a bonding pair. The order of repulsion is:
+
+lone pair–lone pair > lone pair–bond pair > bond pair–bond pair
+
+That's why the angle drops from 109.5° in $\ce{CH4}$ to about 107° in $\ce{NH3}$ (one lone pair) and about 104.5° in $\ce{H2O}$ (two lone pairs).
+
+### 4. Shape and polarity
+
+A molecule is **polar** if its bond polarities do **not** cancel out.
+
+- $\ce{CO2}$ has two polar C=O bonds, but they point in opposite directions (linear), so they cancel: **nonpolar**.
+- $\ce{H2O}$ has two polar O–H bonds in a bent shape, so they don't cancel: **polar**.
+- $\ce{CCl4}$ (tetrahedral, four identical bonds): **nonpolar**. $\ce{CHCl3}$ (one bond different): **polar**.
+
+<Analogy>
+Tie four balloons together at their knots. They automatically point to the corners of a tetrahedron, because each balloon pushes the others away. Two balloons sit in a line; three spread out flat in a triangle.
+</Analogy>
+
+<MorePrecisely>
+With 5 or 6 domains, lone pairs give further shapes. With 5 domains, lone pairs go in the flat "equator" positions, giving **seesaw** ($\ce{SF4}$, 1 lone pair), **T-shaped** ($\ce{ClF3}$, 2) and **linear** ($\ce{XeF2}$, 3). With 6 domains, you get **square pyramidal** ($\ce{BrF5}$, 1) and **square planar** ($\ce{XeF4}$, 2).
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/vsepr/shapes.svg" alt="Eight molecular shapes. Linear CO2, 180°, 2 domains. Trigonal planar BF3, 120°, 3 domains. Bent SO2, about 119°, 3 domains with 1 lone pair. Tetrahedral CH4, 109.5°, 4 domains. Trigonal pyramidal NH3, about 107°, 4 domains with 1 lone pair. Bent H2O, about 104.5°, 4 domains with 2 lone pairs. Trigonal bipyramidal PCl5, 90° and 120°, 5 domains. Octahedral SF6, 90°, 6 domains. Wedges point towards the viewer, dashed bonds point away, and lobes show lone pairs." caption="Common VSEPR shapes. Multiple bonds count as one domain; outer-atom lone pairs are not shown." width={360} height={786} />
+
+## Worked example
+
+<Example title="Ammonia, NH₃">
+1. Lewis structure: N bonded to three H, with one lone pair on N.
+2. Domains on N: 3 bonds + 1 lone pair = **4**, so the electron-domain geometry is tetrahedral.
+3. Atoms occupy only three corners, so the shape is **trigonal pyramidal**, with H–N–H about **107°**.
+4. The N–H bond polarities don't cancel in this shape, so $\ce{NH3}$ is **polar**.
+</Example>
+
+<Example title="Formaldehyde, CH₂O">
+1. Lewis structure: C in the centre, single bonds to two H and a double bond to O; no lone pairs on C.
+2. Domains on C: **3** (the C=O double bond counts once).
+3. Shape: **trigonal planar**, angles about 120°.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Counting a double bond as two domains">
+A double or triple bond points in one direction, so it counts as **one** electron domain. $\ce{CO2}$ has 2 domains on carbon, not 4.
+</CommonMistake>
+
+<CommonMistake title="Naming the shape from the electron domains">
+Water has 4 domains (tetrahedral electron geometry) but its **molecular shape** is **bent**, because only the atoms are counted when naming the shape.
+</CommonMistake>
+
+<CommonMistake title="Assuming polar bonds mean a polar molecule">
+$\ce{CO2}$ and $\ce{CCl4}$ have polar bonds but are nonpolar molecules, because their symmetry makes the bond polarities cancel.
+</CommonMistake>
+
+<NotationNote>
+- In 3D drawings, a solid **wedge** points towards you and a **dashed** bond points away; ordinary lines lie in the plane of the page.
+- Some books write "AXₘEₙ" notation: A = central atom, X = bonded atoms, E = lone pairs. For example, water is AX₂E₂.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Electron domains (bonds + lone pairs, multiple bonds count once) spread out as far as possible.
+- 2 linear 180°; 3 trigonal planar 120°; 4 tetrahedral 109.5°; 5 trigonal bipyramidal; 6 octahedral.
+- Lone pairs repel more and squeeze bond angles: CH₄ 109.5°, NH₃ about 107°, H₂O about 104.5°.
+- Polar molecule = polar bonds that do not cancel by symmetry.
+</RememberThis>
