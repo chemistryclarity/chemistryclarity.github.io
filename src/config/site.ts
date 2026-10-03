@@ -5,6 +5,8 @@
  *  Edit the values below, commit, and push. Every page updates.
  *  Keep personal information out of this file: it is public.
  */
+import social from './social.json';
+
 export const site = {
   name: 'Chemistry Clarity',
   tagline: 'Chemistry, made clear.',
@@ -25,13 +27,8 @@ export const site = {
     email: 'chemistryclarityforyou@gmail.com',
   },
 
-  /** Leave a value empty ('') to hide that link. */
-  social: {
-    youtube: '',
-    instagram: '',
-    tiktok: '',
-    x: '',
-  },
+  /** Social media links: edit in the online editor (Site settings → Social media links) or in social.json. Empty = hidden. */
+  social: social as Record<string, string>,
 
   copyrightStart: 2026,
 

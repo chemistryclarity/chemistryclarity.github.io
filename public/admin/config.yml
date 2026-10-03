@@ -280,6 +280,19 @@ collections:
   - name: settings
     label: Site settings
     files:
+      - name: social
+        label: Social media links
+        file: src/config/social.json
+        description: Paste the full address of each profile (https://…). Leave empty to hide. Links appear in the footer of every page.
+        fields:
+          - { name: youtube, label: YouTube, widget: string, required: false }
+          - { name: instagram, label: Instagram, widget: string, required: false }
+          - { name: tiktok, label: TikTok, widget: string, required: false }
+          - { name: facebook, label: Facebook, widget: string, required: false }
+          - { name: x, label: X (Twitter), widget: string, required: false }
+          - { name: threads, label: Threads, widget: string, required: false }
+          - { name: linkedin, label: LinkedIn, widget: string, required: false }
+          - { name: pinterest, label: Pinterest, widget: string, required: false }
       - name: references
         label: References (sources)
         file: src/content/references/references.yaml

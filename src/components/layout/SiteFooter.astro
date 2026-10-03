@@ -10,7 +10,10 @@ const groups = footerNav.map((g) =>
   g.heading === 'Learn' && newsletterEnabled ? { ...g, links: [...g.links, { label: 'Newsletter', href: '/newsletter/' }] } : g,
 );
 const socials = Object.entries(site.social).filter(([, href]) => href);
-const socialLabels: Record<string, string> = { youtube: 'YouTube', instagram: 'Instagram', tiktok: 'TikTok', x: 'X' };
+const socialLabels: Record<string, string> = {
+  youtube: 'YouTube', instagram: 'Instagram', tiktok: 'TikTok', facebook: 'Facebook',
+  x: 'X', threads: 'Threads', linkedin: 'LinkedIn', pinterest: 'Pinterest',
+};
 ---
 
 <footer class="site-footer">
@@ -68,7 +71,7 @@ const socialLabels: Record<string, string> = { youtube: 'YouTube', instagram: 'I
   li + li { margin-top: var(--space-2); }
   a { color: var(--ink-soft); text-decoration: none; }
   a:hover { color: var(--accent); text-decoration: underline; }
-  .site-footer__social { display: flex; gap: var(--space-4); margin-top: var(--space-4); }
+  .site-footer__social { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); margin-top: var(--space-4); }
   .site-footer__social li + li { margin-top: 0; }
   .site-footer__legal {
     border-top: 1px solid var(--border);

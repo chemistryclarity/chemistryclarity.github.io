@@ -26,6 +26,8 @@ const organization = {
   '@id': `${absoluteUrl('/')}#organization`,
   name: site.publisher,
   url: absoluteUrl('/'),
+  logo: absoluteUrl('/favicon.svg'),
+  ...(Object.values(site.social).some(Boolean) ? { sameAs: Object.values(site.social).filter(Boolean) } : {}),
 };
 const graph = [organization, ...jsonLd];
 ---

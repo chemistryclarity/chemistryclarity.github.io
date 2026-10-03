@@ -45,7 +45,7 @@ The left menu lists every type of content:
 | **Printable resources** | The download listings on the Resources page (upload PDFs here) |
 | **Premium products** | Paid products (for later) |
 | **Site pages** | About, Editorial Standards, Contact, Privacy, Terms, Disclaimer |
-| **Site settings** | References (sources) and subject areas |
+| **Site settings** | Social media links, references (sources) and subject areas |
 
 **To edit:** open an item, change it, click **Save**.
 **To add:** click **New** at the top of a list.
