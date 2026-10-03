@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import NewsletterSignup from '../../components/monetization/NewsletterSignup.astro';
+import { newsletter, newsletterEnabled } from '../../config/site';
+
+const benefits = [
+  { title: 'New lessons', text: 'Be the first to know when a new topic is explained.' },
+  { title: 'Study tips', text: 'Practical advice for understanding and revising chemistry.' },
+  { title: 'Free resources', text: 'Worksheets, flashcards and printable study sheets as they are released.' },
+];
+---
+
+<BaseLayout
+  title="Free Chemistry Newsletter"
+  description="Sign up for the free Chemistry Clarity newsletter: new lessons, study tips and free chemistry resources in your inbox."
+  path="/newsletter/"
+  draft={!newsletterEnabled}
+>
+  <div class="container section section--tight">
+    <Breadcrumbs items={[{ label: 'Newsletter' }]} />
+    <div class="layout">
+      <header class="intro">
+        <p class="eyebrow">Free newsletter</p>
+        <h1>Clear chemistry, straight to your inbox</h1>
+        <p class="lead">
+          Join the Chemistry Clarity newsletter for new lessons, study tips and free resources that make chemistry easier
+          to understand.
+        </p>
+        <ul class="benefits" role="list">
+          {benefits.map((b) => (
+            <li>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <span><strong>{b.title}.</strong> {b.text}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="muted small">
+          {newsletter.frequency && <>{newsletter.frequency}. </>}No spam, and we never sell your address. Unsubscribe
+          with one click from any email.
+        </p>
+      </header>
+
+      <div class="form-col">
+        <h2 class="visually-hidden">Sign up</h2>
+        <NewsletterSignup />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .layout {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-5);
+    align-items: start;
+  }
+  @media (min-width: 56rem) {
+    .layout { grid-template-columns: 1.1fr 1fr; gap: var(--space-8); }
+  }
+  .intro > * + * { margin-top: var(--space-4); }
+  .benefits { list-style: none; padding: 0; display: grid; gap: var(--space-3); }
+  .benefits li { display: grid; grid-template-columns: 1.25rem 1fr; gap: var(--space-3); align-items: start; }
+  .benefits svg { color: var(--accent); width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; }
+  .small { font-size: var(--step--1); }
+</style>

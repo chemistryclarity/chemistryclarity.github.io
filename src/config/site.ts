@@ -53,3 +53,35 @@ export const site = {
 } as const;
 
 export type Site = typeof site;
+
+/**
+ * NEWSLETTER SETTINGS
+ * The sign-up form sends addresses straight to your email service; nothing is stored on this site.
+ * To go live: copy these values from your email service's "embedded form" code
+ * (see docs/newsletter.md), then set `features.newsletter: true` above.
+ * The form address is public by design. It is NOT a password or API key.
+ */
+export const newsletter: {
+  provider: '' | 'mailerlite' | 'kit' | 'buttondown' | 'other';
+  formAction: string;
+  emailField: string;
+  nameField: string;
+  hiddenFields: Record<string, string>;
+  frequency: string;
+  minimumAge: number;
+} = {
+  provider: '',
+  formAction: '',
+  emailField: 'email',
+  /** Leave empty ('') to ask for email only. */
+  nameField: '',
+  /** Extra hidden values some services require (copied from their embed code). */
+  hiddenFields: {},
+  /** Shown on the sign-up page, e.g. 'About twice a month'. Leave empty to hide. */
+  frequency: '',
+  /** LEGAL REVIEW: minimum age for signing up without parental permission. */
+  minimumAge: 16,
+};
+
+/** True only when the switch is on AND the form is connected. */
+export const newsletterEnabled = site.features.newsletter && newsletter.formAction !== '';

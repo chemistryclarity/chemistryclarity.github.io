@@ -1,0 +1,125 @@
+---
+/**
+ * Newsletter sign-up form. Works without JavaScript: the form posts directly
+ * to the email service configured in src/config/site.ts.
+ *   <NewsletterSignup />                  full form (sign-up page)
+ *   <NewsletterSignup variant="compact" />  short box for other pages
+ */
+import { newsletter, newsletterEnabled } from '../../config/site';
+import { url } from '../../lib/url';
+
+export interface Props {
+  variant?: 'full' | 'compact';
+  /** Unique prefix so two forms on one page don't share ids. */
+  idPrefix?: string;
+}
+const { variant = 'full', idPrefix = 'nl' } = Astro.props;
+const id = (s: string) => `${idPrefix}-${s}`;
+---
+
+{variant === 'compact' ? (
+  newsletterEnabled && (
+    <aside class="nl-compact" aria-labelledby={id('compact-title')}>
+      <div>
+        <h2 id={id('compact-title')}>Get new lessons by email</h2>
+        <p>Clear chemistry explanations, study tips and free resources. Unsubscribe any time.</p>
+      </div>
+      <a class="btn btn--primary" href={url('/newsletter/')}>Sign up free</a>
+    </aside>
+  )
+) : newsletterEnabled ? (
+  <form class="nl-form" action={newsletter.formAction} method="post" target="_self">
+    {Object.entries(newsletter.hiddenFields).map(([name, value]) => (
+      <input type="hidden" name={name} value={value} />
+    ))}
+
+    {newsletter.nameField && (
+      <div class="field">
+        <label for={id('name')}>First name <span class="optional">(optional)</span></label>
+        <input id={id('name')} name={newsletter.nameField} type="text" autocomplete="given-name" />
+      </div>
+    )}
+
+    <div class="field">
+      <label for={id('email')}>Email address</label>
+      <input
+        id={id('email')}
+        name={newsletter.emailField}
+        type="email"
+        autocomplete="email"
+        inputmode="email"
+        required
+        aria-describedby={id('email-hint')}
+      />
+      <p class="hint" id={id('email-hint')}>We'll only use this to send you the Chemistry Clarity newsletter.</p>
+    </div>
+
+    <div class="check">
+      <input id={id('consent')} type="checkbox" required />
+      <label for={id('consent')}>
+        I'd like to receive emails from Chemistry Clarity. I understand I can unsubscribe at any time.
+      </label>
+    </div>
+
+    <div class="check">
+      <input id={id('age')} type="checkbox" required />
+      <label for={id('age')}>
+        I am {newsletter.minimumAge} or older, or I have permission from a parent or guardian.
+      </label>
+    </div>
+
+
+    <button class="btn btn--primary" type="submit">Sign up</button>
+    <p class="hint">
+      You'll receive an email asking you to confirm. See our <a href={url('/privacy/')}>privacy policy</a>.
+    </p>
+  </form>
+) : (
+  <div class="nl-closed" role="status">
+    <p><strong>Sign-up opens soon.</strong></p>
+    <p class="hint">The newsletter isn't accepting subscribers yet. Please check back later.</p>
+  </div>
+)}
+
+<style>
+  .nl-form, .nl-closed {
+    display: grid;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    max-width: 32rem;
+  }
+  .field { display: grid; gap: var(--space-1); }
+  label { font-weight: 600; }
+  .optional { font-weight: 400; color: var(--muted); }
+  input[type='text'], input[type='email'] {
+    min-height: 48px;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--bg);
+    font-size: 1rem; /* prevents zoom-on-focus on iPhone */
+  }
+  input:focus-visible { border-color: var(--accent); }
+  .check { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); align-items: start; }
+  .check input { width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; accent-color: var(--accent); }
+  .check label { font-weight: 400; font-size: var(--step--1); line-height: 1.5; }
+  .hint { font-size: var(--step--1); color: var(--muted); }
+  button { justify-self: start; }
+
+  .nl-compact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: var(--accent-soft);
+    border-radius: var(--radius-lg);
+  }
+  .nl-compact h2 { font-size: var(--step-1); }
+  .nl-compact p { color: var(--ink-soft); font-size: var(--step--1); margin-top: var(--space-1); }
+</style>

@@ -1,0 +1,22 @@
+---
+/** Where the email service sends people after they sign up (set this address in the service's form settings). */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { routes } from '../../lib/url';
+---
+
+<BaseLayout title="Check your inbox" description="Confirm your Chemistry Clarity newsletter subscription." noindex>
+  <div class="container section thanks">
+    <p class="eyebrow">Almost done</p>
+    <h1>Check your inbox</h1>
+    <p class="lead">
+      We've sent you an email. Click the link inside to confirm your subscription. If you can't see it within a few
+      minutes, check your spam or promotions folder.
+    </p>
+    <a class="btn btn--primary" href={routes.learn()}>Keep learning</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .thanks { max-width: 40rem; }
+  .thanks > * + * { margin-top: var(--space-4); }
+</style>

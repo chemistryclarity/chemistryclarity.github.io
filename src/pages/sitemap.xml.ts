@@ -7,6 +7,7 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { getAreas } from '../lib/content';
 import { absoluteUrl } from '../lib/url';
+import { newsletterEnabled } from '../config/site';
 
 export const GET: APIRoute = async () => {
   const topics = await getCollection('topics', (t) => t.data.status === 'published');
@@ -16,6 +17,7 @@ export const GET: APIRoute = async () => {
   const entries: { path: string; lastmod?: Date }[] = [
     { path: '/' },
     { path: '/learn/' },
+    ...(newsletterEnabled ? [{ path: '/newsletter/' }] : []),
     ...areas.map((a) => ({ path: `/learn/${a.id}/` })),
     ...topics.map((t) => ({ path: `/chemistry/${t.id}/`, lastmod: t.data.updated ?? t.data.lastReviewed })),
     ...pages.map((p) => ({ path: `/${p.id}/`, lastmod: p.data.updated })),
