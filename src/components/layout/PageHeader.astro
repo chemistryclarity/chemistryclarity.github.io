@@ -1,0 +1,26 @@
+---
+/** Standard page header: breadcrumbs, eyebrow, title, intro text and an optional meta row. */
+import Breadcrumbs, { type Crumb } from './Breadcrumbs.astro';
+
+export interface Props {
+  crumbs: Crumb[];
+  title: string;
+  eyebrow?: string;
+  lead?: string;
+}
+const { crumbs, title, eyebrow, lead } = Astro.props;
+---
+
+<Breadcrumbs items={crumbs} />
+<header class="page-header">
+  {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  <h1>{title}</h1>
+  {lead && <p class="lead">{lead}</p>}
+  {Astro.slots.has('default') && <div class="page-header__meta"><slot /></div>}
+</header>
+
+<style>
+  .page-header { margin-block: var(--space-4) var(--space-6); max-width: var(--measure); }
+  .page-header > * + * { margin-top: var(--space-3); }
+  .page-header__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; font-size: var(--step--1); }
+</style>

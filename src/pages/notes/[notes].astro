@@ -1,0 +1,57 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import UsedIn from '../../components/layout/UsedIn.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import MathStyles from '../../components/lesson/MathStyles.astro';
+import { lessonComponents } from '../../components/lesson';
+import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+import { url } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const notes = await getVisible('notes');
+  return notes.map((n) => ({ params: { notes: n.id }, props: { notes: n } }));
+}) satisfies GetStaticPaths;
+
+const { notes } = Astro.props;
+const { data } = notes;
+const { Content } = await render(notes);
+const topics = await getTopicsUsing('notes', notes.id);
+const pdfHref = data.pdf ? (data.pdf.startsWith('http') ? data.pdf : url(data.pdf)) : undefined;
+---
+
+<BaseLayout title={data.title} description={data.description} path={`/notes/${notes.id}/`} type="article" draft={isDraft(notes)}>
+  <MathStyles />
+  <div class="container section section--tight narrow">
+    <PageHeader crumbs={[{ label: 'Lecture notes', href: '/notes/' }, { label: data.title }]} title={data.title} lead={data.description}>
+      <LevelBadge level={data.level} />
+    </PageHeader>
+
+    <div class="actions no-print">
+      <button type="button" class="btn btn--ghost" data-print>Print these notes</button>
+      {pdfHref ? (
+        <a class="btn btn--primary" href={pdfHref} download>Download PDF</a>
+      ) : (
+        <span class="muted pdf-soon">PDF version coming soon</span>
+      )}
+    </div>
+
+    <article class="prose">
+      <Content components={lessonComponents} />
+    </article>
+
+    <div class="no-print"><UsedIn topics={topics} /></div>
+  </div>
+</BaseLayout>
+
+<style>
+  .narrow { max-width: calc(var(--measure) + 2 * var(--gutter)); }
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-bottom: var(--space-6); }
+  .pdf-soon { font-size: var(--step--1); }
+</style>
+
+<script>
+  document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+</script>

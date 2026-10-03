@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import { getVisible, isDraft } from '../../lib/content';
+import { url } from '../../lib/url';
+
+const decks = await getVisible('flashcards');
+---
+
+<BaseLayout
+  title="Chemistry Flashcards"
+  description="Free chemistry flashcards for quick revision: flip, shuffle and test yourself on key definitions and ideas."
+  path="/flashcards/"
+  noindex={decks.every(isDraft)}
+>
+  <div class="container section section--tight">
+    <PageHeader
+      crumbs={[{ label: 'Flashcards' }]}
+      eyebrow="Practice"
+      title="Flashcards"
+      lead="Quick-fire revision. Read the question, think of the answer, then flip the card to check."
+    />
+    <ul class="list" role="list">
+      {decks.map((deck) => (
+        <li class="item">
+          <h2><a href={url(`/flashcards/${deck.id}/`)}>{deck.data.title}</a></h2>
+          <div class="meta">
+            <span class="badge">{deck.data.cards.length} cards</span>
+            <LevelBadge level={deck.data.level} />
+            {isDraft(deck) && <span class="badge badge--draft">Draft</span>}
+          </div>
+        </li>
+      ))}
+    </ul>
+    {decks.length === 0 && <p class="muted">Flashcard decks are on the way.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .list { list-style: none; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); }
+  .item { padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .item h2 { font-size: var(--step-1); }
+  .item a { color: var(--ink); }
+  .meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+</style>

@@ -1,0 +1,215 @@
+---
+/**
+ * Multiple-choice quiz. Questions are rendered at build time; a small script adds
+ * "Check answer", instant feedback and a score. Without JavaScript, each question
+ * has a "Show answer" panel instead.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { renderInline, renderBlock } from '../../lib/inline-math';
+
+export interface Props {
+  quiz: CollectionEntry<'quizzes'>;
+  showTitle?: boolean;
+  headingLevel?: 'h2' | 'h3';
+}
+const { quiz, showTitle = false, headingLevel: Heading = 'h3' } = Astro.props;
+const questions = quiz.data.questions;
+const uid = `qz-${quiz.id}`;
+const letters = 'ABCDEF';
+const difficultyLabel = { easy: 'Easy', medium: 'Medium', hard: 'Hard' } as const;
+---
+
+<section class="quiz" data-quiz aria-labelledby={`${uid}-title`}>
+  <Heading id={`${uid}-title`} class:list={['quiz__title', { 'visually-hidden': !showTitle }]}>{quiz.data.title}</Heading>
+  <p class="quiz__status" aria-live="polite">
+    {questions.length} {questions.length === 1 ? 'question' : 'questions'}
+  </p>
+
+  <ol class="quiz__list" role="list">
+    {questions.map((q, qi) => (
+      <li class="q" data-question>
+        <fieldset>
+          <legend>
+            <span class="q__num">Question {qi + 1}</span>
+            <span class="q__difficulty">{difficultyLabel[q.difficulty]}</span>
+            <span class="q__prompt" set:html={renderInline(q.prompt)} />
+          </legend>
+          <div class="q__choices">
+            {q.choices.map((choice, ci) => (
+              <label class="q__choice" data-correct={choice === q.answer ? 'true' : undefined}>
+                <input type="radio" name={`${uid}-q${qi}`} value={ci} />
+                <span class="q__letter" aria-hidden="true">{letters[ci]}</span>
+                <span class="q__choice-text" set:html={renderInline(choice)} />
+                <span class="q__mark"></span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <button type="button" class="btn btn--primary q__check" hidden>Check answer</button>
+        <div class="q__feedback" role="status" hidden>
+          <p class="q__verdict"></p>
+          <div class="q__explanation" set:html={renderBlock(q.explanation)} />
+        </div>
+
+        <details class="q__reveal">
+          <summary>Show answer</summary>
+          <p><strong>Answer:</strong> <span set:html={renderInline(q.answer)} /></p>
+          <div set:html={renderBlock(q.explanation)} />
+        </details>
+      </li>
+    ))}
+  </ol>
+
+  <div class="quiz__result" role="status" tabindex="-1" hidden>
+    <p class="quiz__score"></p>
+    <button type="button" class="btn btn--ghost quiz__retry">Try again</button>
+  </div>
+</section>
+
+<style>
+  .quiz { margin-block: var(--space-5); font-family: var(--font-sans); }
+  .quiz__title { font-size: var(--step-1); margin-bottom: var(--space-2); }
+  .quiz__status { font-size: var(--step--1); font-weight: 600; color: var(--ink-soft); margin-bottom: var(--space-4); }
+  .quiz__list { list-style: none; padding: 0; display: grid; gap: var(--space-5); }
+
+  .q {
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+  }
+  fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+  legend { display: block; width: 100%; padding: 0; margin-bottom: var(--space-4); }
+  .q__num { font-size: var(--step--1); font-weight: 700; color: var(--accent); margin-right: var(--space-2); }
+  .q__difficulty { font-size: 0.75rem; font-weight: 600; color: var(--muted); border: 1px solid var(--border-strong); border-radius: 99px; padding: 0.1em 0.55em; }
+  .q__prompt { display: block; margin-top: var(--space-2); font-size: var(--step-0); font-weight: 600; line-height: 1.5; color: var(--ink); }
+
+  .q__choices { display: grid; gap: var(--space-2); }
+  .q__choice {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 48px;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+  .q__choice:hover { border-color: var(--accent); }
+  .q__choice:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+  .q__choice:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .q__choice input { width: 1.1rem; height: 1.1rem; accent-color: var(--accent); margin: 0; }
+  .q__letter { font-weight: 700; color: var(--muted); font-size: var(--step--1); }
+  .q__mark { font-size: var(--step--1); font-weight: 700; white-space: nowrap; }
+
+  /* After checking: never rely on colour alone, so marks also say "Correct" / "Your answer" */
+  .q.is-checked .q__choice { cursor: default; }
+  .q.is-checked .q__choice[data-correct] { border-color: var(--remember); background: var(--remember-bg); }
+  .q.is-checked .q__choice[data-correct] .q__mark { color: var(--remember); }
+  .q.is-checked .q__choice.is-wrong { border-color: var(--mistake); background: var(--mistake-bg); }
+  .q.is-checked .q__choice.is-wrong .q__mark { color: var(--mistake); }
+
+  .q__check { margin-top: var(--space-4); }
+  .q__feedback { margin-top: var(--space-4); padding: var(--space-4); border-radius: var(--radius); background: var(--surface-2); }
+  .q__verdict { font-weight: 700; margin-bottom: var(--space-2); }
+  .q__verdict.is-correct { color: var(--remember); }
+  .q__verdict.is-wrong { color: var(--mistake); }
+  .q__explanation :global(p + p), .q__reveal :global(p + p) { margin-top: 0.5em; }
+
+  .q__reveal { margin-top: var(--space-4); font-size: var(--step--1); }
+  .q__reveal summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+  .q__reveal > * + * { margin-top: var(--space-2); }
+  .quiz.is-ready .q__reveal { display: none; }
+
+  .quiz__result {
+    margin-top: var(--space-5);
+    padding: var(--space-5);
+    text-align: center;
+    background: var(--accent-soft);
+    border-radius: var(--radius-lg);
+  }
+  .quiz__result:focus { outline: none; }
+  .quiz__score { font-size: var(--step-1); font-weight: 700; margin-bottom: var(--space-3); }
+  [hidden] { display: none !important; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-quiz]').forEach((quiz) => {
+    const questions = Array.from(quiz.querySelectorAll<HTMLElement>('[data-question]'));
+    const status = quiz.querySelector<HTMLElement>('.quiz__status')!;
+    const result = quiz.querySelector<HTMLElement>('.quiz__result')!;
+    const score = quiz.querySelector<HTMLElement>('.quiz__score')!;
+    let answered = 0;
+    let correct = 0;
+
+    const updateStatus = () => {
+      status.textContent = `${answered} of ${questions.length} answered · ${correct} correct`;
+    };
+
+    questions.forEach((q) => {
+      const check = q.querySelector<HTMLButtonElement>('.q__check')!;
+      const feedback = q.querySelector<HTMLElement>('.q__feedback')!;
+      const verdict = q.querySelector<HTMLElement>('.q__verdict')!;
+      const inputs = Array.from(q.querySelectorAll<HTMLInputElement>('input[type="radio"]'));
+      check.hidden = false;
+      check.disabled = true;
+      inputs.forEach((input) => input.addEventListener('change', () => { check.disabled = false; }));
+
+      check.addEventListener('click', () => {
+        const chosen = inputs.find((i) => i.checked);
+        if (!chosen) return;
+        const label = chosen.closest<HTMLElement>('.q__choice')!;
+        const isCorrect = label.hasAttribute('data-correct');
+
+        q.classList.add('is-checked');
+        inputs.forEach((i) => { i.disabled = true; });
+        q.querySelectorAll<HTMLElement>('.q__choice').forEach((choice) => {
+          const mark = choice.querySelector<HTMLElement>('.q__mark')!;
+          if (choice.hasAttribute('data-correct')) mark.textContent = '✓ Correct answer';
+        });
+        if (!isCorrect) {
+          label.classList.add('is-wrong');
+          label.querySelector<HTMLElement>('.q__mark')!.textContent = '✗ Your answer';
+        }
+        verdict.textContent = isCorrect ? '✓ Correct!' : '✗ Not quite.';
+        verdict.className = `q__verdict ${isCorrect ? 'is-correct' : 'is-wrong'}`;
+        feedback.hidden = false;
+        check.hidden = true;
+
+        answered++;
+        if (isCorrect) correct++;
+        updateStatus();
+        if (answered === questions.length) {
+          const pct = Math.round((correct / questions.length) * 100);
+          score.textContent = `You scored ${correct} out of ${questions.length} (${pct}%).`;
+          result.hidden = false;
+          result.focus();
+        }
+      });
+    });
+
+    quiz.querySelector('.quiz__retry')!.addEventListener('click', () => {
+      answered = 0;
+      correct = 0;
+      questions.forEach((q) => {
+        q.classList.remove('is-checked');
+        q.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach((i) => { i.checked = false; i.disabled = false; });
+        q.querySelectorAll('.q__choice').forEach((c) => c.classList.remove('is-wrong'));
+        q.querySelectorAll<HTMLElement>('.q__mark').forEach((m) => { m.textContent = ''; });
+        q.querySelector<HTMLElement>('.q__feedback')!.hidden = true;
+        const check = q.querySelector<HTMLButtonElement>('.q__check')!;
+        check.hidden = false;
+        check.disabled = true;
+      });
+      result.hidden = true;
+      updateStatus();
+      questions[0]?.querySelector<HTMLInputElement>('input')?.focus();
+    });
+
+    quiz.classList.add('is-ready');
+  });
+</script>

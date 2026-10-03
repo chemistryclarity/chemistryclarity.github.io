@@ -1,0 +1,11 @@
+# Premium resource. EXAMPLE ONLY, to show how paid resources will look.
+# Premium resources never have a `file` here (this repository is public).
+# They point to a product instead.
+
+title: "Stoichiometry Exam Pack (Example)"
+description: "Example of a premium resource listing. Not a real product."
+type: practice-test
+level: intermediate
+access: premium
+product: stoichiometry-exam-pack-example
+status: draft

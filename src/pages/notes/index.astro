@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import PremiumBadge from '../../components/monetization/PremiumBadge.astro';
+import { getVisible, isDraft } from '../../lib/content';
+import { url } from '../../lib/url';
+
+const notes = await getVisible('notes');
+---
+
+<BaseLayout
+  title="Chemistry Lecture Notes"
+  description="Clear chemistry lecture notes to read online, print or download."
+  path="/notes/"
+  noindex={notes.every(isDraft)}
+>
+  <div class="container section section--tight">
+    <PageHeader
+      crumbs={[{ label: 'Lecture notes' }]}
+      eyebrow="Read"
+      title="Lecture notes"
+      lead="Structured notes you can read online, print, or download as a PDF."
+    />
+    <ul class="list" role="list">
+      {notes.map((n) => (
+        <li class="item">
+          <h2><a href={url(`/notes/${n.id}/`)}>{n.data.title}</a></h2>
+          <p class="muted">{n.data.description}</p>
+          <div class="meta">
+            <LevelBadge level={n.data.level} />
+            {n.data.access === 'premium' ? <PremiumBadge /> : <span class="badge">Free</span>}
+            {n.data.pdf && <span class="badge">PDF</span>}
+            {isDraft(n) && <span class="badge badge--draft">Draft</span>}
+          </div>
+        </li>
+      ))}
+    </ul>
+    {notes.length === 0 && <p class="muted">Lecture notes are on the way.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .list { list-style: none; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
+  .item { padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .item h2 { font-size: var(--step-1); }
+  .item a { color: var(--ink); }
+  .item p { font-size: var(--step--1); margin-top: var(--space-2); }
+  .meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+</style>

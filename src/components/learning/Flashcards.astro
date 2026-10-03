@@ -1,0 +1,220 @@
+---
+/**
+ * Flashcard deck. Cards are rendered as HTML at build time (so formulas work and
+ * search engines can read them); a small script turns the list into a flip-card viewer.
+ * Without JavaScript, all cards are shown as a simple question/answer list.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { renderInline, renderBlock } from '../../lib/inline-math';
+
+export interface Props {
+  deck: CollectionEntry<'flashcards'>;
+  /** Show the deck title as a heading (off when the page already has one). */
+  showTitle?: boolean;
+  headingLevel?: 'h2' | 'h3';
+}
+const { deck, showTitle = false, headingLevel: Heading = 'h3' } = Astro.props;
+const cards = deck.data.cards;
+const total = cards.length;
+const uid = `fc-${deck.id}`;
+---
+
+<section class="fc" data-flashcards aria-labelledby={`${uid}-title`}>
+  <Heading id={`${uid}-title`} class:list={['fc__title', { 'visually-hidden': !showTitle }]}>
+    {deck.data.title}
+  </Heading>
+
+  <div class="fc__bar">
+    <p class="fc__progress" aria-live="polite">
+      <span class="fc__progress-text">{total} {total === 1 ? 'card' : 'cards'}</span>
+    </p>
+    <button type="button" class="fc__shuffle btn btn--ghost" hidden>Shuffle</button>
+  </div>
+
+  <div class="fc__meter" aria-hidden="true"><span class="fc__meter-fill"></span></div>
+
+  <ol class="fc__list" role="list">
+    {cards.map((card, i) => (
+      <li class="fc__item" data-index={i}>
+        <div class="fc__card">
+          <div class="fc__face fc__face--front">
+            <span class="fc__side">Question</span>
+            <div class="fc__text" set:html={renderInline(card.front)} />
+          </div>
+          <div class="fc__face fc__face--back">
+            <span class="fc__side">Answer</span>
+            <div class="fc__text" set:html={renderBlock(card.back)} />
+          </div>
+        </div>
+      </li>
+    ))}
+  </ol>
+
+  <div class="fc__controls" hidden>
+    <button type="button" class="btn btn--ghost fc__prev" aria-label="Previous card">
+      <span aria-hidden="true">←</span> <span class="fc__btn-label">Previous</span>
+    </button>
+    <button type="button" class="btn btn--primary fc__flip">Show answer</button>
+    <button type="button" class="btn btn--ghost fc__next" aria-label="Next card">
+      <span class="fc__btn-label">Next</span> <span aria-hidden="true">→</span>
+    </button>
+  </div>
+  <p class="fc__hint" hidden>Tip: press <kbd>Space</kbd> to flip and <kbd>←</kbd> <kbd>→</kbd> to move between cards.</p>
+</section>
+
+<style>
+  .fc {
+    margin-block: var(--space-5);
+    padding: var(--space-4);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-sans);
+  }
+  .fc__title { font-size: var(--step-1); margin-bottom: var(--space-3); }
+  .fc__bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+  .fc__progress { font-size: var(--step--1); font-weight: 600; color: var(--ink-soft); }
+  .fc__shuffle { min-height: 38px; padding: 0.35rem 0.8rem; font-size: var(--step--1); }
+  .fc__meter { height: 4px; margin-block: var(--space-3); background: var(--border); border-radius: 99px; overflow: hidden; }
+  .fc__meter-fill { display: block; height: 100%; width: 0; background: var(--accent); transition: width 0.25s; }
+
+  /* No-JavaScript / print view: a plain list of question + answer */
+  .fc__list { list-style: none; padding: 0; display: grid; gap: var(--space-3); }
+  .fc__card { display: grid; gap: var(--space-2); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--space-4); }
+  .fc__side { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-1); }
+  .fc__face--back .fc__side { color: var(--accent); }
+  .fc__text { font-size: var(--step-0); line-height: 1.5; }
+  .fc__text :global(p + p) { margin-top: 0.5em; }
+
+  /* Interactive view (enabled by the script) */
+  .fc.is-ready .fc__item { display: none; }
+  .fc.is-ready .fc__item.is-current { display: block; }
+  .fc.is-ready .fc__card {
+    position: relative;
+    display: block;
+    min-height: 14rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    perspective: 1200px;
+    cursor: pointer;
+  }
+  .fc.is-ready .fc__face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    backface-visibility: hidden;
+    transition: transform 0.45s ease;
+    overflow-y: auto;
+  }
+  .fc.is-ready .fc__face--back { transform: rotateY(180deg); border-top: 3px solid var(--accent); }
+  .fc.is-ready .is-flipped .fc__face--front { transform: rotateY(-180deg); }
+  .fc.is-ready .is-flipped .fc__face--back { transform: rotateY(0); }
+  .fc.is-ready .fc__text { font-size: var(--step-1); }
+
+  .fc__controls { display: flex; justify-content: space-between; align-items: center; gap: var(--space-2); margin-top: var(--space-4); }
+  .fc__controls .btn { min-width: 44px; justify-content: center; }
+  .fc__flip { flex: 1; max-width: 14rem; }
+  @media (max-width: 30rem) {
+    .fc__btn-label { display: none; }
+  }
+  .fc__hint { margin-top: var(--space-3); font-size: var(--step--1); color: var(--muted); text-align: center; }
+  kbd { font-family: var(--font-mono); font-size: 0.85em; padding: 0.05em 0.35em; border: 1px solid var(--border-strong); border-radius: 4px; background: var(--surface); }
+  [hidden] { display: none !important; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fc.is-ready .fc__face { transition: none; }
+  }
+  @media (hover: none) {
+    .fc__hint { display: none !important; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-flashcards]').forEach((root) => {
+    const items = Array.from(root.querySelectorAll<HTMLLIElement>('.fc__item'));
+    if (items.length === 0) return;
+
+    const progress = root.querySelector<HTMLElement>('.fc__progress-text')!;
+    const meter = root.querySelector<HTMLElement>('.fc__meter-fill')!;
+    const flipBtn = root.querySelector<HTMLButtonElement>('.fc__flip')!;
+    const prevBtn = root.querySelector<HTMLButtonElement>('.fc__prev')!;
+    const nextBtn = root.querySelector<HTMLButtonElement>('.fc__next')!;
+    const shuffleBtn = root.querySelector<HTMLButtonElement>('.fc__shuffle')!;
+
+    let order = items.map((_, i) => i);
+    let pos = 0;
+    let flipped = false;
+    let shuffled = false;
+
+    const setFaces = (item: HTMLLIElement, isFlipped: boolean) => {
+      item.querySelector('.fc__card')!.classList.toggle('is-flipped', isFlipped);
+      item.querySelector('.fc__face--front')!.setAttribute('aria-hidden', String(isFlipped));
+      item.querySelector('.fc__face--back')!.setAttribute('aria-hidden', String(!isFlipped));
+    };
+
+    const render = () => {
+      items.forEach((item) => item.classList.remove('is-current'));
+      const item = items[order[pos]];
+      item.classList.add('is-current');
+      setFaces(item, flipped);
+      flipBtn.textContent = flipped ? 'Show question' : 'Show answer';
+      progress.textContent = `Card ${pos + 1} of ${items.length}`;
+      meter.style.width = `${((pos + 1) / items.length) * 100}%`;
+      prevBtn.disabled = pos === 0;
+      nextBtn.disabled = pos === items.length - 1;
+    };
+
+    const flip = () => { flipped = !flipped; render(); };
+    const go = (delta: number) => {
+      const next = pos + delta;
+      if (next < 0 || next >= items.length) return;
+      pos = next;
+      flipped = false;
+      render();
+    };
+
+    flipBtn.addEventListener('click', flip);
+    prevBtn.addEventListener('click', () => go(-1));
+    nextBtn.addEventListener('click', () => go(1));
+    items.forEach((item) => item.querySelector('.fc__card')!.addEventListener('click', flip));
+
+    shuffleBtn.addEventListener('click', () => {
+      shuffled = !shuffled;
+      order = items.map((_, i) => i);
+      if (shuffled) {
+        for (let i = order.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [order[i], order[j]] = [order[j], order[i]];
+        }
+      }
+      shuffleBtn.textContent = shuffled ? 'Original order' : 'Shuffle';
+      pos = 0;
+      flipped = false;
+      render();
+    });
+
+    root.addEventListener('keydown', (e) => {
+      const target = e.target as HTMLElement;
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+      else if (e.key === ' ' && target.tagName !== 'BUTTON') { e.preventDefault(); flip(); }
+    });
+
+    root.classList.add('is-ready');
+    root.querySelector<HTMLElement>('.fc__controls')!.hidden = false;
+    root.querySelector<HTMLElement>('.fc__hint')!.hidden = false;
+    if (items.length > 1) shuffleBtn.hidden = false;
+    render();
+  });
+</script>

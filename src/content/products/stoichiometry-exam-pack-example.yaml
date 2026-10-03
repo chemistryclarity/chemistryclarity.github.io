@@ -1,0 +1,12 @@
+# Premium product. EXAMPLE ONLY (placeholder: true shows an "Example only" label).
+# When real products are ready: set placeholder: false, add price and checkoutUrl
+# (the link to the external store), and turn on `shop` in src/config/site.ts.
+
+title: "Stoichiometry Exam Pack (Example)"
+description: "Example product card showing how a premium study pack will be presented. Not for sale."
+includes:
+  - "[Item 1, e.g. a set of practice papers]"
+  - "[Item 2, e.g. full worked solutions]"
+  - "[Item 3, e.g. a printable formula sheet]"
+placeholder: true
+status: draft

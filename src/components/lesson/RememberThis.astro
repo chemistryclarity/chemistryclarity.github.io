@@ -1,0 +1,8 @@
+---
+import Callout from './Callout.astro';
+export interface Props {
+  title?: string;
+}
+---
+
+<Callout type="remember" title={Astro.props.title}><slot /></Callout>

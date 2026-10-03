@@ -1,0 +1,10 @@
+# NEW PREMIUM PRODUCT: copy into src/content/products/ and rename.
+# The paid file itself lives ONLY on the store platform. Never in this repository.
+title: 'Product Title'
+description: 'What the buyer gets and who it is for.'
+price: 'US$9'
+checkoutUrl: 'https://your-store.example/product'   # link to the external store
+includes:
+  - 'Item'
+placeholder: false
+status: draft

@@ -119,8 +119,8 @@ const videos = defineCollection({
     title: z.string(),
     description: z.string(),
     provider: z.enum(['youtube']).default('youtube'),
-    /** The ID from the YouTube link, e.g. youtube.com/watch?v=THIS_PART */
-    videoId: z.string(),
+    /** The ID from the YouTube link (youtube.com/watch?v=THIS_PART). Leave out until uploaded. */
+    videoId: z.string().optional(),
     duration: z.string().optional(), // e.g. "PT6M30S" (6 min 30 s)
     uploadDate: z.coerce.date().optional(),
     keyPoints: z.array(z.string()).default([]),

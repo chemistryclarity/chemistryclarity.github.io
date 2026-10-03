@@ -1,0 +1,127 @@
+---
+/**
+ * Shared look for all lesson boxes (Key idea, Example, Common mistake…).
+ * Each type has a text label and an icon, so meaning never depends on colour alone.
+ */
+export type CalloutType = 'key' | 'example' | 'mistake' | 'remember' | 'analogy' | 'precise' | 'convention';
+
+export interface Props {
+  type: CalloutType;
+  /** Optional heading shown after the label, e.g. "Converting grams to moles". */
+  title?: string;
+}
+
+const { type, title } = Astro.props;
+
+const meta: Record<CalloutType, { label: string; icon: string }> = {
+  key: {
+    label: 'Key idea',
+    icon: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3Z"/>',
+  },
+  example: {
+    label: 'Worked example',
+    icon: '<path d="M4 20h4L19 9l-4-4L4 16v4ZM13.5 6.5l4 4"/>',
+  },
+  mistake: {
+    label: 'Common mistake',
+    icon: '<path d="M12 3 2 20h20L12 3ZM12 10v4M12 17.2v.3"/>',
+  },
+  remember: {
+    label: 'Remember this',
+    icon: '<path d="M6 3h12v18l-6-4-6 4V3Z"/>',
+  },
+  analogy: {
+    label: 'Think of it like this',
+    icon: '<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/>',
+  },
+  precise: {
+    label: 'More precisely',
+    icon: '<circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/>',
+  },
+  convention: {
+    label: 'Notation note',
+    icon: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/>',
+  },
+};
+const { label, icon } = meta[type];
+---
+
+<div class:list={['callout', `callout--${type}`]} role="note">
+  <p class="callout__label">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" set:html={icon} />
+    <span>{label}{title && <span class="callout__title">: {title}</span>}</span>
+  </p>
+  <div class="callout__body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .callout {
+    --c: var(--key);
+    --c-bg: var(--key-bg);
+    margin-block: 1.6em;
+    padding: var(--space-4) var(--space-5);
+    background: var(--c-bg);
+    border-left: 4px solid var(--c);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .callout--example { --c: var(--example); --c-bg: var(--example-bg); }
+  .callout--mistake { --c: var(--mistake); --c-bg: var(--mistake-bg); }
+  .callout--remember { --c: var(--remember); --c-bg: var(--remember-bg); }
+  .callout--analogy { --c: var(--accent); --c-bg: var(--accent-soft); }
+  .callout--precise, .callout--convention { --c: var(--precise); --c-bg: var(--precise-bg); }
+
+  .callout__label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-2);
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--c);
+  }
+  .callout__title { text-transform: none; letter-spacing: 0; color: var(--ink); font-weight: 650; }
+  .callout__label svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .callout__body > :global(* + *) { margin-top: 0.8em; }
+  .callout__body :global(ol) { padding-left: 1.4em; }
+  .callout--remember .callout__body { font-weight: 550; }
+
+  /* Worked examples: numbered steps */
+  .callout--example .callout__body :global(ol) {
+    list-style: none;
+    counter-reset: step;
+    padding-left: 0;
+  }
+  .callout--example .callout__body :global(ol > li) {
+    counter-increment: step;
+    position: relative;
+    padding-left: 4.2rem;
+  }
+  .callout--example .callout__body :global(ol > li::before) {
+    content: 'Step ' counter(step);
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--example);
+  }
+
+  @media print {
+    .callout { border: 1px solid #999; border-left-width: 4px; background: none; break-inside: avoid; }
+  }
+</style>

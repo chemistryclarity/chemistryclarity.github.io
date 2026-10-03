@@ -1,0 +1,44 @@
+# Quiz: The Mole Concept
+# PROTOTYPE PLACEHOLDER: replace the text in [brackets] with your own questions.
+# `answer` must be copied EXACTLY from one of the choices, or the build will stop and tell you.
+# difficulty: easy | medium | hard
+# Formulas: put text that contains a formula in 'single quotes', e.g. prompt: 'What is $\ce{H2O}$?'
+
+title: "The Mole Concept: Quiz"
+description: "[PLACEHOLDER] Short description of the quiz."
+level: beginner
+access: free
+status: draft
+
+questions:
+  - id: mole-q1
+    prompt: "[Question 1: your content]"
+    choices:
+      - "[Choice A]"
+      - "[Choice B]"
+      - "[Choice C]"
+      - "[Choice D]"
+    answer: "[Choice B]"
+    explanation: "[Explain why this answer is correct, and why a common wrong answer is wrong.]"
+    difficulty: easy
+
+  - id: mole-q2
+    prompt: "[Question 2: your content]"
+    choices:
+      - "[Choice A]"
+      - "[Choice B]"
+      - "[Choice C]"
+      - "[Choice D]"
+    answer: "[Choice A]"
+    explanation: "[Explanation]"
+    difficulty: medium
+
+  - id: mole-q3
+    prompt: "[Question 3: your content]"
+    choices:
+      - "[Choice A]"
+      - "[Choice B]"
+      - "[Choice C]"
+    answer: "[Choice C]"
+    explanation: "[Explanation]"
+    difficulty: hard

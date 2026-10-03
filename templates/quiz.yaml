@@ -1,0 +1,22 @@
+# NEW QUIZ: copy into src/content/quizzes/ and rename, e.g. molar-mass.yaml
+# Then add  quiz: molar-mass  to the topic file.
+# `answer` must be copied EXACTLY from one of the choices.
+# TIP: use 'single quotes' around any text containing a formula.
+
+title: 'Topic: Quiz'
+description: 'Short description.'
+level: beginner
+access: free
+status: draft
+
+questions:
+  - id: topic-q1
+    prompt: 'Question text'
+    choices:
+      - 'Choice A'
+      - 'Choice B'
+      - 'Choice C'
+      - 'Choice D'
+    answer: 'Choice B'
+    explanation: 'Why B is correct, and why a common wrong answer is wrong.'
+    difficulty: easy        # easy | medium | hard

@@ -1,0 +1,18 @@
+# NEW FLASHCARD DECK: copy into src/content/flashcards/ and rename, e.g. molar-mass.yaml
+# Then add  flashcards: molar-mass  to the topic file.
+# TIP: use 'single quotes' around any text containing a formula (backslash).
+#      Inside single quotes, write an apostrophe as two: it''s
+
+title: 'Topic: Flashcards'
+description: 'Short description.'
+level: beginner
+access: free
+status: draft
+
+cards:
+  - id: topic-01          # unique; never change after publishing
+    front: 'Question'
+    back: 'Answer'
+  - id: topic-02
+    front: 'What is the formula of water?'
+    back: '$\ce{H2O}$'

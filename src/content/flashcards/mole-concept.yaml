@@ -1,0 +1,28 @@
+# Flashcards: The Mole Concept
+# PROTOTYPE PLACEHOLDER: replace the text in [brackets] with your own cards.
+# Each card needs a unique id. Never change an id once the deck is published.
+# Formulas: write $\ce{H2O}$ for chemistry and $...$ for maths. Bold: **text**.
+# IMPORTANT: put text that contains a formula in 'single quotes' (double quotes break the backslash).
+
+title: "The Mole Concept: Flashcards"
+description: "[PLACEHOLDER] Short description of the deck."
+level: beginner
+access: free
+status: draft
+
+cards:
+  - id: mole-01
+    front: "[Question 1: your content]"
+    back: "[Answer 1: your content]"
+  - id: mole-02
+    front: "[Question 2: your content]"
+    back: "[Answer 2: your content]"
+  - id: mole-03
+    front: "[Question 3: your content]"
+    back: "[Answer 3: your content]"
+  - id: mole-04
+    front: "[Question 4: your content]"
+    back: "[Answer 4: your content]"
+  - id: mole-05
+    front: "[Question 5: your content]"
+    back: "[Answer 5: your content]"

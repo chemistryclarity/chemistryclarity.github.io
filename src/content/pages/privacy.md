@@ -17,6 +17,10 @@ Chemistry Clarity **does not** use cookies, analytics or advertising trackers, a
 
 The website is hosted on GitHub Pages, a service of GitHub, Inc. When you visit, GitHub may process technical information such as your IP address to deliver and secure the service. See GitHub's privacy statement for details.
 
+## Videos
+
+Our videos are hosted on YouTube. Nothing is loaded from YouTube until you press **play**. When you do, the video loads from YouTube's privacy-enhanced service (youtube-nocookie.com), and YouTube (Google) may then collect information as described in Google's privacy policy.
+
 ## Newsletter
 
 If you sign up for our newsletter, we collect your **email address** and use it **only** to send you the Chemistry Clarity newsletter (new lessons, study tips, free resources and occasional news about Chemistry Clarity resources).

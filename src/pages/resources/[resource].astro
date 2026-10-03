@@ -1,0 +1,103 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import UsedIn from '../../components/layout/UsedIn.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import PremiumBadge from '../../components/monetization/PremiumBadge.astro';
+import ProductCard from '../../components/monetization/ProductCard.astro';
+import { getVisible, getTopicsUsing, isDraft, isVisible, resourceTypeLabel } from '../../lib/content';
+import { url } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const resources = await getVisible('resources');
+  return resources.map((r) => ({ params: { resource: r.id }, props: { resource: r } }));
+}) satisfies GetStaticPaths;
+
+const { resource } = Astro.props;
+const { data } = resource;
+const topics = await getTopicsUsing('resources', resource.id);
+const product = data.product ? await getEntry(data.product) : undefined;
+const showProduct = product && isVisible(product);
+const fileHref = data.file ? (data.file.startsWith('http') ? data.file : url(data.file)) : undefined;
+const typeLabel = resourceTypeLabel[data.type];
+---
+
+<BaseLayout title={data.title} description={data.description} path={`/resources/${resource.id}/`} draft={isDraft(resource)}>
+  <div class="container section section--tight">
+    <PageHeader crumbs={[{ label: 'Resources', href: '/resources/' }, { label: data.title }]} eyebrow={typeLabel} title={data.title} lead={data.description}>
+      <LevelBadge level={data.level} />
+      {data.access === 'premium' ? <PremiumBadge /> : <span class="badge">Free</span>}
+    </PageHeader>
+
+    <div class="resource">
+      <div class="resource__preview">
+        {data.preview ? (
+          <img src={url(data.preview)} alt={`Preview of the first page of ${data.title}`} loading="lazy" />
+        ) : (
+          <div class="paper" role="img" aria-label="Preview placeholder">
+            <span class="paper__type">{typeLabel}</span>
+            <span class="paper__lines" aria-hidden="true"></span>
+            <span class="paper__note">[Preview image coming soon]</span>
+          </div>
+        )}
+      </div>
+
+      <div class="resource__info">
+        <dl class="facts">
+          <div><dt>Type</dt><dd>{typeLabel}</dd></div>
+          <div><dt>Level</dt><dd>{data.level[0].toUpperCase() + data.level.slice(1)}</dd></div>
+          {data.pages && <div><dt>Pages</dt><dd>{data.pages}</dd></div>}
+          <div><dt>Format</dt><dd>PDF, ready to print</dd></div>
+        </dl>
+
+        {data.access === 'free' && (
+          fileHref ? (
+            <a class="btn btn--primary" href={fileHref} download>Download free PDF</a>
+          ) : (
+            <p class="soon">[Download coming soon]</p>
+          )
+        )}
+
+        {data.access === 'premium' && showProduct && <ProductCard product={product} />}
+      </div>
+    </div>
+
+    <UsedIn topics={topics} />
+  </div>
+</BaseLayout>
+
+<style>
+  .resource { display: grid; gap: var(--space-6); align-items: start; }
+  @media (min-width: 48rem) {
+    .resource { grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); }
+  }
+  .resource__preview img { border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-2); }
+  .paper {
+    aspect-ratio: 1 / 1.414;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-2);
+    max-width: 18rem;
+  }
+  .paper__type { font-weight: 700; color: var(--accent); font-size: var(--step--1); }
+  .paper__lines {
+    flex: 1;
+    background: repeating-linear-gradient(to bottom, var(--border) 0 2px, transparent 2px 1.4rem);
+    opacity: 0.8;
+  }
+  .paper__note { font-size: var(--step--1); color: var(--muted); text-align: center; }
+  .resource__info { display: grid; gap: var(--space-5); align-content: start; }
+  .facts { display: grid; gap: var(--space-2); font-size: var(--step--1); max-width: 24rem; }
+  .facts div { display: grid; grid-template-columns: 6rem 1fr; padding-bottom: var(--space-2); border-bottom: 1px solid var(--border); }
+  dt { color: var(--muted); }
+  dd { margin: 0; font-weight: 600; }
+  .resource__info .btn { justify-self: start; }
+  .soon { color: var(--muted); font-size: var(--step--1); }
+</style>

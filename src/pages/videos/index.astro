@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import { getVisible, isDraft } from '../../lib/content';
+import { url } from '../../lib/url';
+
+const videos = await getVisible('videos');
+---
+
+<BaseLayout
+  title="Chemistry Videos"
+  description="Short chemistry videos that explain one idea at a time, simply and visually."
+  path="/videos/"
+  noindex={videos.every(isDraft)}
+>
+  <div class="container section section--tight">
+    <PageHeader
+      crumbs={[{ label: 'Videos' }]}
+      eyebrow="Watch"
+      title="Videos"
+      lead="Short explanations of one idea at a time, with key points and transcripts."
+    />
+    <ul class="list" role="list">
+      {videos.map((video) => (
+        <li class="item">
+          <span class="play" aria-hidden="true">▶</span>
+          <div>
+            <h2><a href={url(`/videos/${video.id}/`)}>{video.data.title}</a></h2>
+            <p class="muted">{video.data.description}</p>
+            {isDraft(video) && <span class="badge badge--draft">Draft</span>}
+          </div>
+        </li>
+      ))}
+    </ul>
+    {videos.length === 0 && <p class="muted">Videos are on the way.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .list { list-style: none; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
+  .item { display: flex; gap: var(--space-4); padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .item h2 { font-size: var(--step-1); }
+  .item a { color: var(--ink); }
+  .item p { font-size: var(--step--1); margin-block: var(--space-2); }
+  .play { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-size: 0.9rem; }
+</style>

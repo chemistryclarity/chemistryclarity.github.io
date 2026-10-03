@@ -1,0 +1,15 @@
+# Printable resource (free)
+# PROTOTYPE PLACEHOLDER
+# type: worksheet | cheat-sheet | formula-sheet | revision-sheet | practice-test | notes
+# file: put the PDF in public/downloads/ and write its path here, e.g. "/downloads/mole-concept-worksheet.pdf"
+#       (for big files, a GitHub Releases link). Remove personal info from the PDF first.
+
+title: "Mole Concept Worksheet"
+description: "[PLACEHOLDER] What the worksheet practises and how many questions it has."
+type: worksheet
+level: beginner
+access: free
+# file: "/downloads/mole-concept-worksheet.pdf"
+# pages: 2
+# preview: "/previews/mole-concept-worksheet.png"
+status: draft

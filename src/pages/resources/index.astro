@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import ResourceCard from '../../components/cards/ResourceCard.astro';
+import { getVisible, isDraft } from '../../lib/content';
+
+const resources = await getVisible('resources');
+const free = resources.filter((r) => r.data.access === 'free');
+const premium = resources.filter((r) => r.data.access === 'premium');
+---
+
+<BaseLayout
+  title="Printable Chemistry Resources"
+  description="Printable chemistry worksheets, cheat sheets, formula sheets and practice tests."
+  path="/resources/"
+  noindex={resources.every(isDraft)}
+>
+  <div class="container section section--tight">
+    <PageHeader
+      crumbs={[{ label: 'Resources' }]}
+      eyebrow="Print & practise"
+      title="Resources"
+      lead="Worksheets, cheat sheets, formula sheets and practice tests to print and use."
+    />
+
+    {free.length > 0 && (
+      <section aria-labelledby="free-heading">
+        <h2 id="free-heading" class="group-title">Free resources</h2>
+        <ul class="grid" role="list">{free.map((r) => <li><ResourceCard resource={r} /></li>)}</ul>
+      </section>
+    )}
+
+    {premium.length > 0 && (
+      <section aria-labelledby="premium-heading" class="group">
+        <h2 id="premium-heading" class="group-title">Premium resources</h2>
+        <p class="muted">In-depth study packs to support you further. The free lessons always stay free.</p>
+        <ul class="grid" role="list">{premium.map((r) => <li><ResourceCard resource={r} /></li>)}</ul>
+      </section>
+    )}
+
+    {resources.length === 0 && <p class="muted">Printable resources are on the way.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .group { margin-top: var(--space-8); }
+  .group-title { font-size: var(--step-2); margin-bottom: var(--space-4); }
+  .group > p { margin-top: calc(-1 * var(--space-2)); margin-bottom: var(--space-4); }
+  .grid { list-style: none; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+</style>

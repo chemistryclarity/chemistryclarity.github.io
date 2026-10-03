@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import { getVisible, isDraft } from '../../lib/content';
+import { url } from '../../lib/url';
+
+const quizzes = await getVisible('quizzes');
+---
+
+<BaseLayout
+  title="Chemistry Quizzes"
+  description="Free chemistry quizzes with instant feedback and a clear explanation for every answer."
+  path="/quizzes/"
+  noindex={quizzes.every(isDraft)}
+>
+  <div class="container section section--tight">
+    <PageHeader
+      crumbs={[{ label: 'Quizzes' }]}
+      eyebrow="Practice"
+      title="Quizzes"
+      lead="Test your understanding. Every question comes with an explanation, so you learn from mistakes too."
+    />
+    <ul class="list" role="list">
+      {quizzes.map((quiz) => (
+        <li class="item">
+          <h2><a href={url(`/quizzes/${quiz.id}/`)}>{quiz.data.title}</a></h2>
+          <div class="meta">
+            <span class="badge">{quiz.data.questions.length} questions</span>
+            <LevelBadge level={quiz.data.level} />
+            {isDraft(quiz) && <span class="badge badge--draft">Draft</span>}
+          </div>
+        </li>
+      ))}
+    </ul>
+    {quizzes.length === 0 && <p class="muted">Quizzes are on the way.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .list { list-style: none; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); }
+  .item { padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .item h2 { font-size: var(--step-1); }
+  .item a { color: var(--ink); }
+  .meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+</style>

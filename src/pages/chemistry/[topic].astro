@@ -1,16 +1,22 @@
 ---
 /**
  * Topic page template. Every file in src/content/topics/ becomes a page at /chemistry/<file-name>/.
- * (Stage 2 adds the video, flashcards, quiz, downloads, references and previous/next links.)
+ * The lesson text comes from the file; the video, flashcards, quiz, downloads, references and
+ * previous/next links are added automatically from the fields at the top of the file.
  */
 import type { GetStaticPaths } from 'astro';
 import { getEntry, getEntries, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import LevelBadge from '../../components/cards/LevelBadge.astro';
+import ResourceCard from '../../components/cards/ResourceCard.astro';
 import MathStyles from '../../components/lesson/MathStyles.astro';
-import { getTopics, isDraft, isVisible } from '../../lib/content';
-import { routes, absoluteUrl } from '../../lib/url';
+import VideoEmbed from '../../components/media/VideoEmbed.astro';
+import Flashcards from '../../components/learning/Flashcards.astro';
+import Quiz from '../../components/learning/Quiz.astro';
+import { lessonComponents } from '../../components/lesson';
+import { getTopics, getPrevNext, isDraft, isVisible } from '../../lib/content';
+import { routes, absoluteUrl, url } from '../../lib/url';
 import { site } from '../../config/site';
 
 export const getStaticPaths = (async () => {
@@ -20,12 +26,32 @@ export const getStaticPaths = (async () => {
 
 const { topic } = Astro.props;
 const { data } = topic;
+const path = `/chemistry/${topic.id}/`;
+
 const area = await getEntry(data.area);
+const visible = <T extends { data: { status: 'draft' | 'review' | 'published' } }>(e: T | undefined) =>
+  e && isVisible(e) ? e : undefined;
 const prerequisites = (await getEntries(data.prerequisites)).filter(isVisible);
 const related = (await getEntries(data.related)).filter(isVisible);
-const { Content } = await render(topic);
+const video = visible(data.video ? await getEntry(data.video) : undefined);
+const notes = visible(data.notes ? await getEntry(data.notes) : undefined);
+const deck = visible(data.flashcards ? await getEntry(data.flashcards) : undefined);
+const quiz = visible(data.quiz ? await getEntry(data.quiz) : undefined);
+const resources = (await getEntries(data.resources)).filter(isVisible);
+const references = await getEntries(data.references);
+const { prev, next } = await getPrevNext(topic);
+const { Content, headings } = await render(topic);
 const draft = isDraft(topic);
-const path = `/chemistry/${topic.id}/`;
+
+const hasPractice = Boolean(deck || quiz);
+const hasDownloads = Boolean(notes || resources.length);
+const toc = [
+  ...headings.filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text })),
+  ...(video ? [{ slug: 'video', text: 'Watch the video' }] : []),
+  ...(hasPractice ? [{ slug: 'test-yourself', text: 'Test yourself' }] : []),
+  ...(hasDownloads ? [{ slug: 'notes-and-downloads', text: 'Notes and downloads' }] : []),
+  ...(references.length ? [{ slug: 'references', text: 'References' }] : []),
+];
 
 const jsonLd = [
   {
@@ -42,6 +68,7 @@ const jsonLd = [
     publisher: { '@id': `${absoluteUrl('/')}#organization` },
     author: { '@id': `${absoluteUrl('/')}#organization` },
     ...(data.lastReviewed ? { dateModified: data.lastReviewed.toISOString().slice(0, 10) } : {}),
+    ...(prerequisites.length ? { competencyRequired: prerequisites.map((p) => p.data.title) } : {}),
   },
 ];
 
@@ -50,7 +77,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
 
 <BaseLayout title={data.title} description={data.description} path={path} type="article" jsonLd={jsonLd} draft={draft}>
   <MathStyles />
-  <article class="container section section--tight topic">
+  <div class="container section section--tight">
     <Breadcrumbs
       items={[
         { label: 'Learn', href: '/learn/' },
@@ -59,47 +86,148 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
       ]}
     />
 
-    <header class="topic__head">
+    <header class="topic-head">
       <h1>{data.title}</h1>
-      <p class="lead topic__question">{data.question}</p>
-      <div class="topic__meta">
+      <p class="lead topic-head__question">{data.question}</p>
+      <div class="topic-head__meta">
         <LevelBadge level={data.level} />
         {area && <a class="badge" href={routes.area(area.id)}>{area.data.title}</a>}
         {data.lastReviewed && <span class="muted">Last reviewed {fmtDate(data.lastReviewed)}</span>}
       </div>
     </header>
 
-    {prerequisites.length > 0 && (
-      <aside class="prereq" aria-label="Before you start">
-        <strong>Before you start:</strong> it helps to understand{' '}
-        {prerequisites.map((p, i) => (
-          <>
-            {i > 0 && (i === prerequisites.length - 1 ? ' and ' : ', ')}
-            <a href={routes.topic(p.id)}>{p.data.title}</a>
-          </>
-        ))}.
-      </aside>
-    )}
+    <div class="topic-layout">
+      {toc.length > 2 && (
+        <nav class="toc" aria-labelledby="toc-heading">
+          <details class="toc__details" open>
+            <summary id="toc-heading">In this lesson</summary>
+            <ol role="list">
+              {toc.map((item) => <li><a href={`#${item.slug}`}>{item.text}</a></li>)}
+            </ol>
+          </details>
+        </nav>
+      )}
 
-    <div class="prose topic__body">
-      <Content />
+      <article class="topic-main">
+        {prerequisites.length > 0 && (
+          <aside class="prereq" aria-label="Before you start">
+            <strong>Before you start:</strong> it helps to understand{' '}
+            {prerequisites.map((p, i) => (
+              <>
+                {i > 0 && (i === prerequisites.length - 1 ? ' and ' : ', ')}
+                <a href={routes.topic(p.id)}>{p.data.title}</a>
+              </>
+            ))}.
+          </aside>
+        )}
+
+        <div class="prose">
+          <Content components={lessonComponents} />
+        </div>
+
+        {video && (
+          <section class="block" aria-labelledby="video">
+            <h2 id="video">Watch the video</h2>
+            <VideoEmbed video={video} />
+            {video.data.keyPoints.length > 0 && (
+              <div class="keypoints">
+                <h3>Key points</h3>
+                <ul>{video.data.keyPoints.map((p) => <li>{p}</li>)}</ul>
+              </div>
+            )}
+            <p class="block__more"><a href={url(`/videos/${video.id}/`)}>Video page with transcript →</a></p>
+          </section>
+        )}
+
+        {hasPractice && (
+          <section class="block" aria-labelledby="test-yourself">
+            <h2 id="test-yourself">Test yourself</h2>
+            <p class="muted">Check your understanding before moving on.</p>
+            {deck && (
+              <div class="practice">
+                <h3>Flashcards</h3>
+                <Flashcards deck={deck} />
+              </div>
+            )}
+            {quiz && (
+              <div class="practice">
+                <h3>Quiz</h3>
+                <Quiz quiz={quiz} />
+              </div>
+            )}
+          </section>
+        )}
+
+        {hasDownloads && (
+          <section class="block" aria-labelledby="notes-and-downloads">
+            <h2 id="notes-and-downloads">Notes and downloads</h2>
+            <ul class="downloads" role="list">
+              {notes && (
+                <li>
+                  <article class="notes-card">
+                    <p class="notes-card__type">Lecture notes</p>
+                    <h3><a href={url(`/notes/${notes.id}/`)}>{notes.data.title}</a></h3>
+                    <p>Read online, print, or download{notes.data.pdf ? ' as a PDF' : ''}.</p>
+                  </article>
+                </li>
+              )}
+              {resources.map((r) => <li><ResourceCard resource={r} /></li>)}
+            </ul>
+          </section>
+        )}
+
+        {references.length > 0 && (
+          <section class="block" aria-labelledby="references">
+            <h2 id="references">References</h2>
+            <ol class="references">
+              {references.map((ref) => (
+                <li>
+                  {ref.data.citation}
+                  {ref.data.url && <> <a href={ref.data.url} rel="noopener">Link</a></>}
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
+        {related.length > 0 && (
+          <nav class="block related" aria-labelledby="related-heading">
+            <h2 id="related-heading">Related topics</h2>
+            <ul role="list">
+              {related.map((r) => <li><a href={routes.topic(r.id)}>{r.data.title}</a></li>)}
+            </ul>
+          </nav>
+        )}
+
+        {(prev || next) && (
+          <nav class="pager" aria-label="Previous and next lessons">
+            {prev ? (
+              <a class="pager__link" href={routes.topic(prev.id)} rel="prev">
+                <span class="pager__dir">← Previous</span>
+                <span class="pager__title">{prev.data.title}</span>
+              </a>
+            ) : <span />}
+            {next && (
+              <a class="pager__link pager__link--next" href={routes.topic(next.id)} rel="next">
+                <span class="pager__dir">Next →</span>
+                <span class="pager__title">{next.data.title}</span>
+              </a>
+            )}
+          </nav>
+        )}
+
+        <p class="report">
+          Spotted a mistake? <a href={url('/contact/')}>Let us know</a> and we'll fix it.
+        </p>
+      </article>
     </div>
-
-    {related.length > 0 && (
-      <nav class="related" aria-labelledby="related-heading">
-        <h2 id="related-heading">Related topics</h2>
-        <ul role="list">
-          {related.map((r) => <li><a href={routes.topic(r.id)}>{r.data.title}</a></li>)}
-        </ul>
-      </nav>
-    )}
-  </article>
+  </div>
 </BaseLayout>
 
 <style>
-  .topic__head { margin-block: var(--space-5) var(--space-6); max-width: var(--measure); }
-  .topic__question { margin-top: var(--space-3); }
-  .topic__meta {
+  .topic-head { margin-block: var(--space-5) var(--space-6); max-width: var(--measure); }
+  .topic-head__question { margin-top: var(--space-3); }
+  .topic-head__meta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -107,16 +235,103 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
     margin-top: var(--space-4);
     font-size: var(--step--1);
   }
-  .topic__meta a.badge { text-decoration: none; }
+  .topic-head__meta a.badge { text-decoration: none; }
+
+  .topic-layout { display: grid; gap: var(--space-5); }
+  .topic-main { min-width: 0; max-width: var(--measure); }
+  @media (min-width: 64rem) {
+    .topic-layout { grid-template-columns: minmax(0, var(--measure)) 15rem; justify-content: space-between; gap: var(--space-7); }
+    .toc { grid-column: 2; grid-row: 1; }
+    .topic-main { grid-column: 1; grid-row: 1; }
+    .toc__details { position: sticky; top: 5.5rem; }
+  }
+
+  .toc { font-size: var(--step--1); }
+  .toc__details {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  .toc summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+  .toc ol { list-style: none; padding: 0; margin-top: var(--space-3); display: grid; gap: var(--space-1); }
+  .toc a { display: block; padding: 0.25rem 0; color: var(--ink-soft); text-decoration: none; }
+  .toc a:hover { color: var(--accent); text-decoration: underline; }
+
   .prereq {
-    max-width: var(--measure);
     padding: var(--space-3) var(--space-4);
     margin-bottom: var(--space-6);
     background: var(--surface-2);
     border-radius: var(--radius);
     font-size: var(--step--1);
   }
-  .related { margin-top: var(--space-8); max-width: var(--measure); }
-  .related h2 { font-size: var(--step-1); margin-bottom: var(--space-3); }
+
+  .block { margin-top: var(--space-8); scroll-margin-top: 5rem; }
+  .block > h2 { font-size: var(--step-2); margin-bottom: var(--space-4); }
+  .block :global(h2), .prose :global(h2) { scroll-margin-top: 5rem; }
+  .block__more { margin-top: var(--space-3); font-size: var(--step--1); font-weight: 600; }
+  .keypoints { margin-top: var(--space-4); }
+  .keypoints h3 { font-size: var(--step-0); margin-bottom: var(--space-2); }
+  .keypoints ul { padding-left: 1.2em; }
+  .keypoints li + li { margin-top: var(--space-1); }
+
+  .practice { margin-top: var(--space-6); }
+  .practice > h3 { font-size: var(--step-1); }
+
+  .downloads {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  }
+  .notes-card {
+    position: relative;
+    height: 100%;
+    display: grid;
+    gap: var(--space-2);
+    align-content: start;
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+  }
+  .notes-card__type { font-size: var(--step--1); font-weight: 650; color: var(--accent); }
+  .notes-card h3 { font-size: var(--step-1); }
+  .notes-card h3 a { color: var(--ink); text-decoration: none; }
+  .notes-card h3 a::after { content: ''; position: absolute; inset: 0; }
+  .notes-card p:last-child { font-size: var(--step--1); color: var(--muted); }
+
+  .references { padding-left: 1.4em; font-size: var(--step--1); }
+  .references li + li { margin-top: var(--space-2); }
   .related ul { padding-left: 1.2em; }
+
+  .pager {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border);
+  }
+  .pager__link {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-4);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    text-decoration: none;
+  }
+  .pager__link:hover { border-color: var(--accent); }
+  .pager__link--next { text-align: right; grid-column: 2; }
+  .pager__dir { font-size: var(--step--1); color: var(--muted); }
+  .pager__title { font-weight: 650; color: var(--ink); }
+
+  .report { margin-top: var(--space-6); font-size: var(--step--1); color: var(--muted); }
+
+  @media print {
+    .toc, .pager, .report, .block__more { display: none; }
+  }
 </style>

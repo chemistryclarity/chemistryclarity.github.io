@@ -1,0 +1,32 @@
+---
+/** "Part of these lessons" links, shown on video/notes/flashcard/quiz/resource pages. */
+import type { CollectionEntry } from 'astro:content';
+import { routes } from '../../lib/url';
+
+export interface Props {
+  topics: CollectionEntry<'topics'>[];
+}
+const { topics } = Astro.props;
+---
+
+{topics.length > 0 && (
+  <aside class="used-in">
+    <h2>Learn the topic</h2>
+    <ul role="list">
+      {topics.map((t) => <li><a href={routes.topic(t.id)}>{t.data.title} →</a></li>)}
+    </ul>
+  </aside>
+)}
+
+<style>
+  .used-in {
+    margin-top: var(--space-7);
+    padding: var(--space-4) var(--space-5);
+    background: var(--accent-soft);
+    border-radius: var(--radius-lg);
+    max-width: var(--measure);
+  }
+  h2 { font-size: var(--step-0); margin-bottom: var(--space-2); }
+  ul { list-style: none; padding: 0; display: grid; gap: var(--space-1); }
+  a { font-weight: 600; }
+</style>

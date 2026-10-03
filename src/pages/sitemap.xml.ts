@@ -1,6 +1,6 @@
 /**
  * Sitemap for search engines. Lists only pages that are ready:
- * published topics, subject areas that contain published topics, and site pages.
+ * published content, index pages that contain published content, and site pages.
  * Drafts never appear here, even while `showDrafts` is on.
  */
 import type { APIRoute } from 'astro';
@@ -9,10 +9,21 @@ import { getAreas } from '../lib/content';
 import { absoluteUrl } from '../lib/url';
 import { newsletterEnabled } from '../config/site';
 
+const published = <T extends { data: { status: string } }>(e: T) => e.data.status === 'published';
+
 export const GET: APIRoute = async () => {
-  const topics = await getCollection('topics', (t) => t.data.status === 'published');
+  const topics = await getCollection('topics', published);
   const areas = (await getAreas()).filter((a) => topics.some((t) => t.data.area.id === a.id));
   const pages = await getCollection('pages');
+
+  // Sections with their own pages: /<section>/ and /<section>/<id>/
+  const sections = [
+    { base: 'videos', items: await getCollection('videos', published) },
+    { base: 'notes', items: await getCollection('notes', published) },
+    { base: 'flashcards', items: await getCollection('flashcards', published) },
+    { base: 'quizzes', items: await getCollection('quizzes', published) },
+    { base: 'resources', items: await getCollection('resources', published) },
+  ];
 
   const entries: { path: string; lastmod?: Date }[] = [
     { path: '/' },
@@ -20,6 +31,9 @@ export const GET: APIRoute = async () => {
     ...(newsletterEnabled ? [{ path: '/newsletter/' }] : []),
     ...areas.map((a) => ({ path: `/learn/${a.id}/` })),
     ...topics.map((t) => ({ path: `/chemistry/${t.id}/`, lastmod: t.data.updated ?? t.data.lastReviewed })),
+    ...sections.flatMap(({ base, items }) =>
+      items.length ? [{ path: `/${base}/` }, ...items.map((i) => ({ path: `/${base}/${i.id}/` }))] : [],
+    ),
     ...pages.map((p) => ({ path: `/${p.id}/`, lastmod: p.data.updated })),
   ];
 

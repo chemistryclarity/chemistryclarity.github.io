@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import UsedIn from '../../components/layout/UsedIn.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import MathStyles from '../../components/lesson/MathStyles.astro';
+import Quiz from '../../components/learning/Quiz.astro';
+import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const quizzes = await getVisible('quizzes');
+  return quizzes.map((quiz) => ({ params: { quiz: quiz.id }, props: { quiz } }));
+}) satisfies GetStaticPaths;
+
+const { quiz } = Astro.props;
+const topics = await getTopicsUsing('quiz', quiz.id);
+const description = quiz.data.description ?? `${quiz.data.questions.length}-question quiz on ${quiz.data.title}, with explanations.`;
+---
+
+<BaseLayout title={quiz.data.title} description={description} path={`/quizzes/${quiz.id}/`} draft={isDraft(quiz)}>
+  <MathStyles />
+  <div class="container section section--tight narrow">
+    <PageHeader crumbs={[{ label: 'Quizzes', href: '/quizzes/' }, { label: quiz.data.title }]} title={quiz.data.title} lead={quiz.data.description}>
+      <span class="badge">{quiz.data.questions.length} questions</span>
+      <LevelBadge level={quiz.data.level} />
+    </PageHeader>
+    <Quiz quiz={quiz} />
+    <UsedIn topics={topics} />
+  </div>
+</BaseLayout>
+
+<style>
+  .narrow { max-width: calc(var(--measure) + 2 * var(--gutter)); }
+</style>

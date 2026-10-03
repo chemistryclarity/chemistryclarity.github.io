@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import LevelBadge from './LevelBadge.astro';
+import PremiumBadge from '../monetization/PremiumBadge.astro';
+import { url } from '../../lib/url';
+import { resourceTypeLabel, isDraft } from '../../lib/content';
+
+export interface Props {
+  resource: CollectionEntry<'resources'>;
+  as?: 'h2' | 'h3' | 'h4';
+}
+const { resource, as: Heading = 'h3' } = Astro.props;
+const { title, description, type, level, access } = resource.data;
+---
+
+<article class="rcard">
+  <p class="rcard__type">{resourceTypeLabel[type]}</p>
+  <Heading class="rcard__title"><a href={url(`/resources/${resource.id}/`)}>{title}</a></Heading>
+  <p class="rcard__desc">{description}</p>
+  <div class="rcard__meta">
+    <LevelBadge level={level} />
+    {access === 'premium' ? <PremiumBadge /> : <span class="badge">Free</span>}
+    {isDraft(resource) && <span class="badge badge--draft">Draft</span>}
+  </div>
+</article>
+
+<style>
+  .rcard {
+    position: relative;
+    display: grid;
+    gap: var(--space-2);
+    align-content: start;
+    height: 100%;
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .rcard:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+  .rcard__type { font-size: var(--step--1); font-weight: 650; color: var(--accent); }
+  .rcard__title { font-size: var(--step-1); }
+  .rcard__title a { color: var(--ink); text-decoration: none; }
+  .rcard__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .rcard__title a:focus-visible { outline: none; }
+  .rcard:has(a:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .rcard__desc { font-size: var(--step--1); color: var(--muted); }
+  .rcard__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+</style>

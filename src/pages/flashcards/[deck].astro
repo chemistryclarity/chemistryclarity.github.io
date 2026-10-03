@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import UsedIn from '../../components/layout/UsedIn.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import MathStyles from '../../components/lesson/MathStyles.astro';
+import Flashcards from '../../components/learning/Flashcards.astro';
+import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const decks = await getVisible('flashcards');
+  return decks.map((deck) => ({ params: { deck: deck.id }, props: { deck } }));
+}) satisfies GetStaticPaths;
+
+const { deck } = Astro.props;
+const topics = await getTopicsUsing('flashcards', deck.id);
+const description = deck.data.description ?? `${deck.data.cards.length} flashcards to revise ${deck.data.title}.`;
+---
+
+<BaseLayout title={deck.data.title} description={description} path={`/flashcards/${deck.id}/`} draft={isDraft(deck)}>
+  <MathStyles />
+  <div class="container section section--tight narrow">
+    <PageHeader crumbs={[{ label: 'Flashcards', href: '/flashcards/' }, { label: deck.data.title }]} title={deck.data.title} lead={deck.data.description}>
+      <span class="badge">{deck.data.cards.length} cards</span>
+      <LevelBadge level={deck.data.level} />
+    </PageHeader>
+    <Flashcards deck={deck} />
+    <UsedIn topics={topics} />
+  </div>
+</BaseLayout>
+
+<style>
+  .narrow { max-width: calc(var(--measure) + 2 * var(--gutter)); }
+</style>

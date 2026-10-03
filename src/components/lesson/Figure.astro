@@ -1,0 +1,64 @@
+---
+/**
+ * A diagram or illustration in a lesson.
+ *   <Figure src="/images/mole-concept/particles.svg" alt="…" caption="…" />
+ * Put image files in public/images/<topic>/. SVG is best for diagrams.
+ * Without `src`, a clearly marked placeholder box is shown.
+ */
+import { url } from '../../lib/url';
+
+export interface Props {
+  src?: string;
+  /** Describe what the image shows, for people who can't see it. Required when src is given. */
+  alt?: string;
+  caption?: string;
+  /** Text shown inside the placeholder box when there's no image yet. */
+  placeholder?: string;
+  width?: number;
+  height?: number;
+}
+const { src, alt = '', caption, placeholder = 'Diagram coming soon', width, height } = Astro.props;
+---
+
+<figure class="figure">
+  {src ? (
+    <img src={url(src)} alt={alt} loading="lazy" decoding="async" width={width} height={height} />
+  ) : (
+    <div class="figure__placeholder" role="img" aria-label={`Placeholder: ${placeholder}`}>
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 40.5 14.5v19L24 43 7.5 33.5v-19Z" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3" /></svg>
+      <span>[{placeholder}]</span>
+    </div>
+  )}
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .figure { margin-block: 1.8em; }
+  .figure img {
+    margin-inline: auto;
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  .figure__placeholder {
+    display: grid;
+    place-items: center;
+    gap: var(--space-2);
+    aspect-ratio: 16 / 9;
+    padding: var(--space-5);
+    border: 2px dashed var(--border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    color: var(--muted);
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    text-align: center;
+  }
+  .figure__placeholder svg { width: 3rem; height: 3rem; }
+  figcaption {
+    margin-top: var(--space-2);
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    color: var(--muted);
+    text-align: center;
+  }
+</style>

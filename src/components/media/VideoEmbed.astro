@@ -1,0 +1,113 @@
+---
+/**
+ * Click-to-play YouTube video. Nothing is loaded from YouTube until the visitor
+ * presses play (faster pages, and no third-party requests before that).
+ * Uses YouTube's privacy-enhanced (youtube-nocookie.com) player.
+ * Without a videoId, a clearly marked placeholder is shown.
+ */
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  video: CollectionEntry<'videos'>;
+}
+const { video } = Astro.props;
+const { title, videoId, duration } = video.data;
+
+/** "PT6M30S" → "6:30" */
+const prettyDuration = (iso?: string) => {
+  const m = iso?.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+  if (!m) return '';
+  const [h, min, s] = [m[1], m[2], m[3]].map((v) => Number(v ?? 0));
+  return h ? `${h}:${String(min).padStart(2, '0')}:${String(s).padStart(2, '0')}` : `${min}:${String(s).padStart(2, '0')}`;
+};
+const length = prettyDuration(duration);
+---
+
+<div class="video">
+  {videoId ? (
+    <button type="button" class="video__poster" data-video-id={videoId} data-title={title}>
+      <span class="video__play" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5Z" fill="currentColor" /></svg>
+      </span>
+      <span class="video__label">
+        <span class="video__title">Play video: {title}</span>
+        {length && <span class="video__length">{length}</span>}
+      </span>
+    </button>
+  ) : (
+    <div class="video__poster video__poster--placeholder" role="img" aria-label="Video placeholder">
+      <span class="video__play" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5Z" fill="currentColor" /></svg>
+      </span>
+      <span class="video__label"><span class="video__title">[Video coming soon]</span></span>
+    </div>
+  )}
+</div>
+{videoId && <p class="video__note">Pressing play loads the video from YouTube.</p>}
+
+<style>
+  .video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #0e1524;
+  }
+  .video__poster {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    border: 0;
+    color: #fff;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+    background:
+      radial-gradient(40rem 20rem at 80% 0%, rgb(45 212 191 / 0.28), transparent 60%),
+      repeating-linear-gradient(60deg, rgb(255 255 255 / 0.03) 0 2px, transparent 2px 28px),
+      #14213d;
+  }
+  .video__poster--placeholder { cursor: default; outline: 2px dashed rgb(255 255 255 / 0.25); outline-offset: -10px; }
+  .video__play {
+    display: grid;
+    place-items: center;
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.35);
+    transition: transform 0.15s;
+  }
+  .video__play svg { width: 2rem; height: 2rem; margin-left: 0.2rem; }
+  .video__poster:hover .video__play { transform: scale(1.07); }
+  .video__poster:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
+  .video__label { display: grid; gap: var(--space-1); max-width: 32rem; }
+  .video__title { font-weight: 650; font-size: var(--step-0); }
+  .video__length { font-size: var(--step--1); opacity: 0.8; }
+  .video :global(iframe) { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video__note { margin-top: var(--space-2); font-size: var(--step--1); color: var(--muted); font-family: var(--font-sans); }
+  @media print { .video, .video__note { display: none; } }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('button[data-video-id]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      const id = encodeURIComponent(button.dataset.videoId ?? '');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = button.dataset.title ?? 'Video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      button.replaceWith(iframe);
+      iframe.focus();
+    });
+  });
+</script>

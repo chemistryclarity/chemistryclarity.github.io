@@ -1,6 +1,9 @@
 /** Main menu and footer links. Add an item here when its section exists. */
 export const mainNav = [
   { label: 'Learn', href: '/learn/' },
+  { label: 'Flashcards', href: '/flashcards/' },
+  { label: 'Quizzes', href: '/quizzes/' },
+  { label: 'Resources', href: '/resources/' },
   { label: 'About', href: '/about/' },
 ];
 
@@ -9,6 +12,11 @@ export const footerNav = [
     heading: 'Learn',
     links: [
       { label: 'All subjects', href: '/learn/' },
+      { label: 'Videos', href: '/videos/' },
+      { label: 'Lecture notes', href: '/notes/' },
+      { label: 'Flashcards', href: '/flashcards/' },
+      { label: 'Quizzes', href: '/quizzes/' },
+      { label: 'Resources', href: '/resources/' },
     ],
   },
   {

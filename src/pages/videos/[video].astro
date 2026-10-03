@@ -1,0 +1,70 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import UsedIn from '../../components/layout/UsedIn.astro';
+import VideoEmbed from '../../components/media/VideoEmbed.astro';
+import MathStyles from '../../components/lesson/MathStyles.astro';
+import { lessonComponents } from '../../components/lesson';
+import { getVisible, getTopicsUsing, isDraft } from '../../lib/content';
+import { absoluteUrl } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const videos = await getVisible('videos');
+  return videos.map((video) => ({ params: { video: video.id }, props: { video } }));
+}) satisfies GetStaticPaths;
+
+const { video } = Astro.props;
+const { data } = video;
+const { Content } = await render(video);
+const topics = await getTopicsUsing('video', video.id);
+const path = `/videos/${video.id}/`;
+
+// Structured data only once the video is really on YouTube.
+const jsonLd = data.videoId
+  ? [
+      {
+        '@type': 'VideoObject',
+        name: data.title,
+        description: data.description,
+        thumbnailUrl: `https://i.ytimg.com/vi/${data.videoId}/hqdefault.jpg`,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${data.videoId}`,
+        url: absoluteUrl(path),
+        ...(data.uploadDate ? { uploadDate: data.uploadDate.toISOString().slice(0, 10) } : {}),
+        ...(data.duration ? { duration: data.duration } : {}),
+        publisher: { '@id': `${absoluteUrl('/')}#organization` },
+      },
+    ]
+  : [];
+---
+
+<BaseLayout title={data.title} description={data.description} path={path} jsonLd={jsonLd} draft={isDraft(video)}>
+  <MathStyles />
+  <div class="container section section--tight narrow">
+    <PageHeader crumbs={[{ label: 'Videos', href: '/videos/' }, { label: data.title }]} title={data.title} lead={data.description} />
+    <VideoEmbed video={video} />
+
+    {data.keyPoints.length > 0 && (
+      <section class="keypoints" aria-labelledby="key-points">
+        <h2 id="key-points">Key points</h2>
+        <ul>{data.keyPoints.map((p) => <li>{p}</li>)}</ul>
+      </section>
+    )}
+
+    <div class="prose transcript">
+      <Content components={lessonComponents} />
+    </div>
+
+    <UsedIn topics={topics} />
+  </div>
+</BaseLayout>
+
+<style>
+  .narrow { max-width: calc(var(--measure) + 2 * var(--gutter)); }
+  .keypoints { margin-top: var(--space-6); }
+  .keypoints h2 { font-size: var(--step-1); margin-bottom: var(--space-3); }
+  .keypoints ul { padding-left: 1.2em; }
+  .keypoints li + li { margin-top: var(--space-2); }
+  .transcript { margin-top: var(--space-6); }
+</style>

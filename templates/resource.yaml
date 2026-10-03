@@ -1,0 +1,12 @@
+# NEW PRINTABLE: copy into src/content/resources/ and rename, e.g. molar-mass-worksheet.yaml
+# Then add its name to  resources: [...]  in the topic file.
+title: 'Resource Title'
+description: 'What it practises.'
+type: worksheet            # worksheet | cheat-sheet | formula-sheet | revision-sheet | practice-test | notes
+level: beginner
+access: free               # free | premium
+file: '/downloads/molar-mass-worksheet.pdf'     # FREE only: the PDF in public/downloads/
+pages: 2
+# preview: '/previews/molar-mass-worksheet.png'
+# product: product-file-name                    # PREMIUM only (no file!)
+status: draft

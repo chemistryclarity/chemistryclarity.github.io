@@ -1,0 +1,74 @@
+---
+/**
+ * Premium product card. Purchases happen on an external store (added in the
+ * monetization stage); until then the button says "Coming soon".
+ * Products marked `placeholder: true` carry a visible "Example only" label.
+ */
+import type { CollectionEntry } from 'astro:content';
+import PremiumBadge from './PremiumBadge.astro';
+import { site } from '../../config/site';
+
+export interface Props {
+  product: CollectionEntry<'products'>;
+  headingLevel?: 'h2' | 'h3';
+}
+const { product, headingLevel: Heading = 'h3' } = Astro.props;
+const { title, description, price, checkoutUrl, includes, placeholder } = product.data;
+const canBuy = site.features.shop && !placeholder && checkoutUrl;
+---
+
+<article class:list={['product', { 'product--example': placeholder }]}>
+  {placeholder && <p class="product__example">Example only. Not a real product and not for sale.</p>}
+  <div class="product__head">
+    <PremiumBadge />
+    {price && <span class="product__price">{price}</span>}
+  </div>
+  <Heading class="product__title">{title}</Heading>
+  <p class="product__desc">{description}</p>
+  {includes.length > 0 && (
+    <>
+      <p class="product__includes-title">Includes</p>
+      <ul class="product__includes">
+        {includes.map((item) => <li>{item}</li>)}
+      </ul>
+    </>
+  )}
+  {canBuy ? (
+    <a class="btn btn--primary" href={checkoutUrl} rel="noopener">Get it{price ? ` for ${price}` : ''}</a>
+  ) : (
+    <button class="btn btn--ghost" type="button" disabled>Coming soon</button>
+  )}
+</article>
+
+<style>
+  .product {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--hue-amber);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    font-family: var(--font-sans);
+    max-width: 30rem;
+  }
+  .product--example { border-style: dashed; border-top-style: solid; }
+  .product__example {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--mistake);
+  }
+  .product__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+  .product__price { font-weight: 700; font-size: var(--step-1); }
+  .product__title { font-size: var(--step-1); }
+  .product__desc { color: var(--ink-soft); font-size: var(--step--1); }
+  .product__includes-title { font-size: var(--step--1); font-weight: 700; }
+  .product__includes { padding-left: 1.2em; font-size: var(--step--1); color: var(--ink-soft); }
+  .product__includes li + li { margin-top: 0.25em; }
+  .product .btn { justify-self: start; }
+  .product button[disabled] { cursor: not-allowed; opacity: 0.7; }
+</style>
