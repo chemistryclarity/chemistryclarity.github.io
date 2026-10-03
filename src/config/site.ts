@@ -47,7 +47,7 @@ export const site = {
    *    (hidden from search engines). Set to false before public launch.
    */
   features: {
-    showDrafts: true,
+    showDrafts: false,
     newsletter: true,
     shop: false,
     ads: false,
