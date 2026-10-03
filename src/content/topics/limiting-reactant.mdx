@@ -1,0 +1,130 @@
+---
+title: Limiting Reactants and Percent Yield
+question: "How do you find the limiting reactant?"
+description: "How to find the limiting reactant, the theoretical yield and the amount of excess reactant, and how to calculate percent yield, with worked examples."
+area: reactions-and-stoichiometry
+level: intermediate
+order: 50
+prerequisites: [stoichiometry]
+related: [stoichiometry, mole-concept]
+flashcards: limiting-reactant
+quiz: limiting-reactant
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Coverage follows the limiting-reactant and theoretical/percent-yield material in general chemistry texts such as
+  Chemistry: The Central Science. All calculations checked by computer.
+  Atomic masses: H 1.008, C 12.01, N 14.01, O 16.00. REVIEW: compare with your textbook's table.
+*/}
+
+## What is it?
+
+In most real reactions the reactants are **not** mixed in exactly the ratio of the balanced equation. One of them runs out first.
+
+- The **limiting reactant** is the reactant that is **used up first**. It limits how much product can form.
+- Any other reactant is **in excess**: some of it is left over when the reaction stops.
+- The **theoretical yield** is the maximum amount of product, calculated from the limiting reactant.
+- The **actual yield** is the amount of product really obtained in an experiment.
+- The **percent yield** compares the two.
+
+<KeyIdea>
+The amount of product depends only on the reactant that runs out first, the limiting reactant, not on how much of the other reactants you add.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Chemists choose the limiting reactant on purpose.** The most expensive or hardest-to-make reactant is often the limiting one, while a cheap one (such as oxygen from air) is used in excess so that none of the valuable reactant is wasted.
+- **Percent yield measures efficiency.** In the lab and in industry, a low yield means wasted materials, money and energy.
+- **Excess reactant must be dealt with.** Leftover reactant often has to be separated from the product, recycled or disposed of safely.
+
+## How does it work?
+
+### Finding the limiting reactant
+
+1. Convert the amount of **each** reactant into moles.
+2. For **each** reactant, calculate how much product it could make on its own, using the mole ratio from the balanced equation.
+3. The reactant that gives the **smaller** amount of product is the **limiting reactant**. That smaller amount is the **theoretical yield**.
+
+An equivalent method: take one reactant, calculate how much of the other it needs, and compare that with how much you actually have.
+
+### Excess reactant left over
+
+Use the limiting reactant to calculate how much of the excess reactant is **used up**, then subtract that from the amount you started with.
+
+### Percent yield
+
+$$
+\%\ \text{yield} = \frac{\text{actual}}{\text{theoretical}} \times 100\%
+$$
+
+Both yields must be in the same units (usually grams).
+
+<Analogy>
+Making sandwiches needs **2 slices of bread + 1 slice of cheese → 1 sandwich**. You have 10 slices of bread but only 3 slices of cheese. The cheese runs out after 3 sandwiches, with 4 slices of bread left over. The cheese is the limiting "reactant", even though you have fewer slices of it. If you drop one sandwich on the floor and only 2 are eaten, your "percent yield" is 2 ÷ 3 × 100% = 67%.
+</Analogy>
+
+<MorePrecisely>
+Percent yields are usually below 100% because reactions may not go to completion, side reactions can make unwanted products, and some product is lost while it is separated and purified. A yield **above** 100% doesn't mean extra product was created. It signals a problem, for example a product that is still wet or contains impurities.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/limiting-reactant/particles.svg" alt="Particle diagram for 2 H2 plus O2 gives 2 H2O. Before the reaction there are 5 hydrogen molecules and 2 oxygen molecules. After the reaction there are 4 water molecules and 1 hydrogen molecule left over. Oxygen runs out first, so oxygen is the limiting reactant and hydrogen is in excess." caption="Two O₂ molecules can react with only four H₂ molecules, so one H₂ is left over." width={360} height={400} />
+
+## Worked example
+
+<Example title="Limiting reactant, theoretical yield and excess">
+**Question:** 28.0 g of nitrogen and 9.00 g of hydrogen react to make ammonia. Which is the limiting reactant? What mass of ammonia can form, and what mass of the excess reactant is left over? (N = 14.01, H = 1.008)
+
+$$
+\ce{N2 + 3H2 -> 2NH3}
+$$
+
+1. Moles: $\ce{N2}$: $\dfrac{28.0}{28.02} = 0.9993$ mol; $\ce{H2}$: $\dfrac{9.00}{2.016} = 4.464$ mol
+2. Hydrogen needed by all the nitrogen: $0.9993 \times \dfrac{3}{1} = 2.998$ mol. We have 4.464 mol, which is more than enough, so **nitrogen is the limiting reactant**.
+3. Theoretical yield: $0.9993 \times \dfrac{2}{1} = 1.999$ mol $\ce{NH3}$, and $1.999 \times 17.03 = 34.04$ g, which is **34.0 g**
+4. Hydrogen left over: $4.464 - 2.998 = 1.466$ mol, and $1.466 \times 2.016 =$ **2.96 g**
+
+Check: 28.0 g + 9.00 g = 37.0 g of reactants, and 34.0 g + 2.96 g = 37.0 g of products and leftovers.
+</Example>
+
+<Example title="Percent yield">
+**Question:** In the reaction above, the chemist actually collects 27.2 g of ammonia. What is the percent yield?
+
+1. Actual yield = 27.2 g; theoretical yield = 34.04 g (use the unrounded value from the previous calculation)
+2. Percent yield = $\dfrac{27.2}{34.04} \times 100\% = 79.9\%$
+
+**Answer:** the percent yield is **79.9%**.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Picking the reactant with the smaller mass">
+In the example, there are 28.0 g of nitrogen but only 9.00 g of hydrogen, yet **nitrogen** is the limiting reactant. Mass alone tells you nothing; you must compare **moles**, using the mole ratio.
+</CommonMistake>
+
+<CommonMistake title="Picking the reactant with fewer moles">
+Even fewer moles doesn't automatically mean limiting. In $\ce{2H2 + O2 -> 2H2O}$ with 1.0 mol of $\ce{H2}$ and 0.6 mol of $\ce{O2}$, the hydrogen needs only 0.50 mol of oxygen, so **hydrogen** is limiting, even though there are fewer moles of oxygen. Always use the ratio from the balanced equation.
+</CommonMistake>
+
+<CommonMistake title="Calculating the yield from the excess reactant">
+The theoretical yield must come from the **limiting** reactant. Using the excess reactant overestimates it (in the example, hydrogen alone could make 50.7 g of ammonia, but only 34.0 g can form).
+</CommonMistake>
+
+<NotationNote>
+- The limiting reactant is also called the **limiting reagent**; an excess reactant is also called an **excess reagent**.
+- "Yield" can be given as a mass, an amount in moles, or a percentage. Check which one a question asks for.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- The **limiting reactant** runs out first and decides how much product forms.
+- Compare reactants in **moles** using the mole ratio, never by mass alone.
+- Theoretical yield comes from the limiting reactant.
+- Percent yield = actual ÷ theoretical × 100%.
+</RememberThis>

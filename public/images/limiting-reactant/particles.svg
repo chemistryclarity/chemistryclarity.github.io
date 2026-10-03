@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .panel { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.2; }
+    .h { fill: #ffffff; stroke: #14213d; stroke-width: 1.6; }
+    .o { fill: #be123c; stroke: #14213d; stroke-width: 1.6; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11.5px; }
+    .key { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    .ring { fill: none; stroke: #b45309; stroke-width: 2; stroke-dasharray: 4 3; }
+    .arrow { stroke: #14213d; stroke-width: 2; fill: none; marker-end: url(#hd); }
+    .hd { fill: #14213d; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .panel { fill: #1b263d; stroke: #3a4763; }
+      .h { fill: #e9edf5; stroke: #9aa5ba; }
+      .o { fill: #e04a6a; stroke: #9aa5ba; }
+      .t { fill: #e9edf5; }
+      .sub { fill: #9aa5ba; }
+      .key { fill: #fbbf24; }
+      .ring { stroke: #fbbf24; }
+      .arrow { stroke: #e9edf5; }
+      .hd { fill: #e9edf5; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker>
+    <!-- H2: two small atoms -->
+    <g id="h2"><circle class="h" cx="-6" cy="0" r="7"/><circle class="h" cx="6" cy="0" r="7"/></g>
+    <!-- O2: two larger atoms -->
+    <g id="o2"><circle class="o" cx="-9" cy="0" r="11"/><circle class="o" cx="9" cy="0" r="11"/></g>
+    <!-- H2O: oxygen with two hydrogens -->
+    <g id="h2o"><circle class="h" cx="-12" cy="9" r="7"/><circle class="h" cx="12" cy="9" r="7"/><circle class="o" cx="0" cy="0" r="11"/></g>
+  </defs>
+  <rect class="bg" width="360" height="400" rx="14"/>
+
+  <!-- Before -->
+  <text class="t" x="20" y="30">Before</text>
+  <text class="sub" x="76" y="30">5 H₂ + 2 O₂</text>
+  <rect class="panel" x="14" y="42" width="332" height="96" rx="10"/>
+  <use href="#h2" x="38" y="76"/>
+  <use href="#h2" x="82" y="76"/>
+  <use href="#h2" x="126" y="76"/>
+  <use href="#h2" x="60" y="110"/>
+  <use href="#h2" x="104" y="110"/>
+  <use href="#o2" x="230" y="76"/>
+  <use href="#o2" x="290" y="108"/>
+
+  <path class="arrow" d="M180 148 V196"/>
+  <text class="sub" x="192" y="170">2 H₂ + O₂ → 2 H₂O</text>
+
+  <!-- After -->
+  <text class="t" x="20" y="222">After</text>
+  <text class="sub" x="68" y="222">4 H₂O + 1 H₂ left over</text>
+  <rect class="panel" x="14" y="234" width="332" height="96" rx="10"/>
+  <use href="#h2o" x="48" y="270"/>
+  <use href="#h2o" x="112" y="270"/>
+  <use href="#h2o" x="176" y="270"/>
+  <use href="#h2o" x="240" y="270"/>
+  <use href="#h2" x="300" y="300"/>
+  <circle class="ring" cx="300" cy="300" r="22"/>
+
+  <text class="key" x="180" y="362" text-anchor="middle">O₂ runs out first: it is the limiting reactant.</text>
+  <text class="sub" x="180" y="382" text-anchor="middle">H₂ is in excess (1 molecule is left over).</text>
+</svg>
