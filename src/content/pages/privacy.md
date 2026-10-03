@@ -2,16 +2,20 @@
 title: Privacy Policy
 description: How Chemistry Clarity handles visitor information and newsletter subscriptions.
 needsLegalReview: true
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
-<!-- LEGAL REVIEW NEEDED: This is a plain-language starting draft describing how the site currently works. Have it reviewed, especially the newsletter and age sections, and again before adding analytics, advertising or sales. -->
+<!-- LEGAL REVIEW NEEDED: This is a plain-language starting draft describing how the site currently works. Have it reviewed, especially the newsletter, statistics and age sections, and again before adding advertising or sales. -->
 
 This page explains what information is collected when you use Chemistry Clarity.
 
 ## Browsing the website
 
-Chemistry Clarity **does not** use cookies, analytics or advertising trackers, and has no user accounts. You can read every lesson without giving us any personal information.
+Chemistry Clarity **does not** use cookies or advertising trackers, and has no user accounts. You can read every lesson without giving us any personal information.
+
+## Visitor statistics
+
+We use **Cloudflare Web Analytics** to understand how the site is used, for example which lessons are most visited and which kinds of devices people use. According to Cloudflare, it does not use cookies or local storage, does not track you across other websites, and does not build a profile of individual visitors. It reports only combined statistics, such as page views, pages visited, referring websites, browser and device type, and approximate country. See Cloudflare's privacy policy for details.
 
 ## Hosting
 
@@ -40,7 +44,7 @@ If you email us, we receive your email address and message and use them only to 
 
 ## Changes
 
-If we add features that collect information (for example analytics), we will update this page before they go live.
+If we add features that collect more information (for example advertising or online sales), we will update this page before they go live.
 
 ## Questions
 

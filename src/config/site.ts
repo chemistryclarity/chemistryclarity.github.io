@@ -92,7 +92,7 @@ export const newsletter: {
  * Leave empty to turn statistics off. The token is public by design (not a password).
  */
 export const analytics = {
-  cloudflareToken: '',
+  cloudflareToken: '533eacbacb8d447baa345050fee46123',
 };
 
 /** True only when the switch is on AND the form is connected. */
