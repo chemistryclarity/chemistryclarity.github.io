@@ -24,7 +24,7 @@ export const site = {
   publisher: 'Chemistry Clarity',
 
   contact: {
-    email: 'chemistryclarityforyou@gmail.com',
+    email: 'hello@chemistryclarity.com',
   },
 
   /** Social media links: edit in the online editor (Site settings → Social media links) or in social.json. Empty = hidden. */

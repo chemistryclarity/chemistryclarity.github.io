@@ -5,7 +5,7 @@ description: Get in touch with Chemistry Clarity to report an error, suggest a t
 
 We'd love to hear from you.
 
-**Email:** [chemistryclarityforyou@gmail.com](mailto:chemistryclarityforyou@gmail.com)
+**Email:** [hello@chemistryclarity.com](mailto:hello@chemistryclarity.com)
 
 ## Found a mistake?
 

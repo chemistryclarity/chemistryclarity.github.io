@@ -15,7 +15,7 @@ in part, without prior written permission from Chemistry Clarity.
 The repository is public only because the website is hosted on GitHub Pages;
 public visibility does not grant any right to reuse the content.
 
-Contact: chemistryclarityforyou@gmail.com
+Contact: hello@chemistryclarity.com
 
 ## 2. Website code — MIT License
 

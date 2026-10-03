@@ -48,4 +48,4 @@ If we add features that collect more information (for example advertising or onl
 
 ## Questions
 
-Contact: [chemistryclarityforyou@gmail.com](mailto:chemistryclarityforyou@gmail.com)
+Contact: [hello@chemistryclarity.com](mailto:hello@chemistryclarity.com)

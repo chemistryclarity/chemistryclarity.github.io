@@ -13,6 +13,7 @@ Start here. Each guide is short and step-by-step.
 | Connect or manage the newsletter | [newsletter.md](newsletter.md) |
 | Keep the brand separate from my identity | [keeping-the-brand-anonymous.md](keeping-the-brand-anonymous.md) |
 | Manage the domain (chemistryclarity.com) | [custom-domain.md](custom-domain.md) |
+| **Weekly / yearly follow-up checklist** | [maintenance-checklist.md](maintenance-checklist.md) |
 
 Ready-to-copy starter files are in the [`templates/`](../templates) folder.
 

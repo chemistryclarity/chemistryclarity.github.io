@@ -19,4 +19,4 @@ Our content is provided for general educational purposes. See our [disclaimer](.
 
 ## Contact
 
-Questions about these terms: [chemistryclarityforyou@gmail.com](mailto:chemistryclarityforyou@gmail.com)
+Questions about these terms: [hello@chemistryclarity.com](mailto:hello@chemistryclarity.com)
