@@ -12,3 +12,6 @@ npm-debug.log*
 !.env.example
 .DS_Store
 Thumbs.db
+
+# lesson PDFs are generated automatically on every publish (npm run pdfs)
+public/downloads/lessons/

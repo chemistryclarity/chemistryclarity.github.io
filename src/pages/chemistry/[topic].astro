@@ -96,6 +96,12 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
         {area && <a class="badge" href={routes.area(area.id)}>{area.data.title}</a>}
         {data.lastReviewed && <span class="muted">Last reviewed {fmtDate(data.lastReviewed)}</span>}
       </div>
+      <div class="topic-head__actions no-print">
+        <a class="btn btn--ghost btn--small" href={url(`/downloads/lessons/${topic.id}.pdf`)} download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          Download lesson (PDF)
+        </a>
+      </div>
     </header>
 
     <div class="topic-layout">
@@ -128,7 +134,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
         </div>
 
         {video && (
-          <section class="block" aria-labelledby="video">
+          <section class="block no-print" aria-labelledby="video">
             <h2 id="video">Watch the video</h2>
             <VideoEmbed video={video} />
             {video.data.keyPoints.length > 0 && (
@@ -142,7 +148,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
         )}
 
         {hasPractice && (
-          <section class="block" aria-labelledby="test-yourself">
+          <section class="block no-print" aria-labelledby="test-yourself">
             <h2 id="test-yourself">Test yourself</h2>
             <p class="muted">Check your understanding before moving on.</p>
             {deck && (
@@ -161,7 +167,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
         )}
 
         {hasDownloads && (
-          <section class="block" aria-labelledby="notes-and-downloads">
+          <section class="block no-print" aria-labelledby="notes-and-downloads">
             <h2 id="notes-and-downloads">Notes and downloads</h2>
             <ul class="downloads" role="list">
               {notes && (
@@ -193,7 +199,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
         )}
 
         {related.length > 0 && (
-          <nav class="block related" aria-labelledby="related-heading">
+          <nav class="block related no-print" aria-labelledby="related-heading">
             <h2 id="related-heading">Related topics</h2>
             <ul role="list">
               {related.map((r) => <li><a href={routes.topic(r.id)}>{r.data.title}</a></li>)}
@@ -217,6 +223,10 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
             )}
           </nav>
         )}
+
+        <p class="print-note">
+          Practise this topic with flashcards and a quiz at {absoluteUrl(path).replace('https://', '')}
+        </p>
 
         <p class="report">
           Spotted a mistake? <a href={url('/contact/')}>Let us know</a> and we'll fix it.
@@ -333,7 +343,22 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
 
   .report { margin-top: var(--space-6); font-size: var(--step--1); color: var(--muted); }
 
+  .topic-head__actions { margin-top: var(--space-4); }
+  .btn--small { min-height: 40px; padding: 0.45rem 0.9rem; font-size: var(--step--1); }
+  .btn--small svg { width: 1.1rem; height: 1.1rem; }
+  .print-note { display: none; }
   @media print {
     .toc, .pager, .report, .block__more { display: none; }
+    .topic-layout { display: block; }
+    .topic-main { max-width: none; }
+    .block { margin-top: 1.5em; }
+    .print-note {
+      display: block;
+      margin-top: 1.5em;
+      padding-top: 0.8em;
+      border-top: 1px solid #ccc;
+      font-size: 10pt;
+      color: #333;
+    }
   }
 </style>

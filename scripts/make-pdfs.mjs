@@ -50,6 +50,11 @@ for (const file of fs.readdirSync('src/content/printables').filter((f) => /\.mdx
     preview: isWorksheet ? `${PUBLIC}/previews/${id}.png` : undefined,
   });
 }
+// Every lesson gets a printable PDF: public/downloads/lessons/<lesson>.pdf
+for (const file of fs.readdirSync('src/content/topics').filter((f) => /.mdx?$/.test(f))) {
+  const id = file.replace(/.mdx?$/, '');
+  jobs.push({ url: `/chemistry/${id}/`, out: `${PUBLIC}/downloads/lessons/${id}.pdf`, margins: true });
+}
 for (const file of fs.readdirSync('src/content/notes').filter((f) => /\.mdx?$/.test(f))) {
   const text = fs.readFileSync(path.join('src/content/notes', file), 'utf8');
   const pdf = text.match(/^pdf:\s*["']?(\/[^"'\s]+\.pdf)/m)?.[1];
