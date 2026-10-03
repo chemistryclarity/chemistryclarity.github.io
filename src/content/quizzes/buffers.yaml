@@ -1,0 +1,79 @@
+# Quiz: Buffers
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer (pKa acetic acid = 4.74, NH4+ = 9.25).
+title: 'Buffers: Quiz'
+description: 'Seven questions on how buffers work and buffer pH calculations, with explanations.'
+level: advanced
+access: free
+status: review
+assisted: true
+questions:
+  - id: bu-q1
+    prompt: 'Which pair of substances forms a buffer?'
+    choices:
+      - 'HCl and NaCl'
+      - 'NaOH and NaCl'
+      - 'Acetic acid and sodium acetate'
+      - 'HNO₃ and KOH'
+    answer: 'Acetic acid and sodium acetate'
+    explanation: 'A buffer needs a weak acid and its conjugate base. Acetic acid is weak and acetate is its conjugate base. HCl/NaCl does not buffer because Cl⁻ is too weak a base.'
+    difficulty: easy
+  - id: bu-q2
+    prompt: 'A buffer contains equal concentrations of acetic acid and acetate (pKa = 4.74). What is its pH?'
+    choices:
+      - '4.74'
+      - '7.00'
+      - '9.26'
+      - '2.37'
+    answer: '4.74'
+    explanation: 'With [A⁻] = [HA], log(1) = 0, so pH = pKa = 4.74.'
+    difficulty: easy
+  - id: bu-q3
+    prompt: 'What is the pH of a buffer that is 0.10 M acetic acid and 0.20 M sodium acetate? (pKa = 4.74)'
+    choices:
+      - '4.44'
+      - '4.74'
+      - '5.04'
+      - '5.44'
+    answer: '5.04'
+    explanation: 'pH = 4.74 + log(0.20/0.10) = 4.74 + 0.30 = 5.04. The answer 4.44 puts the ratio upside down.'
+    difficulty: medium
+  - id: bu-q4
+    prompt: 'What is the pH of a buffer that is 0.20 M acetic acid and 0.10 M sodium acetate? (pKa = 4.74)'
+    choices:
+      - '4.44'
+      - '4.74'
+      - '5.04'
+      - '4.14'
+    answer: '4.44'
+    explanation: 'pH = 4.74 + log(0.10/0.20) = 4.74 − 0.30 = 4.44. More acid than base gives a pH below the pKa.'
+    difficulty: medium
+  - id: bu-q5
+    prompt: 'A buffer contains 0.10 mol of acetic acid and 0.10 mol of acetate. 0.010 mol of NaOH is added. What is the new pH? (pKa = 4.74)'
+    choices:
+      - '4.65'
+      - '4.74'
+      - '4.83'
+      - '12.00'
+    answer: '4.83'
+    explanation: 'OH⁻ reacts with acetic acid: HA = 0.09 mol, A⁻ = 0.11 mol. pH = 4.74 + log(0.11/0.09) = 4.83. The pH rises only slightly.'
+    difficulty: hard
+  - id: bu-q6
+    prompt: 'You need a buffer at pH 9.5. Which conjugate pair is the best choice?'
+    choices:
+      - 'Acetic acid/acetate (pKa 4.74)'
+      - 'Ammonium/ammonia (pKa 9.25)'
+      - 'Formic acid/formate (pKa 3.74)'
+      - 'HCl/Cl⁻'
+    answer: 'Ammonium/ammonia (pKa 9.25)'
+    explanation: 'Choose a pair whose pKa is within about 1 unit of the target pH. 9.25 is close to 9.5.'
+    difficulty: medium
+  - id: bu-q7
+    prompt: 'In a buffer, which species removes added $\ce{H3O+}$?'
+    choices:
+      - 'The weak acid, HA'
+      - 'The conjugate base, A⁻'
+      - 'Water'
+      - 'The spectator ion (e.g. Na⁺)'
+    answer: 'The conjugate base, A⁻'
+    explanation: '$\ce{A- + H3O+ -> HA + H2O}$. The base part of the buffer neutralizes added acid; the acid part neutralizes added base.'
+    difficulty: easy

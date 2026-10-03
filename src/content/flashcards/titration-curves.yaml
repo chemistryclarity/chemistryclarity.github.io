@@ -1,0 +1,36 @@
+# Flashcards: Acid–Base Titration Curves
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+title: 'Titration Curves: Flashcards'
+description: 'Revise equivalence points, half-equivalence, curve shapes and indicators.'
+level: advanced
+access: free
+status: review
+assisted: true
+cards:
+  - id: tc-01
+    front: 'What is a titration curve?'
+    back: 'A graph of the pH of the mixture against the volume of titrant added.'
+  - id: tc-02
+    front: 'What is the equivalence point?'
+    back: 'The point where just enough titrant has been added to react completely with the analyte, according to the balanced equation.'
+  - id: tc-03
+    front: 'What is the pH at the equivalence point of a strong acid–strong base titration?'
+    back: '7.00 (at 25 °C), because the salt formed is neutral.'
+  - id: tc-04
+    front: 'Is the equivalence point of a weak acid–strong base titration above or below 7?'
+    back: 'Above 7, because the conjugate base of the weak acid is weakly basic.'
+  - id: tc-05
+    front: 'What is the pH at the half-equivalence point of a weak acid titration?'
+    back: 'pH = pKa, because [HA] = [A⁻] there.'
+  - id: tc-06
+    front: 'What is the end point?'
+    back: 'The point where the indicator changes colour. Ideally it matches the equivalence point.'
+  - id: tc-07
+    front: 'Which indicator suits a weak acid–strong base titration?'
+    back: 'Phenolphthalein (changes around pH 8.2–10.0), within the steep jump.'
+  - id: tc-08
+    front: 'Is the equivalence point of a strong acid–weak base titration above or below 7?'
+    back: 'Below 7, because the conjugate acid of the weak base is weakly acidic.'
+  - id: tc-09
+    front: 'Why are titrations so precise near the equivalence point?'
+    back: 'The pH changes very steeply there, so a single drop causes a large, easily seen change.'

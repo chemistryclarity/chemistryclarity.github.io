@@ -1,0 +1,135 @@
+---
+title: Buffers
+question: "How does a buffer solution work?"
+description: "What buffers are, how they resist changes in pH, and how to calculate buffer pH with the Henderson–Hasselbalch equation, with worked examples."
+area: acids-and-bases
+level: advanced
+order: 40
+prerequisites: [weak-acids]
+related: [weak-acids, ph]
+flashcards: buffers
+quiz: buffers
+resources: [buffers-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Calculations use pKa(acetic acid) = 4.74 and pKa(NH4+) = 9.25 as given data, so all answers are consistent.
+  All calculations checked by computer.
+*/}
+
+## What is it?
+
+A **buffer** is a solution that **resists changes in pH** when small amounts of acid or base are added.
+
+A buffer contains **both** members of a conjugate pair in similar amounts:
+
+- a **weak acid and its conjugate base**, such as acetic acid ($\ce{CH3COOH}$) with acetate ions ($\ce{CH3COO-}$, from sodium acetate); or
+- a **weak base and its conjugate acid**, such as ammonia ($\ce{NH3}$) with ammonium ions ($\ce{NH4+}$, from ammonium chloride).
+
+<KeyIdea>
+A buffer contains a "base part" that neutralizes added acid and an "acid part" that neutralizes added base, so the pH changes only a little.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Your blood is a buffer.** Carbonic acid and hydrogen carbonate ($\ce{H2CO3}$/$\ce{HCO3-}$) help keep blood pH between about 7.35 and 7.45.
+- **Biology and medicine depend on buffers.** Enzymes work only within narrow pH ranges, so cells, lab experiments and many medicines are buffered.
+- **Chemistry and industry use them** to keep reactions, food products, cosmetics and analytical tests at a steady pH.
+
+## How does it work?
+
+### 1. How a buffer neutralizes added acid or base
+
+Using HA for the weak acid and A⁻ for its conjugate base:
+
+- **Acid added:** $\ce{A- + H3O+ -> HA + H2O}$. The added $\ce{H3O+}$ is used up.
+- **Base added:** $\ce{HA + OH- -> A- + H2O}$. The added $\ce{OH-}$ is used up.
+
+Each time, a strong acid or base is replaced by a weak one, so the pH barely moves.
+
+### 2. Calculating buffer pH: the Henderson–Hasselbalch equation
+
+$$
+\text{pH} = \text{p}K_\text{a} + \log\frac{[\ce{A-}]}{[\ce{HA}]}
+$$
+
+- If $[\ce{A-}] = [\ce{HA}]$, then $\log 1 = 0$ and **pH = pKa**.
+- More base than acid gives a pH above the pKa; more acid gives a pH below it.
+
+### 3. Choosing a buffer
+
+Choose a weak acid whose **pKa is close to the pH you want** (within about ±1). Acetic acid/acetate (pKa 4.74) buffers around pH 4–6; ammonium/ammonia (pKa 9.25) buffers around pH 8–10.
+
+### 4. Buffer capacity
+
+A buffer works only while it still has plenty of both HA and A⁻. More concentrated buffers can absorb more acid or base before the pH changes sharply. This is called **buffer capacity**.
+
+<Analogy>
+A buffer is like a goalkeeper and a defender on the same team. Whichever way the "attack" comes (extra acid or extra base), one of them blocks it. But if too many shots come at once, the defence is overwhelmed: that's exceeding the buffer capacity.
+</Analogy>
+
+<MorePrecisely>
+The Henderson–Hasselbalch equation is an approximation. It works best when both [HA] and [A⁻] are much larger than [H₃O⁺] and their ratio is between about 0.1 and 10. For calculations after adding acid or base, it is fine to use **moles** instead of concentrations in the ratio, because both are in the same volume.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/buffers/buffer-action.svg" alt="How a buffer works. A buffer contains a weak acid HA and its conjugate base A minus. If acid is added, the base part removes it: A minus plus H3O plus gives HA plus water. If base is added, the acid part removes it: HA plus OH minus gives A minus plus water. Either way the pH changes only slightly, because pH depends on the ratio of A minus to HA." caption="Each part of the buffer neutralizes one kind of addition." width={360} height={390} />
+
+## Worked example
+
+<Example title="pH of a buffer">
+**Question:** A buffer contains 0.20 M sodium acetate and 0.10 M acetic acid. What is its pH? (pKa = 4.74)
+
+$\text{pH} = 4.74 + \log\dfrac{0.20}{0.10} = 4.74 + 0.30 =$ **5.04**
+</Example>
+
+<Example title="Adding acid to a buffer">
+**Question:** 1.00 L of buffer contains 0.10 mol acetic acid and 0.10 mol sodium acetate (pH 4.74). What is the pH after adding 0.010 mol HCl? Compare with adding the same HCl to 1.00 L of pure water.
+
+1. The acetate removes the added acid: $\ce{CH3COO- + H3O+ -> CH3COOH + H2O}$
+2. New amounts: acetate 0.10 − 0.010 = 0.09 mol; acetic acid 0.10 + 0.010 = 0.11 mol
+3. $\text{pH} = 4.74 + \log\dfrac{0.09}{0.11} = 4.74 - 0.087 =$ **4.65**
+
+**Compare:** the buffer's pH falls by only **0.09**. In pure water, 0.010 M HCl would drop the pH from 7.00 to **2.00**, a change of 5 units.
+</Example>
+
+<Example title="A basic buffer">
+**Question:** What is the pH of a buffer containing 0.20 M ammonia and 0.10 M ammonium chloride? (pKa of $\ce{NH4+}$ = 9.25)
+
+Here the weak acid is $\ce{NH4+}$ and its conjugate base is $\ce{NH3}$:
+
+$\text{pH} = 9.25 + \log\dfrac{0.20}{0.10} =$ **9.55**
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking any acid and base make a buffer">
+A strong acid with its salt (for example HCl with NaCl) is **not** a buffer: $\ce{Cl-}$ is too weak a base to remove added acid. A buffer needs a **weak** acid with its conjugate base (or a weak base with its conjugate acid).
+</CommonMistake>
+
+<CommonMistake title="Putting the ratio upside down">
+In Henderson–Hasselbalch, the **base** (A⁻) goes on **top**: log([A⁻]/[HA]). More base should raise the pH above the pKa.
+</CommonMistake>
+
+<CommonMistake title="Thinking buffers keep pH perfectly constant">
+Buffers **reduce** pH changes; they don't prevent them. Add enough acid or base and the buffer is used up, after which the pH changes sharply.
+</CommonMistake>
+
+<NotationNote>
+- Henderson–Hasselbalch is sometimes written as pH = pKa + log([base]/[acid]) or pH = pKa + log([salt]/[acid]).
+- For basic buffers, some courses use pOH = pKb + log([BH⁺]/[B]); it gives the same answer.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Buffer = weak acid + its conjugate base (or weak base + conjugate acid).
+- A⁻ removes added acid; HA removes added base.
+- pH = pKa + log([A⁻]/[HA]); equal amounts give pH = pKa.
+- Choose a buffer with pKa close to the pH you need.
+</RememberThis>

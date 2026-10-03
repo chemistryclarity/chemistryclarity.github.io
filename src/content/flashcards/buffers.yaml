@@ -1,0 +1,36 @@
+# Flashcards: Buffers
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer (pKa acetic acid = 4.74).
+title: 'Buffers: Flashcards'
+description: 'Revise how buffers work and the Henderson–Hasselbalch equation.'
+level: advanced
+access: free
+status: review
+assisted: true
+cards:
+  - id: bu-01
+    front: 'What is a buffer?'
+    back: 'A solution that resists changes in pH when small amounts of acid or base are added.'
+  - id: bu-02
+    front: 'What does a buffer contain?'
+    back: 'A weak acid and its conjugate base (or a weak base and its conjugate acid), in similar amounts.'
+  - id: bu-03
+    front: 'How does a buffer remove added acid?'
+    back: 'The conjugate base reacts with it: $\ce{A- + H3O+ -> HA + H2O}$'
+  - id: bu-04
+    front: 'How does a buffer remove added base?'
+    back: 'The weak acid reacts with it: $\ce{HA + OH- -> A- + H2O}$'
+  - id: bu-05
+    front: 'Write the Henderson–Hasselbalch equation.'
+    back: '$\text{pH} = \text{p}K_\text{a} + \log\dfrac{[\ce{A-}]}{[\ce{HA}]}$'
+  - id: bu-06
+    front: 'What is the pH of a buffer with equal concentrations of HA and A⁻?'
+    back: 'pH = pKa (because log 1 = 0).'
+  - id: bu-07
+    front: 'How do you choose a weak acid for a buffer at a particular pH?'
+    back: 'Pick one whose pKa is close to (within about 1 unit of) the target pH.'
+  - id: bu-08
+    front: 'Is HCl + NaCl a buffer?'
+    back: 'No. Cl⁻ is too weak a base to remove added acid. A buffer needs a **weak** acid and its conjugate base.'
+  - id: bu-09
+    front: 'What is buffer capacity?'
+    back: 'How much acid or base a buffer can absorb before its pH changes sharply. Higher concentrations give a larger capacity.'

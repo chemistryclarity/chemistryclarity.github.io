@@ -1,0 +1,79 @@
+# Quiz: Weak Acids and Ka
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+title: 'Weak Acids and Ka: Quiz'
+description: 'Seven questions on Ka, pKa and weak acid and base calculations, with explanations.'
+level: advanced
+access: free
+status: review
+assisted: true
+questions:
+  - id: wa-q1
+    prompt: 'Which acid is the strongest?'
+    choices:
+      - 'HF, $K_\text{a} = 6.8 \times 10^{-4}$'
+      - 'Acetic acid, $K_\text{a} = 1.8 \times 10^{-5}$'
+      - 'HCN, $K_\text{a} = 4.9 \times 10^{-10}$'
+      - 'They are equally strong'
+    answer: 'HF, $K_\text{a} = 6.8 \times 10^{-4}$'
+    explanation: 'The largest Ka means the greatest extent of ionization, so HF is the strongest of these weak acids.'
+    difficulty: easy
+  - id: wa-q2
+    prompt: 'An acid has $K_\text{a} = 1.8 \times 10^{-5}$. What is its pKa?'
+    choices:
+      - '1.80'
+      - '4.74'
+      - '5.00'
+      - '9.26'
+    answer: '4.74'
+    explanation: 'pKa = −log(1.8 × 10⁻⁵) = 4.74.'
+    difficulty: easy
+  - id: wa-q3
+    prompt: 'What is the pH of 0.20 M acetic acid ($K_\text{a} = 1.8 \times 10^{-5}$)?'
+    choices:
+      - '0.70'
+      - '2.72'
+      - '4.74'
+      - '5.44'
+    answer: '2.72'
+    explanation: '$[\ce{H3O+}] \approx \sqrt{1.8 \times 10^{-5} \times 0.20} = 1.9 \times 10^{-3}$ M, so pH = 2.72. The answer 0.70 treats acetic acid as a strong acid.'
+    difficulty: medium
+  - id: wa-q4
+    prompt: 'A 0.10 M weak acid has pH 3.00. What is its $K_\text{a}$?'
+    choices:
+      - '$1.0 \times 10^{-3}$'
+      - '$1.0 \times 10^{-5}$'
+      - '$1.0 \times 10^{-6}$'
+      - '$1.0 \times 10^{-2}$'
+    answer: '$1.0 \times 10^{-5}$'
+    explanation: '$[\ce{H3O+}] = [\ce{A-}] = 1.0 \times 10^{-3}$ M; $K_\text{a} = (1.0 \times 10^{-3})^2 \div 0.099 = 1.0 \times 10^{-5}$.'
+    difficulty: hard
+  - id: wa-q5
+    prompt: 'What is the pH of 0.20 M ammonia ($K_\text{b} = 1.8 \times 10^{-5}$)?'
+    choices:
+      - '2.72'
+      - '9.26'
+      - '11.28'
+      - '13.30'
+    answer: '11.28'
+    explanation: '$[\ce{OH-}] \approx 1.9 \times 10^{-3}$ M, pOH = 2.72, pH = 14.00 − 2.72 = 11.28. The answer 2.72 reports the pOH.'
+    difficulty: medium
+  - id: wa-q6
+    prompt: 'For a conjugate acid–base pair at 25 °C, $K_\text{a} \times K_\text{b}$ equals…'
+    choices:
+      - '1'
+      - '14'
+      - '$1.0 \times 10^{-7}$'
+      - '$1.0 \times 10^{-14}$'
+    answer: '$1.0 \times 10^{-14}$'
+    explanation: '$K_\text{a} \times K_\text{b} = K_\text{w} = 1.0 \times 10^{-14}$ at 25 °C.'
+    difficulty: medium
+  - id: wa-q7
+    prompt: 'Why can $C - x$ often be replaced by $C$ in weak acid calculations?'
+    choices:
+      - 'Because x is always zero'
+      - 'Because only a small fraction of a weak acid ionizes'
+      - 'Because weak acids ionize completely'
+      - 'Because Ka is always greater than 1'
+    answer: 'Because only a small fraction of a weak acid ionizes'
+    explanation: 'For a weak acid, x is usually tiny compared with C (under 5%), so C − x ≈ C. Always check this.'
+    difficulty: easy

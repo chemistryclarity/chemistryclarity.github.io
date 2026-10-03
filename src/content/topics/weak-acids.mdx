@@ -1,0 +1,159 @@
+---
+title: Weak Acids and Ka
+question: "How do you calculate the pH of a weak acid?"
+description: "What makes an acid weak, what the acid dissociation constant Ka and pKa mean, and how to calculate the pH of weak acids and weak bases, with worked examples."
+area: acids-and-bases
+level: advanced
+order: 30
+prerequisites: [ph]
+related: [ph, acids-and-bases]
+flashcards: weak-acids
+quiz: weak-acids
+resources: [weak-acids-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Ka values (25 °C, rounded): acetic acid 1.8 × 10⁻⁵, formic acid 1.8 × 10⁻⁴, HF 6.8 × 10⁻⁴, HCN 4.9 × 10⁻¹⁰; Kb(NH3) 1.8 × 10⁻⁵.
+  REVIEW: compare with your textbook's table; tables differ slightly between sources.
+  Worked examples were chosen so the approximation and the exact (quadratic) result agree to the reported precision.
+  All calculations checked by computer.
+*/}
+
+## What is it?
+
+A **weak acid** gives up its proton to water only **partly**. At any moment most of its molecules are still intact, and only a small fraction are ionized:
+
+$$
+\ce{HA + H2O <=> H3O+ + A-}
+$$
+
+The **acid dissociation constant**, $K_\text{a}$, measures how far this goes:
+
+$$
+K_\text{a} = \frac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}
+$$
+
+The larger $K_\text{a}$, the stronger the acid. Chemists often use $\text{p}K_\text{a} = -\log K_\text{a}$: the **smaller** the pKa, the **stronger** the acid.
+
+<KeyIdea>
+A weak acid sets up an **equilibrium**. Because only a little of it ionizes, its pH is higher (less acidic) than a strong acid of the same concentration.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Most acids are weak.** Vinegar (acetic acid), citrus fruits (citric acid), and the acids in many medicines and foods are weak acids.
+- **Biology runs on weak acids and bases.** Amino acids, the phosphate groups in DNA and the carbonic acid in blood all behave as weak acids or bases.
+- **Ka is the key to buffers and titrations**, the next two lessons.
+
+## How does it work?
+
+### 1. Comparing acid strength
+
+| Acid | $K_\text{a}$ (25 °C) | pKa |
+|---|---|---|
+| Hydrofluoric acid, $\ce{HF}$ | $6.8 \times 10^{-4}$ | 3.17 |
+| Formic acid, $\ce{HCOOH}$ | $1.8 \times 10^{-4}$ | 3.74 |
+| Acetic acid, $\ce{CH3COOH}$ | $1.8 \times 10^{-5}$ | 4.74 |
+| Hydrocyanic acid, $\ce{HCN}$ | $4.9 \times 10^{-10}$ | 9.31 |
+
+HF is the strongest of these weak acids; HCN is the weakest.
+
+### 2. Calculating the pH of a weak acid
+
+Use an **ICE table** (Initial, Change, Equilibrium). For an acid of initial concentration $C$, let $x$ = amount that ionizes:
+
+| | $\ce{HA}$ | $\ce{H3O+}$ | $\ce{A-}$ |
+|---|---|---|---|
+| Initial | $C$ | 0 | 0 |
+| Change | $-x$ | $+x$ | $+x$ |
+| Equilibrium | $C - x$ | $x$ | $x$ |
+
+So $K_\text{a} = \dfrac{x^2}{C - x}$. When the acid is weak, $x$ is tiny compared with $C$, so $C - x \approx C$, and:
+
+$$
+x = [\ce{H3O+}] \approx \sqrt{K_\text{a} \times C}
+$$
+
+**Check the approximation:** if $x$ is less than 5% of $C$, it is acceptable. Otherwise, solve the quadratic equation instead.
+
+### 3. Percent ionization
+
+$$
+\%\ \text{ionized} = \frac{[\ce{H3O+}]}{C} \times 100\%
+$$
+
+### 4. Weak bases
+
+Weak bases work the same way with $K_\text{b}$ and $\ce{OH-}$. For ammonia, $\ce{NH3 + H2O <=> NH4+ + OH-}$, and $[\ce{OH-}] \approx \sqrt{K_\text{b} \times C}$. For a conjugate acid–base pair, $K_\text{a} \times K_\text{b} = K_\text{w}$.
+
+<Analogy>
+Imagine a dance hall where couples (HA) can split up (H⁺ and A⁻) and pair up again. With a strong acid, every couple splits and nobody pairs again. With a weak acid, couples keep splitting and re-forming, but at any moment almost all are still together. Ka tells you how many are split at any moment.
+</Analogy>
+
+<MorePrecisely>
+Ka values depend on temperature (the table is for 25 °C). The "5% rule" is a convention, not a law: it keeps the error in $x$ small. A weak acid ionizes **more** (as a percentage) when it is more dilute, even though its pH rises. Strictly, equilibrium constants use activities, not concentrations, but concentrations work well for dilute solutions.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/weak-acids/strong-vs-weak.svg" alt="Two panels comparing a strong and a weak acid in water. The strong acid, HCl, is shown entirely as ions: H3O plus and Cl minus. The weak acid, HA, is shown mostly as intact HA molecules, with just one H3O plus and one A minus. Not to scale: in 0.20 M acetic acid only about one molecule in a hundred is ionized." caption="A strong acid ionizes completely; a weak acid mostly stays as molecules." width={360} height={300} />
+
+## Worked example
+
+<Example title="pH of a weak acid">
+**Question:** Calculate the pH and percent ionization of 0.20 M acetic acid. ($K_\text{a} = 1.8 \times 10^{-5}$)
+
+1. $[\ce{H3O+}] \approx \sqrt{1.8 \times 10^{-5} \times 0.20} = 1.9 \times 10^{-3}$ M
+2. Check: $1.9 \times 10^{-3}$ is about 0.9% of 0.20, below 5%, so the approximation is fine.
+3. pH = −log(1.9 × 10⁻³) = **2.72**; percent ionization ≈ **0.9%**
+
+Compare: 0.20 M HCl (strong) has pH 0.70.
+</Example>
+
+<Example title="Ka from a measured pH">
+**Question:** A 0.10 M solution of a weak acid has pH 3.00. Calculate $K_\text{a}$.
+
+1. $[\ce{H3O+}] = [\ce{A-}] = 10^{-3.00} = 1.0 \times 10^{-3}$ M
+2. $[\ce{HA}] = 0.10 - 0.0010 = 0.099$ M
+3. $K_\text{a} = \dfrac{(1.0 \times 10^{-3})^2}{0.099} =$ **1.0 × 10⁻⁵**
+</Example>
+
+<Example title="pH of a weak base">
+**Question:** Calculate the pH of 0.20 M ammonia. ($K_\text{b} = 1.8 \times 10^{-5}$)
+
+1. $[\ce{OH-}] \approx \sqrt{1.8 \times 10^{-5} \times 0.20} = 1.9 \times 10^{-3}$ M
+2. pOH = 2.72, so pH = 14.00 − 2.72 = **11.28**
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Treating a weak acid like a strong acid">
+For 0.20 M acetic acid, $[\ce{H3O+}]$ is **not** 0.20 M. That would give pH 0.70 instead of 2.72. Only strong acids ionize completely.
+</CommonMistake>
+
+<CommonMistake title="Mixing up Ka and pKa">
+A **larger** Ka means a stronger acid, but a **smaller** pKa means a stronger acid. Check which one you are comparing.
+</CommonMistake>
+
+<CommonMistake title="Using the approximation without checking">
+If $x$ is more than 5% of the starting concentration (for example with fairly strong weak acids such as HF, or very dilute solutions), the shortcut is not accurate enough, so solve the quadratic.
+</CommonMistake>
+
+<NotationNote>
+- $K_\text{a}$ is also called the **acidity constant** or **acid ionization constant**.
+- Pure liquid water is left out of the $K_\text{a}$ expression.
+- Some courses write $\ce{HA <=> H+ + A-}$ instead of including water; the $K_\text{a}$ expression is the same.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Weak acids ionize only partly: $\ce{HA + H2O <=> H3O+ + A-}$.
+- $K_\text{a} = [\ce{H3O+}][\ce{A-}]/[\ce{HA}]$; larger Ka (smaller pKa) = stronger acid.
+- Shortcut: $[\ce{H3O+}] \approx \sqrt{K_\text{a}C}$, valid if under 5% ionizes.
+- Weak bases: same method with Kb and OH⁻; $K_\text{a}K_\text{b} = K_\text{w}$.
+</RememberThis>

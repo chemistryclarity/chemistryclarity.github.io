@@ -1,0 +1,127 @@
+---
+title: Acid–Base Titration Curves
+question: "What does a titration curve show?"
+description: "How pH changes during an acid–base titration, the equivalence and half-equivalence points, strong vs weak acid curves, and choosing an indicator."
+area: acids-and-bases
+level: advanced
+order: 50
+prerequisites: [molarity, weak-acids, buffers]
+related: [molarity, buffers]
+flashcards: titration-curves
+quiz: titration-curves
+resources: [titration-curves-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; the diagram was plotted from calculated data
+  (25.00 mL of 0.100 M acid titrated with 0.100 M NaOH; Ka acetic acid = 1.8 × 10⁻⁵).
+  Indicator ranges are typical textbook values and vary slightly between sources. REVIEW: compare with your textbook.
+  All calculations checked by computer.
+*/}
+
+## What is it?
+
+In a **titration**, a solution of known concentration (the **titrant**, often NaOH) is added gradually to a measured volume of another solution (for example an acid). A **titration curve** is a graph of the **pH** of the mixture against the **volume of titrant added**.
+
+Key points on the curve:
+
+- **Equivalence point:** exactly enough base has been added to react with all the acid (moles of OH⁻ = moles of acid H⁺ available).
+- **Half-equivalence point** (weak acids): half the acid has been neutralized.
+- **End point:** where an **indicator** changes colour. A good indicator makes the end point match the equivalence point.
+
+<KeyIdea>
+Near the equivalence point the pH changes very sharply: one drop can move it by several units. That jump is what makes titrations so precise.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Finding unknown concentrations:** titrations are one of the most accurate ways to measure how much acid or base a sample contains, from vinegar to medicines.
+- **Measuring pKa:** the half-equivalence point of a weak acid titration gives its pKa directly.
+- **Choosing the right indicator:** the shape of the curve tells you which indicator will change colour at the right moment.
+
+## How does it work?
+
+### 1. Strong acid + strong base
+
+- The pH starts **low** (for 0.100 M HCl, pH 1.00) and rises slowly.
+- Near equivalence, it rises **steeply**, passing through **pH 7.00** at the equivalence point (the salt formed, such as NaCl, is neutral).
+- After equivalence, excess OH⁻ makes the pH level off at a high value.
+
+### 2. Weak acid + strong base
+
+- The pH starts **higher** (0.100 M acetic acid: pH 2.88), because a weak acid ionizes only partly.
+- A flatter **buffer region** follows, where the solution contains both the weak acid and its conjugate base.
+- At the **half-equivalence point**, [HA] = [A⁻], so **pH = pKa** (4.74 for acetic acid).
+- The **equivalence point is above 7** (here pH 8.72), because the conjugate base (acetate) is weakly basic.
+
+### 3. Choosing an indicator
+
+Pick an indicator whose colour-change range lies within the **steep part** of the curve:
+
+| Indicator | Changes colour between pH (approx.) | Suits |
+|---|---|---|
+| Methyl orange | 3.1 – 4.4 | strong acid + weak base |
+| Bromothymol blue | 6.0 – 7.6 | strong acid + strong base |
+| Phenolphthalein | 8.2 – 10.0 | weak acid + strong base (also strong + strong) |
+
+<Analogy>
+Filling a bucket that has a hidden tipping point: for a long time each cup of water barely changes anything, then suddenly one cup tips it over. In a titration, the equivalence point is the tipping point, and the indicator is the alarm that goes off when it tips.
+</Analogy>
+
+<MorePrecisely>
+For a strong acid–strong base titration the steep jump is so large that phenolphthalein and bromothymol blue both work well. For a weak acid–weak base titration there is no sharp jump, so indicators are unreliable and a pH meter is used. The equivalence point of a strong acid–weak base titration (e.g. HCl with ammonia) is **below** 7, because the conjugate acid ($\ce{NH4+}$) is weakly acidic.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/titration/titration-curves.svg" alt="Graph of pH against volume of 0.100 M NaOH added, from 0 to 50 mL. Strong acid curve (25.00 mL of 0.100 M HCl) starts at pH 1, rises slowly, then jumps steeply at 25.00 mL through pH 7.00 and levels off near pH 12.5. Weak acid curve (25.00 mL of 0.100 M acetic acid) starts near pH 2.9, rises through a flatter buffer region passing pH equals pKa at 12.5 mL, jumps at 25.00 mL through pH 8.72, then joins the strong acid curve." caption="Strong vs weak acid titrated with NaOH (calculated curves)." width={360} height={380} />
+
+## Worked example
+
+<Example title="Equivalence volume and pH before equivalence">
+**Question:** 25.00 mL of 0.100 M HCl is titrated with 0.100 M NaOH. (a) What volume of NaOH reaches equivalence? (b) What is the pH after 12.50 mL of NaOH has been added?
+
+1. Moles of HCl = 0.100 × 0.02500 = 0.00250 mol, so NaOH needed = 0.00250 mol; volume = 0.00250 ÷ 0.100 = **25.0 mL**
+2. After 12.50 mL: NaOH added = 0.00125 mol; HCl left = 0.00250 − 0.00125 = 0.00125 mol
+3. Total volume = 37.50 mL, so $[\ce{H3O+}] = 0.00125 \div 0.03750 = 0.0333$ M and pH = **1.48**
+</Example>
+
+<Example title="pH at the half-equivalence and equivalence points of a weak acid">
+**Question:** 25.00 mL of 0.100 M acetic acid is titrated with 0.100 M NaOH. Find the pH (a) at the half-equivalence point and (b) at the equivalence point. ($K_\text{a} = 1.8 \times 10^{-5}$, pKa = 4.74)
+
+1. **Half-equivalence** (12.50 mL): [HA] = [A⁻], so pH = pKa = **4.74**
+2. **Equivalence** (25.00 mL): all the acid has become acetate: 0.00250 mol in 50.00 mL = 0.0500 M
+3. Acetate is a weak base: $K_\text{b} = K_\text{w}/K_\text{a} = 5.6 \times 10^{-10}$, so $[\ce{OH-}] \approx \sqrt{5.6 \times 10^{-10} \times 0.0500} = 5.3 \times 10^{-6}$ M
+4. pOH = 5.28, pH = **8.72**
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Assuming every equivalence point is at pH 7">
+Only strong acid + strong base titrations reach equivalence at pH 7. Weak acid + strong base: **above** 7. Strong acid + weak base: **below** 7.
+</CommonMistake>
+
+<CommonMistake title="Confusing equivalence with neutral">
+"Equivalence" means the moles of acid and base match the balanced equation, not that the solution is neutral.
+</CommonMistake>
+
+<CommonMistake title="Choosing an indicator outside the steep region">
+Methyl orange changes colour around pH 3–4, well before the equivalence point of a weak acid titration (pH 8.72), so it would give an end point that is far too early.
+</CommonMistake>
+
+<NotationNote>
+- The solution in the burette is the **titrant**; the solution being measured is the **analyte**.
+- Some courses use "end point" and "equivalence point" interchangeably; strictly, the end point is where the indicator changes.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Equivalence: moles of base = moles of acid (from the balanced equation).
+- Strong + strong: equivalence at pH 7. Weak acid + strong base: above 7. Strong acid + weak base: below 7.
+- Half-equivalence of a weak acid: pH = pKa.
+- Choose an indicator that changes colour within the steep jump.
+</RememberThis>

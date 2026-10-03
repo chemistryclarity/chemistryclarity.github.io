@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/titration-curves-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Titration Curves Worksheet'
+description: '8 questions on equivalence points, pH during a strong acid titration, half-equivalence and indicators. Answer key included.'
+type: worksheet
+level: advanced
+access: free
+file: '/downloads/titration-curves-worksheet.pdf'
+answerKey: '/downloads/titration-curves-worksheet-answers.pdf'
+preview: '/previews/titration-curves-worksheet.png'
+status: review

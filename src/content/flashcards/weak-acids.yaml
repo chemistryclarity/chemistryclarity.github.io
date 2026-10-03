@@ -1,0 +1,39 @@
+# Flashcards: Weak Acids and Ka
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+title: 'Weak Acids and Ka: Flashcards'
+description: 'Revise Ka, pKa, ICE tables and weak acid and base pH.'
+level: advanced
+access: free
+status: review
+assisted: true
+cards:
+  - id: wa-01
+    front: 'What is a weak acid?'
+    back: |
+      An acid that ionizes only partly in water, setting up an equilibrium:
+
+      $\ce{HA + H2O <=> H3O+ + A-}$
+  - id: wa-02
+    front: 'Write the expression for $K_\text{a}$.'
+    back: '$K_\text{a} = \dfrac{[\ce{H3O+}][\ce{A-}]}{[\ce{HA}]}$'
+  - id: wa-03
+    front: 'Which is the stronger acid: pKa 3.2 or pKa 4.7?'
+    back: 'pKa 3.2. A smaller pKa means a larger Ka and a stronger acid.'
+  - id: wa-04
+    front: 'What is the shortcut for $[\ce{H3O+}]$ in a weak acid solution?'
+    back: '$[\ce{H3O+}] \approx \sqrt{K_\text{a} \times C}$'
+  - id: wa-05
+    front: 'When is the shortcut acceptable?'
+    back: 'When less than 5% of the acid ionizes ($x$ < 5% of $C$).'
+  - id: wa-06
+    front: 'What does ICE stand for?'
+    back: 'Initial, Change, Equilibrium.'
+  - id: wa-07
+    front: 'What is the pH of 0.20 M acetic acid ($K_\text{a} = 1.8 \times 10^{-5}$)?'
+    back: '$[\ce{H3O+}] = 1.9 \times 10^{-3}$ M, so pH = 2.72'
+  - id: wa-08
+    front: 'How are Ka and Kb related for a conjugate pair?'
+    back: '$K_\text{a} \times K_\text{b} = K_\text{w} = 1.0 \times 10^{-14}$ (at 25 °C)'
+  - id: wa-09
+    front: 'Does a weak acid ionize more or less (as a percentage) when diluted?'
+    back: 'More. Percent ionization increases on dilution, even though the pH rises.'

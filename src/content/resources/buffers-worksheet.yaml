@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/buffers-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Buffers Worksheet'
+description: '8 questions on how buffers work, Henderson–Hasselbalch calculations and adding acid to a buffer. Answer key included.'
+type: worksheet
+level: advanced
+access: free
+file: '/downloads/buffers-worksheet.pdf'
+answerKey: '/downloads/buffers-worksheet-answers.pdf'
+preview: '/previews/buffers-worksheet.png'
+status: review

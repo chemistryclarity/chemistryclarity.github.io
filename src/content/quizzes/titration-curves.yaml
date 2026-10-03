@@ -1,0 +1,79 @@
+# Quiz: Acid–Base Titration Curves
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+title: 'Titration Curves: Quiz'
+description: 'Seven questions on titration curves, equivalence points and indicators, with explanations.'
+level: advanced
+access: free
+status: review
+assisted: true
+questions:
+  - id: tc-q1
+    prompt: 'What is the pH at the equivalence point when HCl is titrated with NaOH?'
+    choices:
+      - 'Below 7'
+      - '7.00'
+      - 'Above 7'
+      - 'Equal to the pKa'
+    answer: '7.00'
+    explanation: 'Strong acid + strong base gives a neutral salt (NaCl), so the equivalence point is at pH 7.00 (25 °C).'
+    difficulty: easy
+  - id: tc-q2
+    prompt: 'Acetic acid is titrated with NaOH. At the equivalence point, the pH is…'
+    choices:
+      - 'below 7'
+      - 'exactly 7'
+      - 'above 7'
+      - 'equal to the pKa'
+    answer: 'above 7'
+    explanation: 'At equivalence the solution contains acetate, a weak base, so the pH is above 7 (8.72 for 0.100 M solutions).'
+    difficulty: medium
+  - id: tc-q3
+    prompt: 'At the half-equivalence point of a weak acid titration, the pH equals…'
+    choices:
+      - '7.00'
+      - 'the pKa of the acid'
+      - 'the pH at the start'
+      - '14 − pKa'
+    answer: 'the pKa of the acid'
+    explanation: 'Half the acid has been converted to its conjugate base, so [HA] = [A⁻] and pH = pKa + log(1) = pKa.'
+    difficulty: medium
+  - id: tc-q4
+    prompt: 'What volume of 0.100 M NaOH reaches equivalence with 25.00 mL of 0.100 M HCl?'
+    choices:
+      - '12.5 mL'
+      - '25.0 mL'
+      - '50.0 mL'
+      - '2.50 mL'
+    answer: '25.0 mL'
+    explanation: 'Moles HCl = 0.100 × 0.02500 = 0.00250 mol; volume NaOH = 0.00250 ÷ 0.100 = 0.0250 L = 25.0 mL.'
+    difficulty: easy
+  - id: tc-q5
+    prompt: '25.00 mL of 0.100 M HCl is titrated with 0.100 M NaOH. What is the pH after 12.50 mL of NaOH has been added?'
+    choices:
+      - '1.00'
+      - '1.48'
+      - '1.30'
+      - '7.00'
+    answer: '1.48'
+    explanation: 'HCl left = 0.00250 − 0.00125 = 0.00125 mol in 37.50 mL: [H₃O⁺] = 0.0333 M, pH = 1.48. The answer 1.30 forgets that the volume has increased.'
+    difficulty: hard
+  - id: tc-q6
+    prompt: 'Which indicator is best for titrating acetic acid with NaOH?'
+    choices:
+      - 'Methyl orange (pH 3.1–4.4)'
+      - 'Phenolphthalein (pH 8.2–10.0)'
+      - 'Any indicator works equally well'
+      - 'No indicator can be used'
+    answer: 'Phenolphthalein (pH 8.2–10.0)'
+    explanation: 'The equivalence point is at about pH 8.7, inside the steep jump where phenolphthalein changes colour. Methyl orange would change far too early.'
+    difficulty: medium
+  - id: tc-q7
+    prompt: 'Why does a 0.100 M acetic acid titration start at a higher pH than a 0.100 M HCl titration?'
+    choices:
+      - 'Acetic acid is more concentrated'
+      - 'Acetic acid ionizes only partly'
+      - 'Acetic acid is a base'
+      - 'The NaOH is added faster'
+    answer: 'Acetic acid ionizes only partly'
+    explanation: 'A weak acid releases fewer H₃O⁺ ions than a strong acid of the same concentration (pH 2.88 vs 1.00).'
+    difficulty: easy

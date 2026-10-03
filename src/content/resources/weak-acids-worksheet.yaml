@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/weak-acids-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Weak Acids and Ka Worksheet'
+description: '8 questions on Ka, pKa, weak acid and weak base pH, and finding Ka from a measured pH. Answer key included.'
+type: worksheet
+level: advanced
+access: free
+file: '/downloads/weak-acids-worksheet.pdf'
+answerKey: '/downloads/weak-acids-worksheet-answers.pdf'
+preview: '/previews/weak-acids-worksheet.png'
+status: review

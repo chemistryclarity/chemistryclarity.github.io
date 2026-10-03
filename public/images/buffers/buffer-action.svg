@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 390" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #e6f4f1; stroke: #0f766e; stroke-width: 2.2; }
+    .acid { fill: #fff1f2; stroke: #be123c; stroke-width: 1.8; }
+    .base { fill: #eef3ff; stroke: #1d4ed8; stroke-width: 1.8; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .h { fill: #0f766e; font-size: 14px; font-weight: 750; }
+    .ra { fill: #be123c; font-size: 12px; font-weight: 750; }
+    .rb { fill: #1d4ed8; font-size: 12px; font-weight: 750; }
+    .eq { fill: #14213d; font-size: 13px; font-weight: 650; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .arrow { stroke: #14213d; stroke-width: 2; fill: none; marker-end: url(#hd); }
+    .hd { fill: #14213d; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .box { fill: #123a3a; stroke: #2dd4bf; }
+      .acid { fill: #3a1420; stroke: #fda4af; }
+      .base { fill: #172447; stroke: #93b4ff; }
+      .t, .eq { fill: #e9edf5; }
+      .h { fill: #2dd4bf; }
+      .ra { fill: #fda4af; } .rb { fill: #93b4ff; }
+      .sub { fill: #9aa5ba; }
+      .arrow { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+    }
+  </style>
+  <defs><marker id="hd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="390" rx="14"/>
+
+  <rect class="box" x="30" y="18" width="300" height="64" rx="12"/>
+  <text class="h" x="180" y="44" text-anchor="middle">A buffer contains both</text>
+  <text class="eq" x="180" y="66" text-anchor="middle">a weak acid (HA) + its conjugate base (A⁻)</text>
+
+  <path class="arrow" d="M120 86 L92 128"/>
+  <path class="arrow" d="M240 86 L268 128"/>
+
+  <rect class="acid" x="14" y="132" width="160" height="150" rx="12"/>
+  <text class="ra" x="94" y="156" text-anchor="middle">ACID ADDED (H₃O⁺)</text>
+  <text class="sub" x="94" y="178" text-anchor="middle">the base part removes it:</text>
+  <text class="eq" x="94" y="206" text-anchor="middle">A⁻ + H₃O⁺</text>
+  <text class="eq" x="94" y="226" text-anchor="middle">→ HA + H₂O</text>
+  <text class="sub" x="94" y="256" text-anchor="middle">A⁻ goes down, HA goes up</text>
+
+  <rect class="base" x="186" y="132" width="160" height="150" rx="12"/>
+  <text class="rb" x="266" y="156" text-anchor="middle">BASE ADDED (OH⁻)</text>
+  <text class="sub" x="266" y="178" text-anchor="middle">the acid part removes it:</text>
+  <text class="eq" x="266" y="206" text-anchor="middle">HA + OH⁻</text>
+  <text class="eq" x="266" y="226" text-anchor="middle">→ A⁻ + H₂O</text>
+  <text class="sub" x="266" y="256" text-anchor="middle">HA goes down, A⁻ goes up</text>
+
+  <text class="t" x="180" y="318" text-anchor="middle">Either way, the pH changes only slightly,</text>
+  <text class="sub" x="180" y="340" text-anchor="middle">because pH depends on the ratio [A⁻]/[HA], which changes</text>
+  <text class="sub" x="180" y="356" text-anchor="middle">only a little while plenty of both remain.</text>
+</svg>

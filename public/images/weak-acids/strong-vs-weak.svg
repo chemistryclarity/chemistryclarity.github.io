@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .panel { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.2; }
+    .t { fill: #14213d; font-size: 13px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .ion { fill: #fff1f2; stroke: #be123c; stroke-width: 1.5; }
+    .mol { fill: #eef3ff; stroke: #1d4ed8; stroke-width: 1.5; }
+    .f { fill: #14213d; font-size: 9.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .panel { fill: #1b263d; stroke: #3a4763; }
+      .t, .f { fill: #e9edf5; }
+      .sub { fill: #9aa5ba; }
+      .ion { fill: #3a1420; stroke: #fda4af; }
+      .mol { fill: #172447; stroke: #93b4ff; }
+    }
+  </style>
+  <rect class="bg" width="360" height="300" rx="14"/>
+
+  <!-- Strong acid -->
+  <text class="t" x="20" y="28">Strong acid (HCl)</text>
+  <text class="sub" x="20" y="44">ionizes completely</text>
+  <rect class="panel" x="14" y="54" width="160" height="150" rx="10"/>
+  <g>
+    <circle class="ion" cx="44" cy="84" r="17"/><text class="f" x="44" y="87.5" text-anchor="middle">H₃O⁺</text>
+    <circle class="ion" cx="94" cy="80" r="17"/><text class="f" x="94" y="83.5" text-anchor="middle">Cl⁻</text>
+    <circle class="ion" cx="144" cy="88" r="17"/><text class="f" x="144" y="91.5" text-anchor="middle">H₃O⁺</text>
+    <circle class="ion" cx="40" cy="132" r="17"/><text class="f" x="40" y="135.5" text-anchor="middle">Cl⁻</text>
+    <circle class="ion" cx="90" cy="128" r="17"/><text class="f" x="90" y="131.5" text-anchor="middle">H₃O⁺</text>
+    <circle class="ion" cx="140" cy="136" r="17"/><text class="f" x="140" y="139.5" text-anchor="middle">Cl⁻</text>
+    <circle class="ion" cx="62" cy="178" r="17"/><text class="f" x="62" y="181.5" text-anchor="middle">Cl⁻</text>
+    <circle class="ion" cx="118" cy="178" r="17"/><text class="f" x="118" y="181.5" text-anchor="middle">H₃O⁺</text>
+  </g>
+
+  <!-- Weak acid -->
+  <text class="t" x="196" y="28">Weak acid (HA)</text>
+  <text class="sub" x="196" y="44">ionizes only slightly</text>
+  <rect class="panel" x="186" y="54" width="160" height="150" rx="10"/>
+  <g>
+    <circle class="mol" cx="216" cy="84" r="17"/><text class="f" x="216" y="87.5" text-anchor="middle">HA</text>
+    <circle class="mol" cx="266" cy="80" r="17"/><text class="f" x="266" y="83.5" text-anchor="middle">HA</text>
+    <circle class="mol" cx="316" cy="88" r="17"/><text class="f" x="316" y="91.5" text-anchor="middle">HA</text>
+    <circle class="mol" cx="212" cy="132" r="17"/><text class="f" x="212" y="135.5" text-anchor="middle">HA</text>
+    <circle class="ion" cx="262" cy="128" r="17"/><text class="f" x="262" y="131.5" text-anchor="middle">H₃O⁺</text>
+    <circle class="mol" cx="312" cy="136" r="17"/><text class="f" x="312" y="139.5" text-anchor="middle">HA</text>
+    <circle class="ion" cx="234" cy="178" r="17"/><text class="f" x="234" y="181.5" text-anchor="middle">A⁻</text>
+    <circle class="mol" cx="290" cy="178" r="17"/><text class="f" x="290" y="181.5" text-anchor="middle">HA</text>
+  </g>
+
+  <circle class="ion" cx="26" cy="232" r="8"/><text class="sub" x="40" y="236">ions</text>
+  <circle class="mol" cx="96" cy="232" r="8"/><text class="sub" x="110" y="236">un-ionized acid molecules</text>
+  <text class="sub" x="20" y="262">Not to scale: in 0.20 M acetic acid only about 1 molecule</text>
+  <text class="sub" x="20" y="278">in 100 is ionized. Most stay as HA.</text>
+</svg>
