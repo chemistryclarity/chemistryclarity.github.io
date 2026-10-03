@@ -1,0 +1,39 @@
+# Flashcards: Formula Mass and Percent Composition
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'Percent Composition: Flashcards'
+description: 'Revise formula mass, mass percent and the most common mistakes.'
+level: beginner
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: pc-01
+    front: 'What does percent composition tell you?'
+    back: 'The percentage of a compound''s **mass** that comes from each element.'
+  - id: pc-02
+    front: 'How do you calculate the mass percent of an element in a compound?'
+    back: '(number of atoms of the element × atomic mass) ÷ formula mass × 100%'
+  - id: pc-03
+    front: 'What is a formula mass?'
+    back: 'The sum of the atomic masses of all the atoms in a chemical formula, in u.'
+  - id: pc-04
+    front: 'What is the formula mass of $\ce{Ca(OH)2}$? (Ca = 40.08, O = 16.00, H = 1.008)'
+    back: '$40.08 + 2(16.00 + 1.008) = 74.10$ u. The 2 multiplies both O and H.'
+  - id: pc-05
+    front: 'What is the mass percent of hydrogen in water, $\ce{H2O}$?'
+    back: '$\dfrac{2(1.008)}{18.016} \times 100\% = 11.19\%$'
+  - id: pc-06
+    front: 'Two-thirds of the atoms in water are hydrogen. Why is hydrogen only 11.19% of its mass?'
+    back: 'Hydrogen atoms are much lighter than oxygen atoms. Percent composition is by mass, not by number of atoms.'
+  - id: pc-07
+    front: 'Does the percent composition of a pure compound depend on the size of the sample?'
+    back: 'No. A pure compound always has the same composition by mass, so a drop and a lake of pure water have the same percentages.'
+  - id: pc-08
+    front: 'What should the mass percents of all elements in a compound add up to?'
+    back: '100%, apart from small rounding differences. Keep extra digits until the end to avoid them.'
+  - id: pc-09
+    front: 'What is relative formula mass, $M_\text{r}$?'
+    back: 'The formula mass expressed without units, relative to $\frac{1}{12}$ of the mass of a carbon-12 atom. It has the same number as the formula mass in u.'

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .title { fill: #14213d; font-size: 15px; font-weight: 700; }
+    .label { fill: #14213d; font-size: 13px; font-weight: 650; }
+    .sub { fill: #5b6577; font-size: 11.5px; }
+    .h { fill: #93b4ff; }
+    .o { fill: #be123c; }
+    .barText { fill: #14213d; font-size: 12px; font-weight: 700; }
+    .barTextLight { fill: #ffffff; font-size: 12px; font-weight: 700; }
+    .frame { fill: none; stroke: #c9c5b8; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .title, .label { fill: #e9edf5; }
+      .sub { fill: #9aa5ba; }
+      .h { fill: #5b7fd6; }
+      .o { fill: #e04a6a; }
+      .barText { fill: #0e1524; }
+      .frame { stroke: #3a4763; }
+    }
+  </style>
+  <rect class="bg" width="360" height="300" rx="14"/>
+  <text class="title" x="20" y="34">Water, H₂O: counting vs. weighing</text>
+
+  <!-- By number of atoms: H 2/3, O 1/3 -->
+  <text class="label" x="20" y="76">By number of atoms</text>
+  <text class="sub" x="20" y="93">2 H atoms and 1 O atom in each molecule</text>
+  <rect class="h" x="20" y="104" width="213.3" height="38"/>
+  <rect class="o" x="233.3" y="104" width="106.7" height="38"/>
+  <rect class="frame" x="20" y="104" width="320" height="38"/>
+  <text class="barText" x="126.7" y="128" text-anchor="middle">H 66.7%</text>
+  <text class="barTextLight" x="286.7" y="128" text-anchor="middle">O 33.3%</text>
+
+  <!-- By mass: H 11.19%, O 88.81% -->
+  <text class="label" x="20" y="186">By mass</text>
+  <text class="sub" x="20" y="203">H = 2 × 1.008 = 2.016 u, O = 16.00 u</text>
+  <rect class="h" x="20" y="214" width="35.8" height="38"/>
+  <rect class="o" x="55.8" y="214" width="284.2" height="38"/>
+  <rect class="frame" x="20" y="214" width="320" height="38"/>
+  <text class="label" x="20" y="272">↑ H 11.19%</text>
+  <text class="barTextLight" x="198" y="238" text-anchor="middle">O 88.81%</text>
+</svg>

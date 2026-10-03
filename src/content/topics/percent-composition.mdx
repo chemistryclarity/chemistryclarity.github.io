@@ -1,0 +1,141 @@
+---
+title: Formula Mass and Percent Composition
+question: "How do you calculate percent composition?"
+description: "How to calculate the formula mass of a compound and the percentage by mass of each element in it, with worked examples."
+area: reactions-and-stoichiometry
+level: beginner
+order: 20
+prerequisites: [mole-concept]
+related: [mole-concept]
+flashcards: percent-composition
+quiz: percent-composition
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Coverage follows the formula-weights / percent-composition material in general chemistry texts such as
+  Chemistry: The Central Science. All calculations checked by computer.
+  Atomic masses: H 1.008, C 12.01, N 14.01, O 16.00, Ca 40.08, Fe 55.85.
+  REVIEW: compare atomic masses with your textbook's periodic table.
+  Natural next topic: empirical formulas (from percent composition).
+*/}
+
+## What is it?
+
+**Percent composition** tells you what percentage of a compound's **mass** comes from each element.
+
+To work it out, you first need the **formula mass**: the sum of the atomic masses of all the atoms in the formula, in atomic mass units (u).
+
+<KeyIdea>
+Percent composition is about **mass**, not about the number of atoms. A light element can make up most of the atoms in a compound but only a small part of its mass.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Identifying substances.** Chemists analyse an unknown compound to find the mass of each element it contains. Comparing those percentages with calculated values helps identify the compound, and it is the first step in working out an empirical formula.
+- **Checking purity.** If a sample's measured composition doesn't match the expected percentages, it may be impure.
+- **Everyday labels.** Products such as fertilisers state their contents as percentages by mass.
+
+## How does it work?
+
+### 1. Find the formula mass
+
+Add the atomic masses of every atom in the formula, using the subscripts to count atoms. For water, $\ce{H2O}$:
+
+$
+2(1.008) + 16.00 = 18.016\ \text{u}
+$
+
+A subscript after **parentheses** multiplies everything inside them. Calcium hydroxide, $\ce{Ca(OH)2}$, contains one Ca, two O and two H:
+
+$$
+40.08 + 2(16.00 + 1.008) = 74.10\ \text{u}
+$$
+
+For molecules this is also called the **molecular mass**. Ionic compounds like $\ce{NaCl}$ have no molecules, so we say **formula mass** (the mass of one *formula unit*).
+
+### 2. Work out each element's share
+
+$
+\%\ \text{element} = \frac{n \times A}{\text{formula mass}} \times 100\%
+$
+
+where $n$ is the number of atoms of that element in the formula and $A$ is its atomic mass.
+
+The percentages of all the elements in a compound add up to 100% (apart from tiny rounding differences).
+
+### 3. It doesn't matter how much you have
+
+A pure compound always has the same composition by mass. Every sample of pure water is 11.19% hydrogen by mass, whether it is a drop or a lake. So you can calculate percent composition from the formula alone, using one formula unit or one mole.
+
+<Analogy>
+A bag of mixed nuts might contain more peanuts than almonds, but if the almonds are much larger they could still make up most of the bag's *mass*. Percent composition works the same way: it weighs each element's share, it doesn't count atoms.
+</Analogy>
+
+<MorePrecisely>
+The atomic masses on the periodic table are weighted averages of the masses of each element's naturally occurring isotopes. For some elements, IUPAC reports the standard atomic weight as a small range because isotope proportions vary slightly between natural sources. Textbook values such as H = 1.008 are conventional rounded values. They are accurate enough for these calculations.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/percent-composition/water-count-vs-mass.svg" alt="Two bar charts for water. By number of atoms, hydrogen is 66.7 percent and oxygen 33.3 percent, because each molecule has two hydrogen atoms and one oxygen atom. By mass, hydrogen is only 11.19 percent and oxygen 88.81 percent, because an oxygen atom is much heavier than a hydrogen atom." caption="In water, two out of three atoms are hydrogen, but hydrogen is only about 11% of the mass." width={360} height={300} />
+
+## Worked example
+
+<Example title="Percent composition of glucose">
+**Question:** Calculate the percent composition by mass of glucose, $\ce{C6H12O6}$. (C = 12.01, H = 1.008, O = 16.00)
+
+1. Mass of each element in one formula unit: C: 6 × 12.01 = 72.06 u; H: 12 × 1.008 = 12.096 u; O: 6 × 16.00 = 96.00 u
+2. Formula mass: 72.06 + 12.096 + 96.00 = 180.156 u
+3. % C = $\dfrac{72.06}{180.156} \times 100\% = 40.00\%$
+4. % H = $\dfrac{12.096}{180.156} \times 100\% = 6.71\%$
+5. % O = $\dfrac{96.00}{180.156} \times 100\% = 53.29\%$
+
+**Answer:** glucose is **40.00% C, 6.71% H and 53.29% O** by mass. Check: 40.00 + 6.71 + 53.29 = 100.00%.
+</Example>
+
+<Example title="Mass of an element in a sample">
+**Question:** What mass of iron is contained in 50.0 g of iron(III) oxide, $\ce{Fe2O3}$? (Fe = 55.85, O = 16.00)
+
+1. Formula mass: 2(55.85) + 3(16.00) = 111.70 + 48.00 = 159.70 u
+2. Fraction of the mass that is iron: $\dfrac{111.70}{159.70} = 0.6994$ (that is, 69.94% Fe)
+3. Mass of iron: $0.6994 \times 50.0\ \text{g} = 35.0\ \text{g}$
+
+**Answer:** 50.0 g of $\ce{Fe2O3}$ contains **35.0 g of iron**.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Ignoring subscripts and parentheses">
+In $\ce{Fe2O3}$ there are **two** iron atoms, so iron contributes 2 × 55.85 = 111.70 u, not 55.85 u. Leaving out the 2 gives half the correct mass of iron (17.5 g instead of 35.0 g in the example above).
+
+In $\ce{Ca(OH)2}$, the 2 applies to both O and H: the formula mass is 74.10 u, not 58.10 u.
+</CommonMistake>
+
+<CommonMistake title="Counting atoms instead of weighing them">
+Two-thirds of the atoms in water are hydrogen, but hydrogen is **not** 66.7% of water. Percent composition is by mass: hydrogen is 11.19% of water's mass.
+</CommonMistake>
+
+<CommonMistake title="Rounding too early">
+If you round water's formula mass to 18.02 u before dividing, you get 11.19% H and 88.79% O, which add up to only 99.98%. Keep extra digits (18.016 u) until the final step to get 11.19% and 88.81%.
+</CommonMistake>
+
+<NotationNote>
+Different textbooks use different names for the same quantity:
+
+- **Formula weight** and **molecular weight** are traditional names; **formula mass** and **molecular mass** are more common in newer texts. All are given in u (also written amu or Da).
+- Some courses use **relative formula mass**, $M_\text{r}$. It has the same number but no units, because it is measured relative to $\frac{1}{12}$ of the mass of a carbon-12 atom.
+- Percent composition is sometimes called **mass percent** or **percentage by mass**.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Formula mass = sum of the atomic masses of all atoms in the formula (watch subscripts and parentheses).
+- % element = (atoms of element × atomic mass) ÷ formula mass × 100%.
+- Percent composition is by **mass**, and it is the same for any sample of a pure compound.
+- Keep extra digits until the end; the percentages should add to 100%.
+</RememberThis>
