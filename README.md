@@ -8,6 +8,10 @@ Built with [Astro](https://astro.build) (a static site generator) and published 
 
 ---
 
+## Easiest way to edit
+
+Use the online editor at **https://chemistryclarity.com/admin/**. See [docs/content-editor.md](docs/content-editor.md).
+
 ## How the site works (in one minute)
 
 - **You write content** in plain text files inside `src/content/`.

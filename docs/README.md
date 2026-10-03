@@ -4,6 +4,7 @@ Start here. Each guide is short and step-by-step.
 
 | I want to… | Guide |
 |---|---|
+| **Edit content in the browser (no code)** | [content-editor.md](content-editor.md) |
 | Understand the everyday workflow (edit → preview → publish) | This page ↓ |
 | Add a new chemistry topic / write a lesson | [writing-lessons.md](writing-lessons.md) |
 | Add flashcards or a quiz | [flashcards-and-quizzes.md](flashcards-and-quizzes.md) |
@@ -11,6 +12,7 @@ Start here. Each guide is short and step-by-step.
 | Add a premium (paid) product | [premium-products.md](premium-products.md) |
 | Connect or manage the newsletter | [newsletter.md](newsletter.md) |
 | Keep the brand separate from my identity | [keeping-the-brand-anonymous.md](keeping-the-brand-anonymous.md) |
+| Manage the domain (chemistryclarity.com) | [custom-domain.md](custom-domain.md) |
 
 Ready-to-copy starter files are in the [`templates/`](../templates) folder.
 

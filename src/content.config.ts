@@ -9,6 +9,14 @@ import { defineCollection, reference } from 'astro:content';
 import { glob, file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
+/**
+ * The online editor (/admin) may save an empty optional field as '' or null.
+ * Treat those as "not set", so a blank box never breaks the build.
+ */
+const isBlank = (v: unknown) => v === '' || v === null;
+const blank = <T extends z.ZodType>(schema: T) => z.preprocess((v) => (isBlank(v) ? undefined : v), schema.optional());
+const list = <T extends z.ZodType>(item: T) => z.preprocess((v) => (isBlank(v) ? undefined : v), z.array(item).default([]));
+
 const level = z.enum(['beginner', 'intermediate', 'advanced']);
 /** draft = work in progress · review = waiting for your check · published = live */
 const status = z.enum(['draft', 'review', 'published']).default('draft');
@@ -40,21 +48,21 @@ const topics = defineCollection({
     level,
     /** Position inside its area (used for previous/next links). */
     order: z.number(),
-    prerequisites: z.array(reference('topics')).default([]),
-    related: z.array(reference('topics')).default([]),
-    video: reference('videos').optional(),
-    notes: reference('notes').optional(),
-    flashcards: reference('flashcards').optional(),
-    quiz: reference('quizzes').optional(),
-    resources: z.array(reference('resources')).default([]),
-    references: z.array(reference('references')).default([]),
+    prerequisites: list(reference('topics')),
+    related: list(reference('topics')),
+    video: blank(reference('videos')),
+    notes: blank(reference('notes')),
+    flashcards: blank(reference('flashcards')),
+    quiz: blank(reference('quizzes')),
+    resources: list(reference('resources')),
+    references: list(reference('references')),
     /** Optional curriculum tags for later (e.g. ['ap', 'ib']). Leave empty for general content. */
-    curricula: z.array(z.string()).default([]),
+    curricula: list(z.string()),
     status,
     /** true = drafted or converted with assistance; must be reviewed by you before publishing. */
     assisted: z.boolean().default(false),
-    lastReviewed: z.coerce.date().optional(),
-    updated: z.coerce.date().optional(),
+    lastReviewed: blank(z.coerce.date()),
+    updated: blank(z.coerce.date()),
   }),
 });
 
@@ -63,7 +71,7 @@ const flashcards = defineCollection({
   loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/flashcards' }),
   schema: z.object({
     title: z.string(),
-    description: z.string().optional(),
+    description: blank(z.string()),
     level,
     access,
     status,
@@ -75,7 +83,7 @@ const flashcards = defineCollection({
           id: z.string(),
           front: z.string(),
           back: z.string(),
-          tags: z.array(z.string()).default([]),
+          tags: list(z.string()),
         }),
       )
       .min(1),
@@ -87,7 +95,7 @@ const quizzes = defineCollection({
   loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/content/quizzes' }),
   schema: z.object({
     title: z.string(),
-    description: z.string().optional(),
+    description: blank(z.string()),
     level,
     access,
     status,
@@ -120,11 +128,11 @@ const videos = defineCollection({
     description: z.string(),
     provider: z.enum(['youtube']).default('youtube'),
     /** The ID from the YouTube link (youtube.com/watch?v=THIS_PART). Leave out until uploaded. */
-    videoId: z.string().optional(),
-    duration: z.string().optional(), // e.g. "PT6M30S" (6 min 30 s)
-    uploadDate: z.coerce.date().optional(),
-    keyPoints: z.array(z.string()).default([]),
-    level: level.optional(),
+    videoId: blank(z.string()),
+    duration: blank(z.string()), // e.g. "PT6M30S" (6 min 30 s)
+    uploadDate: blank(z.coerce.date()),
+    keyPoints: list(z.string()),
+    level: blank(level),
     status,
   }),
 });
@@ -138,10 +146,10 @@ const notes = defineCollection({
     level,
     access,
     /** Optional PDF in /public/downloads/ or a GitHub Releases link. */
-    pdf: z.string().optional(),
+    pdf: blank(z.string()),
     status,
     assisted: z.boolean().default(false),
-    lastReviewed: z.coerce.date().optional(),
+    lastReviewed: blank(z.coerce.date()),
   }),
 });
 
@@ -155,14 +163,14 @@ const resources = defineCollection({
     level,
     access,
     /** Free resources: path in /public/downloads/ or a GitHub Releases URL. Never put premium files here. */
-    file: z.string().optional(),
+    file: blank(z.string()),
     /** Optional separate answer key PDF (free resources only). */
-    answerKey: z.string().optional(),
+    answerKey: blank(z.string()),
     /** Small preview image in /public/previews/ */
-    preview: z.string().optional(),
-    pages: z.number().optional(),
+    preview: blank(z.string()),
+    pages: blank(z.number()),
     /** Premium resources point to a product instead of a file. */
-    product: reference('products').optional(),
+    product: blank(reference('products')),
     status,
   }),
 });
@@ -175,11 +183,11 @@ const printables = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/printables' }),
   schema: z.object({
     title: z.string(),
-    subtitle: z.string().optional(),
+    subtitle: blank(z.string()),
     kind: z.enum(['worksheet', 'answer-key']).default('worksheet'),
     level,
     /** Suggested time, e.g. "30 minutes". */
-    time: z.string().optional(),
+    time: blank(z.string()),
     /** Show Name / Class / Date lines at the top. */
     nameLines: z.boolean().default(true),
     status,
@@ -194,10 +202,10 @@ const products = defineCollection({
     title: z.string(),
     description: z.string(),
     /** Shown exactly as written, e.g. "US$9". Leave empty until decided. */
-    price: z.string().optional(),
+    price: blank(z.string()),
     /** External checkout link (added in the monetization stage). */
-    checkoutUrl: z.url().optional(),
-    includes: z.array(z.string()).default([]),
+    checkoutUrl: blank(z.url()),
+    includes: list(z.string()),
     /** true = clearly labelled example, not a real product. */
     placeholder: z.boolean().default(true),
     status,
@@ -209,7 +217,7 @@ const references = defineCollection({
   loader: file('src/content/references/references.yaml'),
   schema: z.object({
     citation: z.string(),
-    url: z.url().optional(),
+    url: blank(z.url()),
   }),
 });
 
@@ -221,7 +229,7 @@ const pages = defineCollection({
     description: z.string(),
     /** Pages that need professional/legal review before launch. */
     needsLegalReview: z.boolean().default(false),
-    updated: z.coerce.date().optional(),
+    updated: blank(z.coerce.date()),
   }),
 });
 

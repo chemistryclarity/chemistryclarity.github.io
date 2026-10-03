@@ -1,0 +1,315 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Content editor settings (Sveltia CMS). Open the editor at https://chemistryclarity.com/admin/
+# Each "collection" below is one type of content, and its "fields" are the boxes in the form.
+# Changes saved in the editor are committed to GitHub and published automatically (about 2–3 minutes).
+# The build still checks everything; if something is wrong, the live site is not changed.
+
+backend:
+  name: github
+  repo: chemistryclarity/chemistryclarity.github.io
+  branch: main
+
+site_url: https://chemistryclarity.com
+display_url: https://chemistryclarity.com
+logo_url: /favicon.svg
+
+# Images uploaded in the editor go here (and appear on the site as /images/…)
+media_folder: public/images
+public_folder: /images
+
+collections:
+  # ─────────────────────────────── LESSONS ───────────────────────────────
+  - name: topics
+    label: Lessons
+    label_singular: Lesson
+    description: One chemistry topic per lesson. Flashcards, quiz, video and downloads are linked below and added to the page automatically.
+    folder: src/content/topics
+    extension: mdx
+    format: yaml-frontmatter
+    create: true
+    slug:
+      template: '{{slug}}'
+      editable: [create]
+      pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Use lowercase letters, numbers and hyphens only, e.g. molar-mass']
+      hint: 'Becomes the web address: chemistryclarity.com/chemistry/THIS-NAME/. It cannot be changed later.'
+    preview_path: chemistry/{{slug}}/
+    summary: '{{title}} · {{status}}'
+    sortable_fields: [title, order, status]
+    editor: { preview: false }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: question, label: Main question, widget: string, hint: 'The question a student would type into Google, e.g. "What is a mole in chemistry?"' }
+      - { name: description, label: Short description, widget: text, hint: '1–2 sentences (about 120–160 characters). Shown in Google results and on topic cards.' }
+      - name: area
+        label: Subject area
+        widget: select
+        options:
+          - { label: Foundations, value: foundations }
+          - { label: Atomic Structure & Periodicity, value: atomic-structure }
+          - { label: Bonding & Molecular Structure, value: bonding }
+          - { label: Reactions & Stoichiometry, value: reactions-and-stoichiometry }
+          - { label: States of Matter & Gases, value: states-of-matter }
+          - { label: Solutions, value: solutions }
+          - { label: Acids & Bases, value: acids-and-bases }
+          - { label: Thermochemistry & Thermodynamics, value: thermochemistry }
+          - { label: Kinetics, value: kinetics }
+          - { label: Equilibrium, value: equilibrium }
+          - { label: Redox & Electrochemistry, value: redox-and-electrochemistry }
+          - { label: Nuclear Chemistry, value: nuclear }
+          - { label: Organic Chemistry, value: organic }
+          - { label: Analytical Chemistry, value: analytical }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced] }
+      - { name: order, label: Order within the subject area, widget: number, value_type: int, hint: 'Use 10, 20, 30… so you can insert lessons later (e.g. 15).' }
+      - { name: prerequisites, label: Learn these first, widget: relation, collection: topics, multiple: true, required: false, search_fields: [title, question] }
+      - { name: related, label: Related lessons, widget: relation, collection: topics, multiple: true, required: false, search_fields: [title, question] }
+      - { name: video, label: Video, widget: relation, collection: videos, required: false }
+      - { name: notes, label: Lecture notes, widget: relation, collection: notes, required: false }
+      - { name: flashcards, label: Flashcard deck, widget: relation, collection: flashcards, required: false }
+      - { name: quiz, label: Quiz, widget: relation, collection: quizzes, required: false }
+      - { name: resources, label: Printable resources, widget: relation, collection: resources, multiple: true, required: false }
+      - { name: references, label: References, widget: list, required: false, field: { name: id, label: Reference id, widget: string }, hint: 'Ids from Site settings → References, e.g. brown-central-science' }
+      - { name: curricula, label: Curriculum tags (optional), widget: list, required: false, hint: 'Leave empty for general content.' }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft, hint: 'Only "published" lessons are listed for search engines.' }
+      - { name: assisted, label: Drafted with assistance, widget: boolean, default: false, required: false }
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD', hint: 'Shown on the page. Update it whenever you check the lesson.' }
+      - { name: updated, label: Last updated, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - name: body
+        label: Lesson text
+        widget: markdown
+        modes: [raw]
+        hint: 'Write in Markdown. Boxes: <KeyIdea>…</KeyIdea>, <Example title="…">…</Example>, <CommonMistake>…</CommonMistake>, <RememberThis>…</RememberThis>, <Analogy>, <MorePrecisely>, <NotationNote>. Chemistry: $\ce{H2O}$. Leave a blank line before and after each box.'
+
+  # ─────────────────────────────── FLASHCARDS ───────────────────────────────
+  - name: flashcards
+    label: Flashcard decks
+    label_singular: Flashcard deck
+    folder: src/content/flashcards
+    extension: yaml
+    format: yaml
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'] }
+    preview_path: flashcards/{{slug}}/
+    summary: '{{title}} · {{status}}'
+    fields:
+      - { name: title, label: Deck title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced] }
+      - { name: access, label: Access, widget: select, options: [free, premium], default: free }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
+      - { name: assisted, label: Drafted with assistance, widget: boolean, default: false, required: false }
+      - name: cards
+        label: Cards
+        label_singular: Card
+        widget: list
+        collapsed: true
+        summary: '{{id}}: {{front}}'
+        fields:
+          - { name: id, label: Card id, widget: string, hint: 'Unique, e.g. mole-12. Never change it after publishing.' }
+          - { name: front, label: Front (question), widget: text, hint: 'Formulas: $\ce{CO2}$, maths: $\frac{m}{M}$, bold: **text**' }
+          - { name: back, label: Back (answer), widget: text }
+          - { name: tags, label: Tags, widget: list, required: false }
+
+  # ─────────────────────────────── QUIZZES ───────────────────────────────
+  - name: quizzes
+    label: Quizzes
+    label_singular: Quiz
+    folder: src/content/quizzes
+    extension: yaml
+    format: yaml
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'] }
+    preview_path: quizzes/{{slug}}/
+    summary: '{{title}} · {{status}}'
+    fields:
+      - { name: title, label: Quiz title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced] }
+      - { name: access, label: Access, widget: select, options: [free, premium], default: free }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
+      - { name: assisted, label: Drafted with assistance, widget: boolean, default: false, required: false }
+      - name: questions
+        label: Questions
+        label_singular: Question
+        widget: list
+        collapsed: true
+        summary: '{{id}}: {{prompt}}'
+        fields:
+          - { name: id, label: Question id, widget: string, hint: 'Unique, e.g. mole-q8' }
+          - { name: prompt, label: Question, widget: text }
+          - { name: choices, label: Choices (2–6), widget: list, min: 2, max: 6, field: { name: choice, label: Choice, widget: string } }
+          - { name: answer, label: Correct answer, widget: string, hint: 'Copy the correct choice EXACTLY (the build checks this).' }
+          - { name: explanation, label: Explanation, widget: text, hint: 'Why it is right, and why a tempting wrong answer is wrong.' }
+          - { name: difficulty, label: Difficulty, widget: select, options: [easy, medium, hard], default: medium }
+
+  # ─────────────────────────────── VIDEOS ───────────────────────────────
+  - name: videos
+    label: Videos
+    label_singular: Video
+    description: Videos are hosted on YouTube; paste the video ID here.
+    folder: src/content/videos
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'] }
+    preview_path: videos/{{slug}}/
+    editor: { preview: false }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: videoId, label: YouTube video ID, widget: string, required: false, hint: 'From youtube.com/watch?v=THIS-PART. Leave empty until uploaded.' }
+      - { name: duration, label: Duration, widget: string, required: false, hint: 'Format PT#M#S, e.g. PT6M30S = 6 min 30 s' }
+      - { name: uploadDate, label: Upload date, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - { name: keyPoints, label: Key points, widget: list, required: false }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced], required: false }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
+      - { name: body, label: Transcript, widget: markdown, modes: [raw], required: false }
+
+  # ─────────────────────────────── LECTURE NOTES ───────────────────────────────
+  - name: notes
+    label: Lecture notes
+    label_singular: Lecture notes
+    folder: src/content/notes
+    extension: mdx
+    format: yaml-frontmatter
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'] }
+    preview_path: notes/{{slug}}/
+    editor: { preview: false }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced] }
+      - { name: access, label: Access, widget: select, options: [free, premium], default: free }
+      - { name: pdf, label: PDF address, widget: string, required: false, hint: 'e.g. /downloads/molar-mass-notes.pdf. The PDF is created automatically when the site is published.' }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
+      - { name: assisted, label: Drafted with assistance, widget: boolean, default: false, required: false }
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - { name: body, label: Notes, widget: markdown, modes: [raw], hint: 'Same boxes and formulas as lessons.' }
+
+  # ─────────────────────────────── WORKSHEETS ───────────────────────────────
+  - name: printables
+    label: Worksheets & answer keys
+    label_singular: Worksheet
+    description: Written as text; turned into branded A4 PDFs automatically when the site is published.
+    folder: src/content/printables
+    extension: mdx
+    format: yaml-frontmatter
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only. Answer keys: same name + -answers'] }
+    preview_path: print/{{slug}}/
+    editor: { preview: false }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: subtitle, label: Subtitle, widget: string, required: false }
+      - { name: kind, label: Type, widget: select, options: [worksheet, answer-key], default: worksheet }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced] }
+      - { name: time, label: Suggested time, widget: string, required: false, hint: 'e.g. 30 minutes' }
+      - { name: nameLines, label: Show Name / Class / Date lines, widget: boolean, default: true, required: false }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
+      - { name: assisted, label: Drafted with assistance, widget: boolean, default: false, required: false }
+      - name: body
+        label: Questions
+        widget: markdown
+        modes: [raw]
+        hint: 'Question with lines: <Q n={1} lines={2}>…</Q>. With a working box: <Q n={2} box={4}>…</Q>. Answer keys: <Q n={1}>…</Q> then <Answer>…</Answer>. Data box: <DataBox items={["H = 1.008"]} />'
+
+  # ─────────────────────────────── RESOURCES ───────────────────────────────
+  - name: resources
+    label: Printable resources (listings)
+    label_singular: Resource
+    description: The download listing shown on the Resources page. Never upload premium (paid) files here.
+    folder: src/content/resources
+    extension: yaml
+    format: yaml
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'] }
+    preview_path: resources/{{slug}}/
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: type, label: Type, widget: select, options: [worksheet, cheat-sheet, formula-sheet, revision-sheet, practice-test, notes] }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced] }
+      - { name: access, label: Access, widget: select, options: [free, premium], default: free }
+      - { name: file, label: PDF (free resources only), widget: file, required: false, media_folder: /public/downloads, public_folder: /downloads, hint: 'Remove personal information from the PDF first.' }
+      - { name: answerKey, label: Answer key PDF (optional), widget: file, required: false, media_folder: /public/downloads, public_folder: /downloads }
+      - { name: pages, label: Number of pages, widget: number, value_type: int, required: false }
+      - { name: preview, label: Preview image, widget: image, required: false, media_folder: /public/previews, public_folder: /previews }
+      - { name: product, label: Premium product, widget: relation, collection: products, required: false, hint: 'Premium resources only, instead of a PDF.' }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
+
+  # ─────────────────────────────── PREMIUM PRODUCTS ───────────────────────────────
+  - name: products
+    label: Premium products
+    label_singular: Product
+    description: Shown on the site; sold and delivered by an external store (set up later).
+    folder: src/content/products
+    extension: yaml
+    format: yaml
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'] }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: price, label: Price as shown, widget: string, required: false, hint: 'e.g. US$9' }
+      - { name: checkoutUrl, label: Store checkout link, widget: string, required: false }
+      - { name: includes, label: Includes, widget: list, required: false }
+      - { name: placeholder, label: Example only (not for sale), widget: boolean, default: true, required: false }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
+
+  # ─────────────────────────────── SITE PAGES ───────────────────────────────
+  - name: pages
+    label: Site pages
+    label_singular: Page
+    description: About, Editorial Standards, Contact, Privacy, Terms, Disclaimer.
+    folder: src/content/pages
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: { template: '{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'] }
+    preview_path: '{{slug}}/'
+    editor: { preview: false }
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: needsLegalReview, label: Needs legal review, widget: boolean, default: false, required: false }
+      - { name: updated, label: Last updated, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - { name: body, label: Page text, widget: markdown, modes: [raw] }
+
+  # ─────────────────────────────── SITE SETTINGS ───────────────────────────────
+  - name: settings
+    label: Site settings
+    files:
+      - name: references
+        label: References (sources)
+        file: src/content/references/references.yaml
+        fields:
+          - name: items
+            label: References
+            label_singular: Reference
+            widget: list
+            root: true
+            collapsed: true
+            summary: '{{id}}'
+            fields:
+              - { name: id, label: Id, widget: string, hint: 'Short name used in lessons, e.g. atkins-physical-chemistry' }
+              - { name: citation, label: Citation, widget: text }
+              - { name: url, label: Link, widget: string, required: false }
+      - name: areas
+        label: Subject areas
+        file: src/content/areas/areas.yaml
+        fields:
+          - name: items
+            label: Subject areas
+            label_singular: Subject area
+            widget: list
+            root: true
+            collapsed: true
+            summary: '{{order}}. {{title}}'
+            fields:
+              - { name: id, label: Id (web address), widget: string, hint: 'Never change after launch. New areas must also be added to the Lessons → Subject area list in public/admin/config.yml.' }
+              - { name: title, label: Title, widget: string }
+              - { name: code, label: Tile code (3 letters), widget: string, hint: 'Avoid real element symbols' }
+              - { name: description, label: Description, widget: text }
+              - { name: order, label: Order, widget: number, value_type: int }
+              - { name: hue, label: Colour, widget: select, options: [teal, blue, indigo, violet, rose, amber, green, slate] }

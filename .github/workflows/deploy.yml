@@ -34,8 +34,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build the website
-        run: npm run build
+      # Builds the site, creates the worksheet/notes PDFs and preview images
+      # (using the Chrome browser that GitHub's build servers include), then builds and checks again.
+      - name: Build the website and PDFs
+        run: npm run pdfs
 
       - name: Package the website for Pages
         uses: actions/upload-pages-artifact@v3

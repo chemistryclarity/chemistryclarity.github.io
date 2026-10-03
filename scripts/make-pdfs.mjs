@@ -71,7 +71,9 @@ await new Promise((r) => server.listen(PORT, r));
 // A fresh, private browser profile and a free port (0) every run, so it never
 // connects to an old instance. The browser writes its chosen port to DevToolsActivePort.
 const profile = fs.mkdtempSync(path.join(process.env.TEMP ?? '/tmp', 'cc-pdf-'));
-spawn(browser, ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--remote-debugging-port=0', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
+// On GitHub's build servers (CI) the browser runs inside a container and needs --no-sandbox.
+const ciFlags = process.env.CI ? ['--no-sandbox'] : [];
+spawn(browser, ['--headless=new', '--disable-gpu', '--hide-scrollbars', ...ciFlags, '--remote-debugging-port=0', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const portFile = path.join(profile, 'DevToolsActivePort');
 let debugPort;
@@ -156,9 +158,14 @@ for (const job of jobs) {
     await sleep(300);
     const shot = await send('Page.captureScreenshot', { format: 'png', clip: { x: 0, y: 0, width: 794, height: 1123, scale: 1 } });
     await send('Emulation.clearDeviceMetricsOverride');
-    const { default: sharp } = await import('sharp');
     fs.mkdirSync(path.dirname(job.preview), { recursive: true });
-    await sharp(Buffer.from(shot.result.data, 'base64')).resize({ width: 600 }).png({ compressionLevel: 9 }).toFile(job.preview);
+    try {
+      const { default: sharp } = await import('sharp');
+      await sharp(Buffer.from(shot.result.data, 'base64')).resize({ width: 600 }).png({ compressionLevel: 9 }).toFile(job.preview);
+    } catch {
+      // Image library unavailable: keep the full-size screenshot instead of failing the publish.
+      fs.writeFileSync(job.preview, Buffer.from(shot.result.data, 'base64'));
+    }
     console.log(`  ✓ preview ${job.preview}`);
   }
 }
