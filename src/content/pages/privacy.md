@@ -2,7 +2,7 @@
 title: Privacy Policy
 description: How Chemistry Clarity handles visitor information and newsletter subscriptions.
 needsLegalReview: true
-updated: 2026-10-04
+updated: 2026-10-03
 ---
 
 <!-- LEGAL REVIEW NEEDED: This is a plain-language starting draft describing how the site currently works. Have it reviewed, especially the newsletter, statistics and age sections, and again before adding advertising or sales. -->
