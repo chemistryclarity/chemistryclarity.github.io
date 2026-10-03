@@ -46,6 +46,9 @@ npm run build
 If something is wrong (a missing field, a quiz answer that isn't one of the choices, a link to a topic
 that doesn't exist), the message names the file and the problem. Fix it and run the command again.
 
+After building, an automatic check also looks at every page and stops if a **formula can't be displayed**
+(for example a typo like `\cee{H2O}`) or an **internal link is broken**. It names the page and the problem.
+
 ### 5. Publish
 
 **Using VS Code (no typing):**

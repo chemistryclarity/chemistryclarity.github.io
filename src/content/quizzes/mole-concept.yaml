@@ -1,44 +1,90 @@
 # Quiz: The Mole Concept
-# PROTOTYPE PLACEHOLDER: replace the text in [brackets] with your own questions.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
 # `answer` must be copied EXACTLY from one of the choices, or the build will stop and tell you.
 # difficulty: easy | medium | hard
-# Formulas: put text that contains a formula in 'single quotes', e.g. prompt: 'What is $\ce{H2O}$?'
+# Formulas: put text that contains a formula in 'single quotes'.
 
-title: "The Mole Concept: Quiz"
-description: "[PLACEHOLDER] Short description of the quiz."
+title: 'The Mole Concept: Quiz'
+description: 'Seven questions on moles, molar mass and Avogadro''s number, with an explanation for every answer.'
 level: beginner
 access: free
-status: draft
+status: review
+assisted: true
 
 questions:
   - id: mole-q1
-    prompt: "[Question 1: your content]"
+    prompt: 'How many particles are in one mole of a substance?'
     choices:
-      - "[Choice A]"
-      - "[Choice B]"
-      - "[Choice C]"
-      - "[Choice D]"
-    answer: "[Choice B]"
-    explanation: "[Explain why this answer is correct, and why a common wrong answer is wrong.]"
+      - '$6.022 \times 10^{23}$'
+      - '$6.022 \times 10^{-23}$'
+      - '12'
+      - 'It depends on the substance'
+    answer: '$6.022 \times 10^{23}$'
+    explanation: 'A mole is a fixed counting number, like a dozen. One mole of *any* substance contains $6.022 \times 10^{23}$ particles. The mass of a mole depends on the substance, but the number of particles does not.'
     difficulty: easy
 
   - id: mole-q2
-    prompt: "[Question 2: your content]"
+    prompt: 'What is the molar mass of carbon dioxide, $\ce{CO2}$? (C = 12.01, O = 16.00)'
     choices:
-      - "[Choice A]"
-      - "[Choice B]"
-      - "[Choice C]"
-      - "[Choice D]"
-    answer: "[Choice A]"
-    explanation: "[Explanation]"
-    difficulty: medium
+      - '28.01 g/mol'
+      - '32.00 g/mol'
+      - '44.01 g/mol'
+      - '60.01 g/mol'
+    answer: '44.01 g/mol'
+    explanation: 'One carbon atom plus two oxygen atoms: $12.01 + 2(16.00) = 44.01$ g/mol. The answer 28.01 g/mol forgets the subscript 2 (it is the molar mass of CO).'
+    difficulty: easy
 
   - id: mole-q3
-    prompt: "[Question 3: your content]"
+    prompt: 'How many moles are in 9.00 g of water, $\ce{H2O}$? (M = 18.02 g/mol)'
     choices:
-      - "[Choice A]"
-      - "[Choice B]"
-      - "[Choice C]"
-    answer: "[Choice C]"
-    explanation: "[Explanation]"
+      - '0.499 mol'
+      - '2.00 mol'
+      - '9.00 mol'
+      - '162 mol'
+    answer: '0.499 mol'
+    explanation: '$n = \dfrac{m}{M} = \dfrac{9.00\ \text{g}}{18.02\ \text{g/mol}} = 0.499$ mol. The answer 162 mol comes from multiplying instead of dividing. Check the units: g ÷ (g/mol) gives mol.'
+    difficulty: medium
+
+  - id: mole-q4
+    prompt: 'What is the mass of 0.500 mol of sodium chloride, $\ce{NaCl}$? (M = 58.44 g/mol)'
+    choices:
+      - '0.00856 g'
+      - '29.2 g'
+      - '58.4 g'
+      - '117 g'
+    answer: '29.2 g'
+    explanation: '$m = n \times M = 0.500\ \text{mol} \times 58.44\ \text{g/mol} = 29.2$ g. The answer 117 g comes from dividing 58.44 by 0.500 instead of multiplying.'
+    difficulty: medium
+
+  - id: mole-q5
+    prompt: 'How many oxygen *atoms* are in 1.00 mol of oxygen gas, $\ce{O2}$?'
+    choices:
+      - '$3.011 \times 10^{23}$'
+      - '$6.022 \times 10^{23}$'
+      - '$1.204 \times 10^{24}$'
+      - '16.00'
+    answer: '$1.204 \times 10^{24}$'
+    explanation: '1.00 mol of $\ce{O2}$ contains $6.022 \times 10^{23}$ *molecules*. Each molecule has 2 oxygen atoms, so there are $2 \times 6.022 \times 10^{23} = 1.204 \times 10^{24}$ atoms.'
+    difficulty: medium
+
+  - id: mole-q6
+    prompt: 'Which sample contains more atoms: 1 mol of helium, $\ce{He}$, or 1 mol of hydrogen gas, $\ce{H2}$?'
+    choices:
+      - '1 mol of $\ce{He}$'
+      - '1 mol of $\ce{H2}$'
+      - 'They contain the same number of atoms'
+      - 'It cannot be decided without their masses'
+    answer: '1 mol of $\ce{H2}$'
+    explanation: 'Both samples contain the same number of *particles*, $6.022 \times 10^{23}$. Helium particles are single atoms, but each $\ce{H2}$ molecule contains two atoms. So 1 mol of $\ce{H2}$ contains twice as many atoms.'
+    difficulty: hard
+
+  - id: mole-q7
+    prompt: 'Since 2019, how is the mole defined?'
+    choices:
+      - 'By fixing the numerical value of the Avogadro constant exactly'
+      - 'As the number of atoms in exactly 12 g of carbon-12'
+      - 'As the volume occupied by a gas at standard conditions'
+      - 'As the mass of one hydrogen atom in grams'
+    answer: 'By fixing the numerical value of the Avogadro constant exactly'
+    explanation: 'In the 2019 revision of the SI, the Avogadro constant was fixed at exactly $6.022\,140\,76 \times 10^{23}$ mol⁻¹. The carbon-12 definition was used before 2019, and many textbooks still mention it.'
     difficulty: hard

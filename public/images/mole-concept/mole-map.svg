@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 470" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.5; }
+    .hub { fill: #e6f4f1; stroke: #0f766e; stroke-width: 2.5; }
+    .title { fill: #14213d; font-size: 17px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 12.5px; }
+    .hubtitle { fill: #0f766e; font-size: 18px; font-weight: 750; }
+    .arrow { stroke: #14213d; stroke-width: 2; fill: none; marker-end: url(#head); }
+    .op { fill: #14213d; font-size: 13.5px; font-weight: 650; }
+    .opsub { fill: #5b6577; font-size: 11.5px; }
+    .head { fill: #14213d; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .box { fill: #1b263d; stroke: #3a4763; }
+      .hub { fill: #123a3a; stroke: #2dd4bf; }
+      .title, .op { fill: #e9edf5; }
+      .sub, .opsub { fill: #9aa5ba; }
+      .hubtitle { fill: #2dd4bf; }
+      .arrow { stroke: #e9edf5; }
+      .head { fill: #e9edf5; }
+    }
+  </style>
+  <defs>
+    <marker id="head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="head" d="M0 0 10 5 0 10z"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="360" height="470" rx="14"/>
+
+  <!-- Mass -->
+  <rect class="box" x="70" y="20" width="220" height="70" rx="12"/>
+  <text class="title" x="180" y="50" text-anchor="middle">Mass</text>
+  <text class="sub" x="180" y="72" text-anchor="middle">grams (g), what you weigh</text>
+
+  <!-- Amount (hub) -->
+  <rect class="hub" x="70" y="200" width="220" height="70" rx="12"/>
+  <text class="hubtitle" x="180" y="230" text-anchor="middle">Amount</text>
+  <text class="sub" x="180" y="252" text-anchor="middle">moles (mol)</text>
+
+  <!-- Particles -->
+  <rect class="box" x="70" y="380" width="220" height="70" rx="12"/>
+  <text class="title" x="180" y="410" text-anchor="middle">Number of particles</text>
+  <text class="sub" x="180" y="432" text-anchor="middle">atoms, molecules, ions</text>
+
+  <!-- Mass ⇄ moles -->
+  <path class="arrow" d="M150 92 V196"/>
+  <path class="arrow" d="M210 196 V92"/>
+  <text class="op" x="142" y="140" text-anchor="end">÷ molar mass</text>
+  <text class="opsub" x="142" y="156" text-anchor="end">÷ M (g/mol)</text>
+  <text class="op" x="218" y="140">× molar mass</text>
+  <text class="opsub" x="218" y="156">× M (g/mol)</text>
+
+  <!-- Moles ⇄ particles -->
+  <path class="arrow" d="M150 272 V376"/>
+  <path class="arrow" d="M210 376 V272"/>
+  <text class="op" x="142" y="320" text-anchor="end">× Avogadro</text>
+  <text class="opsub" x="142" y="336" text-anchor="end">× 6.022 × 10²³</text>
+  <text class="op" x="218" y="320">÷ Avogadro</text>
+  <text class="opsub" x="218" y="336">÷ 6.022 × 10²³</text>
+</svg>

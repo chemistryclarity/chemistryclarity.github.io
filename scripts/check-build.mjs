@@ -1,0 +1,44 @@
+/**
+ * Runs after every build (locally and on GitHub). Stops the publish if it finds:
+ *  - a formula or chemical equation that could not be displayed (typo in $...$ or \ce{...})
+ *  - an internal link or image that points to a page or file that doesn't exist
+ * The message names the page, so you know where to look.
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root = 'dist';
+const walk = (dir) =>
+  fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]));
+
+const pageUrl = (file) => '/' + path.relative(root, file).replace(/\\/g, '/').replace(/index\.html$/, '');
+const problems = [];
+
+for (const file of walk(root).filter((f) => f.endsWith('.html'))) {
+  const html = fs.readFileSync(file, 'utf8');
+
+  // 1. Formula errors (KaTeX marks them in red, #cc0000, or with the katex-error class)
+  const formulaErrors = [...html.matchAll(/(?:color:#cc0000[^>]*>|class="katex-error"[^>]*>)([^<]*)/g)]
+    .map((m) => m[1].trim())
+    .filter(Boolean);
+  if (formulaErrors.length) {
+    problems.push(`${pageUrl(file)}: formula could not be displayed near "${formulaErrors.slice(0, 3).join('", "')}"`);
+  }
+
+  // 2. Broken internal links and images
+  for (const m of html.matchAll(/(?:href|src)="([^"#?]+)/g)) {
+    const link = m[1];
+    if (/^(https?:|mailto:|data:|\/\/)/.test(link)) continue;
+    const target = link.startsWith('/') ? path.join(root, link) : path.join(path.dirname(file), link);
+    const exists = fs.existsSync(target) && (fs.statSync(target).isFile() || fs.existsSync(path.join(target, 'index.html')));
+    if (!exists) problems.push(`${pageUrl(file)}: broken link to ${link}`);
+  }
+}
+
+if (problems.length) {
+  console.error(`\n✗ Build check found ${problems.length} problem(s):\n`);
+  for (const p of [...new Set(problems)]) console.error('  - ' + p);
+  console.error('\nFix these, then build again. The live site has not been changed.\n');
+  process.exit(1);
+}
+console.log('✓ Build check passed: all formulas displayed and all internal links work.');

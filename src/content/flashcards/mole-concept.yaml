@@ -1,28 +1,46 @@
 # Flashcards: The Mole Concept
-# PROTOTYPE PLACEHOLDER: replace the text in [brackets] with your own cards.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Built from the lesson text; values checked by computer.
 # Each card needs a unique id. Never change an id once the deck is published.
-# Formulas: write $\ce{H2O}$ for chemistry and $...$ for maths. Bold: **text**.
-# IMPORTANT: put text that contains a formula in 'single quotes' (double quotes break the backslash).
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
 
-title: "The Mole Concept: Flashcards"
-description: "[PLACEHOLDER] Short description of the deck."
+title: 'The Mole Concept: Flashcards'
+description: 'Revise the key definitions and conversions for moles, molar mass and Avogadro''s number.'
 level: beginner
 access: free
-status: draft
+status: review
+assisted: true
 
 cards:
   - id: mole-01
-    front: "[Question 1: your content]"
-    back: "[Answer 1: your content]"
+    front: 'What is a mole?'
+    back: 'A counting unit for particles. One mole contains $6.022 \times 10^{23}$ particles (atoms, molecules, ions or formula units).'
   - id: mole-02
-    front: "[Question 2: your content]"
-    back: "[Answer 2: your content]"
+    front: 'What is the value of the Avogadro constant, to four significant figures?'
+    back: '$N_\text{A} = 6.022 \times 10^{23}$ mol⁻¹'
   - id: mole-03
-    front: "[Question 3: your content]"
-    back: "[Answer 3: your content]"
+    front: 'What is molar mass?'
+    back: 'The mass of one mole of a substance, in g/mol. It has the same number as the atomic or formula mass in u.'
   - id: mole-04
-    front: "[Question 4: your content]"
-    back: "[Answer 4: your content]"
+    front: 'Which formula converts a mass in grams into moles?'
+    back: '$n = \dfrac{m}{M}$ (moles = mass ÷ molar mass)'
   - id: mole-05
-    front: "[Question 5: your content]"
-    back: "[Answer 5: your content]"
+    front: 'Which formula converts moles into a number of particles?'
+    back: '$N = n \times N_\text{A}$ (particles = moles × $6.022 \times 10^{23}$)'
+  - id: mole-06
+    front: 'What is the molar mass of water, $\ce{H2O}$? (H = 1.008, O = 16.00)'
+    back: '$2(1.008) + 16.00 = 18.02$ g/mol'
+  - id: mole-07
+    front: 'What is the mass of one mole of oxygen gas, $\ce{O2}$? (O = 16.00)'
+    back: '32.00 g. Each $\ce{O2}$ molecule contains two oxygen atoms, so $M = 2 \times 16.00$ g/mol.'
+  - id: mole-08
+    front: 'How many oxygen *atoms* are in 1 mol of $\ce{O2}$?'
+    back: '2 mol of O atoms, which is $1.204 \times 10^{24}$ atoms.'
+  - id: mole-09
+    front: 'Do 1 mol of carbon and 1 mol of gold contain the same number of atoms?'
+    back: 'Yes, both contain $6.022 \times 10^{23}$ atoms. Their masses differ (12.01 g and 196.97 g) because gold atoms are heavier.'
+  - id: mole-10
+    front: 'What is the name of the quantity measured in moles, and its symbol?'
+    back: 'Amount of substance, symbol $n$. Its unit is the mole (mol).'
+  - id: mole-11
+    front: 'How has the mole been defined since 2019?'
+    back: 'By fixing the Avogadro constant at exactly $6.022\,140\,76 \times 10^{23}$ mol⁻¹.'

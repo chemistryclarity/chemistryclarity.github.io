@@ -1,10 +1,10 @@
 ---
 title: The Mole Concept
 question: "What is a mole in chemistry?"
-description: "[PLACEHOLDER] One or two sentences describing what this lesson explains. Used in search results and topic cards."
+description: "What a mole is, why chemists count in moles, and how to convert between mass, moles and number of particles, with worked examples."
 area: reactions-and-stoichiometry
 level: beginner
-order: 1
+order: 10
 prerequisites: []
 related: []
 video: mole-concept-intro
@@ -12,68 +12,148 @@ notes: mole-concept
 flashcards: mole-concept
 quiz: mole-concept
 resources: [mole-concept-worksheet, stoichiometry-exam-pack-example]
-references: []
-status: draft
+references: [brown-central-science, bipm-si-brochure-9]
+status: review
+assisted: true
 ---
 
 {/*
-  PROTOTYPE PLACEHOLDER: replace every [YOUR CONTENT HERE] with your own text.
-  The boxes (<KeyIdea>, <Example>, …) are explained in docs/writing-lessons.md.
-  Flashcards, quiz, video and downloads are added automatically from the fields above.
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from the textbook.
+  Topic coverage follows the sequence used in Chemistry: The Central Science (formula weights → Avogadro's number
+  and the mole → stoichiometry). Atomic masses are the rounded values printed in that book's periodic table:
+  H 1.008, C 12.01, O 16.00, Na 22.99, Cl 35.45, Au 196.97.
+  All calculations were checked by computer.
+  REVIEW: add prerequisites/related once topics such as atomic-mass, molar-mass and stoichiometry exist.
+  When you are happy: set status: published and add lastReviewed: <date>.
 */}
 
 ## What is it?
 
-[YOUR CONTENT HERE: a simple, plain-language definition.]
+A **mole** is a counting unit for particles. One mole of anything contains **6.022 × 10²³** of those things. The particles can be atoms, molecules, ions or formula units.
+
+The number 6.022 × 10²³ is called **Avogadro's number**. The symbol for "one mole" is **mol**.
 
 <KeyIdea>
-[YOUR CONTENT HERE: the one idea students must take away, in one or two sentences.]
+A mole is a *number* of particles: 1 mol = 6.022 × 10²³ particles. Chemists use it because atoms are far too small and numerous to count one by one.
 </KeyIdea>
 
 ## Why does it matter?
 
-[YOUR CONTENT HERE: why chemists need this idea, with a real-world or exam connection.]
+Atoms and molecules are extremely small. A single drop of water (about 0.05 g) contains roughly 1.7 × 10²¹ water molecules. Nobody can count particles like that, but we *can* weigh substances on a balance.
+
+The mole is the bridge between the two worlds:
+
+- **The particle world**, where reactions happen one atom or molecule at a time.
+- **The laboratory world**, where we measure grams.
+
+Balanced chemical equations are written in particles, and therefore in moles. For example,
+
+$$
+\ce{2H2 + O2 -> 2H2O}
+$$
+
+means 2 molecules of hydrogen react with 1 molecule of oxygen. It equally means **2 mol of $\ce{H2}$ react with 1 mol of $\ce{O2}$** to form 2 mol of $\ce{H2O}$. The mole lets you turn that ratio into masses you can actually weigh out. This is the basis of all stoichiometry.
 
 ## How does it work?
 
-[YOUR CONTENT HERE: a clear, step-by-step explanation.]
+### 1. The mole is a counting number
+
+Just as "a dozen" always means 12, "a mole" always means 6.022 × 10²³. A mole of carbon atoms, a mole of water molecules and a mole of sodium ions all contain the same number of particles.
 
 <Analogy>
-[YOUR CONTENT HERE: an everyday comparison that makes the idea click.]
+A dozen eggs and a dozen watermelons contain the same *number* of items, but they have very different *masses*. In the same way, one mole of carbon atoms (12.01 g) and one mole of gold atoms (196.97 g) contain exactly the same number of atoms. Gold atoms are simply heavier.
 </Analogy>
 
+### 2. Molar mass links moles to grams
+
+The **molar mass** (symbol $M$) is the mass of one mole of a substance, in grams per mole (g/mol).
+
+Conveniently, the molar mass in g/mol has the **same number** as the atomic mass or formula mass in atomic mass units (u):
+
+| Substance | Mass of one particle | Molar mass |
+|---|---|---|
+| Carbon atom, $\ce{C}$ | 12.01 u | 12.01 g/mol |
+| Water molecule, $\ce{H2O}$ | 2(1.008) + 16.00 = 18.02 u | 18.02 g/mol |
+| Sodium chloride, $\ce{NaCl}$ | 22.99 + 35.45 = 58.44 u | 58.44 g/mol |
+
+To find a molar mass, add up the atomic masses of all the atoms in the formula, taking account of the subscripts.
+
+### 3. Two conversions do almost everything
+
+**Between mass and moles:**
+
+$$
+n = \frac{m}{M}
+$$
+
+where $n$ is the amount in moles, $m$ is the mass in grams, and $M$ is the molar mass in g/mol.
+
+**Between moles and number of particles:**
+
+$$
+N = n \times N_\text{A}
+$$
+
+where $N$ is the number of particles and $N_\text{A} = 6.022 \times 10^{23}\ \text{mol}^{-1}$ is the Avogadro constant.
+
 <MorePrecisely>
-[YOUR CONTENT HERE: optional. The more exact version of the simplified explanation above.]
+Since 20 May 2019, the mole has been defined by fixing the Avogadro constant at **exactly** 6.022 140 76 × 10²³ mol⁻¹. Before that, one mole was defined as the number of atoms in exactly 12 g of carbon-12. Under today's definition, one mole of carbon-12 has a mass extremely close to 12 g, but not exactly 12 g. For school and introductory university calculations, 6.022 × 10²³ is precise enough.
 </MorePrecisely>
 
 ## Visualise it
 
-<Figure placeholder="Diagram: [describe the diagram you will provide]" caption="[YOUR CAPTION HERE]" />
+<Figure src="/images/mole-concept/mole-map.svg" alt="Mole map: three boxes stacked vertically. Mass in grams at the top, amount in moles in the middle, and number of particles at the bottom. To go from mass to moles, divide by the molar mass; from moles to mass, multiply by the molar mass. To go from moles to particles, multiply by Avogadro's number, 6.022 times ten to the 23; from particles to moles, divide by it." caption="The mole map: moles sit in the middle. Every conversion goes through moles." width={360} height={470} />
 
 ## Worked example
 
-<Example title="[Example title]">
-**Question:** [YOUR CONTENT HERE]
+<Example title="From grams to moles to molecules">
+**Question:** How many moles of water, and how many water molecules, are in 36.0 g of water? (H = 1.008, O = 16.00)
 
-1. [First step]
-2. [Second step]
-3. [Third step]
+1. Find the molar mass of $\ce{H2O}$: $M = 2(1.008) + 16.00 = 18.02$ g/mol.
+2. Convert mass to moles: $n = \dfrac{36.0\ \text{g}}{18.02\ \text{g/mol}} = 2.00\ \text{mol}$
+3. Convert moles to molecules: $N = 2.00\ \text{mol} \times 6.022 \times 10^{23}\ \text{mol}^{-1} = 1.20 \times 10^{24}$ molecules.
 
-**Answer:** [YOUR CONTENT HERE]
+**Answer:** 36.0 g of water is **2.00 mol**, which is **1.20 × 10²⁴ molecules**.
+
+Check the units: g ÷ (g/mol) leaves mol, and mol × mol⁻¹ leaves a pure number of molecules.
+</Example>
+
+<Example title="From moles to grams">
+**Question:** What is the mass of 0.250 mol of sodium chloride, $\ce{NaCl}$? (Na = 22.99, Cl = 35.45)
+
+1. Find the molar mass: $M = 22.99 + 35.45 = 58.44$ g/mol.
+2. Rearrange $n = \dfrac{m}{M}$ to give $m = n \times M$.
+3. Substitute: $m = 0.250\ \text{mol} \times 58.44\ \text{g/mol} = 14.6\ \text{g}$
+
+**Answer:** 0.250 mol of sodium chloride has a mass of **14.6 g**.
 </Example>
 
 ## Common mistake
 
-<CommonMistake>
-[YOUR CONTENT HERE: what students often get wrong, and how to avoid it.]
+<CommonMistake title="Mixing up atoms and molecules">
+One mole of oxygen *gas*, $\ce{O2}$, contains 6.022 × 10²³ **molecules** but twice as many **atoms** (1.204 × 10²⁴), because each molecule has two oxygen atoms. Its molar mass is 2 × 16.00 = **32.00 g/mol**, not 16.00 g/mol.
+
+Always ask: *a mole of what?* Atoms, molecules or ions? Write the formula and count the atoms in it.
+</CommonMistake>
+
+<CommonMistake title="Multiplying when you should divide">
+Students often multiply mass by molar mass to get moles. Let the units guide you: to cancel grams, you must *divide* by g/mol. If your answer's units don't come out as mol, the setup is upside down.
 </CommonMistake>
 
 <NotationNote>
-[YOUR CONTENT HERE: optional. Use this where textbooks or exam systems use different symbols, units or conventions.]
+Textbooks use slightly different names and symbols for the same ideas:
+
+- **Amount of substance** ($n$) is the quantity measured in moles. "Number of moles" means the same thing.
+- **Atomic mass unit**: many textbooks write **amu**. The symbol accepted in the SI is **u** (also called the dalton, Da).
+- **Formula weight** and **molecular weight** are older textbook names for the mass of one formula unit or molecule in u. Many textbooks now say formula *mass* and molecular *mass* instead.
+- The **Avogadro constant**, $N_\text{A}$ = 6.022 × 10²³ mol⁻¹, has units. **Avogadro's number** is the same value written as a plain number.
 </NotationNote>
 
 ## Remember this
 
 <RememberThis>
-[YOUR CONTENT HERE: the key takeaway in one or two lines.]
+- 1 mol = 6.022 × 10²³ particles.
+- Molar mass (g/mol) has the same number as the atomic or formula mass (u).
+- moles = mass ÷ molar mass, and particles = moles × 6.022 × 10²³.
+- Always ask: a mole of *what*?
 </RememberThis>
