@@ -257,6 +257,38 @@ collections:
       - { name: placeholder, label: Example only (not for sale), widget: boolean, default: true, required: false }
       - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
 
+  # ─────────────────────────────── NEWS ───────────────────────────────
+  - name: news
+    label: News
+    label_singular: News item
+    description: Chemistry news, shown newest first at chemistryclarity.com/news/. Add links to the original article or press release.
+    folder: src/content/news
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: { template: '{{year}}-{{month}}-{{day}}-{{slug}}', editable: [create], pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Lowercase letters, numbers and hyphens only'], hint: 'Becomes the web address: chemistryclarity.com/news/THIS-NAME/' }
+    preview_path: news/{{slug}}/
+    summary: '{{date}} · {{title}} · {{status}}'
+    sortable_fields: [date, title, status]
+    editor: { preview: false }
+    fields:
+      - { name: title, label: Headline, widget: string }
+      - { name: date, label: Date, widget: datetime, default: '{{now}}', date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - { name: summary, label: Summary, widget: text, hint: '1–3 sentences shown in the news list (up to 400 characters).' }
+      - name: links
+        label: Links
+        label_singular: Link
+        widget: list
+        required: false
+        hint: 'Optional. e.g. the original article, journal paper or press release.'
+        fields:
+          - { name: label, label: Link text, widget: string, hint: 'e.g. Read the press release (IUPAC)' }
+          - { name: url, label: Address, widget: string, hint: 'Full address starting with https://' }
+      - { name: topics, label: Related lessons, widget: relation, collection: topics, multiple: true, required: false, search_fields: [title, question], hint: 'Optional. Lessons that explain the chemistry behind the story.' }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft, hint: 'Only "published" items appear on the News page.' }
+      - { name: updated, label: Last updated, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - { name: body, label: Full story (optional), widget: markdown, modes: [raw], required: false, hint: 'Optional longer text, shown on the item''s own page. Formulas work as in lessons: $\ce{CO2}$' }
+
   # ─────────────────────────────── SITE PAGES ───────────────────────────────
   - name: pages
     label: Site pages

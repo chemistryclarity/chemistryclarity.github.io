@@ -1,0 +1,68 @@
+---
+import { getEntries } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import { getNews, isDraft, isVisible } from '../../lib/content';
+import { url } from '../../lib/url';
+
+const news = await getNews();
+const items = await Promise.all(
+  news.map(async (n) => ({ n, topics: (await getEntries(n.data.topics)).filter(isVisible) })),
+);
+const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<BaseLayout
+  title="Chemistry News"
+  description="Chemistry in the news: discoveries, research and events, with links to the original sources and lessons that explain the science."
+  path="/news/"
+  noindex={news.every(isDraft)}
+>
+  <div class="container section section--tight">
+    <PageHeader
+      crumbs={[{ label: 'News' }]}
+      eyebrow="Chemistry in the news"
+      title="News"
+      lead="Discoveries, research and events in chemistry, with links to the original sources."
+    />
+    <ol class="list" role="list">
+      {items.map(({ n, topics }) => (
+        <li class="item">
+          <time class="date muted" datetime={n.data.date.toISOString().slice(0, 10)}>{fmtDate(n.data.date)}</time>
+          <h2><a href={url(`/news/${n.id}/`)}>{n.data.title}</a></h2>
+          <p class="summary">{n.data.summary}</p>
+          {n.data.links.length > 0 && (
+            <ul class="links" role="list">
+              {n.data.links.map((l) => (
+                <li><a href={l.url} rel="noopener">{l.label}<span aria-hidden="true"> ↗</span></a></li>
+              ))}
+            </ul>
+          )}
+          {topics.length > 0 && (
+            <p class="learn">
+              Learn the chemistry:{' '}
+              {topics.map((t, i) => (
+                <>{i > 0 && ', '}<a href={url(`/chemistry/${t.id}/`)}>{t.data.title}</a></>
+              ))}
+            </p>
+          )}
+          {isDraft(n) && <span class="badge badge--draft">Draft</span>}
+        </li>
+      ))}
+    </ol>
+    {news.length === 0 && <p class="muted">News is on the way.</p>}
+  </div>
+</BaseLayout>
+
+<style>
+  .list { list-style: none; padding: 0; display: grid; gap: var(--space-4); max-width: var(--measure); }
+  .item { padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .date { display: block; font-size: var(--step--1); }
+  .item h2 { font-size: var(--step-1); margin-top: var(--space-1); }
+  .item h2 a { color: var(--ink); }
+  .summary { margin-top: var(--space-2); }
+  .links { list-style: none; padding: 0; margin-top: var(--space-3); display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); font-size: var(--step--1); font-weight: 600; }
+  .links a { overflow-wrap: anywhere; }
+  .learn { margin-top: var(--space-3); font-size: var(--step--1); }
+  .badge { margin-top: var(--space-3); display: inline-block; }
+</style>

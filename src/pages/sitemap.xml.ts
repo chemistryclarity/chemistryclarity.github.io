@@ -15,6 +15,7 @@ export const GET: APIRoute = async () => {
   const topics = await getCollection('topics', published);
   const areas = (await getAreas()).filter((a) => topics.some((t) => t.data.area.id === a.id));
   const pages = await getCollection('pages');
+  const news = await getCollection('news', published);
 
   // Sections with their own pages: /<section>/ and /<section>/<id>/
   const sections = [
@@ -34,6 +35,9 @@ export const GET: APIRoute = async () => {
     ...sections.flatMap(({ base, items }) =>
       items.length ? [{ path: `/${base}/` }, ...items.map((i) => ({ path: `/${base}/${i.id}/` }))] : [],
     ),
+    ...(news.length
+      ? [{ path: '/news/' }, ...news.map((n) => ({ path: `/news/${n.id}/`, lastmod: n.data.updated ?? n.data.date }))]
+      : []),
     ...pages.map((p) => ({ path: `/${p.id}/`, lastmod: p.data.updated })),
   ];
 

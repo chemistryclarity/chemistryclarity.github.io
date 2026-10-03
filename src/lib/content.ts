@@ -2,7 +2,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import { site } from '../config/site';
 
 type WithStatus = { data: { status: 'draft' | 'review' | 'published' } };
-type StatusCollection = 'topics' | 'flashcards' | 'quizzes' | 'videos' | 'notes' | 'resources' | 'products';
+type StatusCollection = 'topics' | 'flashcards' | 'quizzes' | 'videos' | 'notes' | 'resources' | 'products' | 'news';
 
 /**
  * Should this entry be LISTED on the site (menus, cards, index pages, sitemap, links from other pages)?
@@ -29,6 +29,12 @@ export async function getVisible<C extends StatusCollection>(collection: C): Pro
   return entries
     .filter((e) => isVisible(e as unknown as WithStatus))
     .sort((a, b) => String((a.data as { title: string }).title).localeCompare((b.data as { title: string }).title));
+}
+
+/** Visible news items, newest first. */
+export async function getNews() {
+  const items = await getCollection('news', isVisible);
+  return items.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 }
 
 export async function getAreas() {

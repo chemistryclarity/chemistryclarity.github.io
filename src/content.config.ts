@@ -222,6 +222,24 @@ const references = defineCollection({
 });
 
 /** Simple pages (About, Editorial Standards, Privacy…): src/content/pages/<slug>.md */
+/** Chemistry news items, newest first on /news/: src/content/news/<slug>.md */
+const news = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/news' }),
+  schema: z.object({
+    title: z.string(),
+    /** The date shown on the item; the list is sorted by it, newest first. */
+    date: z.coerce.date(),
+    /** 1–3 sentences shown in the news list (and in Google results). */
+    summary: z.string().max(400),
+    /** Optional links, e.g. the original article or press release. */
+    links: list(z.object({ label: z.string(), url: z.url() })),
+    /** Optional lessons on this site that explain the chemistry behind the story. */
+    topics: list(reference('topics')),
+    status,
+    updated: blank(z.coerce.date()),
+  }),
+});
+
 const pages = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/pages' }),
   schema: z.object({
@@ -244,5 +262,6 @@ export const collections = {
   products,
   printables,
   references,
+  news,
   pages,
 };

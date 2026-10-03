@@ -4,6 +4,7 @@ export const mainNav = [
   { label: 'Flashcards', href: '/flashcards/' },
   { label: 'Quizzes', href: '/quizzes/' },
   { label: 'Resources', href: '/resources/' },
+  { label: 'News', href: '/news/' },
   { label: 'About', href: '/about/' },
 ];
 
@@ -23,6 +24,7 @@ export const footerNav = [
     heading: 'Chemistry Clarity',
     links: [
       { label: 'About', href: '/about/' },
+      { label: 'News', href: '/news/' },
       { label: 'Editorial standards', href: '/editorial-standards/' },
       { label: 'Contact', href: '/contact/' },
     ],
