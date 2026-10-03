@@ -1,0 +1,88 @@
+# Quiz: What Are Acids and Bases?
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+# `answer` must be copied EXACTLY from one of the choices.
+
+title: 'Acids and Bases: Quiz'
+description: 'Seven questions on acid–base definitions, conjugate pairs, strength and neutralization, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+
+questions:
+  - id: ab-q1
+    prompt: 'According to the Brønsted–Lowry definition, an acid is a substance that…'
+    choices:
+      - 'accepts a proton'
+      - 'donates a proton'
+      - 'accepts an electron pair'
+      - 'produces hydroxide ions'
+    answer: 'donates a proton'
+    explanation: 'A Brønsted–Lowry acid donates a proton ($\ce{H+}$) and a base accepts one. Accepting an electron pair is the Lewis definition of an acid; producing $\ce{OH-}$ describes an Arrhenius base.'
+    difficulty: easy
+
+  - id: ab-q2
+    prompt: 'In $\ce{HCl + H2O -> H3O+ + Cl-}$, which substance acts as the base?'
+    choices:
+      - '$\ce{HCl}$'
+      - '$\ce{H2O}$'
+      - '$\ce{H3O+}$'
+      - '$\ce{Cl-}$'
+    answer: '$\ce{H2O}$'
+    explanation: 'Water accepts the proton from $\ce{HCl}$ and becomes $\ce{H3O+}$, so water is the base here.'
+    difficulty: easy
+
+  - id: ab-q3
+    prompt: 'What is the conjugate acid of $\ce{NH3}$?'
+    choices:
+      - '$\ce{NH2-}$'
+      - '$\ce{NH4+}$'
+      - '$\ce{H3O+}$'
+      - '$\ce{OH-}$'
+    answer: '$\ce{NH4+}$'
+    explanation: 'A conjugate acid has one more $\ce{H+}$ than its base: $\ce{NH3}$ + $\ce{H+}$ → $\ce{NH4+}$. $\ce{NH2-}$ is the conjugate *base* of $\ce{NH3}$.'
+    difficulty: medium
+
+  - id: ab-q4
+    prompt: 'Which pair is a conjugate acid–base pair?'
+    choices:
+      - '$\ce{H3O+}$ and $\ce{OH-}$'
+      - '$\ce{HNO3}$ and $\ce{NO3-}$'
+      - '$\ce{HCl}$ and $\ce{NaOH}$'
+      - '$\ce{NH4+}$ and $\ce{NH2-}$'
+    answer: '$\ce{HNO3}$ and $\ce{NO3-}$'
+    explanation: 'A conjugate pair differs by exactly one $\ce{H+}$. $\ce{HNO3}$ and $\ce{NO3-}$ do. $\ce{H3O+}$/$\ce{OH-}$ and $\ce{NH4+}$/$\ce{NH2-}$ differ by two protons.'
+    difficulty: medium
+
+  - id: ab-q5
+    prompt: 'What does it mean to say that acetic acid is a weak acid?'
+    choices:
+      - 'Its solutions are always dilute'
+      - 'It ionizes only partly in water'
+      - 'It cannot react with bases'
+      - 'It contains no hydrogen'
+    answer: 'It ionizes only partly in water'
+    explanation: 'Weak refers to how much the acid ionizes, not how much is dissolved. Weak acids still react with bases; a concentrated solution of a weak acid is possible.'
+    difficulty: easy
+
+  - id: ab-q6
+    prompt: 'What are the products when nitric acid, $\ce{HNO3}$, is neutralized by potassium hydroxide, $\ce{KOH}$?'
+    choices:
+      - '$\ce{KNO3 + H2O}$'
+      - '$\ce{KH + HNO3}$'
+      - '$\ce{K + NO3 + H2O}$'
+      - '$\ce{KOH + H2}$'
+    answer: '$\ce{KNO3 + H2O}$'
+    explanation: 'Acid + base → salt + water. The salt combines $\ce{K+}$ from the base with $\ce{NO3-}$ from the acid: $\ce{HNO3 + KOH -> KNO3 + H2O}$.'
+    difficulty: easy
+
+  - id: ab-q7
+    prompt: 'In $\ce{NH3 + H2O <=> NH4+ + OH-}$, what role does water play?'
+    choices:
+      - 'Acid'
+      - 'Base'
+      - 'Salt'
+      - 'It takes no part in the reaction'
+    answer: 'Acid'
+    explanation: 'Water donates a proton to ammonia and becomes $\ce{OH-}$, so it acts as an acid. With HCl, water acts as a base, which is why water is called amphoteric.'
+    difficulty: hard

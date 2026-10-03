@@ -1,0 +1,145 @@
+---
+title: "Inside the Atom: Protons, Neutrons and Electrons"
+question: "What are protons, neutrons and electrons?"
+description: "The three particles that make up atoms, how atomic number and mass number work, how ions form, and what isotopes are, with worked examples."
+area: atomic-structure
+level: beginner
+order: 10
+prerequisites: []
+related: [mole-concept]
+flashcards: atomic-structure
+quiz: atomic-structure
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Coverage follows the atomic-structure introduction in general chemistry texts such as
+  Chemistry: The Central Science (subatomic particles, atomic number, mass number, isotopes, ions).
+  Particle masses are rounded from standard values (proton 1.007 u, neutron 1.009 u, electron 0.000549 u).
+  Average atomic mass from isotope abundances is left for a follow-up lesson.
+*/}
+
+## What is it?
+
+Every atom is built from three kinds of particle:
+
+| Particle | Charge | Mass (approx.) | Where it is |
+|---|---|---|---|
+| **Proton** ($\ce{p+}$) | +1 | 1 u | In the nucleus |
+| **Neutron** ($\ce{n}$) | 0 | 1 u | In the nucleus |
+| **Electron** ($\ce{e-}$) | −1 | about 1/1836 of a proton | Around the nucleus |
+
+The **nucleus** is a tiny, dense centre containing the protons and neutrons. The electrons occupy the much larger space around it.
+
+<KeyIdea>
+The number of **protons** decides which element an atom is. Every carbon atom has 6 protons; any atom with 6 protons is carbon.
+</KeyIdea>
+
+## Why does it matter?
+
+The arrangement of these particles explains almost everything in chemistry:
+
+- **Protons** give each element its identity and its place in the periodic table.
+- **Electrons** take part in chemical reactions and bonding, so they decide how an element behaves.
+- **Neutrons** help hold the nucleus together and explain why atoms of the same element can have different masses (isotopes), which matters in fields such as radiocarbon dating and medical imaging.
+
+## How does it work?
+
+### 1. Atomic number and mass number
+
+- **Atomic number ($Z$)** = number of protons.
+- **Mass number ($A$)** = number of protons + number of neutrons.
+- So the number of neutrons = $A - Z$.
+
+These are written as a **nuclide symbol**, with the mass number at the top left and the atomic number at the bottom left:
+
+$$
+\ce{^{23}_{11}Na}
+$$
+
+Sodium-23 has 11 protons and 23 − 11 = 12 neutrons.
+
+### 2. Neutral atoms and ions
+
+In a **neutral atom**, the number of electrons equals the number of protons, so the charges cancel.
+
+An **ion** forms when an atom gains or loses **electrons** (never protons):
+
+- Losing electrons gives a **positive** ion (cation): $\ce{Na+}$ has 11 protons and 10 electrons.
+- Gaining electrons gives a **negative** ion (anion): $\ce{Cl-}$ has 17 protons and 18 electrons.
+
+### 3. Isotopes
+
+**Isotopes** are atoms of the same element (same number of protons) with **different numbers of neutrons**, and therefore different mass numbers:
+
+| Isotope | Protons | Neutrons |
+|---|---|---|
+| Carbon-12 | 6 | 6 |
+| Carbon-13 | 6 | 7 |
+| Carbon-14 | 6 | 8 |
+
+Isotopes of an element have essentially the same chemical properties, because they have the same number of electrons.
+
+<Analogy>
+If an atom were the size of a large sports stadium, its nucleus would be about the size of a small marble at the centre, yet it would hold almost all of the stadium's mass. The rest of the "stadium" is the space where the electrons are found.
+</Analogy>
+
+<MorePrecisely>
+A proton (1.007 u) and a neutron (1.009 u) are not exactly 1 u, and the electron's mass is about 0.000549 u. Electrons don't travel in neat circular orbits like planets. Quantum mechanics describes them by **orbitals**, regions where an electron is likely to be found. Protons and neutrons are themselves made of smaller particles called quarks, which is beyond what chemistry needs here.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/atomic-structure/carbon-atom.svg" alt="Diagram of a carbon-12 atom, not to scale. A small central nucleus contains 6 protons, marked plus, and 6 neutrons, with no charge. Six electrons, marked minus, are shown in a shaded cloud around the nucleus, where electrons are likely to be found. The real nucleus is tens of thousands of times smaller than the atom." caption="A carbon-12 atom (not to scale)." width={360} height={424} />
+
+## Worked example
+
+<Example title="Counting particles in an ion">
+**Question:** How many protons, neutrons and electrons are in the ion $\ce{^{56}_{26}Fe^{3+}}$?
+
+1. Protons = atomic number = **26**
+2. Neutrons = $A - Z$ = 56 − 26 = **30**
+3. A charge of 3+ means 3 electrons have been lost: 26 − 3 = **23** electrons
+</Example>
+
+<Example title="Writing the symbol from particle counts">
+**Question:** A particle has 17 protons, 20 neutrons and 18 electrons. Write its symbol.
+
+1. 17 protons means the element is chlorine (Z = 17).
+2. Mass number = 17 + 20 = 37.
+3. 18 electrons is one more than 17 protons, so the charge is 1−.
+
+**Answer:** $\ce{^{37}_{17}Cl-}$, a chloride ion of chlorine-37.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Changing protons to make an ion">
+Ions form by gaining or losing **electrons**. If the number of protons changed, it would be a different element.
+</CommonMistake>
+
+<CommonMistake title="Finding neutrons from electrons">
+Neutrons = mass number − **protons** (atomic number), not mass number − electrons. For ions the two give different answers.
+</CommonMistake>
+
+<CommonMistake title="Confusing mass number with atomic mass">
+The **mass number** is a whole-number count of protons and neutrons in one particular isotope (chlorine-35 has A = 35). The **atomic mass** on the periodic table (Cl = 35.45) is an *average* over the element's naturally occurring isotopes, so it is usually not a whole number.
+</CommonMistake>
+
+<NotationNote>
+- An isotope can be written in several ways: $\ce{^{14}_{6}C}$, $\ce{^{14}C}$, carbon-14, or C-14. The atomic number is often left out because the symbol already tells you the element.
+- The particles inside the nucleus (protons and neutrons) are together called **nucleons**.
+- "u" (unified atomic mass unit) is also written amu or Da (dalton).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Protons (+) and neutrons (0) are in the nucleus; electrons (−) are around it.
+- Atomic number Z = protons; mass number A = protons + neutrons.
+- Ions: change the number of **electrons**, never protons.
+- Isotopes: same element, different numbers of neutrons.
+</RememberThis>

@@ -1,0 +1,45 @@
+# Flashcards: What Are Acids and Bases?
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'Acids and Bases: Flashcards'
+description: 'Revise acid and base definitions, conjugate pairs, strong vs weak and neutralization.'
+level: beginner
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: ab-01
+    front: 'What is a Brønsted–Lowry acid?'
+    back: 'A proton ($\ce{H+}$) **donor**.'
+  - id: ab-02
+    front: 'What is a Brønsted–Lowry base?'
+    back: 'A proton ($\ce{H+}$) **acceptor**.'
+  - id: ab-03
+    front: 'What is an Arrhenius acid?'
+    back: 'A substance that produces $\ce{H+}$ (more precisely $\ce{H3O+}$) ions when dissolved in water.'
+  - id: ab-04
+    front: 'What is the hydronium ion?'
+    back: '$\ce{H3O+}$: a proton attached to a water molecule.'
+  - id: ab-05
+    front: 'What is the conjugate base of $\ce{HCl}$?'
+    back: '$\ce{Cl-}$ (HCl minus one H⁺)'
+  - id: ab-06
+    front: 'What is the conjugate acid of $\ce{NH3}$?'
+    back: '$\ce{NH4+}$ (NH₃ plus one H⁺)'
+  - id: ab-07
+    front: 'What is the difference between a strong acid and a weak acid?'
+    back: 'A strong acid ionizes **completely** in water; a weak acid ionizes only **partly**.'
+  - id: ab-08
+    front: 'Is "strong" the same as "concentrated"?'
+    back: 'No. Strong = how completely it ionizes. Concentrated = how much is dissolved per volume.'
+  - id: ab-09
+    front: 'Why is ammonia a base even though it has no $\ce{OH-}$?'
+    back: 'It **accepts a proton**: $\ce{NH3 + H2O <=> NH4+ + OH-}$'
+  - id: ab-10
+    front: 'What are the products of a neutralization reaction?'
+    back: 'A salt and water, e.g. $\ce{HCl + NaOH -> NaCl + H2O}$'
+  - id: ab-11
+    front: 'What does "amphoteric" mean?'
+    back: 'Able to act as an acid or as a base. Water is amphoteric.'

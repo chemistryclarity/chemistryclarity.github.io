@@ -1,0 +1,42 @@
+# Flashcards: Molarity and Solution Stoichiometry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'Molarity: Flashcards'
+description: 'Revise molarity, making and diluting solutions, and solution stoichiometry.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: mo-01
+    front: 'What is molarity?'
+    back: 'Moles of solute per litre of **solution** (unit mol/L, written M).'
+  - id: mo-02
+    front: 'How do you find moles from molarity and volume?'
+    back: 'moles = molarity × volume (in litres)'
+  - id: mo-03
+    front: 'What does 0.250 M mean?'
+    back: '0.250 mol of solute in every litre of solution.'
+  - id: mo-04
+    front: 'What is the dilution equation?'
+    back: '$M_1 V_1 = M_2 V_2$, because the moles of solute stay the same.'
+  - id: mo-05
+    front: 'How many moles of solute are in 250.0 mL of 0.400 M solution?'
+    back: '$0.400 \times 0.2500 = 0.100$ mol'
+  - id: mo-06
+    front: '10.0 mL of 12.0 M HCl is diluted to 250.0 mL. What is the new concentration?'
+    back: '$\dfrac{12.0 \times 10.0}{250.0} = 0.480$ M'
+  - id: mo-07
+    front: 'Why must you convert mL to L in molarity calculations?'
+    back: 'Molarity is per **litre**. Using mL makes the answer 1000 times wrong.'
+  - id: mo-08
+    front: 'What is the difference between the solute and the solvent?'
+    back: 'The solute is the substance dissolved; the solvent is what it dissolves in (often water).'
+  - id: mo-09
+    front: 'What is a titration?'
+    back: 'A method that measures the exact volume of one solution needed to react with another, used to find an unknown concentration.'
+  - id: mo-10
+    front: 'What does the symbol [NaCl] mean?'
+    back: 'The concentration of NaCl, in mol/L.'

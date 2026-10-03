@@ -1,0 +1,89 @@
+# Quiz: Molarity and Solution Stoichiometry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+# `answer` must be copied EXACTLY from one of the choices.
+# Atomic masses used: H 1.008, O 16.00, Na 22.99, S 32.06, Cl 35.45, K 39.10
+
+title: 'Molarity: Quiz'
+description: 'Seven questions on molarity, dilution and solution stoichiometry, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+questions:
+  - id: mo-q1
+    prompt: 'How many moles of solute are in 250.0 mL of a 0.400 M solution?'
+    choices:
+      - '0.100 mol'
+      - '1.60 mol'
+      - '100. mol'
+      - '0.00160 mol'
+    answer: '0.100 mol'
+    explanation: 'moles = molarity × volume = 0.400 mol/L × 0.2500 L = 0.100 mol. The answer 100. mol forgets to convert mL to L.'
+    difficulty: easy
+
+  - id: mo-q2
+    prompt: '7.46 g of potassium chloride, KCl, is dissolved to make 500.0 mL of solution. What is the molarity? (K = 39.10, Cl = 35.45)'
+    choices:
+      - '0.100 M'
+      - '0.200 M'
+      - '0.0149 M'
+      - '14.9 M'
+    answer: '0.200 M'
+    explanation: 'Moles = 7.46 ÷ 74.55 = 0.1001 mol. Molarity = 0.1001 ÷ 0.5000 L = 0.200 M.'
+    difficulty: medium
+
+  - id: mo-q3
+    prompt: '10.0 mL of 12.0 M HCl is diluted to a final volume of 250.0 mL. What is the new concentration?'
+    choices:
+      - '0.480 M'
+      - '0.300 M'
+      - '2.08 M'
+      - '12.0 M'
+    answer: '0.480 M'
+    explanation: '$M_2 = \dfrac{M_1V_1}{V_2} = \dfrac{12.0 \times 10.0}{250.0} = 0.480$ M. Dilution keeps the moles the same but spreads them through a larger volume.'
+    difficulty: medium
+
+  - id: mo-q4
+    prompt: 'When a solution is diluted with water, which quantity stays the same?'
+    choices:
+      - 'The molarity'
+      - 'The volume'
+      - 'The moles of solute'
+      - 'The mass of the solution'
+    answer: 'The moles of solute'
+    explanation: 'Adding water changes the volume and lowers the molarity, but no solute is added or removed, so the moles of solute are unchanged. That is why $M_1V_1 = M_2V_2$.'
+    difficulty: easy
+
+  - id: mo-q5
+    prompt: 'What volume of 0.125 M NaOH neutralizes 20.00 mL of 0.250 M HCl?'
+    choices:
+      - '10.0 mL'
+      - '20.0 mL'
+      - '40.0 mL'
+      - '80.0 mL'
+    answer: '40.0 mL'
+    explanation: 'Moles of HCl = 0.250 × 0.02000 = 0.005000 mol. The ratio is 1 : 1, so NaOH needed = 0.005000 mol, and volume = 0.005000 ÷ 0.125 = 0.0400 L = 40.0 mL. The answer 10.0 mL puts the concentrations the wrong way round.'
+    difficulty: medium
+
+  - id: mo-q6
+    prompt: 'What volume of 0.200 M NaOH neutralizes 20.00 mL of 0.100 M $\ce{H2SO4}$? $\ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}$'
+    choices:
+      - '5.00 mL'
+      - '10.0 mL'
+      - '20.0 mL'
+      - '40.0 mL'
+    answer: '20.0 mL'
+    explanation: 'Moles of $\ce{H2SO4}$ = 0.100 × 0.02000 = 0.00200 mol. The ratio is 2 : 1, so NaOH needed = 0.00400 mol, and volume = 0.00400 ÷ 0.200 = 0.0200 L = 20.0 mL. The answer 10.0 mL ignores the 2 : 1 ratio.'
+    difficulty: hard
+
+  - id: mo-q7
+    prompt: 'A student dissolves 0.100 mol of a solid in 250.0 mL of water. Why might the molarity not be exactly 0.400 M?'
+    choices:
+      - 'Molarity uses the volume of solution, not of water added'
+      - 'The moles of solute change when it dissolves'
+      - 'Molarity must be calculated in millilitres'
+      - 'Solids cannot be used to make solutions'
+    answer: 'Molarity uses the volume of solution, not of water added'
+    explanation: 'Dissolving a solid changes the total volume slightly. To make exactly 0.400 M, dissolve the solid and then add water up to a final volume of 250.0 mL.'
+    difficulty: hard

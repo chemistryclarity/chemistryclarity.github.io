@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 424" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .p { fill: #be123c; stroke: #14213d; stroke-width: 1.2; }
+    .n { fill: #94a3b8; stroke: #14213d; stroke-width: 1.2; }
+    .e { fill: #1d4ed8; }
+    .sign { fill: #ffffff; font-size: 10px; font-weight: 800; }
+    .esign { fill: #ffffff; font-size: 9px; font-weight: 800; }
+    .t { fill: #14213d; font-size: 15px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11.5px; }
+    .lbl { fill: #14213d; font-size: 12px; font-weight: 650; }
+    .lead { stroke: #5b6577; stroke-width: 1; fill: none; }
+    .warn { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .p { fill: #e04a6a; stroke: #e9edf5; }
+      .n { fill: #64748b; stroke: #e9edf5; }
+      .e { fill: #93b4ff; }
+      .esign { fill: #0e1524; }
+      .t, .lbl { fill: #e9edf5; }
+      .sub { fill: #9aa5ba; }
+      .lead { stroke: #9aa5ba; }
+      .warn { fill: #fbbf24; }
+    }
+  </style>
+  <defs>
+    <radialGradient id="cloud" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.22"/>
+      <stop offset="70%" stop-color="#1d4ed8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect class="bg" width="360" height="424" rx="14"/>
+  <text class="t" x="20" y="32">A carbon-12 atom</text>
+  <text class="sub" x="20" y="50">6 protons, 6 neutrons, 6 electrons</text>
+
+  <!-- electron cloud -->
+  <circle cx="180" cy="200" r="125" fill="url(#cloud)"/>
+  <!-- electrons -->
+  <g>
+    <circle class="e" cx="180" cy="92" r="8"/><text class="esign" x="180" y="95.5" text-anchor="middle">−</text>
+    <circle class="e" cx="268" cy="150" r="8"/><text class="esign" x="268" y="153.5" text-anchor="middle">−</text>
+    <circle class="e" cx="262" cy="262" r="8"/><text class="esign" x="262" y="265.5" text-anchor="middle">−</text>
+    <circle class="e" cx="170" cy="306" r="8"/><text class="esign" x="170" y="309.5" text-anchor="middle">−</text>
+    <circle class="e" cx="88" cy="248" r="8"/><text class="esign" x="88" y="251.5" text-anchor="middle">−</text>
+    <circle class="e" cx="96" cy="136" r="8"/><text class="esign" x="96" y="139.5" text-anchor="middle">−</text>
+  </g>
+  <!-- nucleus: 6 p (+), 6 n -->
+  <g>
+    <circle class="n" cx="172" cy="190" r="9"/>
+    <circle class="p" cx="189" cy="190" r="9"/><text class="sign" x="189" y="193.5" text-anchor="middle">+</text>
+    <circle class="p" cx="163" cy="205" r="9"/><text class="sign" x="163" y="208.5" text-anchor="middle">+</text>
+    <circle class="n" cx="180" cy="205" r="9"/>
+    <circle class="p" cx="197" cy="205" r="9"/><text class="sign" x="197" y="208.5" text-anchor="middle">+</text>
+    <circle class="n" cx="172" cy="220" r="9"/>
+    <circle class="p" cx="189" cy="220" r="9"/><text class="sign" x="189" y="223.5" text-anchor="middle">+</text>
+    <circle class="n" cx="180" cy="178" r="9"/>
+    <circle class="p" cx="180" cy="232" r="9"/><text class="sign" x="180" y="235.5" text-anchor="middle">+</text>
+    <circle class="n" cx="161" cy="183" r="9"/>
+    <circle class="p" cx="199" cy="180" r="9"/><text class="sign" x="199" y="183.5" text-anchor="middle">+</text>
+    <circle class="n" cx="157" cy="223" r="9"/>
+  </g>
+  <!-- labels -->
+  <path class="lead" d="M206 214 L250 316"/>
+  <text class="lbl" x="196" y="332">Nucleus: protons (+)</text>
+  <text class="lbl" x="196" y="348">and neutrons (no charge)</text>
+  <path class="lead" d="M96 128 L60 80"/>
+  <text class="lbl" x="22" y="74">Electrons (−)</text>
+  <text class="sub" x="22" y="372">Shading shows where electrons are likely to be.</text>
+  <text class="warn" x="22" y="392">Not to scale: the real nucleus is tens of</text>
+  <text class="warn" x="22" y="408">thousands of times smaller than the atom.</text>
+</svg>

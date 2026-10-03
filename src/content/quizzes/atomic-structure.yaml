@@ -1,0 +1,88 @@
+# Quiz: Inside the Atom
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+# `answer` must be copied EXACTLY from one of the choices.
+
+title: 'Inside the Atom: Quiz'
+description: 'Seven questions on subatomic particles, atomic and mass numbers, ions and isotopes, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+
+questions:
+  - id: at-q1
+    prompt: 'Which particle has no electric charge?'
+    choices:
+      - 'Proton'
+      - 'Neutron'
+      - 'Electron'
+      - 'Nucleus'
+    answer: 'Neutron'
+    explanation: 'Neutrons are neutral (charge 0). Protons are +1 and electrons are −1. The nucleus has an overall positive charge because it contains protons.'
+    difficulty: easy
+
+  - id: at-q2
+    prompt: 'The atomic number of an element is the number of…'
+    choices:
+      - 'neutrons in the nucleus'
+      - 'protons in the nucleus'
+      - 'protons plus neutrons'
+      - 'electrons in an ion'
+    answer: 'protons in the nucleus'
+    explanation: 'The atomic number (Z) counts protons and identifies the element. Protons plus neutrons is the mass number.'
+    difficulty: easy
+
+  - id: at-q3
+    prompt: 'How many neutrons are in an atom of $\ce{^{23}_{11}Na}$?'
+    choices:
+      - '11'
+      - '12'
+      - '23'
+      - '34'
+    answer: '12'
+    explanation: 'Neutrons = A − Z = 23 − 11 = 12. The answer 34 adds instead of subtracting.'
+    difficulty: easy
+
+  - id: at-q4
+    prompt: 'How many electrons are in a calcium ion, $\ce{Ca^{2+}}$? (Ca: Z = 20)'
+    choices:
+      - '18'
+      - '20'
+      - '22'
+      - '40'
+    answer: '18'
+    explanation: 'A 2+ charge means two electrons have been lost: 20 − 2 = 18. The answer 22 adds the electrons instead.'
+    difficulty: medium
+
+  - id: at-q5
+    prompt: 'Carbon-12 and carbon-14 are isotopes. How do their atoms differ?'
+    choices:
+      - 'Number of protons'
+      - 'Number of electrons'
+      - 'Number of neutrons'
+      - 'Charge of the nucleus'
+    answer: 'Number of neutrons'
+    explanation: 'Both have 6 protons (so both are carbon) and, as neutral atoms, 6 electrons. Carbon-12 has 6 neutrons and carbon-14 has 8.'
+    difficulty: easy
+
+  - id: at-q6
+    prompt: 'A particle has 17 protons, 20 neutrons and 18 electrons. Which symbol represents it?'
+    choices:
+      - '$\ce{^{37}_{17}Cl-}$'
+      - '$\ce{^{37}_{17}Cl+}$'
+      - '$\ce{^{20}_{17}Cl-}$'
+      - '$\ce{^{37}_{20}Ca-}$'
+    answer: '$\ce{^{37}_{17}Cl-}$'
+    explanation: '17 protons makes it chlorine; mass number = 17 + 20 = 37; 18 electrons is one more than the protons, so the charge is 1−.'
+    difficulty: medium
+
+  - id: at-q7
+    prompt: 'Uranium-235 and uranium-238 both have 92 protons. How many neutrons does uranium-238 have?'
+    choices:
+      - '92'
+      - '143'
+      - '146'
+      - '238'
+    answer: '146'
+    explanation: 'Neutrons = 238 − 92 = 146. Uranium-235 has 235 − 92 = 143 neutrons.'
+    difficulty: medium

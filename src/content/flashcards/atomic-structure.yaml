@@ -1,0 +1,45 @@
+# Flashcards: Inside the Atom
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'Inside the Atom: Flashcards'
+description: 'Revise subatomic particles, atomic and mass numbers, ions and isotopes.'
+level: beginner
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: at-01
+    front: 'What are the charges of the proton, neutron and electron?'
+    back: 'Proton +1, neutron 0, electron −1.'
+  - id: at-02
+    front: 'Where are protons, neutrons and electrons found?'
+    back: 'Protons and neutrons in the nucleus; electrons around the nucleus.'
+  - id: at-03
+    front: 'What is the atomic number, Z?'
+    back: 'The number of protons in the nucleus. It identifies the element.'
+  - id: at-04
+    front: 'What is the mass number, A?'
+    back: 'The number of protons + neutrons in the nucleus.'
+  - id: at-05
+    front: 'How do you find the number of neutrons?'
+    back: 'Neutrons = mass number − atomic number ($A - Z$).'
+  - id: at-06
+    front: 'How many neutrons are in sodium-23 (Z = 11)?'
+    back: '23 − 11 = 12 neutrons'
+  - id: at-07
+    front: 'How does an atom become a positive ion?'
+    back: 'By **losing electrons**. The number of protons does not change.'
+  - id: at-08
+    front: 'How many electrons are in $\ce{Ca^{2+}}$ (Z = 20)?'
+    back: '20 − 2 = 18 electrons'
+  - id: at-09
+    front: 'What are isotopes?'
+    back: 'Atoms of the same element (same number of protons) with different numbers of neutrons.'
+  - id: at-10
+    front: 'Where is almost all of an atom''s mass?'
+    back: 'In the nucleus. Electrons have very little mass (about 1/1836 of a proton).'
+  - id: at-11
+    front: 'Why is the atomic mass of chlorine (35.45) not a whole number?'
+    back: 'It is an average over chlorine''s naturally occurring isotopes (chlorine-35 and chlorine-37).'
