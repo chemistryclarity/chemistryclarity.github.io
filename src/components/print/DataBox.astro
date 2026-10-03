@@ -1,0 +1,25 @@
+---
+/**
+ * Data box for worksheets, e.g. atomic masses and constants.
+ *   <DataBox title="Data" items={['H = 1.008', 'C = 12.01']} note="…" />
+ */
+export interface Props {
+  title?: string;
+  items: string[];
+  note?: string;
+}
+const { title = 'Data', items, note } = Astro.props;
+---
+
+<aside class="data">
+  <p class="data__title">{title}</p>
+  <ul>{items.map((i) => <li>{i}</li>)}</ul>
+  {note && <p class="data__note">{note}</p>}
+</aside>
+
+<style>
+  .data { border: 1.5px solid #14213d; border-radius: 6px; padding: 0.6em 0.9em; margin-block: 1em; break-inside: avoid; }
+  .data__title { font-weight: 700; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3em; }
+  ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25em 1.4em; }
+  .data__note { font-size: 0.88em; margin-top: 0.4em; }
+</style>

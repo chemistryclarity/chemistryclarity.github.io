@@ -20,7 +20,9 @@ const { data } = resource;
 const topics = await getTopicsUsing('resources', resource.id);
 const product = data.product ? await getEntry(data.product) : undefined;
 const showProduct = product && isVisible(product);
-const fileHref = data.file ? (data.file.startsWith('http') ? data.file : url(data.file)) : undefined;
+const href = (p?: string) => (p ? (p.startsWith('http') ? p : url(p)) : undefined);
+const fileHref = href(data.file);
+const answerHref = href(data.answerKey);
 const typeLabel = resourceTypeLabel[data.type];
 ---
 
@@ -54,7 +56,10 @@ const typeLabel = resourceTypeLabel[data.type];
 
         {data.access === 'free' && (
           fileHref ? (
-            <a class="btn btn--primary" href={fileHref} download>Download free PDF</a>
+            <div class="downloads">
+              <a class="btn btn--primary" href={fileHref} download>Download free PDF</a>
+              {answerHref && <a class="btn btn--ghost" href={answerHref} download>Answer key (PDF)</a>}
+            </div>
           ) : (
             <p class="soon">[Download coming soon]</p>
           )
@@ -99,5 +104,6 @@ const typeLabel = resourceTypeLabel[data.type];
   dt { color: var(--muted); }
   dd { margin: 0; font-weight: 600; }
   .resource__info .btn { justify-self: start; }
+  .downloads { display: flex; flex-wrap: wrap; gap: var(--space-3); }
   .soon { color: var(--muted); font-size: var(--step--1); }
 </style>

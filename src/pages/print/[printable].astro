@@ -1,0 +1,140 @@
+---
+/**
+ * Print-ready A4 page for worksheets and answer keys.
+ * Not linked from menus and hidden from search engines; used to create the PDFs (npm run pdfs).
+ */
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/source-serif-4';
+import 'katex/dist/katex.min.css';
+import { lessonComponents } from '../../components/lesson';
+import Q from '../../components/print/Q.astro';
+import Answer from '../../components/print/Answer.astro';
+import DataBox from '../../components/print/DataBox.astro';
+import { site } from '../../config/site';
+import { url } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const items = await getCollection('printables');
+  return items.map((p) => ({ params: { printable: p.id }, props: { printable: p } }));
+}) satisfies GetStaticPaths;
+
+const { printable } = Astro.props;
+const { data } = printable;
+const { Content } = await render(printable);
+const host = new URL(site.url).host;
+const year = new Date().getFullYear();
+const kindLabel = data.kind === 'answer-key' ? 'Answer key' : 'Worksheet';
+---
+
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{data.title}{data.kind === 'answer-key' ? ' (Answer Key)' : ''}: {site.name}</title>
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+  </head>
+  <body>
+    <main class="sheet">
+      <header class="brand">
+        <span class="brand__logo">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z" fill="none" stroke="#14213d" stroke-width="2.6" stroke-linejoin="round" /><circle cx="16" cy="16" r="5.6" fill="none" stroke="#0f766e" stroke-width="2.6" /></svg>
+          {site.name}
+        </span>
+        <span class="brand__kind">{kindLabel}{data.time && data.kind === 'worksheet' ? ` · ${data.time}` : ''}</span>
+      </header>
+
+      <h1>{data.title}</h1>
+      {data.subtitle && <p class="subtitle">{data.subtitle}</p>}
+
+      {data.nameLines && data.kind === 'worksheet' && (
+        <div class="name-lines">
+          <span>Name <i></i></span><span>Class <i></i></span><span>Date <i></i></span>
+        </div>
+      )}
+
+      <div class="content">
+        <Content components={{ ...lessonComponents, Q, Answer, DataBox }} />
+      </div>
+
+      <footer class="foot">
+        © {year} {site.name} · {host} · {site.printableNotice}
+      </footer>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @page { size: A4; margin: 16mm 16mm 18mm; }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Source Serif 4 Variable', Georgia, serif;
+    font-size: 11pt;
+    line-height: 1.45;
+    color: #111;
+    background: #e9e9e9;
+  }
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 16mm;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  @media print {
+    body { background: #fff; }
+    .sheet { width: auto; min-height: 0; padding: 0; margin: 0; }
+    .foot { display: none; }
+  }
+  .brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid #0f766e;
+    font-family: 'Inter Variable', Arial, sans-serif;
+    font-size: 9.5pt;
+  }
+  .brand__logo { display: inline-flex; align-items: center; gap: 2mm; font-weight: 700; color: #14213d; }
+  .brand__logo svg { width: 6mm; height: 6mm; }
+  .brand__kind { color: #0f766e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+  h1 { font-family: 'Inter Variable', Arial, sans-serif; font-size: 19pt; letter-spacing: -0.01em; margin-top: 6mm; color: #14213d; }
+  .subtitle { color: #444; margin-top: 1mm; }
+  .name-lines { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 6mm; margin-top: 6mm; font-family: 'Inter Variable', Arial, sans-serif; font-size: 9.5pt; }
+  .name-lines span { display: flex; align-items: flex-end; gap: 2mm; }
+  .name-lines i { flex: 1; border-bottom: 1px solid #888; height: 1.2em; }
+  .content { flex: 1; margin-top: 4mm; }
+  .content h2 {
+    font-family: 'Inter Variable', Arial, sans-serif;
+    font-size: 12.5pt;
+    color: #14213d;
+    margin-top: 7mm;
+    padding-bottom: 1mm;
+    border-bottom: 1px solid #ccc;
+    break-after: avoid;
+  }
+  .content h2 + * { margin-top: 2mm; }
+  .content p { margin-top: 2mm; }
+  .content ul, .content ol { padding-left: 1.4em; margin-top: 1mm; }
+  .content strong { font-weight: 650; }
+  .content table { border-collapse: collapse; margin-top: 2mm; font-size: 10pt; }
+  .content th, .content td { border: 1px solid #999; padding: 1mm 3mm; }
+  .content .katex { font-size: 1.05em; }
+  /* Keep a question with the answer that follows it */
+  .content > div:has(+ .answer) { break-after: avoid; }
+  .foot {
+    margin-top: 8mm;
+    padding-top: 2mm;
+    border-top: 1px solid #ccc;
+    font-family: 'Inter Variable', Arial, sans-serif;
+    font-size: 8pt;
+    color: #666;
+    text-align: center;
+  }
+</style>

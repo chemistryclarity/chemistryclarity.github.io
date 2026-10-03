@@ -35,6 +35,9 @@ export const site = {
 
   copyrightStart: 2026,
 
+  /** Printed at the bottom of every page of worksheets and notes PDFs. YOUR DECISION: how may teachers use them? */
+  printableNotice: 'Free for personal and classroom use. Not for resale.',
+
   /** Default image used when a page is shared on social media (path inside /public). */
   defaultShareImage: '/og-default.png',
 

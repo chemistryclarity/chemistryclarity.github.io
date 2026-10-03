@@ -1,15 +1,14 @@
 # Printable resource (free)
-# PROTOTYPE PLACEHOLDER
-# type: worksheet | cheat-sheet | formula-sheet | revision-sheet | practice-test | notes
-# file: put the PDF in public/downloads/ and write its path here, e.g. "/downloads/mole-concept-worksheet.pdf"
-#       (for big files, a GitHub Releases link). Remove personal info from the PDF first.
+# The worksheet and answer key are written in src/content/printables/ and turned into PDFs with:  npm run pdfs
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW. Change status to published after checking.
 
-title: "Mole Concept Worksheet"
-description: "[PLACEHOLDER] What the worksheet practises and how many questions it has."
+title: 'Mole Concept Worksheet'
+description: '15 questions on moles, molar mass, Avogadro''s number and counting atoms in compounds, from basic understanding to a challenge question. Answer key included.'
 type: worksheet
 level: beginner
 access: free
-# file: "/downloads/mole-concept-worksheet.pdf"
-# pages: 2
-# preview: "/previews/mole-concept-worksheet.png"
-status: draft
+file: '/downloads/mole-concept-worksheet.pdf'
+answerKey: '/downloads/mole-concept-worksheet-answers.pdf'
+pages: 3
+preview: '/previews/mole-concept-worksheet.png'
+status: review

@@ -156,12 +156,34 @@ const resources = defineCollection({
     access,
     /** Free resources: path in /public/downloads/ or a GitHub Releases URL. Never put premium files here. */
     file: z.string().optional(),
+    /** Optional separate answer key PDF (free resources only). */
+    answerKey: z.string().optional(),
     /** Small preview image in /public/previews/ */
     preview: z.string().optional(),
     pages: z.number().optional(),
     /** Premium resources point to a product instead of a file. */
     product: reference('products').optional(),
     status,
+  }),
+});
+
+/**
+ * Printable worksheets and answer keys, written as text: src/content/printables/<name>.mdx
+ * Each becomes a print-ready page at /print/<name>/ and a PDF via `npm run pdfs`.
+ */
+const printables = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/printables' }),
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string().optional(),
+    kind: z.enum(['worksheet', 'answer-key']).default('worksheet'),
+    level,
+    /** Suggested time, e.g. "30 minutes". */
+    time: z.string().optional(),
+    /** Show Name / Class / Date lines at the top. */
+    nameLines: z.boolean().default(true),
+    status,
+    assisted: z.boolean().default(false),
   }),
 });
 
@@ -212,6 +234,7 @@ export const collections = {
   notes,
   resources,
   products,
+  printables,
   references,
   pages,
 };

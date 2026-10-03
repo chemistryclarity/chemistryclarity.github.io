@@ -1,0 +1,16 @@
+---
+/** Answer / worked solution inside an answer key: <Answer>…</Answer> */
+---
+
+<div class="answer"><slot /></div>
+
+<style>
+  .answer {
+    margin: 0.4em 0 0 2.5em;
+    padding: 0.5em 0.8em;
+    border-left: 3px solid #0f766e;
+    background: #f1f8f7;
+    break-inside: avoid;
+  }
+  .answer > :global(* + *) { margin-top: 0.35em; }
+</style>

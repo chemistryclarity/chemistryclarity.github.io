@@ -23,6 +23,27 @@ Notes can be read online, printed (there's a Print button), and optionally downl
 3. Optional PDF: add it to `public/downloads/` and set `pdf: "/downloads/molar-mass-notes.pdf"`.
 4. In the topic file: `notes: molar-mass`.
 
+## Worksheets (written as text, turned into PDFs automatically)
+
+You don't need Word. Write the worksheet as a text file and the site makes a branded A4 PDF.
+
+1. Copy `templates/worksheet.mdx` into `src/content/printables/`, e.g. `molar-mass-worksheet.mdx`.
+2. Copy `templates/worksheet-answers.mdx` to `molar-mass-worksheet-answers.mdx` in the same folder.
+3. Write the questions:
+   - `<Q n={1} lines={2}>Question</Q>` gives a question with 2 ruled answer lines.
+   - `<Q n={2} box={4}>Question</Q>` gives a question with a working box.
+   - `<DataBox items={['H = 1.008', 'C = 12.01']} note="…" />` gives a data box.
+   - In the answer key: `<Q n={1}>Question</Q>` followed by `<Answer>…</Answer>`.
+   - If a question has several paragraphs, leave a **blank line after `<Q …>`** and before `</Q>`.
+4. Run **`npm run pdfs`**. It builds the site, creates `public/downloads/<name>.pdf` (with page numbers and the
+   copyright line on every page), creates a preview image in `public/previews/`, then checks everything.
+   To see a worksheet before making the PDF, run `npm run dev` and open `http://localhost:4321/print/<name>/`.
+5. Create the resource listing (next section) with `file`, `answerKey` and `preview`.
+6. Commit and push, including the new PDF and PNG files.
+
+The same command also creates the PDF for any lecture notes that have a `pdf:` path.
+The line printed at the bottom of every page is set by `printableNotice` in `src/config/site.ts`.
+
 ## PDFs and printables (worksheets, cheat sheets, formula sheets…)
 
 ### Prepare the PDF

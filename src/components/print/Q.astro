@@ -1,0 +1,44 @@
+---
+/**
+ * A numbered worksheet question with space to answer.
+ *   <Q n={1} lines={3}>Define a mole.</Q>
+ *   <Q n={2} box={6}>Show your working…</Q>      (blank working box, height in lines)
+ *   <Q n="5a" lines={1}>…</Q>
+ * In answer keys, leave out lines/box and put the answer inside <Answer>…</Answer>.
+ */
+export interface Props {
+  n: number | string;
+  /** Ruled answer lines. */
+  lines?: number;
+  /** Blank working box, measured in line-heights. */
+  box?: number;
+  /** Marks shown on the right, e.g. 2. */
+  marks?: number;
+}
+const { n, lines = 0, box = 0, marks } = Astro.props;
+---
+
+<div class="q">
+  <div class="q__head">
+    <span class="q__n">{n}.</span>
+    <div class="q__body"><slot /></div>
+    {marks && <span class="q__marks">[{marks}]</span>}
+  </div>
+  {box > 0 && <div class="q__box" style={`height: ${box * 2.1}em`} aria-hidden="true"></div>}
+  {lines > 0 && (
+    <div class="q__lines" aria-hidden="true">
+      {Array.from({ length: lines }, () => <span />)}
+    </div>
+  )}
+</div>
+
+<style>
+  .q { break-inside: avoid; margin-block: 1.1em; }
+  .q__head { display: grid; grid-template-columns: 2.2em 1fr auto; gap: 0.3em; align-items: baseline; }
+  .q__n { font-weight: 700; }
+  .q__body > :global(* + *) { margin-top: 0.4em; }
+  .q__marks { font-size: 0.85em; color: #555; white-space: nowrap; }
+  .q__lines { margin: 0.4em 0 0 2.5em; }
+  .q__lines span { display: block; height: 2.1em; border-bottom: 1px solid #b8b8b8; }
+  .q__box { margin: 0.5em 0 0 2.5em; border: 1px solid #b8b8b8; border-radius: 4px; }
+</style>

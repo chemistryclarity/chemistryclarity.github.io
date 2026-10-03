@@ -1,30 +1,155 @@
 ---
 title: "Lecture Notes: The Mole Concept"
-description: "[PLACEHOLDER] One or two sentences describing what these notes cover."
+description: "Structured notes on the mole, the Avogadro constant, molar mass, and converting between mass, moles and number of particles."
 level: beginner
 access: free
-# pdf: "/downloads/mole-concept-notes.pdf"   (remove the # once the PDF is in public/downloads/)
-status: draft
+pdf: "/downloads/mole-concept-notes.pdf"
+status: review
+assisted: true
 ---
 
-{/* PROTOTYPE PLACEHOLDER: replace with your lecture notes. All lesson boxes work here too. */}
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; topic order follows general chemistry texts such as
+  Chemistry: The Central Science. All numerical examples calculated and checked by computer.
+  Atomic masses: H 1.008, C 12.01, N 14.01, O 16.00, Na 22.99, Cl 35.45, Ca 40.08.
+*/}
 
-## 1. Introduction
+## Learning objectives
 
-[YOUR NOTES HERE]
+By the end of these notes you should be able to:
 
-## 2. [Section title]
+1. Explain what a mole is and why chemists use it.
+2. State the value of the Avogadro constant and how the mole is defined.
+3. Calculate the molar mass of an element or compound from its formula.
+4. Convert between mass, amount (moles) and number of particles.
+5. Work out the number of moles of atoms of each element in a given amount of a compound.
 
-[YOUR NOTES HERE]
+## 1. Why chemists need a counting unit
 
-<KeyIdea>
-[YOUR CONTENT HERE]
-</KeyIdea>
+Chemical reactions happen between individual atoms, molecules and ions. A balanced equation therefore tells us how many *particles* react. Particles are far too small to count directly, so we need a way to count them by weighing.
 
-## 3. [Section title]
+Everyday life already uses counting units for large numbers of small things: a *dozen* eggs (12), a *ream* of paper (500 sheets). Chemistry uses the **mole**, a much larger number suited to atoms.
 
-[YOUR NOTES HERE]
+## 2. The mole and the Avogadro constant
+
+- One **mole** (symbol **mol**) of a substance contains **6.022 × 10²³** specified particles.
+- The particles must always be stated: atoms of Na, molecules of $\ce{H2O}$, formula units of $\ce{NaCl}$, ions of $\ce{Cl-}$.
+- The **Avogadro constant** is $N_\text{A} = 6.022 \times 10^{23}\ \text{mol}^{-1}$.
+- The quantity measured in moles is called **amount of substance**, symbol $n$.
+
+<MorePrecisely title="The SI definition">
+Since 2019 the mole has been defined by fixing the Avogadro constant at exactly 6.022 140 76 × 10²³ mol⁻¹. The older definition, the number of atoms in exactly 12 g of carbon-12, still appears in many textbooks. The two agree to far more digits than any calculation in these notes needs.
+</MorePrecisely>
+
+## 3. Molar mass
+
+The **molar mass** $M$ of a substance is the mass of one mole of it, in **g/mol**.
+
+**Key fact:** the molar mass in g/mol has the same numerical value as the atomic mass or formula mass in atomic mass units (u).
+
+### 3.1 Elements
+
+Read the atomic mass from the periodic table: $M(\ce{C}) = 12.01$ g/mol, $M(\ce{Na}) = 22.99$ g/mol.
+
+For elements that exist as molecules, use the molecular formula: $M(\ce{O2}) = 2 \times 16.00 = 32.00$ g/mol and $M(\ce{Cl2}) = 2 \times 35.45 = 70.90$ g/mol.
+
+### 3.2 Compounds
+
+Add the atomic masses of every atom in the formula, multiplying by the subscripts:
+
+| Formula | Calculation | Molar mass |
+|---|---|---|
+| $\ce{H2O}$ | 2(1.008) + 16.00 | 18.02 g/mol |
+| $\ce{NH3}$ | 14.01 + 3(1.008) | 17.03 g/mol |
+| $\ce{CaCO3}$ | 40.08 + 12.01 + 3(16.00) | 100.09 g/mol |
+| $\ce{C6H12O6}$ | 6(12.01) + 12(1.008) + 6(16.00) | 180.16 g/mol |
+
+For ionic compounds such as $\ce{NaCl}$ there are no molecules, so we speak of the mass of a **formula unit**. The calculation is the same: 22.99 + 35.45 = 58.44 g/mol.
+
+## 4. The three-way conversion
+
+Every conversion passes through moles:
+
+<Figure src="/images/mole-concept/mole-map.svg" alt="Mole map: mass in grams at the top, amount in moles in the middle, number of particles at the bottom. Divide mass by molar mass to get moles; multiply moles by molar mass to get mass. Multiply moles by 6.022 times ten to the 23 to get particles; divide particles by it to get moles." caption="Mass ⇄ moles ⇄ particles." width={360} height={470} />
+
+$$
+n = \frac{m}{M} \qquad\qquad N = n \times N_\text{A}
+$$
+
+**Problem-solving routine**
+
+1. Write down what you are given, with units.
+2. Find any molar mass you need.
+3. Convert to moles first.
+4. Convert from moles to what is asked.
+5. Check that the units cancel and the answer is sensible.
+
+### 4.1 Mass → moles
+
+<Example title="Moles of ammonia">
+How many moles are in 51.1 g of ammonia, $\ce{NH3}$?
+
+1. $M(\ce{NH3}) = 17.03$ g/mol
+2. $n = \dfrac{51.1\ \text{g}}{17.03\ \text{g/mol}} = 3.00\ \text{mol}$
+</Example>
+
+### 4.2 Moles → mass
+
+<Example title="Mass of calcium carbonate">
+What is the mass of 2.50 mol of calcium carbonate, $\ce{CaCO3}$?
+
+1. $M(\ce{CaCO3}) = 100.09$ g/mol
+2. $m = 2.50\ \text{mol} \times 100.09\ \text{g/mol} = 250.\ \text{g}$ (that is, 2.50 × 10² g)
+</Example>
+
+### 4.3 Mass → particles
+
+<Example title="Molecules of glucose">
+How many molecules are in 4.50 g of glucose, $\ce{C6H12O6}$?
+
+1. $M = 180.16$ g/mol
+2. $n = \dfrac{4.50}{180.16} = 0.02498\ \text{mol}$
+3. $N = 0.02498 \times 6.022 \times 10^{23} = 1.50 \times 10^{22}$ molecules
+</Example>
+
+## 5. Moles of atoms inside a compound
+
+The subscripts in a formula give the ratio of **moles of atoms** to **moles of compound**.
+
+One mole of glucose, $\ce{C6H12O6}$, contains 6 mol of C atoms, 12 mol of H atoms and 6 mol of O atoms.
+
+<Example title="Atoms of hydrogen in water">
+How many hydrogen atoms are in 0.250 mol of water?
+
+1. Each $\ce{H2O}$ contains 2 H atoms, so $n(\ce{H}) = 2 \times 0.250 = 0.500$ mol
+2. $N(\ce{H}) = 0.500 \times 6.022 \times 10^{23} = 3.01 \times 10^{23}$ atoms
+</Example>
+
+<CommonMistake>
+Always ask *"a mole of what?"*. One mole of $\ce{O2}$ is 6.022 × 10²³ molecules but 1.204 × 10²⁴ atoms. Write the formula, then count.
+</CommonMistake>
+
+## 6. Significant figures
+
+- Atomic masses from the periodic table usually carry four or more significant figures, so they rarely limit your answer.
+- Your answer should normally have the same number of significant figures as the least precise *measured* value given (often a mass).
+- Keep extra digits in intermediate steps and round only at the end.
 
 ## Summary
 
-[YOUR NOTES HERE]
+<RememberThis>
+- 1 mol = 6.022 × 10²³ particles; always state the particles.
+- Molar mass (g/mol) has the same number as the atomic or formula mass (u).
+- $n = m/M$ and $N = n \times N_\text{A}$; convert to moles first.
+- Formula subscripts give moles of each kind of atom per mole of compound.
+</RememberThis>
+
+## Key terms
+
+| Term | Meaning |
+|---|---|
+| Mole (mol) | The SI unit of amount of substance; 6.022 × 10²³ specified particles |
+| Amount of substance, $n$ | The quantity measured in moles |
+| Avogadro constant, $N_\text{A}$ | 6.022 × 10²³ mol⁻¹ |
+| Molar mass, $M$ | Mass of one mole of a substance, in g/mol |
+| Formula unit | The smallest repeating unit of an ionic compound, e.g. one Na⁺ and one Cl⁻ in NaCl |

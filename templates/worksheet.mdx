@@ -1,0 +1,27 @@
+---
+# NEW WORKSHEET: copy into src/content/printables/ and rename, e.g. molar-mass-worksheet.mdx
+# Make the answer key from templates/worksheet-answers.mdx (name it molar-mass-worksheet-answers.mdx).
+# Then run:  npm run pdfs   (creates the PDFs and a preview image)
+title: Topic Name
+subtitle: What the worksheet practises
+kind: worksheet
+level: beginner
+time: 30 minutes
+status: draft
+---
+
+<DataBox items={['H = 1.008', 'C = 12.01', 'O = 16.00']} note="Show your working." />
+
+## A. Section title
+
+<Q n={1} lines={2}>A short-answer question (2 ruled lines).</Q>
+
+<Q n={2} box={4}>A calculation question with a working box (4 lines tall). Formulas work: $\ce{H2O}$.</Q>
+
+<Q n={3} box={3}>
+
+A question with several parts. Note the blank line after the opening tag.
+
+(a) first part &nbsp;&nbsp; (b) second part
+
+</Q>
