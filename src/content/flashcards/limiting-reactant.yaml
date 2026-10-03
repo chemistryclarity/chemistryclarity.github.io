@@ -1,39 +1,43 @@
-# Flashcards: Limiting Reactants and Percent Yield
-# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
-# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
-
 title: 'Limiting Reactants: Flashcards'
-description: 'Revise limiting and excess reactants, theoretical yield and percent yield.'
+description: Revise limiting and excess reactants, theoretical yield and percent yield.
 level: intermediate
 access: free
-status: review
+status: published
 assisted: true
-
 cards:
   - id: lr-01
-    front: 'What is the limiting reactant?'
-    back: 'The reactant that is used up first. It limits how much product can form.'
+    front: What is the limiting reactant?
+    back: The reactant that is used up first. It limits how much product can form.
+    tags: []
   - id: lr-02
-    front: 'What is an excess reactant?'
-    back: 'A reactant that is not used up completely; some is left over when the reaction stops.'
+    front: What is an excess reactant?
+    back: A reactant that is not used up completely; some is left over when the reaction stops.
+    tags: []
   - id: lr-03
-    front: 'How do you find the limiting reactant?'
-    back: 'Convert each reactant to moles, calculate how much product each could make, and pick the one that gives **less** product.'
+    front: How do you find the limiting reactant?
+    back: Convert each reactant to moles, calculate how much product each could make, and pick the one that gives **less** product.
+    tags: []
   - id: lr-04
-    front: 'What is the theoretical yield?'
-    back: 'The maximum amount of product that can form, calculated from the limiting reactant.'
+    front: What is the theoretical yield?
+    back: The maximum amount of product that can form, calculated from the limiting reactant.
+    tags: []
   - id: lr-05
-    front: 'What is the formula for percent yield?'
-    back: 'Percent yield = (actual yield ÷ theoretical yield) × 100%'
+    front: What is the formula for percent yield?
+    back: Percent yield = (actual yield ÷ theoretical yield) × 100%
+    tags: []
   - id: lr-06
-    front: 'Is the reactant with the smaller mass always the limiting reactant?'
-    back: 'No. Compare **moles**, using the mole ratio from the balanced equation. Mass alone tells you nothing.'
+    front: Is the reactant with the smaller mass always the limiting reactant?
+    back: No. Compare **moles**, using the mole ratio from the balanced equation. Mass alone tells you nothing.
+    tags: []
   - id: lr-07
-    front: 'In $\ce{2H2 + O2 -> 2H2O}$, 1.0 mol of $\ce{H2}$ mixes with 0.6 mol of $\ce{O2}$. Which is limiting?'
-    back: '$\ce{H2}$. It needs only 0.50 mol of $\ce{O2}$, and 0.6 mol is available, so oxygen is in excess.'
+    front: In $\ce{2H2 + O2 -> 2H2O}$, 1.0 mol of $\ce{H2}$ mixes with 0.6 mol of $\ce{O2}$. Which is limiting?
+    back: $\ce{H2}$. It needs only 0.50 mol of $\ce{O2}$, and 0.6 mol is available, so oxygen is in excess.
+    tags: []
   - id: lr-08
-    front: 'Give three reasons why a percent yield is usually less than 100%.'
-    back: 'The reaction may not go to completion; side reactions make other products; some product is lost during separation and purification.'
+    front: Give three reasons why a percent yield is usually less than 100%.
+    back: The reaction may not go to completion; side reactions make other products; some product is lost during separation and purification.
+    tags: []
   - id: lr-09
-    front: 'What does a percent yield above 100% suggest?'
-    back: 'An error, for example the product is still wet or contains impurities. Extra product cannot be created.'
+    front: What does a percent yield above 100% suggest?
+    back: An error, for example the product is still wet or contains impurities. Extra product cannot be created.
+    tags: []
