@@ -70,22 +70,55 @@ await new Promise((r) => server.listen(PORT, r));
 // ---------- drive the browser ----------
 // A fresh, private browser profile and a free port (0) every run, so it never
 // connects to an old instance. The browser writes its chosen port to DevToolsActivePort.
-const profile = fs.mkdtempSync(path.join(process.env.TEMP ?? '/tmp', 'cc-pdf-'));
-// On GitHub's build servers (CI) the browser runs inside a container and needs --no-sandbox.
-const ciFlags = process.env.CI ? ['--no-sandbox'] : [];
-spawn(browser, ['--headless=new', '--disable-gpu', '--hide-scrollbars', ...ciFlags, '--remote-debugging-port=0', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const portFile = path.join(profile, 'DevToolsActivePort');
+// On GitHub's build servers (CI) the browser runs inside a container: it needs --no-sandbox,
+// and --disable-dev-shm-usage avoids crashes caused by the server's small shared memory.
+const ciFlags = process.env.CI ? ['--no-sandbox', '--disable-dev-shm-usage'] : [];
+const browserArgs = (profileDir) => [
+  '--headless=new', '--disable-gpu', '--hide-scrollbars', '--no-first-run', '--no-default-browser-check',
+  ...ciFlags, '--remote-debugging-port=0', `--user-data-dir=${profileDir}`, 'about:blank',
+];
+
+let profile;
 let debugPort;
 let targets;
-for (let i = 0; i < 80 && !targets; i++) {
-  try {
-    debugPort ??= Number(fs.readFileSync(portFile, 'utf8').split('\n')[0]);
-    targets = await (await fetch(`http://127.0.0.1:${debugPort}/json`)).json();
-  } catch { await sleep(250); }
+let browserLog = '';
+/** Start the browser and wait (up to 60 s) until it is ready. Returns true on success. */
+async function startBrowser() {
+  profile = fs.mkdtempSync(path.join(process.env.TEMP ?? '/tmp', 'cc-pdf-'));
+  const portFile = path.join(profile, 'DevToolsActivePort');
+  const proc = spawn(browser, browserArgs(profile), { stdio: ['ignore', 'ignore', 'pipe'] });
+  browserLog = '';
+  proc.stderr.on('data', (d) => { browserLog = (browserLog + d).slice(-2000); });
+  debugPort = undefined;
+  targets = undefined;
+  for (let i = 0; i < 240; i++) {
+    try {
+      // The browser writes its port to this file; ignore it until it holds a real port number.
+      if (!debugPort) {
+        const port = Number(fs.readFileSync(portFile, 'utf8').split('\n')[0]);
+        if (port > 0) debugPort = port;
+      }
+      if (debugPort) {
+        const list = await (await fetch(`http://127.0.0.1:${debugPort}/json`)).json();
+        if (list.some((t) => t.type === 'page')) { targets = list; return true; }
+      }
+    } catch {}
+    await sleep(250);
+  }
+  try { proc.kill(); } catch {}
+  return false;
 }
-if (!targets) {
+
+let started = false;
+for (let attempt = 1; attempt <= 3 && !started; attempt++) {
+  started = await startBrowser();
+  if (!started) console.warn(`Browser did not start (attempt ${attempt} of 3)${attempt < 3 ? ', retrying…' : ''}`);
+}
+if (!started) {
   console.error('Could not start the browser.');
+  if (browserLog) console.error('Browser said:\n' + browserLog);
+  server.close();
   process.exit(1);
 }
 
