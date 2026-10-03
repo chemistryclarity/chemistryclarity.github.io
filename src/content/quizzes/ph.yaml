@@ -1,0 +1,88 @@
+# Quiz: pH and the pH Scale
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+# `answer` must be copied EXACTLY from one of the choices.
+
+title: 'pH: Quiz'
+description: 'Seven questions on pH, pOH and pH calculations for strong acids and bases, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+questions:
+  - id: ph-q1
+    prompt: 'At 25 °C, a solution has pH 9. It is…'
+    choices:
+      - 'acidic'
+      - 'neutral'
+      - 'basic'
+      - 'impossible to tell'
+    answer: 'basic'
+    explanation: 'At 25 °C, pH above 7 is basic, below 7 is acidic, and exactly 7 is neutral.'
+    difficulty: easy
+
+  - id: ph-q2
+    prompt: 'What is the pH of 0.0025 M nitric acid, $\ce{HNO3}$ (a strong acid)?'
+    choices:
+      - '2.60'
+      - '3.40'
+      - '0.0025'
+      - '11.40'
+    answer: '2.60'
+    explanation: 'Strong acid, so $[\ce{H3O+}] = 0.0025$ M and pH = −log(0.0025) = 2.60. The answer 11.40 is the pOH.'
+    difficulty: medium
+
+  - id: ph-q3
+    prompt: 'What is the pH of 0.15 M KOH (a strong base)?'
+    choices:
+      - '0.82'
+      - '7.15'
+      - '13.18'
+      - '14.15'
+    answer: '13.18'
+    explanation: '$[\ce{OH-}] = 0.15$ M, so pOH = −log(0.15) = 0.82, and pH = 14.00 − 0.82 = 13.18. The answer 0.82 reports the pOH as the pH.'
+    difficulty: medium
+
+  - id: ph-q4
+    prompt: 'Solution A has pH 4 and solution B has pH 8. How do their $\ce{H3O+}$ concentrations compare?'
+    choices:
+      - 'A has 2 times more'
+      - 'A has 4 times more'
+      - 'A has 10,000 times more'
+      - 'B has 10,000 times more'
+    answer: 'A has 10,000 times more'
+    explanation: 'A difference of 4 pH units is a factor of $10^4$ = 10,000, and the lower pH has the higher $[\ce{H3O+}]$.'
+    difficulty: medium
+
+  - id: ph-q5
+    prompt: 'A solution has $[\ce{OH-}] = 2.5 \times 10^{-4}$ M at 25 °C. What is its pH?'
+    choices:
+      - '3.60'
+      - '7.00'
+      - '10.40'
+      - '11.60'
+    answer: '10.40'
+    explanation: 'pOH = −log(2.5 × 10⁻⁴) = 3.60, so pH = 14.00 − 3.60 = 10.40. (Equivalently, $[\ce{H3O+}] = 1.0 \times 10^{-14} \div 2.5 \times 10^{-4} = 4.0 \times 10^{-11}$ M.)'
+    difficulty: hard
+
+  - id: ph-q6
+    prompt: 'What is the pH of 0.020 M $\ce{Ca(OH)2}$?'
+    choices:
+      - '1.40'
+      - '12.30'
+      - '12.60'
+      - '13.30'
+    answer: '12.60'
+    explanation: 'Each $\ce{Ca(OH)2}$ gives two $\ce{OH-}$: $[\ce{OH-}] = 0.040$ M, pOH = 1.40, pH = 12.60. The answer 12.30 forgets the factor of 2.'
+    difficulty: hard
+
+  - id: ph-q7
+    prompt: '0.10 M HCl (pH 1.00) is diluted 10 times with water. What is the new pH?'
+    choices:
+      - '0.10'
+      - '1.00'
+      - '2.00'
+      - '10.0'
+    answer: '2.00'
+    explanation: 'Diluting 10 times gives 0.010 M HCl, and pH = −log(0.010) = 2.00. A 10-fold dilution of a strong acid raises the pH by 1.'
+    difficulty: medium

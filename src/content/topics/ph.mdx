@@ -1,0 +1,153 @@
+---
+title: pH and the pH Scale
+question: "What is pH and how do you calculate it?"
+description: "What pH means, how to calculate pH and pOH for strong acids and bases, how pH relates to hydronium and hydroxide concentration, with worked examples."
+area: acids-and-bases
+level: intermediate
+order: 20
+prerequisites: [acids-and-bases, molarity]
+related: [acids-and-bases, molarity]
+flashcards: ph
+quiz: ph
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Coverage follows pH / pOH / Kw material in general chemistry texts such as Chemistry: The Central Science.
+  All calculations checked by computer. Kw = 1.0 × 10⁻¹⁴ at 25 °C.
+  Everyday pH values in the diagram are approximate and labelled as such. REVIEW: adjust if you prefer other examples.
+  Weak-acid pH (Ka calculations) is left for a later lesson.
+*/}
+
+## What is it?
+
+**pH** is a number that tells you how acidic or basic a solution is. It is based on the concentration of hydronium ions, $\ce{H3O+}$:
+
+$$
+\text{pH} = -\log[\ce{H3O+}]
+$$
+
+where $[\ce{H3O+}]$ is the concentration in mol/L.
+
+At 25 °C:
+
+- **pH < 7**: acidic
+- **pH = 7**: neutral
+- **pH > 7**: basic (also called alkaline)
+
+<KeyIdea>
+The pH scale is **logarithmic**: each change of 1 pH unit means a **10-fold** change in $[\ce{H3O+}]$. A solution at pH 3 has 1000 times more $\ce{H3O+}$ than one at pH 6.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Living things depend on it.** Human blood is kept between about pH 7.35 and 7.45; a change of a few tenths can be dangerous.
+- **Chemistry depends on it.** The speed and outcome of many reactions, and how well many substances dissolve, change with pH.
+- **Everyday life depends on it.** Soil pH affects which crops grow, swimming pools and drinking water are kept within set pH ranges, and many food and cleaning products are designed around their pH.
+
+## How does it work?
+
+### 1. Water always contains a little H₃O⁺ and OH⁻
+
+Water reacts with itself very slightly:
+
+$$
+\ce{2H2O <=> H3O+ + OH-}
+$$
+
+At 25 °C, the product of the two concentrations is always the same constant, $K_\text{w}$:
+
+$$
+K_\text{w} = [\ce{H3O+}][\ce{OH-}] = 1.0 \times 10^{-14}
+$$
+
+In pure water both concentrations are $1.0 \times 10^{-7}$ M, so the pH is 7.00. Adding acid raises $[\ce{H3O+}]$ and lowers $[\ce{OH-}]$, and adding base does the opposite.
+
+### 2. pOH and the link between pH and pOH
+
+$$
+\text{pOH} = -\log[\ce{OH-}]
+$$
+
+and, at 25 °C,
+
+$$
+\text{pH} + \text{pOH} = 14.00
+$$
+
+### 3. Strong acids and bases
+
+A strong acid ionizes completely, so $[\ce{H3O+}]$ equals the acid's concentration (for acids that give one $\ce{H+}$, such as HCl and HNO₃). Likewise, for a strong base, $[\ce{OH-}]$ comes straight from its concentration, **remembering how many OH⁻ each formula unit releases** (2 for $\ce{Ca(OH)2}$).
+
+### 4. Going back from pH to concentration
+
+$$
+[\ce{H3O+}] = 10^{-\text{pH}}
+$$
+
+<Analogy>
+Think of prices that each have one more zero: 10, 100, 1,000, 10,000. Each step is ten times the last. The pH scale counts those zeros: each step **down** in pH means ten times more H₃O⁺. So pH 4 isn't twice as acidic as pH 8. It has **10,000 times** more H₃O⁺.
+</Analogy>
+
+<MorePrecisely>
+$K_\text{w}$ changes with temperature, so neutral water has pH 7.00 only at 25 °C (at higher temperatures, neutral pH is a little lower). pH can also be below 0 or above 14 for very concentrated acids or bases. For very dilute acids, the $\ce{H3O+}$ from water itself can't be ignored: $1 \times 10^{-8}$ M HCl is slightly acidic, not pH 8. Strictly, pH is defined using *activity* rather than concentration, but concentration works well for dilute solutions.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/ph/ph-scale.svg" alt="The pH scale at 25 degrees Celsius, from 0 to 14. Acidic below 7, neutral at 7, basic above 7. Approximate everyday values: lemon juice about 2, black coffee about 5, pure water 7, blood about 7.4, household ammonia about 11. Each step of one pH unit is a ten-fold change in hydronium ion concentration." caption="The pH scale. Each step is a 10× change in [H₃O⁺]." width={360} height={330} />
+
+## Worked example
+
+<Example title="pH of a strong acid">
+**Question:** What is the pH of 0.050 M hydrochloric acid?
+
+1. HCl is a strong acid, so $[\ce{H3O+}] = 0.050$ M.
+2. $\text{pH} = -\log(0.050) = 1.30$
+</Example>
+
+<Example title="pH of a strong base">
+**Question:** What is the pH of 0.020 M calcium hydroxide, $\ce{Ca(OH)2}$?
+
+1. Each $\ce{Ca(OH)2}$ releases **two** $\ce{OH-}$ ions: $[\ce{OH-}] = 2 \times 0.020 = 0.040$ M
+2. $\text{pOH} = -\log(0.040) = 1.40$
+3. $\text{pH} = 14.00 - 1.40 = 12.60$
+</Example>
+
+<Example title="Concentration from pH">
+**Question:** A solution has pH 4.50. What is $[\ce{H3O+}]$?
+
+$[\ce{H3O+}] = 10^{-4.50} = 3.2 \times 10^{-5}$ M
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking the pH scale is linear">
+pH 4 is **not** twice as acidic as pH 8. Each pH unit is a factor of 10, so the difference is $10^4$ = 10,000 times.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the number of OH⁻ ions">
+For $\ce{Ca(OH)2}$ or $\ce{Ba(OH)2}$, $[\ce{OH-}]$ is **twice** the concentration of the base. Using 0.020 M instead of 0.040 M in the example gives pH 12.30 instead of 12.60.
+</CommonMistake>
+
+<CommonMistake title="Mixing up pH and pOH">
+For a base, you usually calculate **pOH** first from $[\ce{OH-}]$, then convert: pH = 14.00 − pOH. Reporting the pOH as the pH is a very common slip.
+</CommonMistake>
+
+<NotationNote>
+- $[\ce{H+}]$ and $[\ce{H3O+}]$ are used interchangeably in pH calculations.
+- **Significant figures:** the number of decimal places in a pH equals the number of significant figures in the concentration. 0.050 M (2 s.f.) gives pH 1.30 (2 decimal places).
+- "log" here means the base-10 logarithm (the "log" key on a calculator, not "ln").
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- pH = −log[H₃O⁺]; [H₃O⁺] = 10⁻ᵖᴴ.
+- At 25 °C: pH < 7 acidic, = 7 neutral, > 7 basic; pH + pOH = 14.00.
+- 1 pH unit = 10× change in [H₃O⁺].
+- Strong acids/bases: concentration of H₃O⁺ or OH⁻ comes straight from the formula (count the OH⁻!).
+</RememberThis>

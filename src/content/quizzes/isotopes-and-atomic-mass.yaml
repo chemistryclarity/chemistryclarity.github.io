@@ -1,0 +1,88 @@
+# Quiz: Isotopes and Average Atomic Mass
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+# `answer` must be copied EXACTLY from one of the choices.
+
+title: 'Isotopes and Atomic Mass: Quiz'
+description: 'Seven questions on isotopes, abundance and weighted average atomic mass, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+questions:
+  - id: is-q1
+    prompt: 'Why are most atomic masses on the periodic table not whole numbers?'
+    choices:
+      - 'Protons and neutrons have fractional charges'
+      - 'They are weighted averages of the masses of an element''s isotopes'
+      - 'Electrons add a large, varying mass'
+      - 'They are rounded incorrectly'
+    answer: 'They are weighted averages of the masses of an element''s isotopes'
+    explanation: 'Most elements are mixtures of isotopes. The atomic mass is the average of their masses, weighted by how common each isotope is.'
+    difficulty: easy
+
+  - id: is-q2
+    prompt: 'Copper is 69.15% copper-63 (62.930 u) and 30.85% copper-65 (64.928 u). What is its average atomic mass?'
+    choices:
+      - '63.55 u'
+      - '63.93 u'
+      - '64.00 u'
+      - '64.31 u'
+    answer: '63.55 u'
+    explanation: '(0.6915 × 62.930) + (0.3085 × 64.928) = 43.516 + 20.030 = 63.55 u. The answer 63.93 u is the simple (unweighted) average.'
+    difficulty: medium
+
+  - id: is-q3
+    prompt: 'An element has two isotopes with masses 10.0 u and 11.0 u. Its average atomic mass is 10.8 u. Which isotope is more abundant?'
+    choices:
+      - 'The 10.0 u isotope'
+      - 'The 11.0 u isotope'
+      - 'They are equally abundant'
+      - 'It cannot be determined'
+    answer: 'The 11.0 u isotope'
+    explanation: 'The average (10.8 u) is closer to 11.0 than to 10.0, so the heavier isotope must be more common.'
+    difficulty: easy
+
+  - id: is-q4
+    prompt: 'Bromine is 50.69% bromine-79 (78.918 u) and 49.31% bromine-81 (80.916 u). What is its average atomic mass?'
+    choices:
+      - '79.90 u'
+      - '79.92 u'
+      - '80.00 u'
+      - '7990 u'
+    answer: '79.90 u'
+    explanation: '(0.5069 × 78.918) + (0.4931 × 80.916) = 79.90 u. Using percentages without dividing by 100 gives 7990, 100 times too big.'
+    difficulty: medium
+
+  - id: is-q5
+    prompt: 'Lithium is 7.59% lithium-6 (6.015 u) and 92.41% lithium-7 (7.016 u). What is its average atomic mass?'
+    choices:
+      - '6.52 u'
+      - '6.94 u'
+      - '7.02 u'
+      - '6.09 u'
+    answer: '6.94 u'
+    explanation: '(0.0759 × 6.015) + (0.9241 × 7.016) = 6.94 u, close to 7 because lithium-7 is far more common.'
+    difficulty: medium
+
+  - id: is-q6
+    prompt: 'Gallium has two isotopes: gallium-69 (68.926 u) and gallium-71 (70.925 u). Its average atomic mass is 69.723 u. What is the abundance of gallium-69?'
+    choices:
+      - '39.9%'
+      - '50.0%'
+      - '60.1%'
+      - '69.7%'
+    answer: '60.1%'
+    explanation: 'Let x = fraction of gallium-69: 68.926x + 70.925(1 − x) = 69.723, so x = 1.202 ÷ 1.999 = 0.601, or 60.1%. 39.9% is the abundance of gallium-71.'
+    difficulty: hard
+
+  - id: is-q7
+    prompt: 'Which statement about chlorine-35 and chlorine-37 is true?'
+    choices:
+      - 'They have different numbers of protons'
+      - 'They have different numbers of neutrons'
+      - 'They have very different chemical properties'
+      - 'Chlorine-37 has more electrons in a neutral atom'
+    answer: 'They have different numbers of neutrons'
+    explanation: 'Both have 17 protons and, as neutral atoms, 17 electrons, so they behave the same chemically. Chlorine-35 has 18 neutrons and chlorine-37 has 20.'
+    difficulty: easy

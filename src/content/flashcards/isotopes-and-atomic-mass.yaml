@@ -1,0 +1,39 @@
+# Flashcards: Isotopes and Average Atomic Mass
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'Isotopes and Atomic Mass: Flashcards'
+description: 'Revise isotopes, natural abundance and weighted average atomic mass.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: is-01
+    front: 'What does the atomic mass on the periodic table represent?'
+    back: 'The **weighted average** mass of an element''s atoms, based on the natural abundance of each isotope.'
+  - id: is-02
+    front: 'What is natural abundance?'
+    back: 'The percentage (or fraction) of an element''s atoms that are a particular isotope.'
+  - id: is-03
+    front: 'How do you calculate an average atomic mass?'
+    back: 'Multiply each isotope''s mass by its abundance as a decimal fraction, then add the results.'
+  - id: is-04
+    front: 'Why is chlorine''s atomic mass (35.45 u) closer to 35 than to 37?'
+    back: 'Chlorine-35 is about three times as common as chlorine-37, so it carries more weight in the average.'
+  - id: is-05
+    front: 'What instrument measures isotope masses and abundances?'
+    back: 'A mass spectrometer.'
+  - id: is-06
+    front: 'What should the abundances of all an element''s isotopes add up to?'
+    back: '100% (a total fraction of 1).'
+  - id: is-07
+    front: 'Boron is 19.9% boron-10 (10.013 u) and 80.1% boron-11 (11.009 u). What is its average atomic mass?'
+    back: '$(0.199 \times 10.013) + (0.801 \times 11.009) = 10.81$ u'
+  - id: is-08
+    front: 'What is the difference between mass number and isotope mass?'
+    back: 'Mass number is a whole-number count of protons + neutrons (e.g. 35); isotope mass is the measured mass (e.g. 34.969 u).'
+  - id: is-09
+    front: 'Why is a simple average of isotope masses usually wrong?'
+    back: 'Isotopes are not equally common; each mass must be weighted by its abundance.'

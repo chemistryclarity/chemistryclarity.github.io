@@ -1,0 +1,128 @@
+---
+title: Isotopes and Average Atomic Mass
+question: "How do you calculate average atomic mass from isotopes?"
+description: "Why atomic masses on the periodic table are not whole numbers, and how to calculate an average atomic mass from isotope masses and abundances, with worked examples."
+area: atomic-structure
+level: intermediate
+order: 20
+prerequisites: [atomic-structure]
+related: [atomic-structure, mole-concept]
+flashcards: isotopes-and-atomic-mass
+quiz: isotopes-and-atomic-mass
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Isotope masses and natural abundances are rounded from IUPAC/standard reference values
+  (e.g. Cl-35 34.969 u, 75.76 %; Cl-37 36.966 u, 24.24 %). Each worked average reproduces the periodic-table value.
+  All calculations checked by computer.
+*/}
+
+## What is it?
+
+Most elements exist naturally as a **mixture of isotopes**: atoms with the same number of protons but different numbers of neutrons, and therefore different masses.
+
+The **atomic mass** printed on the periodic table is the **weighted average** mass of an element's atoms, taking into account how common each isotope is (its **natural abundance**).
+
+<KeyIdea>
+The periodic-table atomic mass is an **average weighted by abundance**. That's why chlorine is 35.45 u and not a whole number: no single chlorine atom has a mass of 35.45 u.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Every calculation with molar mass uses it.** When you calculate moles from grams, you rely on average atomic masses, because real samples contain the natural mix of isotopes.
+- **Isotopes are useful in their own right.** Carbon-14 is used to date ancient materials, and other isotopes are used in medical imaging and as tracers to follow chemical reactions.
+- **It explains the periodic table.** Seeing that atomic masses are averages removes the mystery of the decimals.
+
+## How does it work?
+
+### 1. Measuring isotopes
+
+A **mass spectrometer** separates atoms (as ions) by mass. It measures the **mass** of each isotope and its **relative abundance**: what fraction of all the atoms it makes up.
+
+### 2. Calculating the weighted average
+
+Multiply each isotope's mass by its abundance written as a **decimal fraction** (75.76% → 0.7576), then add the results:
+
+$$
+\text{average} = \sum (\text{fraction} \times \text{mass})
+$$
+
+where the sum ($\sum$) runs over every isotope of the element.
+
+The abundances of all the isotopes must add up to 100% (a total fraction of 1).
+
+### 3. The average leans toward the most common isotope
+
+Because chlorine-35 is about three times as common as chlorine-37, the average (35.45 u) is much closer to 35 than to 37.
+
+<Analogy>
+Your final course grade might be an exam worth 75% and coursework worth 25%. If you score 35 on the exam and 37 on the coursework, your overall mark isn't the simple average (36). It's pulled toward the exam score because the exam counts more. Isotope abundances work the same way: they're the "weights".
+</Analogy>
+
+<MorePrecisely>
+Chlorine exists naturally as $\ce{Cl2}$ molecules, so a real mass spectrum of chlorine gas also shows molecular peaks (around 70, 72 and 74 u). The diagram below is simplified to show single atoms. Isotope abundances also vary very slightly between natural sources, which is why IUPAC gives some standard atomic weights as a small range. Values such as Cl = 35.45 are conventional rounded values for everyday use.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/isotopes/chlorine-spectrum.svg" alt="Simplified mass spectrum of chlorine. Two bars: chlorine-35, mass 34.969 u, abundance 75.76 percent; chlorine-37, mass 36.966 u, abundance 24.24 percent. The weighted average is 35.45 u, the value on the periodic table, closer to 35 than to 37." caption="Chlorine-35 is about three times as common as chlorine-37, so the average sits near 35." width={360} height={340} />
+
+## Worked example
+
+<Example title="Average atomic mass of chlorine">
+**Question:** Chlorine-35 (34.969 u) makes up 75.76% of chlorine atoms, and chlorine-37 (36.966 u) makes up 24.24%. Calculate the average atomic mass.
+
+1. Convert to fractions: 0.7576 and 0.2424 (they add up to 1).
+2. Multiply and add: $(0.7576 \times 34.969) + (0.2424 \times 36.966)$
+3. $= 26.493 + 8.961 = 35.45$ u
+
+**Answer:** **35.45 u**, the value on the periodic table.
+</Example>
+
+<Example title="An element with three isotopes">
+**Question:** Magnesium consists of magnesium-24 (23.985 u, 78.99%), magnesium-25 (24.986 u, 10.00%) and magnesium-26 (25.983 u, 11.01%). Calculate its average atomic mass.
+
+$(0.7899 \times 23.985) + (0.1000 \times 24.986) + (0.1101 \times 25.983) = 24.31$ u
+</Example>
+
+<Example title="Finding an abundance from the average">
+**Question:** Gallium has two isotopes, gallium-69 (68.926 u) and gallium-71 (70.925 u). Its average atomic mass is 69.723 u. What percentage of gallium atoms are gallium-69?
+
+1. Let $x$ = fraction of gallium-69, so gallium-71 is $1 - x$.
+2. $68.926x + 70.925(1 - x) = 69.723$
+3. $70.925 - 1.999x = 69.723$, so $x = \dfrac{1.202}{1.999} = 0.601$
+
+**Answer:** about **60.1%** of gallium atoms are gallium-69 (and 39.9% are gallium-71).
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Taking a simple average">
+Averaging 34.969 and 36.966 gives 35.97 u, which is wrong. The isotopes are not equally common, so each mass must be **weighted** by its abundance.
+</CommonMistake>
+
+<CommonMistake title="Using percentages instead of fractions">
+Multiplying by 75.76 instead of 0.7576 gives an answer 100 times too big. Convert percentages to decimals first (or divide your final sum by 100).
+</CommonMistake>
+
+<CommonMistake title="Confusing mass number with isotope mass">
+The **mass number** (35) is a whole-number count of protons and neutrons. The **isotope mass** (34.969 u) is the measured mass, which is slightly different. Use the isotope masses for accurate averages.
+</CommonMistake>
+
+<NotationNote>
+- Periodic-table values are also called **relative atomic mass** ($A_\text{r}$, no units) or **atomic weight**, especially in UK courses and in IUPAC terminology.
+- Abundance may be given as a percentage or as a fraction; check which before calculating.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Atomic mass on the periodic table = **weighted average** of the isotope masses.
+- Average = Σ (fraction × isotope mass), with fractions adding up to 1.
+- The average is closest to the most abundant isotope.
+- Never use a simple average unless the isotopes are equally common.
+</RememberThis>

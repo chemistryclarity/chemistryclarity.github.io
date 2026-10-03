@@ -1,0 +1,42 @@
+# Flashcards: pH and the pH Scale
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values checked by computer.
+# Formulas: put text containing a formula in 'single quotes'. Write an apostrophe as two: ''
+
+title: 'pH: Flashcards'
+description: 'Revise pH, pOH, Kw and pH calculations for strong acids and bases.'
+level: intermediate
+access: free
+status: review
+assisted: true
+
+cards:
+  - id: ph-01
+    front: 'What is the definition of pH?'
+    back: '$\text{pH} = -\log[\ce{H3O+}]$'
+  - id: ph-02
+    front: 'At 25 °C, what pH values are acidic, neutral and basic?'
+    back: 'Below 7 acidic, exactly 7 neutral, above 7 basic.'
+  - id: ph-03
+    front: 'What is $K_\text{w}$ at 25 °C?'
+    back: '$K_\text{w} = [\ce{H3O+}][\ce{OH-}] = 1.0 \times 10^{-14}$'
+  - id: ph-04
+    front: 'What is the relationship between pH and pOH at 25 °C?'
+    back: 'pH + pOH = 14.00'
+  - id: ph-05
+    front: 'How many times more $\ce{H3O+}$ does a pH 3 solution have than a pH 6 solution?'
+    back: '1000 times ($10^3$): each pH unit is a factor of 10.'
+  - id: ph-06
+    front: 'What is the pH of 0.010 M HCl?'
+    back: '$-\log(0.010) = 2.00$'
+  - id: ph-07
+    front: 'What is the pH of 0.0010 M NaOH?'
+    back: 'pOH = 3.00, so pH = 14.00 − 3.00 = 11.00'
+  - id: ph-08
+    front: 'How do you find $[\ce{H3O+}]$ from the pH?'
+    back: '$[\ce{H3O+}] = 10^{-\text{pH}}$'
+  - id: ph-09
+    front: 'What is $[\ce{OH-}]$ in 0.020 M $\ce{Ca(OH)2}$?'
+    back: '0.040 M: each formula unit releases two $\ce{OH-}$ ions.'
+  - id: ph-10
+    front: 'How many decimal places should a pH have?'
+    back: 'As many as the significant figures in the concentration (0.050 M → pH 1.30).'

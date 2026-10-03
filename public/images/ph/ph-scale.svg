@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .num { fill: #14213d; font-size: 11px; font-weight: 650; }
+    .zone { font-size: 12px; font-weight: 750; }
+    .za { fill: #be123c; } .zn { fill: #15803d; } .zb { fill: #4338ca; }
+    .ex { fill: #14213d; font-size: 11px; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .tick { stroke: #14213d; stroke-width: 1; }
+    .lead { stroke: #5b6577; stroke-width: 1; }
+    .frame { fill: none; stroke: #14213d; stroke-width: 1.2; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .num, .ex { fill: #e9edf5; }
+      .za { fill: #fda4af; } .zn { fill: #86efac; } .zb { fill: #a5b4fc; }
+      .sub { fill: #9aa5ba; }
+      .tick, .frame { stroke: #e9edf5; }
+      .lead { stroke: #9aa5ba; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="ph" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#b91c1c"/>
+      <stop offset="0.25" stop-color="#f97316"/>
+      <stop offset="0.42" stop-color="#facc15"/>
+      <stop offset="0.5" stop-color="#22c55e"/>
+      <stop offset="0.7" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <rect class="bg" width="360" height="330" rx="14"/>
+  <text class="t" x="20" y="30">The pH scale (at 25 °C)</text>
+
+  <!-- zones -->
+  <text class="zone za" x="20" y="62">ACIDIC</text>
+  <text class="zone zn" x="180" y="62" text-anchor="middle">NEUTRAL</text>
+  <text class="zone zb" x="340" y="62" text-anchor="end">BASIC</text>
+
+  <!-- examples above (approximate) -->
+  <line class="lead" x1="65.7" y1="96" x2="65.7" y2="110"/><text class="ex" x="62" y="90" text-anchor="middle">lemon juice ≈ 2</text>
+  <line class="lead" x1="134.3" y1="82" x2="134.3" y2="110"/><text class="ex" x="146" y="78" text-anchor="middle">black coffee ≈ 5</text>
+
+  <!-- bar: pH 0 at x=20, pH 14 at x=340 (22.857 px per unit) -->
+  <rect x="20" y="110" width="320" height="34" rx="6" fill="url(#ph)"/>
+  <rect class="frame" x="20" y="110" width="320" height="34" rx="6"/>
+
+  <!-- ticks and numbers -->
+  <g>
+    <line class="tick" x1="20" y1="144" x2="20" y2="150"/><text class="num" x="20" y="163" text-anchor="middle">0</text>
+    <line class="tick" x1="65.7" y1="144" x2="65.7" y2="150"/><text class="num" x="65.7" y="163" text-anchor="middle">2</text>
+    <line class="tick" x1="111.4" y1="144" x2="111.4" y2="150"/><text class="num" x="111.4" y="163" text-anchor="middle">4</text>
+    <line class="tick" x1="157.1" y1="144" x2="157.1" y2="150"/><text class="num" x="157.1" y="163" text-anchor="middle">6</text>
+    <line class="tick" x1="180" y1="140" x2="180" y2="154"/><text class="num" x="180" y="176" text-anchor="middle">7</text>
+    <line class="tick" x1="202.9" y1="144" x2="202.9" y2="150"/><text class="num" x="202.9" y="163" text-anchor="middle">8</text>
+    <line class="tick" x1="248.6" y1="144" x2="248.6" y2="150"/><text class="num" x="248.6" y="163" text-anchor="middle">10</text>
+    <line class="tick" x1="294.3" y1="144" x2="294.3" y2="150"/><text class="num" x="294.3" y="163" text-anchor="middle">12</text>
+    <line class="tick" x1="340" y1="144" x2="340" y2="150"/><text class="num" x="340" y="163" text-anchor="middle">14</text>
+  </g>
+
+  <!-- examples below (approximate) -->
+  <line class="lead" x1="180" y1="180" x2="180" y2="196"/><text class="ex" x="186" y="208" text-anchor="end">pure water = 7</text>
+  <line class="lead" x1="189.1" y1="144" x2="214" y2="226"/><text class="ex" x="216" y="236">blood ≈ 7.4</text>
+  <line class="lead" x1="271" y1="144" x2="290" y2="252"/><text class="ex" x="292" y="262" text-anchor="middle">household</text><text class="ex" x="292" y="275" text-anchor="middle">ammonia ≈ 11</text>
+
+  <text class="sub" x="20" y="300">Each step of 1 pH unit = a 10× change in [H₃O⁺].</text>
+  <text class="sub" x="20" y="317">Everyday values are approximate. Colour is a guide only.</text>
+</svg>
