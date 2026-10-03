@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import AreaTile from '../../components/cards/AreaTile.astro';
+import { getAreas, getTopics } from '../../lib/content';
+
+const areas = await getAreas();
+const topics = await getTopics();
+const countFor = (id: string) => topics.filter((t) => t.data.area.id === id).length;
+---
+
+<BaseLayout
+  title="Learn Chemistry"
+  description="Browse chemistry topics by subject area, from foundations and atomic structure to acids and bases, equilibrium and organic chemistry."
+  path="/learn/"
+>
+  <div class="container section--tight section">
+    <Breadcrumbs items={[{ label: 'Learn' }]} />
+    <header class="section-head page-head">
+      <h1>Learn chemistry</h1>
+      <p class="lead">
+        Pick a subject area to see its lessons. Each lesson is marked Beginner, Intermediate or Advanced, so you can
+        start at the right level.
+      </p>
+    </header>
+    <ul class="tiles" role="list">
+      {areas.map((area) => <li><AreaTile area={area} topicCount={countFor(area.id)} /></li>)}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head { margin-top: var(--space-4); }
+  .page-head .lead { margin-top: var(--space-3); }
+  .tiles {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  }
+</style>

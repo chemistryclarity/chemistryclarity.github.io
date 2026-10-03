@@ -1,0 +1,63 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/source-serif-4';
+import '../styles/global.css';
+import SeoHead from '../components/seo/SeoHead.astro';
+import SiteHeader from '../components/layout/SiteHeader.astro';
+import SiteFooter from '../components/layout/SiteFooter.astro';
+import { site } from '../config/site';
+import { url } from '../lib/url';
+
+export interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown>[];
+  /** Show the draft banner. */
+  draft?: boolean;
+}
+
+const { draft = false, ...seo } = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href={url('/favicon.svg')} type="image/svg+xml" />
+    <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1524" media="(prefers-color-scheme: dark)" />
+    <link rel="sitemap" href={url('/sitemap.xml')} />
+    <SeoHead {...seo} noindex={seo.noindex || draft} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    {draft && (
+      <div class="draft-banner" role="note">
+        <div class="container">
+          <strong>Draft</strong> — this page is a work in progress and is hidden from search engines.
+        </div>
+      </div>
+    )}
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>
+
+<style>
+  .draft-banner {
+    background: var(--mistake-bg);
+    color: var(--mistake);
+    border-bottom: 1px solid var(--mistake);
+    font-size: var(--step--1);
+    padding-block: var(--space-2);
+  }
+  main:focus { outline: none; }
+</style>

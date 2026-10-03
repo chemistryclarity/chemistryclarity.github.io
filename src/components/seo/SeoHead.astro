@@ -1,0 +1,47 @@
+---
+import { site } from '../../config/site';
+import { absoluteUrl } from '../../lib/url';
+
+export interface Props {
+  title: string;
+  description: string;
+  /** Path without base, e.g. '/chemistry/mole-concept/'. Defaults to the current page. */
+  path?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  /** Structured data objects (schema.org), output as JSON-LD. */
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { title, description, path, image, type = 'website', noindex = false, jsonLd = [] } = Astro.props;
+
+const isHome = (path ?? '/') === '/' && title === site.name;
+const fullTitle = isHome ? `${site.name} — ${site.tagline}` : `${title} | ${site.name}`;
+const canonical = path ? absoluteUrl(path) : new URL(Astro.url.pathname, site.url).href;
+const shareImage = absoluteUrl(image ?? site.defaultShareImage);
+
+const organization = {
+  '@type': 'Organization',
+  '@id': `${absoluteUrl('/')}#organization`,
+  name: site.publisher,
+  url: absoluteUrl('/'),
+};
+const graph = [organization, ...jsonLd];
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+
+<meta property="og:site_name" content={site.name} />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={shareImage} />
+<meta property="og:locale" content={site.locale} />
+<meta name="twitter:card" content="summary_large_image" />
+
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />

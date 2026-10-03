@@ -1,0 +1,6 @@
+# Reusable sources. Add an entry, then cite it from a topic with:  references: [its-id]
+# Example (delete the # signs to use):
+# - id: example-source
+#   citation: "Author, A. (Year). Title of Book or Page. Publisher."
+#   url: "https://example.org/page"
+[]

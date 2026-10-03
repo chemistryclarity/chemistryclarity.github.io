@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { routes } from '../lib/url';
+---
+
+<BaseLayout title="Page not found" description="The page you were looking for could not be found." noindex>
+  <div class="container section notfound">
+    <p class="eyebrow">Error 404</p>
+    <h1>This page has dissociated.</h1>
+    <p class="lead">We couldn't find the page you were looking for. It may have moved, or the link may be mistyped.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href={routes.learn()}>Browse lessons</a>
+      <a class="btn btn--ghost" href={routes.home()}>Go to the homepage</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .notfound { max-width: 40rem; }
+  .notfound > * + * { margin-top: var(--space-4); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+</style>

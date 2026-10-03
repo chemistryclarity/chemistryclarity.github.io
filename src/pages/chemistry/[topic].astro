@@ -1,0 +1,122 @@
+---
+/**
+ * Topic page template. Every file in src/content/topics/ becomes a page at /chemistry/<file-name>/.
+ * (Stage 2 adds the video, flashcards, quiz, downloads, references and previous/next links.)
+ */
+import type { GetStaticPaths } from 'astro';
+import { getEntry, getEntries, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import LevelBadge from '../../components/cards/LevelBadge.astro';
+import MathStyles from '../../components/lesson/MathStyles.astro';
+import { getTopics, isDraft, isVisible } from '../../lib/content';
+import { routes, absoluteUrl } from '../../lib/url';
+import { site } from '../../config/site';
+
+export const getStaticPaths = (async () => {
+  const topics = await getTopics();
+  return topics.map((topic) => ({ params: { topic: topic.id }, props: { topic } }));
+}) satisfies GetStaticPaths;
+
+const { topic } = Astro.props;
+const { data } = topic;
+const area = await getEntry(data.area);
+const prerequisites = (await getEntries(data.prerequisites)).filter(isVisible);
+const related = (await getEntries(data.related)).filter(isVisible);
+const { Content } = await render(topic);
+const draft = isDraft(topic);
+const path = `/chemistry/${topic.id}/`;
+
+const jsonLd = [
+  {
+    '@type': 'LearningResource',
+    name: data.title,
+    headline: data.question,
+    description: data.description,
+    url: absoluteUrl(path),
+    inLanguage: site.language,
+    learningResourceType: 'Lesson',
+    educationalLevel: data.level,
+    about: area?.data.title,
+    isAccessibleForFree: true,
+    publisher: { '@id': `${absoluteUrl('/')}#organization` },
+    author: { '@id': `${absoluteUrl('/')}#organization` },
+    ...(data.lastReviewed ? { dateModified: data.lastReviewed.toISOString().slice(0, 10) } : {}),
+  },
+];
+
+const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<BaseLayout title={data.title} description={data.description} path={path} type="article" jsonLd={jsonLd} draft={draft}>
+  <MathStyles />
+  <article class="container section section--tight topic">
+    <Breadcrumbs
+      items={[
+        { label: 'Learn', href: '/learn/' },
+        ...(area ? [{ label: area.data.title, href: `/learn/${area.id}/` }] : []),
+        { label: data.title },
+      ]}
+    />
+
+    <header class="topic__head">
+      <h1>{data.title}</h1>
+      <p class="lead topic__question">{data.question}</p>
+      <div class="topic__meta">
+        <LevelBadge level={data.level} />
+        {area && <a class="badge" href={routes.area(area.id)}>{area.data.title}</a>}
+        {data.lastReviewed && <span class="muted">Last reviewed {fmtDate(data.lastReviewed)}</span>}
+      </div>
+    </header>
+
+    {prerequisites.length > 0 && (
+      <aside class="prereq" aria-label="Before you start">
+        <strong>Before you start:</strong> it helps to understand{' '}
+        {prerequisites.map((p, i) => (
+          <>
+            {i > 0 && (i === prerequisites.length - 1 ? ' and ' : ', ')}
+            <a href={routes.topic(p.id)}>{p.data.title}</a>
+          </>
+        ))}.
+      </aside>
+    )}
+
+    <div class="prose topic__body">
+      <Content />
+    </div>
+
+    {related.length > 0 && (
+      <nav class="related" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related topics</h2>
+        <ul role="list">
+          {related.map((r) => <li><a href={routes.topic(r.id)}>{r.data.title}</a></li>)}
+        </ul>
+      </nav>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .topic__head { margin-block: var(--space-5) var(--space-6); max-width: var(--measure); }
+  .topic__question { margin-top: var(--space-3); }
+  .topic__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
+    margin-top: var(--space-4);
+    font-size: var(--step--1);
+  }
+  .topic__meta a.badge { text-decoration: none; }
+  .prereq {
+    max-width: var(--measure);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-6);
+    background: var(--surface-2);
+    border-radius: var(--radius);
+    font-size: var(--step--1);
+  }
+  .related { margin-top: var(--space-8); max-width: var(--measure); }
+  .related h2 { font-size: var(--step-1); margin-bottom: var(--space-3); }
+  .related ul { padding-left: 1.2em; }
+</style>

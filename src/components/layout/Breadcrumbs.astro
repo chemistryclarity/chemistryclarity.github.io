@@ -1,0 +1,46 @@
+---
+import { absoluteUrl, url } from '../../lib/url';
+
+export interface Crumb {
+  label: string;
+  /** Path without base. Omit for the current page. */
+  href?: string;
+}
+export interface Props {
+  items: Crumb[];
+}
+
+const { items } = Astro.props;
+const all: Crumb[] = [{ label: 'Home', href: '/' }, ...items];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: all.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.label,
+    ...(c.href ? { item: absoluteUrl(c.href) } : {}),
+  })),
+};
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol role="list">
+    {all.map((c) => (
+      <li>
+        {c.href ? <a href={url(c.href)}>{c.label}</a> : <span aria-current="page">{c.label}</span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+<style>
+  .breadcrumbs { font-size: var(--step--1); color: var(--muted); }
+  ol { display: flex; flex-wrap: wrap; gap: 0.25rem; list-style: none; padding: 0; }
+  li + li::before { content: '/'; margin-right: 0.25rem; color: var(--border-strong); }
+  a { color: var(--muted); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
+  [aria-current='page'] { color: var(--ink-soft); }
+</style>

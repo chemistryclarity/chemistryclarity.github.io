@@ -1,0 +1,136 @@
+---
+import Logo from './Logo.astro';
+import { mainNav } from '../../config/navigation';
+import { url } from '../../lib/url';
+
+const current = Astro.url.pathname;
+const isActive = (href: string) => current.startsWith(url(href));
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <Logo />
+    <nav aria-label="Main">
+      <details class="menu">
+        <summary class="menu__toggle">
+          <span class="menu__icon" aria-hidden="true"></span>
+          Menu
+        </summary>
+        <ul class="menu__list" role="list">
+          {mainNav.map((item) => (
+            <li>
+              <a href={url(item.href)} aria-current={isActive(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4rem;
+    gap: var(--space-4);
+  }
+
+  /* Mobile: disclosure menu (works without JavaScript) */
+  .menu { position: relative; }
+  .menu__toggle {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 44px;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: var(--step--1);
+    cursor: pointer;
+    background: var(--surface);
+  }
+  .menu__toggle::-webkit-details-marker { display: none; }
+  .menu__icon,
+  .menu__icon::before,
+  .menu__icon::after {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    position: relative;
+  }
+  .menu__icon::before, .menu__icon::after { content: ''; position: absolute; }
+  .menu__icon::before { top: -5px; }
+  .menu__icon::after { top: 5px; }
+
+  .menu__list {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    min-width: 13rem;
+    padding: var(--space-2);
+    list-style: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-2);
+  }
+  .menu__list a {
+    display: block;
+    padding: 0.7rem var(--space-3);
+    border-radius: var(--radius-sm);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 550;
+  }
+  .menu__list a:hover { background: var(--surface-2); }
+  .menu__list a[aria-current='page'] { color: var(--accent); background: var(--accent-soft); }
+
+  /* Desktop: plain horizontal menu */
+  @media (min-width: 48rem) {
+    .menu__toggle { display: none; }
+    .menu__list {
+      position: static;
+      display: flex;
+      gap: var(--space-1);
+      padding: 0;
+      border: 0;
+      box-shadow: none;
+      background: none;
+      min-width: 0;
+    }
+    .menu__list a { padding: 0.5rem 0.85rem; }
+  }
+</style>
+
+<script>
+  // Desktop: keep the menu open. Mobile: close it after choosing a link or pressing Escape.
+  const menu = document.querySelector<HTMLDetailsElement>('.menu');
+  if (menu) {
+    const mq = window.matchMedia('(min-width: 48rem)');
+    const sync = () => { menu.open = mq.matches; };
+    sync();
+    mq.addEventListener('change', sync);
+    menu.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mq.matches && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary')?.focus();
+      }
+    });
+  }
+</script>

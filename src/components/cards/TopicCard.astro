@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
+import LevelBadge from './LevelBadge.astro';
+import { routes } from '../../lib/url';
+import { isDraft } from '../../lib/content';
+
+export interface Props {
+  topic: CollectionEntry<'topics'>;
+  /** Heading level for the card title, to keep the page outline correct. */
+  as?: 'h2' | 'h3' | 'h4';
+}
+const { topic, as: Heading = 'h3' } = Astro.props;
+const area = await getEntry(topic.data.area);
+---
+
+<article class="card" style={area ? `--card-hue: var(--hue-${area.data.hue})` : undefined}>
+  <p class="card__area">{area?.data.title}</p>
+  <Heading class="card__title">
+    <a href={routes.topic(topic.id)}>{topic.data.title}</a>
+  </Heading>
+  <p class="card__question">{topic.data.question}</p>
+  <div class="card__meta">
+    <LevelBadge level={topic.data.level} />
+    {isDraft(topic) && <span class="badge badge--draft">Draft</span>}
+  </div>
+</article>
+
+<style>
+  .card {
+    position: relative;
+    display: grid;
+    gap: var(--space-2);
+    align-content: start;
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--card-hue, var(--accent));
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .card:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+  .card__area {
+    font-size: var(--step--1);
+    font-weight: 600;
+    color: var(--card-hue, var(--accent));
+  }
+  .card__title { font-size: var(--step-1); }
+  .card__title a { color: var(--ink); text-decoration: none; }
+  /* Whole card is clickable, while keeping one accessible link */
+  .card__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .card__title a:focus-visible { outline: none; }
+  .card:has(a:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .card__question { color: var(--muted); font-size: var(--step--1); }
+  .card__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+</style>

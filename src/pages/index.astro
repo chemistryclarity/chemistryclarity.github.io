@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AreaTile from '../components/cards/AreaTile.astro';
+import TopicCard from '../components/cards/TopicCard.astro';
+import { site } from '../config/site';
+import { getAreas, getTopics } from '../lib/content';
+import { routes, url, absoluteUrl } from '../lib/url';
+
+const areas = await getAreas();
+const topics = await getTopics();
+const countFor = (id: string) => topics.filter((t) => t.data.area.id === id).length;
+const latest = [...topics].reverse().slice(0, 6);
+
+const method = [
+  { step: 'What is it?', text: 'A plain-language definition, without unexplained jargon.' },
+  { step: 'Why does it matter?', text: 'Where the idea shows up and why it is worth learning.' },
+  { step: 'How does it work?', text: 'A clear, step-by-step explanation of the reasoning.' },
+  { step: 'Visualise it', text: 'Diagrams, illustrations and analogies that make it click.' },
+  { step: 'Worked example', text: 'Every step shown, so you can follow and repeat it.' },
+  { step: 'Common mistake', text: 'What students often get wrong, and how to avoid it.' },
+  { step: 'Remember this', text: 'The key takeaway in one or two lines.' },
+  { step: 'Test yourself', text: 'Flashcards, practice questions and quizzes.' },
+];
+
+const jsonLd = [
+  {
+    '@type': 'WebSite',
+    '@id': `${absoluteUrl('/')}#website`,
+    name: site.name,
+    url: absoluteUrl('/'),
+    description: site.description,
+    inLanguage: site.language,
+    publisher: { '@id': `${absoluteUrl('/')}#organization` },
+  },
+];
+---
+
+<BaseLayout title={site.name} description={site.description} path="/" jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Chemistry made simple</p>
+        <h1>{site.tagline}</h1>
+        <p class="lead">
+          Clear, visual explanations of the chemistry concepts students find hardest, with worked examples,
+          flashcards and quizzes so you can check you really understand.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href={routes.learn()}>Start learning</a>
+          <a class="btn btn--ghost" href="#how-it-works">How lessons work</a>
+        </div>
+        <p class="hero__audience muted">For high-school, college and university students, and the teachers who help them.</p>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <svg viewBox="0 0 320 300" fill="none">
+          <g stroke="var(--border-strong)" stroke-width="2" stroke-linejoin="round">
+            <path d="M160 30 212 60v60l-52 30-52-30V60Z" />
+            <path d="M212 120l52 30v60l-52 30-52-30v-60" />
+            <path d="M108 120l-52 30v60l52 30 52-30" />
+            <path d="M264 150l40-23M56 150l-40-23M160 270v-30M160 30V6" />
+          </g>
+          <g stroke="var(--accent)" stroke-width="3" stroke-linejoin="round">
+            <path d="M212 120l52 30v60l-52 30-52-30v-60Z" />
+          </g>
+          <circle cx="212" cy="180" r="20" stroke="var(--accent)" stroke-width="3" />
+          <g fill="var(--surface)" stroke="var(--ink)" stroke-width="2">
+            <circle cx="160" cy="30" r="7" />
+            <circle cx="56" cy="150" r="7" />
+            <circle cx="264" cy="210" r="7" />
+            <circle cx="108" cy="240" r="7" />
+          </g>
+          <g fill="var(--accent)">
+            <circle cx="212" cy="120" r="5" />
+            <circle cx="160" cy="210" r="5" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="explore-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Explore</p>
+        <h2 id="explore-heading">Choose a subject area</h2>
+        <p>Start with the foundations, or jump straight to the topic you're studying.</p>
+      </div>
+      <ul class="grid grid--tiles" role="list">
+        {areas.map((area) => <li><AreaTile area={area} topicCount={countFor(area.id)} /></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section method" aria-labelledby="method-heading">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The Chemistry Clarity method</p>
+        <h2 id="method-heading">Every lesson follows the same clear path</h2>
+        <p>Complex chemistry → simple explanation → visual understanding → practice → mastery.</p>
+      </div>
+      <ol class="method__list" role="list">
+        {method.map((m, i) => (
+          <li class="method__item">
+            <span class="method__num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{m.step}</h3>
+            <p>{m.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  {latest.length > 0 && (
+    <section class="section" aria-labelledby="latest-heading">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">New</p>
+          <h2 id="latest-heading">Latest lessons</h2>
+        </div>
+        <ul class="grid grid--cards" role="list">
+          {latest.map((topic) => <li><TopicCard topic={topic} /></li>)}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <section class="section section--tight">
+    <div class="container trust">
+      <h2>Simple, but never careless</h2>
+      <p>
+        Simplifying chemistry is useful; getting it wrong is not. Every lesson is checked for accuracy, shows when it was
+        last reviewed, and points out where a simplified explanation has limits.
+      </p>
+      <a href={url('/editorial-standards/')}>Read our editorial standards →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-block: var(--space-7) var(--space-8);
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, var(--accent-soft), transparent 60%),
+      var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero__inner { display: grid; gap: var(--space-6); align-items: center; }
+  .hero__text > * + * { margin-top: var(--space-4); }
+  .hero h1 { max-width: 14ch; }
+  .hero .lead { max-width: 36rem; }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); padding-top: var(--space-2); }
+  .hero__audience { font-size: var(--step--1); }
+  .hero__art { max-width: 22rem; justify-self: center; width: 100%; }
+  @media (min-width: 56rem) {
+    .hero__inner { grid-template-columns: 1.3fr 1fr; }
+    .hero { padding-block: var(--space-9); }
+  }
+  @media (max-width: 40rem) {
+    .hero__art { display: none; }
+  }
+
+  .grid { list-style: none; padding: 0; display: grid; gap: var(--space-4); }
+  .grid--tiles { grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+  .grid--cards { grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+
+  .method { background: var(--surface-2); border-block: 1px solid var(--border); }
+  .method__list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  }
+  .method__item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+  }
+  .method__num {
+    display: block;
+    font-weight: 750;
+    font-size: var(--step--1);
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-2);
+  }
+  .method__item h3 { font-size: var(--step-0); }
+  .method__item p { color: var(--muted); font-size: var(--step--1); margin-top: var(--space-1); }
+
+  .trust { max-width: 44rem; text-align: center; }
+  .trust h2 { font-size: var(--step-2); }
+  .trust p { color: var(--ink-soft); margin-block: var(--space-3); }
+  .trust a { font-weight: 600; }
+</style>

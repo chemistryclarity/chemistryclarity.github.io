@@ -1,0 +1,37 @@
+---
+import { site } from '../../config/site';
+import { url } from '../../lib/url';
+
+export interface Props {
+  size?: 'sm' | 'md';
+}
+const { size = 'md' } = Astro.props;
+const [first, ...rest] = site.name.split(' ');
+---
+
+<a class:list={['logo', `logo--${size}`]} href={url('/')} aria-label={`${site.name} home`}>
+  <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+    <path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" />
+    <circle cx="16" cy="16" r="5.6" fill="none" stroke="var(--accent)" stroke-width="2.4" />
+  </svg>
+  <span class="logo__text">{first} <span class="logo__accent">{rest.join(' ')}</span></span>
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: 1.15rem;
+    white-space: nowrap;
+  }
+  .logo:hover { color: var(--ink); }
+  .logo__mark { width: 1.75rem; height: 1.75rem; flex: none; }
+  .logo__accent { color: var(--accent); }
+  .logo--sm { font-size: 1rem; }
+  .logo--sm .logo__mark { width: 1.45rem; height: 1.45rem; }
+</style>

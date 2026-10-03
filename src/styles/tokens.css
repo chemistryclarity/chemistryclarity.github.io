@@ -1,0 +1,118 @@
+/*
+ * Design tokens — the visual "settings" of Chemistry Clarity.
+ * Change colours, fonts or spacing here and the whole site follows.
+ */
+:root {
+  /* Typography */
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Source Serif 4 Variable', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.45vw, 1.4rem);
+  --step-2: clamp(1.44rem, 1.27rem + 0.8vw, 1.85rem);
+  --step-3: clamp(1.73rem, 1.45rem + 1.3vw, 2.45rem);
+  --step-4: clamp(2.07rem, 1.6rem + 2.2vw, 3.3rem);
+
+  --measure: 68ch;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+
+  --gutter: 1rem;
+  --page-max: 72rem;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+
+  /* Colour — light */
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f3f1ea;
+  --ink: #14213d;
+  --ink-soft: #3d4a63;
+  --muted: #5b6577;
+  --border: #e3e0d6;
+  --border-strong: #c9c5b8;
+
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --accent-soft: #e6f4f1;
+  --on-accent: #ffffff;
+  --focus: #b45309;
+
+  /* Lesson callouts (always paired with an icon + text label) */
+  --key: #1d4ed8;        --key-bg: #eef3ff;
+  --example: #6d28d9;    --example-bg: #f4f0ff;
+  --mistake: #b45309;    --mistake-bg: #fff7e8;
+  --remember: #15803d;   --remember-bg: #edf9f0;
+  --precise: #334155;    --precise-bg: #f1f4f8;
+
+  /* Subject-area hues (tiles) */
+  --hue-teal: #0f766e;
+  --hue-blue: #1d4ed8;
+  --hue-indigo: #4338ca;
+  --hue-violet: #7c3aed;
+  --hue-rose: #be123c;
+  --hue-amber: #b45309;
+  --hue-green: #15803d;
+  --hue-slate: #475569;
+
+  --shadow-1: 0 1px 2px rgb(20 33 61 / 0.06), 0 1px 1px rgb(20 33 61 / 0.04);
+  --shadow-2: 0 6px 20px -8px rgb(20 33 61 / 0.18);
+
+  color-scheme: light;
+}
+
+@media (min-width: 48rem) {
+  :root { --gutter: 2rem; }
+}
+
+/* Colour — dark (follows the device setting) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0e1524;
+    --surface: #151e31;
+    --surface-2: #1b263d;
+    --ink: #e9edf5;
+    --ink-soft: #c5cddc;
+    --muted: #9aa5ba;
+    --border: #27324a;
+    --border-strong: #3a4763;
+
+    --accent: #2dd4bf;
+    --accent-strong: #5eead4;
+    --accent-soft: #123a3a;
+    --on-accent: #062925;
+    --focus: #fbbf24;
+
+    --key: #93b4ff;        --key-bg: #172447;
+    --example: #c4b5fd;    --example-bg: #241b44;
+    --mistake: #fbbf24;    --mistake-bg: #33260f;
+    --remember: #86efac;   --remember-bg: #12301f;
+    --precise: #cbd5e1;    --precise-bg: #1c2638;
+
+    --hue-teal: #2dd4bf;
+    --hue-blue: #93b4ff;
+    --hue-indigo: #a5b4fc;
+    --hue-violet: #c4b5fd;
+    --hue-rose: #fda4af;
+    --hue-amber: #fbbf24;
+    --hue-green: #86efac;
+    --hue-slate: #cbd5e1;
+
+    --shadow-1: none;
+    --shadow-2: 0 6px 20px -8px rgb(0 0 0 / 0.6);
+    color-scheme: dark;
+  }
+}

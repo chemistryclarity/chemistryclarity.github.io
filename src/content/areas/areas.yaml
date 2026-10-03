@@ -1,0 +1,102 @@
+# Subject areas shown on the Learn page, in this order.
+# id:    used in the web address (/learn/<id>/) — never change it after launch
+# code:  3-letter tile code (avoid real element symbols, e.g. not "Ga" or "At")
+# hue:   tile colour: teal | blue | indigo | violet | rose | amber | green | slate
+
+- id: foundations
+  title: Foundations
+  code: Fnd
+  description: Matter, measurement, units and the core vocabulary of chemistry.
+  order: 1
+  hue: slate
+
+- id: atomic-structure
+  title: Atomic Structure & Periodicity
+  code: Atm
+  description: What atoms are made of, how electrons are arranged, and the patterns of the periodic table.
+  order: 2
+  hue: indigo
+
+- id: bonding
+  title: Bonding & Molecular Structure
+  code: Bnd
+  description: How atoms hold together, the shapes of molecules, and the forces between them.
+  order: 3
+  hue: violet
+
+- id: reactions-and-stoichiometry
+  title: Reactions & Stoichiometry
+  code: Stq
+  description: Chemical formulas and equations, the mole, and calculating amounts in reactions.
+  order: 4
+  hue: teal
+
+- id: states-of-matter
+  title: States of Matter & Gases
+  code: Sta
+  description: Solids, liquids and gases, and the relationships that describe gas behaviour.
+  order: 5
+  hue: blue
+
+- id: solutions
+  title: Solutions
+  code: Sol
+  description: Dissolving, concentration, and how solutions are prepared and described.
+  order: 6
+  hue: blue
+
+- id: acids-and-bases
+  title: Acids & Bases
+  code: Acb
+  description: Acids, bases, pH, neutralisation and buffers.
+  order: 7
+  hue: rose
+
+- id: thermochemistry
+  title: Thermochemistry & Thermodynamics
+  code: Thm
+  description: Energy changes in chemistry and what makes reactions happen.
+  order: 8
+  hue: amber
+
+- id: kinetics
+  title: Kinetics
+  code: Kin
+  description: How fast reactions go and what controls their rate.
+  order: 9
+  hue: amber
+
+- id: equilibrium
+  title: Equilibrium
+  code: Eqm
+  description: Reversible reactions and the balance they reach.
+  order: 10
+  hue: green
+
+- id: redox-and-electrochemistry
+  title: Redox & Electrochemistry
+  code: Rdx
+  description: Electron transfer, oxidation states, cells and electrolysis.
+  order: 11
+  hue: green
+
+- id: nuclear
+  title: Nuclear Chemistry
+  code: Nuc
+  description: Changes in the nucleus, radioactivity and their uses.
+  order: 12
+  hue: slate
+
+- id: organic
+  title: Organic Chemistry
+  code: Org
+  description: Carbon compounds — structures, names, functional groups and reactions.
+  order: 13
+  hue: teal
+
+- id: analytical
+  title: Analytical Chemistry
+  code: Anl
+  description: How chemists measure and identify substances — titration, spectroscopy and chromatography.
+  order: 14
+  hue: indigo

@@ -1,0 +1,73 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
+import TopicCard from '../../components/cards/TopicCard.astro';
+import { getAreas, getTopicsByArea, levelLabel } from '../../lib/content';
+import { routes } from '../../lib/url';
+
+export const getStaticPaths = (async () => {
+  const areas = await getAreas();
+  return areas.map((area) => ({ params: { area: area.id }, props: { area } }));
+}) satisfies GetStaticPaths;
+
+const { area } = Astro.props;
+const topics = await getTopicsByArea(area.id);
+const levels = (['beginner', 'intermediate', 'advanced'] as const)
+  .map((level) => ({ level, items: topics.filter((t) => t.data.level === level) }))
+  .filter((g) => g.items.length > 0);
+---
+
+<BaseLayout
+  title={`${area.data.title} — Chemistry Lessons`}
+  description={`${area.data.description} Simple explanations, worked examples and practice.`}
+  path={`/learn/${area.id}/`}
+  noindex={topics.length === 0}
+>
+  <div class="container section section--tight" style={`--area-hue: var(--hue-${area.data.hue})`}>
+    <Breadcrumbs items={[{ label: 'Learn', href: '/learn/' }, { label: area.data.title }]} />
+    <header class="section-head page-head">
+      <p class="eyebrow area-eyebrow">Subject area {area.data.order}</p>
+      <h1>{area.data.title}</h1>
+      <p class="lead">{area.data.description}</p>
+    </header>
+
+    {levels.length === 0 ? (
+      <div class="empty">
+        <p><strong>Lessons for this area are on the way.</strong></p>
+        <p class="muted">In the meantime, <a href={routes.learn()}>explore the other subject areas</a>.</p>
+      </div>
+    ) : (
+      levels.map((group) => (
+        <section class="level-group" aria-labelledby={`level-${group.level}`}>
+          <h2 id={`level-${group.level}`}>{levelLabel[group.level]}</h2>
+          <ul class="cards" role="list">
+            {group.items.map((topic) => <li><TopicCard topic={topic} /></li>)}
+          </ul>
+        </section>
+      ))
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head { margin-top: var(--space-4); }
+  .page-head .lead { margin-top: var(--space-3); }
+  .area-eyebrow { color: var(--area-hue); }
+  .level-group + .level-group { margin-top: var(--space-7); }
+  .level-group h2 { font-size: var(--step-2); margin-bottom: var(--space-4); }
+  .cards {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  }
+  .empty {
+    padding: var(--space-6);
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    max-width: 40rem;
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+/** Level shown as text + filled dots, so it never relies on colour alone. */
+import { levelLabel, levelRank } from '../../lib/content';
+
+export interface Props {
+  level: keyof typeof levelRank;
+}
+const { level } = Astro.props;
+const rank = levelRank[level];
+---
+
+<span class="badge level">
+  <span class="dots" aria-hidden="true">
+    {[1, 2, 3].map((i) => <span class:list={['dot', { on: i <= rank }]} />)}
+  </span>
+  {levelLabel[level]}
+</span>
+
+<style>
+  .dots { display: inline-flex; gap: 2px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; border: 1px solid currentColor; }
+  .dot.on { background: currentColor; }
+</style>
