@@ -2,7 +2,10 @@
 /**
  * Data box for worksheets, e.g. atomic masses and constants.
  *   <DataBox title="Data" items={['H = 1.008', 'C = 12.01']} note="…" />
+ * Items may contain formulas written between dollar signs, e.g. '$\ce{H2O}$'.
  */
+import { renderInline } from '../../lib/inline-math';
+
 export interface Props {
   title?: string;
   items: string[];
@@ -13,7 +16,7 @@ const { title = 'Data', items, note } = Astro.props;
 
 <aside class="data">
   <p class="data__title">{title}</p>
-  <ul>{items.map((i) => <li>{i}</li>)}</ul>
+  <ul>{items.map((i) => <li set:html={renderInline(i)} />)}</ul>
   {note && <p class="data__note">{note}</p>}
 </aside>
 

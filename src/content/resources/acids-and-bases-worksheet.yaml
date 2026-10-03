@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/acids-and-bases-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Acids and Bases Worksheet'
+description: '8 questions on Brønsted–Lowry acids and bases, conjugate pairs, strong vs weak and neutralization equations. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/acids-and-bases-worksheet.pdf'
+answerKey: '/downloads/acids-and-bases-worksheet-answers.pdf'
+preview: '/previews/acids-and-bases-worksheet.png'
+status: review

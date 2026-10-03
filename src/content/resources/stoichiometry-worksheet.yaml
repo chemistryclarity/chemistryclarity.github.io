@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/stoichiometry-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Stoichiometry Worksheet'
+description: '8 questions on mole ratios and mass calculations from balanced equations. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/stoichiometry-worksheet.pdf'
+answerKey: '/downloads/stoichiometry-worksheet-answers.pdf'
+preview: '/previews/stoichiometry-worksheet.png'
+status: review

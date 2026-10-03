@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/percent-composition-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Percent Composition Worksheet'
+description: '10 questions on formula mass, mass percent and the mass of an element in a sample, including a hydrate. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/percent-composition-worksheet.pdf'
+answerKey: '/downloads/percent-composition-worksheet-answers.pdf'
+preview: '/previews/percent-composition-worksheet.png'
+status: review

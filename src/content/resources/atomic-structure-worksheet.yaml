@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/atomic-structure-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Inside the Atom Worksheet'
+description: '7 questions on subatomic particles, atomic and mass numbers, ions and isotopes. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/atomic-structure-worksheet.pdf'
+answerKey: '/downloads/atomic-structure-worksheet-answers.pdf'
+preview: '/previews/atomic-structure-worksheet.png'
+status: review

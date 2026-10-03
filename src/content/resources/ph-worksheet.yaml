@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/ph-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'pH Worksheet'
+description: '9 questions on the pH scale and pH calculations for strong acids and bases. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/ph-worksheet.pdf'
+answerKey: '/downloads/ph-worksheet-answers.pdf'
+preview: '/previews/ph-worksheet.png'
+status: review

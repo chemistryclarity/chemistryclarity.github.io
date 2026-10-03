@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/empirical-formula-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Empirical and Molecular Formulas Worksheet'
+description: '9 questions: simplest ratios, empirical formulas from percent composition, and molecular formulas from molar mass. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/empirical-formula-worksheet.pdf'
+answerKey: '/downloads/empirical-formula-worksheet-answers.pdf'
+preview: '/previews/empirical-formula-worksheet.png'
+status: review

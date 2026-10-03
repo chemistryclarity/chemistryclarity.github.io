@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/molarity-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Molarity Worksheet'
+description: '9 questions on molarity, making and diluting solutions, and titration calculations. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/molarity-worksheet.pdf'
+answerKey: '/downloads/molarity-worksheet-answers.pdf'
+preview: '/previews/molarity-worksheet.png'
+status: review
