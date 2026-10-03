@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .cell { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.2; }
+    .lab { fill: #14213d; font-size: 13px; font-weight: 700; }
+    .arrow { stroke: #0f766e; stroke-width: 2; fill: none; marker-end: url(#hd); }
+    .hd { fill: #0f766e; }
+    .num { fill: #14213d; font-size: 10.5px; }
+    .bar { fill: #0f766e; }
+    .barx { fill: #b45309; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #ece9e1; stroke-width: 1; }
+    
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab, .num { fill: #e9edf5; }
+      .sub { fill: #9aa5ba; }
+      .cell { fill: #1b263d; stroke: #3a4763; }
+      .arrow { stroke: #2dd4bf; } .hd { fill: #2dd4bf; }
+      .bar { fill: #2dd4bf; } .barx { fill: #fbbf24; }
+      .axis { stroke: #e9edf5; } .grid { stroke: #27324a; }
+    }
+  </style>
+  <defs><marker id="hd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="420" rx="14"/>
+  <text class="t" x="20" y="28">Order of filling subshells</text>
+  <text class="sub" x="20" y="45">Follow each arrow from top to bottom, starting at the top.</text>
+  <path class="arrow" d="M82 50 L22 90"/><path class="arrow" d="M82 94 L22 134"/><path class="arrow" d="M156 94 L22 178"/><path class="arrow" d="M156 138 L22 222"/><path class="arrow" d="M230 138 L22 266"/><path class="arrow" d="M230 182 L22 310"/><path class="arrow" d="M304 182 L22 354"/><path class="arrow" d="M304 226 L96 354"/>
+  <rect class="cell" x="28" y="55" width="48" height="28" rx="6"/><text class="lab" x="52" y="74" text-anchor="middle">1s</text><rect class="cell" x="28" y="99" width="48" height="28" rx="6"/><text class="lab" x="52" y="118" text-anchor="middle">2s</text><rect class="cell" x="102" y="99" width="48" height="28" rx="6"/><text class="lab" x="126" y="118" text-anchor="middle">2p</text><rect class="cell" x="28" y="143" width="48" height="28" rx="6"/><text class="lab" x="52" y="162" text-anchor="middle">3s</text><rect class="cell" x="102" y="143" width="48" height="28" rx="6"/><text class="lab" x="126" y="162" text-anchor="middle">3p</text><rect class="cell" x="176" y="143" width="48" height="28" rx="6"/><text class="lab" x="200" y="162" text-anchor="middle">3d</text><rect class="cell" x="28" y="187" width="48" height="28" rx="6"/><text class="lab" x="52" y="206" text-anchor="middle">4s</text><rect class="cell" x="102" y="187" width="48" height="28" rx="6"/><text class="lab" x="126" y="206" text-anchor="middle">4p</text><rect class="cell" x="176" y="187" width="48" height="28" rx="6"/><text class="lab" x="200" y="206" text-anchor="middle">4d</text><rect class="cell" x="250" y="187" width="48" height="28" rx="6"/><text class="lab" x="274" y="206" text-anchor="middle">4f</text><rect class="cell" x="28" y="231" width="48" height="28" rx="6"/><text class="lab" x="52" y="250" text-anchor="middle">5s</text><rect class="cell" x="102" y="231" width="48" height="28" rx="6"/><text class="lab" x="126" y="250" text-anchor="middle">5p</text><rect class="cell" x="176" y="231" width="48" height="28" rx="6"/><text class="lab" x="200" y="250" text-anchor="middle">5d</text><rect class="cell" x="250" y="231" width="48" height="28" rx="6"/><text class="lab" x="274" y="250" text-anchor="middle">5f</text><rect class="cell" x="28" y="275" width="48" height="28" rx="6"/><text class="lab" x="52" y="294" text-anchor="middle">6s</text><rect class="cell" x="102" y="275" width="48" height="28" rx="6"/><text class="lab" x="126" y="294" text-anchor="middle">6p</text><rect class="cell" x="176" y="275" width="48" height="28" rx="6"/><text class="lab" x="200" y="294" text-anchor="middle">6d</text><rect class="cell" x="28" y="319" width="48" height="28" rx="6"/><text class="lab" x="52" y="338" text-anchor="middle">7s</text><rect class="cell" x="102" y="319" width="48" height="28" rx="6"/><text class="lab" x="126" y="338" text-anchor="middle">7p</text>
+  <text class="sub" x="20" y="384">1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d →</text>
+  <text class="sub" x="20" y="401">5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p</text>
+</svg>

@@ -1,0 +1,143 @@
+---
+title: Electron Configuration
+question: "How do you write electron configurations?"
+description: "How electrons fill shells, subshells and orbitals, the Aufbau principle, Pauli exclusion and Hund's rule, with configurations for atoms and ions."
+area: atomic-structure
+level: intermediate
+order: 30
+prerequisites: [atomic-structure]
+related: [atomic-structure, periodic-trends]
+flashcards: electron-configuration
+quiz: electron-configuration
+resources: [electron-configuration-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Configurations follow standard ground-state data, including the common exceptions Cr and Cu.
+  REVIEW: some courses write 4s before 3d (e.g. Fe [Ar]4s² 3d⁶); both orders are shown.
+*/}
+
+## What is it?
+
+An **electron configuration** shows how an atom's electrons are arranged in **shells** and **subshells**. For example, oxygen (8 electrons) is:
+
+$$
+1s^2\, 2s^2\, 2p^4
+$$
+
+Read it as: 2 electrons in the 1s subshell, 2 in 2s, and 4 in 2p.
+
+- The **number** is the shell (energy level), $n$ = 1, 2, 3…
+- The **letter** is the subshell type: **s, p, d** or **f**.
+- The **superscript** is the number of electrons in that subshell.
+
+<KeyIdea>
+Electrons fill the lowest-energy subshells first. Each subshell holds a fixed maximum: **s = 2, p = 6, d = 10, f = 14** electrons.
+</KeyIdea>
+
+## Why does it matter?
+
+- **It explains the periodic table.** Elements in the same group have similar outer (valence) configurations, which is why they behave alike.
+- **It predicts chemistry.** The number of valence electrons determines how an atom bonds and what ions it forms.
+- **It explains colour, magnetism and more.** Unpaired electrons and partly filled d subshells give many transition-metal compounds their colours and magnetic properties.
+
+## How does it work?
+
+### 1. Shells, subshells and orbitals
+
+| Subshell | Orbitals | Maximum electrons |
+|---|---|---|
+| s | 1 | 2 |
+| p | 3 | 6 |
+| d | 5 | 10 |
+| f | 7 | 14 |
+
+Each **orbital** holds at most **2 electrons** with opposite spins (the **Pauli exclusion principle**).
+
+### 2. The filling order (Aufbau principle)
+
+Subshells fill in order of increasing energy:
+
+1s → 2s → 2p → 3s → 3p → **4s → 3d** → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p
+
+Notice that **4s fills before 3d**. The diagonal diagram below is an easy way to remember the order.
+
+### 3. Hund's rule
+
+Within a subshell, electrons occupy **separate orbitals with parallel spins** before any orbital gets a second electron. For nitrogen's three 2p electrons: [↑] [↑] [↑], not [↑↓] [↑] [ ].
+
+### 4. Noble-gas shorthand
+
+Replace the inner (core) electrons with the previous noble gas in square brackets:
+
+- Sodium: $1s^2\, 2s^2\, 2p^6\, 3s^1$ = **[Ne] 3s¹**
+- Iron: **[Ar] 3d⁶ 4s²** (also written [Ar] 4s² 3d⁶)
+
+### 5. Ions
+
+- **Anions:** add electrons. $\ce{Cl-}$: [Ne] 3s² 3p⁶ = [Ar].
+- **Main-group cations:** remove electrons from the outermost subshell. $\ce{Na+}$: [Ne].
+- **Transition-metal cations:** remove **4s electrons first**, then 3d. $\ce{Fe^2+}$: [Ar] 3d⁶; $\ce{Fe^3+}$: [Ar] 3d⁵.
+
+<Analogy>
+Think of a hotel filling rooms from the ground floor up. Guests (electrons) take the cheapest rooms (lowest energy) first. Hund's rule is like passengers on a bus: people take empty double seats on their own before anyone sits next to a stranger.
+</Analogy>
+
+<MorePrecisely>
+A few elements break the simple filling order because half-filled and completely filled d subshells are especially stable: chromium is **[Ar] 3d⁵ 4s¹** (not 3d⁴ 4s²) and copper is **[Ar] 3d¹⁰ 4s¹** (not 3d⁹ 4s²). Also, once the 3d subshell contains electrons, its energy drops below 4s. That's why transition metals lose their 4s electrons first when they form ions.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/electron-configuration/filling-order.svg" alt="Diagonal rule diagram for the order of filling subshells. Subshells are arranged in rows by shell: 1s; 2s 2p; 3s 3p 3d; 4s 4p 4d 4f; 5s 5p 5d 5f; 6s 6p 6d; 7s 7p. Diagonal arrows running from upper right to lower left give the filling order: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d, 6p, 7s, 5f, 6d, 7p." caption="Follow the diagonal arrows to get the filling order." width={360} height={420} />
+
+## Worked example
+
+<Example title="Writing a configuration">
+**Question:** Write the full and noble-gas configurations of sulfur (Z = 16).
+
+1. 16 electrons, filled in order: 1s² (2), 2s² (4), 2p⁶ (10), 3s² (12), 3p⁴ (16)
+2. Full: $1s^2\, 2s^2\, 2p^6\, 3s^2\, 3p^4$
+3. Noble-gas form: **[Ne] 3s² 3p⁴**: 6 valence electrons, two of them unpaired (Hund's rule).
+</Example>
+
+<Example title="A transition-metal ion">
+**Question:** Write the configuration of $\ce{Fe^3+}$ (Fe: Z = 26).
+
+1. Fe atom: [Ar] 3d⁶ 4s²
+2. Remove 3 electrons, **4s first**: remove both 4s electrons, then one 3d electron.
+3. $\ce{Fe^3+}$: **[Ar] 3d⁵** (five unpaired electrons, one in each 3d orbital)
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Filling 3d before 4s">
+Potassium is [Ar] **4s¹**, not [Ar] 3d¹. The 4s subshell fills before 3d.
+</CommonMistake>
+
+<CommonMistake title="Removing 3d electrons first from transition metals">
+When transition metals form ions, the **4s** electrons are removed first. $\ce{Fe^2+}$ is [Ar] 3d⁶, not [Ar] 3d⁴ 4s².
+</CommonMistake>
+
+<CommonMistake title="Pairing electrons too early">
+Hund's rule: put one electron in each orbital of a subshell before pairing. Oxygen's 2p⁴ is [↑↓] [↑] [↑], with two unpaired electrons.
+</CommonMistake>
+
+<NotationNote>
+- Superscripts are sometimes written on the line, e.g. 1s2 2s2 2p4, when superscripts aren't available.
+- The order of writing 3d and 4s varies between textbooks ([Ar] 3d⁶ 4s² or [Ar] 4s² 3d⁶). Both are accepted.
+- "Aufbau" is German for "building up".
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Subshell capacities: s 2, p 6, d 10, f 14; each orbital holds 2 electrons.
+- Fill in order (4s before 3d); Hund's rule: spread out before pairing.
+- Noble-gas shorthand: [previous noble gas] + outer electrons.
+- Transition-metal ions lose 4s electrons first. Exceptions: Cr and Cu.
+</RememberThis>

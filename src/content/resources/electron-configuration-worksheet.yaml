@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/electron-configuration-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Electron Configuration Worksheet'
+description: '9 questions on configurations of atoms and ions, orbital diagrams and unpaired electrons. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/electron-configuration-worksheet.pdf'
+answerKey: '/downloads/electron-configuration-worksheet-answers.pdf'
+preview: '/previews/electron-configuration-worksheet.png'
+status: review

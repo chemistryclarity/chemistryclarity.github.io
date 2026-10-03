@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .cell { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.2; }
+    .lab { fill: #14213d; font-size: 13px; font-weight: 700; }
+    .arrow { stroke: #0f766e; stroke-width: 2; fill: none; marker-end: url(#hd); }
+    .hd { fill: #0f766e; }
+    .num { fill: #14213d; font-size: 10.5px; }
+    .bar { fill: #0f766e; }
+    .barx { fill: #b45309; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #ece9e1; stroke-width: 1; }
+    
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab, .num { fill: #e9edf5; }
+      .sub { fill: #9aa5ba; }
+      .cell { fill: #1b263d; stroke: #3a4763; }
+      .arrow { stroke: #2dd4bf; } .hd { fill: #2dd4bf; }
+      .bar { fill: #2dd4bf; } .barx { fill: #fbbf24; }
+      .axis { stroke: #e9edf5; } .grid { stroke: #27324a; }
+    }
+  </style>
+  <rect class="bg" width="360" height="360" rx="14"/>
+  <text class="t" x="20" y="28">First ionization energy, period 2</text>
+  <text class="sub" x="20" y="45">kJ/mol. The general trend rises across the period.</text>
+  <line class="grid" x1="52" y1="270" x2="340" y2="270"/><text class="num" x="48" y="274" text-anchor="end">0</text><line class="grid" x1="52" y1="222.27272727272728" x2="340" y2="222.27272727272728"/><text class="num" x="48" y="226.27272727272728" text-anchor="end">500</text><line class="grid" x1="52" y1="174.54545454545456" x2="340" y2="174.54545454545456"/><text class="num" x="48" y="178.54545454545456" text-anchor="end">1000</text><line class="grid" x1="52" y1="126.81818181818181" x2="340" y2="126.81818181818181"/><text class="num" x="48" y="130.8181818181818" text-anchor="end">1500</text><line class="grid" x1="52" y1="79.0909090909091" x2="340" y2="79.0909090909091"/><text class="num" x="48" y="83.0909090909091" text-anchor="end">2000</text>
+  <rect class="bar" x="56" y="220.3" width="30" height="49.7"/><text class="lab" x="71" y="286" text-anchor="middle">Li</text><text class="num" x="71" y="215.3" text-anchor="middle">520</text><rect class="bar" x="90.5" y="184.1" width="30" height="85.9"/><text class="lab" x="105.5" y="286" text-anchor="middle">Be</text><text class="num" x="105.5" y="179.1" text-anchor="middle">900</text><rect class="barx" x="125" y="193.6" width="30" height="76.4"/><text class="lab" x="140" y="286" text-anchor="middle">B</text><text class="num" x="140" y="188.6" text-anchor="middle">801</text><rect class="bar" x="159.5" y="166.3" width="30" height="103.7"/><text class="lab" x="174.5" y="286" text-anchor="middle">C</text><text class="num" x="174.5" y="161.3" text-anchor="middle">1087</text><rect class="bar" x="194" y="136.1" width="30" height="133.9"/><text class="lab" x="209" y="286" text-anchor="middle">N</text><text class="num" x="209" y="131.1" text-anchor="middle">1402</text><rect class="barx" x="228.5" y="144.6" width="30" height="125.4"/><text class="lab" x="243.5" y="286" text-anchor="middle">O</text><text class="num" x="243.5" y="139.6" text-anchor="middle">1314</text><rect class="bar" x="263" y="109.5" width="30" height="160.5"/><text class="lab" x="278" y="286" text-anchor="middle">F</text><text class="num" x="278" y="104.5" text-anchor="middle">1681</text><rect class="bar" x="297.5" y="71.4" width="30" height="198.6"/><text class="lab" x="312.5" y="286" text-anchor="middle">Ne</text><text class="num" x="312.5" y="66.4" text-anchor="middle">2081</text>
+  <path class="axis" d="M52 56 V270 H340"/>
+  <rect class="barx" x="20" y="306" width="12" height="12"/><text class="sub" x="38" y="316">Dips at B and O (explained in the lesson)</text>
+  <text class="sub" x="20" y="340">Values rounded from NIST spectroscopic data.</text>
+</svg>

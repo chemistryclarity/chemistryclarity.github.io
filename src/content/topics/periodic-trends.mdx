@@ -1,0 +1,138 @@
+---
+title: Periodic Trends
+question: "Why do atomic radius, ionization energy and electronegativity change across the periodic table?"
+description: "Atomic radius, ionization energy, electronegativity and ionic radius: how they change across periods and down groups, and why, using effective nuclear charge."
+area: atomic-structure
+level: intermediate
+order: 40
+prerequisites: [atomic-structure, electron-configuration]
+related: [electron-configuration, atomic-structure]
+flashcards: periodic-trends
+quiz: periodic-trends
+resources: [periodic-trends-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Ionization energies: NIST first ionization energies converted to kJ/mol (rounded to 0.1).
+  Electronegativities: Pauling scale. No numeric atomic radii are given, because values differ between definitions and sources.
+*/}
+
+## What is it?
+
+**Periodic trends** are the regular, predictable changes in the properties of elements as you move **across a period** (left to right) or **down a group** (top to bottom) of the periodic table. The four most important are:
+
+- **Atomic radius:** the size of an atom.
+- **First ionization energy:** the energy needed to remove one electron from each atom in a mole of gaseous atoms.
+- **Electronegativity:** how strongly an atom attracts the shared electrons in a chemical bond.
+- **Ionic radius:** the size of an ion.
+
+<KeyIdea>
+Two factors explain almost every trend: the **number of shells** (more shells means outer electrons are farther from the nucleus) and the **effective nuclear charge** (the net positive charge an outer electron actually feels).
+</KeyIdea>
+
+## Why does it matter?
+
+- **It predicts reactivity.** Group 1 metals get more reactive down the group because their outer electron is easier to remove.
+- **It predicts bonding.** The difference in electronegativity between two atoms tells you whether a bond is nonpolar, polar or ionic.
+- **It organises facts.** Instead of memorising the properties of 118 elements, you learn a few patterns and the reasons behind them.
+
+## How does it work?
+
+### 1. Effective nuclear charge
+
+Inner electrons **shield** outer electrons from the full nuclear charge. A simple estimate:
+
+$$
+Z_\text{eff} \approx Z - S
+$$
+
+where $Z$ is the number of protons and $S$ is the number of inner (core) electrons. For sodium, $Z_\text{eff} \approx 11 - 10 = 1$; for chlorine, in the same period, $Z_\text{eff} \approx 17 - 10 = 7$.
+
+- **Across a period:** protons are added but the core stays the same, so $Z_\text{eff}$ **increases**.
+- **Down a group:** a new shell is added each period, so outer electrons are **farther away**.
+
+### 2. Atomic radius
+
+- **Decreases across a period:** a higher $Z_\text{eff}$ pulls the same shell closer.
+- **Increases down a group:** each period adds a shell.
+
+### 3. First ionization energy
+
+- **Increases across a period:** outer electrons are held more tightly.
+- **Decreases down a group:** the outer electron is farther away and more shielded. Group 1: Li 520.2, Na 495.8, K 418.8, Rb 403.0, Cs 375.7 kJ/mol.
+
+### 4. Electronegativity
+
+- **Increases across a period** and **decreases down a group**, for the same reasons.
+- Fluorine is the most electronegative element (3.98 on the Pauling scale); caesium and francium are the least.
+
+### 5. Ionic radius
+
+- **Cations are smaller** than their atoms: often a whole shell is lost, and the remaining electrons feel more nuclear pull.
+- **Anions are larger** than their atoms: the extra electrons repel each other, and the same nuclear charge holds more electrons.
+- In an **isoelectronic series** (same number of electrons), more protons means a smaller ion: $\ce{O^2-} > \ce{F-} > \ce{Na+} > \ce{Mg^2+}$ (all have 10 electrons).
+
+<Analogy>
+Think of the nucleus as a magnet and the outer electrons as paper clips. Across a period the magnet gets stronger while the clips stay at the same distance, so they are held more tightly. Down a group the clips sit farther away, behind more layers of other clips, so they are held more loosely.
+</Analogy>
+
+<MorePrecisely>
+Ionization energy does not rise perfectly smoothly across a period. In period 2 there are two dips. **Boron** (800.6 kJ/mol) is lower than beryllium (899.5) because its outer electron is in a 2p orbital, slightly higher in energy than 2s. **Oxygen** (1313.9) is lower than nitrogen (1402.3) because oxygen's fourth 2p electron is paired, and repulsion between the paired electrons makes one of them easier to remove.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/periodic-trends/trends-map.svg" alt="Two outline periodic tables. The first shows atomic radius increasing towards the left and down a group, so the largest atoms are at the bottom left. The second shows ionization energy and electronegativity increasing towards the right and up a group, so the highest values are at the top right. Main-group trends; noble gases have no usual electronegativity." caption="Atomic radius grows towards the bottom left; ionization energy and electronegativity grow towards the top right." width={360} height={380} />
+
+<Figure src="/images/periodic-trends/ionization-energy.svg" alt="Bar chart of first ionization energies in kJ/mol for period 2: Li 520.2, Be 899.5, B 800.6, C 1086.5, N 1402.3, O 1313.9, F 1681.0, Ne 2080.7. The overall trend increases from left to right, with dips at boron and oxygen highlighted." caption="First ionization energies across period 2. The general rise has two dips, at B and O." width={360} height={360} />
+
+## Worked example
+
+<Example title="Ranking atomic radius">
+**Question:** Arrange Na, Mg, K and Cl in order of increasing atomic radius.
+
+1. Na, Mg and Cl are in period 3, where radius decreases from left to right: Cl < Mg < Na.
+2. K is directly below Na in group 1, with one more shell: K > Na.
+3. Order: **Cl < Mg < Na < K**
+</Example>
+
+<Example title="Explaining an ionization-energy trend">
+**Question:** Why is the first ionization energy of sodium (495.8 kJ/mol) lower than that of lithium (520.2 kJ/mol)?
+
+1. Na is [Ne] 3s¹ and Li is [He] 2s¹. Both have one outer s electron with $Z_\text{eff} \approx 1$.
+2. Sodium's outer electron is in the **third** shell, farther from the nucleus and shielded by more inner electrons.
+3. It is held less strongly, so **less energy** is needed to remove it.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking more protons make a bigger atom across a period">
+Across a period atoms get **smaller**, even though they have more protons and electrons. The added electrons go into the same shell, while the extra protons pull that shell in more tightly.
+</CommonMistake>
+
+<CommonMistake title="Confusing ionization energy with electronegativity">
+Ionization energy is about **removing** an electron from an isolated gaseous atom. Electronegativity is about attracting **shared** electrons in a bond. They follow similar trends but measure different things.
+</CommonMistake>
+
+<CommonMistake title="Assuming an ion is the same size as its atom">
+$\ce{Na+}$ is much smaller than Na (it has lost its whole third shell), and $\ce{Cl-}$ is larger than Cl.
+</CommonMistake>
+
+<NotationNote>
+- Ionization energies are usually given in kJ/mol (sometimes in eV per atom).
+- Electronegativity has no units; the Pauling scale is the most common.
+- $Z_\text{eff} \approx Z - S$ is a simple estimate. More detailed methods (such as Slater's rules) give values that are not whole numbers.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Across a period: $Z_\text{eff}$ increases, radius decreases, ionization energy and electronegativity increase.
+- Down a group: more shells, radius increases, ionization energy and electronegativity decrease.
+- Cations are smaller than their atoms; anions are larger.
+- Period 2 ionization-energy dips: B (2p electron) and O (paired 2p electron).
+</RememberThis>

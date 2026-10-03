@@ -1,0 +1,39 @@
+# Flashcards: Electron Configuration
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+title: 'Electron Configuration: Flashcards'
+description: 'Revise subshell capacities, filling order, Hund''s rule and configurations of atoms and ions.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ec-01
+    front: 'How many electrons can s, p, d and f subshells hold?'
+    back: 's 2, p 6, d 10, f 14'
+  - id: ec-02
+    front: 'How many electrons can one orbital hold?'
+    back: 'Two, with opposite spins (Pauli exclusion principle).'
+  - id: ec-03
+    front: 'Which fills first: 4s or 3d?'
+    back: '4s fills before 3d.'
+  - id: ec-04
+    front: 'What is Hund''s rule?'
+    back: 'Electrons occupy separate orbitals in a subshell, with parallel spins, before pairing up.'
+  - id: ec-05
+    front: 'Write the electron configuration of oxygen (Z = 8).'
+    back: '$1s^2\, 2s^2\, 2p^4$'
+  - id: ec-06
+    front: 'Write the noble-gas configuration of sodium (Z = 11).'
+    back: '[Ne] 3s¹'
+  - id: ec-07
+    front: 'Write the configuration of $\ce{Fe^2+}$ (Fe: Z = 26).'
+    back: '[Ar] 3d⁶ (the two 4s electrons are removed first)'
+  - id: ec-08
+    front: 'What are the electron configurations of chromium and copper?'
+    back: 'Cr: [Ar] 3d⁵ 4s¹; Cu: [Ar] 3d¹⁰ 4s¹ (exceptions to the simple filling order).'
+  - id: ec-09
+    front: 'How many unpaired electrons does nitrogen have?'
+    back: 'Three: its 2p³ electrons occupy three separate orbitals.'
+  - id: ec-10
+    front: 'What does the noble-gas core [Ar] represent?'
+    back: 'The 18 electrons of argon: $1s^2\, 2s^2\, 2p^6\, 3s^2\, 3p^6$'

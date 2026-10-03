@@ -1,0 +1,79 @@
+# Quiz: Electron Configuration
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Electron counts checked.
+title: 'Electron Configuration: Quiz'
+description: 'Seven questions on filling order, Hund''s rule and configurations of atoms and ions, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ec-q1
+    prompt: 'What is the electron configuration of fluorine (Z = 9)?'
+    choices:
+      - '$1s^2\, 2s^2\, 2p^5$'
+      - '$1s^2\, 2s^2\, 2p^6$'
+      - '$1s^2\, 2s^1\, 2p^6$'
+      - '$1s^2\, 2p^7$'
+    answer: '$1s^2\, 2s^2\, 2p^5$'
+    explanation: '9 electrons: 1s holds 2, 2s holds 2, and the remaining 5 go into 2p.'
+    difficulty: easy
+  - id: ec-q2
+    prompt: 'What is the noble-gas configuration of potassium (Z = 19)?'
+    choices:
+      - '[Ar] 3d¹'
+      - '[Ar] 4s¹'
+      - '[Ne] 3s¹'
+      - '[Ar] 4p¹'
+    answer: '[Ar] 4s¹'
+    explanation: 'After argon (18 electrons), the next subshell to fill is 4s, not 3d.'
+    difficulty: easy
+  - id: ec-q3
+    prompt: 'How many unpaired electrons does an oxygen atom have?'
+    choices:
+      - '0'
+      - '1'
+      - '2'
+      - '4'
+    answer: '2'
+    explanation: 'Oxygen 2p⁴: by Hund''s rule, [↑↓] [↑] [↑], so two unpaired electrons.'
+    difficulty: medium
+  - id: ec-q4
+    prompt: 'What is the configuration of $\ce{Fe^2+}$ (Fe: Z = 26)?'
+    choices:
+      - '[Ar] 3d⁶'
+      - '[Ar] 3d⁴ 4s²'
+      - '[Ar] 3d⁵ 4s¹'
+      - '[Ar] 3d⁸'
+    answer: '[Ar] 3d⁶'
+    explanation: 'Fe is [Ar] 3d⁶ 4s². Transition metals lose 4s electrons first, so Fe²⁺ is [Ar] 3d⁶.'
+    difficulty: medium
+  - id: ec-q5
+    prompt: 'Which element has the configuration [Ne] 3s² 3p³?'
+    choices:
+      - 'Nitrogen'
+      - 'Phosphorus'
+      - 'Sulfur'
+      - 'Arsenic'
+    answer: 'Phosphorus'
+    explanation: '10 (Ne) + 2 + 3 = 15 electrons, so Z = 15: phosphorus.'
+    difficulty: medium
+  - id: ec-q6
+    prompt: 'Which is the correct ground-state configuration of copper (Z = 29)?'
+    choices:
+      - '[Ar] 3d⁹ 4s²'
+      - '[Ar] 3d¹⁰ 4s¹'
+      - '[Ar] 3d¹¹'
+      - '[Ar] 4s² 4p⁹'
+    answer: '[Ar] 3d¹⁰ 4s¹'
+    explanation: 'Copper is an exception: a completely filled 3d subshell is especially stable, so one 4s electron moves to 3d.'
+    difficulty: hard
+  - id: ec-q7
+    prompt: 'What does the Pauli exclusion principle state?'
+    choices:
+      - 'Electrons fill the lowest energy subshells first'
+      - 'An orbital holds at most two electrons, with opposite spins'
+      - 'Electrons spread out before pairing'
+      - 'Electrons cannot be found in the nucleus'
+    answer: 'An orbital holds at most two electrons, with opposite spins'
+    explanation: 'That is Pauli. Filling lowest energy first is the Aufbau principle; spreading out before pairing is Hund''s rule.'
+    difficulty: easy

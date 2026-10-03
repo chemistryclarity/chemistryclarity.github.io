@@ -1,0 +1,39 @@
+# Flashcards: Periodic Trends
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Data: NIST ionization energies; Pauling electronegativities.
+title: 'Periodic Trends: Flashcards'
+description: 'Revise atomic radius, ionization energy, electronegativity, ionic radius and effective nuclear charge.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: pt-01
+    front: 'How does atomic radius change across a period and down a group?'
+    back: 'Decreases across a period (left to right); increases down a group.'
+  - id: pt-02
+    front: 'What is effective nuclear charge?'
+    back: 'The net positive charge felt by an outer electron, roughly $Z_\text{eff} \approx Z - S$ (protons minus inner electrons).'
+  - id: pt-03
+    front: 'What is first ionization energy?'
+    back: 'The energy needed to remove one electron from each atom in a mole of gaseous atoms.'
+  - id: pt-04
+    front: 'How does first ionization energy change across a period and down a group?'
+    back: 'Increases across a period; decreases down a group.'
+  - id: pt-05
+    front: 'Which element is the most electronegative?'
+    back: 'Fluorine (3.98 on the Pauling scale).'
+  - id: pt-06
+    front: 'Is a cation larger or smaller than its atom?'
+    back: 'Smaller. It often loses a whole shell, and the remaining electrons are pulled in more strongly.'
+  - id: pt-07
+    front: 'Is an anion larger or smaller than its atom?'
+    back: 'Larger. The added electrons repel each other, and the same nuclear charge holds more electrons.'
+  - id: pt-08
+    front: 'Order by size: $\ce{Na+}$, $\ce{F-}$, $\ce{Mg^2+}$, $\ce{O^2-}$'
+    back: '$\ce{O^2-} > \ce{F-} > \ce{Na+} > \ce{Mg^2+}$ (all have 10 electrons; more protons means a smaller ion)'
+  - id: pt-09
+    front: 'Why is the first ionization energy of B lower than that of Be?'
+    back: 'Boron''s outer electron is in a 2p orbital, which is higher in energy than 2s, so it is easier to remove.'
+  - id: pt-10
+    front: 'Why is the first ionization energy of O lower than that of N?'
+    back: 'Oxygen''s fourth 2p electron is paired; repulsion between the paired electrons makes one of them easier to remove.'

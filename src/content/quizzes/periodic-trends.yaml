@@ -1,0 +1,79 @@
+# Quiz: Periodic Trends
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Data: NIST ionization energies; Pauling electronegativities.
+title: 'Periodic Trends: Quiz'
+description: 'Seven questions on atomic radius, ionization energy, electronegativity and ionic radius, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: pt-q1
+    prompt: 'Which atom has the largest atomic radius?'
+    choices:
+      - 'Li'
+      - 'Na'
+      - 'K'
+      - 'Cl'
+    answer: 'K'
+    explanation: 'Radius increases down a group. K is below Li and Na in group 1, and Cl is far to the right in period 3.'
+    difficulty: easy
+  - id: pt-q2
+    prompt: 'Which element has the highest first ionization energy?'
+    choices:
+      - 'Li'
+      - 'C'
+      - 'F'
+      - 'Na'
+    answer: 'F'
+    explanation: 'Ionization energy increases across a period and decreases down a group. F is furthest right in period 2.'
+    difficulty: easy
+  - id: pt-q3
+    prompt: 'Why do atoms get smaller across a period?'
+    choices:
+      - 'They lose electron shells'
+      - 'Effective nuclear charge increases while the outer shell stays the same'
+      - 'Neutrons pull the electrons inwards'
+      - 'Electrons repel each other less'
+    answer: 'Effective nuclear charge increases while the outer shell stays the same'
+    explanation: 'Protons are added but the number of inner electrons stays the same, so the outer shell is pulled in more tightly.'
+    difficulty: medium
+  - id: pt-q4
+    prompt: 'Which ion is the smallest?'
+    choices:
+      - '$\ce{O^2-}$'
+      - '$\ce{F-}$'
+      - '$\ce{Na+}$'
+      - '$\ce{Mg^2+}$'
+    answer: '$\ce{Mg^2+}$'
+    explanation: 'All four have 10 electrons. Mg²⁺ has the most protons (12), so it pulls its electrons in most tightly.'
+    difficulty: medium
+  - id: pt-q5
+    prompt: 'Which is the correct order of increasing electronegativity?'
+    choices:
+      - 'F < O < N < C'
+      - 'K < Na < Li < F'
+      - 'Cl < Br < I'
+      - 'O < N < Na'
+    answer: 'K < Na < Li < F'
+    explanation: 'Electronegativity decreases down group 1 (K 0.82 < Na 0.93 < Li 0.98), and fluorine is the highest of all (3.98).'
+    difficulty: medium
+  - id: pt-q6
+    prompt: 'The first ionization energy of oxygen is lower than that of nitrogen. Why?'
+    choices:
+      - 'Oxygen has fewer protons'
+      - 'Oxygen''s outer electron is in a new shell'
+      - 'Oxygen has a paired 2p electron, and the repulsion makes it easier to remove'
+      - 'Nitrogen has a full outer shell'
+    answer: 'Oxygen has a paired 2p electron, and the repulsion makes it easier to remove'
+    explanation: 'N (2p³) has three unpaired electrons; in O (2p⁴) one orbital holds a pair, and the extra repulsion lowers the ionization energy.'
+    difficulty: hard
+  - id: pt-q7
+    prompt: 'Using $Z_\text{eff} \approx Z - S$, estimate the effective nuclear charge felt by a valence electron of chlorine (Z = 17).'
+    choices:
+      - '1'
+      - '7'
+      - '10'
+      - '17'
+    answer: '7'
+    explanation: 'Chlorine has 10 inner electrons (a [Ne] core), so $Z_\text{eff} \approx 17 - 10 = 7$.'
+    difficulty: medium
