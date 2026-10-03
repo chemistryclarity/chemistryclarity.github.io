@@ -2,7 +2,7 @@
 
 *Chemistry, made clear.* Clear, visual chemistry lessons with worked examples, flashcards, quizzes and printable resources.
 
-**Live site:** https://chemistryclarity.github.io/
+**Live site:** https://chemistryclarity.com/ (hosted free on GitHub Pages; see `docs/custom-domain.md`)
 
 Built with [Astro](https://astro.build) (a static site generator) and published free on GitHub Pages.
 

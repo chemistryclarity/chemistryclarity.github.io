@@ -20,7 +20,7 @@ directly to that service.
    people to expect this email, and it protects you from fake sign-ups.
 4. **Create an embedded form** in the service, then find its **HTML embed code**.
 5. **Set the form's success/redirect page** (if the service offers one) to:
-   `https://chemistryclarity.github.io/newsletter/thanks/`
+   `https://chemistryclarity.com/newsletter/thanks/`
 6. **Send the embed code to Claude**, or copy these values into `newsletter` in `src/config/site.ts`:
    - `provider`: the service name
    - `formAction`: the address inside `action="..."` in the embed code

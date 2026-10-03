@@ -7,7 +7,7 @@ including the contents list, video, flashcards, quiz, downloads, references and 
 
 1. Copy `templates/topic.mdx` into `src/content/topics/`.
 2. Rename it. **The file name becomes the web address**:
-   `molar-mass.mdx` → `https://chemistryclarity.github.io/chemistry/molar-mass/`
+   `molar-mass.mdx` → `https://chemistryclarity.com/chemistry/molar-mass/`
    Use lowercase words joined by hyphens. **Don't rename a file after it's published**, because links to it would break.
 3. Fill in the fields at the top (between the `---` lines). See the table below.
 4. Write the lesson underneath.

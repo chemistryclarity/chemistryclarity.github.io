@@ -113,9 +113,11 @@ await send('Runtime.enable');
 const siteConfig = fs.readFileSync('src/config/site.ts', 'utf8');
 const notice = siteConfig.match(/printableNotice:\s*'([^']*)'/)?.[1] ?? '';
 if (!notice) console.warn('Note: no printableNotice found in src/config/site.ts');
+// Web address printed in the footer, taken from `url` in src/config/site.ts
+const host = new URL(siteConfig.match(/^\s*url:\s*'([^']*)'/m)?.[1] ?? 'https://chemistryclarity.com').host;
 const year = new Date().getFullYear();
 const footer = `<div style="width:100%;font-family:Arial,sans-serif;font-size:7.5px;color:#777;padding:0 16mm;display:flex;justify-content:space-between;">
-  <span>© ${year} Chemistry Clarity · chemistryclarity.github.io · ${notice}</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>`;
+  <span>© ${year} Chemistry Clarity · ${host} · ${notice}</span><span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span></div>`;
 
 let failed = 0;
 for (const job of jobs) {

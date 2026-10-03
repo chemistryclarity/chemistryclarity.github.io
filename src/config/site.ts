@@ -11,8 +11,8 @@ export const site = {
   description:
     'Clear, visual explanations of chemistry concepts with worked examples, flashcards, quizzes and printable study resources.',
 
-  /** Live address. If a custom domain is added later, change `url` (and keep `base` as '/'). */
-  url: 'https://chemistryclarity.github.io',
+  /** Live address (custom domain; the old chemistryclarity.github.io address redirects here). */
+  url: 'https://chemistryclarity.com',
   base: '/',
 
   language: 'en',
