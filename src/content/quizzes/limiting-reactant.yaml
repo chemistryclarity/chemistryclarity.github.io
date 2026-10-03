@@ -1,89 +1,77 @@
-# Quiz: Limiting Reactants and Percent Yield
-# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
-# `answer` must be copied EXACTLY from one of the choices.
-# Atomic masses used: H 1.008, C 12.01, N 14.01, O 16.00
-
 title: 'Limiting Reactants: Quiz'
-description: 'Seven questions on limiting and excess reactants and percent yield, with explanations.'
+description: Seven questions on limiting and excess reactants and percent yield, with explanations.
 level: intermediate
 access: free
-status: review
+status: published
 assisted: true
-
 questions:
   - id: lr-q1
-    prompt: 'What is the limiting reactant in a reaction?'
+    prompt: What is the limiting reactant in a reaction?
     choices:
-      - 'The reactant with the smallest mass'
-      - 'The reactant that is used up first'
-      - 'The reactant with the smallest coefficient'
-      - 'The reactant that is left over at the end'
-    answer: 'The reactant that is used up first'
-    explanation: 'The limiting reactant runs out first, so it decides how much product can form. The reactant left over at the end is the excess reactant.'
+      - The reactant with the smallest mass
+      - The reactant that is used up first
+      - The reactant with the smallest coefficient
+      - The reactant that is left over at the end
+    answer: The reactant that is used up first
+    explanation: The limiting reactant runs out first, so it decides how much product can form. The reactant left over at the end is the excess reactant.
     difficulty: easy
-
   - id: lr-q2
-    prompt: 'In $\ce{2H2 + O2 -> 2H2O}$, 1.0 mol of $\ce{H2}$ is mixed with 0.6 mol of $\ce{O2}$. Which is the limiting reactant?'
+    prompt: In $\ce{2H2 + O2 -> 2H2O}$, 1.0 mol of $\ce{H2}$ is mixed with 0.6 mol of $\ce{O2}$. Which is the limiting reactant?
     choices:
-      - '$\ce{H2}$'
-      - '$\ce{O2}$'
-      - 'Neither; they react exactly'
-      - 'Both run out at the same time'
-    answer: '$\ce{H2}$'
-    explanation: '1.0 mol of $\ce{H2}$ needs $1.0 \times \dfrac{1}{2} = 0.50$ mol of $\ce{O2}$. There is 0.6 mol available, so oxygen is in excess and hydrogen runs out first, even though there are fewer moles of oxygen.'
+      - $\ce{H2}$
+      - $\ce{O2}$
+      - Neither; they react exactly
+      - Both run out at the same time
+    answer: $\ce{H2}$
+    explanation: 1.0 mol of $\ce{H2}$ needs $1.0 \times \dfrac{1}{2} = 0.50$ mol of $\ce{O2}$. There is 0.6 mol available, so oxygen is in excess and hydrogen runs out first, even though there are fewer moles of oxygen.
     difficulty: medium
-
   - id: lr-q3
-    prompt: 'In $\ce{N2 + 3H2 -> 2NH3}$, 2.0 mol of $\ce{N2}$ is mixed with 3.0 mol of $\ce{H2}$. How many moles of $\ce{NH3}$ can form?'
+    prompt: In $\ce{N2 + 3H2 -> 2NH3}$, 2.0 mol of $\ce{N2}$ is mixed with 3.0 mol of $\ce{H2}$. How many moles of $\ce{NH3}$ can form?
     choices:
-      - '2.0 mol'
-      - '3.0 mol'
-      - '4.0 mol'
-      - '6.0 mol'
-    answer: '2.0 mol'
+      - 2.0 mol
+      - 3.0 mol
+      - 4.0 mol
+      - 6.0 mol
+    answer: 2.0 mol
     explanation: 'All the $\ce{N2}$ would need 6.0 mol of $\ce{H2}$, but only 3.0 mol is available, so $\ce{H2}$ is limiting: $3.0 \times \dfrac{2}{3} = 2.0$ mol of $\ce{NH3}$. The answer 4.0 mol uses the excess reactant.'
     difficulty: medium
-
   - id: lr-q4
-    prompt: 'The theoretical yield of a reaction is 50.0 g, and 42.5 g of product is collected. What is the percent yield?'
+    prompt: The theoretical yield of a reaction is 50.0 g, and 42.5 g of product is collected. What is the percent yield?
     choices:
-      - '7.50%'
-      - '85.0%'
-      - '92.5%'
-      - '118%'
-    answer: '85.0%'
-    explanation: 'Percent yield = $\dfrac{42.5}{50.0} \times 100\% = 85.0\%$. The answer 118% divides the wrong way round.'
+      - 7.50%
+      - 85.0%
+      - 92.5%
+      - 118%
+    answer: 85.0%
+    explanation: Percent yield = $\dfrac{42.5}{50.0} \times 100\% = 85.0\%$. The answer 118% divides the wrong way round.
     difficulty: easy
-
   - id: lr-q5
-    prompt: 'In $\ce{2H2 + O2 -> 2H2O}$, 4.0 mol of $\ce{H2}$ reacts with 3.0 mol of $\ce{O2}$. How much of the excess reactant is left over?'
+    prompt: In $\ce{2H2 + O2 -> 2H2O}$, 4.0 mol of $\ce{H2}$ reacts with 3.0 mol of $\ce{O2}$. How much of the excess reactant is left over?
     choices:
-      - '1.0 mol of $\ce{O2}$'
-      - '2.0 mol of $\ce{O2}$'
-      - '1.0 mol of $\ce{H2}$'
-      - 'Nothing is left over'
-    answer: '1.0 mol of $\ce{O2}$'
-    explanation: '4.0 mol of $\ce{H2}$ needs only 2.0 mol of $\ce{O2}$, so hydrogen is limiting. Oxygen left over = 3.0 − 2.0 = 1.0 mol.'
+      - 1.0 mol of $\ce{O2}$
+      - 2.0 mol of $\ce{O2}$
+      - 1.0 mol of $\ce{H2}$
+      - Nothing is left over
+    answer: 1.0 mol of $\ce{O2}$
+    explanation: 4.0 mol of $\ce{H2}$ needs only 2.0 mol of $\ce{O2}$, so hydrogen is limiting. Oxygen left over = 3.0 − 2.0 = 1.0 mol.
     difficulty: medium
-
   - id: lr-q6
     prompt: '16.0 g of methane burns with 48.0 g of oxygen: $\ce{CH4 + 2O2 -> CO2 + 2H2O}$. What mass of $\ce{CO2}$ can form? (C = 12.01, H = 1.008, O = 16.00)'
     choices:
-      - '33.0 g'
-      - '43.9 g'
-      - '64.0 g'
-      - '66.0 g'
-    answer: '33.0 g'
+      - 33.0 g
+      - 43.9 g
+      - 64.0 g
+      - 66.0 g
+    answer: 33.0 g
     explanation: 'Moles: $\ce{CH4}$ = 16.0 ÷ 16.04 = 0.9974 mol; $\ce{O2}$ = 48.0 ÷ 32.00 = 1.50 mol. The methane would need 1.995 mol of $\ce{O2}$, so oxygen is limiting. $\ce{CO2}$ = 1.50 ÷ 2 = 0.750 mol, and 0.750 × 44.01 = 33.0 g. The answer 43.9 g uses the excess reactant (methane).'
     difficulty: hard
-
   - id: lr-q7
-    prompt: 'A student reports a percent yield of 112%. What is the most likely explanation?'
+    prompt: A student reports a percent yield of 112%. What is the most likely explanation?
     choices:
-      - 'The reaction produced extra product from nothing'
-      - 'The product was still wet or contained impurities'
-      - 'The limiting reactant was used in excess'
-      - 'Percent yields are always above 100%'
-    answer: 'The product was still wet or contained impurities'
-    explanation: 'Mass cannot be created, so a yield above 100% signals an error, most often a product that still contains water (solvent) or other substances.'
+      - The reaction produced extra product from nothing
+      - The product was still wet or contained impurities
+      - The limiting reactant was used in excess
+      - Percent yields are always above 100%
+    answer: The product was still wet or contained impurities
+    explanation: Mass cannot be created, so a yield above 100% signals an error, most often a product that still contains water (solvent) or other substances.
     difficulty: easy
