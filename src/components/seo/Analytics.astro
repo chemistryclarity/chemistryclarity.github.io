@@ -1,0 +1,19 @@
+---
+/**
+ * Visitor statistics: Cloudflare Web Analytics (free, no cookies, no personal tracking).
+ * Turned on only when `analytics.cloudflareToken` is set in src/config/site.ts.
+ * The token is public by design. It only identifies which site the statistics belong to.
+ */
+import { analytics } from '../../config/site';
+
+const token = analytics.cloudflareToken;
+---
+
+{token && (
+  <script
+    is:inline
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon={JSON.stringify({ token })}
+  ></script>
+)}

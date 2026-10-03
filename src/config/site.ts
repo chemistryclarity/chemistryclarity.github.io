@@ -86,5 +86,14 @@ export const newsletter: {
   minimumAge: 16,
 };
 
+/**
+ * VISITOR STATISTICS (Cloudflare Web Analytics: free, cookieless).
+ * Paste the token from Cloudflare (Analytics & Logs → Web Analytics → your site → "Manage site").
+ * Leave empty to turn statistics off. The token is public by design (not a password).
+ */
+export const analytics = {
+  cloudflareToken: '',
+};
+
 /** True only when the switch is on AND the form is connected. */
 export const newsletterEnabled = site.features.newsletter && newsletter.formAction !== '';

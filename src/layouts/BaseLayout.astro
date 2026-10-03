@@ -5,6 +5,7 @@ import '../styles/global.css';
 import SeoHead from '../components/seo/SeoHead.astro';
 import SiteHeader from '../components/layout/SiteHeader.astro';
 import SiteFooter from '../components/layout/SiteFooter.astro';
+import Analytics from '../components/seo/Analytics.astro';
 import { site } from '../config/site';
 import { url } from '../lib/url';
 
@@ -49,6 +50,7 @@ const { draft = false, ...seo } = Astro.props;
       <slot />
     </main>
     <SiteFooter />
+    <Analytics />
   </body>
 </html>
 
