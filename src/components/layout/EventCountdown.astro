@@ -6,6 +6,13 @@
  * the script also hides them in the browser, so a stale build never shows an old event.
  */
 import events from '../../config/events.json';
+import { url } from '../../lib/url';
+
+export interface Props {
+  /** Small version for the home page: title, countdown and a pointer to the News page. */
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
 
 interface Event {
   title: string;
@@ -26,7 +33,26 @@ const upcoming = (events as Event[]).filter((e) => {
 });
 ---
 
-{upcoming.length > 0 && (
+{compact && upcoming.length > 0 && (
+  <aside class="mini-events" aria-label="Upcoming events">
+    {upcoming.map((e) => (
+      <article class="event event--mini" data-start={e.start} data-hide-hours={e.hideAfterHours ?? 48}>
+        <p class="event__label" data-state-label>Coming up</p>
+        <p class="mini__title">{e.title}</p>
+        <p class="mini__time" data-official>{e.officialTime}</p>
+        <div class="event__count mini__count" data-count hidden aria-hidden="true">
+          <div><b data-d>0</b><span>d</span></div>
+          <div><b data-h>00</b><span>h</span></div>
+          <div><b data-m>00</b><span>min</span></div>
+          <div><b data-s>00</b><span>s</span></div>
+        </div>
+        <p class="mini__more"><a href={url('/news/')}>Details and live stream: see the News tab →</a></p>
+      </article>
+    ))}
+  </aside>
+)}
+
+{!compact && upcoming.length > 0 && (
   <section class="events" aria-label="Upcoming events">
     {upcoming.map((e) => (
       <article class="event" data-start={e.start} data-hide-hours={e.hideAfterHours ?? 48}>
@@ -67,6 +93,16 @@ const upcoming = (events as Event[]).filter((e) => {
   .event__count span { font-size: var(--step--1); color: var(--muted); }
   .event__link { margin-top: var(--space-4); }
   .event[data-state='live'] .event__label { color: var(--mistake); }
+  .mini-events { display: grid; gap: var(--space-3); margin-top: var(--space-5); max-width: 24rem; }
+  .event--mini { padding: var(--space-3) var(--space-4); }
+  .event--mini .event__label { font-size: 0.72rem; }
+  .mini__title { font-weight: 700; margin-top: var(--space-1); }
+  .mini__time { font-size: var(--step--1); color: var(--muted); margin-top: 2px; }
+  .mini__count { margin-top: var(--space-2); gap: var(--space-1); max-width: 16rem; }
+  .mini__count div { padding: 2px 0; }
+  .mini__count b { font-size: var(--step-1); }
+  .mini__count span { font-size: 0.72rem; }
+  .mini__more { margin-top: var(--space-2); font-size: var(--step--1); font-weight: 600; }
 </style>
 
 <script>

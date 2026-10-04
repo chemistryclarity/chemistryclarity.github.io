@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import AreaTile from '../components/cards/AreaTile.astro';
 import TopicCard from '../components/cards/TopicCard.astro';
 import NewsletterSignup from '../components/monetization/NewsletterSignup.astro';
+import EventCountdown from '../components/layout/EventCountdown.astro';
 import { site } from '../config/site';
 import { getAreas, getTopics } from '../lib/content';
 import { routes, url, absoluteUrl } from '../lib/url';
@@ -51,6 +52,7 @@ const jsonLd = [
           <a class="btn btn--ghost" href="#how-it-works">How lessons work</a>
         </div>
         <p class="hero__audience muted">For high-school, college and university students, and the teachers who help them.</p>
+        <EventCountdown compact />
       </div>
       <div class="hero__art" aria-hidden="true">
         <svg viewBox="0 0 320 300" fill="none">
