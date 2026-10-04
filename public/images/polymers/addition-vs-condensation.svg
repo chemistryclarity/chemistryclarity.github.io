@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .big { fill: #14213d; font-size: 14px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .node { fill: #f6f8fb; stroke: #8a94a6; stroke-width: 1.4; }
+    .nt { fill: #14213d; font-size: 12px; font-weight: 700; }
+    .nf { fill: #5b6577; font-size: 10px; }
+    .hd { fill: #14213d; } .stroke { stroke: #14213d; stroke-width: 1.6; fill: none; }
+    .acid { fill: #fde7c7; stroke: #b45309; stroke-width: 1.4; } .diol { fill: #d5f0ec; stroke: #0f766e; stroke-width: 1.4; }
+    .link { fill: #2563eb; font-size: 10px; font-weight: 700; } .water { fill: #2563eb; font-size: 11px; font-weight: 700; }
+    .a-add { stroke: #0f766e; stroke-width: 2; fill: none; marker-end: url(#m-add); } .m-add { fill: #0f766e; } .l-add { fill: #0f766e; font-size: 10px; font-weight: 700; }
+    .a-sub { stroke: #b45309; stroke-width: 2; fill: none; marker-end: url(#m-sub); } .m-sub { fill: #b45309; } .l-sub { fill: #b45309; font-size: 10px; font-weight: 700; }
+    .a-elim { stroke: #7c3aed; stroke-width: 2; fill: none; marker-end: url(#m-elim); } .m-elim { fill: #7c3aed; } .l-elim { fill: #7c3aed; font-size: 10px; font-weight: 700; }
+    .a-ox { stroke: #be123c; stroke-width: 2; fill: none; marker-end: url(#m-ox); } .m-ox { fill: #be123c; } .l-ox { fill: #be123c; font-size: 10px; font-weight: 700; }
+    .a-cond { stroke: #2563eb; stroke-width: 2; fill: none; marker-end: url(#m-cond); } .m-cond { fill: #2563eb; } .l-cond { fill: #2563eb; font-size: 10px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .big, .nt { fill: #e9edf5; } .sub, .num, .nf { fill: #9aa5ba; }
+      .node { fill: #1b263d; stroke: #6b7894; } .hd { fill: #e9edf5; } .stroke { stroke: #e9edf5; }
+      .acid { fill: #4a3410; stroke: #fbbf24; } .diol { fill: #12403a; stroke: #2dd4bf; } .link, .water { fill: #60a5fa; }
+      .a-add { stroke: #2dd4bf; } .m-add, .l-add { fill: #2dd4bf; }
+      .a-sub { stroke: #fbbf24; } .m-sub, .l-sub { fill: #fbbf24; }
+      .a-elim { stroke: #c4b5fd; } .m-elim, .l-elim { fill: #c4b5fd; }
+      .a-ox { stroke: #fb7185; } .m-ox, .l-ox { fill: #fb7185; }
+      .a-cond { stroke: #60a5fa; } .m-cond, .l-cond { fill: #60a5fa; }
+    }
+  </style>
+  <defs><marker id="m-add" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-add" d="M0 0 10 5 0 10z"/></marker><marker id="m-sub" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-sub" d="M0 0 10 5 0 10z"/></marker><marker id="m-elim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-elim" d="M0 0 10 5 0 10z"/></marker><marker id="m-ox" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-ox" d="M0 0 10 5 0 10z"/></marker><marker id="m-cond" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-cond" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="400" rx="14"/><text class="t" x="20" y="28">Two ways to build a polymer</text><text class="sub" x="20" y="45">Addition joins C=C monomers; condensation releases water.</text><text class="l-add" x="20" y="74" style="font-size:12px">ADDITION</text><text class="big" x="20" y="104">n CH₂=CH₂</text><path class="a-add" d="M112 99 H150"/><text class="num" x="131" y="88" text-anchor="middle">heat,</text><text class="num" x="131" y="115" text-anchor="middle">catalyst</text><path class="stroke" d="M166 88 Q160 99 166 110"/><text class="big" x="172" y="104">–CH₂–CH₂–</text><path class="stroke" d="M256 88 Q262 99 256 110"/><text class="lab" x="263" y="114">n</text><text class="sub" x="20" y="136">ethene (monomer) → poly(ethene): the C=C opens up;</text><text class="sub" x="20" y="150">nothing else is formed. Repeat unit in brackets.</text><line x1="20" y1="170" x2="340" y2="170" stroke="#8a94a6" stroke-opacity="0.35"/><text class="l-cond" x="20" y="196" style="font-size:12px">CONDENSATION (polyester)</text><text class="lab" x="20" y="236">HOOC–</text><rect class="acid" x="66" y="220" width="34" height="24" rx="4"/><text class="lab" x="104" y="236">–COOH</text><text class="big" x="158" y="237">+</text><text class="lab" x="178" y="236">HO–</text><circle class="diol" cx="217" cy="232" r="12"/><text class="lab" x="232" y="236">–OH</text><text class="sub" x="20" y="262">dicarboxylic acid</text><text class="sub" x="178" y="262">diol</text><path class="a-cond" d="M180 274 V294"/><text class="lab" x="20" y="324">–</text><rect class="acid" x="30" y="308" width="34" height="24" rx="4"/><text class="link" x="66" y="324">–COO–</text><circle class="diol" cx="117" cy="320" r="12"/><text class="link" x="132" y="324">–OOC–</text><rect class="acid" x="170" y="308" width="34" height="24" rx="4"/><text class="link" x="206" y="324">–COO–</text><circle class="diol" cx="257" cy="320" r="12"/><text class="link" x="272" y="324">–OOC–</text><text class="lab" x="308" y="324">…</text><text class="water" x="20" y="354">+ H₂O lost at every ester link</text><text class="sub" x="20" y="386">Polyamides (nylon) form the same way, with –CONH– links.</text>
+</svg>

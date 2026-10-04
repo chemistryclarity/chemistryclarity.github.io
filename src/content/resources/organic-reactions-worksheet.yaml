@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/organic-reactions-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Reactions of Organic Compounds Worksheet'
+description: '9 questions on reaction types, predicting products, chemical tests, Markovnikov addition, yields and a multi-step synthesis. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/organic-reactions-worksheet.pdf'
+answerKey: '/downloads/organic-reactions-worksheet-answers.pdf'
+preview: '/previews/organic-reactions-worksheet.png'
+status: review

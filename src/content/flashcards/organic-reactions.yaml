@@ -1,0 +1,39 @@
+# Flashcards: Reactions of Organic Compounds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Equations checked by computer.
+title: 'Reactions of Organic Compounds: Flashcards'
+description: 'Revise addition, substitution, elimination, oxidation and condensation reactions, and the bromine-water and dichromate tests.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: or-01
+    front: 'What is an addition reaction?'
+    back: 'Two molecules join to form one; in alkenes the C=C opens and an atom or group adds to each carbon.'
+  - id: or-02
+    front: 'What is a substitution reaction?'
+    back: 'One atom or group is replaced by another, e.g. CH₄ + Cl₂ → CH₃Cl + HCl (in UV light).'
+  - id: or-03
+    front: 'What is an elimination reaction?'
+    back: 'A small molecule is removed and a C=C forms, e.g. ethanol → ethene + water (conc. H₂SO₄, heat).'
+  - id: or-04
+    front: 'Test for a C=C double bond?'
+    back: 'Orange-brown bromine water is decolourised by an alkene (addition). Alkanes leave it orange.'
+  - id: or-05
+    front: 'Products of ethene with H₂ (Ni), HBr and steam (H⁺)?'
+    back: 'Ethane, bromoethane and ethanol (all addition).'
+  - id: or-06
+    front: 'What does a haloalkane give with aqueous OH⁻?'
+    back: 'An alcohol (substitution), e.g. CH₃CH₂Br + OH⁻ → CH₃CH₂OH + Br⁻.'
+  - id: or-07
+    front: 'Oxidation of a primary alcohol with acidified dichromate?'
+    back: 'Aldehyde (distil off at once), then carboxylic acid (heat under reflux). Orange → green.'
+  - id: or-08
+    front: 'Oxidation of secondary and tertiary alcohols?'
+    back: 'Secondary → ketone. Tertiary → no reaction (dichromate stays orange).'
+  - id: or-09
+    front: 'What is a condensation reaction?'
+    back: 'Two molecules join and release a small molecule, usually water, e.g. acid + alcohol ⇌ ester + water.'
+  - id: or-10
+    front: 'State Markovnikov''s rule.'
+    back: 'When HX adds to an unsymmetrical alkene, H goes to the carbon that already has more H atoms: propene + HBr gives mainly 2-bromopropane.'

@@ -1,0 +1,79 @@
+# Quiz: Reactions of Organic Compounds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Equations and values checked by computer.
+title: 'Reactions of Organic Compounds: Quiz'
+description: 'Seven questions on reaction types, products, tests for functional groups and a reacting-mass calculation, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: or-q1
+    prompt: 'CH₂=CH₂ + Br₂ → CH₂BrCH₂Br is an example of:'
+    choices:
+      - 'addition'
+      - 'substitution'
+      - 'elimination'
+      - 'condensation'
+    answer: 'addition'
+    explanation: 'Two molecules join to form one product and the C=C becomes C–C.'
+    difficulty: easy
+  - id: or-q2
+    prompt: 'Which compound decolourises bromine water?'
+    choices:
+      - 'hexane'
+      - 'hex-1-ene'
+      - 'ethanol'
+      - 'ethanoic acid'
+    answer: 'hex-1-ene'
+    explanation: 'Only the alkene has a C=C, which adds bromine.'
+    difficulty: easy
+  - id: or-q3
+    prompt: 'What is formed when propan-2-ol is warmed with acidified potassium dichromate?'
+    choices:
+      - 'propanal'
+      - 'propanoic acid'
+      - 'propanone'
+      - 'propene'
+    answer: 'propanone'
+    explanation: 'Propan-2-ol is a secondary alcohol, so it is oxidized to a ketone: propanone.'
+    difficulty: medium
+  - id: or-q4
+    prompt: 'What reagent and condition convert ethanol into ethene?'
+    choices:
+      - 'H₂ with a Ni catalyst'
+      - 'concentrated H₂SO₄, heat'
+      - 'acidified K₂Cr₂O₇'
+      - 'Cl₂ in UV light'
+    answer: 'concentrated H₂SO₄, heat'
+    explanation: 'This is elimination (dehydration): water is removed and a C=C forms.'
+    difficulty: medium
+  - id: or-q5
+    prompt: 'Which alcohol is NOT oxidized by acidified dichromate?'
+    choices:
+      - 'ethanol'
+      - 'propan-1-ol'
+      - 'propan-2-ol'
+      - '2-methylpropan-2-ol'
+    answer: '2-methylpropan-2-ol'
+    explanation: 'It is a tertiary alcohol: the carbon bearing the –OH has no hydrogen, so it cannot be oxidized.'
+    difficulty: medium
+  - id: or-q6
+    prompt: 'What is the major product when HBr adds to propene?'
+    choices:
+      - '1-bromopropane'
+      - '2-bromopropane'
+      - '1,2-dibromopropane'
+      - 'bromopropene'
+    answer: '2-bromopropane'
+    explanation: 'Markovnikov''s rule: H adds to the end carbon (which has more H), and Br to the middle carbon.'
+    difficulty: hard
+  - id: or-q7
+    prompt: 'How many moles of Br₂ react with 0.200 mol of but-1-ene?'
+    choices:
+      - '0.100 mol'
+      - '0.200 mol'
+      - '0.400 mol'
+      - '0.800 mol'
+    answer: '0.200 mol'
+    explanation: 'One C=C adds one Br₂ (1 : 1), so 0.200 mol C₄H₈ reacts with 0.200 mol Br₂.'
+    difficulty: medium

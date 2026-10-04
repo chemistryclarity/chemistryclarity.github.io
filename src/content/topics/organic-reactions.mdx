@@ -1,0 +1,159 @@
+---
+title: Reactions of Organic Compounds
+question: "What are the main types of organic reaction, and how do you predict the products?"
+description: "Addition, substitution, elimination, oxidation and condensation reactions, the bromine and dichromate tests, a map linking the families, and reacting-mass calculations."
+area: organic
+level: intermediate
+order: 30
+prerequisites: [functional-groups, hydrocarbons-and-alkanes]
+related: [functional-groups, redox-reactions, polymers]
+flashcards: organic-reactions
+quiz: organic-reactions
+resources: [organic-reactions-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  [O] stands for the oxidizing agent (acidified potassium dichromate) in simplified equations.
+  Every equation checked by computer for atom balance; every value calculated by computer. Units shown in every step.
+*/}
+
+## What is it?
+
+Organic reactions look complicated, but almost all of them fall into a few **types**. Once you know the functional group in a molecule, you can predict which type of reaction it undergoes and what the product will be.
+
+| Type | What happens | Typical example |
+|---|---|---|
+| **Addition** | two molecules join to make one; a C=C becomes C–C | alkene + $\ce{Br2}$ |
+| **Substitution** | one atom or group swaps for another | alkane + $\ce{Cl2}$ |
+| **Elimination** | a small molecule (often $\ce{H2O}$) is removed, forming C=C | alcohol → alkene |
+| **Oxidation** | gain of O or loss of H | alcohol → aldehyde → acid |
+| **Condensation** | two molecules join and release a small molecule ($\ce{H2O}$) | acid + alcohol → ester |
+
+<KeyIdea>
+The **functional group** decides the reaction. Alkenes **add** across the C=C; alkanes and haloalkanes **substitute**; alcohols can be **oxidized**, **eliminated** (dehydrated) or **condensed** with acids. Learn one example of each and you can apply it to the whole family.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Making things.** Medicines, plastics, dyes and fuels are made by chains of these reactions, converting one functional group into another.
+- **Everyday chemistry.** Margarine is made by adding hydrogen to vegetable oils; wine turns to vinegar by oxidation; the breathalyser test once relied on dichromate turning green.
+- **Analysis.** Simple colour tests (bromine water, acidified dichromate) tell you which functional groups a compound contains.
+
+## How does it work?
+
+### 1. Addition reactions of alkenes
+
+The C=C double bond opens, and one atom or group adds to each carbon:
+
+- **Hydrogen** (with a nickel catalyst, about 150 °C): $\ce{CH2=CH2 + H2 -> CH3CH3}$
+- **Bromine**: $\ce{CH2=CH2 + Br2 -> CH2BrCH2Br}$ (1,2-dibromoethane)
+- **Hydrogen bromide**: $\ce{CH2=CH2 + HBr -> CH3CH2Br}$
+- **Water** (steam, acid catalyst): $\ce{CH2=CH2 + H2O -> CH3CH2OH}$, the industrial route to ethanol.
+
+**Test for C=C:** shake with orange-brown **bromine water**. An alkene **decolourises** it (the bromine adds across the double bond); an alkane does not.
+
+### 2. Substitution reactions
+
+- **Alkanes + halogens** in ultraviolet light: $\ce{CH4 + Cl2 -> CH3Cl + HCl}$. A hydrogen is swapped for a chlorine. Further substitution gives a mixture ($\ce{CH2Cl2}$, $\ce{CHCl3}$, $\ce{CCl4}$).
+- **Haloalkanes + hydroxide ions** (warm, aqueous): $\ce{CH3CH2Br + OH- -> CH3CH2OH + Br-}$. The halogen is replaced by –OH, giving an alcohol.
+
+### 3. Elimination: dehydrating alcohols
+
+Heating an alcohol with concentrated sulfuric acid (or passing its vapour over hot aluminium oxide) removes water and forms an alkene:
+
+$$
+\ce{CH3CH2OH -> CH2=CH2 + H2O}
+$$
+
+### 4. Oxidation of alcohols
+
+Warming with **acidified potassium dichromate** oxidizes alcohols; the orange dichromate turns **green** as it is reduced to $\ce{Cr^3+}$. Writing [O] for the oxidizing agent:
+
+- **Primary** alcohol (–OH on an end carbon) → **aldehyde** (if distilled off at once) → **carboxylic acid** (if heated under reflux):
+
+$$
+\begin{aligned}
+&\small \ce{CH3CH2OH + [O] -> CH3CHO + H2O} \\[2pt]
+&\small \ce{CH3CHO + [O] -> CH3COOH}
+\end{aligned}
+$$
+
+- **Secondary** alcohol → **ketone**: $\ce{CH3CH(OH)CH3 + [O] -> CH3COCH3 + H2O}$
+- **Tertiary** alcohol (–OH on a carbon with no hydrogen): **not** oxidized, so the dichromate stays orange.
+
+### 5. Condensation
+
+A carboxylic acid and an alcohol, with an acid catalyst, condense to an ester and water (see Functional Groups). Repeating condensation many times builds **polymers** such as polyesters and nylon.
+
+<Analogy>
+Think of the reaction types as moves in a game of building blocks. **Addition** snaps a new piece onto an open slot (the C=C). **Substitution** swaps one piece for another. **Elimination** pulls two pieces off and leaves a new open slot. **Condensation** clicks two models together and drops a small spare piece (water).
+</Analogy>
+
+<MorePrecisely>
+When an unsymmetrical reagent such as HBr adds to an unsymmetrical alkene such as propene, two products are possible. The major product follows **Markovnikov's rule**: the hydrogen adds to the carbon that already has more hydrogens, giving mostly 2-bromopropane. Substitution of haloalkanes is a **nucleophilic substitution**: the electron-rich $\ce{OH-}$ attacks the carbon bonded to the electronegative halogen. Oxidation of alcohols is a redox reaction: carbon's oxidation number rises while chromium's falls from +6 to +3.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/organic-reactions/reaction-map.svg" alt="A map of organic reactions linking eight families. Alkane goes to haloalkane with Cl2 and UV light (substitution). Alkene goes to alkane with H2 and Ni, to haloalkane with HBr, and to alcohol with H2O and H+ (all addition). Haloalkane goes to alcohol with OH− (substitution). Alcohol goes back to alkene with concentrated H2SO4 and heat (elimination). Alcohol is oxidized: a primary alcohol to aldehyde and then to carboxylic acid, and a secondary alcohol to ketone. Carboxylic acid plus alcohol with H+ gives an ester (condensation)." caption="Functional groups are linked by a handful of reaction types; colours show the type." width={360} height={520} />
+
+## Worked example
+
+<Example title="Predicting products">
+**Question:** Give the product, its name and the type of reaction: (a) propene + bromine (b) ethanol heated with concentrated sulfuric acid (c) propan-2-ol warmed with acidified potassium dichromate.
+
+1. (a) Bromine adds across the C=C: $\ce{CH2=CHCH3 + Br2 -> CH2BrCHBrCH3}$, **1,2-dibromopropane**; **addition**.
+2. (b) Water is removed: $\ce{CH3CH2OH -> CH2=CH2 + H2O}$, **ethene**; **elimination** (dehydration).
+3. (c) A secondary alcohol is oxidized to a ketone: **propanone**, $\ce{CH3COCH3}$; **oxidation** (orange to green).
+</Example>
+
+<Example title="Telling an alkane from an alkene">
+**Question:** Two colourless liquids are hexane and hex-1-ene. How can you tell them apart?
+
+1. Add a few drops of orange-brown **bromine water** to each and shake.
+2. **Hex-1-ene** decolourises it: $\ce{C6H12 + Br2 -> C6H12Br2}$ (addition across the C=C, giving 1,2-dibromohexane).
+3. **Hexane** has no C=C, so the orange colour stays (substitution needs UV light).
+</Example>
+
+<Example title="Mass of bromine that reacts">
+**Question:** What mass of bromine reacts completely with 5.00 g of hex-1-ene? ($\ce{C6H12}$ = 84.16 g/mol; $\ce{Br2}$ = 159.80 g/mol)
+
+1. Equation: $\ce{C6H12 + Br2 -> C6H12Br2}$ (1 : 1)
+2. $n(\ce{C6H12}) = \dfrac{5.00\ \text{g}}{84.16\ \text{g/mol}} = 0.05941\ \text{mol}$
+3. $n(\ce{Br2}) = 0.05941\ \text{mol}\ \ce{C6H12} \times \dfrac{1\ \text{mol}\ \ce{Br2}}{1\ \text{mol}\ \ce{C6H12}} = 0.05941\ \text{mol}$
+4. $m(\ce{Br2}) = 0.05941\ \text{mol} \times 159.80\ \text{g/mol} =$ **9.49 g**
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Expecting alkanes to react with bromine water">
+Alkanes have no C=C, so they cannot undergo addition. They react with halogens only by substitution, and only in ultraviolet light. A colour change with bromine water in the dark means a C=C is present.
+</CommonMistake>
+
+<CommonMistake title="Oxidizing a tertiary alcohol">
+A tertiary alcohol has no hydrogen on the carbon bearing the –OH, so acidified dichromate cannot oxidize it: the solution stays orange. Only primary alcohols give aldehydes and acids; secondary alcohols give ketones.
+</CommonMistake>
+
+<CommonMistake title="Confusing addition and substitution products">
+Addition puts **both** parts of the reagent into **one** product ($\ce{CH2BrCH2Br}$). Substitution gives **two** products, because the atom that is replaced leaves ($\ce{CH3Cl + HCl}$).
+</CommonMistake>
+
+<NotationNote>
+- [O] means "oxygen from an oxidizing agent"; [H] is sometimes used for a reducing agent.
+- Conditions are written over the arrow in many books, for example UV light, Ni catalyst or reflux.
+- Primary, secondary and tertiary (1°, 2°, 3°) describe how many carbons are bonded to the carbon carrying the –OH: one, two or three.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Addition (alkenes): + H₂ (Ni), + Br₂, + HBr, + H₂O (H⁺). Bromine water decolourised = C=C present.
+- Substitution: alkane + Cl₂ (UV); haloalkane + OH⁻ → alcohol.
+- Elimination: alcohol + conc. H₂SO₄, heat → alkene + water.
+- Oxidation (acidified dichromate, orange → green): 1° alcohol → aldehyde → acid; 2° → ketone; 3° → no reaction.
+- Condensation: acid + alcohol ⇌ ester + water; repeated, it makes polymers.
+</RememberThis>

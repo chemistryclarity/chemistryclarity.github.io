@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/polymers-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Polymers Worksheet'
+description: '9 questions on monomers, repeat units, addition and condensation polymers, degree of polymerization, composition and disposal. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/polymers-worksheet.pdf'
+answerKey: '/downloads/polymers-worksheet-answers.pdf'
+preview: '/previews/polymers-worksheet.png'
+status: review

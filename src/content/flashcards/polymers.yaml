@@ -1,0 +1,39 @@
+# Flashcards: Polymers
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Formulas checked by computer.
+title: 'Polymers: Flashcards'
+description: 'Revise monomers, repeat units, addition and condensation polymers, nylon, polyesters, proteins and disposal.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: po-01
+    front: 'What are a monomer and a polymer?'
+    back: 'A monomer is a small molecule; a polymer is a very large molecule made by joining many monomers.'
+  - id: po-02
+    front: 'What is a repeat unit?'
+    back: 'The section of the chain that repeats, drawn in brackets with n, with bonds extending through the brackets.'
+  - id: po-03
+    front: 'What is addition polymerization?'
+    back: 'Alkene monomers join as their C=C bonds open; no other product forms.'
+  - id: po-04
+    front: 'Repeat unit of poly(propene)?'
+    back: '–[CH₂–CH(CH₃)]–: the CH₃ is a branch, not part of the main chain.'
+  - id: po-05
+    front: 'Monomer of PVC?'
+    back: 'Chloroethene, CH₂=CHCl (vinyl chloride).'
+  - id: po-06
+    front: 'What is condensation polymerization?'
+    back: 'Monomers with two functional groups join, releasing a small molecule (usually water) at every link.'
+  - id: po-07
+    front: 'Monomers of a polyester and of a polyamide?'
+    back: 'Polyester: dicarboxylic acid + diol (–COO– links). Polyamide (nylon): dicarboxylic acid + diamine (–CONH– links).'
+  - id: po-08
+    front: 'How are proteins related to polymers?'
+    back: 'They are condensation polymers of amino acids, joined by amide (peptide) links.'
+  - id: po-09
+    front: 'Thermoplastic vs thermoset?'
+    back: 'Thermoplastics soften on heating and can be remelted. Thermosets are cross-linked and do not melt.'
+  - id: po-10
+    front: 'Why are addition polymers not biodegradable?'
+    back: 'Their chains have only strong, unreactive C–C and C–H bonds, which microbes cannot easily break.'

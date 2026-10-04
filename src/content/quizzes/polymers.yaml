@@ -1,0 +1,79 @@
+# Quiz: Polymers
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Formulas and values checked by computer.
+title: 'Polymers: Quiz'
+description: 'Seven questions on monomers, repeat units, addition and condensation polymers and degree of polymerization, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: po-q1
+    prompt: 'Which monomer can form an addition polymer?'
+    choices:
+      - 'ethane'
+      - 'ethanol'
+      - 'propene'
+      - 'ethanoic acid'
+    answer: 'propene'
+    explanation: 'Addition polymerization needs a C=C double bond; only propene has one.'
+    difficulty: easy
+  - id: po-q2
+    prompt: 'What is the repeat unit of poly(propene)?'
+    choices:
+      - '–[CH₂=CH(CH₃)]–'
+      - '–[CH₂–CH(CH₃)]–'
+      - '–[CH₂–CH₂–CH₂]–'
+      - '–[CH(CH₃)=CH₂]–'
+    answer: '–[CH₂–CH(CH₃)]–'
+    explanation: 'The C=C opens into a single bond; the CH₃ stays as a branch. A three-carbon main chain is wrong.'
+    difficulty: medium
+  - id: po-q3
+    prompt: 'Which polymer is a condensation polymer?'
+    choices:
+      - 'poly(ethene)'
+      - 'PVC'
+      - 'nylon-6,6'
+      - 'PTFE'
+    answer: 'nylon-6,6'
+    explanation: 'Nylon forms from a dicarboxylic acid and a diamine with loss of water. The others are addition polymers of alkenes.'
+    difficulty: easy
+  - id: po-q4
+    prompt: 'What small molecule is released when a polyester forms?'
+    choices:
+      - 'H₂'
+      - 'H₂O'
+      - 'CO₂'
+      - 'nothing'
+    answer: 'H₂O'
+    explanation: 'Each ester link forms from –COOH and –OH, releasing one water molecule.'
+    difficulty: easy
+  - id: po-q5
+    prompt: 'Which pair of monomers can form a polyamide?'
+    choices:
+      - 'a diol and a dicarboxylic acid'
+      - 'a diamine and a dicarboxylic acid'
+      - 'two alkenes'
+      - 'an alcohol and an alkene'
+    answer: 'a diamine and a dicarboxylic acid'
+    explanation: '–NH₂ and –COOH groups join to form amide (–CONH–) links. A diol and a diacid give a polyester.'
+    difficulty: medium
+  - id: po-q6
+    prompt: 'A poly(chloroethene) chain has a molar mass of 6.25 × 10⁴ g/mol (repeat unit 62.49 g/mol). About how many repeat units does it have?'
+    choices:
+      - '100'
+      - '1.00 × 10³'
+      - '1.00 × 10⁴'
+      - '3.91 × 10⁶'
+    answer: '1.00 × 10³'
+    explanation: 'n = 6.25 × 10⁴ g/mol ÷ 62.49 g/mol = 1.00 × 10³.'
+    difficulty: medium
+  - id: po-q7
+    prompt: 'Why can thermoplastics be recycled by melting but thermosets cannot?'
+    choices:
+      - 'thermosets contain no carbon'
+      - 'thermoplastic chains are separate and slide apart on heating; thermosets are cross-linked'
+      - 'thermoplastics are condensation polymers'
+      - 'thermosets have weaker bonds'
+    answer: 'thermoplastic chains are separate and slide apart on heating; thermosets are cross-linked'
+    explanation: 'Covalent cross-links between chains in thermosets stop them melting; they char instead.'
+    difficulty: hard

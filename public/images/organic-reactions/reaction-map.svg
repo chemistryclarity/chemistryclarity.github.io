@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .big { fill: #14213d; font-size: 14px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .node { fill: #f6f8fb; stroke: #8a94a6; stroke-width: 1.4; }
+    .nt { fill: #14213d; font-size: 12px; font-weight: 700; }
+    .nf { fill: #5b6577; font-size: 10px; }
+    .hd { fill: #14213d; } .stroke { stroke: #14213d; stroke-width: 1.6; fill: none; }
+    .acid { fill: #fde7c7; stroke: #b45309; stroke-width: 1.4; } .diol { fill: #d5f0ec; stroke: #0f766e; stroke-width: 1.4; }
+    .link { fill: #2563eb; font-size: 10px; font-weight: 700; } .water { fill: #2563eb; font-size: 11px; font-weight: 700; }
+    .a-add { stroke: #0f766e; stroke-width: 2; fill: none; marker-end: url(#m-add); } .m-add { fill: #0f766e; } .l-add { fill: #0f766e; font-size: 10px; font-weight: 700; }
+    .a-sub { stroke: #b45309; stroke-width: 2; fill: none; marker-end: url(#m-sub); } .m-sub { fill: #b45309; } .l-sub { fill: #b45309; font-size: 10px; font-weight: 700; }
+    .a-elim { stroke: #7c3aed; stroke-width: 2; fill: none; marker-end: url(#m-elim); } .m-elim { fill: #7c3aed; } .l-elim { fill: #7c3aed; font-size: 10px; font-weight: 700; }
+    .a-ox { stroke: #be123c; stroke-width: 2; fill: none; marker-end: url(#m-ox); } .m-ox { fill: #be123c; } .l-ox { fill: #be123c; font-size: 10px; font-weight: 700; }
+    .a-cond { stroke: #2563eb; stroke-width: 2; fill: none; marker-end: url(#m-cond); } .m-cond { fill: #2563eb; } .l-cond { fill: #2563eb; font-size: 10px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .big, .nt { fill: #e9edf5; } .sub, .num, .nf { fill: #9aa5ba; }
+      .node { fill: #1b263d; stroke: #6b7894; } .hd { fill: #e9edf5; } .stroke { stroke: #e9edf5; }
+      .acid { fill: #4a3410; stroke: #fbbf24; } .diol { fill: #12403a; stroke: #2dd4bf; } .link, .water { fill: #60a5fa; }
+      .a-add { stroke: #2dd4bf; } .m-add, .l-add { fill: #2dd4bf; }
+      .a-sub { stroke: #fbbf24; } .m-sub, .l-sub { fill: #fbbf24; }
+      .a-elim { stroke: #c4b5fd; } .m-elim, .l-elim { fill: #c4b5fd; }
+      .a-ox { stroke: #fb7185; } .m-ox, .l-ox { fill: #fb7185; }
+      .a-cond { stroke: #60a5fa; } .m-cond, .l-cond { fill: #60a5fa; }
+    }
+  </style>
+  <defs><marker id="m-add" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-add" d="M0 0 10 5 0 10z"/></marker><marker id="m-sub" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-sub" d="M0 0 10 5 0 10z"/></marker><marker id="m-elim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-elim" d="M0 0 10 5 0 10z"/></marker><marker id="m-ox" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-ox" d="M0 0 10 5 0 10z"/></marker><marker id="m-cond" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="m-cond" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="520" rx="14"/><text class="t" x="20" y="28">Map of organic reactions</text><text class="sub" x="20" y="45">Arrows show reagents; colours show the reaction type.</text><rect class="node" x="28" y="72" width="116" height="40" rx="9"/><text class="nt" x="86" y="90" text-anchor="middle">Alkane</text><text class="nf" x="86" y="104" text-anchor="middle">C–C, C–H</text><rect class="node" x="216" y="72" width="116" height="40" rx="9"/><text class="nt" x="274" y="90" text-anchor="middle">Haloalkane</text><text class="nf" x="274" y="104" text-anchor="middle">C–X</text><rect class="node" x="28" y="194" width="116" height="40" rx="9"/><text class="nt" x="86" y="212" text-anchor="middle">Alkene</text><text class="nf" x="86" y="226" text-anchor="middle">C=C</text><rect class="node" x="216" y="194" width="116" height="40" rx="9"/><text class="nt" x="274" y="212" text-anchor="middle">Alcohol</text><text class="nf" x="274" y="226" text-anchor="middle">–OH</text><rect class="node" x="28" y="316" width="116" height="40" rx="9"/><text class="nt" x="86" y="334" text-anchor="middle">Ketone</text><text class="nf" x="86" y="348" text-anchor="middle">C=O in chain</text><rect class="node" x="216" y="316" width="116" height="40" rx="9"/><text class="nt" x="274" y="334" text-anchor="middle">Aldehyde</text><text class="nf" x="274" y="348" text-anchor="middle">–CHO</text><rect class="node" x="28" y="428" width="116" height="40" rx="9"/><text class="nt" x="86" y="446" text-anchor="middle">Ester</text><text class="nf" x="86" y="460" text-anchor="middle">–COO–</text><rect class="node" x="216" y="428" width="116" height="40" rx="9"/><text class="nt" x="274" y="446" text-anchor="middle">Carboxylic acid</text><text class="nf" x="274" y="460" text-anchor="middle">–COOH</text><path class="a-sub" d="M144 92 H214"/><text class="l-sub" x="180" y="86" text-anchor="middle">Cl₂, UV light</text><path class="a-add" d="M60 194 V114"/><text class="l-add" x="54" y="157" text-anchor="end">H₂, Ni</text><path class="a-add" d="M126 194 L234 114"/><text class="l-add" x="168" y="150" text-anchor="middle">HBr</text><path class="a-sub" d="M300 112 V192"/><text class="l-sub" x="306" y="157" text-anchor="start">OH⁻(aq)</text><path class="a-add" d="M144 206 H214"/><text class="l-add" x="180" y="200" text-anchor="middle">H₂O, H⁺</text><path class="a-elim" d="M216 224 H146"/><text class="l-elim" x="146" y="250" text-anchor="middle">conc. H₂SO₄, heat</text><path class="a-ox" d="M274 234 V314"/><text class="l-ox" x="280" y="276" text-anchor="start">[O], primary</text><path class="a-ox" d="M234 234 L116 314"/><text class="l-ox" x="150" y="276" text-anchor="end">[O], secondary</text><path class="a-ox" d="M274 356 V426"/><text class="l-ox" x="280" y="396" text-anchor="start">[O]</text><path class="a-cond" d="M216 448 H146"/><text class="l-cond" x="180" y="442" text-anchor="middle">+ alcohol, H⁺</text><path class="a-add" d="M20 488 H38"/><text class="sub" x="44" y="492">addition</text><path class="a-sub" d="M132 488 H150"/><text class="sub" x="156" y="492">substitution</text><path class="a-elim" d="M244 488 H262"/><text class="sub" x="268" y="492">elimination</text><path class="a-ox" d="M20 504 H38"/><text class="sub" x="44" y="508">oxidation</text><path class="a-cond" d="M132 504 H150"/><text class="sub" x="156" y="508">condensation</text>
+</svg>
