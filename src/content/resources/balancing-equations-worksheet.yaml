@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/balancing-equations-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Balancing Chemical Equations Worksheet'
+description: '9 questions on counting atoms, balancing equations, combustion, polyatomic ions and word equations. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/balancing-equations-worksheet.pdf'
+answerKey: '/downloads/balancing-equations-worksheet-answers.pdf'
+preview: '/previews/balancing-equations-worksheet.png'
+status: review

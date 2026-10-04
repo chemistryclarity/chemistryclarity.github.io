@@ -1,0 +1,79 @@
+# Quiz: Balancing Chemical Equations
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Every equation and distractor checked by computer.
+title: 'Balancing Chemical Equations: Quiz'
+description: 'Seven questions on counting atoms, coefficients and balancing equations, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: be-q1
+    prompt: 'Why must chemical equations be balanced?'
+    choices:
+      - 'Atoms are not created or destroyed in a reaction'
+      - 'Reactions always produce the same number of molecules'
+      - 'The masses of reactants and products are always 1 : 1'
+      - 'Coefficients must always add up to an even number'
+    answer: 'Atoms are not created or destroyed in a reaction'
+    explanation: 'This is the law of conservation of mass. The number of molecules can change (2H₂ + O₂ → 2H₂O: 3 molecules become 2), but the atoms cannot.'
+    difficulty: easy
+  - id: be-q2
+    prompt: 'How many oxygen atoms are shown by $\ce{2Al2(SO4)3}$?'
+    choices:
+      - '12'
+      - '14'
+      - '24'
+      - '7'
+    answer: '24'
+    explanation: '2 × 3 × 4 = 24. The coefficient multiplies the whole formula, and the subscript 3 multiplies everything in the bracket.'
+    difficulty: medium
+  - id: be-q3
+    prompt: 'Which is the correct balanced equation for $\ce{Na + Cl2 -> NaCl}$?'
+    choices:
+      - '$\ce{Na + Cl2 -> NaCl2}$'
+      - '$\ce{2Na + Cl2 -> 2NaCl}$'
+      - '$\ce{Na + Cl2 -> 2NaCl}$'
+      - '$\ce{2Na + 2Cl2 -> 2NaCl}$'
+    answer: '$\ce{2Na + Cl2 -> 2NaCl}$'
+    explanation: 'Cl: 2 on the left, so 2NaCl; then Na: 2 on the right, so 2Na. Changing NaCl to NaCl₂ changes a subscript, which is not allowed.'
+    difficulty: easy
+  - id: be-q4
+    prompt: 'When $\ce{C3H8 + O2 -> CO2 + H2O}$ is balanced, what is the coefficient of $\ce{O2}$?'
+    choices:
+      - '3'
+      - '4'
+      - '5'
+      - '10'
+    answer: '5'
+    explanation: 'C₃H₈ + 5O₂ → 3CO₂ + 4H₂O. The right side has 3 × 2 + 4 × 1 = 10 O atoms, which need 5 O₂.'
+    difficulty: medium
+  - id: be-q5
+    prompt: 'Which equation is balanced?'
+    choices:
+      - '$\ce{CaCO3 + HCl -> CaCl2 + H2O + CO2}$'
+      - '$\ce{Zn + 2HCl -> ZnCl2 + H2}$'
+      - '$\ce{Mg + O2 -> MgO}$'
+      - '$\ce{H2O2 -> H2O + O2}$'
+    answer: '$\ce{Zn + 2HCl -> ZnCl2 + H2}$'
+    explanation: 'Zn 1 = 1, H 2 = 2, Cl 2 = 2. The others need coefficients: 2HCl, 2Mg + O₂ → 2MgO, and 2H₂O₂ → 2H₂O + O₂.'
+    difficulty: medium
+  - id: be-q6
+    prompt: 'Balance $\ce{Al + O2 -> Al2O3}$. What are the coefficients, in order?'
+    choices:
+      - '2, 3, 1'
+      - '4, 3, 2'
+      - '2, 1, 1'
+      - '4, 6, 2'
+    answer: '4, 3, 2'
+    explanation: '4Al + 3O₂ → 2Al₂O₃: Al 4 = 4 and O 6 = 6. Using 2, 3, 1 leaves O at 6 on the left but only 3 on the right.'
+    difficulty: hard
+  - id: be-q7
+    prompt: 'A student balances $\ce{H2 + O2 -> H2O}$ by writing $\ce{H2 + O2 -> H2O2}$. What is wrong?'
+    choices:
+      - 'Nothing: the atoms now balance'
+      - 'They changed a subscript, so the product is now a different substance'
+      - 'Hydrogen must always have a coefficient of 2'
+      - 'Oxygen should be written as O, not O₂'
+    answer: 'They changed a subscript, so the product is now a different substance'
+    explanation: 'H₂O₂ is hydrogen peroxide, not water. The correct answer changes coefficients only: 2H₂ + O₂ → 2H₂O.'
+    difficulty: easy

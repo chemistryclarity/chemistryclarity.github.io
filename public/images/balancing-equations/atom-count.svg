@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 430" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .cell { fill: #f8f7f3; stroke: #e2dfd5; stroke-width: 1; }
+    .eq { fill: #14213d; font-size: 15px; font-weight: 700; }
+    .good, .tgood { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .bad, .tbad { fill: #b91c1c; font-size: 11.5px; font-weight: 700; }
+    .op { fill: #14213d; font-size: 18px; font-weight: 700; }
+    .h { fill: #ffffff; stroke: #14213d; stroke-width: 1.6; }
+    .o { fill: #e11d48; stroke: #9f1239; stroke-width: 1.6; }
+    .arrow { stroke: #14213d; stroke-width: 2; fill: none; marker-end: url(#hd); }
+    .hd { fill: #14213d; }
+    .key { fill: #5b6577; font-size: 11px; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .eq, .op { fill: #e9edf5; }
+      .sub, .key { fill: #9aa5ba; }
+      .cell { fill: #1b263d; stroke: #2c3854; }
+      .good, .tgood { fill: #2dd4bf; }
+      .bad, .tbad { fill: #fca5a5; }
+      .h { fill: #e9edf5; stroke: #e9edf5; }
+      .o { fill: #fb7185; stroke: #fda4af; }
+      .arrow { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+    }
+  </style>
+  <defs><marker id="hd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="430" rx="14"/>
+  <text class="t" x="20" y="28">Balancing means counting atoms</text>
+  <text class="sub" x="20" y="45">Atoms are rearranged in a reaction, never created or destroyed.</text>
+  
+  <rect class="cell" x="16" y="66" width="328" height="150" rx="10"/>
+  <text class="eq" x="30" y="90">H₂ + O₂ → H₂O</text>
+  <text class="bad" x="330" y="90" text-anchor="end">✗ Not balanced</text>
+  <circle class="h" cx="63.5" cy="136" r="7"/><circle class="h" cx="76.5" cy="136" r="7"/><text class="op" x="104" y="141" text-anchor="middle">+</text><circle class="o" cx="124" cy="136" r="11"/><circle class="o" cx="144" cy="136" r="11"/><path class="arrow" d="M170 136 H204"/><circle class="h" cx="238" cy="141" r="7"/><circle class="h" cx="262" cy="141" r="7"/><circle class="o" cx="250" cy="132" r="11"/>
+  <text class="tgood" x="30" y="198">H: 2 left, 2 right ✓</text><text class="tbad" x="180" y="198">O: 2 left, 1 right ✗</text>
+  
+  <rect class="cell" x="16" y="232" width="328" height="150" rx="10"/>
+  <text class="eq" x="30" y="256">2H₂ + O₂ → 2H₂O</text>
+  <text class="good" x="330" y="256" text-anchor="end">✓ Balanced</text>
+  <circle class="h" cx="63.5" cy="283" r="7"/><circle class="h" cx="76.5" cy="283" r="7"/><circle class="h" cx="63.5" cy="313" r="7"/><circle class="h" cx="76.5" cy="313" r="7"/><text class="op" x="104" y="303" text-anchor="middle">+</text><circle class="o" cx="124" cy="298" r="11"/><circle class="o" cx="144" cy="298" r="11"/><path class="arrow" d="M170 298 H204"/><circle class="h" cx="224" cy="303" r="7"/><circle class="h" cx="248" cy="303" r="7"/><circle class="o" cx="236" cy="294" r="11"/><circle class="h" cx="284" cy="303" r="7"/><circle class="h" cx="308" cy="303" r="7"/><circle class="o" cx="296" cy="294" r="11"/>
+  <text class="tgood" x="30" y="364">H: 4 left, 4 right ✓</text><text class="tgood" x="180" y="364">O: 2 left, 2 right ✓</text>
+  <circle class="h" cx="28" cy="406" r="7"/><text class="key" x="41" y="410">hydrogen atom</text>
+  <circle class="o" cx="140" cy="406" r="9"/><text class="key" x="155" y="410">oxygen atom</text>
+</svg>

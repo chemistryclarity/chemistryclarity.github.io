@@ -1,0 +1,146 @@
+---
+title: Balancing Chemical Equations
+question: "How do you balance chemical equations?"
+description: "How to balance chemical equations step by step: conservation of mass, coefficients vs subscripts, polyatomic ions, combustion reactions and odd-even tricks."
+area: reactions-and-stoichiometry
+level: beginner
+order: 5
+prerequisites: [atomic-structure]
+related: [stoichiometry, mole-concept, limiting-reactant]
+flashcards: balancing-equations
+quiz: balancing-equations
+resources: [balancing-equations-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Every equation on this page was checked by computer (atoms of each element counted on both sides).
+  State symbols (s), (l), (g), (aq) are mentioned but left off most equations to keep the focus on balancing.
+*/}
+
+## What is it?
+
+A **chemical equation** describes a reaction using formulas. **Reactants** go on the left of the arrow and **products** on the right:
+
+$$
+\ce{2H2 + O2 -> 2H2O}
+$$
+
+An equation is **balanced** when every element has the **same number of atoms on both sides**. You balance an equation by placing whole-number **coefficients** (the big numbers in front of formulas).
+
+<KeyIdea>
+In a chemical reaction, atoms are **rearranged**, never created or destroyed (the **law of conservation of mass**). A balanced equation shows this: the atoms you start with are exactly the atoms you end with.
+</KeyIdea>
+
+## Why does it matter?
+
+- **It obeys a law of nature.** Mass is conserved in every chemical reaction; an unbalanced equation describes something impossible.
+- **It's the starting point for calculations.** The coefficients give the **mole ratios** used in [stoichiometry](/chemistry/stoichiometry/). An unbalanced equation gives wrong answers.
+- **It shows the recipe.** $\ce{2H2 + O2 -> 2H2O}$ tells you hydrogen and oxygen react in a 2 : 1 ratio by molecules (and by moles).
+
+## How does it work?
+
+### 1. Coefficients, not subscripts
+
+- A **subscript** is part of the formula. It defines **which substance** it is: $\ce{H2O}$ is water, $\ce{H2O2}$ is hydrogen peroxide.
+- A **coefficient** says **how many** units of that substance: $\ce{2H2O}$ means two water molecules, containing 4 H and 2 O atoms in total.
+
+**Never change subscripts to balance an equation.** That changes the substances, not the amounts.
+
+### 2. Counting atoms
+
+Multiply the coefficient by each subscript. Brackets multiply everything inside:
+
+- $\ce{3CO2}$: 3 C and 3 × 2 = **6 O**
+- $\ce{Ca(NO3)2}$: 1 Ca, 2 N and 2 × 3 = **6 O**
+- $\ce{2Al2(SO4)3}$: 4 Al, 6 S and 2 × 3 × 4 = **24 O**
+
+### 3. The step-by-step method
+
+1. **Write the correct formulas** of all reactants and products.
+2. **Count the atoms** of each element on each side.
+3. **Balance one element at a time** by changing coefficients. Start with an element that appears in **only one substance on each side**, usually a metal. Leave **hydrogen and oxygen until last**, and leave any **element on its own** (such as $\ce{O2}$ or $\ce{Fe}$) to the very end.
+4. **Re-count every element.** Changing one coefficient can unbalance another element.
+5. **Check the coefficients are the smallest whole numbers.** If they all share a factor, divide by it.
+
+### 4. Useful tricks
+
+- **Polyatomic ions:** if an ion such as $\ce{SO4^2-}$ or $\ce{NO3-}$ appears unchanged on both sides, balance it as **one unit** instead of counting S and O separately.
+- **Odd–even trick:** if one side has an odd number of an atom and the other side must be even (as with $\ce{O2}$), double everything else first.
+- **Fractions:** you can use a fraction such as $\tfrac{7}{2}$ temporarily, then multiply the whole equation to clear it.
+
+<Analogy>
+Balancing an equation is like checking a recipe for building toy models from Lego bricks. You can make **more copies** of a model (change a coefficient), but you can't change the design of a model (a subscript). When you're done, every brick you started with must be used, with none left over and none missing.
+</Analogy>
+
+<MorePrecisely>
+Coefficients count **particles** (molecules, atoms or formula units) and therefore also **moles**. They do not give the ratio of **masses**: in $\ce{2H2 + O2 -> 2H2O}$, about 4 g of hydrogen reacts with 32 g of oxygen, not in a 2 : 1 ratio by mass. Equations can also include **state symbols**: (s) solid, (l) liquid, (g) gas and (aq) dissolved in water, e.g. $\ce{2H2(g) + O2(g) -> 2H2O(l)}$. Ionic equations must also balance **charge**.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/balancing-equations/atom-count.svg" alt="Two particle diagrams. Top: H2 + O2 → H2O, not balanced. One hydrogen molecule and one oxygen molecule on the left make one water molecule on the right, so hydrogen has 2 atoms on each side but oxygen has 2 on the left and only 1 on the right. Bottom: 2H2 + O2 → 2H2O, balanced. Two hydrogen molecules and one oxygen molecule make two water molecules: 4 hydrogen atoms and 2 oxygen atoms on each side." caption="Adding coefficients makes the atom counts match on both sides." width={360} height={430} />
+
+## Worked example
+
+<Example title="Burning propane">
+**Question:** Balance $\ce{C3H8 + O2 -> CO2 + H2O}$.
+
+1. **C:** 3 on the left, so put 3 in front of $\ce{CO2}$: $\ce{C3H8 + O2 -> 3CO2 + H2O}$
+2. **H:** 8 on the left, so put 4 in front of $\ce{H2O}$ (4 × 2 = 8): $\ce{C3H8 + O2 -> 3CO2 + 4H2O}$
+3. **O (last, because $\ce{O2}$ is an element on its own):** right side has 3 × 2 + 4 × 1 = 10 O, so put 5 in front of $\ce{O2}$.
+4. **Balanced:** $\ce{C3H8 + 5O2 -> 3CO2 + 4H2O}$. Check: C 3 = 3, H 8 = 8, O 10 = 10 ✓
+</Example>
+
+<Example title="A polyatomic ion">
+**Question:** Balance $\ce{Pb(NO3)2 + KI -> PbI2 + KNO3}$.
+
+1. Pb is already balanced (1 = 1).
+2. Treat $\ce{NO3}$ as one unit: 2 on the left, 1 on the right, so put 2 in front of $\ce{KNO3}$.
+3. Now K is 2 on the right, so put 2 in front of $\ce{KI}$. That also balances I (2 = 2).
+4. **Balanced:** $\ce{Pb(NO3)2 + 2KI -> PbI2 + 2KNO3}$ ✓
+</Example>
+
+<Example title="Using the odd–even trick">
+**Question:** Balance $\ce{Fe + O2 -> Fe2O3}$.
+
+1. O: 2 on the left but 3 on the right. Odd and even don't match, so make the right side even: put 2 in front of $\ce{Fe2O3}$ (6 O).
+2. O: 6 on the right, so put 3 in front of $\ce{O2}$.
+3. Fe: 2 × 2 = 4 on the right, so put 4 in front of $\ce{Fe}$.
+4. **Balanced:** $\ce{4Fe + 3O2 -> 2Fe2O3}$. Check: Fe 4 = 4, O 6 = 6 ✓
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Changing a subscript">
+To "balance" $\ce{H2 + O2 -> H2O}$, writing $\ce{H2 + O2 -> H2O2}$ makes the atoms match, but it turns the product into hydrogen peroxide. Change **coefficients** only: $\ce{2H2 + O2 -> 2H2O}$.
+</CommonMistake>
+
+<CommonMistake title="Forgetting to multiply through brackets">
+$\ce{3Ca(OH)2}$ contains 3 Ca, **6 O and 6 H**, not 3 O and 3 H.
+</CommonMistake>
+
+<CommonMistake title="Stopping before re-counting everything">
+After each change, re-count **all** the elements. Fixing one element often unbalances another.
+</CommonMistake>
+
+<CommonMistake title="Leaving coefficients that can be simplified">
+$\ce{4H2 + 2O2 -> 4H2O}$ has equal atom counts, but it should be simplified to $\ce{2H2 + O2 -> 2H2O}$. Use the smallest whole numbers.
+</CommonMistake>
+
+<NotationNote>
+- A coefficient of 1 is not written: $\ce{CH4 + 2O2 -> CO2 + 2H2O}$ has a coefficient of 1 in front of $\ce{CH4}$ and $\ce{CO2}$.
+- Some courses write "=" or "⟶" instead of "→" in equations.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Balanced = same number of atoms of each element on both sides (conservation of mass).
+- Change coefficients, **never subscripts**.
+- Balance metals and other elements first, then H, then O; leave free elements (e.g. $\ce{O2}$) to last.
+- Treat unchanged polyatomic ions as one unit; use the smallest whole-number coefficients.
+</RememberThis>

@@ -1,0 +1,39 @@
+# Flashcards: Balancing Chemical Equations
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Every equation checked by computer.
+title: 'Balancing Chemical Equations: Flashcards'
+description: 'Revise conservation of mass, coefficients vs subscripts, counting atoms and balancing equations.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: be-01
+    front: 'What does it mean for a chemical equation to be balanced?'
+    back: 'Every element has the same number of atoms on both sides of the arrow.'
+  - id: be-02
+    front: 'Which law requires equations to be balanced?'
+    back: 'The law of conservation of mass: atoms are rearranged, never created or destroyed.'
+  - id: be-03
+    front: 'When balancing, do you change coefficients or subscripts?'
+    back: 'Coefficients only. Changing a subscript changes the substance.'
+  - id: be-04
+    front: 'How many O atoms are in $\ce{3CO2}$?'
+    back: '3 × 2 = 6'
+  - id: be-05
+    front: 'How many O atoms are in $\ce{Ca(NO3)2}$?'
+    back: '2 × 3 = 6'
+  - id: be-06
+    front: 'Balance: $\ce{H2 + O2 -> H2O}$'
+    back: '$\ce{2H2 + O2 -> 2H2O}$'
+  - id: be-07
+    front: 'Balance: $\ce{CH4 + O2 -> CO2 + H2O}$'
+    back: '$\ce{CH4 + 2O2 -> CO2 + 2H2O}$'
+  - id: be-08
+    front: 'Balance: $\ce{N2 + H2 -> NH3}$'
+    back: '$\ce{N2 + 3H2 -> 2NH3}$'
+  - id: be-09
+    front: 'Which elements are usually best left until last when balancing?'
+    back: 'Hydrogen and oxygen, and any element on its own such as $\ce{O2}$ or $\ce{Fe}$.'
+  - id: be-10
+    front: 'What do the coefficients in a balanced equation tell you?'
+    back: 'The ratio of particles (and of moles) that react and form. They do not give the ratio of masses.'
