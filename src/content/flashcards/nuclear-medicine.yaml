@@ -1,0 +1,39 @@
+# Flashcards: Nuclear Medicine and Radiation Safety
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Nuclear Medicine and Radiation Safety: Flashcards'
+description: 'Revise becquerels, grays and sieverts, tracers, PET, radiotherapy and protection by time, distance and shielding.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: nm-01
+    front: 'What is ionizing radiation, and how does it harm cells?'
+    back: 'Radiation that knocks electrons out of atoms. It breaks bonds in DNA directly or forms damaging free radicals from water.'
+  - id: nm-02
+    front: 'Becquerel, gray, sievert?'
+    back: 'Bq = decays per second (activity). Gy = J absorbed per kg (absorbed dose). Sv = Gy × weighting factor (equivalent dose).'
+  - id: nm-03
+    front: 'Radiation weighting factors?'
+    back: '1 for gamma, X-rays and beta; 20 for alpha.'
+  - id: nm-04
+    front: 'What makes a good imaging isotope?'
+    back: 'Gamma emitter, short half-life (hours), can be targeted to an organ. Example: technetium-99m (6.01 h).'
+  - id: nm-05
+    front: 'Why are alpha emitters not used for imaging?'
+    back: 'Alpha particles do not leave the body, so they cannot be detected outside, and they give a high local dose.'
+  - id: nm-06
+    front: 'How does a PET scan detect fluorine-18?'
+    back: 'Its positron annihilates with an electron, giving two 511 keV gamma rays in opposite directions, recorded by a detector ring.'
+  - id: nm-07
+    front: 'Name a radioisotope used to treat the thyroid.'
+    back: 'Iodine-131 (beta and gamma, 8.02 d): the thyroid takes up iodine, and the beta particles destroy the tissue.'
+  - id: nm-08
+    front: 'Three ways to reduce radiation dose?'
+    back: 'Less time, more distance, more shielding (and keep doses as low as reasonably achievable).'
+  - id: nm-09
+    front: 'Inverse-square law?'
+    back: 'Dose rate ∝ 1 ÷ distance²: doubling the distance cuts the rate to one-quarter.'
+  - id: nm-10
+    front: 'Average natural background dose?'
+    back: 'About 2.4 mSv per year worldwide, mostly from radon, rocks, cosmic rays and food.'

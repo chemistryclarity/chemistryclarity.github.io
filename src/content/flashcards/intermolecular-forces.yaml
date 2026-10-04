@@ -1,0 +1,39 @@
+# Flashcards: Intermolecular Forces
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+title: 'Intermolecular Forces: Flashcards'
+description: 'Revise dispersion forces, dipole–dipole forces, hydrogen bonding and their effects on boiling point and solubility.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: imf-01
+    front: 'Intermolecular force vs covalent bond?'
+    back: 'Intermolecular forces act between molecules and are much weaker; covalent bonds hold atoms together within a molecule.'
+  - id: imf-02
+    front: 'What are London dispersion forces?'
+    back: 'Attractions between temporary dipoles caused by moving electrons. Present in all molecules; stronger for bigger, longer molecules.'
+  - id: imf-03
+    front: 'When do dipole–dipole forces occur?'
+    back: 'Between polar molecules: the δ+ end of one attracts the δ− end of another.'
+  - id: imf-04
+    front: 'What is needed for hydrogen bonding?'
+    back: 'An H atom bonded to N, O or F, and a lone pair on an N, O or F atom of another molecule.'
+  - id: imf-05
+    front: 'What is overcome when a molecular liquid boils?'
+    back: 'Only the intermolecular forces; covalent bonds inside the molecules stay intact.'
+  - id: imf-06
+    front: 'Why does water (100 °C) boil so much higher than H₂S (−60 °C)?'
+    back: 'Water forms hydrogen bonds (O–H); H₂S does not, and has only weaker dipole–dipole and dispersion forces.'
+  - id: imf-07
+    front: 'Why does pentane boil higher than 2,2-dimethylpropane?'
+    back: 'Unbranched pentane has more surface contact, so stronger dispersion forces (36 °C against 10 °C).'
+  - id: imf-08
+    front: 'Why does ice float?'
+    back: 'Hydrogen bonds hold the molecules in an open network in ice, so ice is less dense than liquid water.'
+  - id: imf-09
+    front: 'How do stronger intermolecular forces affect vapour pressure and viscosity?'
+    back: 'Vapour pressure is lower; viscosity and surface tension are higher.'
+  - id: imf-10
+    front: 'What does "like dissolves like" mean?'
+    back: 'Solutes dissolve best in solvents with similar forces: polar in polar (water), non-polar in non-polar (hexane).'

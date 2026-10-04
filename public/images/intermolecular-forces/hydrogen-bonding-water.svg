@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .ax { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .axis { stroke: #8a94a6; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #e3e7ee; stroke-width: 1; }
+    .lnA { stroke: #0f766e; stroke-width: 2.4; fill: none; } .lnB { stroke: #b45309; stroke-width: 2.4; fill: none; }
+    .pA { fill: #0f766e; } .pB { fill: #b45309; }
+    .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .oAtom { fill: #dc2626; } .hAtom { fill: #e5e7eb; stroke: #8a94a6; stroke-width: 1; } .bond { stroke: #14213d; stroke-width: 2.4; }
+    .hb { stroke: #2563eb; stroke-width: 1.8; stroke-dasharray: 4 3; } .hbl { fill: #2563eb; font-size: 10.5px; font-weight: 700; }
+    .dm { fill: #dc2626; font-size: 10px; font-weight: 700; } .dp { fill: #2563eb; font-size: 10px; font-weight: 700; }
+    .oT { fill: #ffffff; font-size: 10px; font-weight: 700; } .hT { fill: #14213d; font-size: 9px; font-weight: 700; }
+    .src { fill: #b45309; } .ray { stroke: #b45309; stroke-width: 1; stroke-dasharray: 3 3; fill: none; opacity: 0.8; }
+    .cell { fill: #fde7c7; stroke: #b45309; stroke-width: 1; }
+    .det { fill: #d9dee7; stroke: #5b6577; stroke-width: 1; } .body { fill: #f6f8fb; stroke: #8a94a6; stroke-width: 1.4; }
+    .gam { stroke: #7c3aed; stroke-width: 2.4; fill: none; marker-end: url(#hC); } .hC { fill: #7c3aed; }
+    .pos { fill: #0f766e; } .ele { fill: #2563eb; } .short { stroke: #0f766e; stroke-width: 1.6; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .ax, .hT { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .axis { stroke: #6b7894; } .grid { stroke: #2a3550; }
+      .lnA { stroke: #2dd4bf; } .pA, .lA, .pos { fill: #2dd4bf; } .lnB { stroke: #fbbf24; } .pB, .lB, .src { fill: #fbbf24; }
+      .lC, .hC { fill: #c4b5fd; } .gam { stroke: #c4b5fd; }
+      .oAtom { fill: #f87171; } .hAtom { fill: #3a4763; stroke: #9aa5ba; } .bond { stroke: #e9edf5; }
+      .hb { stroke: #60a5fa; } .hbl, .dp, .ele { fill: #60a5fa; } .dm { fill: #f87171; }
+      .ray { stroke: #fbbf24; } .cell { fill: #4a3410; stroke: #fbbf24; } .short { stroke: #2dd4bf; }
+      .det { fill: #3a4763; stroke: #9aa5ba; } .body { fill: #1b263d; stroke: #6b7894; }
+    }
+  </style>
+  <defs><marker id="hC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hC" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="330" rx="14"/><text class="t" x="20" y="28">Hydrogen bonds between water molecules</text><text class="sub" x="20" y="45">δ+ hydrogen on one molecule, lone pair on δ− oxygen of the next.</text><line class="hb" x1="203.5" y1="207.1" x2="262.8" y2="260.0"/><line class="hb" x1="156.5" y1="207.1" x2="97.2" y2="260.0"/><line class="hb" x1="111.8" y1="126.2" x2="168.2" y2="170.7"/><line class="hb" x1="161.4" y1="85.8" x2="177.1" y2="165.3"/><line class="bond" x1="78" y1="120" x2="104" y2="120"/><line class="bond" x1="78" y1="120" x2="71.71003071440863" y2="145.22768888317592"/><circle class="oAtom" cx="78" cy="120" r="13"/><text class="oT" x="78" y="123.5" text-anchor="middle">O</text><circle class="hAtom" cx="104" cy="120" r="8"/><text class="hT" x="104" y="123" text-anchor="middle">H</text><circle class="hAtom" cx="71.71003071440863" cy="145.22768888317592" r="8"/><text class="hT" x="71.71003071440863" y="148.22768888317592" text-anchor="middle">H</text><line class="bond" x1="180" y1="92" x2="200.48827959377476" y2="75.99280164153288"/><line class="bond" x1="180" y1="92" x2="159.5117204062252" y2="75.99280164153289"/><circle class="oAtom" cx="180" cy="92" r="13"/><text class="oT" x="180" y="95.5" text-anchor="middle">O</text><circle class="hAtom" cx="200.48827959377476" cy="75.99280164153288" r="8"/><text class="hT" x="200.48827959377476" y="78.99280164153288" text-anchor="middle">H</text><circle class="hAtom" cx="159.5117204062252" cy="75.99280164153289" r="8"/><text class="hT" x="159.5117204062252" y="78.99280164153289" text-anchor="middle">H</text><line class="bond" x1="180" y1="180" x2="196.00719835846712" y2="200.48827959377476"/><line class="bond" x1="180" y1="180" x2="163.99280164153288" y2="200.48827959377476"/><circle class="oAtom" cx="180" cy="180" r="13"/><text class="oT" x="180" y="183.5" text-anchor="middle">O</text><circle class="hAtom" cx="196.00719835846712" cy="200.48827959377476" r="8"/><text class="hT" x="196.00719835846712" y="203.48827959377476" text-anchor="middle">H</text><circle class="hAtom" cx="163.99280164153288" cy="200.48827959377476" r="8"/><text class="hT" x="163.99280164153288" y="203.48827959377476" text-anchor="middle">H</text><line class="bond" x1="86" y1="270" x2="102.00719835846712" y2="249.51172040622524"/><line class="bond" x1="86" y1="270" x2="61.567991859566376" y2="261.1074762735326"/><circle class="oAtom" cx="86" cy="270" r="13"/><text class="oT" x="86" y="273.5" text-anchor="middle">O</text><circle class="hAtom" cx="102.00719835846712" cy="249.51172040622524" r="8"/><text class="hT" x="102.00719835846712" y="252.51172040622524" text-anchor="middle">H</text><circle class="hAtom" cx="61.567991859566376" cy="261.1074762735326" r="8"/><text class="hT" x="61.567991859566376" y="264.1074762735326" text-anchor="middle">H</text><line class="bond" x1="274" y1="270" x2="257.9928016415329" y2="249.51172040622524"/><line class="bond" x1="274" y1="270" x2="298.4320081404336" y2="261.1074762735326"/><circle class="oAtom" cx="274" cy="270" r="13"/><text class="oT" x="274" y="273.5" text-anchor="middle">O</text><circle class="hAtom" cx="257.9928016415329" cy="249.51172040622524" r="8"/><text class="hT" x="257.9928016415329" y="252.51172040622524" text-anchor="middle">H</text><circle class="hAtom" cx="298.4320081404336" cy="261.1074762735326" r="8"/><text class="hT" x="298.4320081404336" y="264.1074762735326" text-anchor="middle">H</text><text class="dm" x="196" y="170">δ−</text><text class="dp" x="206.00719835846712" y="202.48827959377476">δ+</text><text class="dp" x="141.99280164153288" y="202.48827959377476">δ+</text><text class="hbl" x="249.00359917923356" y="205.2441397968874">hydrogen</text><text class="hbl" x="249.00359917923356" y="217.2441397968874">bond</text><line class="bond" x1="240" y1="312" x2="262" y2="312"/><text class="sub" x="268" y="316">covalent</text><line class="hb" x1="150" y1="312" x2="172" y2="312"/><text class="sub" x="178" y="316">H bond</text><text class="sub" x="20" y="302">Each water can</text><text class="sub" x="20" y="316">form up to 4.</text>
+</svg>

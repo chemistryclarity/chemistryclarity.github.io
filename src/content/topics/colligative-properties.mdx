@@ -1,0 +1,178 @@
+---
+title: Solubility and Colligative Properties
+question: "What controls solubility, and why do dissolved particles lower freezing points and raise boiling points?"
+description: "Like dissolves like, solubility and temperature, Henry's law, molality, the van 't Hoff factor, freezing-point depression, boiling-point elevation and osmotic pressure."
+area: solutions
+level: intermediate
+order: 20
+prerequisites: [molarity, intermolecular-forces]
+related: [molarity, intermolecular-forces, gas-laws]
+flashcards: colligative-properties
+quiz: colligative-properties
+resources: [colligative-properties-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Water: Kf = 1.86 °C kg/mol, Kb = 0.512 °C kg/mol. R = 0.08206 L atm mol^-1 K^-1; T(K) = t(°C) + 273.15.
+  Solubility data in the figure are approximate handbook values. Ideal van 't Hoff factors are used.
+  Every value calculated by computer. Units shown in every step.
+*/}
+
+## What is it?
+
+A **solution** forms when a **solute** dissolves in a **solvent**. How much dissolves depends on the forces between the particles: a solute dissolves well when its attractions to the solvent are similar to the attractions it replaces. In short, **like dissolves like**:
+
+- polar and ionic solutes (salt, sugar, ethanol) dissolve in polar solvents such as water;
+- non-polar solutes (oils, waxes, iodine) dissolve in non-polar solvents such as hexane.
+
+A **saturated** solution holds the maximum amount of solute at that temperature; an **unsaturated** solution can dissolve more.
+
+Once a solute has dissolved, it changes some properties of the solvent. **Colligative properties** depend only on the **number** of dissolved particles, not on what they are:
+
+- **vapour-pressure lowering**;
+- **boiling-point elevation**;
+- **freezing-point depression**;
+- **osmotic pressure**.
+
+<KeyIdea>
+Dissolved particles get in the way of solvent molecules escaping (boiling) or locking into a crystal (freezing). So a solution boils **higher** and freezes **lower** than the pure solvent, by an amount proportional to the **concentration of particles**:
+
+$$
+\Delta T_f = i K_f m \qquad \Delta T_b = i K_b m
+$$
+</KeyIdea>
+
+## Why does it matter?
+
+- **Winter and cars.** Salt melts ice on roads, and antifreeze (ethane-1,2-diol) stops car radiators freezing and boiling over.
+- **Medicine and biology.** Intravenous drips must have the same osmotic pressure as blood; cells swell or shrink in solutions that do not match.
+- **Analysis.** Freezing-point depression and osmotic pressure are used to find the molar mass of new compounds, including proteins.
+
+## How does it work?
+
+### 1. Temperature and pressure
+
+- Most **solids** become **more** soluble as temperature rises, some dramatically (potassium nitrate), some hardly at all (sodium chloride).
+- **Gases** become **less** soluble as temperature rises: warm water holds less oxygen, which is why fish struggle in warm rivers.
+- The solubility of a gas is proportional to its pressure above the liquid (**Henry's law**, $c = k_\text{H} P$). A fizzy drink is bottled under high $\ce{CO2}$ pressure; opening it lowers the pressure, and the gas comes out as bubbles.
+
+### 2. Molality
+
+Colligative calculations use **molality**, $m$: moles of solute per **kilogram of solvent** (mol/kg). Unlike molarity, it does not change with temperature, because masses do not expand.
+
+$$
+m = \frac{n(\text{solute})}{\text{mass of solvent in kg}}
+$$
+
+### 3. The van 't Hoff factor, i
+
+$i$ is the number of particles each formula unit gives in solution:
+
+- molecular solutes (glucose, ethane-1,2-diol, sucrose): $i = 1$;
+- $\ce{NaCl -> Na+ + Cl-}$: $i = 2$;
+- $\ce{CaCl2 -> Ca^2+ + 2Cl-}$: $i = 3$.
+
+### 4. Freezing point and boiling point
+
+For water, $K_f$ = 1.86 °C kg/mol and $K_b$ = 0.512 °C kg/mol. The units check: $\dfrac{\text{°C kg}}{\text{mol}} \times \dfrac{\text{mol}}{\text{kg}} = \text{°C}$. Subtract $\Delta T_f$ from the normal freezing point; add $\Delta T_b$ to the normal boiling point.
+
+### 5. Osmotic pressure
+
+**Osmosis** is the flow of solvent through a semipermeable membrane from a dilute solution into a more concentrated one. The pressure needed to stop it is the **osmotic pressure**:
+
+$$
+\Pi = i M R T
+$$
+
+with $M$ in mol/L, $R$ = 0.08206 L atm mol⁻¹ K⁻¹ and $T$ in kelvin. Even dilute solutions have large osmotic pressures, which makes it a sensitive way to measure the molar mass of large molecules.
+
+<Analogy>
+Imagine a dance floor (the liquid surface) with people trying to leave through the doors (evaporating). If some of the spaces near the doors are taken up by people who never leave (solute particles), fewer dancers escape each minute. To get the same number out, you need to turn the music up (heat it more): the boiling point rises.
+</Analogy>
+
+<MorePrecisely>
+Real ionic solutions often have $i$ a little below the ideal value, because some oppositely charged ions stay associated as ion pairs, especially at higher concentrations; 0.100 mol/kg NaCl behaves as if $i$ were about 1.9. The equations also assume a dilute, non-volatile solute. Vapour-pressure lowering follows **Raoult's law**: the vapour pressure of the solvent equals its mole fraction times the vapour pressure of the pure solvent.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/solutions/solubility-curves.svg" alt="Solubility curves in grams per 100 g of water against temperature from 0 to 100 °C. Potassium nitrate rises steeply from about 13 g at 0 °C to about 246 g at 100 °C. Sodium chloride is almost flat, from about 36 g to about 39 g. Gases do the opposite: they dissolve less when hot." caption="Most solids dissolve more when hot, by very different amounts; gases dissolve less." width={360} height={384} />
+
+## Worked example
+
+<Example title="Antifreeze">
+**Question:** 250. g of ethane-1,2-diol ($\ce{C2H6O2}$, 62.07 g/mol) is dissolved in 1.00 kg of water. Find the freezing point. ($K_f$ = 1.86 °C kg/mol; $i$ = 1)
+
+1. $n = \dfrac{250.\ \text{g}}{62.07\ \text{g/mol}} = 4.028\ \text{mol}$
+2. $m = \dfrac{4.028\ \text{mol}}{1.00\ \text{kg}} = 4.028\ \text{mol/kg}$
+3. $\Delta T_f = 1 \times 1.86\ \tfrac{\text{°C kg}}{\text{mol}} \times 4.028\ \tfrac{\text{mol}}{\text{kg}} = 7.49\ \text{°C}$
+4. Freezing point $= 0.00\ \text{°C} - 7.49\ \text{°C} =$ **−7.49 °C**
+</Example>
+
+<Example title="Salt water boiling">
+**Question:** 5.00 g of NaCl (58.44 g/mol) is dissolved in 500. g of water. By how much is the boiling point raised? ($K_b$ = 0.512 °C kg/mol; $i$ = 2)
+
+1. $n = \dfrac{5.00\ \text{g}}{58.44\ \text{g/mol}} = 0.08556\ \text{mol}$
+2. $m = \dfrac{0.08556\ \text{mol}}{0.500\ \text{kg}} = 0.1711\ \text{mol/kg}$
+3. $\Delta T_b = 2 \times 0.512\ \tfrac{\text{°C kg}}{\text{mol}} \times 0.1711\ \tfrac{\text{mol}}{\text{kg}} =$ **0.175 °C**
+4. The solution boils at 100.175 °C: adding salt to cooking water hardly changes its boiling point.
+</Example>
+
+<Example title="Molar mass from a freezing point">
+**Question:** 2.00 g of an unknown molecular compound dissolved in 25.0 g of water lowers the freezing point by 0.930 °C. Find its molar mass.
+
+1. $m = \dfrac{\Delta T_f}{i K_f} = \dfrac{0.930\ \text{°C}}{1 \times 1.86\ \text{°C kg/mol}} = 0.500\ \text{mol/kg}$
+2. $n = 0.500\ \text{mol/kg} \times 0.0250\ \text{kg} = 0.0125\ \text{mol}$
+3. $M = \dfrac{2.00\ \text{g}}{0.0125\ \text{mol}} =$ **160. g/mol**
+</Example>
+
+<Example title="Osmotic pressure">
+**Question:** Find the osmotic pressure of 0.100 mol/L glucose at 25.0 °C. ($i$ = 1)
+
+1. $T = 25.0 + 273.15 = 298.15\ \text{K}$
+2. Substitute:
+
+   $$
+   \begin{aligned}
+   &\Pi = (0.100\ \text{mol/L}) \\[4pt]
+   &\quad \times \left(0.08206\ \tfrac{\text{L atm}}{\text{mol K}}\right) \\[4pt]
+   &\quad \times (298.15\ \text{K}) \\[4pt]
+   &\quad = \textbf{2.45 atm}
+   \end{aligned}
+   $$
+
+3. The mol, L and K cancel, leaving atm: a pressure about 2.5 times that of the atmosphere, from a dilute sugar solution.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using the mass of solution instead of solvent">
+Molality uses the mass of the **solvent** only, in **kilograms**. For 5.00 g of NaCl in 500. g of water, use 0.500 kg, not 0.505 kg, and not 500.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the van 't Hoff factor">
+NaCl gives two particles per formula unit, so its effect is about twice that of the same molality of sugar. Leaving out $i$ underestimates the change for every ionic solute.
+</CommonMistake>
+
+<CommonMistake title="Adding the freezing-point change">
+$\Delta T_f$ is a **lowering**: subtract it from the normal freezing point. A solution with $\Delta T_f$ = 7.49 °C freezes at −7.49 °C, not +7.49 °C.
+</CommonMistake>
+
+<NotationNote>
+- Molality (lower-case $m$, mol/kg) and molarity ($M$ or $c$, mol/L) are different quantities; take care not to confuse $m$ with mass.
+- $K_f$ and $K_b$ are sometimes written in K kg mol⁻¹; a change of 1 K equals a change of 1 °C, so the values are the same.
+- Π (capital pi) is the symbol for osmotic pressure.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Like dissolves like. Solids usually dissolve more when hot; gases dissolve less when hot and more under pressure.
+- Colligative properties depend on the number of particles: $\Delta T_f = iK_fm$, $\Delta T_b = iK_bm$, $\Pi = iMRT$.
+- Molality = mol solute ÷ kg solvent. $i$ = 1 (molecular), 2 (NaCl), 3 ($\ce{CaCl2}$).
+- Water: $K_f$ = 1.86 °C kg/mol, $K_b$ = 0.512 °C kg/mol; use $T$ in K and $R$ = 0.08206 L atm mol⁻¹ K⁻¹ for Π.
+</RememberThis>

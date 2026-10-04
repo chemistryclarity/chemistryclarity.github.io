@@ -1,0 +1,39 @@
+# Flashcards: Solubility and Colligative Properties
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Solubility and Colligative Properties: Flashcards'
+description: 'Revise solubility, Henry''s law, molality, the van ''t Hoff factor, freezing-point depression, boiling-point elevation and osmotic pressure.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: col-01
+    front: 'How does temperature affect the solubility of solids and gases?'
+    back: 'Most solids dissolve more when hot; gases dissolve less when hot.'
+  - id: col-02
+    front: 'State Henry''s law.'
+    back: 'The solubility of a gas is proportional to its pressure above the liquid: c = k(H) × P.'
+  - id: col-03
+    front: 'What is a colligative property?'
+    back: 'A property that depends only on the number of dissolved particles, not their identity.'
+  - id: col-04
+    front: 'Define molality.'
+    back: 'Moles of solute per kilogram of solvent (mol/kg).'
+  - id: col-05
+    front: 'van ''t Hoff factor for glucose, NaCl and CaCl₂?'
+    back: '1, 2 and 3 (ideal values).'
+  - id: col-06
+    front: 'Freezing-point depression equation?'
+    back: 'ΔTf = i Kf m; for water Kf = 1.86 °C kg/mol. Subtract from the normal freezing point.'
+  - id: col-07
+    front: 'Boiling-point elevation equation?'
+    back: 'ΔTb = i Kb m; for water Kb = 0.512 °C kg/mol. Add to the normal boiling point.'
+  - id: col-08
+    front: 'Osmotic pressure equation?'
+    back: 'Π = iMRT, with M in mol/L, R = 0.08206 L atm mol⁻¹ K⁻¹, T in K.'
+  - id: col-09
+    front: 'What is osmosis?'
+    back: 'Flow of solvent through a semipermeable membrane from a dilute solution into a more concentrated one.'
+  - id: col-10
+    front: 'Why does salt melt ice on roads?'
+    back: 'Dissolved ions lower the freezing point of water (freezing-point depression), so the ice melts below 0 °C.'

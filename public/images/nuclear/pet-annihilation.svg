@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .ax { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .axis { stroke: #8a94a6; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #e3e7ee; stroke-width: 1; }
+    .lnA { stroke: #0f766e; stroke-width: 2.4; fill: none; } .lnB { stroke: #b45309; stroke-width: 2.4; fill: none; }
+    .pA { fill: #0f766e; } .pB { fill: #b45309; }
+    .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .oAtom { fill: #dc2626; } .hAtom { fill: #e5e7eb; stroke: #8a94a6; stroke-width: 1; } .bond { stroke: #14213d; stroke-width: 2.4; }
+    .hb { stroke: #2563eb; stroke-width: 1.8; stroke-dasharray: 4 3; } .hbl { fill: #2563eb; font-size: 10.5px; font-weight: 700; }
+    .dm { fill: #dc2626; font-size: 10px; font-weight: 700; } .dp { fill: #2563eb; font-size: 10px; font-weight: 700; }
+    .oT { fill: #ffffff; font-size: 10px; font-weight: 700; } .hT { fill: #14213d; font-size: 9px; font-weight: 700; }
+    .src { fill: #b45309; } .ray { stroke: #b45309; stroke-width: 1; stroke-dasharray: 3 3; fill: none; opacity: 0.8; }
+    .cell { fill: #fde7c7; stroke: #b45309; stroke-width: 1; }
+    .det { fill: #d9dee7; stroke: #5b6577; stroke-width: 1; } .body { fill: #f6f8fb; stroke: #8a94a6; stroke-width: 1.4; }
+    .gam { stroke: #7c3aed; stroke-width: 2.4; fill: none; marker-end: url(#hC); } .hC { fill: #7c3aed; }
+    .pos { fill: #0f766e; } .ele { fill: #2563eb; } .short { stroke: #0f766e; stroke-width: 1.6; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .ax, .hT { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .axis { stroke: #6b7894; } .grid { stroke: #2a3550; }
+      .lnA { stroke: #2dd4bf; } .pA, .lA, .pos { fill: #2dd4bf; } .lnB { stroke: #fbbf24; } .pB, .lB, .src { fill: #fbbf24; }
+      .lC, .hC { fill: #c4b5fd; } .gam { stroke: #c4b5fd; }
+      .oAtom { fill: #f87171; } .hAtom { fill: #3a4763; stroke: #9aa5ba; } .bond { stroke: #e9edf5; }
+      .hb { stroke: #60a5fa; } .hbl, .dp, .ele { fill: #60a5fa; } .dm { fill: #f87171; }
+      .ray { stroke: #fbbf24; } .cell { fill: #4a3410; stroke: #fbbf24; } .short { stroke: #2dd4bf; }
+      .det { fill: #3a4763; stroke: #9aa5ba; } .body { fill: #1b263d; stroke: #6b7894; }
+    }
+  </style>
+  <defs><marker id="hC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hC" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="340" rx="14"/><text class="t" x="20" y="28">How a PET scan works</text><text class="sub" x="20" y="45">Two gamma rays fly apart at 180° and hit the detector ring.</text><rect class="det" x="281" y="180" width="18" height="12" rx="2" transform="rotate(90.0 290.0 186.0)"/><rect class="det" x="277.25184089179754" y="208.47009496127728" width="18" height="12" rx="2" transform="rotate(105.0 286.3 214.5)"/><rect class="det" x="266.2627944162883" y="235" width="18" height="12" rx="2" transform="rotate(120.0 275.3 241.0)"/><rect class="det" x="248.78174593052023" y="257.78174593052023" width="18" height="12" rx="2" transform="rotate(135.0 257.8 263.8)"/><rect class="det" x="226" y="275.2627944162882" width="18" height="12" rx="2" transform="rotate(150.0 235.0 281.3)"/><rect class="det" x="199.47009496127728" y="286.25184089179754" width="18" height="12" rx="2" transform="rotate(165.0 208.5 292.3)"/><rect class="det" x="171" y="290" width="18" height="12" rx="2" transform="rotate(180.0 180.0 296.0)"/><rect class="det" x="142.52990503872272" y="286.25184089179754" width="18" height="12" rx="2" transform="rotate(195.0 151.5 292.3)"/><rect class="det" x="116.00000000000003" y="275.2627944162883" width="18" height="12" rx="2" transform="rotate(210.0 125.0 281.3)"/><rect class="det" x="93.21825406947978" y="257.78174593052023" width="18" height="12" rx="2" transform="rotate(225.0 102.2 263.8)"/><rect class="det" x="75.73720558371174" y="235" width="18" height="12" rx="2" transform="rotate(240.0 84.7 241.0)"/><rect class="det" x="64.7481591082025" y="208.4700949612773" width="18" height="12" rx="2" transform="rotate(255.0 73.7 214.5)"/><rect class="det" x="61" y="180" width="18" height="12" rx="2" transform="rotate(270.0 70.0 186.0)"/><rect class="det" x="64.74815910820247" y="151.52990503872277" width="18" height="12" rx="2" transform="rotate(285.0 73.7 157.5)"/><rect class="det" x="75.73720558371176" y="125" width="18" height="12" rx="2" transform="rotate(300.0 84.7 131.0)"/><rect class="det" x="93.21825406947976" y="102.21825406947978" width="18" height="12" rx="2" transform="rotate(315.0 102.2 108.2)"/><rect class="det" x="115.99999999999994" y="84.73720558371177" width="18" height="12" rx="2" transform="rotate(330.0 125.0 90.7)"/><rect class="det" x="142.52990503872275" y="73.74815910820249" width="18" height="12" rx="2" transform="rotate(345.0 151.5 79.7)"/><rect class="det" x="170.99999999999997" y="70" width="18" height="12" rx="2" transform="rotate(360.0 180.0 76.0)"/><rect class="det" x="199.47009496127723" y="73.74815910820247" width="18" height="12" rx="2" transform="rotate(375.0 208.5 79.7)"/><rect class="det" x="226" y="84.73720558371176" width="18" height="12" rx="2" transform="rotate(390.0 235.0 90.7)"/><rect class="det" x="248.78174593052017" y="102.21825406947976" width="18" height="12" rx="2" transform="rotate(405.0 257.8 108.2)"/><rect class="det" x="266.2627944162882" y="124.99999999999994" width="18" height="12" rx="2" transform="rotate(420.0 275.3 131.0)"/><rect class="det" x="277.25184089179754" y="151.52990503872272" width="18" height="12" rx="2" transform="rotate(435.0 286.3 157.5)"/><ellipse class="body" cx="180" cy="186" rx="62" ry="48"/><circle class="pA" cx="158" cy="194" r="6"/><text class="lA" x="148" y="198" text-anchor="end">¹⁸F</text><path class="short" d="M164 192 Q 172 182, 178 182"/><circle class="pos" cx="178" cy="182" r="3"/><circle class="ele" cx="186" cy="182" r="3"/><text class="lA" x="160" y="178" text-anchor="middle">e⁺</text><text class="hbl" x="194" y="196">e⁻</text><path class="gam" d="M182 182 L237.8 103.9"/><path class="gam" d="M182 182 L126.2 260.1"/><text class="lC" x="228.9" y="137.2">γ 511 keV</text><text class="lC" x="135.1" y="234.8" text-anchor="end">γ 511 keV</text><text class="sub" x="20" y="326">Positron + electron annihilate: their mass becomes two gamma rays.</text>
+</svg>

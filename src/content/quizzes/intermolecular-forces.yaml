@@ -1,0 +1,79 @@
+# Quiz: Intermolecular Forces
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Intermolecular Forces: Quiz'
+description: 'Seven questions on identifying intermolecular forces and using them to explain boiling points and solubility, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: imf-q1
+    prompt: 'Which forces are present between CH₄ molecules?'
+    choices:
+      - 'dispersion forces only'
+      - 'dipole–dipole forces'
+      - 'hydrogen bonds'
+      - 'ionic bonds'
+    answer: 'dispersion forces only'
+    explanation: 'Methane is non-polar and has no H on N, O or F, so only dispersion forces act.'
+    difficulty: easy
+  - id: imf-q2
+    prompt: 'Which molecule can form hydrogen bonds with itself?'
+    choices:
+      - 'CH₃OCH₃'
+      - 'CH₃OH'
+      - 'HCl'
+      - 'CH₄'
+    answer: 'CH₃OH'
+    explanation: 'Methanol has an H bonded directly to O. In CH₃OCH₃ all H atoms are on carbon.'
+    difficulty: easy
+  - id: imf-q3
+    prompt: 'Which halogen has the highest boiling point?'
+    choices:
+      - 'F₂'
+      - 'Cl₂'
+      - 'Br₂'
+      - 'I₂'
+    answer: 'I₂'
+    explanation: 'All are non-polar; I₂ has the most electrons and the strongest dispersion forces (184 °C).'
+    difficulty: easy
+  - id: imf-q4
+    prompt: 'Which has the highest boiling point: butane, propanone or propan-1-ol (all about 58–60 g/mol)?'
+    choices:
+      - 'butane'
+      - 'propanone'
+      - 'propan-1-ol'
+      - 'they are all the same'
+    answer: 'propan-1-ol'
+    explanation: 'With similar dispersion forces, propan-1-ol wins because it can hydrogen-bond (97 °C, against 56 °C and about 0 °C).'
+    difficulty: medium
+  - id: imf-q5
+    prompt: 'CO₂ has polar C=O bonds. What are its intermolecular forces?'
+    choices:
+      - 'dispersion forces only'
+      - 'dipole–dipole forces'
+      - 'hydrogen bonds'
+      - 'dipole–dipole and hydrogen bonds'
+    answer: 'dispersion forces only'
+    explanation: 'CO₂ is linear, so the two bond dipoles cancel and the molecule is non-polar.'
+    difficulty: hard
+  - id: imf-q6
+    prompt: 'Which is most soluble in hexane?'
+    choices:
+      - 'KCl'
+      - 'sugar'
+      - 'I₂'
+      - 'ethanoic acid'
+    answer: 'I₂'
+    explanation: 'Like dissolves like: non-polar iodine dissolves in non-polar hexane.'
+    difficulty: medium
+  - id: imf-q7
+    prompt: 'How much energy is needed to vaporize 2.00 mol of water at 100 °C (ΔH(vap) = 40.7 kJ/mol)?'
+    choices:
+      - '20.4 kJ'
+      - '40.7 kJ'
+      - '81.4 kJ'
+      - '733 kJ'
+    answer: '81.4 kJ'
+    explanation: 'q = 2.00 mol × 40.7 kJ/mol = 81.4 kJ.'
+    difficulty: medium

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .ax { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .axis { stroke: #8a94a6; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #e3e7ee; stroke-width: 1; }
+    .lnA { stroke: #0f766e; stroke-width: 2.4; fill: none; } .lnB { stroke: #b45309; stroke-width: 2.4; fill: none; }
+    .pA { fill: #0f766e; } .pB { fill: #b45309; }
+    .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .oAtom { fill: #dc2626; } .hAtom { fill: #e5e7eb; stroke: #8a94a6; stroke-width: 1; } .bond { stroke: #14213d; stroke-width: 2.4; }
+    .hb { stroke: #2563eb; stroke-width: 1.8; stroke-dasharray: 4 3; } .hbl { fill: #2563eb; font-size: 10.5px; font-weight: 700; }
+    .dm { fill: #dc2626; font-size: 10px; font-weight: 700; } .dp { fill: #2563eb; font-size: 10px; font-weight: 700; }
+    .oT { fill: #ffffff; font-size: 10px; font-weight: 700; } .hT { fill: #14213d; font-size: 9px; font-weight: 700; }
+    .src { fill: #b45309; } .ray { stroke: #b45309; stroke-width: 1; stroke-dasharray: 3 3; fill: none; opacity: 0.8; }
+    .cell { fill: #fde7c7; stroke: #b45309; stroke-width: 1; }
+    .det { fill: #d9dee7; stroke: #5b6577; stroke-width: 1; } .body { fill: #f6f8fb; stroke: #8a94a6; stroke-width: 1.4; }
+    .gam { stroke: #7c3aed; stroke-width: 2.4; fill: none; marker-end: url(#hC); } .hC { fill: #7c3aed; }
+    .pos { fill: #0f766e; } .ele { fill: #2563eb; } .short { stroke: #0f766e; stroke-width: 1.6; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .ax, .hT { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .axis { stroke: #6b7894; } .grid { stroke: #2a3550; }
+      .lnA { stroke: #2dd4bf; } .pA, .lA, .pos { fill: #2dd4bf; } .lnB { stroke: #fbbf24; } .pB, .lB, .src { fill: #fbbf24; }
+      .lC, .hC { fill: #c4b5fd; } .gam { stroke: #c4b5fd; }
+      .oAtom { fill: #f87171; } .hAtom { fill: #3a4763; stroke: #9aa5ba; } .bond { stroke: #e9edf5; }
+      .hb { stroke: #60a5fa; } .hbl, .dp, .ele { fill: #60a5fa; } .dm { fill: #f87171; }
+      .ray { stroke: #fbbf24; } .cell { fill: #4a3410; stroke: #fbbf24; } .short { stroke: #2dd4bf; }
+      .det { fill: #3a4763; stroke: #9aa5ba; } .body { fill: #1b263d; stroke: #6b7894; }
+    }
+  </style>
+  <defs><marker id="hC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hC" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="300" rx="14"/><text class="t" x="20" y="28">Distance: the inverse-square law</text><text class="sub" x="20" y="45">Double the distance: the radiation spreads over 4× the area.</text><circle class="src" cx="34" cy="150" r="8"/><text class="lab" x="34" y="176" text-anchor="middle">source</text><rect class="cell" x="93" y="143" width="14" height="14"/><text class="lab" x="100" y="214" text-anchor="middle">1 m</text><text class="lB" x="100" y="230" text-anchor="middle">40.0 µSv/h</text><text class="num" x="100" y="244" text-anchor="middle">1 square</text><rect class="cell" x="176" y="136" width="14" height="14"/><rect class="cell" x="176" y="150" width="14" height="14"/><rect class="cell" x="190" y="136" width="14" height="14"/><rect class="cell" x="190" y="150" width="14" height="14"/><text class="lab" x="190" y="214" text-anchor="middle">2 m</text><text class="lB" x="190" y="230" text-anchor="middle">10.0 µSv/h</text><text class="num" x="190" y="244" text-anchor="middle">4 squares</text><rect class="cell" x="259" y="129" width="14" height="14"/><rect class="cell" x="259" y="143" width="14" height="14"/><rect class="cell" x="259" y="157" width="14" height="14"/><rect class="cell" x="273" y="129" width="14" height="14"/><rect class="cell" x="273" y="143" width="14" height="14"/><rect class="cell" x="273" y="157" width="14" height="14"/><rect class="cell" x="287" y="129" width="14" height="14"/><rect class="cell" x="287" y="143" width="14" height="14"/><rect class="cell" x="287" y="157" width="14" height="14"/><text class="lab" x="280" y="214" text-anchor="middle">3 m</text><text class="lB" x="280" y="230" text-anchor="middle">4.44 µSv/h</text><text class="num" x="280" y="244" text-anchor="middle">9 squares</text><path class="ray" d="M34 150 L301 127.20731707317073 M34 150 L301 172.79268292682926"/><text class="sub" x="20" y="272">Dose rate ∝ 1 ÷ distance²: at 3 m it is 1/9 of that at 1 m.</text><text class="sub" x="20" y="287">Also: less time near the source, and more shielding.</text>
+</svg>

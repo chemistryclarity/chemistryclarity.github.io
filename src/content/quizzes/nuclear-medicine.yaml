@@ -1,0 +1,79 @@
+# Quiz: Nuclear Medicine and Radiation Safety
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Nuclear Medicine and Radiation Safety: Quiz'
+description: 'Seven questions on radiation units, medical isotopes, PET and radiation protection, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: nm-q1
+    prompt: 'Which unit measures the energy absorbed per kilogram of tissue?'
+    choices:
+      - 'becquerel'
+      - 'gray'
+      - 'sievert'
+      - 'MeV'
+    answer: 'gray'
+    explanation: '1 Gy = 1 J/kg. The becquerel measures activity; the sievert adds the radiation weighting factor.'
+    difficulty: easy
+  - id: nm-q2
+    prompt: 'Which isotope is best suited to imaging an organ?'
+    choices:
+      - 'an alpha emitter with a half-life of 1000 years'
+      - 'a gamma emitter with a half-life of 6 hours'
+      - 'a beta emitter with a half-life of 30 years'
+      - 'a stable isotope'
+    answer: 'a gamma emitter with a half-life of 6 hours'
+    explanation: 'Gamma rays leave the body to reach the camera, and a short half-life limits the dose. This describes technetium-99m.'
+    difficulty: easy
+  - id: nm-q3
+    prompt: 'An absorbed dose of 0.010 Gy from alpha particles gives an equivalent dose of:'
+    choices:
+      - '0.010 Sv'
+      - '0.20 Sv'
+      - '0.0005 Sv'
+      - '2.0 Sv'
+    answer: '0.20 Sv'
+    explanation: 'Equivalent dose = 0.010 Gy × 20 = 0.20 Sv.'
+    difficulty: medium
+  - id: nm-q4
+    prompt: 'The dose rate at 1.0 m is 36 µSv/h. What is it at 3.0 m?'
+    choices:
+      - '12 µSv/h'
+      - '4.0 µSv/h'
+      - '108 µSv/h'
+      - '6.0 µSv/h'
+    answer: '4.0 µSv/h'
+    explanation: '36 µSv/h × (1.0 m ÷ 3.0 m)² = 36 µSv/h ÷ 9 = 4.0 µSv/h.'
+    difficulty: medium
+  - id: nm-q5
+    prompt: 'In a PET scan, what is detected?'
+    choices:
+      - 'positrons leaving the body'
+      - 'two gamma rays travelling in opposite directions'
+      - 'alpha particles'
+      - 'neutrons'
+    answer: 'two gamma rays travelling in opposite directions'
+    explanation: 'Positrons annihilate with electrons inside the body, producing pairs of 511 keV gamma rays at 180°.'
+    difficulty: medium
+  - id: nm-q6
+    prompt: 'A shield has a half-value thickness of 2.0 mm. What fraction of the gamma rays passes through 6.0 mm?'
+    choices:
+      - '1/3'
+      - '1/6'
+      - '1/8'
+      - '1/9'
+    answer: '1/8'
+    explanation: '6.0 mm ÷ 2.0 mm = 3 half-value thicknesses, so (½)³ = 1/8 gets through.'
+    difficulty: hard
+  - id: nm-q7
+    prompt: 'Why is iodine-131 used to treat the thyroid?'
+    choices:
+      - 'it is a pure gamma emitter'
+      - 'the thyroid takes up iodine, and its beta particles destroy nearby tissue'
+      - 'it has a half-life of several years'
+      - 'it emits positrons'
+    answer: 'the thyroid takes up iodine, and its beta particles destroy nearby tissue'
+    explanation: 'Chemistry delivers the isotope to the right organ; the short-range beta particles deposit their energy there.'
+    difficulty: medium

@@ -1,0 +1,151 @@
+---
+title: Nuclear Medicine and Radiation Safety
+question: "How are radioisotopes used in medicine, and how is radiation dose measured and kept safe?"
+description: "Ionizing radiation and the body, becquerels, grays and sieverts, tracers for imaging and PET, radiotherapy, and protection by time, distance and shielding."
+area: nuclear
+level: intermediate
+order: 30
+prerequisites: [radioactive-decay]
+related: [radioactive-decay, fission-and-fusion]
+flashcards: nuclear-medicine
+quiz: nuclear-medicine
+resources: [nuclear-medicine-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Half-lives: Tc-99m 6.01 h, F-18 110 min, I-123 13.2 h, I-131 8.02 d, Ra-223 11.4 d. Radiation weighting factors (ICRP): 1 for gamma, X-rays and beta; 20 for alpha.
+  Dose figures: worldwide average natural background about 2.4 mSv per year (UNSCEAR); ICRP limits 1 mSv/yr (public) and 20 mSv/yr averaged over 5 years (workers).
+  Not medical advice. Every value calculated by computer. Units shown in every step.
+*/}
+
+## What is it?
+
+Radiation from radioactive nuclei is **ionizing**: it has enough energy to knock electrons out of atoms and molecules in the body. This can break bonds in DNA directly, or split water into reactive **free radicals** that damage cells. The same property makes radiation **dangerous** and **useful**: it can harm healthy tissue, but it can also be aimed at cancer cells, and the gamma rays that escape the body can be detected to make images.
+
+Three quantities describe radiation and its effects:
+
+| Quantity | Unit | Meaning |
+|---|---|---|
+| **Activity** | becquerel, Bq | 1 Bq = 1 decay per second |
+| **Absorbed dose** | gray, Gy | 1 Gy = 1 J of energy absorbed per kg of tissue |
+| **Equivalent dose** | sievert, Sv | absorbed dose × radiation weighting factor |
+
+The **radiation weighting factor** is 1 for gamma rays, X-rays and beta particles, but **20 for alpha particles**, which deposit their energy in a very short track and do much more damage per joule.
+
+<KeyIdea>
+Medicine uses the **right radiation for the job**. **Imaging** needs gamma rays that escape the body, from an isotope with a short half-life. **Therapy** needs radiation that deposits its energy locally (beta or alpha particles), or a carefully aimed external beam.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Diagnosis.** Millions of scans a year use technetium-99m to image bones, the heart and other organs, and fluorine-18 PET scans find cancers and study the brain.
+- **Treatment.** Iodine-131 treats overactive and cancerous thyroid glands; external gamma and X-ray beams and implanted sources treat many cancers.
+- **Safety.** Patients, staff and the public must be protected, so doses are measured, limited and kept **as low as reasonably achievable** (ALARA).
+
+## How does it work?
+
+### 1. Choosing a tracer for imaging
+
+A good imaging isotope:
+
+- emits **gamma rays** (they pass out of the body to the camera; alpha and beta would be absorbed and only cause damage);
+- has a **short half-life** (hours), long enough for the scan but short enough to limit the dose;
+- can be attached to a molecule that collects in the organ of interest.
+
+**Technetium-99m** ($t_{1/2}$ = 6.01 h, 140 keV gamma rays) fits all three. **Iodine-123** ($t_{1/2}$ = 13.2 h) is taken up by the thyroid, which uses iodine.
+
+### 2. PET scans
+
+In positron emission tomography, a glucose-like molecule labelled with **fluorine-18** ($t_{1/2}$ = 110 min) collects in very active tissue such as tumours. Each fluorine-18 nucleus emits a **positron**, which meets an electron within a millimetre or so. The two **annihilate**, and their mass becomes two **511 keV gamma rays** that fly apart in opposite directions. Detectors around the patient record both, and a computer traces back where they came from.
+
+### 3. Radiotherapy
+
+- **Iodine-131** (beta and gamma emitter, $t_{1/2}$ = 8.02 d) concentrates in the thyroid, where its beta particles destroy the tissue.
+- **External beams** of high-energy X-rays or gamma rays are aimed at a tumour from several directions, so the tumour gets a high dose while surrounding tissue gets less.
+- **Brachytherapy** places small sealed sources inside or next to the tumour. Some newer treatments use **alpha emitters**, such as radium-223 ($t_{1/2}$ = 11.4 d) for cancer that has spread to bone.
+
+### 4. Protection: time, distance, shielding
+
+- **Time:** dose = dose rate × time, so spend as little time near a source as possible.
+- **Distance:** the dose rate from a small source falls with the **square of the distance** (inverse-square law): $\dfrac{\text{rate}_2}{\text{rate}_1} = \left(\dfrac{d_1}{d_2}\right)^2$.
+- **Shielding:** lead, concrete or water absorbs radiation. Each **half-value thickness** of a shield halves the intensity.
+
+Workers wear **dosimeters** that record their dose, and dose limits are set well below the levels known to cause harm.
+
+| Dose (equivalent) | Example |
+|---|---|
+| about 2.4 mSv per year | worldwide average natural background (radon, rocks, cosmic rays, food) |
+| 1 mSv per year | limit for the public from artificial sources (excluding medical) |
+| 20 mSv per year | limit for radiation workers (averaged over 5 years) |
+
+<Analogy>
+Standing near a radioactive source is like standing near a campfire. You warm up less if you stay a shorter time (**time**), step back (**distance**: much cooler two steps away), or stand behind a wall (**shielding**). The fire itself (the activity) stays the same; what changes is how much reaches you.
+</Analogy>
+
+<MorePrecisely>
+The **effective dose** (also in sieverts) goes one step further: it weights each organ by its sensitivity to radiation, so that doses to different parts of the body can be compared and added. In a patient, the activity of a tracer falls both by radioactive decay and by the body excreting it; the combined rate is described by an **effective half-life**, which is shorter than the physical half-life. Radiation effects are of two kinds: high doses cause predictable tissue damage (such as burns or radiation sickness), while low doses slightly raise the long-term **probability** of cancer, which is why every unnecessary dose is avoided.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/nuclear/pet-annihilation.svg" alt="A PET scanner seen end-on: a ring of detector blocks around a patient. Inside the patient, a fluorine-18 nucleus emits a positron (e+), which travels a short way and meets an electron (e−). They annihilate, and two gamma rays of 511 keV fly apart in opposite directions to detectors on opposite sides of the ring. Positron and electron annihilate: their mass becomes two gamma rays." caption="Two gamma rays at 180° let the scanner trace each decay back to its source." width={360} height={340} />
+
+<Figure src="/images/nuclear/inverse-square.svg" alt="The inverse-square law. Radiation spreads out from a small source. At 1 m it covers 1 square and the dose rate is 40.0 µSv/h; at 2 m it covers 4 squares and the rate is 10.0 µSv/h; at 3 m it covers 9 squares and the rate is 4.44 µSv/h. Dose rate is proportional to 1 divided by distance squared. Also: less time near the source, and more shielding." caption="Doubling the distance cuts the dose rate to a quarter." width={360} height={300} />
+
+## Worked example
+
+<Example title="Absorbed dose and equivalent dose">
+**Question:** A 70.0 kg person absorbs 0.0150 J from gamma rays. Find the absorbed dose and the equivalent dose. What would the equivalent dose be if the same energy came from alpha particles?
+
+1. Absorbed dose $= \dfrac{0.0150\ \text{J}}{70.0\ \text{kg}} = 2.14 \times 10^{-4}\ \text{J/kg} = 2.14 \times 10^{-4}\ \text{Gy}$
+2. Gamma (weighting factor 1): $2.14 \times 10^{-4}\ \text{Gy} \times 1 = 2.14 \times 10^{-4}\ \text{Sv} =$ **0.214 mSv**
+3. Alpha (weighting factor 20): $2.14 \times 10^{-4}\ \text{Gy} \times 20 = 4.29 \times 10^{-3}\ \text{Sv} =$ **4.29 mSv**, twenty times more harmful for the same energy.
+</Example>
+
+<Example title="Distance and the inverse-square law">
+**Question:** The dose rate 1.00 m from a source is 40.0 µSv/h. What is it at 2.00 m and at 3.00 m?
+
+1. $\text{rate}_2 = \text{rate}_1 \times \left(\dfrac{d_1}{d_2}\right)^2$
+2. At 2.00 m: $40.0\ \text{µSv/h} \times \left(\dfrac{1.00\ \text{m}}{2.00\ \text{m}}\right)^2 =$ **10.0 µSv/h**
+3. At 3.00 m: $40.0\ \text{µSv/h} \times \left(\dfrac{1.00\ \text{m}}{3.00\ \text{m}}\right)^2 =$ **4.44 µSv/h**
+</Example>
+
+<Example title="How much tracer is left?">
+**Question:** A patient receives 740 MBq of technetium-99m ($t_{1/2}$ = 6.01 h). What activity remains 18.0 h later (ignoring excretion)?
+
+1. $n = \dfrac{18.0\ \text{h}}{6.01\ \text{h}} = 2.995$ half-lives
+2. $A = 740\ \text{MBq} \times \left(\tfrac{1}{2}\right)^{2.995} =$ **92.8 MBq**, about one-eighth of the starting activity.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Confusing activity with dose">
+A source with a high activity (Bq) does not necessarily give a high dose: the dose depends on the type and energy of the radiation, how much is absorbed, the distance and the time. Activity describes the source; dose describes what the body receives.
+</CommonMistake>
+
+<CommonMistake title="Halving the dose rate when the distance doubles">
+The inverse-square law means doubling the distance divides the dose rate by **4**, not 2; tripling it divides by **9**.
+</CommonMistake>
+
+<CommonMistake title="Thinking an imaged patient becomes permanently radioactive">
+Tracers have short half-lives and are also excreted, so the activity falls quickly. After a technetium-99m scan, the activity is about one-sixteenth of the starting value within a day. External X-ray and gamma beams leave **no** radioactivity in the body at all.
+</CommonMistake>
+
+<NotationNote>
+- Prefixes: 1 mSv = 10⁻³ Sv; 1 µSv = 10⁻⁶ Sv; 1 MBq = 10⁶ Bq.
+- Older units: 1 curie (Ci) = 3.7 × 10¹⁰ Bq; 1 rad = 0.01 Gy; 1 rem = 0.01 Sv.
+- keV and MeV are units of energy for single photons or particles (1 keV = 1.602 × 10⁻¹⁶ J).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Activity in Bq (decays per second); absorbed dose in Gy (J/kg); equivalent dose in Sv = Gy × weighting factor (1 for γ, X, β; 20 for α).
+- Imaging: gamma emitters with short half-lives (Tc-99m, 6.01 h). PET: F-18 positrons give two 511 keV gamma rays.
+- Therapy: beta or alpha emitters placed in the tumour (I-131, Ra-223), or aimed external beams.
+- Protection: less time, more distance (rate ∝ 1/d²), more shielding; keep doses as low as reasonably achievable.
+</RememberThis>

@@ -1,0 +1,79 @@
+# Quiz: Solubility and Colligative Properties
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Solubility and Colligative Properties: Quiz'
+description: 'Seven questions on solubility, molality, freezing-point depression, boiling-point elevation and osmotic pressure, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: col-q1
+    prompt: 'Why do fizzy drinks go flat faster when warm?'
+    choices:
+      - 'gases are more soluble when warm'
+      - 'gases are less soluble when warm'
+      - 'sugar reacts with CO₂'
+      - 'water evaporates'
+    answer: 'gases are less soluble when warm'
+    explanation: 'Gas solubility falls as temperature rises, so CO₂ escapes faster from a warm drink.'
+    difficulty: easy
+  - id: col-q2
+    prompt: 'What is the molality of 0.500 mol of glucose in 250. g of water?'
+    choices:
+      - '0.125 mol/kg'
+      - '0.500 mol/kg'
+      - '2.00 mol/kg'
+      - '2.00 × 10⁻³ mol/kg'
+    answer: '2.00 mol/kg'
+    explanation: 'm = 0.500 mol ÷ 0.250 kg = 2.00 mol/kg. Remember to convert grams to kilograms.'
+    difficulty: easy
+  - id: col-q3
+    prompt: 'Which 0.10 mol/kg solution has the lowest freezing point?'
+    choices:
+      - 'glucose'
+      - 'NaCl'
+      - 'CaCl₂'
+      - 'sucrose'
+    answer: 'CaCl₂'
+    explanation: 'CaCl₂ gives 3 ions (i = 3), the most particles, so the largest freezing-point depression.'
+    difficulty: medium
+  - id: col-q4
+    prompt: 'A 1.00 mol/kg aqueous glucose solution freezes at (Kf = 1.86 °C kg/mol):'
+    choices:
+      - '+1.86 °C'
+      - '−1.86 °C'
+      - '−0.512 °C'
+      - '−3.72 °C'
+    answer: '−1.86 °C'
+    explanation: 'ΔTf = 1 × 1.86 °C kg/mol × 1.00 mol/kg = 1.86 °C; 0.00 °C − 1.86 °C = −1.86 °C.'
+    difficulty: medium
+  - id: col-q5
+    prompt: 'What is the van ''t Hoff factor of Na₂SO₄ (ideal)?'
+    choices:
+      - '1'
+      - '2'
+      - '3'
+      - '7'
+    answer: '3'
+    explanation: 'Na₂SO₄ → 2Na⁺ + SO₄²⁻: three ions. The sulfate ion stays together.'
+    difficulty: medium
+  - id: col-q6
+    prompt: 'Which unit of temperature must be used in Π = iMRT?'
+    choices:
+      - '°C'
+      - '°F'
+      - 'K'
+      - 'any unit'
+    answer: 'K'
+    explanation: 'R = 0.08206 L atm mol⁻¹ K⁻¹ contains kelvin, so T must be in kelvin for the units to cancel.'
+    difficulty: easy
+  - id: col-q7
+    prompt: 'Why is molality, not molarity, used for boiling- and freezing-point calculations?'
+    choices:
+      - 'it is easier to measure volume'
+      - 'molality does not change with temperature'
+      - 'molarity has no units'
+      - 'molality includes the solute mass'
+    answer: 'molality does not change with temperature'
+    explanation: 'Molality uses mass of solvent, which does not change on heating; volumes expand, so molarity changes.'
+    difficulty: hard

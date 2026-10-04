@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/nuclear-medicine-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Nuclear Medicine and Radiation Safety Worksheet'
+description: '9 questions on radiation units, choosing isotopes, dose calculations, the inverse-square law, shielding and PET. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/nuclear-medicine-worksheet.pdf'
+answerKey: '/downloads/nuclear-medicine-worksheet-answers.pdf'
+preview: '/previews/nuclear-medicine-worksheet.png'
+status: review
