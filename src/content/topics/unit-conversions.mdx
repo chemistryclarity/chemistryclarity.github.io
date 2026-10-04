@@ -1,0 +1,183 @@
+---
+title: SI Units and Unit Conversions
+question: "How do you convert units using dimensional analysis?"
+description: "The SI base units, metric prefixes and how to convert any unit step by step with conversion factors, including squared and cubed units and density."
+area: foundations
+level: beginner
+order: 6
+prerequisites: [significant-figures]
+related: [significant-figures, temperature-scales, molarity]
+flashcards: unit-conversions
+quiz: unit-conversions
+resources: [unit-conversions-worksheet]
+references: [bipm-si-brochure-9, brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  SI base units and prefixes follow the BIPM SI Brochure (9th ed.). Every conversion checked by computer.
+  Units shown on every quantity in every step; cancelled units are struck through.
+*/}
+
+## What is it?
+
+A measurement is a **number with a unit**: "5" means nothing, but "5 g" or "5 L" does. Scientists use the **SI** (Système International), built on seven **base units**:
+
+| Quantity | Unit | Symbol |
+|---|---|---|
+| Length | metre | m |
+| Mass | kilogram | kg |
+| Time | second | s |
+| Temperature | kelvin | K |
+| Amount of substance | mole | mol |
+| Electric current | ampere | A |
+| Luminous intensity | candela | cd |
+
+Every other unit is **derived** from these: area (m²), volume (m³), speed (m/s), density (kg/m³), energy (joule, J = kg·m²/s²) and pressure (pascal, Pa = N/m²).
+
+<KeyIdea>
+To convert a unit, multiply by a **conversion factor**: a fraction equal to 1, such as $\dfrac{1000\ \text{m}}{1\ \text{km}}$. Arrange it so the unit you don't want **cancels** and the unit you want is left. This method is called **dimensional analysis**.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Data comes in many units.** Labs use mL, g and °C; equations often need L, kg and K.
+- **Units catch mistakes.** If the units don't cancel to the answer's unit, the setup is wrong, before you even press a calculator key.
+- **Real consequences.** Unit errors have wrecked spacecraft and caused medication overdoses. Writing units on every number prevents them.
+
+## How does it work?
+
+### 1. Metric prefixes
+
+A prefix multiplies a unit by a power of ten. The most useful in chemistry:
+
+| Prefix | Symbol | Factor |
+|---|---|---|
+| kilo | k | $10^{3}$ |
+| deci | d | $10^{-1}$ |
+| centi | c | $10^{-2}$ |
+| milli | m | $10^{-3}$ |
+| micro | μ | $10^{-6}$ |
+| nano | n | $10^{-9}$ |
+
+So 1 km = 1000 m, 1 mL = 0.001 L and 1 nm = $10^{-9}$ m.
+
+### 2. Conversion factors
+
+Any equality gives **two** conversion factors. From 1 L = 1000 mL:
+
+$$
+\frac{1000\ \text{mL}}{1\ \text{L}} \quad \text{or} \quad \frac{1\ \text{L}}{1000\ \text{mL}}
+$$
+
+Choose the one with the unit you want to remove **in the denominator**.
+
+### 3. Squared and cubed units
+
+Square or cube the **whole** conversion factor, number and unit:
+
+- 1 m = 100 cm, so 1 m² = (100 cm)² = $10^{4}$ cm² and 1 m³ = (100 cm)³ = $10^{6}$ cm³
+- **1 mL = 1 cm³** and **1 L = 1000 cm³ = 1 dm³**
+
+### 4. Density as a conversion factor
+
+Density links mass and volume: $\rho = \dfrac{m}{V}$. A density of 13.6 g/mL means $\dfrac{13.6\ \text{g}}{1\ \text{mL}}$, which converts volume into mass (or, flipped, mass into volume).
+
+<Analogy>
+Converting units is like changing money. 50 dollars is still the same amount of money when you express it in cents (5000 cents); only the number and the unit change, together. A conversion factor is the exchange rate.
+</Analogy>
+
+<MorePrecisely>
+The litre is not an SI unit, but it is accepted for use with the SI: 1 L = 1 dm³ exactly. The kilogram is the only base unit whose name already contains a prefix, so prefixes are attached to "gram" instead (mg, not μkg). Since 2019, all seven base units are defined by fixing the values of physical constants.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/unit-conversions/metric-prefixes.svg" alt="Ladder of metric prefixes from giga (10 to the 9) through mega (10 to the 6), kilo (10 cubed), the base unit (10 to the 0), deci (10 to the minus 1), centi (10 to the minus 2), milli (10 to the minus 3), micro (10 to the minus 6), nano (10 to the minus 9) and pico (10 to the minus 12), with examples such as km, kg, mL, mg, micrometre, nm and pm." caption="Each step on the ladder is a power of ten." width={360} height={380} />
+
+## Worked example
+
+<Example title="A one-step conversion">
+**Question:** Convert 350 mL to litres.
+
+1. Use 1 L = 1000 mL, with mL in the denominator so it cancels:
+
+   $$
+   \begin{aligned}
+   &350\ \cancel{\text{mL}} \times \frac{1\ \text{L}}{1000\ \cancel{\text{mL}}} \\[4pt]
+   &= 0.350\ \text{L}
+   \end{aligned}
+   $$
+
+2. The answer is **0.350 L**.
+</Example>
+
+<Example title="Converting two units at once">
+**Question:** A car travels at 72 km/h. What is this speed in m/s?
+
+1. Convert km to m (top) and h to s (bottom):
+
+   $$
+   \begin{aligned}
+   &\frac{72\ \cancel{\text{km}}}{1\ \cancel{\text{h}}} \times \frac{1000\ \text{m}}{1\ \cancel{\text{km}}} \\[4pt]
+   &\quad \times \frac{1\ \cancel{\text{h}}}{3600\ \text{s}} \\[4pt]
+   &= 20\ \text{m/s}
+   \end{aligned}
+   $$
+
+2. km and h cancel, leaving m/s: **20 m/s**.
+</Example>
+
+<Example title="A cubed unit">
+**Question:** The density of a liquid is 1.20 g/cm³. What is it in kg/m³?
+
+1. Convert g to kg, and cm³ to m³ using $1\ \text{m}^3 = 10^{6}\ \text{cm}^3$:
+
+   $$
+   \begin{aligned}
+   &\frac{1.20\ \cancel{\text{g}}}{1\ \cancel{\text{cm}^3}} \times \frac{1\ \text{kg}}{1000\ \cancel{\text{g}}} \\[4pt]
+   &\quad \times \frac{10^{6}\ \cancel{\text{cm}^3}}{1\ \text{m}^3} \\[4pt]
+   &= 1.20 \times 10^{3}\ \text{kg/m}^3
+   \end{aligned}
+   $$
+
+2. The density is **$1.20 \times 10^{3}$ kg/m³**.
+</Example>
+
+<Example title="Using density">
+**Question:** Mercury has a density of 13.6 g/mL. What is the mass of 15.0 mL of mercury?
+
+$$
+15.0\ \cancel{\text{mL}} \times \frac{13.6\ \text{g}}{1\ \cancel{\text{mL}}} = 204\ \text{g}
+$$
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using the conversion factor upside down">
+$350\ \text{mL} \times \dfrac{1000\ \text{mL}}{1\ \text{L}}$ gives 350 000 mL²/L, which is clearly wrong: the units don't cancel. If the units don't work out, flip the factor.
+</CommonMistake>
+
+<CommonMistake title="Forgetting to square or cube the factor">
+1 m² is **not** 100 cm². It is (100 cm)² = 10 000 cm², because both the length and the width are converted.
+</CommonMistake>
+
+<CommonMistake title="Mixing up m (milli) and M (mega)">
+Symbols are case-sensitive: 1 mg is a thousandth of a gram, but 1 Mg is a million grams. Likewise, "m" alone means metre, and "M" in chemistry also means mol/L.
+</CommonMistake>
+
+<NotationNote>
+- Units can be written with a slash or with negative powers: g/cm³ = g cm⁻³; J/(mol·K) = J mol⁻¹ K⁻¹.
+- A space separates the number and the unit: 5.0 g, not 5.0g. Percent and degree signs follow the same rule in SI style (25 °C).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Seven SI base units: m, kg, s, K, mol, A, cd. Everything else is derived.
+- k = 10³, c = 10⁻², m = 10⁻³, μ = 10⁻⁶, n = 10⁻⁹.
+- Multiply by conversion factors (fractions equal to 1) so unwanted units cancel.
+- Square or cube the whole factor for areas and volumes; 1 mL = 1 cm³; 1 L = 1 dm³.
+</RememberThis>

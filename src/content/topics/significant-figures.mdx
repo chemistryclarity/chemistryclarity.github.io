@@ -1,0 +1,143 @@
+---
+title: Significant Figures and Measurement
+question: "How do you count significant figures and use them in calculations?"
+description: "Count significant figures, write numbers in scientific notation, round calculated answers correctly, and tell accuracy from precision."
+area: foundations
+level: beginner
+order: 4
+prerequisites: []
+related: [unit-conversions, classification-of-matter]
+flashcards: significant-figures
+quiz: significant-figures
+resources: [significant-figures-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Every answer checked by computer. Units shown on every quantity in every step.
+  REVIEW: rounding uses "5 or more rounds up"; some courses use round-half-to-even. Trailing zeros without a decimal point are treated as ambiguous.
+*/}
+
+## What is it?
+
+Every measurement has some **uncertainty**. A balance that reads 12.47 g is certain about 12.4 and estimates the last digit, 7. The **significant figures** (sig figs) in a number are all the digits known with certainty **plus one estimated digit**.
+
+A measurement therefore has three parts: a **number**, a **unit**, and an implied **uncertainty**. 12.47 g and 12.5 g describe the same object, but the first was measured more precisely.
+
+<KeyIdea>
+The number of significant figures shows how precisely something was measured. A calculated answer can never be more precise than the measurements it came from.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Honest results.** Writing 2.8409090 g/mL when your data supports only 2.84 g/mL claims a precision you don't have.
+- **Comparing data.** Significant figures tell another scientist how far to trust your numbers.
+- **Exams and lab reports.** Answers are expected to the correct number of significant figures, with units.
+
+## How does it work?
+
+### 1. Counting significant figures
+
+| Rule | Example | Sig figs |
+|---|---|---|
+| Non-zero digits are always significant | 4.56 g | 3 |
+| Zeros **between** non-zero digits are significant | 1.05 m | 3 |
+| **Leading** zeros (before the first non-zero digit) are not | 0.0042 L | 2 |
+| **Trailing** zeros after a decimal point are significant | 2.500 mL | 4 |
+| Trailing zeros in a whole number with no decimal point are **ambiguous** | 1200 m | 2, 3 or 4 |
+
+**Exact numbers** have unlimited significant figures: counted numbers (3 beakers) and defined relationships (1 km = 1000 m; 1 in = 2.54 cm exactly). They never limit an answer.
+
+### 2. Scientific notation
+
+Scientific notation removes the ambiguity: every digit written in the first part is significant.
+
+- 0.000 520 m = $5.20 \times 10^{-4}$ m (3 sig figs)
+- 1200 m to 3 sig figs = $1.20 \times 10^{3}$ m
+
+### 3. Calculations
+
+| Operation | Rule | Example |
+|---|---|---|
+| × and ÷ | answer has the **fewest significant figures** of the inputs | 4.56 cm × 1.4 cm = 6.384 cm² → **6.4 cm²** (2 s.f.) |
+| + and − | answer has the **fewest decimal places** of the inputs | 25.12 g + 3.4 g = 28.52 g → **28.5 g** (1 d.p.) |
+
+In a calculation with several steps, **keep extra digits** in the intermediate results and round only the final answer.
+
+### 4. Rounding
+
+Look at the first digit you are dropping: if it is **5 or more**, round up; if it is **less than 5**, leave the last kept digit unchanged. 2.4562 g to 3 s.f. is 2.46 g; 0.0012349 m to 3 s.f. is 0.00123 m.
+
+### 5. Accuracy and precision
+
+- **Accuracy:** how close a measurement is to the **true value**.
+- **Precision:** how close repeated measurements are to **each other**.
+
+A badly calibrated balance can give very precise but inaccurate results.
+
+<Analogy>
+Measuring with a ruler marked only in centimetres is like reading a clock with only an hour hand: you can estimate "about half past", but not the exact minute. A ruler marked in millimetres lets you estimate one more digit, so your measurement has one more significant figure.
+</Analogy>
+
+<MorePrecisely>
+Significant figures are a simple way to show uncertainty. In research, uncertainty is stated explicitly, for example 12.47 ± 0.02 g, and is combined through calculations using statistics. Some courses also round a 5 to the nearest even digit ("round half to even") to avoid a slight upward bias.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/significant-figures/accuracy-precision.svg" alt="Four targets with five dots each. Accurate and precise: dots tightly grouped on the centre. Precise, not accurate: dots tightly grouped but off to one side. Accurate, not precise: dots spread out but averaging on the centre. Neither: dots spread out and off centre." caption="Accuracy is about hitting the true value; precision is about agreeing with each other." width={360} height={330} />
+
+## Worked example
+
+<Example title="Counting significant figures">
+**Question:** How many significant figures are in (a) 0.00420 g (b) 105.0 mL (c) $3.010 \times 10^{5}$ J?
+
+1. 0.00420 g: leading zeros don't count; the trailing zero after the decimal point does: **3**.
+2. 105.0 mL: the zero between 1 and 5 counts, and so does the trailing zero after the decimal point: **4**.
+3. $3.010 \times 10^{5}$ J: every digit in 3.010 counts: **4**.
+</Example>
+
+<Example title="Multiplying and dividing">
+**Question:** A sample has a mass of 10.0 g and a volume of 3.52 mL. What is its density?
+
+1. $\rho = \dfrac{m}{V} = \dfrac{10.0\ \text{g}}{3.52\ \text{mL}} = 2.8409\ldots\ \text{g/mL}$
+2. Both inputs have 3 sig figs, so the answer has 3: **2.84 g/mL**.
+</Example>
+
+<Example title="Adding">
+**Question:** Masses of 12.0 g, 0.335 g and 4.5 g are added to a beaker. What is the total mass?
+
+1. $12.0\ \text{g} + 0.335\ \text{g} + 4.5\ \text{g} = 16.835\ \text{g}$
+2. The fewest decimal places is one (12.0 g and 4.5 g), so the answer is **16.8 g**.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Copying every digit from the calculator">
+$100.0\ \text{g} \div 3.0\ \text{mL} = 33.333\ldots\ \text{g/mL}$, but 3.0 mL has only 2 sig figs, so the answer is **33 g/mL**.
+</CommonMistake>
+
+<CommonMistake title="Using the sig-fig rule for addition">
+For addition and subtraction, count **decimal places**, not significant figures: 6.38 cm − 2.1 cm = 4.28 cm → **4.3 cm**.
+</CommonMistake>
+
+<CommonMistake title="Dropping significant zeros">
+A volume of a cube with side 2.00 cm is $(2.00\ \text{cm})^3 = 8.00\ \text{cm}^3$, not 8 cm³. The zeros show the precision.
+</CommonMistake>
+
+<NotationNote>
+- "s.f." or "sig figs" = significant figures; "d.p." = decimal places.
+- A decimal point after a whole number, as in "100." or "500. nm", shows that the trailing zeros are significant (3 sig figs).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Sig figs = certain digits + one estimated digit. Leading zeros never count; trailing zeros after a decimal point always do.
+- × and ÷: fewest significant figures. + and −: fewest decimal places.
+- Exact numbers (counts, definitions) don't limit precision. Round only the final answer.
+- Accuracy: close to the true value. Precision: close to each other.
+</RememberThis>

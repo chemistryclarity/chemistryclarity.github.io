@@ -1,0 +1,39 @@
+# Flashcards: Significant Figures and Measurement
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+title: 'Significant Figures: Flashcards'
+description: 'Revise counting significant figures, scientific notation, rounding, and accuracy versus precision.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: sf-01
+    front: 'What are significant figures?'
+    back: 'The digits in a measurement that are known with certainty, plus one estimated digit.'
+  - id: sf-02
+    front: 'How many significant figures in 0.0042 L?'
+    back: '2 (leading zeros are not significant)'
+  - id: sf-03
+    front: 'How many significant figures in 2.500 mL?'
+    back: '4 (trailing zeros after a decimal point are significant)'
+  - id: sf-04
+    front: 'How many significant figures in 1.05 m?'
+    back: '3 (a zero between non-zero digits is significant)'
+  - id: sf-05
+    front: 'Rule for multiplying and dividing?'
+    back: 'The answer has the fewest significant figures of the measured inputs.'
+  - id: sf-06
+    front: 'Rule for adding and subtracting?'
+    back: 'The answer has the fewest decimal places of the measured inputs.'
+  - id: sf-07
+    front: 'Write 0.000 520 m in scientific notation.'
+    back: '$5.20 \times 10^{-4}$ m (3 significant figures)'
+  - id: sf-08
+    front: 'Do exact numbers (such as 1 km = 1000 m) limit significant figures?'
+    back: 'No. Exact numbers have unlimited significant figures.'
+  - id: sf-09
+    front: 'What is the difference between accuracy and precision?'
+    back: 'Accuracy: closeness to the true value. Precision: closeness of repeated measurements to each other.'
+  - id: sf-10
+    front: '25.12 g + 3.4 g = ?'
+    back: '28.5 g (one decimal place, like 3.4 g)'

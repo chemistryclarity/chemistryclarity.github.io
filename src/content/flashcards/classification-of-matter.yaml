@@ -1,0 +1,39 @@
+# Flashcards: Classification of Matter
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+title: 'Classification of Matter: Flashcards'
+description: 'Revise elements, compounds and mixtures, physical and chemical changes, and separation methods.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: cm-01
+    front: 'What is matter?'
+    back: 'Anything that has mass and takes up space.'
+  - id: cm-02
+    front: 'What is an element?'
+    back: 'A pure substance made of only one kind of atom. It cannot be broken down by chemical reactions.'
+  - id: cm-03
+    front: 'What is a compound?'
+    back: 'A pure substance of two or more elements chemically bonded in a fixed ratio, e.g. $\ce{H2O}$.'
+  - id: cm-04
+    front: 'What is a mixture?'
+    back: 'Two or more substances physically mixed, not chemically bonded. Its composition can vary.'
+  - id: cm-05
+    front: 'Homogeneous or heterogeneous: salt water?'
+    back: 'Homogeneous (a solution): it is uniform throughout.'
+  - id: cm-06
+    front: 'Is $\ce{O2}$ an element or a compound?'
+    back: 'An element: its molecules contain only one kind of atom.'
+  - id: cm-07
+    front: 'Physical or chemical change: iron rusting?'
+    back: 'Chemical: a new substance (iron oxide) forms.'
+  - id: cm-08
+    front: 'Physical or chemical change: ice melting?'
+    back: 'Physical: it is still water ($\ce{H2O}$).'
+  - id: cm-09
+    front: 'Which method separates sand from water?'
+    back: 'Filtration.'
+  - id: cm-10
+    front: 'Which method gets pure water from sea water?'
+    back: 'Distillation: boil the water and condense the vapour.'

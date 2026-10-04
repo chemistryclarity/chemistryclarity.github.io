@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .box { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.3; }
+    .boxa { fill: #e6f4f1; stroke: #0f766e; stroke-width: 1.6; }
+    .boxb { fill: #f3effe; stroke: #7c3aed; stroke-width: 1.6; }
+    .lab { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .lab2 { fill: #14213d; font-size: 10.8px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 10.5px; }
+    .line { stroke: #8a94a6; stroke-width: 1.5; fill: none; }
+    .q { fill: #b45309; font-size: 10.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab, .lab2 { fill: #e9edf5; }
+      .sub, .ex { fill: #9aa5ba; }
+      .box { fill: #1b263d; stroke: #3a4763; }
+      .boxa { fill: #123a3a; stroke: #2dd4bf; }
+      .boxb { fill: #2a2347; stroke: #c4b5fd; }
+      .line { stroke: #6b7894; }
+      .q { fill: #fbbf24; }
+    }
+    .sym { fill: #0f766e; font-size: 14px; font-weight: 750; }
+    .pow { fill: #14213d; font-size: 12.5px; }
+    .arrowl { stroke: #b45309; stroke-width: 2; fill: none; marker-end: url(#hd); }
+    .hd { fill: #b45309; }
+    @media (prefers-color-scheme: dark) { .sym { fill: #2dd4bf; } .pow { fill: #e9edf5; } .arrowl { stroke: #fbbf24; } .hd { fill: #fbbf24; } }
+  </style>
+  <defs><marker id="hd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="380" rx="14"/>
+  <text class="t" x="20" y="28">Metric prefixes</text>
+  <text class="sub" x="20" y="45">Each prefix multiplies the unit by a power of ten.</text>
+  <rect class="box" x="20" y="66" width="320" height="23" rx="5"/><text class="sym" x="44" y="82" text-anchor="middle">G</text><text class="lab" x="70" y="82">giga</text><text class="pow" x="200" y="82" text-anchor="middle">10<tspan dy="-5" font-size="9">9</tspan></text><text class="ex" x="328" y="82" text-anchor="end">Gm, GHz</text><rect class="box" x="20" y="93" width="320" height="23" rx="5"/><text class="sym" x="44" y="109" text-anchor="middle">M</text><text class="lab" x="70" y="109">mega</text><text class="pow" x="200" y="109" text-anchor="middle">10<tspan dy="-5" font-size="9">6</tspan></text><text class="ex" x="328" y="109" text-anchor="end">MHz, MJ</text><rect class="box" x="20" y="120" width="320" height="23" rx="5"/><text class="sym" x="44" y="136" text-anchor="middle">k</text><text class="lab" x="70" y="136">kilo</text><text class="pow" x="200" y="136" text-anchor="middle">10<tspan dy="-5" font-size="9">3</tspan></text><text class="ex" x="328" y="136" text-anchor="end">km, kg</text><rect class="boxa" x="20" y="147" width="320" height="23" rx="5"/><text class="sym" x="44" y="163" text-anchor="middle">—</text><text class="lab" x="70" y="163">(base unit)</text><text class="pow" x="200" y="163" text-anchor="middle">10<tspan dy="-5" font-size="9">0</tspan></text><text class="ex" x="328" y="163" text-anchor="end">m, g, L, s</text><rect class="box" x="20" y="174" width="320" height="23" rx="5"/><text class="sym" x="44" y="190" text-anchor="middle">d</text><text class="lab" x="70" y="190">deci</text><text class="pow" x="200" y="190" text-anchor="middle">10<tspan dy="-5" font-size="9">−1</tspan></text><text class="ex" x="328" y="190" text-anchor="end">dm</text><rect class="box" x="20" y="201" width="320" height="23" rx="5"/><text class="sym" x="44" y="217" text-anchor="middle">c</text><text class="lab" x="70" y="217">centi</text><text class="pow" x="200" y="217" text-anchor="middle">10<tspan dy="-5" font-size="9">−2</tspan></text><text class="ex" x="328" y="217" text-anchor="end">cm</text><rect class="box" x="20" y="228" width="320" height="23" rx="5"/><text class="sym" x="44" y="244" text-anchor="middle">m</text><text class="lab" x="70" y="244">milli</text><text class="pow" x="200" y="244" text-anchor="middle">10<tspan dy="-5" font-size="9">−3</tspan></text><text class="ex" x="328" y="244" text-anchor="end">mL, mg</text><rect class="box" x="20" y="255" width="320" height="23" rx="5"/><text class="sym" x="44" y="271" text-anchor="middle">μ</text><text class="lab" x="70" y="271">micro</text><text class="pow" x="200" y="271" text-anchor="middle">10<tspan dy="-5" font-size="9">−6</tspan></text><text class="ex" x="328" y="271" text-anchor="end">μm, μg</text><rect class="box" x="20" y="282" width="320" height="23" rx="5"/><text class="sym" x="44" y="298" text-anchor="middle">n</text><text class="lab" x="70" y="298">nano</text><text class="pow" x="200" y="298" text-anchor="middle">10<tspan dy="-5" font-size="9">−9</tspan></text><text class="ex" x="328" y="298" text-anchor="end">nm</text><rect class="box" x="20" y="309" width="320" height="23" rx="5"/><text class="sym" x="44" y="325" text-anchor="middle">p</text><text class="lab" x="70" y="325">pico</text><text class="pow" x="200" y="325" text-anchor="middle">10<tspan dy="-5" font-size="9">−12</tspan></text><text class="ex" x="328" y="325" text-anchor="end">pm</text>
+  <text class="sub" x="20" y="350">1 km = 10³ m = 1000 m · 1 mg = 10⁻³ g = 0.001 g</text>
+</svg>

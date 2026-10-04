@@ -1,0 +1,79 @@
+# Quiz: Classification of Matter
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+title: 'Classification of Matter: Quiz'
+description: 'Seven questions on elements, compounds, mixtures, physical and chemical changes, and separation methods, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: cm-q1
+    prompt: 'Which of these is a compound?'
+    choices:
+      - 'Oxygen gas, $\ce{O2}$'
+      - 'Air'
+      - 'Carbon dioxide, $\ce{CO2}$'
+      - 'Brass'
+    answer: 'Carbon dioxide, $\ce{CO2}$'
+    explanation: 'CO₂ contains two different elements bonded in a fixed ratio. O₂ is an element; air and brass are mixtures.'
+    difficulty: easy
+  - id: cm-q2
+    prompt: 'Which is a heterogeneous mixture?'
+    choices:
+      - 'Salt water'
+      - 'Air'
+      - 'Oil and water'
+      - 'Distilled water'
+    answer: 'Oil and water'
+    explanation: 'Oil and water form separate layers, so the mixture is not uniform. Salt water and air are uniform (homogeneous); distilled water is a pure compound.'
+    difficulty: easy
+  - id: cm-q3
+    prompt: 'Which change is chemical?'
+    choices:
+      - 'Water boiling'
+      - 'Wood burning'
+      - 'Salt dissolving in water'
+      - 'Glass breaking'
+    answer: 'Wood burning'
+    explanation: 'Burning forms new substances (carbon dioxide, water, ash). The other changes do not change what the substance is.'
+    difficulty: easy
+  - id: cm-q4
+    prompt: 'What is the best way to obtain solid salt from salt water?'
+    choices:
+      - 'Filtration'
+      - 'Evaporation'
+      - 'Using a magnet'
+      - 'Chromatography'
+    answer: 'Evaporation'
+    explanation: 'The salt is dissolved, so it passes through a filter. Evaporating the water leaves the salt behind.'
+    difficulty: medium
+  - id: cm-q5
+    prompt: 'Which statement about compounds is correct?'
+    choices:
+      - 'Their composition can vary from sample to sample'
+      - 'They can be separated into elements by filtering'
+      - 'Their elements are combined in a fixed ratio by mass'
+      - 'They keep the properties of their elements'
+    answer: 'Their elements are combined in a fixed ratio by mass'
+    explanation: 'This is the law of definite proportions. Compounds have new properties and can be broken down only by chemical reactions.'
+    difficulty: medium
+  - id: cm-q6
+    prompt: 'Which is a chemical property?'
+    choices:
+      - 'Density'
+      - 'Boiling point'
+      - 'Flammability'
+      - 'Colour'
+    answer: 'Flammability'
+    explanation: 'Flammability describes how a substance reacts (burns). The others can be observed without changing the substance.'
+    difficulty: medium
+  - id: cm-q7
+    prompt: 'A clear, colourless liquid boils over a range of temperatures instead of at one fixed temperature. What does this suggest?'
+    choices:
+      - 'It is an element'
+      - 'It is a pure compound'
+      - 'It is a mixture'
+      - 'It is undergoing a chemical change'
+    answer: 'It is a mixture'
+    explanation: 'Pure substances have a sharp, fixed boiling point at a given pressure. Boiling over a range is typical of a mixture.'
+    difficulty: hard

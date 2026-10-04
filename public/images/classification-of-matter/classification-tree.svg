@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .box { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.3; }
+    .boxa { fill: #e6f4f1; stroke: #0f766e; stroke-width: 1.6; }
+    .boxb { fill: #f3effe; stroke: #7c3aed; stroke-width: 1.6; }
+    .lab { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .lab2 { fill: #14213d; font-size: 10.8px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 10.5px; }
+    .line { stroke: #8a94a6; stroke-width: 1.5; fill: none; }
+    .q { fill: #b45309; font-size: 10.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab, .lab2 { fill: #e9edf5; }
+      .sub, .ex { fill: #9aa5ba; }
+      .box { fill: #1b263d; stroke: #3a4763; }
+      .boxa { fill: #123a3a; stroke: #2dd4bf; }
+      .boxb { fill: #2a2347; stroke: #c4b5fd; }
+      .line { stroke: #6b7894; }
+      .q { fill: #fbbf24; }
+    }</style>
+  <rect class="bg" width="360" height="400" rx="14"/>
+  <text class="t" x="20" y="28">Classifying matter</text>
+  <text class="sub" x="20" y="45">Ask the question at each branch to sort any sample.</text>
+  <path class="line" d="M180 92 V116 H95 V140"/><path class="line" d="M180 92 V116 H265 V140"/>
+  <rect class="box" x="120" y="60" width="120" height="32" rx="8"/><text class="lab" x="180" y="78" text-anchor="middle">Matter</text>
+  <rect class="bg" x="128" y="100" width="104" height="15"/><text class="q" x="180" y="111" text-anchor="middle">Fixed composition?</text>
+  <text class="q" x="80" y="132" text-anchor="middle">yes</text><text class="q" x="282" y="132" text-anchor="middle">no</text>
+  <path class="line" d="M95 182 V236 H52 V252"/><path class="line" d="M95 182 V236 H138 V252"/>
+  <path class="line" d="M265 182 V236 H224 V252"/><path class="line" d="M265 182 V236 H310 V252"/>
+  <rect class="boxa" x="20" y="140" width="150" height="42" rx="8"/><text class="lab" x="95" y="158" text-anchor="middle">Pure substance</text><text class="ex" x="95" y="173" text-anchor="middle">one kind of particle</text>
+  <rect class="boxb" x="190" y="140" width="150" height="42" rx="8"/><text class="lab" x="265" y="158" text-anchor="middle">Mixture</text><text class="ex" x="265" y="173" text-anchor="middle">two or more substances</text>
+  <rect class="bg" x="30" y="205" width="130" height="27"/><text class="q" x="95" y="216" text-anchor="middle">Can it be broken down</text><text class="q" x="95" y="228" text-anchor="middle">chemically?</text>
+  <rect class="bg" x="207" y="205" width="116" height="15"/><text class="q" x="265" y="216" text-anchor="middle">Uniform throughout?</text>
+  <text class="q" x="40" y="250" text-anchor="middle">no</text><text class="q" x="150" y="250" text-anchor="middle">yes</text>
+  <text class="q" x="214" y="250" text-anchor="middle">yes</text><text class="q" x="320" y="250" text-anchor="middle">no</text>
+  <rect class="boxa" x="12" y="252" width="80" height="64" rx="8"/><text class="lab2" x="52" y="270" text-anchor="middle">Element</text><text class="ex" x="52" y="287" text-anchor="middle">Fe, O₂,</text><text class="ex" x="52" y="300" text-anchor="middle">He, C</text>
+  <rect class="boxa" x="98" y="252" width="80" height="64" rx="8"/><text class="lab2" x="138" y="270" text-anchor="middle">Compound</text><text class="ex" x="138" y="287" text-anchor="middle">H₂O, NaCl,</text><text class="ex" x="138" y="300" text-anchor="middle">CO₂</text>
+  <rect class="boxb" x="184" y="252" width="80" height="64" rx="8"/><text class="lab2" x="224" y="270" text-anchor="middle">Homogeneous</text><text class="ex" x="224" y="287" text-anchor="middle">salt water,</text><text class="ex" x="224" y="300" text-anchor="middle">air, brass</text>
+  <rect class="boxb" x="270" y="252" width="80" height="64" rx="8"/><text class="lab2" x="310" y="270" text-anchor="middle">Heterogeneous</text><text class="ex" x="310" y="287" text-anchor="middle">sand + water,</text><text class="ex" x="310" y="300" text-anchor="middle">granite</text>
+  <text class="sub" x="20" y="356">Mixtures can be separated by physical methods</text>
+  <text class="sub" x="20" y="371">(filtering, distilling); compounds need chemical reactions.</text>
+</svg>

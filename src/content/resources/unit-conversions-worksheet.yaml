@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/unit-conversions-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'SI Units and Unit Conversions Worksheet'
+description: '9 questions on SI base units, metric prefixes and converting units with conversion factors, including areas, volumes and density. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/unit-conversions-worksheet.pdf'
+answerKey: '/downloads/unit-conversions-worksheet-answers.pdf'
+preview: '/previews/unit-conversions-worksheet.png'
+status: review

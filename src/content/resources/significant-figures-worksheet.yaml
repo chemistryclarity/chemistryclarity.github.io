@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/significant-figures-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Significant Figures Worksheet'
+description: '9 questions on counting significant figures, scientific notation, rounding and calculations with measurements. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/significant-figures-worksheet.pdf'
+answerKey: '/downloads/significant-figures-worksheet-answers.pdf'
+preview: '/previews/significant-figures-worksheet.png'
+status: review

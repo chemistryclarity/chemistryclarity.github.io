@@ -1,0 +1,79 @@
+# Quiz: Significant Figures and Measurement
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
+title: 'Significant Figures: Quiz'
+description: 'Seven questions on counting significant figures, rounding, calculations and accuracy versus precision, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: sf-q1
+    prompt: 'How many significant figures are in 0.03050 g?'
+    choices:
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+    answer: '4'
+    explanation: 'Leading zeros (0.0) do not count. 3, 0 (between non-zero digits), 5 and the trailing 0 after the decimal point do: 4.'
+    difficulty: medium
+  - id: sf-q2
+    prompt: 'What is 4.56 cm × 1.4 cm to the correct number of significant figures?'
+    choices:
+      - '6.384 cm²'
+      - '6.38 cm²'
+      - '6.4 cm²'
+      - '6 cm²'
+    answer: '6.4 cm²'
+    explanation: '4.56 cm × 1.4 cm = 6.384 cm². For multiplication, use the fewest significant figures: 1.4 cm has 2, so 6.4 cm².'
+    difficulty: easy
+  - id: sf-q3
+    prompt: 'What is 6.38 cm − 2.1 cm to the correct precision?'
+    choices:
+      - '4.28 cm'
+      - '4.3 cm'
+      - '4 cm'
+      - '4.280 cm'
+    answer: '4.3 cm'
+    explanation: 'For subtraction, use the fewest decimal places: 2.1 cm has one, so 4.28 cm rounds to 4.3 cm.'
+    difficulty: medium
+  - id: sf-q4
+    prompt: 'Round 0.0012349 m to three significant figures.'
+    choices:
+      - '0.001 m'
+      - '0.00123 m'
+      - '0.00124 m'
+      - '0.0012 m'
+    answer: '0.00123 m'
+    explanation: 'The first three significant digits are 1, 2, 3. The next digit is 4 (less than 5), so the 3 stays: 0.00123 m.'
+    difficulty: medium
+  - id: sf-q5
+    prompt: 'A sample has mass 10.0 g and volume 3.52 mL. What is its density?'
+    choices:
+      - '2.8 g/mL'
+      - '2.84 g/mL'
+      - '2.841 g/mL'
+      - '0.352 g/mL'
+    answer: '2.84 g/mL'
+    explanation: '10.0 g ÷ 3.52 mL = 2.8409 g/mL. Both inputs have 3 significant figures, so 2.84 g/mL.'
+    difficulty: easy
+  - id: sf-q6
+    prompt: 'A student weighs a 5.000 g standard mass four times and gets 4.81 g, 4.80 g, 4.82 g and 4.81 g. The results are…'
+    choices:
+      - 'accurate and precise'
+      - 'precise but not accurate'
+      - 'accurate but not precise'
+      - 'neither accurate nor precise'
+    answer: 'precise but not accurate'
+    explanation: 'The readings agree closely (precise) but are all about 0.19 g below the true 5.000 g (not accurate), suggesting a calibration error.'
+    difficulty: medium
+  - id: sf-q7
+    prompt: 'Which number has exactly three significant figures without any ambiguity?'
+    choices:
+      - '300 m'
+      - '3.00 × 10² m'
+      - '0.3 m'
+      - '3000. m'
+    answer: '3.00 × 10² m'
+    explanation: 'In scientific notation every written digit counts: 3.00 has 3. "300 m" is ambiguous, 0.3 m has 1, and "3000." has 4.'
+    difficulty: hard
