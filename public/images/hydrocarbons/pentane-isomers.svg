@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 414" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .pt { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 9.5px; font-weight: 600; }
+    .bp { fill: #b45309; font-size: 11px; font-weight: 700; }
+    .chain { stroke: #0f766e; stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .branch { stroke: #b45309; stroke-width: 2.6; fill: none; stroke-linecap: round; }
+    .cdot { fill: #0f766e; } .bdot { fill: #b45309; }
+    .sep { stroke: #e3e7ee; stroke-width: 1; }
+    .card { fill: #f6f8fb; stroke: #e3e7ee; stroke-width: 1; }
+    .gname { fill: #0f766e; font-size: 12px; font-weight: 700; }
+    .atom { fill: #14213d; font-size: 13px; font-weight: 700; }
+    .fg { fill: #0f766e; font-size: 13px; font-weight: 700; }
+    .bond { stroke: #14213d; stroke-width: 1.6; }
+    .fgb { stroke: #0f766e; stroke-width: 1.8; }
+    .sfx { fill: #b45309; font-size: 10.5px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 10px; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .pt, .lab, .atom { fill: #e9edf5; } .sub, .num, .ex { fill: #9aa5ba; }
+      .chain { stroke: #2dd4bf; } .cdot, .gname, .fg { fill: #2dd4bf; } .fgb { stroke: #2dd4bf; }
+      .branch { stroke: #fbbf24; } .bdot, .bp, .sfx { fill: #fbbf24; }
+      .sep { stroke: #2a3550; } .card { fill: #1b263d; stroke: #2a3550; } .bond { stroke: #e9edf5; }
+    }
+  </style>
+  <rect class="bg" width="360" height="414" rx="14"/>
+  <text class="t" x="20" y="28">Three structural isomers of C₅H₁₂</text>
+  <text class="sub" x="20" y="45">Same molecular formula, different carbon skeletons.</text>
+  <line class="sep" x1="20" y1="167" x2="340" y2="167"/>
+  <line class="sep" x1="20" y1="269" x2="340" y2="269"/>
+  <polyline class="chain" points="36,121 64,103 92,121 120,103 148,121"/><circle class="cdot" cx="36" cy="121" r="3.4"/><circle class="cdot" cx="64" cy="103" r="3.4"/><circle class="cdot" cx="92" cy="121" r="3.4"/><circle class="cdot" cx="120" cy="103" r="3.4"/><circle class="cdot" cx="148" cy="121" r="3.4"/><text class="num" x="36" y="138" text-anchor="middle">1</text><text class="num" x="64" y="94" text-anchor="middle">2</text><text class="num" x="92" y="138" text-anchor="middle">3</text><text class="num" x="120" y="94" text-anchor="middle">4</text><text class="num" x="148" y="138" text-anchor="middle">5</text>
+  <text class="pt" x="176" y="100">pentane</text>
+  <text class="lab" x="176" y="118">CH₃CH₂CH₂CH₂CH₃</text>
+  <text class="bp" x="176" y="136">b.p. 36 °C</text><text class="sub" x="236" y="136">(straight chain)</text>
+  <line class="branch" x1="74" y1="209" x2="74" y2="180"/><polyline class="chain" points="44,227 74,209 104,227 134,209"/><circle class="cdot" cx="44" cy="227" r="3.4"/><circle class="cdot" cx="74" cy="209" r="3.4"/><circle class="cdot" cx="104" cy="227" r="3.4"/><circle class="cdot" cx="134" cy="209" r="3.4"/><circle class="bdot" cx="74" cy="180" r="3.4"/><text class="num" x="44" y="244" text-anchor="middle">1</text><text class="num" x="62" y="203" text-anchor="middle">2</text><text class="num" x="104" y="244" text-anchor="middle">3</text><text class="num" x="134" y="200" text-anchor="middle">4</text>
+  <text class="pt" x="176" y="202">2-methylbutane</text>
+  <text class="lab" x="176" y="220">CH₃CH(CH₃)CH₂CH₃</text>
+  <text class="bp" x="176" y="238">b.p. 28 °C</text><text class="sub" x="236" y="238">(one branch)</text>
+  <line class="branch" x1="92" y1="312" x2="92" y2="282"/><line class="branch" x1="92" y1="312" x2="92" y2="342"/><polyline class="chain" points="56,312 92,312 128,312"/><circle class="cdot" cx="56" cy="312" r="3.4"/><circle class="cdot" cx="92" cy="312" r="3.4"/><circle class="cdot" cx="128" cy="312" r="3.4"/><circle class="bdot" cx="92" cy="282" r="3.4"/><circle class="bdot" cx="92" cy="342" r="3.4"/><text class="num" x="56" y="304" text-anchor="middle">1</text><text class="num" x="101" y="305" text-anchor="middle">2</text><text class="num" x="128" y="304" text-anchor="middle">3</text>
+  <text class="pt" x="176" y="300">2,2-dimethylpropane</text>
+  <text class="lab" x="176" y="318">C(CH₃)₄</text>
+  <text class="bp" x="176" y="336">b.p. 10 °C</text><text class="sub" x="236" y="336">(two branches)</text>
+  <circle class="cdot" cx="24" cy="364" r="3.4"/><text class="sub" x="32" y="368">longest chain (numbered)</text>
+  <circle class="bdot" cx="176" cy="364" r="3.4"/><text class="sub" x="184" y="368">methyl branch</text>
+  <text class="sub" x="20" y="388">Each dot is a C atom; H atoms are not drawn.</text>
+  <text class="sub" x="20" y="404">More branching: weaker attractions, lower boiling point.</text>
+</svg>

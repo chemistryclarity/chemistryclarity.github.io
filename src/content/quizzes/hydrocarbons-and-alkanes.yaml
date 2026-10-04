@@ -1,0 +1,79 @@
+# Quiz: Hydrocarbons and Naming Alkanes
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Formulas and equations checked by computer.
+title: 'Hydrocarbons and Naming Alkanes: Quiz'
+description: 'Seven questions on hydrocarbon formulas, IUPAC names, isomers, boiling points and combustion, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: hc-q1
+    prompt: 'Which is the general formula of the alkanes?'
+    choices:
+      - 'CₙH₂ₙ'
+      - 'CₙH₂ₙ₊₂'
+      - 'CₙH₂ₙ₋₂'
+      - 'CₙHₙ'
+    answer: 'CₙH₂ₙ₊₂'
+    explanation: 'Alkanes have only single bonds, so each carbon carries the maximum number of hydrogens: CₙH₂ₙ₊₂ (e.g. C₃H₈). CₙH₂ₙ is the alkenes and CₙH₂ₙ₋₂ the alkynes.'
+    difficulty: easy
+  - id: hc-q2
+    prompt: 'What is the molecular formula of heptane?'
+    choices:
+      - 'C₇H₁₄'
+      - 'C₇H₁₆'
+      - 'C₆H₁₄'
+      - 'C₇H₁₂'
+    answer: 'C₇H₁₆'
+    explanation: 'Hept- means 7 carbons; for an alkane, H = 2(7) + 2 = 16.'
+    difficulty: easy
+  - id: hc-q3
+    prompt: 'What is the IUPAC name of CH₃CH₂CH₂CH(CH₃)CH₃?'
+    choices:
+      - '4-methylpentane'
+      - '2-methylpentane'
+      - '1,1-dimethylbutane'
+      - 'hexane'
+    answer: '2-methylpentane'
+    explanation: 'The longest chain has 5 carbons. Numbering from the end nearer the branch puts the methyl on carbon 2, not 4. (Hexane is an isomer, but it is the unbranched chain.)'
+    difficulty: medium
+  - id: hc-q4
+    prompt: 'How many structural isomers have the formula C₅H₁₂?'
+    choices:
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+    answer: '3'
+    explanation: 'Pentane, 2-methylbutane and 2,2-dimethylpropane.'
+    difficulty: medium
+  - id: hc-q5
+    prompt: 'Which of these names is correct?'
+    choices:
+      - '2-ethylbutane'
+      - '3-methylpentane'
+      - '1-methylbutane'
+      - '2-dimethylpropane'
+    answer: '3-methylpentane'
+    explanation: '2-Ethylbutane and 1-methylbutane miss the longest chain (they are 3-methylpentane and pentane). "2-dimethyl" needs two locants: 2,2-dimethylpropane.'
+    difficulty: medium
+  - id: hc-q6
+    prompt: 'Which compound has the highest boiling point?'
+    choices:
+      - 'butane'
+      - '2,2-dimethylpropane'
+      - '2-methylbutane'
+      - 'pentane'
+    answer: 'pentane'
+    explanation: 'Pentane is the largest unbranched molecule here: it has the most surface contact and the strongest dispersion forces (36 °C). Branching lowers the boiling point, and butane is smaller.'
+    difficulty: medium
+  - id: hc-q7
+    prompt: 'In 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O, how many moles of O₂ does 1 mol of butane need?'
+    choices:
+      - '4 mol'
+      - '6.5 mol'
+      - '13 mol'
+      - '9 mol'
+    answer: '6.5 mol'
+    explanation: '1 mol C₄H₁₀ × (13 mol O₂ / 2 mol C₄H₁₀) = 6.5 mol O₂.'
+    difficulty: hard

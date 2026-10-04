@@ -1,0 +1,39 @@
+# Flashcards: Functional Groups
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Formulas and equations checked by computer.
+title: 'Functional Groups: Flashcards'
+description: 'Revise the main functional groups, their name endings, ester naming, hydrogen bonding and esterification.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: fg-01
+    front: 'What is a functional group?'
+    back: 'An atom or group of atoms that gives a family of organic compounds its typical reactions and properties.'
+  - id: fg-02
+    front: 'Alcohol: group and name ending?'
+    back: '–OH; ending -ol (ethanol, CH₃CH₂OH).'
+  - id: fg-03
+    front: 'Aldehyde vs ketone?'
+    back: 'Both have C=O. Aldehyde: at the end of the chain, –CHO, ending -al (ethanal). Ketone: inside the chain, ending -one (propanone).'
+  - id: fg-04
+    front: 'Carboxylic acid: group and name ending?'
+    back: '–COOH; ending -oic acid (ethanoic acid, CH₃COOH). The COOH carbon counts in the chain.'
+  - id: fg-05
+    front: 'How is an ester named?'
+    back: 'Alkyl group from the alcohol + acid name ending in -oate: ethanol + ethanoic acid → ethyl ethanoate.'
+  - id: fg-06
+    front: 'Amine: group and name ending?'
+    back: '–NH₂; ending -amine (ethanamine, CH₃CH₂NH₂).'
+  - id: fg-07
+    front: 'Why does ethanol (78 °C) boil far higher than methoxymethane (−24 °C), with the same formula?'
+    back: 'Ethanol has an O–H bond, so its molecules form hydrogen bonds with each other; methoxymethane has no O–H.'
+  - id: fg-08
+    front: 'Esterification: the general equation?'
+    back: 'Carboxylic acid + alcohol ⇌ ester + water (acid catalyst, e.g. a few drops of concentrated H₂SO₄).'
+  - id: fg-09
+    front: 'Give two functional group isomers of C₃H₆O.'
+    back: 'Propanal (aldehyde, CH₃CH₂CHO) and propanone (ketone, CH₃COCH₃).'
+  - id: fg-10
+    front: 'What does oxidizing a primary alcohol give?'
+    back: 'An aldehyde, then a carboxylic acid: ethanol → ethanal → ethanoic acid.'

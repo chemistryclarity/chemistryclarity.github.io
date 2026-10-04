@@ -1,0 +1,79 @@
+# Quiz: Functional Groups
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Formulas and equations checked by computer.
+title: 'Functional Groups: Quiz'
+description: 'Seven questions on identifying and naming functional groups, esters, isomers and boiling points, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: fg-q1
+    prompt: 'Which family does CH₃CH₂OH belong to?'
+    choices:
+      - 'alcohol'
+      - 'aldehyde'
+      - 'ketone'
+      - 'carboxylic acid'
+    answer: 'alcohol'
+    explanation: 'It contains an –OH group bonded to a carbon chain: ethanol, an alcohol.'
+    difficulty: easy
+  - id: fg-q2
+    prompt: 'What is the name of CH₃CH₂CHO?'
+    choices:
+      - 'propan-1-ol'
+      - 'propanal'
+      - 'propanone'
+      - 'ethanal'
+    answer: 'propanal'
+    explanation: '–CHO is an aldehyde group (ending -al). The chain has 3 carbons including the CHO carbon: propanal.'
+    difficulty: easy
+  - id: fg-q3
+    prompt: 'What is the ester formed from ethanol and methanoic acid?'
+    choices:
+      - 'methyl ethanoate'
+      - 'ethyl methanoate'
+      - 'ethyl ethanoate'
+      - 'methyl methanoate'
+    answer: 'ethyl methanoate'
+    explanation: 'The alcohol part comes first (ethanol → ethyl) and the acid part second (methanoic acid → methanoate).'
+    difficulty: medium
+  - id: fg-q4
+    prompt: 'Which of these compounds has the highest boiling point?'
+    choices:
+      - 'propane, CH₃CH₂CH₃'
+      - 'methoxymethane, CH₃OCH₃'
+      - 'ethanol, CH₃CH₂OH'
+      - 'ethane, CH₃CH₃'
+    answer: 'ethanol, CH₃CH₂OH'
+    explanation: 'Only ethanol has an O–H bond, so only ethanol forms hydrogen bonds between its molecules (78 °C, against −24 °C for methoxymethane and −42 °C for propane).'
+    difficulty: medium
+  - id: fg-q5
+    prompt: 'Which pair are functional group isomers?'
+    choices:
+      - 'ethanol and propan-1-ol'
+      - 'propanal and propanone'
+      - 'ethanoic acid and ethyl ethanoate'
+      - 'butane and 2-methylpropane'
+    answer: 'propanal and propanone'
+    explanation: 'Both are C₃H₆O with different functional groups (aldehyde and ketone). Ethanol and propan-1-ol differ by CH₂; the acid and the ester have different formulas; butane and 2-methylpropane are chain isomers in the same family.'
+    difficulty: hard
+  - id: fg-q6
+    prompt: 'What is the name of CH₃CH(OH)CH₂CH₃?'
+    choices:
+      - 'butan-1-ol'
+      - 'butan-2-ol'
+      - 'butan-3-ol'
+      - 'butanal'
+    answer: 'butan-2-ol'
+    explanation: 'The –OH is on carbon 2 when the chain is numbered from the nearer end (not 3).'
+    difficulty: medium
+  - id: fg-q7
+    prompt: 'Which compound is a ketone?'
+    choices:
+      - 'CH₃CH₂CHO'
+      - 'CH₃COCH₂CH₃'
+      - 'CH₃COOCH₃'
+      - 'CH₃CH₂COOH'
+    answer: 'CH₃COCH₂CH₃'
+    explanation: 'In CH₃COCH₂CH₃ (butanone) the C=O carbon has a carbon on each side. The others are an aldehyde, an ester and a carboxylic acid.'
+    difficulty: medium

@@ -1,0 +1,39 @@
+# Flashcards: Hydrocarbons and Naming Alkanes
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Formulas checked by computer.
+title: 'Hydrocarbons and Naming Alkanes: Flashcards'
+description: 'Revise alkanes, alkenes and alkynes, homologous series, the stems meth- to dec-, IUPAC naming, isomers and combustion.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: hc-01
+    front: 'What is a hydrocarbon?'
+    back: 'A compound containing only carbon and hydrogen.'
+  - id: hc-02
+    front: 'General formula of the alkanes?'
+    back: 'CₙH₂ₙ₊₂ (only C–C single bonds), e.g. propane C₃H₈.'
+  - id: hc-03
+    front: 'General formulas of the alkenes and the alkynes?'
+    back: 'Alkenes CₙH₂ₙ (one C=C); alkynes CₙH₂ₙ₋₂ (one C≡C).'
+  - id: hc-04
+    front: 'Saturated or unsaturated: what is the difference?'
+    back: 'Saturated (alkanes): only single C–C bonds, maximum H. Unsaturated (alkenes, alkynes): at least one C=C or C≡C.'
+  - id: hc-05
+    front: 'What is a homologous series?'
+    back: 'A family with the same general formula and similar chemistry, each member differing from the next by CH₂.'
+  - id: hc-06
+    front: 'Stems for 1 to 10 carbons?'
+    back: 'meth, eth, prop, but, pent, hex, hept, oct, non, dec.'
+  - id: hc-07
+    front: 'The steps for naming a branched alkane?'
+    back: 'Longest chain → number for lowest locants → name branches (methyl, ethyl) with di-/tri- → list alphabetically.'
+  - id: hc-08
+    front: 'What are structural isomers?'
+    back: 'Compounds with the same molecular formula but different arrangements of atoms, e.g. butane and 2-methylpropane (C₄H₁₀).'
+  - id: hc-09
+    front: 'How does branching affect the boiling point of isomers?'
+    back: 'More branching → more compact molecules → weaker dispersion forces → lower boiling point (pentane 36 °C, 2,2-dimethylpropane 10 °C).'
+  - id: hc-10
+    front: 'Products of complete and of incomplete combustion of a hydrocarbon?'
+    back: 'Complete: CO₂ + H₂O. Incomplete (too little O₂): also CO and soot (C).'

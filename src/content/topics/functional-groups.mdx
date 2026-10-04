@@ -1,0 +1,175 @@
+---
+title: Functional Groups
+question: "What are functional groups and how do they name and shape organic compounds?"
+description: "The main functional groups (alcohols, aldehydes, ketones, acids, esters, amines and more), how to name them, how they affect boiling points, and esterification."
+area: organic
+level: intermediate
+order: 20
+prerequisites: [hydrocarbons-and-alkanes]
+related: [hydrocarbons-and-alkanes, redox-reactions, limiting-reactant]
+flashcards: functional-groups
+quiz: functional-groups
+resources: [functional-groups-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  IUPAC names are used, with common names in the notation note. Boiling points at 1 atm, rounded to the nearest °C.
+  Every formula and equation checked by computer for atom balance; every value calculated by computer. Units shown in every step.
+*/}
+
+## What is it?
+
+A **functional group** is an atom or a small group of atoms that gives a family of organic compounds its typical reactions and properties. The rest of the molecule, a carbon chain written **R**, mostly just comes along for the ride.
+
+Ethanol ($\ce{CH3CH2OH}$) and propan-1-ol ($\ce{CH3CH2CH2OH}$) have different chains, but both contain the **–OH** group, so both are **alcohols** and react in the same ways.
+
+| Family | Group | Name ending (example) |
+|---|---|---|
+| Alkene | C=C | -ene (ethene) |
+| Alcohol | –OH | -ol (ethanol) |
+| Haloalkane | –F, –Cl, –Br, –I | fluoro-, chloro-, bromo-, iodo- (chloroethane) |
+| Aldehyde | –CHO | -al (ethanal) |
+| Ketone | C=O inside the chain | -one (propanone) |
+| Carboxylic acid | –COOH | -oic acid (ethanoic acid) |
+| Ester | –COO– | -oate (ethyl ethanoate) |
+| Amine | –NH₂ | -amine (ethanamine) |
+| Amide | –CONH₂ | -amide (ethanamide) |
+
+<KeyIdea>
+Learn the functional group and you can predict the chemistry: every alcohol behaves like an alcohol, every acid like an acid. The **name** of a compound = the **stem** for the number of carbons (meth-, eth-, prop-…) + the **ending** for its functional group.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Prediction.** There are millions of organic compounds but only a few dozen functional groups, so the groups organize the whole subject.
+- **Everyday life.** Esters give fruits their smells; ethanoic acid makes vinegar sour; propanone (acetone) is a common solvent.
+- **Biology and medicine.** Amino acids carry an amine and a carboxylic acid group; proteins are held together by amide links; most medicines contain several functional groups.
+
+## How does it work?
+
+### 1. Naming compounds with a functional group
+
+1. Find the longest carbon chain that **contains** the functional group, and take its stem.
+2. Number the chain so that the functional group gets the **lowest locant**.
+3. Add the ending, with its locant before it: $\ce{CH3CH2CH2OH}$ is **propan-1-ol** and $\ce{CH3CH(OH)CH3}$ is **propan-2-ol**.
+
+Aldehydes and carboxylic acids are always at the end of the chain (carbon 1), so they need no locant: **propanal**, **propanoic acid**. The carbon of the –CHO or –COOH group counts as part of the chain: ethanoic acid, $\ce{CH3COOH}$, has two carbons.
+
+### 2. Naming esters
+
+An ester forms from a carboxylic acid and an alcohol. Its name has two words: the **alkyl** group from the alcohol, then the acid name with **-oic acid** changed to **-oate**:
+
+- ethanol + ethanoic acid → **ethyl ethanoate**, $\ce{CH3COOCH2CH3}$
+- methanol + propanoic acid → **methyl propanoate**, $\ce{CH3CH2COOCH3}$
+
+### 3. Functional groups and boiling points
+
+Groups with an **O–H** or **N–H** bond (alcohols, carboxylic acids, amines) can form **hydrogen bonds** between molecules, so they boil much higher than hydrocarbons of similar mass:
+
+| Compound | Molar mass | Boiling point |
+|---|---|---|
+| propane, $\ce{CH3CH2CH3}$ | 44.09 g/mol | −42 °C |
+| methoxymethane, $\ce{CH3OCH3}$ | 46.07 g/mol | −24 °C |
+| ethanol, $\ce{CH3CH2OH}$ | 46.07 g/mol | 78 °C |
+
+Methoxymethane (an ether) is polar but has no O–H bond; ethanol has one and boils about 100 °C higher. The same groups also make small molecules **soluble in water**, because they can hydrogen-bond to water molecules.
+
+### 4. Functional group isomers
+
+Ethanol and methoxymethane are both $\ce{C2H6O}$: the same formula, but a different functional group, so they are different compounds with different properties. Likewise, $\ce{C3H6O}$ can be propanal (an aldehyde) or propanone (a ketone).
+
+### 5. A key reaction: esterification
+
+A carboxylic acid and an alcohol, warmed with a few drops of concentrated sulfuric acid as a catalyst, form an ester and water:
+
+$$
+\begin{aligned}
+&\ce{CH3COOH + CH3CH2OH} \\[2pt]
+&\quad \ce{<=> CH3COOCH2CH3 + H2O}
+\end{aligned}
+$$
+
+The reaction is reversible and reaches equilibrium, so the yield is usually well below 100 %.
+
+<Analogy>
+Think of a toolkit with interchangeable heads. The carbon chain is the handle: short or long, it feels much the same. The functional group is the head: a screwdriver head and a hammer head do completely different jobs, whatever handle they are fitted to.
+</Analogy>
+
+<MorePrecisely>
+Many functional groups are linked by **redox reactions**. Oxidizing a primary alcohol (–OH on an end carbon) gives an aldehyde and then a carboxylic acid: ethanol → ethanal → ethanoic acid, which is why wine left open turns to vinegar. A secondary alcohol (such as propan-2-ol) oxidizes to a ketone (propanone). When one molecule contains several groups, the IUPAC rules give priority to one of them for the ending (in order: acid, ester, aldehyde, ketone, alcohol, amine), and the others are named as prefixes.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/functional-groups/functional-groups.svg" alt="Eight cards showing common functional groups with R as the carbon chain. Alcohol: R–O–H, suffix -ol, example ethanol CH3CH2OH. Aldehyde: R–C(=O)–H, suffix -al, ethanal CH3CHO. Ketone: R–C(=O)–R′, suffix -one, propanone CH3COCH3. Carboxylic acid: R–C(=O)–O–H, suffix -oic acid, ethanoic acid CH3COOH. Ester: R–C(=O)–O–R′, suffix -oate, ethyl ethanoate CH3COOC2H5. Amine: R–NH2, suffix -amine, ethanamine CH3CH2NH2. Haloalkane: R–X where X is F, Cl, Br or I, prefix chloro- or bromo-, chloroethane CH3CH2Cl. Alkene: C=C, suffix -ene, ethene CH2=CH2." caption="Eight common functional groups. The chain R can change; the group decides the family name and the chemistry." width={360} height={536} />
+
+## Worked example
+
+<Example title="Identifying and naming">
+**Question:** Name each compound and give its family: (a) $\ce{CH3CH2CH2OH}$ (b) $\ce{CH3COCH3}$ (c) $\ce{CH3CH2COOH}$
+
+1. (a) –OH on carbon 1 of a 3-carbon chain: an alcohol, **propan-1-ol**.
+2. (b) C=O on the middle carbon of a 3-carbon chain: a ketone, **propanone**. (The C=O cannot be at the end, or it would be an aldehyde, so no locant is needed.)
+3. (c) –COOH at the end of a 3-carbon chain (counting the COOH carbon): a carboxylic acid, **propanoic acid**.
+</Example>
+
+<Example title="Naming an ester and writing its equation">
+**Question:** Name the ester formed from methanol and propanoic acid, and write the equation.
+
+1. The alkyl group comes from the alcohol: methanol gives **methyl**.
+2. The acid part: propanoic acid gives **propanoate**.
+3. Name: **methyl propanoate**.
+4. Equation (checked: 4 C, 10 H, 3 O on each side):
+
+   $$
+   \begin{aligned}
+   &\small \ce{CH3CH2COOH + CH3OH} \\[2pt]
+   &\quad \small \ce{<=> CH3CH2COOCH3} \\[2pt]
+   &\quad\quad \small + \ce{H2O}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Percent yield of an esterification">
+**Question:** 6.00 g of ethanoic acid reacts with excess ethanol, and 5.28 g of ethyl ethanoate is collected. Find the percent yield. ($\ce{CH3COOH}$ = 60.05 g/mol; $\ce{CH3COOCH2CH3}$ = 88.10 g/mol; 1 mol acid gives 1 mol ester)
+
+1. $n(\text{acid}) = \dfrac{6.00\ \text{g}}{60.05\ \text{g/mol}} = 0.09992\ \text{mol}$
+2. $n(\text{ester}) = 0.09992\ \text{mol}$ (1 : 1 ratio)
+3. Theoretical yield: $m = 0.09992\ \text{mol} \times 88.10\ \text{g/mol} = 8.803\ \text{g}$
+4. Percent yield $= \dfrac{5.28\ \text{g}}{8.803\ \text{g}} \times 100\ \% =$ **60.0 %**
+5. The yield is well below 100 % because esterification is reversible and reaches equilibrium.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Naming esters backwards">
+The alcohol part comes **first** and ends in -yl; the acid part comes **second** and ends in -oate. $\ce{CH3COOCH3}$ is methyl ethanoate (from methanol + ethanoic acid), not ethyl methanoate.
+</CommonMistake>
+
+<CommonMistake title="Forgetting to count the functional-group carbon">
+In $\ce{CH3COOH}$ the COOH carbon is part of the chain: two carbons, so it is **ethanoic** acid, not methanoic acid. The same applies to the CHO carbon of aldehydes.
+</CommonMistake>
+
+<CommonMistake title="Confusing –CHO and –OH">
+$\ce{CH3CHO}$ (ethanal) is an aldehyde with a C=O double bond; it is not an alcohol, even though it contains O and H. An alcohol has the O bonded to H: –O–H.
+</CommonMistake>
+
+<NotationNote>
+- Common names you will meet: acetic acid = ethanoic acid; acetone = propanone; acetaldehyde = ethanal; formaldehyde = methanal; ethyl acetate = ethyl ethanoate; isopropyl alcohol = propan-2-ol.
+- In condensed formulas, –CHO means an aldehyde group, –COOH a carboxylic acid group and –COO– an ester link.
+- R and R′ stand for carbon chains, which may be the same or different.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Functional group = the reactive part of the molecule; it decides the family, the name ending and the chemistry.
+- Endings: -ene, -ol, -al, -one, -oic acid, -oate, -amine, -amide; halogens are prefixes (chloro-).
+- Number the chain so the functional group gets the lowest locant; -al and -oic acid are always carbon 1.
+- O–H and N–H groups hydrogen-bond: higher boiling points and better water solubility.
+- Acid + alcohol ⇌ ester + water (acid catalyst); ester name = alkyl (from alcohol) + -oate (from acid).
+</RememberThis>
