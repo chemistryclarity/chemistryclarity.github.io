@@ -1,0 +1,142 @@
+---
+title: Chromatography
+question: "How does chromatography separate and identify the substances in a mixture?"
+description: "Stationary and mobile phases, paper and thin-layer chromatography with Rf values, polarity, gas chromatography, retention times and peak areas."
+area: analytical
+level: intermediate
+order: 20
+prerequisites: [classification-of-matter, functional-groups]
+related: [beer-lambert-law, classification-of-matter, functional-groups]
+flashcards: chromatography
+quiz: chromatography
+resources: [chromatography-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Plate distances, Rf values, retention times and peak areas are invented teaching data. Area percent assumes the detector responds equally to each compound.
+  Every value calculated by computer (mean and sample standard deviation with n − 1). Units shown in every step; Rf has no unit.
+*/}
+
+## What is it?
+
+**Chromatography** separates the substances in a mixture so that each one can be identified and measured. Every method has two phases:
+
+- a **stationary phase**, which stays in place (paper, a thin layer of silica on a plate, or the inside of a column);
+- a **mobile phase**, which moves through or over it (a solvent, or a gas).
+
+As the mobile phase moves, each substance in the mixture is constantly shared between the two phases. A substance that is attracted more strongly to the stationary phase spends more time stuck there and moves **slowly**; one that prefers the mobile phase moves **quickly**. Different substances therefore travel different distances (or take different times) and come apart.
+
+<KeyIdea>
+Separation depends on the **balance of attractions**: stronger attraction to the stationary phase means slower movement. A pure substance gives **one** spot or peak; a mixture gives several.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Identification.** Forensic scientists identify inks, drugs and explosives; food chemists check for banned dyes.
+- **Purity.** One spot on a plate is a quick check that a product is pure; chemists use columns to purify the compounds they make.
+- **Measurement.** Gas and liquid chromatography measure pesticides in food, alcohol in blood and drugs in urine, often down to billionths of a gram.
+
+## How does it work?
+
+### 1. Paper and thin-layer chromatography (TLC)
+
+1. Draw a **baseline** in **pencil** (ink would itself separate) about 1 cm from the bottom of the paper or plate.
+2. Put small spots of the mixture and of known **standards** on the baseline.
+3. Stand the plate in a little solvent, **below** the baseline (otherwise the spots would dissolve into the solvent), and cover the container so the air stays saturated with solvent vapour.
+4. Remove the plate before the solvent reaches the top, and mark the **solvent front** at once.
+5. Make colourless spots visible (for example under UV light) and measure the distances.
+
+### 2. The retention factor, Rf
+
+$$
+R_f = \frac{\text{distance moved by spot}}{\text{distance moved by solvent}}
+$$
+
+Both distances are measured **from the baseline** (to the centre of the spot) in the same unit, so $R_f$ has **no unit** and lies between 0 and 1. Under the same conditions (same stationary phase, solvent and temperature), a substance always has the same $R_f$, so a spot can be identified by matching it to a standard run **on the same plate**.
+
+### 3. The role of polarity
+
+On a TLC plate of **silica** (very polar), polar compounds, such as those with –OH or –COOH groups, are held strongly and have **low** $R_f$ values; non-polar compounds, such as hydrocarbons, have **high** $R_f$ values. Using a **more polar solvent** pulls all the compounds further and raises every $R_f$.
+
+### 4. Gas chromatography (GC)
+
+In GC the sample is vaporized and carried by an unreactive gas (such as helium) through a long, thin **column** coated with the stationary phase. A detector at the end records a **peak** as each substance comes out.
+
+- The **retention time**, the time from injection to the peak, identifies a substance (compare with standards run under the same conditions).
+- The **area** under a peak is proportional to the **amount** of that substance. For quantities, a calibration with standards is used, as in spectrophotometry.
+
+Liquid chromatography (HPLC) works the same way, with a liquid mobile phase pumped through a packed column.
+
+<Analogy>
+Picture a crowd walking through a shopping street. Window-shoppers (strongly attracted to the shops, the stationary phase) stop often and move slowly; people hurrying to work (who prefer the moving crowd, the mobile phase) get through quickly. After an hour, the two groups are far apart, even though everyone set off together.
+</Analogy>
+
+<MorePrecisely>
+A substance distributes between the phases according to its **partition** (or adsorption) equilibrium, which depends on intermolecular forces: hydrogen bonding, dipole–dipole forces and dispersion forces. In GC, volatility matters too: compounds with low boiling points spend more time in the gas and come out first. Two substances with the same $R_f$ or retention time under one set of conditions are **not** necessarily the same compound; confirming identity needs a second method, such as a different solvent or column, or mass spectrometry.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/chromatography/tlc-plate.svg" alt="A thin-layer chromatography plate standing in solvent below a dashed pencil baseline. Two lanes are spotted: a mixture and dye A. The solvent front is a dashed line 7.80 cm above the baseline. The mixture lane shows a red spot 3.20 cm above the baseline, level with the single red spot of dye A, and a blue spot higher up. Red spot: Rf = 3.20 cm ÷ 7.80 cm = 0.410, the same as dye A. The blue spot, with Rf 0.782, is a second, different dye." caption="Distances are measured from the baseline. The red spot matches dye A run on the same plate." width={360} height={360} />
+
+<Figure src="/images/chromatography/gas-chromatogram.svg" alt="A gas chromatogram of detector signal against retention time from 0 to 10 minutes, with three peaks: ethanol at 2.4 minutes, propan-1-ol at 4.1 minutes (the tallest peak) and butan-1-ol at 6.8 minutes. Here, the lower the boiling point, the sooner the peak." caption="Retention time identifies each compound; peak area tells how much is present." width={360} height={300} />
+
+## Worked example
+
+<Example title="Calculating an Rf value">
+**Question:** On a TLC plate, the solvent front is 7.80 cm above the baseline and a red spot is 3.20 cm above it. Find $R_f$.
+
+1. $R_f = \dfrac{3.20\ \text{cm}}{7.80\ \text{cm}} =$ **0.410** (the cm cancel)
+</Example>
+
+<Example title="Identifying a dye with replicate plates">
+**Question:** A food dye is run on three plates beside standards. Its $R_f$ values are 0.42, 0.44 and 0.43. Standards on the same plates: dye P 0.43, dye Q 0.52. Which dye is it?
+
+1. Mean: $\bar{R}_f = \dfrac{0.42 + 0.44 + 0.43}{3} = 0.43$
+2. Standard deviation (sample, $n - 1$): $s = 0.01$
+3. Report $R_f = 0.43 \pm 0.01$ ($n = 3$). Dye P (0.43) lies within this spread; dye Q (0.52) is 9 standard deviations away.
+4. The dye is consistent with **dye P**. Running replicates shows the result is reproducible, not a one-off reading.
+</Example>
+
+<Example title="Composition from GC peak areas">
+**Question:** A GC run of a solvent mixture gives peak areas of 1250 (ethanol), 3400 (propan-1-ol) and 850 (butan-1-ol), in the same arbitrary units. Assuming the detector responds equally to each, find the percentage of each component.
+
+1. Total area $= 1250 + 3400 + 850 = 5500$
+2. Ethanol: $\dfrac{1250}{5500} \times 100\ \% =$ **22.7 %**
+3. Propan-1-ol: $\dfrac{3400}{5500} \times 100\ \% =$ **61.8 %**
+4. Butan-1-ol: $\dfrac{850}{5500} \times 100\ \% =$ **15.5 %**
+5. Check: 22.7 % + 61.8 % + 15.5 % = 100.0 %. ✓
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Measuring from the bottom of the plate">
+Both distances in $R_f$ are measured from the **baseline**, not from the edge of the plate. Measuring from the edge makes every $R_f$ too large.
+</CommonMistake>
+
+<CommonMistake title="Comparing Rf values from different conditions">
+$R_f$ depends on the solvent, the stationary phase and the temperature. Only compare with standards run **on the same plate**, or under identical conditions.
+</CommonMistake>
+
+<CommonMistake title="Drawing the baseline in ink or below the solvent">
+Ink contains dyes that separate too; a baseline below the solvent level lets the sample dissolve away into the solvent instead of travelling up the plate.
+</CommonMistake>
+
+<NotationNote>
+- $R_f$ is the retention factor (sometimes called the retardation factor); it is written without a unit.
+- TLC = thin-layer chromatography; GC = gas chromatography; HPLC = high-performance liquid chromatography.
+- The substance being analysed is often called the analyte; the mobile phase in GC is the carrier gas.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Stationary phase stays put; mobile phase moves. Stronger attraction to the stationary phase = slower.
+- $R_f$ = distance moved by spot ÷ distance moved by solvent front, both from the baseline; no unit; compare with standards on the same plate.
+- On polar silica: polar compounds have low $R_f$; a more polar solvent raises all $R_f$ values.
+- GC: retention time identifies; peak area measures amount. Measure in replicate and report mean ± standard deviation.
+</RememberThis>

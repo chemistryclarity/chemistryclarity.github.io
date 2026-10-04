@@ -1,0 +1,39 @@
+# Flashcards: Nuclear Fission and Fusion
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Nuclear equations and values checked by computer.
+title: 'Nuclear Fission and Fusion: Flashcards'
+description: 'Revise mass defect, binding energy, E = mc², the binding-energy curve, chain reactions, reactors and fusion.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ff-01
+    front: 'What is the mass defect of a nucleus?'
+    back: 'Mass of the separate protons and neutrons minus the mass of the nucleus.'
+  - id: ff-02
+    front: 'What is binding energy?'
+    back: 'The energy needed to separate a nucleus into its protons and neutrons, E = Δm c² (Δm in kg, c in m/s, E in J).'
+  - id: ff-03
+    front: 'Which nucleus is near the peak of the binding-energy-per-nucleon curve?'
+    back: 'Iron-56 (about 8.8 MeV per nucleon): among the most stable nuclei.'
+  - id: ff-04
+    front: 'Why do both fission and fusion release energy?'
+    back: 'Both form nuclei with a higher binding energy per nucleon (closer to iron); the extra binding energy is released.'
+  - id: ff-05
+    front: 'What is nuclear fission?'
+    back: 'A heavy nucleus (e.g. uranium-235) splits into two medium nuclei, releasing 2–3 neutrons and about 200 MeV.'
+  - id: ff-06
+    front: 'What is a chain reaction, and what is the critical mass?'
+    back: 'Neutrons from one fission cause further fissions. The critical mass is the smallest mass of fuel that sustains the chain.'
+  - id: ff-07
+    front: 'Roles of the moderator and the control rods in a reactor?'
+    back: 'Moderator (water, graphite) slows neutrons. Control rods (boron, cadmium) absorb neutrons to control the rate.'
+  - id: ff-08
+    front: 'What is nuclear fusion?'
+    back: 'Light nuclei join to form a heavier one, e.g. ²H + ³H → ⁴He + n. It needs millions of degrees.'
+  - id: ff-09
+    front: 'Why does fusion need such high temperatures?'
+    back: 'The positively charged nuclei repel each other; they must collide very fast to get close enough to fuse.'
+  - id: ff-10
+    front: 'How do you convert u to kg, and MeV to J?'
+    back: '1 u = 1.66054 × 10⁻²⁷ kg; 1 MeV = 1.602 × 10⁻¹³ J (and 1 u of mass ≈ 931.5 MeV).'

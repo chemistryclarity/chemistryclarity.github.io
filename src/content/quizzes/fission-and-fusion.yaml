@@ -1,0 +1,79 @@
+# Quiz: Nuclear Fission and Fusion
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Nuclear equations and values checked by computer.
+title: 'Nuclear Fission and Fusion: Quiz'
+description: 'Seven questions on mass defect, binding energy, fission, fusion, chain reactions and reactors, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ff-q1
+    prompt: 'The mass of a nucleus compared with the total mass of its separate protons and neutrons is:'
+    choices:
+      - 'greater'
+      - 'smaller'
+      - 'exactly equal'
+      - 'sometimes greater, sometimes smaller'
+    answer: 'smaller'
+    explanation: 'The difference is the mass defect, released as binding energy (E = Δm c²) when the nucleus formed.'
+    difficulty: easy
+  - id: ff-q2
+    prompt: 'Complete: ¹₀n + ²³⁵₉₂U → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + ?'
+    choices:
+      - '¹₀n'
+      - '2 ¹₀n'
+      - '3 ¹₀n'
+      - '⁴₂He'
+    answer: '3 ¹₀n'
+    explanation: 'Mass numbers: 1 + 235 = 236 = 141 + 92 + 3. Atomic numbers: 92 = 56 + 36 + 0. So three neutrons.'
+    difficulty: medium
+  - id: ff-q3
+    prompt: 'Which nucleus has the highest binding energy per nucleon?'
+    choices:
+      - '²H'
+      - '⁴He'
+      - '⁵⁶Fe'
+      - '²³⁵U'
+    answer: '⁵⁶Fe'
+    explanation: 'Iron-56 lies near the peak of the curve (about 8.8 MeV per nucleon); uranium-235 is about 7.6 and helium-4 about 7.1.'
+    difficulty: easy
+  - id: ff-q4
+    prompt: 'What is the job of the control rods in a nuclear reactor?'
+    choices:
+      - 'to slow down neutrons'
+      - 'to absorb neutrons and control the rate of fission'
+      - 'to carry heat to the turbines'
+      - 'to provide the uranium fuel'
+    answer: 'to absorb neutrons and control the rate of fission'
+    explanation: 'Control rods (boron, cadmium) absorb neutrons. The moderator slows them; the coolant carries the heat.'
+    difficulty: easy
+  - id: ff-q5
+    prompt: 'Why does fusion require temperatures of millions of degrees?'
+    choices:
+      - 'to melt the fuel'
+      - 'to overcome the repulsion between positively charged nuclei'
+      - 'to produce neutrons'
+      - 'to break chemical bonds'
+    answer: 'to overcome the repulsion between positively charged nuclei'
+    explanation: 'Nuclei are positive and repel each other; only very fast collisions bring them close enough for the strong force to join them.'
+    difficulty: medium
+  - id: ff-q6
+    prompt: 'How much energy is released when 1.00 × 10⁻³ kg of mass is converted completely (c = 2.998 × 10⁸ m/s)?'
+    choices:
+      - '3.00 × 10⁵ J'
+      - '8.99 × 10¹³ J'
+      - '8.99 × 10¹⁶ J'
+      - '2.998 × 10⁵ J'
+    answer: '8.99 × 10¹³ J'
+    explanation: 'E = mc² = (1.00 × 10⁻³ kg)(2.998 × 10⁸ m/s)² = 8.99 × 10¹³ kg m²/s² = 8.99 × 10¹³ J.'
+    difficulty: medium
+  - id: ff-q7
+    prompt: 'A mass defect of 0.0300 u corresponds to how much energy? (1 u = 931.5 MeV)'
+    choices:
+      - '0.0300 MeV'
+      - '27.9 MeV'
+      - '31.1 MeV'
+      - '2.79 × 10³ MeV'
+    answer: '27.9 MeV'
+    explanation: '0.0300 u × 931.5 MeV/u = 27.9 MeV.'
+    difficulty: hard

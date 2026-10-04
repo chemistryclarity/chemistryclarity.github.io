@@ -1,0 +1,186 @@
+---
+title: Nuclear Fission and Fusion
+question: "Where does nuclear energy come from, and how do fission and fusion differ?"
+description: "Mass defect, binding energy and E = mc², the binding-energy curve, fission chain reactions and reactors, fusion in the Sun, and energy calculations with units."
+area: nuclear
+level: intermediate
+order: 20
+prerequisites: [radioactive-decay, isotopes-and-atomic-mass]
+related: [radioactive-decay, enthalpy]
+flashcards: fission-and-fusion
+quiz: fission-and-fusion
+resources: [fission-and-fusion-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Constants: 1 u = 1.66054 × 10^-27 kg; c = 2.998 × 10^8 m/s; 1 MeV = 1.602 × 10^-13 J. Masses from standard atomic mass tables
+  (nuclear masses where stated: proton 1.007276 u, neutron 1.008665 u, C-12 nucleus 11.996709 u, He-4 nucleus 4.001506 u).
+  Binding energies per nucleon in the figure from standard tables, rounded. Every nuclear equation checked for A and Z; every value calculated by computer.
+*/}
+
+## What is it?
+
+Nuclear reactions can release millions of times more energy than chemical reactions. They come in two kinds:
+
+- **Fission:** a heavy nucleus, such as uranium-235, **splits** into two medium-sized nuclei, releasing neutrons and energy.
+- **Fusion:** two light nuclei, such as isotopes of hydrogen, **join** to form a heavier nucleus, releasing energy.
+
+The energy comes from **mass**. A nucleus has slightly **less** mass than the protons and neutrons that make it up. This missing mass, the **mass defect** ($\Delta m$), was converted into energy when the nucleus formed, according to Einstein's equation:
+
+$$
+E = \Delta m\, c^{2}
+$$
+
+where $c$ = 2.998 × 10⁸ m/s is the speed of light. The same energy, the **binding energy**, would be needed to pull the nucleus apart again.
+
+<KeyIdea>
+Nuclei with a higher **binding energy per nucleon** are more stable. Iron-56 is near the top of the curve. Splitting very heavy nuclei (fission) or joining very light ones (fusion) moves towards iron, so both **release** energy.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Electricity.** Nuclear power stations use controlled fission of uranium-235 and generate electricity without burning fuel or emitting carbon dioxide while they run.
+- **The stars.** The Sun shines by fusing hydrogen into helium; most elements up to iron were made by fusion in stars.
+- **Future energy and risks.** Fusion reactors are being developed as a cleaner energy source; fission produces long-lived radioactive waste, and both processes underlie nuclear weapons.
+
+## How does it work?
+
+### 1. Mass defect and binding energy
+
+1. Add up the masses of the separate protons and neutrons.
+2. Subtract the measured mass of the nucleus: this is the mass defect, $\Delta m$.
+3. Convert $\Delta m$ to kilograms (1 u = 1.66054 × 10⁻²⁷ kg) and use $E = \Delta m\,c^2$. The units give kg m² s⁻² = **J**.
+4. Divide by the number of nucleons (protons + neutrons) to compare nuclei.
+
+Nuclear energies are often given in **mega-electronvolts**: 1 MeV = 1.602 × 10⁻¹³ J.
+
+### 2. Fission and the chain reaction
+
+When uranium-235 absorbs a slow neutron, it splits. One of many possible splits is:
+
+$$
+\small \ce{^{1}_{0}n + ^{235}_{92}U -> ^{141}_{56}Ba + ^{92}_{36}Kr + 3^{1}_{0}n}
+$$
+
+Each fission releases about **200 MeV** and **2 or 3 neutrons**. If at least one of these neutrons causes another fission, a **chain reaction** follows. The smallest mass of fuel that can keep the chain going is the **critical mass**.
+
+A **nuclear reactor** controls the chain reaction:
+
+- **Fuel rods:** uranium enriched in uranium-235.
+- **Moderator** (water or graphite): slows the neutrons so they are captured by uranium-235 more easily.
+- **Control rods** (boron or cadmium): absorb neutrons; lowering them slows the reaction.
+- **Coolant:** carries the heat away to make steam, which drives turbines.
+
+### 3. Fusion
+
+Fusion needs temperatures of millions of degrees, so that the positively charged nuclei collide fast enough to overcome their repulsion. The most promising reaction for reactors fuses deuterium and tritium:
+
+$$
+\ce{^{2}_{1}H + ^{3}_{1}H -> ^{4}_{2}He + ^{1}_{0}n}
+$$
+
+In the Sun, a series of steps has the overall effect $\ce{4^{1}_{1}H -> ^{4}_{2}He + 2^{0}_{+1}e}$ (plus neutrinos and gamma rays).
+
+| | Fission | Fusion |
+|---|---|---|
+| Nuclei | heavy split | light join |
+| Fuel | uranium-235, plutonium-239 | hydrogen isotopes |
+| Conditions | slow neutrons, critical mass | millions of degrees |
+| Waste | radioactive fission products | mainly helium (little long-lived waste) |
+| Status | power stations since the 1950s | experimental |
+
+<Analogy>
+Think of nucleons as people in groups, where the most comfortable group size is medium (iron). People in a huge, crowded group (uranium) are happier if it splits in two; people in tiny groups (hydrogen) are happier if they join up. Either change makes everyone more comfortable, and the "relief" is released as energy.
+</Analogy>
+
+<MorePrecisely>
+Chemical reactions also turn a tiny amount of mass into energy, but it is far too small to measure: about one part in 10¹⁰ of the mass, compared with about one part in 10³ in fission. Binding energy uses $E = \Delta m\,c^2$ because the strong nuclear force holding nucleons together is far stronger than the electrical forces in chemical bonds. In a nuclear power station, the fuel contains only a few percent of uranium-235, which cannot explode like a bomb, but the reactor must still be cooled even after shutdown, because its fission products keep releasing decay heat.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/nuclear/binding-energy-curve.svg" alt="A graph of binding energy per nucleon, in MeV, against mass number A from 0 to 240. The curve rises steeply from hydrogen-2 at about 1.1 MeV, with helium-4 standing out at about 7.1 MeV, to a maximum of about 8.8 MeV near iron-56, labelled most stable. It then falls slowly to about 7.6 MeV at uranium-235. A purple arrow labelled fusion points from the light nuclei up towards iron; an orange arrow labelled fission points from uranium up towards iron. Moving towards iron, from either side, releases energy." caption="Iron-56 is near the peak: fusion of light nuclei and fission of heavy ones both move up the curve and release energy." width={360} height={380} />
+
+<Figure src="/images/nuclear/fission-chain.svg" alt="A fission chain reaction. A neutron strikes a uranium-235 nucleus, which splits into two fission fragments and releases three neutrons. Each of these neutrons strikes another uranium-235 nucleus, which also splits into two fragments and releases more neutrons. A note says that control rods absorb neutrons to keep a reactor steady." caption="One neutron in, two or three out: each fission can trigger several more." width={360} height={330} />
+
+## Worked example
+
+<Example title="Binding energy of carbon-12">
+**Question:** A carbon-12 nucleus (6 protons, 6 neutrons) has a mass of 11.996709 u. Find its binding energy and its binding energy per nucleon. (proton 1.007276 u; neutron 1.008665 u)
+
+1. Mass of the separate nucleons: $6(1.007276\ \text{u}) + 6(1.008665\ \text{u}) = 12.095646\ \text{u}$
+2. Mass defect: $\Delta m = 12.095646\ \text{u} - 11.996709\ \text{u} = 0.098937\ \text{u}$
+3. In kilograms:
+
+   $$
+   \begin{aligned}
+   &\Delta m = 0.098937\ \text{u} \\[4pt]
+   &\quad \times 1.66054 \times 10^{-27}\ \tfrac{\text{kg}}{\text{u}} \\[4pt]
+   &\quad = 1.6429 \times 10^{-28}\ \text{kg}
+   \end{aligned}
+   $$
+
+4. Energy:
+
+   $$
+   \begin{aligned}
+   &E = (1.6429 \times 10^{-28}\ \text{kg}) \\[4pt]
+   &\quad \times (2.998 \times 10^{8}\ \text{m/s})^{2} \\[4pt]
+   &\quad = 1.477 \times 10^{-11}\ \text{J}
+   \end{aligned}
+   $$
+
+5. In MeV: $\dfrac{1.477 \times 10^{-11}\ \text{J}}{1.602 \times 10^{-13}\ \text{J/MeV}} = 92.17\ \text{MeV}$; per nucleon: $\dfrac{92.17\ \text{MeV}}{12} =$ **7.68 MeV per nucleon**
+</Example>
+
+<Example title="Energy from deuterium–tritium fusion">
+**Question:** Find the energy released per mole of helium formed in $\ce{^{2}_{1}H + ^{3}_{1}H -> ^{4}_{2}He + ^{1}_{0}n}$. (²H 2.014102 u; ³H 3.016049 u; ⁴He 4.002603 u; n 1.008665 u)
+
+1. Mass before: $2.014102\ \text{u} + 3.016049\ \text{u} = 5.030151\ \text{u}$
+2. Mass after: $4.002603\ \text{u} + 1.008665\ \text{u} = 5.011268\ \text{u}$
+3. $\Delta m = 0.018883\ \text{u}$ per reaction, so 0.018883 g per mole $= 1.8883 \times 10^{-5}$ kg/mol
+4. Energy:
+
+   $$
+   \begin{aligned}
+   &E = (1.8883 \times 10^{-5}\ \tfrac{\text{kg}}{\text{mol}}) \\[4pt]
+   &\quad \times (2.998 \times 10^{8}\ \text{m/s})^{2} \\[4pt]
+   &\quad = 1.697 \times 10^{12}\ \text{J/mol}
+   \end{aligned}
+   $$
+
+5. That is **1.697 × 10⁹ kJ/mol**, about two million times the 890 kJ/mol released by burning methane.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking mass is lost and energy appears from nowhere">
+Mass and energy are two forms of the same thing. The products of a nuclear reaction have slightly less mass, and the missing mass appears as the kinetic energy of the products and as radiation. Total mass-energy is conserved.
+</CommonMistake>
+
+<CommonMistake title="Forgetting to convert u to kg">
+$E = \Delta m\,c^2$ gives joules only when $\Delta m$ is in **kilograms** and $c$ in **m/s**. Using $\Delta m$ in u or g/mol without converting gives an answer that is wrong by a large factor.
+</CommonMistake>
+
+<CommonMistake title="Mixing up fission and fusion">
+**Fi**ssion **di**vides (heavy nuclei split); **fu**sion **fu**ses (light nuclei join). Both release energy, but only fission is used in today's power stations.
+</CommonMistake>
+
+<NotationNote>
+- u is the unified atomic mass unit, 1/12 of the mass of a carbon-12 atom (also written amu or Da).
+- A neutron is written $\ce{^{1}_{0}n}$; deuterium $\ce{^{2}_{1}H}$ (also D) and tritium $\ce{^{3}_{1}H}$ (also T).
+- A shortcut: 1 u of mass defect corresponds to 931.5 MeV.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Mass defect = mass of separate nucleons − mass of nucleus; binding energy $E = \Delta m\,c^2$ (Δm in kg, c in m/s, E in J).
+- Binding energy per nucleon peaks near iron-56; fission of heavy and fusion of light nuclei both release energy.
+- Fission: U-235 + slow neutron → two fragments + 2–3 neutrons + about 200 MeV; chain reaction controlled by moderator and control rods.
+- Fusion: light nuclei join at millions of degrees; powers the Sun.
+</RememberThis>

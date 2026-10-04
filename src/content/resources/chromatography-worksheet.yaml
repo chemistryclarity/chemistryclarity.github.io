@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/chromatography-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Chromatography Worksheet'
+description: '9 questions on phases, Rf values, TLC technique, polarity, gas chromatography, replicate measurements and peak-area calculations. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/chromatography-worksheet.pdf'
+answerKey: '/downloads/chromatography-worksheet-answers.pdf'
+preview: '/previews/chromatography-worksheet.png'
+status: review

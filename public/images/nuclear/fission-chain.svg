@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .ax { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .axis { stroke: #8a94a6; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #e3e7ee; stroke-width: 1; }
+    .curve { stroke: #0f766e; stroke-width: 2.4; fill: none; }
+    .pt { fill: #0f766e; } .ptB { fill: #b45309; }
+    .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .arA { stroke: #b45309; stroke-width: 2.4; fill: none; marker-end: url(#hB); } .arC { stroke: #7c3aed; stroke-width: 2.4; fill: none; marker-end: url(#hC); }
+    .neu { stroke: #14213d; stroke-width: 1.6; fill: none; marker-end: url(#hD); }
+    .hB { fill: #b45309; } .hC { fill: #7c3aed; } .hD { fill: #14213d; }
+    .u235 { fill: #0f766e; } .frag { fill: #b45309; } .nDot { fill: #14213d; }
+    .wt { fill: #ffffff; font-size: 9.5px; font-weight: 700; }
+    .plate { fill: #f6f8fb; stroke: #8a94a6; stroke-width: 1.5; }
+    .solv { fill: #cfe0f7; } .line { stroke: #5b6577; stroke-width: 1.2; stroke-dasharray: 4 3; }
+    .front { stroke: #2563eb; stroke-width: 1.4; stroke-dasharray: 5 3; }
+    .dim { stroke: #14213d; stroke-width: 1.1; fill: none; marker-start: url(#hD); marker-end: url(#hD); }
+    .s1 { fill: #dc2626; } .s2 { fill: #2563eb; } .s3 { fill: #ca8a04; }
+    .peak { stroke: #0f766e; stroke-width: 2; fill: none; } .peakF { fill: #0f766e; opacity: 0.12; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .ax { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .axis { stroke: #6b7894; } .grid { stroke: #2a3550; }
+      .curve, .peak { stroke: #2dd4bf; } .pt, .lA, .u235, .peakF { fill: #2dd4bf; } .ptB, .lB, .frag, .hB { fill: #fbbf24; } .arA { stroke: #fbbf24; }
+      .lC, .hC { fill: #c4b5fd; } .arC { stroke: #c4b5fd; } .neu, .dim { stroke: #e9edf5; } .hD, .nDot { fill: #e9edf5; }
+      .wt { fill: #151e31; }
+      .plate { fill: #1b263d; stroke: #6b7894; } .solv { fill: #1e3354; } .line { stroke: #9aa5ba; } .front { stroke: #60a5fa; }
+      .s1 { fill: #f87171; } .s2 { fill: #60a5fa; } .s3 { fill: #facc15; }
+    }
+  </style>
+  <defs><marker id="hB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="hB" d="M0 0 10 5 0 10z"/></marker><marker id="hC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="hC" d="M0 0 10 5 0 10z"/></marker><marker id="hD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="hD" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="330" rx="14"/><text class="t" x="20" y="28">A fission chain reaction</text><text class="sub" x="20" y="45">Each fission releases 2–3 neutrons that can split more nuclei.</text><text class="lab" x="18" y="160">n</text><circle class="nDot" cx="30" cy="165" r="3"/><path class="neu" d="M34.08 165 L64 165"/><circle class="u235" cx="82" cy="165" r="15"/><text class="wt" x="82" y="168.5" text-anchor="middle">²³⁵U</text><circle class="frag" cx="100" cy="128" r="9"/><circle class="frag" cx="100" cy="202" r="9"/><circle class="nDot" cx="108" cy="152" r="3"/><path class="neu" d="M119.03999999999999 144.56 L200 90"/><circle class="nDot" cx="114" cy="165" r="3"/><path class="neu" d="M124.32 165 L200 165"/><circle class="nDot" cx="108" cy="178" r="3"/><path class="neu" d="M119.03999999999999 185.44 L200 240"/><circle class="u235" cx="220" cy="90" r="15"/><text class="wt" x="220" y="93.5" text-anchor="middle">²³⁵U</text><circle class="frag" cx="254" cy="72" r="8"/><circle class="frag" cx="254" cy="108" r="8"/><path class="neu" d="M240 90 L290 82"/><path class="neu" d="M240 94 L290 104"/><circle class="u235" cx="220" cy="165" r="15"/><text class="wt" x="220" y="168.5" text-anchor="middle">²³⁵U</text><circle class="frag" cx="254" cy="147" r="8"/><circle class="frag" cx="254" cy="183" r="8"/><path class="neu" d="M240 165 L290 157"/><path class="neu" d="M240 169 L290 179"/><circle class="u235" cx="220" cy="240" r="15"/><text class="wt" x="220" y="243.5" text-anchor="middle">²³⁵U</text><circle class="frag" cx="254" cy="222" r="8"/><circle class="frag" cx="254" cy="258" r="8"/><path class="neu" d="M240 240 L290 232"/><path class="neu" d="M240 244 L290 254"/><circle class="u235" cx="30" cy="280" r="7"/><text class="sub" x="42" y="284">uranium-235</text><circle class="frag" cx="140" cy="280" r="6"/><text class="sub" x="150" y="284">fission fragments</text><circle class="nDot" cx="262" cy="280" r="3"/><text class="sub" x="270" y="284">neutron</text><text class="sub" x="20" y="312">Control rods absorb neutrons to keep a reactor steady.</text>
+</svg>

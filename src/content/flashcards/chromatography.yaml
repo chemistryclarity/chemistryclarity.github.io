@@ -1,0 +1,39 @@
+# Flashcards: Chromatography
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Chromatography: Flashcards'
+description: 'Revise stationary and mobile phases, Rf values, TLC technique, polarity, retention times and peak areas.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ch-01
+    front: 'What are the two phases in chromatography?'
+    back: 'The stationary phase (stays in place: paper, silica, column coating) and the mobile phase (moves: solvent or gas).'
+  - id: ch-02
+    front: 'Why do substances separate?'
+    back: 'They have different attractions to the two phases; those held more strongly by the stationary phase move more slowly.'
+  - id: ch-03
+    front: 'Define Rf.'
+    back: 'Distance moved by the spot ÷ distance moved by the solvent front, both from the baseline. No unit; between 0 and 1.'
+  - id: ch-04
+    front: 'Why is the baseline drawn in pencil?'
+    back: 'Pencil (graphite) does not dissolve and move; ink contains dyes that would separate too.'
+  - id: ch-05
+    front: 'Why must the solvent be below the baseline?'
+    back: 'Otherwise the spots dissolve into the solvent instead of travelling up the plate.'
+  - id: ch-06
+    front: 'On a polar silica plate, which has the higher Rf: a polar or a non-polar compound?'
+    back: 'The non-polar compound: polar compounds are held strongly by the silica and move less.'
+  - id: ch-07
+    front: 'How is an unknown spot identified?'
+    back: 'By matching its Rf with standards run on the same plate (same solvent, stationary phase and temperature).'
+  - id: ch-08
+    front: 'What is retention time in GC?'
+    back: 'The time from injection to the peak for a substance; under fixed conditions it identifies the substance.'
+  - id: ch-09
+    front: 'What does the area of a GC peak show?'
+    back: 'The amount of that substance; calibration with standards turns area into concentration.'
+  - id: ch-10
+    front: 'Does one spot prove a sample is pure?'
+    back: 'Not on its own: two substances can share an Rf. Use a second solvent or method to confirm.'

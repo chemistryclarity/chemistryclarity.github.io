@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/fission-and-fusion-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Nuclear Fission and Fusion Worksheet'
+description: '9 questions on mass defect, binding energy, E = mc², nuclear equations, reactors, and energy from fission, fusion and the Sun. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/fission-and-fusion-worksheet.pdf'
+answerKey: '/downloads/fission-and-fusion-worksheet-answers.pdf'
+preview: '/previews/fission-and-fusion-worksheet.png'
+status: review

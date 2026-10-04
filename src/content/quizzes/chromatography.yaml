@@ -1,0 +1,79 @@
+# Quiz: Chromatography
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Chromatography: Quiz'
+description: 'Seven questions on phases, Rf values, TLC technique, polarity and gas chromatography, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ch-q1
+    prompt: 'The solvent front moved 9.00 cm and a spot moved 3.60 cm from the baseline. What is Rf?'
+    choices:
+      - '0.400'
+      - '2.50'
+      - '0.400 cm'
+      - '5.40'
+    answer: '0.400'
+    explanation: 'Rf = 3.60 cm ÷ 9.00 cm = 0.400. The units cancel, so Rf has no unit, and it is always less than 1.'
+    difficulty: easy
+  - id: ch-q2
+    prompt: 'In chromatography, a substance that is strongly attracted to the stationary phase:'
+    choices:
+      - 'moves quickly and has a high Rf'
+      - 'moves slowly and has a low Rf'
+      - 'does not affect the Rf'
+      - 'always stays on the baseline'
+    answer: 'moves slowly and has a low Rf'
+    explanation: 'It spends more time held by the stationary phase, so it travels a shorter distance.'
+    difficulty: easy
+  - id: ch-q3
+    prompt: 'On a silica TLC plate, which compound will have the highest Rf?'
+    choices:
+      - 'ethanoic acid'
+      - 'ethanol'
+      - 'hexane'
+      - 'ethanamide'
+    answer: 'hexane'
+    explanation: 'Silica is very polar. Hexane is non-polar, so it is held least and moves furthest. The others have polar O–H or N–H groups.'
+    difficulty: medium
+  - id: ch-q4
+    prompt: 'Why is the baseline drawn in pencil rather than ink?'
+    choices:
+      - 'pencil is easier to see'
+      - 'ink contains dyes that would also separate'
+      - 'pencil absorbs the solvent'
+      - 'ink stops the solvent moving'
+    answer: 'ink contains dyes that would also separate'
+    explanation: 'Graphite is insoluble and stays put; ink dyes would move and add extra spots.'
+    difficulty: easy
+  - id: ch-q5
+    prompt: 'In gas chromatography, what identifies a substance?'
+    choices:
+      - 'the peak height alone'
+      - 'the retention time'
+      - 'the colour of the peak'
+      - 'the total run time'
+    answer: 'the retention time'
+    explanation: 'Under fixed conditions each substance has its own retention time; peak area (not identity) tells how much is present.'
+    difficulty: easy
+  - id: ch-q6
+    prompt: 'GC peak areas: A 600, B 1500, C 900 (equal detector response). What percentage is B?'
+    choices:
+      - '20.0 %'
+      - '30.0 %'
+      - '50.0 %'
+      - '60.0 %'
+    answer: '50.0 %'
+    explanation: 'Total = 600 + 1500 + 900 = 3000; B = 1500 ÷ 3000 × 100 % = 50.0 %.'
+    difficulty: medium
+  - id: ch-q7
+    prompt: 'Switching to a more polar solvent on a silica plate will usually:'
+    choices:
+      - 'lower all the Rf values'
+      - 'raise all the Rf values'
+      - 'leave the Rf values unchanged'
+      - 'make every spot stay on the baseline'
+    answer: 'raise all the Rf values'
+    explanation: 'A more polar mobile phase competes better with the polar silica for the compounds, so they all move further.'
+    difficulty: hard
