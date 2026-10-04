@@ -1,0 +1,79 @@
+# Quiz: Reaction Rates and Rate Laws
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Reaction Rates and Rate Laws: Quiz'
+description: 'Seven questions on rates, rate laws, orders, units of k and half-life, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: rr-q1
+    prompt: 'Why does increasing the concentration of a reactant usually increase the rate?'
+    choices:
+      - 'Each collision has more energy'
+      - 'Collisions between particles happen more often'
+      - 'The activation energy decreases'
+      - 'The rate constant increases'
+    answer: 'Collisions between particles happen more often'
+    explanation: 'More particles per litre means more frequent collisions. Energy per collision, Ea and k are unchanged.'
+    difficulty: easy
+  - id: rr-q2
+    prompt: 'For rate = k[A][B]², what happens to the rate when [B] is tripled?'
+    choices:
+      - 'It triples'
+      - 'It increases 6 times'
+      - 'It increases 9 times'
+      - 'It does not change'
+    answer: 'It increases 9 times'
+    explanation: 'The reaction is second order in B, so the rate is multiplied by 3² = 9.'
+    difficulty: medium
+  - id: rr-q3
+    prompt: 'What are the units of k for a reaction with rate = k[A]²?'
+    choices:
+      - 's⁻¹'
+      - 'M s⁻¹'
+      - 'M⁻¹ s⁻¹'
+      - 'M⁻² s⁻¹'
+    answer: 'M⁻¹ s⁻¹'
+    explanation: 'k = rate ÷ [A]² = (M s⁻¹) ÷ M² = M⁻¹ s⁻¹.'
+    difficulty: medium
+  - id: rr-q4
+    prompt: 'Doubling [A] (with [B] constant) multiplies the initial rate by 4. Doubling [B] (with [A] constant) leaves it unchanged. What is the rate law?'
+    choices:
+      - 'rate = k[A][B]'
+      - 'rate = k[A]²'
+      - 'rate = k[A]²[B]'
+      - 'rate = k[B]²'
+    answer: 'rate = k[A]²'
+    explanation: '×4 for doubling means second order in A; no change means zero order in B, so [B] does not appear.'
+    difficulty: medium
+  - id: rr-q5
+    prompt: 'A first-order reaction has k = 0.0231 min⁻¹. What is its half-life?'
+    choices:
+      - '0.0160 min'
+      - '30.0 min'
+      - '43.3 min'
+      - '15.0 min'
+    answer: '30.0 min'
+    explanation: 't½ = 0.693 ÷ 0.0231 min⁻¹ = 30.0 min. The answer 43.3 min is 1 ÷ k.'
+    difficulty: medium
+  - id: rr-q6
+    prompt: 'A first-order reactant starts at 0.800 M. What is its concentration after 3 half-lives?'
+    choices:
+      - '0.267 M'
+      - '0.200 M'
+      - '0.100 M'
+      - '0 M'
+    answer: '0.100 M'
+    explanation: '0.800 M → 0.400 M → 0.200 M → 0.100 M: (½)³ × 0.800 M = 0.100 M.'
+    difficulty: easy
+  - id: rr-q7
+    prompt: 'In 2N₂O₅ → 4NO₂ + O₂, N₂O₅ disappears at 0.0060 M/s. How fast does O₂ form?'
+    choices:
+      - '0.0030 M/s'
+      - '0.0060 M/s'
+      - '0.012 M/s'
+      - '0.0015 M/s'
+    answer: '0.0030 M/s'
+    explanation: '1 mol O₂ forms per 2 mol N₂O₅: 0.0060 M/s × (1/2) = 0.0030 M/s. The answer 0.012 M/s is the rate of NO₂ formation.'
+    difficulty: hard

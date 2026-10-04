@@ -1,0 +1,79 @@
+# Quiz: Activation Energy and Catalysts
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Activation Energy and Catalysts: Quiz'
+description: 'Seven questions on activation energy, energy profiles, temperature, the Arrhenius equation and catalysts, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ae-q1
+    prompt: 'What does a catalyst do?'
+    choices:
+      - 'Increases the energy of the reactants'
+      - 'Provides a pathway with a lower activation energy'
+      - 'Increases ΔH'
+      - 'Shifts the equilibrium toward products'
+    answer: 'Provides a pathway with a lower activation energy'
+    explanation: 'A catalyst lowers Ea. It does not change the energies of reactants or products, ΔH, or the equilibrium position.'
+    difficulty: easy
+  - id: ae-q2
+    prompt: 'Why does raising the temperature increase the rate of a reaction?'
+    choices:
+      - 'The activation energy decreases'
+      - 'A larger fraction of collisions have energy ≥ Ea'
+      - 'The reaction becomes more exothermic'
+      - 'The orientation of collisions improves'
+    answer: 'A larger fraction of collisions have energy ≥ Ea'
+    explanation: 'Ea stays the same, but at a higher temperature many more molecules have enough energy (the area beyond Ea grows), and they also collide more often.'
+    difficulty: easy
+  - id: ae-q3
+    prompt: 'For an exothermic reaction, Ea (forward) = 80 kJ/mol and ΔH = −30 kJ/mol. What is Ea for the reverse reaction?'
+    choices:
+      - '50 kJ/mol'
+      - '80 kJ/mol'
+      - '110 kJ/mol'
+      - '30 kJ/mol'
+    answer: '110 kJ/mol'
+    explanation: 'The reverse reaction starts from the lower-energy products, so its hill is higher: 80 kJ/mol + 30 kJ/mol = 110 kJ/mol.'
+    difficulty: medium
+  - id: ae-q4
+    prompt: 'In the Arrhenius equation, which units must Ea and T have when R = 8.314 J/(mol·K)?'
+    choices:
+      - 'kJ/mol and °C'
+      - 'J/mol and K'
+      - 'kJ/mol and K'
+      - 'J/mol and °C'
+    answer: 'J/mol and K'
+    explanation: 'Ea must be in J/mol to match the joules in R, and T must be in kelvin, so that Ea/RT has no unit.'
+    difficulty: medium
+  - id: ae-q5
+    prompt: 'A reaction has Ea = 50.0 kJ/mol. By about what factor does k increase from 298 K to 308 K?'
+    choices:
+      - '1.03'
+      - '1.93'
+      - '10.0'
+      - '0.52'
+    answer: '1.93'
+    explanation: 'ln(k₂/k₁) = (5.00 × 10⁴ J/mol ÷ 8.314 J/(mol·K)) × (1/298 K − 1/308 K) = 0.655, so k₂/k₁ = e^0.655 = 1.93.'
+    difficulty: hard
+  - id: ae-q6
+    prompt: 'Which statement about catalysts is correct?'
+    choices:
+      - 'They are used up during the reaction'
+      - 'They increase the equilibrium yield'
+      - 'They speed up the forward and reverse reactions equally'
+      - 'They only work for endothermic reactions'
+    answer: 'They speed up the forward and reverse reactions equally'
+    explanation: 'Because both directions speed up equally, equilibrium is reached faster but its position and K do not change. The catalyst is regenerated.'
+    difficulty: medium
+  - id: ae-q7
+    prompt: 'What does the peak of an energy profile represent?'
+    choices:
+      - 'The products'
+      - 'The transition state'
+      - 'ΔH'
+      - 'The catalyst'
+    answer: 'The transition state'
+    explanation: 'The top of the hill is the transition state (activated complex); its height above the reactants is Ea.'
+    difficulty: easy

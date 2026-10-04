@@ -1,0 +1,39 @@
+# Flashcards: Activation Energy and Catalysts
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Activation Energy and Catalysts: Flashcards'
+description: 'Revise activation energy, energy profiles, the Maxwell–Boltzmann distribution, the Arrhenius equation and catalysts.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ae-01
+    front: 'What is activation energy, Ea?'
+    back: 'The minimum energy colliding particles need in order to react.'
+  - id: ae-02
+    front: 'What two conditions must a collision meet to cause a reaction?'
+    back: 'Energy at least equal to Ea, and a suitable orientation.'
+  - id: ae-03
+    front: 'What is the transition state?'
+    back: 'The highest-energy arrangement on the energy profile, partway between reactants and products.'
+  - id: ae-04
+    front: 'Why does a small rise in temperature greatly increase the rate?'
+    back: 'The fraction of molecules with energy ≥ Ea (the area beyond Ea on the Maxwell–Boltzmann curve) increases sharply.'
+  - id: ae-05
+    front: 'Write the Arrhenius equation.'
+    back: '$k = A\, e^{-E_\text{a}/RT}$, with $R = 8.314$ J/(mol·K) and T in kelvin'
+  - id: ae-06
+    front: 'Two-temperature form of the Arrhenius equation?'
+    back: '$\ln\dfrac{k_2}{k_1} = \dfrac{E_\text{a}}{R}\left(\dfrac{1}{T_1} - \dfrac{1}{T_2}\right)$'
+  - id: ae-07
+    front: 'How does a catalyst increase the rate?'
+    back: 'It provides an alternative pathway with a lower activation energy, and is regenerated at the end.'
+  - id: ae-08
+    front: 'Does a catalyst change ΔH or K?'
+    back: 'No. It lowers Ea for both directions equally, so ΔH, the equilibrium position and K are unchanged.'
+  - id: ae-09
+    front: 'Ea (forward) = 120 kJ/mol and ΔH = −40 kJ/mol. What is Ea (reverse)?'
+    back: '120 kJ/mol + 40 kJ/mol = 160 kJ/mol'
+  - id: ae-10
+    front: 'Homogeneous vs heterogeneous catalyst?'
+    back: 'Homogeneous: same phase as the reactants. Heterogeneous: different phase, usually a solid surface (e.g. iron, platinum).'

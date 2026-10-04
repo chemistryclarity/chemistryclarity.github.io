@@ -1,0 +1,158 @@
+---
+title: Activation Energy and Catalysts
+question: "What is activation energy and how do catalysts speed up reactions?"
+description: "Collision theory, activation energy, energy profiles, the Maxwell–Boltzmann distribution, the Arrhenius equation and how catalysts work."
+area: kinetics
+level: intermediate
+order: 20
+prerequisites: [reaction-rates]
+related: [reaction-rates, le-chateliers-principle, temperature-scales]
+flashcards: activation-energy
+quiz: activation-energy
+resources: [activation-energy-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  R = 8.314 J/(mol·K). Example data are given values. Arrhenius example uses 298 K and 308 K as given (298.15 K would give 1.92).
+  Diagrams: energy profile drawn to scale for Ea = 120 kJ/mol, ΔH = −40 kJ/mol; Maxwell–Boltzmann curves calculated (qualitative energy axis).
+  Units shown on every quantity in every step.
+*/}
+
+## What is it?
+
+For particles to react, they must **collide** with enough energy to break existing bonds and start forming new ones. The minimum energy needed is the **activation energy**, $E_\text{a}$ (usually in kJ/mol).
+
+An **energy profile** shows the energy of the reacting particles as the reaction proceeds. The highest point is the **transition state** (or activated complex), an unstable arrangement partway between reactants and products. $E_\text{a}$ is the height of this "energy hill" above the reactants.
+
+<KeyIdea>
+The **higher** the activation energy, the **slower** the reaction. Raising the temperature gives more molecules enough energy to get over the hill; a **catalyst** provides a different route with a **lower** hill.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Food and medicine.** Fridges slow spoilage, and medicines are stored cool, because lower temperatures slow reactions.
+- **Industry.** Catalysts let chemical plants run faster at lower temperatures, saving energy (iron in the Haber process; platinum in catalytic converters).
+- **Life.** Enzymes are biological catalysts that make the reactions of life fast enough at body temperature.
+
+## How does it work?
+
+### 1. Collision theory
+
+A collision leads to reaction only if the particles:
+
+1. collide with energy **at least equal to $E_\text{a}$**, and
+2. have a suitable **orientation**.
+
+Most collisions fail. Anything that increases the number of *successful* collisions per second increases the rate.
+
+### 2. Why temperature has such a large effect
+
+The **Maxwell–Boltzmann distribution** shows how kinetic energy is spread among molecules. At a higher temperature the curve flattens and shifts to the right, and the area beyond $E_\text{a}$ (the fraction of molecules that can react) grows **much more** than the average energy does. A rise of only 10 K can roughly double the rate of many reactions.
+
+### 3. The Arrhenius equation
+
+$$
+k = A\, e^{-E_\text{a}/RT}
+$$
+
+where $A$ is the frequency factor (collision frequency and orientation), $R = 8.314\ \text{J/(mol·K)}$ and $T$ is in kelvin. Comparing two temperatures:
+
+$$
+\ln\frac{k_2}{k_1} = \frac{E_\text{a}}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)
+$$
+
+Always convert $E_\text{a}$ to **J/mol** to match the units of $R$.
+
+### 4. Catalysts
+
+A **catalyst** speeds up a reaction by providing an **alternative pathway with a lower activation energy**. It takes part in the reaction but is **regenerated**, so it is not used up.
+
+- It speeds up the forward **and** reverse reactions equally, so it does **not** change ΔH, the equilibrium position or K.
+- **Homogeneous** catalysts are in the same phase as the reactants; **heterogeneous** catalysts (often solids such as iron or platinum) work at a surface.
+
+<Analogy>
+Getting from one valley to the next over a high mountain pass is slow; few hikers have the energy. A tunnel (the catalyst) offers a lower route, so many more get through each hour, but both valleys stay at the same heights: the start and finish (reactants and products, and ΔH) don't change.
+</Analogy>
+
+<MorePrecisely>
+Taking logarithms gives $\ln k = \ln A - \dfrac{E_\text{a}}{R}\cdot\dfrac{1}{T}$, so a plot of $\ln k$ against $1/T$ (an **Arrhenius plot**) is a straight line with slope $-E_\text{a}/R$. That's how activation energies are measured from experimental rate constants.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/activation-energy/energy-profile.svg" alt="Energy profile for an exothermic reaction. Reactants are at a higher energy than products; ΔH = −40 kJ/mol. A solid curve rises to the transition state with an activation energy of 120 kJ/mol. A dashed curve for the catalysed reaction rises only 70 kJ/mol. The reverse activation energy is 120 kJ/mol + 40 kJ/mol = 160 kJ/mol." caption="A catalyst lowers the activation energy but leaves ΔH unchanged." width={360} height={400} />
+
+<Figure src="/images/activation-energy/maxwell-boltzmann.svg" alt="Maxwell–Boltzmann distributions of molecular kinetic energy at a lower and a higher temperature. The higher-temperature curve is flatter and shifted to the right. The shaded area beyond the activation energy, the fraction of molecules able to react, is about 2.9 times larger at the higher temperature in this example." caption="Heating mainly increases the fraction of molecules with energy above Ea." width={360} height={390} />
+
+## Worked example
+
+<Example title="How much faster when 10 K warmer?">
+**Question:** A reaction has $E_\text{a} = 50.0$ kJ/mol. By what factor does $k$ increase from 298 K to 308 K?
+
+1. Convert: $E_\text{a} = 50.0\ \text{kJ/mol} \times \dfrac{1000\ \text{J}}{1\ \text{kJ}} = 5.00 \times 10^{4}\ \text{J/mol}$
+2. Substitute:
+
+   $$
+   \begin{aligned}
+   &\ln\frac{k_2}{k_1} \\[4pt]
+   &= \frac{5.00 \times 10^{4}\ \text{J/mol}}{8.314\ \text{J/(mol·K)}} \\[4pt]
+   &\quad \times \left(\frac{1}{298\ \text{K}} - \frac{1}{308\ \text{K}}\right) \\[4pt]
+   &= 0.655
+   \end{aligned}
+   $$
+
+   J/mol cancel, and K × K⁻¹ cancel, so the logarithm is a pure number.
+3. $\dfrac{k_2}{k_1} = e^{0.655} =$ **1.93**: the rate almost doubles.
+</Example>
+
+<Example title="Finding the activation energy">
+**Question:** A rate constant is $1.00 \times 10^{-3}\ \text{s}^{-1}$ at 300. K and $4.00 \times 10^{-3}\ \text{s}^{-1}$ at 320. K. Find $E_\text{a}$.
+
+1. Rearrange: $E_\text{a} = \dfrac{R \ln(k_2/k_1)}{\dfrac{1}{T_1} - \dfrac{1}{T_2}}$
+2. $\ln\dfrac{4.00 \times 10^{-3}\ \text{s}^{-1}}{1.00 \times 10^{-3}\ \text{s}^{-1}} = \ln 4.00 = 1.3863$ (the units of s⁻¹ cancel)
+3. $\dfrac{1}{300.\ \text{K}} - \dfrac{1}{320.\ \text{K}} = 2.0833 \times 10^{-4}\ \text{K}^{-1}$
+4. Numerator: $R \ln\dfrac{k_2}{k_1} = 8.314\ \text{J/(mol·K)} \times 1.3863 = 11.526\ \text{J/(mol·K)}$ (keep extra digits until the end)
+5. Divide:
+
+   $$
+   \begin{aligned}
+   E_\text{a} &= \frac{11.526\ \text{J/(mol·K)}}{2.0833 \times 10^{-4}\ \text{K}^{-1}} \\[4pt]
+   &= 5.53 \times 10^{4}\ \text{J/mol} \\[4pt]
+   &= 55.3\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+   K and K⁻¹ cancel, leaving J/mol.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Mixing kJ and J">
+$R = 8.314$ J/(mol·K) is in **joules**. Using $E_\text{a}$ in kJ/mol without converting makes the exponent 1000 times too small.
+</CommonMistake>
+
+<CommonMistake title="Using °C in the Arrhenius equation">
+Temperatures must be in **kelvin**. $\dfrac{1}{25\ °\text{C}}$ has no physical meaning; use 298 K.
+</CommonMistake>
+
+<CommonMistake title="Thinking a catalyst changes ΔH or the yield">
+A catalyst lowers $E_\text{a}$ for both directions. It does not change ΔH, the equilibrium position or K; it only gets the system to equilibrium faster.
+</CommonMistake>
+
+<NotationNote>
+- $E_\text{a}$ may be written per mole (kJ/mol) or per molecule (J); chemistry courses use kJ/mol.
+- "Activated complex" and "transition state" are used for the top of the energy profile.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Reaction needs collisions with energy ≥ $E_\text{a}$ and the right orientation.
+- Higher temperature: many more molecules exceed $E_\text{a}$ (Maxwell–Boltzmann), so the rate rises steeply.
+- $k = A e^{-E_\text{a}/RT}$; use J/mol and kelvin; $\ln(k_2/k_1) = \dfrac{E_\text{a}}{R}\left(\dfrac{1}{T_1} - \dfrac{1}{T_2}\right)$.
+- Catalysts lower $E_\text{a}$, are regenerated, and don't change ΔH or K.
+</RememberThis>

@@ -1,0 +1,200 @@
+---
+title: Reaction Rates and Rate Laws
+question: "How do you find the rate law and rate constant of a reaction?"
+description: "Reaction rates, the factors that affect them, rate laws and reaction orders, the method of initial rates, units of the rate constant, and first-order half-life."
+area: kinetics
+level: intermediate
+order: 10
+prerequisites: [molarity, unit-conversions]
+related: [activation-energy, chemical-equilibrium]
+flashcards: reaction-rates
+quiz: reaction-rates
+resources: [reaction-rates-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Rate data in examples are constructed (given) values. Every answer checked by computer; no exact-half roundings.
+  Units shown on every quantity in every step, including the units of k, which depend on the overall order.
+*/}
+
+## What is it?
+
+**Chemical kinetics** is the study of how **fast** reactions happen. The **rate** of a reaction is the change in concentration of a reactant or product per unit time:
+
+$$
+\text{rate} = -\frac{\Delta[\text{reactant}]}{\Delta t} = \frac{\Delta[\text{product}]}{\Delta t}
+$$
+
+The minus sign makes the rate positive, because reactant concentrations decrease. Rates are usually given in **M/s** (mol L⁻¹ s⁻¹).
+
+<KeyIdea>
+A **rate law** links the rate to the concentrations: rate $= k[\ce{A}]^m[\ce{B}]^n$. The orders $m$ and $n$ must be found **by experiment**; they are not the coefficients of the balanced equation.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Industry and safety.** Chemists control rates to make products efficiently and to avoid runaway reactions.
+- **Medicine.** Drug doses are spaced using the rate at which the body removes the drug (often a first-order half-life).
+- **Mechanisms.** Rate laws give clues about the steps by which a reaction actually happens.
+
+## How does it work?
+
+### 1. What changes the rate (collision theory)
+
+Particles must **collide** with enough energy and the right orientation to react. A reaction is faster with:
+
+- **higher concentration** (or pressure for gases): more frequent collisions;
+- **higher temperature**: more frequent and, above all, more energetic collisions;
+- **larger surface area** (smaller pieces of solid): more particles exposed;
+- a **catalyst**: a lower-energy pathway (see [Activation Energy and Catalysts](/chemistry/activation-energy/)).
+
+### 2. Rates and stoichiometry
+
+For $\ce{2N2O5(g) -> 4NO2(g) + O2(g)}$, $\ce{NO2}$ forms twice as fast as $\ce{N2O5}$ disappears. To give one rate for the reaction, divide by the coefficients:
+
+$$
+\begin{aligned}
+\text{rate} &= -\frac{1}{2}\frac{\Delta[\ce{N2O5}]}{\Delta t} \\[4pt]
+&= \frac{1}{4}\frac{\Delta[\ce{NO2}]}{\Delta t} = \frac{\Delta[\ce{O2}]}{\Delta t}
+\end{aligned}
+$$
+
+### 3. Rate laws and orders
+
+In rate $= k[\ce{A}]^m[\ce{B}]^n$:
+
+- $m$ is the **order with respect to A**; $n$ is the order with respect to B; $m + n$ is the **overall order**.
+- $k$ is the **rate constant**. It is fixed at a given temperature and increases as the temperature rises.
+
+| Order in A | Doubling [A] multiplies the rate by |
+|---|---|
+| 0 | 1 (no change) |
+| 1 | 2 |
+| 2 | 4 |
+
+### 4. Units of the rate constant
+
+Because the rate is always in M/s, the units of $k$ depend on the **overall order**:
+
+| Overall order | Rate law | Units of k |
+|---|---|---|
+| 0 | rate = k | M s⁻¹ |
+| 1 | rate = k[A] | s⁻¹ |
+| 2 | rate = k[A]² or k[A][B] | M⁻¹ s⁻¹ |
+| 3 | rate = k[A]²[B] | M⁻² s⁻¹ |
+
+### 5. First-order reactions and half-life
+
+For a first-order reaction, the concentration falls **exponentially**:
+
+$$
+\begin{aligned}
+[\ce{A}]_t &= [\ce{A}]_0\, e^{-kt} \\[4pt]
+t_{1/2} &= \frac{\ln 2}{k} = \frac{0.693}{k}
+\end{aligned}
+$$
+
+The **half-life**, $t_{1/2}$, is the time for the concentration to halve. For a first-order reaction it does **not** depend on the starting concentration, so every half-life is the same length.
+
+<Analogy>
+A ticket queue at a stadium: open more gates (higher concentration of "gates", or a catalyst) and people get through faster. A first-order half-life is like a sale where half of the remaining stock sells every hour: 100 items, then 50, then 25, then 12.5, with each halving taking the same time.
+</Analogy>
+
+<MorePrecisely>
+The rate measured over a time interval is an **average rate**; the **instantaneous rate** is the slope of the tangent to the concentration–time curve. The orders in a rate law reflect the reaction **mechanism** (its sequence of elementary steps), which is why they can't be read from the overall equation. Second-order reactions have $t_{1/2} = \dfrac{1}{k[\ce{A}]_0}$, which does depend on the starting concentration.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/reaction-rates/first-order-half-life.svg" alt="Graph of concentration of A against time for a first-order reaction with initial concentration 0.100 M and k = 6.20 × 10⁻⁴ per second. The curve falls exponentially. Dashed guides mark 1 half-life at about 1120 s (0.050 M), 2 half-lives at about 2240 s (0.025 M) and 3 half-lives at about 3350 s (0.0125 M)." caption="In a first-order reaction every half-life is the same length." width={360} height={380} />
+
+## Worked example
+
+<Example title="Average rate">
+**Question:** In $\ce{2H2O2 -> 2H2O + O2}$, $[\ce{H2O2}]$ falls from 0.500 M to 0.400 M in 60.0 s. Find the average rate of disappearance of $\ce{H2O2}$ and the average rate of the reaction.
+
+1. Rate of disappearance of $\ce{H2O2}$:
+
+   $$
+   \begin{aligned}
+   &-\frac{\Delta[\ce{H2O2}]}{\Delta t} \\[4pt]
+   &= -\frac{0.400\ \text{M} - 0.500\ \text{M}}{60.0\ \text{s}} \\[4pt]
+   &= 1.67 \times 10^{-3}\ \text{M/s}
+   \end{aligned}
+   $$
+
+2. Rate of reaction (divide by the coefficient 2): $\dfrac{1.67 \times 10^{-3}\ \text{M/s}}{2} =$ **$8.33 \times 10^{-4}$ M/s**
+</Example>
+
+<Example title="The method of initial rates">
+**Question:** For $\ce{A + B -> products}$:
+
+| Experiment | [A] | [B] | Initial rate |
+|---|---|---|---|
+| 1 | 0.10 M | 0.10 M | 2.0 × 10⁻³ M/s |
+| 2 | 0.20 M | 0.10 M | 8.0 × 10⁻³ M/s |
+| 3 | 0.10 M | 0.20 M | 4.0 × 10⁻³ M/s |
+
+Find the rate law and $k$, with units.
+
+1. Experiments 1 → 2: [A] doubles, [B] constant; the rate is multiplied by $\dfrac{8.0 \times 10^{-3}\ \text{M/s}}{2.0 \times 10^{-3}\ \text{M/s}} = 4$, so the order in A is **2**.
+2. Experiments 1 → 3: [B] doubles; the rate is multiplied by 2, so the order in B is **1**.
+3. Rate law: **rate = k[A]²[B]** (third order overall).
+4. From experiment 1:
+
+   $$
+   \begin{aligned}
+   &k = \frac{\text{rate}}{[\ce{A}]^2[\ce{B}]} \\[4pt]
+   &= \frac{2.0 \times 10^{-3}\ \text{M s}^{-1}}{(0.10\ \text{M})^2(0.10\ \text{M})} \\[4pt]
+   &= 2.0\ \text{M}^{-2}\ \text{s}^{-1}
+   \end{aligned}
+   $$
+
+   The units follow from M s⁻¹ ÷ M³ = M⁻² s⁻¹.
+</Example>
+
+<Example title="Half-life">
+**Question:** A first-order decomposition has $k = 6.20 \times 10^{-4}\ \text{s}^{-1}$. Find its half-life.
+
+$$
+\begin{aligned}
+t_{1/2} &= \frac{0.693}{6.20 \times 10^{-4}\ \text{s}^{-1}} \\[4pt]
+&= 1.12 \times 10^{3}\ \text{s}
+\end{aligned}
+$$
+
+That is $1.12 \times 10^{3}\ \text{s} \times \dfrac{1\ \text{min}}{60\ \text{s}} = 18.6$ min.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Taking orders from the balanced equation">
+For $\ce{2NO + O2 -> 2NO2}$ the rate law happens to be rate = k[NO]²[O₂], but that is an experimental result. Many reactions have orders that differ from their coefficients, so always use data.
+</CommonMistake>
+
+<CommonMistake title="Giving every k the same units">
+$k$ for a first-order reaction is in s⁻¹, but for a second-order reaction it is in M⁻¹ s⁻¹. Work out the units from the rate law every time.
+</CommonMistake>
+
+<CommonMistake title="Thinking every half-life doubles the time to finish">
+After 2 half-lives, $\frac{1}{4}$ of the reactant remains, not none. A first-order reaction never quite reaches zero.
+</CommonMistake>
+
+<NotationNote>
+- M/s, M s⁻¹ and mol L⁻¹ s⁻¹ mean the same thing.
+- "ln" is the natural logarithm (base e); ln 2 = 0.693.
+- $[\ce{A}]_0$ is the initial concentration; $[\ce{A}]_t$ is the concentration at time $t$.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Rate = change in concentration ÷ time (M/s); divide by coefficients for one reaction rate.
+- Rate = k[A]^m[B]^n; orders come from experiments (method of initial rates).
+- Units of k: zero order M s⁻¹; first s⁻¹; second M⁻¹ s⁻¹; third M⁻² s⁻¹.
+- First order: $t_{1/2} = 0.693/k$, independent of starting concentration.
+</RememberThis>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .al { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .grid { stroke: #ece9e1; stroke-width: 1; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .cA { stroke: #0f766e; stroke-width: 2.6; fill: none; } .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .cB { stroke: #b45309; stroke-width: 2.6; fill: none; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    .cC { stroke: #7c3aed; stroke-width: 2.2; fill: none; stroke-dasharray: 6 4; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .guide { stroke: #8a94a6; stroke-width: 1.1; stroke-dasharray: 3 3; fill: none; }
+    .dot { fill: #b45309; }
+    .arr { stroke: #14213d; stroke-width: 1.4; fill: none; marker-end: url(#hd); marker-start: url(#hs); }
+    .hd { fill: #14213d; }
+    .ar { fill: #14213d; font-size: 11px; font-weight: 700; }
+    .shadeA { fill: #0f766e; opacity: 0.18; } .shadeB { fill: #b45309; opacity: 0.22; }
+    
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .al, .ar { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .grid { stroke: #27324a; } .axis, .arr { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+      .cA { stroke: #2dd4bf; } .lA { fill: #2dd4bf; } .cB { stroke: #fbbf24; } .lB { fill: #fbbf24; } .dot { fill: #fbbf24; }
+      .cC { stroke: #c4b5fd; } .lC { fill: #c4b5fd; } .guide { stroke: #6b7894; }
+      .shadeA { fill: #2dd4bf; } .shadeB { fill: #fbbf24; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M10 0 0 5 10 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="380" rx="14"/>
+  <text class="t" x="20" y="28">A first-order reaction halves at equal intervals</text>
+  <text class="sub" x="20" y="45">[A]₀ = 0.100 M, k = 6.20 × 10⁻⁴ s⁻¹, t½ = 1.12 × 10³ s</text>
+  <line class="grid" x1="64" y1="316" x2="336" y2="316"/><text class="num" x="58" y="319.5" text-anchor="end">0.000</text><line class="grid" x1="64" y1="259.2" x2="336" y2="259.2"/><text class="num" x="58" y="262.7" text-anchor="end">0.025</text><line class="grid" x1="64" y1="202.4" x2="336" y2="202.4"/><text class="num" x="58" y="205.9" text-anchor="end">0.050</text><line class="grid" x1="64" y1="145.5" x2="336" y2="145.5"/><text class="num" x="58" y="149" text-anchor="end">0.075</text><line class="grid" x1="64" y1="88.7" x2="336" y2="88.7"/><text class="num" x="58" y="92.2" text-anchor="end">0.100</text><text class="num" x="64" y="330" text-anchor="middle">0</text><text class="num" x="124.4" y="330" text-anchor="middle">1000</text><text class="num" x="184.9" y="330" text-anchor="middle">2000</text><text class="num" x="245.3" y="330" text-anchor="middle">3000</text><text class="num" x="305.8" y="330" text-anchor="middle">4000</text>
+  <path class="axis" d="M64 66 V316 H336"/>
+  <path class="cA" d="M64 88.7 L65.8 92.9 L67.6 97 L69.4 101.1 L71.3 105 L73.1 108.9 L74.9 112.7 L76.7 116.5 L78.5 120.1 L80.3 123.8 L82.1 127.3 L83.9 130.8 L85.8 134.2 L87.6 137.5 L89.4 140.8 L91.2 144.1 L93 147.2 L94.8 150.3 L96.6 153.4 L98.5 156.4 L100.3 159.3 L102.1 162.2 L103.9 165 L105.7 167.8 L107.5 170.6 L109.3 173.2 L111.1 175.9 L113 178.5 L114.8 181 L116.6 183.5 L118.4 185.9 L120.2 188.3 L122 190.7 L123.8 193 L125.7 195.2 L127.5 197.5 L129.3 199.7 L131.1 201.8 L132.9 203.9 L134.7 206 L136.5 208 L138.3 210 L140.2 211.9 L142 213.9 L143.8 215.7 L145.6 217.6 L147.4 219.4 L149.2 221.2 L151 222.9 L152.9 224.6 L154.7 226.3 L156.5 228 L158.3 229.6 L160.1 231.2 L161.9 232.8 L163.7 234.3 L165.5 235.8 L167.4 237.3 L169.2 238.7 L171 240.2 L172.8 241.5 L174.6 242.9 L176.4 244.3 L178.2 245.6 L180.1 246.9 L181.9 248.2 L183.7 249.4 L185.5 250.6 L187.3 251.8 L189.1 253 L190.9 254.2 L192.7 255.3 L194.6 256.4 L196.4 257.5 L198.2 258.6 L200 259.7 L201.8 260.7 L203.6 261.7 L205.4 262.7 L207.3 263.7 L209.1 264.7 L210.9 265.6 L212.7 266.6 L214.5 267.5 L216.3 268.4 L218.1 269.2 L219.9 270.1 L221.8 270.9 L223.6 271.8 L225.4 272.6 L227.2 273.4 L229 274.2 L230.8 274.9 L232.6 275.7 L234.5 276.4 L236.3 277.2 L238.1 277.9 L239.9 278.6 L241.7 279.3 L243.5 280 L245.3 280.6 L247.1 281.3 L249 281.9 L250.8 282.5 L252.6 283.2 L254.4 283.8 L256.2 284.4 L258 284.9 L259.8 285.5 L261.7 286.1 L263.5 286.6 L265.3 287.2 L267.1 287.7 L268.9 288.2 L270.7 288.7 L272.5 289.2 L274.3 289.7 L276.2 290.2 L278 290.7 L279.8 291.2 L281.6 291.6 L283.4 292.1 L285.2 292.5 L287 292.9 L288.9 293.4 L290.7 293.8 L292.5 294.2 L294.3 294.6 L296.1 295 L297.9 295.4 L299.7 295.8 L301.5 296.1 L303.4 296.5 L305.2 296.8 L307 297.2 L308.8 297.5 L310.6 297.9 L312.4 298.2 L314.2 298.5 L316.1 298.9 L317.9 299.2 L319.7 299.5 L321.5 299.8 L323.3 300.1 L325.1 300.4 L326.9 300.7 L328.7 301 L330.6 301.2 L332.4 301.5 L334.2 301.8 L336 302"/>
+  <path class="guide" d="M64 202.4 H131.6 V316"/><circle class="dot" cx="131.6" cy="202.4" r="4"/><text class="lB" x="137.6" y="195.4">1 half-life</text><path class="guide" d="M64 259.2 H199.2 V316"/><circle class="dot" cx="199.2" cy="259.2" r="4"/><text class="lB" x="205.2" y="252.2">2 half-lives</text><path class="guide" d="M64 287.6 H266.7 V316"/><circle class="dot" cx="266.7" cy="287.6" r="4"/><text class="lB" x="272.7" y="280.6">3 half-lives</text>
+  <text class="al" x="200" y="348" text-anchor="middle">Time (s)</text>
+  <text class="al" x="15" y="191" text-anchor="middle" transform="rotate(-90 15 191)">[A] (M)</text>
+  <text class="sub" x="20" y="370">0.100 M → 0.050 M → 0.025 M → 0.0125 M, each taking 1.12 × 10³ s.</text>
+</svg>

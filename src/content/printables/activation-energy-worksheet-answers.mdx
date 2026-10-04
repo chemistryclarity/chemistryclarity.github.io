@@ -1,0 +1,88 @@
+---
+title: Activation Energy and Catalysts
+subtitle: Answer key with worked solutions
+kind: answer-key
+level: intermediate
+status: review
+assisted: true
+---
+
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer. Units shown on every quantity in every step. */}
+
+## A. Understanding
+
+<Q n={1}>Definitions.</Q>
+<Answer>**Activation energy**: the minimum energy that colliding particles need in order to react. **Transition state**: the highest-energy, unstable arrangement of atoms on the energy profile, between reactants and products.</Answer>
+
+<Q n={2}>Energy profile.</Q>
+<Answer>(a) ΔH is negative, so **exothermic**. (b) Ea (reverse) = 120 kJ/mol + 40 kJ/mol = **160 kJ/mol**. (c) The catalyst lowers both hills by 50 kJ/mol: Ea (reverse) = 70 kJ/mol + 40 kJ/mol = **110 kJ/mol**; ΔH is **unchanged, −40 kJ/mol**.</Answer>
+
+<Q n={3}>Maxwell–Boltzmann.</Q>
+<Answer>Only molecules with energy ≥ Ea can react. At a higher temperature the distribution flattens and shifts to higher energy, so the **area beyond Ea grows much more than the average energy does**. A small temperature rise can therefore roughly double the number of molecules able to react (and they collide slightly more often too).</Answer>
+
+<Q n={4}>Catalysts.</Q>
+<Answer>A **homogeneous** catalyst is in the same phase as the reactants (e.g. H⁺ ions catalysing ester hydrolysis in solution). A **heterogeneous** catalyst is in a different phase, usually a solid surface (e.g. iron in the Haber process, platinum in catalytic converters). A catalyst **does not change K**.</Answer>
+
+## B. The Arrhenius equation
+
+<Q n={5}>Factor from 300. K to 310. K.</Q>
+<Answer>
+
+$$
+\begin{aligned}
+\ln\frac{k_2}{k_1} &= \frac{7.50 \times 10^{4}\ \text{J/mol}}{8.314\ \text{J/(mol·K)}} \left(\frac{1}{300.\ \text{K}} - \frac{1}{310.\ \text{K}}\right) \\[4pt]
+&= 0.970
+\end{aligned}
+$$
+
+$\dfrac{k_2}{k_1} = e^{0.970} =$ **2.64** (the units cancel inside the exponent)
+
+</Answer>
+
+<Q n={6}>Ea from two rate constants.</Q>
+<Answer>
+
+$\ln\dfrac{6.0 \times 10^{-4}\ \text{s}^{-1}}{3.0 \times 10^{-5}\ \text{s}^{-1}} = \ln 20. = 2.996$; $\dfrac{1}{500.\ \text{K}} - \dfrac{1}{550.\ \text{K}} = 1.818 \times 10^{-4}\ \text{K}^{-1}$
+
+$$
+\begin{aligned}
+E_\text{a} &= \frac{8.314\ \text{J/(mol·K)} \times 2.996}{1.818 \times 10^{-4}\ \text{K}^{-1}} \\[4pt]
+&= 1.37 \times 10^{5}\ \text{J/mol} = 137\ \text{kJ/mol}
+\end{aligned}
+$$
+
+The rate constants have 2 significant figures, so report **Ea = 1.4 × 10² kJ/mol** (137 kJ/mol before rounding).
+
+</Answer>
+
+<Q n={7}>k at 330. K.</Q>
+<Answer>
+
+$$
+\begin{aligned}
+\ln\frac{k_2}{k_1} &= \frac{7.50 \times 10^{4}\ \text{J/mol}}{8.314\ \text{J/(mol·K)}} \left(\frac{1}{300.\ \text{K}} - \frac{1}{330.\ \text{K}}\right) \\[4pt]
+&= 2.734
+\end{aligned}
+$$
+
+$k_2 = 2.0 \times 10^{-4}\ \text{s}^{-1} \times e^{2.734} =$ **$3.1 \times 10^{-3}$ s⁻¹** (3.08 × 10⁻³ s⁻¹ before rounding to 2 significant figures)
+
+</Answer>
+
+## C. Challenge
+
+<Q n={8}>Effect of the catalyst.</Q>
+<Answer>
+
+With A unchanged, $\dfrac{k_\text{cat}}{k} = e^{(E_\text{a} - E_\text{a,cat})/RT}$:
+
+$$
+\frac{(7.50 - 5.00) \times 10^{4}\ \text{J/mol}}{8.314\ \text{J/(mol·K)} \times 298\ \text{K}} = 10.09
+$$
+
+$\dfrac{k_\text{cat}}{k} = e^{10.09} =$ **$2.4 \times 10^{4}$**: about 24 000 times faster.
+
+</Answer>
+
+<Q n={9}>Arrhenius plot.</Q>
+<Answer>Slope $= -\dfrac{E_\text{a}}{R}$, so $E_\text{a} = 6.65 \times 10^{3}\ \text{K} \times 8.314\ \text{J/(mol·K)} = 5.53 \times 10^{4}\ \text{J/mol} =$ **55.3 kJ/mol** (the units of K cancel).</Answer>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .al { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .grid { stroke: #ece9e1; stroke-width: 1; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .cA { stroke: #0f766e; stroke-width: 2.6; fill: none; } .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .cB { stroke: #b45309; stroke-width: 2.6; fill: none; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    .cC { stroke: #7c3aed; stroke-width: 2.2; fill: none; stroke-dasharray: 6 4; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .guide { stroke: #8a94a6; stroke-width: 1.1; stroke-dasharray: 3 3; fill: none; }
+    .dot { fill: #b45309; }
+    .arr { stroke: #14213d; stroke-width: 1.4; fill: none; marker-end: url(#hd); marker-start: url(#hs); }
+    .hd { fill: #14213d; }
+    .ar { fill: #14213d; font-size: 11px; font-weight: 700; }
+    .shadeA { fill: #0f766e; opacity: 0.18; } .shadeB { fill: #b45309; opacity: 0.22; }
+    
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .al, .ar { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .grid { stroke: #27324a; } .axis, .arr { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+      .cA { stroke: #2dd4bf; } .lA { fill: #2dd4bf; } .cB { stroke: #fbbf24; } .lB { fill: #fbbf24; } .dot { fill: #fbbf24; }
+      .cC { stroke: #c4b5fd; } .lC { fill: #c4b5fd; } .guide { stroke: #6b7894; }
+      .shadeA { fill: #2dd4bf; } .shadeB { fill: #fbbf24; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M10 0 0 5 10 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="400" rx="14"/>
+  <text class="t" x="20" y="28">Energy profile of an exothermic reaction</text>
+  <text class="sub" x="20" y="45">A catalyst gives a lower-energy pathway; ΔH is unchanged.</text>
+  <path class="axis" d="M58 70 V320 H336"/>
+  <path class="cA" d="M63.6 245 L66.3 245 L69.1 245 L71.9 245 L74.7 245 L77.5 245 L80.2 245 L83 245 L85.8 245 L88.6 245 L91.4 245.1 L94.1 245.1 L96.9 245.1 L99.7 245.1 L102.5 245.1 L105.3 245.1 L108 245.1 L110.8 245.1 L113.6 245.1 L116.4 245.1 L119.2 245.1 L121.9 245 L124.7 244.8 L127.5 244.6 L130.3 244.2 L133.1 243.7 L135.8 242.8 L138.6 241.7 L141.4 240.1 L144.2 237.9 L147 235.1 L149.7 231.5 L152.5 226.9 L155.3 221.3 L158.1 214.5 L160.9 206.6 L163.6 197.5 L166.4 187.2 L169.2 176 L172 164.2 L174.8 151.9 L177.5 139.7 L180.3 128 L183.1 117.4 L185.9 108.2 L188.7 101.1 L191.4 96.3 L194.2 94.2 L197 95 L199.8 98.7 L202.6 105.2 L205.3 114.2 L208.1 125.5 L210.9 138.5 L213.7 152.7 L216.5 167.6 L219.2 182.8 L222 197.6 L224.8 211.9 L227.6 225.1 L230.4 237.1 L233.1 247.8 L235.9 257.1 L238.7 265 L241.5 271.6 L244.3 277 L247 281.4 L249.8 284.8 L252.6 287.4 L255.4 289.4 L258.2 291 L260.9 292.1 L263.7 292.9 L266.5 293.5 L269.3 293.9 L272.1 294.2 L274.8 294.4 L277.6 294.6 L280.4 294.7 L283.2 294.8 L286 294.8 L288.7 294.8 L291.5 294.9 L294.3 294.9 L297.1 294.9 L299.9 294.9 L302.6 294.9 L305.4 295 L308.2 295 L311 295 L313.8 295 L316.5 295 L319.3 295 L322.1 295 L324.9 295 L327.7 295"/>
+  <path class="cC" d="M63.6 245 L66.3 245 L69.1 245 L71.9 245 L74.7 245 L77.5 245 L80.2 245 L83 245 L85.8 245 L88.6 245 L91.4 245.1 L94.1 245.1 L96.9 245.1 L99.7 245.1 L102.5 245.1 L105.3 245.1 L108 245.1 L110.8 245.2 L113.6 245.2 L116.4 245.2 L119.2 245.2 L121.9 245.1 L124.7 245.1 L127.5 244.9 L130.3 244.7 L133.1 244.4 L135.8 243.9 L138.6 243.3 L141.4 242.3 L144.2 241 L147 239.3 L149.7 237.1 L152.5 234.3 L155.3 230.9 L158.1 226.8 L160.9 221.9 L163.6 216.3 L166.4 210 L169.2 203.2 L172 196 L174.8 188.6 L177.5 181.3 L180.3 174.3 L183.1 168.1 L185.9 162.9 L188.7 159 L191.4 156.7 L194.2 156.2 L197 157.5 L199.8 160.7 L202.6 165.6 L205.3 172.2 L208.1 180.2 L210.9 189.2 L213.7 199 L216.5 209.2 L219.2 219.4 L222 229.5 L224.8 239 L227.6 247.9 L230.4 255.9 L233.1 263.1 L235.9 269.3 L238.7 274.6 L241.5 279 L244.3 282.6 L247 285.6 L249.8 287.9 L252.6 289.7 L255.4 291 L258.2 292.1 L260.9 292.8 L263.7 293.4 L266.5 293.8 L269.3 294.1 L272.1 294.4 L274.8 294.5 L277.6 294.6 L280.4 294.7 L283.2 294.8 L286 294.8 L288.7 294.9 L291.5 294.9 L294.3 294.9 L297.1 294.9 L299.9 294.9 L302.6 294.9 L305.4 295 L308.2 295 L311 295 L313.8 295 L316.5 295 L319.3 295 L322.1 295 L324.9 295 L327.7 295"/>
+  <line class="guide" x1="69.1" y1="245" x2="230.4" y2="245"/>
+  <line class="guide" x1="197" y1="295" x2="327.7" y2="295"/>
+  <line class="guide" x1="163.6" y1="95" x2="197" y2="95"/>
+  <line class="guide" x1="138.6" y1="157.5" x2="197" y2="157.5"/>
+  <path class="arr" d="M169.2 243 V97"/>
+  <text class="ar" x="163.2" y="110" text-anchor="end">Ea = 120 kJ/mol</text>
+  <path class="arr" d="M144.2 243 V159.5"/>
+  <text class="lC" x="139.2" y="180" text-anchor="end">catalysed:</text><text class="lC" x="139.2" y="194" text-anchor="end">Ea = 70 kJ/mol</text>
+  <path class="arr" d="M327.7 245 V293"/>
+  <line class="guide" x1="230.4" y1="245" x2="333.2" y2="245"/>
+  <text class="ar" x="322.1" y="258.8" text-anchor="end">ΔH =</text><text class="ar" x="322.1" y="272.8" text-anchor="end">−40 kJ/mol</text>
+  <text class="lA" x="63.6" y="237">reactants</text>
+  <text class="lA" x="330.4" y="311" text-anchor="end">products</text>
+  <text class="lA" x="197" y="87" text-anchor="middle">transition state</text>
+  <text class="al" x="197" y="338" text-anchor="middle">Reaction progress →</text>
+  <text class="al" x="15" y="195" text-anchor="middle" transform="rotate(-90 15 195)">Potential energy</text>
+  <text class="sub" x="20" y="364">Solid line: uncatalysed. Dashed line: catalysed.</text>
+  <text class="sub" x="20" y="379">Ea (reverse) = 120 kJ/mol + 40 kJ/mol = 160 kJ/mol.</text>
+</svg>

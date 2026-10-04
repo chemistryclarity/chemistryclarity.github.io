@@ -1,0 +1,39 @@
+# Flashcards: Reaction Rates and Rate Laws
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Reaction Rates and Rate Laws: Flashcards'
+description: 'Revise reaction rates, factors affecting rate, rate laws, orders, units of k and half-life.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: rr-01
+    front: 'What is the rate of a reaction?'
+    back: 'The change in concentration of a reactant or product per unit time, usually in M/s.'
+  - id: rr-02
+    front: 'Name four factors that increase the rate of a reaction.'
+    back: 'Higher concentration (or pressure), higher temperature, larger surface area, a catalyst.'
+  - id: rr-03
+    front: 'In rate = k[A]²[B], what are the orders?'
+    back: 'Second order in A, first order in B, third order overall.'
+  - id: rr-04
+    front: 'How are reaction orders found?'
+    back: 'By experiment (e.g. the method of initial rates), not from the balanced equation.'
+  - id: rr-05
+    front: 'A reaction is second order in A. [A] is doubled. What happens to the rate?'
+    back: 'It is multiplied by 2² = 4.'
+  - id: rr-06
+    front: 'Units of k for a first-order reaction?'
+    back: 's⁻¹'
+  - id: rr-07
+    front: 'Units of k for a second-order reaction?'
+    back: 'M⁻¹ s⁻¹ (because M s⁻¹ ÷ M² = M⁻¹ s⁻¹)'
+  - id: rr-08
+    front: 'Half-life of a first-order reaction?'
+    back: '$t_{1/2} = \dfrac{0.693}{k}$, independent of the starting concentration.'
+  - id: rr-09
+    front: 'What fraction of a first-order reactant remains after 3 half-lives?'
+    back: '(½)³ = ⅛ = 12.5%'
+  - id: rr-10
+    front: 'In 2N₂O₅ → 4NO₂ + O₂, how does the rate of NO₂ formation compare with the rate of N₂O₅ loss?'
+    back: 'NO₂ forms twice as fast (4 mol NO₂ per 2 mol N₂O₅).'

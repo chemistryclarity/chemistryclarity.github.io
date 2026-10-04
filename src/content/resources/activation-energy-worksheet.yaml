@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/activation-energy-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Activation Energy and Catalysts Worksheet'
+description: '9 questions on activation energy, energy profiles, the Maxwell–Boltzmann distribution, the Arrhenius equation and catalysts. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/activation-energy-worksheet.pdf'
+answerKey: '/downloads/activation-energy-worksheet-answers.pdf'
+preview: '/previews/activation-energy-worksheet.png'
+status: review
