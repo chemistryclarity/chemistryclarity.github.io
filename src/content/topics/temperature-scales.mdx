@@ -1,0 +1,226 @@
+---
+title: "Temperature Scales: Celsius, Fahrenheit and Kelvin"
+question: "How do you convert between Celsius, Fahrenheit and Kelvin?"
+description: "Convert between °C, °F and K step by step, see why −40 °C equals −40 °F, and learn why chemistry uses the kelvin scale."
+area: foundations
+level: beginner
+order: 10
+prerequisites: []
+related: [gas-laws]
+flashcards: temperature-scales
+quiz: temperature-scales
+resources: [temperature-scales-worksheet]
+references: [bipm-si-brochure-9, brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  K = °C + 273.15 (exact, by definition of the kelvin); °F = (9/5)°C + 32 (exact).
+  Every conversion checked by computer. Units shown on every quantity in every step.
+  REVIEW: body temperature "about 37 °C (98.6 °F)" is a conventional average; real values vary.
+*/}
+
+## What is it?
+
+Temperature measures how hot or cold something is: in particle terms, how fast its particles are moving on average. Three scales are in common use:
+
+- **Celsius (°C):** used in most of the world and in the laboratory. Water freezes at 0 °C and boils at 100 °C (at 1 atm).
+- **Fahrenheit (°F):** used for everyday temperatures in the United States. Water freezes at 32 °F and boils at 212 °F.
+- **Kelvin (K):** the SI unit of temperature, used in chemistry and physics calculations. It starts at **absolute zero** (0 K), the lowest possible temperature.
+
+| | °C | °F | K |
+|---|---|---|---|
+| Absolute zero | −273.15 | −459.67 | 0 |
+| **Celsius equals Fahrenheit** | **−40** | **−40** | 233.15 |
+| Water freezes | 0 | 32 | 273.15 |
+| Body temperature (about) | 37 | 98.6 | 310.15 |
+| Water boils (1 atm) | 100 | 212 | 373.15 |
+
+<KeyIdea>
+$$
+\begin{aligned}
+T_\text{F} &= \tfrac{9}{5}\,T_\text{C} + 32 \\[4pt]
+T_\text{C} &= \tfrac{5}{9}\,(T_\text{F} - 32) \\[4pt]
+T_\text{K} &= T_\text{C} + 273.15
+\end{aligned}
+$$
+
+The Celsius and Fahrenheit scales give the **same number at −40**: −40 °C = −40 °F.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Chemistry needs kelvin.** The gas laws, reaction rates and thermodynamics all use absolute temperature. Using °C in [the gas laws](/chemistry/gas-laws/) gives wrong answers.
+- **Data comes in different units.** Recipes, weather reports and older US data often use °F, so you need to convert reliably.
+- **Checking answers.** Knowing a few reference points (0 °C = 32 °F, 100 °C = 212 °F) lets you spot a wrong conversion at once.
+
+## How does it work?
+
+### 1. Why the factor 9/5 and the 32?
+
+Between freezing and boiling water there are **100 Celsius degrees** (0 to 100) but **180 Fahrenheit degrees** (32 to 212). So one Celsius degree is larger:
+
+$$
+\frac{180\ °\text{F}}{100\ °\text{C}} = \frac{9\ °\text{F}}{5\ °\text{C}} = 1.8\ \frac{°\text{F}}{°\text{C}}
+$$
+
+The **+32** is there because the Fahrenheit scale puts the freezing point of water at 32, not 0.
+
+### 2. Celsius to Fahrenheit
+
+Multiply by 9/5 (1.8), **then** add 32:
+
+$$
+T_\text{F} = \left(\frac{9\ °\text{F}}{5\ °\text{C}}\right) T_\text{C} + 32\ °\text{F}
+$$
+
+### 3. Fahrenheit to Celsius
+
+Do the reverse, in reverse order: subtract 32 **first**, then multiply by 5/9:
+
+$$
+T_\text{C} = \left(\frac{5\ °\text{C}}{9\ °\text{F}}\right) (T_\text{F} - 32\ °\text{F})
+$$
+
+### 4. Kelvin
+
+A kelvin is the **same size** as a Celsius degree; the scale is just shifted so that zero is absolute zero:
+
+$$
+\begin{aligned}
+T_\text{K} &= T_\text{C} + 273.15 \\[4pt]
+T_\text{C} &= T_\text{K} - 273.15
+\end{aligned}
+$$
+
+To go between °F and K, go through °C.
+
+### 5. Where Celsius and Fahrenheit meet
+
+Is there a temperature with the same number on both scales? Call that number $x$ and put it into the conversion formula for both $T_\text{C}$ and $T_\text{F}$:
+
+$$
+\begin{aligned}
+x &= \tfrac{9}{5}x + 32 \\[2pt]
+x - \tfrac{9}{5}x &= 32 \\[2pt]
+-\tfrac{4}{5}x &= 32 \\[2pt]
+x &= -40
+\end{aligned}
+$$
+
+So **−40 °C = −40 °F**. On the graph below, this is where the conversion line crosses the line "°F = °C". Above −40, the Fahrenheit number is always larger; below −40, the Celsius number is larger.
+
+### 6. Temperature changes
+
+A temperature **change** has no offset (the 32 and 273.15 cancel out):
+
+- a change of 1 °C = a change of **1 K** = a change of **1.8 °F**
+- e.g. warming by 10 °C is warming by 10 K, or by 18 °F
+
+<Analogy>
+Think of two rulers, one marked in centimetres and one in inches, but with their zeros at different places. To convert, you must allow for both the **different size of the marks** (the 9/5) and the **different starting points** (the 32). The kelvin "ruler" has marks the same size as Celsius, but its zero starts 273.15 marks lower.
+</Analogy>
+
+<MorePrecisely>
+Since 2019 the kelvin has been defined by fixing the value of the Boltzmann constant; the Celsius scale is defined from it by $T_\text{C} = T_\text{K} - 273.15$, so 273.15 is exact. Under this definition, water at 1 atm freezes at almost exactly 0 °C and boils at about 99.97 °C, not exactly 100 °C. For school chemistry, 0 °C and 100 °C are used.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/temperature-scales/fahrenheit-celsius.svg" alt="Graph of temperature in degrees Fahrenheit against temperature in degrees Celsius from −80 to 120 °C. The conversion line °F = (9/5)°C + 32 is a straight line passing through 0 °C = 32 °F (water freezes) and 100 °C = 212 °F (water boils). A dashed line shows °F = °C. The two lines cross at −40 °C = −40 °F." caption="The conversion is a straight line; it crosses the line °F = °C at −40." width={360} height={470} />
+
+## Worked example
+
+<Example title="Celsius to Fahrenheit">
+**Question:** Room temperature is 25 °C. What is this in °F?
+
+1. Multiply by 9/5, then add 32:
+
+   $$
+   \begin{aligned}
+   T_\text{F} &= \left(\frac{9\ °\text{F}}{5\ °\text{C}}\right)(25\ °\text{C}) \\
+   &\quad + 32\ °\text{F} \\[4pt]
+   &= 45\ °\text{F} + 32\ °\text{F} \\[4pt]
+   &= 77\ °\text{F}
+   \end{aligned}
+   $$
+
+2. The units of °C cancel, leaving °F. Room temperature is $\textbf{77 °F}$.
+</Example>
+
+<Example title="Fahrenheit to Celsius">
+**Question:** A normal body temperature is 98.6 °F. What is this in °C?
+
+1. Subtract 32 first, then multiply by 5/9:
+
+   $$
+   \begin{aligned}
+   T_\text{C} &= \left(\frac{5\ °\text{C}}{9\ °\text{F}}\right) \\
+   &\quad \times (98.6\ °\text{F} - 32\ °\text{F}) \\[4pt]
+   &= \left(\frac{5\ °\text{C}}{9\ °\text{F}}\right)(66.6\ °\text{F}) \\[4pt]
+   &= 37.0\ °\text{C}
+   \end{aligned}
+   $$
+
+2. The units of °F cancel, leaving °C. Body temperature is $\textbf{37.0 °C}$.
+</Example>
+
+<Example title="Fahrenheit to kelvin">
+**Question:** A lab is at 68 °F. What is this in kelvin?
+
+1. Convert to °C first:
+
+   $$
+   \begin{aligned}
+   T_\text{C} &= \left(\frac{5\ °\text{C}}{9\ °\text{F}}\right) \\
+   &\quad \times (68\ °\text{F} - 32\ °\text{F}) \\[4pt]
+   &= 20\ °\text{C}
+   \end{aligned}
+   $$
+
+2. Then convert to kelvin:
+
+   $$
+   \begin{aligned}
+   T_\text{K} &= 20\ °\text{C} + 273.15 \\[4pt]
+   &= 293.15\ \text{K}
+   \end{aligned}
+   $$
+
+3. The lab is at $\textbf{293 K}$ (293.15 K).
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Adding 32 before multiplying">
+For °C to °F, multiply **first**, then add 32 °F. For 25 °C: (9 °F/5 °C)(25 °C) + 32 °F = **77 °F**. Adding first would give (9/5)(25 + 32) = 102.6, which is wrong (and mixes °C with °F).
+</CommonMistake>
+
+<CommonMistake title="Forgetting to subtract 32 first">
+For °F to °C, subtract 32 °F **before** multiplying by 5/9. For 98.6 °F: (5 °C/9 °F)(98.6 °F − 32 °F) = **37.0 °C**. Multiplying first would give (5/9)(98.6) − 32 = 22.8, which is wrong.
+</CommonMistake>
+
+<CommonMistake title="Writing °K">
+Kelvin temperatures have **no degree sign**: write 298 K, not 298 °K. Also, kelvin temperatures are never negative.
+</CommonMistake>
+
+<CommonMistake title="Converting a temperature change like a temperature">
+A rise of 10 °C is a rise of (1.8 °F/°C)(10 °C) = **18 °F**, not 50 °F. Use only the factor 1.8 °F/°C for changes; don't add 32 °F.
+</CommonMistake>
+
+<NotationNote>
+- $T_\text{C}$, $T_\text{F}$ and $T_\text{K}$ are the same temperature expressed on different scales.
+- Some books write $T(°\text{F}) = 1.8\,T(°\text{C}) + 32$; 1.8 and 9/5 are the same number.
+- The unit is "kelvin" (lower-case k), with the symbol K: "300 kelvin", not "300 degrees Kelvin".
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- °C → °F: multiply by 9/5, then add 32. °F → °C: subtract 32, then multiply by 5/9.
+- K = °C + 273.15; no degree sign on K; kelvin is never negative.
+- **−40 °C = −40 °F**: the only temperature where the two numbers agree.
+- Checkpoints: 0 °C = 32 °F = 273.15 K; 100 °C = 212 °F = 373.15 K.
+</RememberThis>

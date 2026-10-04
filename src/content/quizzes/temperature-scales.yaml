@@ -1,0 +1,79 @@
+# Quiz: Temperature Scales
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All conversions and distractors checked by computer.
+title: 'Temperature Scales: Quiz'
+description: 'Seven questions on converting between °C, °F and K, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: ts-q1
+    prompt: 'What is 100 °C in °F?'
+    choices:
+      - '180 °F'
+      - '212 °F'
+      - '132 °F'
+      - '373 °F'
+    answer: '212 °F'
+    explanation: '(9 °F/5 °C)(100 °C) + 32 °F = 180 °F + 32 °F = 212 °F, the boiling point of water at 1 atm.'
+    difficulty: easy
+  - id: ts-q2
+    prompt: 'What is 50 °F in °C?'
+    choices:
+      - '10.0 °C'
+      - '27.8 °C'
+      - '45.6 °C'
+      - '−4.2 °C'
+    answer: '10.0 °C'
+    explanation: '(5 °C/9 °F)(50 °F − 32 °F) = (5 °C/9 °F)(18 °F) = 10.0 °C. Multiplying by 5/9 before subtracting 32 gives the wrong value −4.2.'
+    difficulty: easy
+  - id: ts-q3
+    prompt: 'At what temperature do the Celsius and Fahrenheit scales show the same number?'
+    choices:
+      - '0'
+      - '−40'
+      - '32'
+      - '−273.15'
+    answer: '−40'
+    explanation: 'Setting x = (9/5)x + 32 gives −(4/5)x = 32, so x = −40. Check: (9 °F/5 °C)(−40 °C) + 32 °F = −72 °F + 32 °F = −40 °F.'
+    difficulty: medium
+  - id: ts-q4
+    prompt: 'What is 25 °C in kelvin?'
+    choices:
+      - '−248.15 K'
+      - '298.15 K'
+      - '77 K'
+      - '273.15 K'
+    answer: '298.15 K'
+    explanation: '25 °C + 273.15 = 298.15 K.'
+    difficulty: easy
+  - id: ts-q5
+    prompt: 'Liquid nitrogen boils at 77 K. What is this in °C?'
+    choices:
+      - '350.15 °C'
+      - '−196.15 °C'
+      - '−77 °C'
+      - '25 °C'
+    answer: '−196.15 °C'
+    explanation: '77 K − 273.15 = −196.15 °C (about −196 °C).'
+    difficulty: medium
+  - id: ts-q6
+    prompt: 'The temperature of a solution rises by 20 °C. By how much does it rise in °F?'
+    choices:
+      - '20 °F'
+      - '36 °F'
+      - '68 °F'
+      - '52 °F'
+    answer: '36 °F'
+    explanation: 'For a change, use only the size factor: (1.8 °F/°C)(20 °C) = 36 °F. The 32 is not added, because it cancels when you subtract two temperatures.'
+    difficulty: hard
+  - id: ts-q7
+    prompt: 'Which statement about the kelvin scale is correct?'
+    choices:
+      - 'It is written with a degree sign, °K'
+      - 'Its unit is larger than a Celsius degree'
+      - 'It starts at absolute zero, so it has no negative values'
+      - 'Water freezes at 0 K'
+    answer: 'It starts at absolute zero, so it has no negative values'
+    explanation: 'A kelvin is the same size as a Celsius degree, is written without a degree sign, and water freezes at 273.15 K.'
+    difficulty: medium

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 470" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .al { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .grid { stroke: #ece9e1; stroke-width: 1; }
+    .zero { stroke: #c9c5b8; stroke-width: 1.2; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .line { stroke: #0f766e; stroke-width: 2.8; fill: none; }
+    .eqline { stroke: #7c3aed; stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+    .lt { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .le { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .cross { fill: #b45309; }
+    .ref { fill: #14213d; }
+    .ct { fill: #b45309; font-size: 11.5px; font-weight: 750; }
+    .rt { fill: #14213d; font-size: 10.5px; }
+    .halo { stroke: #ffffff; stroke-width: 4; paint-order: stroke; stroke-linejoin: round; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .al, .rt { fill: #e9edf5; }
+      .sub, .num { fill: #9aa5ba; }
+      .grid { stroke: #27324a; } .zero { stroke: #3a4763; } .axis { stroke: #e9edf5; }
+      .line { stroke: #2dd4bf; } .lt { fill: #2dd4bf; }
+      .eqline { stroke: #c4b5fd; } .le { fill: #c4b5fd; }
+      .cross, .ct { fill: #fbbf24; } .ref { fill: #e9edf5; }
+      .halo { stroke: #151e31; }
+    }
+  </style>
+  <rect class="bg" width="360" height="470" rx="14"/>
+  <text class="t" x="20" y="28">Fahrenheit against Celsius</text>
+  <text class="sub" x="20" y="45">°F = (9/5)°C + 32 is a straight line; it meets °F = °C at −40.</text>
+  <line class="grid" x1="62" y1="70" x2="62" y2="370"/><text class="num" x="62" y="384" text-anchor="middle"></text><line class="grid" x1="117.6" y1="70" x2="117.6" y2="370"/><text class="num" x="117.6" y="384" text-anchor="middle">−40</text><line class="grid" x1="173.2" y1="70" x2="173.2" y2="370"/><text class="num" x="173.2" y="384" text-anchor="middle">0</text><line class="grid" x1="228.8" y1="70" x2="228.8" y2="370"/><text class="num" x="228.8" y="384" text-anchor="middle">40</text><line class="grid" x1="284.4" y1="70" x2="284.4" y2="370"/><text class="num" x="284.4" y="384" text-anchor="middle">80</text><line class="grid" x1="340" y1="70" x2="340" y2="370"/><text class="num" x="340" y="384" text-anchor="middle">120</text><line class="grid" x1="62" y1="370" x2="340" y2="370"/><text class="num" x="56" y="373.5" text-anchor="end">−100</text><line class="grid" x1="62" y1="336.7" x2="340" y2="336.7"/><text class="num" x="56" y="340.2" text-anchor="end">−60</text><line class="grid" x1="62" y1="303.3" x2="340" y2="303.3"/><text class="num" x="56" y="306.8" text-anchor="end">−20</text><line class="grid" x1="62" y1="270" x2="340" y2="270"/><text class="num" x="56" y="273.5" text-anchor="end">20</text><line class="grid" x1="62" y1="236.7" x2="340" y2="236.7"/><text class="num" x="56" y="240.2" text-anchor="end">60</text><line class="grid" x1="62" y1="203.3" x2="340" y2="203.3"/><text class="num" x="56" y="206.8" text-anchor="end">100</text><line class="grid" x1="62" y1="170" x2="340" y2="170"/><text class="num" x="56" y="173.5" text-anchor="end">140</text><line class="grid" x1="62" y1="136.7" x2="340" y2="136.7"/><text class="num" x="56" y="140.2" text-anchor="end">180</text><line class="grid" x1="62" y1="103.3" x2="340" y2="103.3"/><text class="num" x="56" y="106.8" text-anchor="end">220</text><line class="grid" x1="62" y1="70" x2="340" y2="70"/><text class="num" x="56" y="73.5" text-anchor="end">260</text><line class="zero" x1="173.2" y1="70" x2="173.2" y2="370"/><line class="zero" x1="62" y1="286.7" x2="340" y2="286.7"/>
+  <path class="eqline" d="M62 353.3 L340 186.7"/>
+  <path class="line" d="M62 380 L340 80"/>
+  <path class="axis" d="M62 70 V370 H340"/>
+  <circle class="ref" cx="173.2" cy="260" r="4.5"/><circle class="ref" cx="312.2" cy="110" r="4.5"/><circle class="cross" cx="117.6" cy="320" r="4.5"/>
+  <text class="rt halo" x="165.2" y="240" text-anchor="end">0 °C = 32 °F</text><text class="rt halo" x="165.2" y="253" text-anchor="end">(water freezes)</text>
+  <text class="rt halo" x="304.2" y="126" text-anchor="end">100 °C = 212 °F (water boils)</text>
+  <text class="ct halo" x="126.6" y="336">−40 °C = −40 °F</text>
+  <text class="lt halo" x="67.6" y="161.7">°F = (9/5)°C + 32</text>
+  <text class="le halo" x="290" y="243.3">°F = °C</text>
+  <text class="al" x="201" y="402" text-anchor="middle">Temperature (°C)</text>
+  <text class="al" x="16" y="220" text-anchor="middle" transform="rotate(-90 16 220)">Temperature (°F)</text>
+  <text class="sub" x="20" y="436">Water points at 1 atm. The dashed line shows where</text><text class="sub" x="20" y="451">the °F and °C numbers would be equal.</text>
+</svg>

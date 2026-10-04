@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/temperature-scales-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Temperature Scales Worksheet'
+description: '9 questions on converting between °C, °F and K, temperature changes, and where the scales meet. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/temperature-scales-worksheet.pdf'
+answerKey: '/downloads/temperature-scales-worksheet-answers.pdf'
+preview: '/previews/temperature-scales-worksheet.png'
+status: review
