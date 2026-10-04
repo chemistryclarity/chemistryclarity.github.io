@@ -1,0 +1,79 @@
+# Quiz: Oxidation Numbers and Redox Reactions
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Equations checked for atom and charge balance.
+title: 'Oxidation Numbers and Redox Reactions: Quiz'
+description: 'Seven questions on oxidation numbers, oxidizing and reducing agents and balancing redox equations, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: rx-q1
+    prompt: 'What is the oxidation number of N in HNO₃?'
+    choices:
+      - '+3'
+      - '+5'
+      - '−3'
+      - '+6'
+    answer: '+5'
+    explanation: '(+1) + x + 3(−2) = 0, so x = +5.'
+    difficulty: easy
+  - id: rx-q2
+    prompt: 'In Zn + Cu²⁺ → Zn²⁺ + Cu, which species is the oxidizing agent?'
+    choices:
+      - 'Zn'
+      - 'Cu²⁺'
+      - 'Zn²⁺'
+      - 'Cu'
+    answer: 'Cu²⁺'
+    explanation: 'Cu²⁺ gains electrons (+2 → 0), so it is reduced and acts as the oxidizing agent. Zn is the reducing agent.'
+    difficulty: easy
+  - id: rx-q3
+    prompt: 'What is the oxidation number of Cr in Cr₂O₇²⁻?'
+    choices:
+      - '+7'
+      - '+6'
+      - '+12'
+      - '+3'
+    answer: '+6'
+    explanation: '2x + 7(−2) = −2, so 2x = +12 and x = +6. The answer +12 is the total for both Cr atoms.'
+    difficulty: medium
+  - id: rx-q4
+    prompt: 'Which reaction is NOT a redox reaction?'
+    choices:
+      - '2Na + Cl₂ → 2NaCl'
+      - 'Zn + 2HCl → ZnCl₂ + H₂'
+      - 'NaOH + HCl → NaCl + H₂O'
+      - '2H₂O₂ → 2H₂O + O₂'
+    answer: 'NaOH + HCl → NaCl + H₂O'
+    explanation: 'In neutralization no oxidation number changes (Na +1, O −2, H +1, Cl −1 throughout). The others all transfer electrons.'
+    difficulty: medium
+  - id: rx-q5
+    prompt: 'Which is the correctly balanced equation?'
+    choices:
+      - 'Fe³⁺ + Cu → Fe²⁺ + Cu²⁺'
+      - '2Fe³⁺ + Cu → 2Fe²⁺ + Cu²⁺'
+      - 'Fe³⁺ + 2Cu → Fe²⁺ + 2Cu²⁺'
+      - '2Fe³⁺ + 2Cu → 2Fe²⁺ + Cu²⁺'
+    answer: '2Fe³⁺ + Cu → 2Fe²⁺ + Cu²⁺'
+    explanation: 'Cu loses 2 electrons and each Fe³⁺ gains 1, so 2 Fe³⁺ are needed. Charge: +6 on the left, +4 + 2 = +6 on the right.'
+    difficulty: hard
+  - id: rx-q6
+    prompt: 'In MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 4H₂O + 5Fe³⁺, how many electrons are transferred?'
+    choices:
+      - '1'
+      - '5'
+      - '7'
+      - '8'
+    answer: '5'
+    explanation: 'Mn goes from +7 to +2 (gains 5 electrons); each of the 5 Fe²⁺ loses 1 electron.'
+    difficulty: medium
+  - id: rx-q7
+    prompt: 'What is the oxidation number of O in H₂O₂?'
+    choices:
+      - '−2'
+      - '−1'
+      - '0'
+      - '+1'
+    answer: '−1'
+    explanation: 'H₂O₂ is a peroxide: 2(+1) + 2x = 0, so x = −1.'
+    difficulty: easy

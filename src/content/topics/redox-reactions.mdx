@@ -1,0 +1,161 @@
+---
+title: Oxidation Numbers and Redox Reactions
+question: "How do you assign oxidation numbers and balance redox equations?"
+description: "Oxidation and reduction as electron transfer, rules for oxidation numbers, oxidizing and reducing agents, half-equations and balancing redox equations in acid."
+area: redox-and-electrochemistry
+level: intermediate
+order: 10
+prerequisites: [balancing-equations, ionic-and-covalent-bonds]
+related: [galvanic-cells, balancing-equations]
+flashcards: redox-reactions
+quiz: redox-reactions
+resources: [redox-reactions-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Every equation checked by computer for both atom balance and charge balance.
+  Oxidation numbers are written with the sign first (+2, −1) to distinguish them from ionic charges (2+, 1−).
+*/}
+
+## What is it?
+
+A **redox reaction** is one in which **electrons are transferred** from one substance to another. It always has two halves:
+
+- **Oxidation:** a loss of electrons. The oxidation number **increases**.
+- **Reduction:** a gain of electrons. The oxidation number **decreases**.
+
+$$
+\small \ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}
+$$
+
+Zinc loses 2 electrons (oxidized); each $\ce{Cu^2+}$ ion gains 2 electrons (reduced). Oxidation and reduction always happen **together**: electrons lost by one substance are gained by another.
+
+<KeyIdea>
+**OIL RIG**: **O**xidation **I**s **L**oss, **R**eduction **I**s **G**ain (of electrons). The substance that is oxidized is the **reducing agent**; the substance that is reduced is the **oxidizing agent**.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Energy.** Batteries, fuel cells, combustion and respiration are all redox reactions.
+- **Materials.** Extracting metals from ores, rusting and corrosion protection depend on redox chemistry.
+- **Analysis.** Redox titrations (for example with potassium permanganate) measure iron, vitamin C and many other substances.
+
+## How does it work?
+
+### 1. Rules for oxidation numbers
+
+An **oxidation number** is the charge an atom would have if all its bonds were ionic. Apply these rules in order:
+
+1. An **uncombined element** has oxidation number **0** (Zn, $\ce{O2}$, $\ce{Cl2}$).
+2. A **monatomic ion** has an oxidation number equal to its charge ($\ce{Na+}$: +1; $\ce{Cl-}$: −1).
+3. **Fluorine** is always −1. **Group 1** metals are +1 and **group 2** metals are +2 in compounds.
+4. **Hydrogen** is usually +1 (but −1 in metal hydrides such as NaH).
+5. **Oxygen** is usually −2 (but −1 in peroxides such as $\ce{H2O2}$).
+6. The oxidation numbers add up to **0** in a neutral compound and to the **charge** in an ion.
+
+### 2. Half-equations
+
+Each half-reaction can be written separately, with electrons shown:
+
+- Oxidation: $\ce{Zn -> Zn^2+ + 2e-}$
+- Reduction: $\ce{Cu^2+ + 2e- -> Cu}$
+
+Electrons appear on the **product** side of an oxidation and the **reactant** side of a reduction.
+
+### 3. Balancing redox equations in acidic solution
+
+1. Split the reaction into two **half-equations**.
+2. Balance atoms other than O and H.
+3. Balance **O** by adding $\ce{H2O}$.
+4. Balance **H** by adding $\ce{H+}$.
+5. Balance **charge** by adding electrons.
+6. Multiply the half-equations so the **electrons lost = electrons gained**, then add them and cancel.
+7. Check that **atoms and charge** both balance.
+
+<Analogy>
+A redox reaction is like a sale: one person can only sell (give) something if another buys (takes) it. The seller is the reducing agent, giving away electrons; the buyer is the oxidizing agent, taking them. The number of items sold must equal the number bought.
+</Analogy>
+
+<MorePrecisely>
+Oxidation numbers are a bookkeeping tool, not real charges: in covalent molecules the electrons are shared, not transferred. Some reactions are **disproportionations**, in which the same element is both oxidized and reduced; for example, in $\ce{2H2O2 -> 2H2O + O2}$, oxygen goes from −1 to −2 and to 0. In basic solution, balance as in acid and then add $\ce{OH-}$ to both sides to neutralize the $\ce{H+}$.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/redox/zinc-copper-oxidation-numbers.svg" alt="Two oxidation-number scales from −1 to +3. On the zinc scale, zinc metal at 0 rises to Zn2+ at +2: oxidation. On the copper scale, Cu2+ at +2 falls to copper metal at 0: reduction. An arrow shows 2 electrons passing from zinc to copper. Zn → Zn2+ + 2e− is the oxidation; Cu2+ + 2e− → Cu is the reduction. Zinc is the reducing agent and Cu2+ the oxidizing agent." caption="Oxidation raises the oxidation number; reduction lowers it." width={360} height={400} />
+
+## Worked example
+
+<Example title="Assigning oxidation numbers">
+**Question:** Find the oxidation number of (a) S in $\ce{H2SO4}$ (b) Mn in $\ce{MnO4-}$.
+
+1. (a) H is +1 and O is −2; the compound is neutral: $2(+1) + x + 4(-2) = 0$, so $x =$ **+6**.
+2. (b) O is −2; the ion has charge −1: $x + 4(-2) = -1$, so $x =$ **+7**.
+</Example>
+
+<Example title="Identifying the agents">
+**Question:** In $\ce{2Al + 3Cu^2+ -> 2Al^3+ + 3Cu}$, which species is oxidized and which is the oxidizing agent?
+
+1. Al: 0 → +3. The oxidation number increases, so **Al is oxidized** (it is the reducing agent).
+2. Cu: +2 → 0. It decreases, so $\ce{Cu^2+}$ is reduced: **$\ce{Cu^2+}$ is the oxidizing agent**.
+3. Check: 2 Al lose 2 × 3 = 6 electrons; 3 $\ce{Cu^2+}$ gain 3 × 2 = 6 electrons. ✓
+</Example>
+
+<Example title="Balancing in acidic solution">
+**Question:** Balance $\ce{MnO4- + Fe^2+ -> Mn^2+ + Fe^3+}$ in acid.
+
+1. Oxidation: $\ce{Fe^2+ -> Fe^3+ + e-}$
+2. Reduction: $\ce{MnO4- -> Mn^2+}$. Add 4 $\ce{H2O}$ for oxygen, then 8 $\ce{H+}$ for hydrogen, then 5 electrons for charge:
+
+   $$
+   \begin{aligned}
+   &\ce{MnO4- + 8H+ + 5e-} \\[2pt]
+   &\quad \ce{-> Mn^2+ + 4H2O}
+   \end{aligned}
+   $$
+
+3. Multiply the oxidation by 5 so that 5 electrons are lost and 5 gained, then add:
+
+   $$
+   \begin{aligned}
+   &\ce{MnO4- + 8H+ + 5Fe^2+} \\[2pt]
+   &\quad \ce{-> Mn^2+ + 4H2O} \\[2pt]
+   &\quad\quad + \ce{5Fe^3+}
+   \end{aligned}
+   $$
+
+4. Check charge: left −1 + 8 + 10 = +17; right +2 + 15 = +17. ✓
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Mixing up oxidation and reduction">
+Reduction is a **gain** of electrons, even though the oxidation number goes **down**. Use OIL RIG, and remember that the oxidizing agent is itself reduced.
+</CommonMistake>
+
+<CommonMistake title="Balancing atoms but not charge">
+$\ce{Fe^3+ + Cu -> Fe^2+ + Cu^2+}$ has balanced atoms but not charge (+3 on the left, +4 on the right). The correct equation is $\ce{2Fe^3+ + Cu -> 2Fe^2+ + Cu^2+}$.
+</CommonMistake>
+
+<CommonMistake title="Assuming oxygen is always −2">
+In peroxides such as $\ce{H2O2}$, oxygen is −1; in $\ce{OF2}$ it is +2, because fluorine always takes −1.
+</CommonMistake>
+
+<NotationNote>
+- Oxidation numbers are written sign first (+2); ionic charges are written number first (2+).
+- Some books use Roman numerals for oxidation numbers in names: iron(III) chloride is $\ce{FeCl3}$, with Fe at +3.
+- "e⁻" stands for an electron.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- OIL RIG: oxidation is loss of electrons (oxidation number up); reduction is gain (oxidation number down).
+- Reducing agent = oxidized; oxidizing agent = reduced.
+- Oxidation numbers: element 0; ion = charge; F −1; H +1; O −2; sum = overall charge.
+- Balance in acid: atoms, then O with H₂O, H with H⁺, charge with e⁻; equalize electrons; check charge.
+</RememberThis>

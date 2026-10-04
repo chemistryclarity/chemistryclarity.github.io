@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/redox-reactions-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Oxidation Numbers and Redox Reactions Worksheet'
+description: '9 questions on oxidation numbers, oxidizing and reducing agents, half-equations, balancing redox equations in acid and a redox titration. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/redox-reactions-worksheet.pdf'
+answerKey: '/downloads/redox-reactions-worksheet-answers.pdf'
+preview: '/previews/redox-reactions-worksheet.png'
+status: review

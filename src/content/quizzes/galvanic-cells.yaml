@@ -1,0 +1,79 @@
+# Quiz: Galvanic Cells and Electrode Potentials
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Galvanic Cells and Electrode Potentials: Quiz'
+description: 'Seven questions on galvanic cells, standard potentials, E°cell, ΔG° and electrolysis, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: gc-q1
+    prompt: 'In a galvanic cell, where does oxidation take place?'
+    choices:
+      - 'At the cathode'
+      - 'At the anode'
+      - 'In the salt bridge'
+      - 'In the voltmeter'
+    answer: 'At the anode'
+    explanation: 'Oxidation always occurs at the anode and reduction at the cathode.'
+    difficulty: easy
+  - id: gc-q2
+    prompt: 'Using E°(Ag⁺/Ag) = +0.80 V and E°(Zn²⁺/Zn) = −0.76 V, what is E°cell for a zinc–silver cell?'
+    choices:
+      - '+0.04 V'
+      - '+1.56 V'
+      - '+2.36 V'
+      - '−1.56 V'
+    answer: '+1.56 V'
+    explanation: 'Silver is reduced (cathode): E°cell = +0.80 V − (−0.76 V) = +1.56 V. Doubling the silver value to 1.60 V would be wrong; the answer 2.36 V does that.'
+    difficulty: medium
+  - id: gc-q3
+    prompt: 'Which species is the strongest oxidizing agent: Ag⁺ (+0.80 V), Cu²⁺ (+0.34 V), Zn²⁺ (−0.76 V) or Mg²⁺ (−2.37 V)?'
+    choices:
+      - 'Ag⁺'
+      - 'Cu²⁺'
+      - 'Zn²⁺'
+      - 'Mg²⁺'
+    answer: 'Ag⁺'
+    explanation: 'The most positive reduction potential means the species is most easily reduced, so it is the strongest oxidizing agent.'
+    difficulty: medium
+  - id: gc-q4
+    prompt: 'Will copper metal react with 1 M Zn²⁺ solution? (Cu²⁺/Cu +0.34 V, Zn²⁺/Zn −0.76 V)'
+    choices:
+      - 'Yes, E°cell = +1.10 V'
+      - 'No, E°cell = −1.10 V'
+      - 'Yes, E°cell = −0.42 V'
+      - 'No, E°cell = 0 V'
+    answer: 'No, E°cell = −1.10 V'
+    explanation: 'For Cu + Zn²⁺ → Cu²⁺ + Zn, Zn²⁺ would be the cathode: E°cell = −0.76 V − (+0.34 V) = −1.10 V. Negative means not spontaneous.'
+    difficulty: hard
+  - id: gc-q5
+    prompt: 'What is ΔG° for the Daniell cell (E°cell = +1.10 V, n = 2)?'
+    choices:
+      - '−106 kJ'
+      - '−212 kJ'
+      - '+212 kJ'
+      - '−0.212 kJ'
+    answer: '−212 kJ'
+    explanation: 'ΔG° = −(2 mol)(96 485 C/mol)(1.10 V) = −2.12 × 10⁵ J = −212 kJ (C × V = J). The answer −106 kJ uses n = 1.'
+    difficulty: medium
+  - id: gc-q6
+    prompt: 'What is the purpose of the salt bridge?'
+    choices:
+      - 'To carry electrons between the half-cells'
+      - 'To let ions flow and keep the solutions neutral'
+      - 'To increase the cell voltage'
+      - 'To act as a catalyst'
+    answer: 'To let ions flow and keep the solutions neutral'
+    explanation: 'Electrons travel through the wire; ions move through the salt bridge. Without it, charge would build up and the current would stop.'
+    difficulty: easy
+  - id: gc-q7
+    prompt: 'A current of 2.00 A flows for 30.0 min. How much charge passes?'
+    choices:
+      - '60.0 C'
+      - '3600 C'
+      - '15.0 C'
+      - '1.80 × 10⁵ C'
+    answer: '3600 C'
+    explanation: 'Q = It = 2.00 C/s × (30.0 min × 60 s/min) = 2.00 C/s × 1800 s = 3600 C. The answer 60.0 C forgets to convert minutes to seconds.'
+    difficulty: medium

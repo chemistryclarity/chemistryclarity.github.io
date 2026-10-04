@@ -1,0 +1,39 @@
+# Flashcards: Galvanic Cells and Electrode Potentials
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Galvanic Cells and Electrode Potentials: Flashcards'
+description: 'Revise galvanic cells, anode and cathode, cell notation, standard potentials, E°cell, ΔG° = −nFE° and electrolysis.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: gc-01
+    front: 'What is a galvanic cell?'
+    back: 'A cell that uses a spontaneous redox reaction to produce electricity.'
+  - id: gc-02
+    front: 'What happens at the anode and the cathode?'
+    back: 'Anode: oxidation. Cathode: reduction. ("An ox, red cat")'
+  - id: gc-03
+    front: 'Which way do electrons flow in the external wire?'
+    back: 'From the anode to the cathode.'
+  - id: gc-04
+    front: 'What does the salt bridge do?'
+    back: 'Lets ions move between the half-cells to keep each solution electrically neutral.'
+  - id: gc-05
+    front: 'Formula for E°cell?'
+    back: '$E°_\text{cell} = E°_\text{cathode} - E°_\text{anode}$ (both as reduction potentials)'
+  - id: gc-06
+    front: 'E°cell for the Daniell cell (Cu²⁺/Cu +0.34 V, Zn²⁺/Zn −0.76 V)?'
+    back: '+0.34 V − (−0.76 V) = +1.10 V'
+  - id: gc-07
+    front: 'Write the cell notation for the Daniell cell.'
+    back: 'Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s)'
+  - id: gc-08
+    front: 'How are ΔG° and E°cell related?'
+    back: '$\Delta G° = -nFE°_\text{cell}$, with F = 96 485 C/mol; positive E° means negative ΔG° (spontaneous).'
+  - id: gc-09
+    front: 'Should E° be multiplied by the coefficients in the equation?'
+    back: 'No. Potentials do not depend on the amount of substance.'
+  - id: gc-10
+    front: 'In electrolysis, how do you find the moles of electrons?'
+    back: '$Q = It$ (charge in C), then $n(e^-) = Q/F$.'

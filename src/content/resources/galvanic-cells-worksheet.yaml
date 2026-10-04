@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/galvanic-cells-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Galvanic Cells and Electrode Potentials Worksheet'
+description: '9 questions on galvanic cells, standard reduction potentials, E°cell, cell notation, ΔG° and electrolysis calculations. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/galvanic-cells-worksheet.pdf'
+answerKey: '/downloads/galvanic-cells-worksheet-answers.pdf'
+preview: '/previews/galvanic-cells-worksheet.png'
+status: review

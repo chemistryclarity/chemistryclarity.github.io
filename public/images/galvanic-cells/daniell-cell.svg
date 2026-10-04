@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .pt { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10.5px; }
+    .axis { stroke: #8a94a6; stroke-width: 1.3; }
+    .tick { stroke: #8a94a6; stroke-width: 1.3; }
+    .dotA { fill: #0f766e; } .dotB { fill: #b45309; }
+    .up { stroke: #0f766e; stroke-width: 2.6; fill: none; marker-end: url(#hdA); } .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .down { stroke: #b45309; stroke-width: 2.6; fill: none; marker-end: url(#hdB); } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    .el { stroke: #7c3aed; stroke-width: 2.2; fill: none; marker-end: url(#hdC); stroke-dasharray: 5 3; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .hdA { fill: #0f766e; } .hdB { fill: #b45309; } .hdC { fill: #7c3aed; } .hd { fill: #14213d; }
+    .beaker { fill: none; stroke: #8a94a6; stroke-width: 1.8; }
+    .solA { fill: #e6eef5; } .solB { fill: #cfe0f7; }
+    .zn { fill: #9aa5ba; stroke: #5b6577; stroke-width: 1.2; } .cu { fill: #c2703d; stroke: #8a4a22; stroke-width: 1.2; }
+    .wire { stroke: #14213d; stroke-width: 2; fill: none; }
+    .meter { fill: #ffffff; stroke: #14213d; stroke-width: 1.8; }
+    .bridge { fill: none; stroke: #c9c5b8; stroke-width: 14; stroke-linejoin: round; }
+    .bridgeIn { fill: none; stroke: #f3f1ea; stroke-width: 10; stroke-linejoin: round; }
+    .ion { fill: #5b6577; font-size: 10px; font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .pt, .lab { fill: #e9edf5; } .sub, .num, .ion { fill: #9aa5ba; }
+      .axis, .tick { stroke: #6b7894; }
+      .dotA, .hdA, .lA { fill: #2dd4bf; } .up { stroke: #2dd4bf; }
+      .dotB, .hdB, .lB { fill: #fbbf24; } .down { stroke: #fbbf24; }
+      .el { stroke: #c4b5fd; } .hdC, .lC { fill: #c4b5fd; } .hd { fill: #e9edf5; }
+      .beaker { stroke: #6b7894; } .solA { fill: #1b2a40; } .solB { fill: #1e3354; }
+      .wire { stroke: #e9edf5; } .meter { fill: #151e31; stroke: #e9edf5; }
+      .bridge { stroke: #3a4763; } .bridgeIn { stroke: #1b263d; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker><marker id="hdA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdA" d="M0 0 10 5 0 10z"/></marker><marker id="hdB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdB" d="M0 0 10 5 0 10z"/></marker><marker id="hdC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdC" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="400" rx="14"/>
+  <text class="t" x="20" y="28">A galvanic cell: the Daniell cell</text>
+  <text class="sub" x="20" y="45">Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s)   E°cell = 1.10 V</text>
+  <path class="wire" d="M92 182 V92 H155"/><path class="wire" d="M205 92 H268 V182"/>
+  <circle class="meter" cx="180" cy="92" r="24"/><text class="pt" x="180" y="96" text-anchor="middle">1.10 V</text>
+  <path class="el" d="M110 74 H150"/><path class="el" d="M212 74 H252"/>
+  <text class="lC" x="180" y="62" text-anchor="middle">electrons flow: Zn → Cu</text>
+  <rect class="solA" x="42" y="210" width="104" height="110"/><rect class="solB" x="214" y="210" width="104" height="110"/>
+  <path class="beaker" d="M40 180 V322 H148 V180"/><path class="beaker" d="M212 180 V322 H320 V180"/>
+  <rect class="zn" x="84" y="180" width="16" height="118"/><rect class="cu" x="260" y="180" width="16" height="118"/>
+  <path class="bridge" d="M124 300 V152 H236 V300"/><path class="bridgeIn" d="M124 300 V152 H236 V300"/>
+  <text class="lab" x="180" y="146" text-anchor="middle">salt bridge (KNO₃)</text>
+  <text class="lA" x="92" y="342" text-anchor="middle">ANODE (−)</text><text class="lA" x="92" y="357" text-anchor="middle">oxidation</text>
+  <text class="lB" x="268" y="342" text-anchor="middle">CATHODE (+)</text><text class="lB" x="268" y="357" text-anchor="middle">reduction</text>
+  <text class="ion" x="48" y="315">Zn²⁺(aq)</text><text class="ion" x="216" y="315">Cu²⁺(aq)</text>
+  <text class="lab" x="20" y="382">Zn → Zn²⁺ + 2e⁻</text><text class="lab" x="340" y="382" text-anchor="end">Cu²⁺ + 2e⁻ → Cu</text>
+</svg>

@@ -1,0 +1,39 @@
+# Flashcards: Oxidation Numbers and Redox Reactions
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Equations checked for atom and charge balance.
+title: 'Oxidation Numbers and Redox Reactions: Flashcards'
+description: 'Revise oxidation and reduction, oxidation-number rules, oxidizing and reducing agents and balancing redox equations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: rx-01
+    front: 'What does OIL RIG stand for?'
+    back: 'Oxidation Is Loss (of electrons), Reduction Is Gain (of electrons).'
+  - id: rx-02
+    front: 'What happens to the oxidation number in oxidation and in reduction?'
+    back: 'Oxidation: it increases. Reduction: it decreases.'
+  - id: rx-03
+    front: 'What is the oxidation number of an uncombined element, e.g. O₂ or Zn?'
+    back: '0'
+  - id: rx-04
+    front: 'Oxidation number of S in H₂SO₄?'
+    back: '+6: 2(+1) + x + 4(−2) = 0'
+  - id: rx-05
+    front: 'Oxidation number of Mn in MnO₄⁻?'
+    back: '+7: x + 4(−2) = −1'
+  - id: rx-06
+    front: 'What is a reducing agent?'
+    back: 'The substance that gives electrons to another; it is itself oxidized.'
+  - id: rx-07
+    front: 'What is an oxidizing agent?'
+    back: 'The substance that takes electrons from another; it is itself reduced.'
+  - id: rx-08
+    front: 'Write the half-equation for zinc being oxidized.'
+    back: '$\ce{Zn -> Zn^2+ + 2e-}$'
+  - id: rx-09
+    front: 'In acid, how do you balance O and H in a half-equation?'
+    back: 'Add H₂O to balance O, then H⁺ to balance H, then electrons to balance charge.'
+  - id: rx-10
+    front: 'What must be checked at the end of balancing a redox equation?'
+    back: 'Both atoms and total charge balance, and electrons lost = electrons gained.'

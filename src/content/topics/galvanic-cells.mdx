@@ -1,0 +1,172 @@
+---
+title: Galvanic Cells and Electrode Potentials
+question: "How does a galvanic cell work and how do you calculate its voltage?"
+description: "How galvanic cells turn redox reactions into electricity, cell notation, standard reduction potentials, E°cell, ΔG° = −nFE°, and electrolysis with Faraday's law."
+area: redox-and-electrochemistry
+level: intermediate
+order: 20
+prerequisites: [redox-reactions]
+related: [redox-reactions, enthalpy]
+flashcards: galvanic-cells
+quiz: galvanic-cells
+resources: [galvanic-cells-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Standard reduction potentials (25 °C) rounded to 0.01 V from common tables (CRC Handbook).
+  F = 96 485 C/mol. Units shown on every quantity in every step (1 C × 1 V = 1 J). Every value checked by computer.
+*/}
+
+## What is it?
+
+A **galvanic** (or voltaic) **cell** uses a spontaneous redox reaction to produce **electricity**. The oxidation and the reduction happen in **separate half-cells**, so the electrons must travel through an external wire, where they can do useful work.
+
+In the **Daniell cell**, a zinc electrode in $\ce{Zn^2+}$ solution is connected to a copper electrode in $\ce{Cu^2+}$ solution:
+
+- **Anode** (zinc): oxidation, $\ce{Zn -> Zn^2+ + 2e-}$. It is the **negative** electrode.
+- **Cathode** (copper): reduction, $\ce{Cu^2+ + 2e- -> Cu}$. It is the **positive** electrode.
+- A **salt bridge** lets ions move between the solutions to keep them electrically neutral.
+
+<KeyIdea>
+Electrons flow through the wire from the **anode** (oxidation) to the **cathode** (reduction). The cell voltage is $E°_\text{cell} = E°_\text{cathode} - E°_\text{anode}$; a **positive** $E°_\text{cell}$ means the reaction is spontaneous.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Batteries.** Every battery, from AA cells to lithium-ion packs, is a galvanic cell (or several in series).
+- **Corrosion.** Rusting is an unwanted galvanic process; zinc coatings protect steel because zinc is oxidized first.
+- **Industry.** Electrolysis (the reverse process, driven by electricity) produces aluminium, chlorine and copper, and electroplates metals.
+
+## How does it work?
+
+### 1. Standard reduction potentials
+
+Each half-cell has a **standard reduction potential**, $E°$, measured against the standard hydrogen electrode (defined as 0.00 V) at 25 °C, 1 M and 1 bar. A **more positive** $E°$ means a **stronger oxidizing agent** (more easily reduced).
+
+| Half-reaction (reduction) | $E°$ (V) |
+|---|---|
+| $\ce{F2 + 2e- -> 2F-}$ | +2.87 |
+| $\ce{MnO4- + 8H+ + 5e- -> Mn^2+ + 4H2O}$ | +1.51 |
+| $\ce{Cl2 + 2e- -> 2Cl-}$ | +1.36 |
+| $\ce{Ag+ + e- -> Ag}$ | +0.80 |
+| $\ce{Fe^3+ + e- -> Fe^2+}$ | +0.77 |
+| $\ce{Cu^2+ + 2e- -> Cu}$ | +0.34 |
+| $\ce{2H+ + 2e- -> H2}$ | 0.00 |
+| $\ce{Ni^2+ + 2e- -> Ni}$ | −0.25 |
+| $\ce{Zn^2+ + 2e- -> Zn}$ | −0.76 |
+| $\ce{Al^3+ + 3e- -> Al}$ | −1.66 |
+| $\ce{Mg^2+ + 2e- -> Mg}$ | −2.37 |
+
+### 2. Cell voltage
+
+$$
+E°_\text{cell} = E°_\text{cathode} - E°_\text{anode}
+$$
+
+Use both values **as reduction potentials** from the table, and do **not** multiply $E°$ by the coefficients: a potential does not depend on how much substance reacts.
+
+### 3. Cell notation
+
+The anode is written on the left and the cathode on the right; a single line | separates phases and a double line || shows the salt bridge:
+
+$$
+\ce{Zn(s) | Zn^2+(aq) || Cu^2+(aq) | Cu(s)}
+$$
+
+### 4. Free energy and spontaneity
+
+The cell voltage is linked to the Gibbs free energy change:
+
+$$
+\Delta G° = -nFE°_\text{cell}
+$$
+
+where $n$ is the moles of electrons transferred and $F = 96\,485$ C/mol (the **Faraday constant**, the charge on one mole of electrons). Positive $E°_\text{cell}$ gives negative $\Delta G°$: a spontaneous reaction.
+
+### 5. Electrolysis
+
+In **electrolysis**, an external power supply **forces** a non-spontaneous redox reaction. The amount of product follows from the charge passed (**Faraday's law**):
+
+$$
+Q = It \qquad n(e^-) = \frac{Q}{F}
+$$
+
+where $I$ is the current in amperes (A = C/s) and $t$ is the time in seconds.
+
+<Analogy>
+A galvanic cell is like water flowing downhill through a water wheel: the reaction "wants" to happen, and the cell makes it do work on the way. Electrolysis is like pumping water back uphill: it needs an external energy source.
+</Analogy>
+
+<MorePrecisely>
+Standard potentials apply at 1 M concentrations and 25 °C. At other concentrations, the **Nernst equation**, $E = E° - \dfrac{RT}{nF}\ln Q$, gives the actual cell voltage; it falls as the cell runs and Q increases, reaching zero when the reaction is at equilibrium (a "flat" battery).
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/galvanic-cells/daniell-cell.svg" alt="The Daniell cell. On the left, a zinc electrode in Zn2+ solution is the anode (negative), where oxidation happens: Zn → Zn2+ + 2e−. On the right, a copper electrode in Cu2+ solution is the cathode (positive), where reduction happens: Cu2+ + 2e− → Cu. A wire through a voltmeter reading 1.10 V joins the electrodes, and electrons flow from zinc to copper. A KNO3 salt bridge connects the two solutions. Cell notation: Zn(s) | Zn2+(aq) || Cu2+(aq) | Cu(s)." caption="Oxidation at the anode, reduction at the cathode, electrons through the wire, ions through the salt bridge." width={360} height={400} />
+
+## Worked example
+
+<Example title="Cell voltage and ΔG°">
+**Question:** A cell is made from Ag⁺/Ag and Cu²⁺/Cu half-cells. Find $E°_\text{cell}$, write the overall reaction, and calculate $\Delta G°$.
+
+1. The more positive $E°$ (Ag⁺/Ag, +0.80 V) is reduced at the **cathode**; copper (+0.34 V) is oxidized at the **anode**.
+2. $E°_\text{cell} = +0.80\ \text{V} - (+0.34\ \text{V}) = +0.46\ \text{V}$
+3. Overall: $\ce{Cu + 2Ag+ -> Cu^2+ + 2Ag}$, so $n = 2$ mol of electrons.
+4. Substitute (1 C × 1 V = 1 J):
+
+   $$
+   \begin{aligned}
+   &\Delta G° = -(2\ \text{mol}) \\[4pt]
+   &\quad \times \left(96\,485\ \tfrac{\text{C}}{\text{mol}}\right) \\[4pt]
+   &\quad \times (0.46\ \text{V}) \\[4pt]
+   &= -8.9 \times 10^{4}\ \text{J} \\[4pt]
+   &= -89\ \text{kJ}
+   \end{aligned}
+   $$
+
+5. $E°_\text{cell}$ is positive and $\Delta G°$ negative: the reaction is **spontaneous**.
+</Example>
+
+<Example title="Electroplating copper">
+**Question:** A current of 2.00 A passes through copper(II) sulfate solution for 30.0 min. What mass of copper is deposited? ($\ce{Cu^2+ + 2e- -> Cu}$; Cu = 63.55 g/mol)
+
+1. $t = 30.0\ \text{min} \times \dfrac{60\ \text{s}}{1\ \text{min}} = 1800\ \text{s}$
+2. $Q = It = 2.00\ \text{C/s} \times 1800\ \text{s} = 3600\ \text{C}$
+3. $n(e^-) = \dfrac{3600\ \text{C}}{96\,485\ \text{C/mol}} = 0.03731\ \text{mol}$
+4. $n(\ce{Cu}) = 0.03731\ \text{mol}\ e^- \times \dfrac{1\ \text{mol Cu}}{2\ \text{mol}\ e^-} = 0.01866\ \text{mol}$
+5. $m = 0.01866\ \text{mol} \times 63.55\ \text{g/mol} =$ **1.19 g**
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Multiplying E° by the coefficients">
+In $\ce{Cu + 2Ag+ -> Cu^2+ + 2Ag}$, use $E° = +0.80$ V for silver, not 2 × 0.80 V. Potentials are intensive: they don't depend on amount.
+</CommonMistake>
+
+<CommonMistake title="Flipping signs twice">
+Use $E°_\text{cell} = E°_\text{cathode} - E°_\text{anode}$ with both values copied straight from the reduction table. Don't also change the sign of the anode value, or you will subtract twice.
+</CommonMistake>
+
+<CommonMistake title="Mixing up anode and cathode">
+In any cell, oxidation happens at the **anode** and reduction at the **cathode** ("**an ox**, **red cat**"). In a galvanic cell the anode is negative; in electrolysis it is positive.
+</CommonMistake>
+
+<NotationNote>
+- 1 V = 1 J/C, so C × V = J; 1 A = 1 C/s.
+- $F$ = 96 485 C/mol is sometimes rounded to 96 500 C/mol.
+- "SHE" = standard hydrogen electrode, the zero of the potential scale.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Galvanic cell: spontaneous redox makes electricity; anode = oxidation (−), cathode = reduction (+).
+- $E°_\text{cell} = E°_\text{cathode} - E°_\text{anode}$; positive means spontaneous. Don't multiply E° by coefficients.
+- $\Delta G° = -nFE°_\text{cell}$ with $F = 96\,485$ C/mol.
+- Electrolysis: $Q = It$, $n(e^-) = Q/F$, then use the half-equation's mole ratio.
+</RememberThis>
