@@ -1,0 +1,113 @@
+---
+/**
+ * Countdown cards for upcoming events (e.g. the Nobel Prize in Chemistry announcement).
+ * Events are listed in src/config/events.json (online editor: Site settings → Upcoming events).
+ * Events already more than `hideAfterHours` past their start at build time are left out;
+ * the script also hides them in the browser, so a stale build never shows an old event.
+ */
+import events from '../../config/events.json';
+
+interface Event {
+  title: string;
+  description?: string;
+  /** ISO date-time with offset, e.g. 2026-10-07T11:45:00+02:00 */
+  start: string;
+  /** The official time as text, shown before JavaScript runs. */
+  officialTime: string;
+  link?: string;
+  linkLabel?: string;
+  hideAfterHours?: number;
+}
+
+const now = Date.now();
+const upcoming = (events as Event[]).filter((e) => {
+  const t = Date.parse(e.start);
+  return !Number.isNaN(t) && now < t + (e.hideAfterHours ?? 48) * 3600_000;
+});
+---
+
+{upcoming.length > 0 && (
+  <section class="events" aria-label="Upcoming events">
+    {upcoming.map((e) => (
+      <article class="event" data-start={e.start} data-hide-hours={e.hideAfterHours ?? 48}>
+        <p class="event__label" data-state-label>Coming up</p>
+        <h2 class="event__title">{e.title}</h2>
+        {e.description && <p class="event__desc">{e.description}</p>}
+        <p class="event__time">
+          <span data-official>{e.officialTime}</span>
+          <span class="event__local" data-local hidden></span>
+        </p>
+        <div class="event__count" data-count hidden aria-hidden="true">
+          <div><b data-d>0</b><span>days</span></div>
+          <div><b data-h>00</b><span>hours</span></div>
+          <div><b data-m>00</b><span>minutes</span></div>
+          <div><b data-s>00</b><span>seconds</span></div>
+        </div>
+        {e.link && (
+          <p class="event__link">
+            <a class="btn btn--primary" href={e.link} rel="noopener">{e.linkLabel ?? 'Watch live'}<span aria-hidden="true"> ↗</span></a>
+          </p>
+        )}
+      </article>
+    ))}
+  </section>
+)}
+
+<style>
+  .events { display: grid; gap: var(--space-4); margin-bottom: var(--space-6); max-width: var(--measure); }
+  .event { padding: var(--space-5); background: var(--surface); border: 1px solid var(--border-strong, var(--border)); border-radius: var(--radius-lg); }
+  .event__label { font-size: var(--step--1); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent, var(--ink)); }
+  .event__title { font-size: var(--step-2, var(--step-1)); margin-top: var(--space-1); text-wrap: balance; }
+  .event__desc { margin-top: var(--space-2); }
+  .event__time { margin-top: var(--space-2); font-weight: 600; }
+  .event__local { display: block; font-weight: 400; color: var(--muted); font-size: var(--step--1); margin-top: var(--space-1); }
+  .event__count { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-2); margin-top: var(--space-4); max-width: 26rem; }
+  .event__count div { display: grid; justify-items: center; padding: var(--space-2) 0; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); }
+  .event__count b { font-size: var(--step-2, 1.6rem); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .event__count span { font-size: var(--step--1); color: var(--muted); }
+  .event__link { margin-top: var(--space-4); }
+  .event[data-state='live'] .event__label { color: var(--mistake); }
+</style>
+
+<script>
+  const pad = (n: number) => String(n).padStart(2, '0');
+  function setup(card: HTMLElement) {
+    const start = Date.parse(card.dataset.start ?? '');
+    const hideMs = Number(card.dataset.hideHours ?? 48) * 3600_000;
+    if (Number.isNaN(start)) return;
+    const q = <T extends HTMLElement>(sel: string) => card.querySelector<T>(sel);
+    const label = q('[data-state-label]'), local = q('[data-local]'), count = q('[data-count]');
+    const [d, h, m, s] = ['[data-d]', '[data-h]', '[data-m]', '[data-s]'].map((sel) => q(sel));
+    if (local) {
+      try {
+        const fmt = new Intl.DateTimeFormat(undefined, { dateStyle: 'full', timeStyle: 'short' });
+        const zone = new Intl.DateTimeFormat(undefined, { timeZoneName: 'short' }).formatToParts(start).find((p) => p.type === 'timeZoneName')?.value ?? '';
+        local.textContent = `Your local time: ${fmt.format(start)} ${zone}`.trim();
+        local.hidden = false;
+      } catch { /* keep the official time only */ }
+    }
+    function tick() {
+      const now = Date.now();
+      const left = start - now;
+      if (now > start + hideMs) { card.hidden = true; return false; }
+      if (left <= 0) {
+        const live = now < start + 2 * 3600_000;
+        card.dataset.state = live ? 'live' : 'done';
+        if (label) label.textContent = live ? 'Live now' : 'Announced';
+        if (count) count.hidden = true;
+        return false;
+      }
+      if (count) count.hidden = false;
+      const sec = Math.floor(left / 1000);
+      if (d) d.textContent = String(Math.floor(sec / 86400));
+      if (h) h.textContent = pad(Math.floor((sec % 86400) / 3600));
+      if (m) m.textContent = pad(Math.floor((sec % 3600) / 60));
+      if (s) s.textContent = pad(sec % 60);
+      return true;
+    }
+    if (tick()) {
+      const id = window.setInterval(() => { if (!tick()) window.clearInterval(id); }, 1000);
+    }
+  }
+  document.querySelectorAll<HTMLElement>('.event[data-start]').forEach(setup);
+</script>

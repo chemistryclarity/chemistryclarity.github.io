@@ -2,6 +2,7 @@
 import { getEntries } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
+import EventCountdown from '../../components/layout/EventCountdown.astro';
 import { getNews, isDraft, isVisible } from '../../lib/content';
 import { url } from '../../lib/url';
 
@@ -25,6 +26,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
       title="News"
       lead="Discoveries, research and events in chemistry, with links to the original sources."
     />
+    <EventCountdown />
     <ol class="list" role="list">
       {items.map(({ n, topics }) => (
         <li class="item">

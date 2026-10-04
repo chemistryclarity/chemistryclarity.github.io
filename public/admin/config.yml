@@ -325,6 +325,26 @@ collections:
           - { name: threads, label: Threads, widget: string, required: false }
           - { name: linkedin, label: LinkedIn, widget: string, required: false }
           - { name: pinterest, label: Pinterest, widget: string, required: false }
+      - name: events
+        label: Upcoming events (countdown on the News page)
+        file: src/config/events.json
+        description: Each event shows a live countdown at the top of the News page, then "Live now", and disappears a set number of hours after it starts.
+        fields:
+          - name: items
+            label: Events
+            label_singular: Event
+            widget: list
+            root: true
+            summary: '{{title}} · {{start}}'
+            fields:
+              - { name: title, label: Title, widget: string, hint: 'e.g. Nobel Prize in Chemistry 2027' }
+              - { name: description, label: Short description, widget: text, required: false }
+              - { name: start, label: Start time, widget: string, hint: 'Date, time and UTC offset, e.g. 2026-10-07T11:45:00+02:00 (11:45 in Stockholm summer time). The countdown runs to this moment.' }
+              - { name: officialTime, label: Official time as text, widget: string, hint: 'Shown as written, e.g. Wednesday 7 October 2026, 11:45 CEST (09:45 UTC), at the earliest' }
+              - { name: link, label: Live stream or information link, widget: string, required: false, hint: 'Full address starting with https://' }
+              - { name: linkLabel, label: Link text, widget: string, required: false, hint: 'e.g. Watch the announcement live on YouTube' }
+              - { name: hideAfterHours, label: Hide after (hours), widget: number, value_type: int, default: 48, required: false }
+
       - name: references
         label: References (sources)
         file: src/content/references/references.yaml
