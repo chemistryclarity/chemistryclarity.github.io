@@ -1,7 +1,7 @@
 # Quiz: Significant Figures and Measurement
 # DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked by computer.
 title: 'Significant Figures: Quiz'
-description: 'Seven questions on counting significant figures, rounding, calculations and accuracy versus precision, with explanations.'
+description: 'Nine questions on counting significant figures, rounding, calculations, replicate measurements and accuracy versus precision, with explanations.'
 level: beginner
 access: free
 status: review
@@ -65,7 +65,7 @@ questions:
       - 'accurate but not precise'
       - 'neither accurate nor precise'
     answer: 'precise but not accurate'
-    explanation: 'The readings agree closely (precise) but are all about 0.19 g below the true 5.000 g (not accurate), suggesting a calibration error.'
+    explanation: 'Mean = 4.81 g and standard deviation = 0.008 g, so the readings agree closely (precise). But the error is 4.81 g − 5.000 g = −0.19 g, far larger than the standard deviation (not accurate): a systematic error such as poor calibration.'
     difficulty: medium
   - id: sf-q7
     prompt: 'Which number has exactly three significant figures without any ambiguity?'
@@ -77,3 +77,23 @@ questions:
     answer: '3.00 × 10² m'
     explanation: 'In scientific notation every written digit counts: 3.00 has 3. "300 m" is ambiguous, 0.3 m has 1, and "3000." has 4.'
     difficulty: hard
+  - id: sf-q8
+    prompt: 'Using the round-half-to-even rule, what is 4.365 g to three significant figures?'
+    choices:
+      - '4.37 g'
+      - '4.36 g'
+      - '4.4 g'
+      - '4.365 g'
+    answer: '4.36 g'
+    explanation: 'The dropped part is exactly 5, and the last kept digit (6) is already even, so it stays: 4.36 g. (4.375 g would round to 4.38 g.)'
+    difficulty: medium
+  - id: sf-q9
+    prompt: 'Why are measurements usually repeated in triplicate or more?'
+    choices:
+      - 'To make the answer more accurate automatically'
+      - 'To calculate a mean and a standard deviation, which show the best value and the precision'
+      - 'Because a single measurement has no unit'
+      - 'To remove systematic errors'
+    answer: 'To calculate a mean and a standard deviation, which show the best value and the precision'
+    explanation: 'Replicates reveal random scatter (precision) and give a better mean. They cannot remove a systematic error: that needs calibration against an accepted value.'
+    difficulty: medium

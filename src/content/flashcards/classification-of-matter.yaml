@@ -37,3 +37,6 @@ cards:
   - id: cm-10
     front: 'Which method gets pure water from sea water?'
     back: 'Distillation: boil the water and condense the vapour.'
+  - id: cm-11
+    front: 'Give an example of "dissolving" that is a chemical change.'
+    back: 'Calcium oxide in water: $\ce{CaO + H2O -> Ca(OH)2}$. Evaporation gives calcium hydroxide, not calcium oxide.'

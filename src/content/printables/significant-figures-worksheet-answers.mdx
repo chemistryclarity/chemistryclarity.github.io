@@ -15,7 +15,7 @@ assisted: true
 <Answer>The millimetre marks make 4.3 cm certain, and you can **estimate one more digit** between the marks (4.37 cm). A fourth digit (4.372 cm) would be a guess beyond what the ruler can show.</Answer>
 
 <Q n={2}>Accuracy and precision.</Q>
-<Answer>**Accuracy** is how close a result is to the true value; **precision** is how close repeated results are to each other. Yes: a balance that reads 0.20 g too high gives results that agree closely (precise) but are all wrong by the same amount (not accurate).</Answer>
+<Answer>**Accuracy** is how close a result is to the true value; **precision** is how close repeated results are to each other. Precision describes the **spread of replicates**, so it needs at least two, and preferably three or more, measurements: one value has no spread to judge. Yes, results can be precise but not accurate: a balance that reads 0.20 g too high gives results that agree closely (small standard deviation) but are all wrong by the same amount (a systematic error).</Answer>
 
 ## B. Counting significant figures
 
@@ -28,7 +28,7 @@ assisted: true
 <Answer>(a) $3.50 \times 10^{-4}$ m (b) $4.56 \times 10^{4}$ g (c) $2.07 \times 10^{-2}$ L</Answer>
 
 <Q n={5}>Round to 3 significant figures.</Q>
-<Answer>(a) **2.46 g** (b) **0.00123 m** (c) **$1.88 \times 10^{4}$ s** (18 800 s would be ambiguous) (d) **10.0 mL** (the first dropped digit is 5, so 9.99 rounds up to 10.0)</Answer>
+<Answer>(a) **2.46 g** (b) **0.00123 m** (c) **$1.88 \times 10^{4}$ s** (18 800 s would be ambiguous) (d) **10.0 mL** (the dropped part, 51, is more than half, so 9.99 rounds up to 10.0) (e) **4.36 g** (exactly half; 6 is already even) (f) **4.38 g** (exactly half; 7 is odd, so round up to the even 8). In (c), the dropped part 50 is exactly half and 7 is odd, so 1.87 rounds to the even 1.88.</Answer>
 
 ## D. Calculations
 
@@ -49,5 +49,21 @@ $\rho = \dfrac{m}{V} = \dfrac{64.8\ \text{g}}{24.0\ \text{cm}^3} = $ **2.70 g/cm
 
 </Answer>
 
-<Q n={9}>Mean.</Q>
-<Answer>Sum = 2.52 g + 2.48 g + 2.51 g = 7.51 g (two decimal places). Mean = 7.51 g ÷ 3 = 2.5033 g → **2.50 g**. The 3 is a counted, exact number, so it does not limit the precision.</Answer>
+<Q n={9}>Triplicate weighing of a 2.500 g standard.</Q>
+<Answer>
+
+(a) Mean: sum = 2.52 g + 2.48 g + 2.51 g = 7.51 g; $\bar{x} = 7.51\ \text{g} \div 3 = 2.5033\ \text{g}$ (the 3 is an exact count).
+
+Deviations: +0.0167 g, −0.0233 g, +0.0067 g. Squares: 2.778 × 10⁻⁴ g², 5.444 × 10⁻⁴ g², 0.444 × 10⁻⁴ g²; sum = 8.667 × 10⁻⁴ g².
+
+$$
+s = \sqrt{\frac{8.667 \times 10^{-4}\ \text{g}^2}{3 - 1}} = 0.0208\ \text{g} \approx 0.021\ \text{g}
+$$
+
+$\text{RSD} = \dfrac{0.0208\ \text{g}}{2.5033\ \text{g}} \times 100\% = 0.83\%$ (the units of g cancel)
+
+(b) Error = 2.503 g − 2.500 g = **+0.003 g**; percent error = $\dfrac{+0.003\ \text{g}}{2.500\ \text{g}} \times 100\% =$ **+0.13%**
+
+(c) The error (0.003 g) is much smaller than the standard deviation (0.021 g), so the result is **accurate**: there is no sign of a systematic error. The precision is moderate (RSD 0.8%); more replicates or a more precise balance would improve it. Result: **2.50 ± 0.02 g (n = 3)**.
+
+</Answer>

@@ -1,7 +1,7 @@
 ---
 title: Significant Figures and Measurement
 question: "How do you count significant figures and use them in calculations?"
-description: "Count significant figures, write numbers in scientific notation, round calculated answers correctly, and tell accuracy from precision."
+description: "Count significant figures, round correctly, and assess accuracy and precision from replicate measurements using the mean and standard deviation."
 area: foundations
 level: beginner
 order: 4
@@ -18,7 +18,8 @@ assisted: true
 {/*
   DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
   Every answer checked by computer. Units shown on every quantity in every step.
-  REVIEW: rounding uses "5 or more rounds up"; some courses use round-half-to-even. Trailing zeros without a decimal point are treated as ambiguous.
+  Rounding follows round-half-to-even for an exact 5 (as in ISO 80000-1), approved by the site author.
+  Standard deviation is the sample standard deviation (n − 1). Trailing zeros without a decimal point are treated as ambiguous.
 */}
 
 ## What is it?
@@ -69,21 +70,42 @@ In a calculation with several steps, **keep extra digits** in the intermediate r
 
 ### 4. Rounding
 
-Look at the first digit you are dropping: if it is **5 or more**, round up; if it is **less than 5**, leave the last kept digit unchanged. 2.4562 g to 3 s.f. is 2.46 g; 0.0012349 m to 3 s.f. is 0.00123 m.
+Look at the digits you are dropping:
 
-### 5. Accuracy and precision
+| Dropped part | Rule | Example (to 3 s.f.) |
+|---|---|---|
+| less than half (starts with 0–4) | keep the last digit | 0.0012349 m → 0.00123 m |
+| more than half (5 followed by any non-zero digit, or 6–9) | round up | 2.4562 g → 2.46 g |
+| **exactly half** (5, 50, 500…) | round to the **even** digit | 2.345 g → 2.34 g; 2.355 g → 2.36 g |
 
-- **Accuracy:** how close a measurement is to the **true value**.
-- **Precision:** how close repeated measurements are to **each other**.
+The "round half to even" rule means that, over many results, exact halves are rounded up and down equally often, so averages are not pushed upward. Note that most calculators and spreadsheet ROUND functions always round an exact 5 up, so apply this rule yourself.
 
-A badly calibrated balance can give very precise but inaccurate results.
+### 5. Accuracy, precision and replicate measurements
+
+- **Accuracy:** how close a result is to the **true (accepted) value**.
+- **Precision:** how close **repeated measurements** are to **each other**.
+
+A single measurement cannot show its own precision. That's why careful work uses **replicate measurements**: the same measurement repeated, usually in **triplicate** (3 times) or **quintuplicate** (5 times), or more. From the replicates:
+
+$$
+\begin{aligned}
+\bar{x} &= \frac{\sum x_i}{n} \\[6pt]
+s &= \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}} \\[6pt]
+\text{RSD} &= \frac{s}{\bar{x}} \times 100\%
+\end{aligned}
+$$
+
+- The **mean**, $\bar{x}$, is the best estimate of the value. Comparing it with the accepted value, $x_\text{true}$, measures **accuracy**: error $= \bar{x} - x_\text{true}$, and percent error $= \dfrac{\bar{x} - x_\text{true}}{x_\text{true}} \times 100\%$.
+- The **standard deviation**, $s$, measures **precision**: a small $s$ means the replicates agree closely. The **relative standard deviation** (RSD) lets you compare the precision of results of different sizes.
+
+Two kinds of error affect results. **Random errors** scatter replicates on both sides of the mean and lower **precision**. **Systematic errors** (for example a badly calibrated balance) shift every result the same way and lower **accuracy**, even when the precision is excellent.
 
 <Analogy>
 Measuring with a ruler marked only in centimetres is like reading a clock with only an hour hand: you can estimate "about half past", but not the exact minute. A ruler marked in millimetres lets you estimate one more digit, so your measurement has one more significant figure.
 </Analogy>
 
 <MorePrecisely>
-Significant figures are a simple way to show uncertainty. In research, uncertainty is stated explicitly, for example 12.47 ± 0.02 g, and is combined through calculations using statistics. Some courses also round a 5 to the nearest even digit ("round half to even") to avoid a slight upward bias.
+Significant figures are a simple way to show uncertainty. In research, uncertainty is stated explicitly, usually as the mean ± the standard deviation (for example 10.04 ± 0.02 mL, n = 5), and is combined through calculations using statistics. The standard deviation uses $n - 1$ (the "sample" standard deviation) because the mean was calculated from the same data. With only two measurements it means little, which is why at least three replicates are recommended.
 </MorePrecisely>
 
 ## Visualise it
@@ -114,6 +136,34 @@ Significant figures are a simple way to show uncertainty. In research, uncertain
 2. The fewest decimal places is one (12.0 g and 4.5 g), so the answer is **16.8 g**.
 </Example>
 
+<Example title="Assessing accuracy and precision from replicates">
+**Question:** A student checks a 10.00 mL pipette by delivering water five times (quintuplicate) and finds the volumes 10.05 mL, 10.02 mL, 10.06 mL, 10.03 mL and 10.04 mL. Assess the accuracy and precision.
+
+1. Mean: the sum is 10.05 mL + 10.02 mL + 10.06 mL + 10.03 mL + 10.04 mL = 50.20 mL, so
+
+   $$
+   \begin{aligned}
+   \bar{x} &= \frac{50.20\ \text{mL}}{5} \\[4pt]
+   &= 10.04\ \text{mL}
+   \end{aligned}
+   $$
+
+2. Deviations from the mean: +0.01 mL, −0.02 mL, +0.02 mL, −0.01 mL and 0.00 mL. Their squares are 0.0001 mL², 0.0004 mL², 0.0004 mL², 0.0001 mL² and 0.0000 mL², which add up to 0.0010 mL².
+3. Standard deviation:
+
+   $$
+   \begin{aligned}
+   s &= \sqrt{\frac{0.0010\ \text{mL}^2}{5 - 1}} \\[4pt]
+   &= 0.016\ \text{mL}
+   \end{aligned}
+   $$
+
+4. RSD $= \dfrac{0.016\ \text{mL}}{10.04\ \text{mL}} \times 100\% = 0.16\%$ (the units of mL cancel): **very precise**.
+5. Error $= 10.04\ \text{mL} - 10.00\ \text{mL} = +0.04\ \text{mL}$, a percent error of $\dfrac{+0.04\ \text{mL}}{10.00\ \text{mL}} \times 100\% = +0.4\%$. The error is more than twice the standard deviation, so the pipette has a small **systematic error**: it delivers slightly too much.
+
+**Answer:** $10.04 \pm 0.02$ mL (n = 5): precise, but slightly inaccurate.
+</Example>
+
 ## Common mistake
 
 <CommonMistake title="Copying every digit from the calculator">
@@ -138,6 +188,7 @@ A volume of a cube with side 2.00 cm is $(2.00\ \text{cm})^3 = 8.00\ \text{cm}^3
 <RememberThis>
 - Sig figs = certain digits + one estimated digit. Leading zeros never count; trailing zeros after a decimal point always do.
 - × and ÷: fewest significant figures. + and −: fewest decimal places.
-- Exact numbers (counts, definitions) don't limit precision. Round only the final answer.
-- Accuracy: close to the true value. Precision: close to each other.
+- Exact numbers (counts, definitions) don't limit precision. Round only the final answer; round an exact 5 to the even digit.
+- Accuracy: mean close to the true value (error). Precision: replicates close to each other (standard deviation).
+- Measure in replicate (at least triplicate) and report mean ± standard deviation with the number of measurements.
 </RememberThis>

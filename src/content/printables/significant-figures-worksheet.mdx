@@ -12,7 +12,7 @@ assisted: true
 
 <DataBox
   title="Rules"
-  items={['Leading zeros: not significant · Zeros between digits: significant · Trailing zeros after a decimal point: significant', '× and ÷: fewest significant figures · + and −: fewest decimal places', 'Exact numbers do not limit the answer. Round only the final answer.']}
+  items={['Leading zeros: not significant · Zeros between digits: significant · Trailing zeros after a decimal point: significant', '× and ÷: fewest significant figures · + and −: fewest decimal places · exact numbers do not limit the answer', 'Rounding an exact 5: round to the even digit (2.345 → 2.34; 2.355 → 2.36)', '$\\bar{x} = \\dfrac{\\sum x_i}{n}$ · $s = \\sqrt{\\dfrac{\\sum (x_i - \\bar{x})^2}{n - 1}}$ · $\\text{RSD} = \\dfrac{s}{\\bar{x}} \\times 100\\%$']}
   note="Give every answer with its unit."
 />
 
@@ -20,7 +20,7 @@ assisted: true
 
 <Q n={1} lines={3}>A ruler is marked in millimetres. Explain why a length measured with it can be recorded as 4.37 cm but not as 4.372 cm.</Q>
 
-<Q n={2} lines={3}>Explain the difference between accuracy and precision. Can a set of measurements be precise but not accurate? Give an example.</Q>
+<Q n={2} lines={4}>Explain the difference between accuracy and precision. Why can't precision be judged from a single measurement? Can a set of measurements be precise but not accurate? Give an example.</Q>
 
 ## B. Counting significant figures
 
@@ -30,7 +30,7 @@ assisted: true
 
 <Q n={4} box={3}>Write in scientific notation, keeping the significant figures: (a) 0.000 350 m (b) 45 600 g (to 3 significant figures) (c) 0.0207 L</Q>
 
-<Q n={5} box={3}>Round each to three significant figures: (a) 2.4562 g (b) 0.0012349 m (c) 18 750 s (d) 9.9951 mL</Q>
+<Q n={5} box={3}>Round each to three significant figures: (a) 2.4562 g (b) 0.0012349 m (c) 18 750 s (d) 9.9951 mL (e) 4.365 g (f) 4.375 g</Q>
 
 ## D. Calculations
 
@@ -42,4 +42,4 @@ assisted: true
 
 <Q n={8} box={4}>An aluminium block measures 2.00 cm × 3.00 cm × 4.00 cm and has a mass of 64.8 g. Calculate its volume and its density, each to the correct number of significant figures.</Q>
 
-<Q n={9} box={3}>Three measurements of a mass are 2.52 g, 2.48 g and 2.51 g. Calculate the mean and report it to the correct precision.</Q>
+<Q n={9} box={6}>A student weighs a certified 2.500 g standard mass in triplicate and records 2.52 g, 2.48 g and 2.51 g. (a) Calculate the mean, the standard deviation and the relative standard deviation. (b) Calculate the error and the percent error. (c) Comment on the accuracy and precision, and report the result as mean ± standard deviation.</Q>

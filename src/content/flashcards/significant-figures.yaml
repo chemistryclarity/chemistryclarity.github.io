@@ -37,3 +37,15 @@ cards:
   - id: sf-10
     front: '25.12 g + 3.4 g = ?'
     back: '28.5 g (one decimal place, like 3.4 g)'
+  - id: sf-11
+    front: 'Round 2.345 g and 2.355 g to three significant figures.'
+    back: '2.34 g and 2.36 g. An exact 5 is rounded to the even digit (round half to even).'
+  - id: sf-12
+    front: 'Why are measurements made in replicate (e.g. triplicate or quintuplicate)?'
+    back: 'One measurement cannot show its precision. Replicates give a mean (best value) and a standard deviation (precision).'
+  - id: sf-13
+    front: 'Which statistic measures accuracy and which measures precision?'
+    back: 'Accuracy: the error, mean − true value. Precision: the standard deviation (or relative standard deviation).'
+  - id: sf-14
+    front: 'Which kind of error lowers accuracy but not precision?'
+    back: 'A systematic error, e.g. a badly calibrated balance shifts every result the same way.'
