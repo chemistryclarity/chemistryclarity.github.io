@@ -27,7 +27,7 @@ cards:
     back: '0.08206 L·atm/(mol·K) and 8.314 L·kPa/(mol·K)'
   - id: gl-07
     front: 'Convert 25 °C to kelvin.'
-    back: '25 + 273.15 = 298.15 K (about 298 K)'
+    back: '25 °C + 273.15 = 298.15 K (about 298 K)'
   - id: gl-08
     front: 'Why must gas law temperatures be in kelvin?'
     back: 'Kelvin starts at absolute zero, so V and P are proportional to it. In °C, doubling the number does not double the temperature.'

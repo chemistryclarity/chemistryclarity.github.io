@@ -25,7 +25,7 @@ questions:
       - '0.50'
       - '1.00'
     answer: '1.27'
-    explanation: 'Use kelvin: 473 K ÷ 373 K = 1.27. Doubling the Celsius number does not double the temperature.'
+    explanation: 'Use kelvin: 100 °C = 373 K and 200 °C = 473 K. V₂/V₁ = 473 K ÷ 373 K = 1.27 (the units cancel). Doubling the Celsius number does not double the temperature.'
     difficulty: medium
   - id: gl-q3
     prompt: 'Which temperature must be used in gas law calculations?'
@@ -45,7 +45,7 @@ questions:
       - '1.09 atm'
       - '0.50 atm'
     answer: '2.00 atm'
-    explanation: 'Gay-Lussac: P₂ = 1.00 × 600 K ÷ 300 K = 2.00 atm. (Using °C would give 12.1 atm, which is wrong.)'
+    explanation: 'Gay-Lussac: T₁ = 27 °C + 273 = 300 K and T₂ = 327 °C + 273 = 600 K. P₂ = 1.00 atm × (600 K ÷ 300 K) = 2.00 atm. (Using °C would give 12.1 atm, which is wrong.)'
     difficulty: medium
   - id: gl-q5
     prompt: 'What is the pressure of 0.200 mol of gas in a 10.0 L container at 27 °C? (R = 8.314 L·kPa/(mol·K))'
@@ -55,7 +55,7 @@ questions:
       - '499 kPa'
       - '0.499 kPa'
     answer: '49.9 kPa'
-    explanation: 'P = nRT/V = 0.200 × 8.314 × 300.15 ÷ 10.0 = 49.9 kPa.'
+    explanation: 'T = 27 °C + 273.15 = 300.15 K. P = nRT/V = (0.200 mol × 8.314 L·kPa/(mol·K) × 300.15 K) ÷ 10.0 L = 49.9 kPa. The units of mol, K and L cancel, leaving kPa.'
     difficulty: medium
   - id: gl-q6
     prompt: 'At the same temperature and pressure, 2 mol of nitrogen and 2 mol of helium occupy…'

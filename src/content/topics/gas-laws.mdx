@@ -86,8 +86,8 @@ Any unit of pressure or volume works here, as long as **both sides use the same 
 
 $PV = nRT$ works for a single state of a gas: give it any three of $P$, $V$, $n$ and $T$ and it finds the fourth. Choose $R$ to match your units:
 
-- $P$ in **atm**, $V$ in **L**: use $R = 0.08206$
-- $P$ in **kPa**, $V$ in **L**: use $R = 8.314$
+- $P$ in **atm**, $V$ in **L**: use $R = 0.08206\ \text{L·atm/(mol·K)}$
+- $P$ in **kPa**, $V$ in **L**: use $R = 8.314\ \text{L·kPa/(mol·K)}$
 
 **Molar volume:** at 0 °C and 1 atm, one mole of any ideal gas occupies about **22.4 L**. At 25 °C and 1 atm it is about **24.5 L**.
 
@@ -108,24 +108,54 @@ The ideal gas law assumes the particles have **no volume** and **no attractions*
 <Example title="Boyle's law">
 **Question:** A gas occupies 2.0 L at 1.0 atm. It is compressed to 0.50 L at constant temperature. What is the new pressure?
 
-1. $P_1V_1 = P_2V_2$, so $P_2 = \dfrac{P_1V_1}{V_2} = \dfrac{1.0 \times 2.0}{0.50}$
-2. $P_2 =$ **4.0 atm**. The volume became 4 times smaller, so the pressure became 4 times larger.
+1. $P_1V_1 = P_2V_2$, so:
+
+   $$
+   \begin{aligned}
+   P_2 &= \frac{P_1V_1}{V_2} \\[4pt]
+   &= \frac{(1.0\ \text{atm})(2.0\ \text{L})}{0.50\ \text{L}} \\[4pt]
+   &= 4.0\ \text{atm}
+   \end{aligned}
+   $$
+
+2. The units of L cancel, leaving atm. $P_2 = \textbf{4.0 atm}$: the volume became 4 times smaller, so the pressure became 4 times larger.
 </Example>
 
 <Example title="Charles's law">
 **Question:** A balloon holds 3.00 L of gas at 27 °C. What is its volume at 127 °C, at the same pressure?
 
-1. Convert to kelvin: $T_1 = 300.15\ \text{K}$, $T_2 = 400.15\ \text{K}$
-2. $V_2 = V_1 \times \dfrac{T_2}{T_1} = 3.00 \times \dfrac{400.15}{300.15}$
-3. $V_2 =$ **4.00 L**
+1. Convert to kelvin: $T_1 = 27\ °\text{C} + 273.15 = 300.15\ \text{K}$ and $T_2 = 127\ °\text{C} + 273.15 = 400.15\ \text{K}$
+2. Rearrange $\dfrac{V_1}{T_1} = \dfrac{V_2}{T_2}$ and substitute:
+
+   $$
+   \begin{aligned}
+   V_2 &= V_1 \times \frac{T_2}{T_1} \\[4pt]
+   &= 3.00\ \text{L} \times \frac{400.15\ \text{K}}{300.15\ \text{K}} \\[4pt]
+   &= 4.00\ \text{L}
+   \end{aligned}
+   $$
+
+3. The units of K cancel, leaving L. $V_2 = \textbf{4.00 L}$
 </Example>
 
 <Example title="The ideal gas law">
 **Question:** What volume does 0.500 mol of gas occupy at 25 °C and 1.00 atm?
 
-1. $T = 25 + 273.15 = 298.15\ \text{K}$
-2. $V = \dfrac{nRT}{P} = \dfrac{0.500 \times 0.08206 \times 298.15}{1.00}$
-3. $V =$ **12.2 L**
+1. Convert to kelvin: $T = 25\ °\text{C} + 273.15 = 298.15\ \text{K}$
+2. Pressure is in atm, so use $R = 0.08206\ \text{L·atm/(mol·K)}$. Rearrange $PV = nRT$ and substitute:
+
+   $$
+   \begin{aligned}
+   V &= \frac{nRT}{P} \\[6pt]
+   &= (0.500\ \text{mol}) \\
+   &\quad \times \left(0.08206\ \dfrac{\text{L·atm}}{\text{mol·K}}\right) \\
+   &\quad \times (298.15\ \text{K}) \\[2pt]
+   &\quad \div (1.00\ \text{atm}) \\[6pt]
+   &= 12.2\ \text{L}
+   \end{aligned}
+   $$
+
+3. The units of mol, K and atm cancel, leaving L. $V = \textbf{12.2 L}$
 </Example>
 
 ## Common mistake
@@ -135,7 +165,7 @@ Heating a gas from 100 °C to 200 °C does **not** double its volume. In kelvin 
 </CommonMistake>
 
 <CommonMistake title="Mixing units with R">
-With $R = 0.08206$, pressure must be in **atm** and volume in **L**. With $R = 8.314$, use **kPa** and **L**. Convert first: 1 atm = 101.325 kPa = 760 mmHg; 1 L = 1000 mL.
+With $R = 0.08206\ \text{L·atm/(mol·K)}$, pressure must be in **atm** and volume in **L**. With $R = 8.314\ \text{L·kPa/(mol·K)}$, use **kPa** and **L**. Convert first: 1 atm = 101.325 kPa = 760 mmHg; 1 L = 1000 mL.
 </CommonMistake>
 
 <CommonMistake title="Flipping the relationship in Boyle's law">
@@ -154,5 +184,5 @@ Pressure and volume are **inversely** proportional: when one goes up, the other 
 - Always use kelvin: K = °C + 273.15.
 - Boyle $P_1V_1 = P_2V_2$; Charles $V/T$ constant; Gay-Lussac $P/T$ constant; Avogadro $V/n$ constant.
 - Combined: $\dfrac{P_1V_1}{T_1} = \dfrac{P_2V_2}{T_2}$; ideal: $PV = nRT$.
-- $R = 0.08206$ L·atm/(mol·K) or 8.314 L·kPa/(mol·K); about 22.4 L/mol at 0 °C and 1 atm.
+- $R = 0.08206\ \text{L·atm/(mol·K)}$ or $R = 8.314\ \text{L·kPa/(mol·K)}$; about 22.4 L/mol at 0 °C and 1 atm.
 </RememberThis>

@@ -7,7 +7,7 @@ status: review
 assisted: true
 ---
 
-{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer. */}
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer. Units shown on every quantity in every step. */}
 
 ## A. Understanding
 
@@ -20,28 +20,126 @@ assisted: true
 ## B. Simple gas laws
 
 <Q n={3}>Boyle.</Q>
-<Answer>$V_2 = \dfrac{P_1V_1}{P_2} = \dfrac{100 \times 5.0}{250} =$ **2.0 L**</Answer>
+<Answer>
+
+$$
+V_2 = \frac{P_1V_1}{P_2} = \frac{(100\ \text{kPa})(5.0\ \text{L})}{250\ \text{kPa}} = \textbf{2.0 L}
+$$
+
+The units of kPa cancel, leaving L.
+
+</Answer>
 
 <Q n={4}>Charles.</Q>
-<Answer>$T_1 = 293.15$ K, $T_2 = 243.15$ K. $V_2 = 250 \times \dfrac{243.15}{293.15} =$ **207 mL**</Answer>
+<Answer>
+
+$T_1 = 20\ °\text{C} + 273.15 = 293.15\ \text{K}$; $T_2 = -30\ °\text{C} + 273.15 = 243.15\ \text{K}$
+
+$$
+V_2 = V_1 \times \frac{T_2}{T_1} = 250\ \text{mL} \times \frac{243.15\ \text{K}}{293.15\ \text{K}} = \textbf{207 mL}
+$$
+
+The units of K cancel, leaving mL.
+
+</Answer>
 
 <Q n={5}>Gay-Lussac.</Q>
-<Answer>$T_1 = 288.15$ K, $T_2 = 318.15$ K. $P_2 = 220 \times \dfrac{318.15}{288.15} =$ **243 kPa**</Answer>
+<Answer>
+
+$T_1 = 15\ °\text{C} + 273.15 = 288.15\ \text{K}$; $T_2 = 45\ °\text{C} + 273.15 = 318.15\ \text{K}$
+
+$$
+P_2 = P_1 \times \frac{T_2}{T_1} = 220\ \text{kPa} \times \frac{318.15\ \text{K}}{288.15\ \text{K}} = \textbf{243 kPa}
+$$
+
+The units of K cancel, leaving kPa.
+
+</Answer>
 
 ## C. Combined gas law
 
 <Q n={6}>Combined.</Q>
-<Answer>$V_2 = \dfrac{P_1V_1T_2}{P_2T_1} = \dfrac{1.00 \times 4.00 \times 373.15}{2.50 \times 298.15} =$ **2.00 L**</Answer>
+<Answer>
+
+$T_1 = 25\ °\text{C} + 273.15 = 298.15\ \text{K}$; $T_2 = 100\ °\text{C} + 273.15 = 373.15\ \text{K}$
+
+$$
+\begin{aligned}
+V_2 &= \frac{P_1V_1T_2}{P_2T_1} \\[4pt]
+&= \frac{(1.00\ \text{atm})(4.00\ \text{L})(373.15\ \text{K})}{(2.50\ \text{atm})(298.15\ \text{K})} \\[4pt]
+&= \textbf{2.00 L}
+\end{aligned}
+$$
+
+The units of atm and K cancel, leaving L.
+
+</Answer>
 
 ## D. Ideal gas law
 
 <Q n={7}>Pressure.</Q>
-<Answer>$P = \dfrac{nRT}{V} = \dfrac{0.250 \times 0.08206 \times 300}{5.00} =$ **1.23 atm**</Answer>
+<Answer>
+
+Volume is in L and the answer is wanted in atm, so use $R = 0.08206\ \text{L·atm/(mol·K)}$
+
+$$
+\begin{aligned}
+P &= \frac{nRT}{V} \\[4pt]
+&= \frac{(0.250\ \text{mol}) \left(0.08206\ \dfrac{\text{L·atm}}{\text{mol·K}}\right) (300\ \text{K})}{5.00\ \text{L}} \\[4pt]
+&= \textbf{1.23 atm}
+\end{aligned}
+$$
+
+The units of mol, K and L cancel, leaving atm.
+
+</Answer>
 
 <Q n={8}>Carbon dioxide.</Q>
-<Answer>(a) $n = \dfrac{PV}{RT} = \dfrac{1.50 \times 2.00}{0.08206 \times 300.15} =$ **0.122 mol** (b) $M(\ce{CO2}) = 44.01$ g/mol; mass = 0.12181 × 44.01 = **5.36 g**</Answer>
+<Answer>
+
+(a) $T = 27\ °\text{C} + 273.15 = 300.15\ \text{K}$
+
+Pressure is in atm, so use $R = 0.08206\ \text{L·atm/(mol·K)}$
+
+$$
+\begin{aligned}
+n &= \frac{PV}{RT} \\[4pt]
+&= \frac{(1.50\ \text{atm})(2.00\ \text{L})}{\left(0.08206\ \dfrac{\text{L·atm}}{\text{mol·K}}\right) (300.15\ \text{K})} \\[4pt]
+&= \textbf{0.122 mol}
+\end{aligned}
+$$
+
+The units of atm, L and K cancel, leaving mol.
+
+(b) $M(\ce{CO2}) = 12.01\ \text{g/mol} + 2(16.00\ \text{g/mol}) = 44.01\ \text{g/mol}$
+
+$$
+m = n \times M = 0.12181\ \text{mol} \times 44.01\ \text{g/mol} = \textbf{5.36 g}
+$$
+
+</Answer>
 
 ## E. Challenge
 
 <Q n={9}>Molar mass.</Q>
-<Answer>$n = \dfrac{PV}{RT} = \dfrac{1.00 \times 0.560}{0.08206 \times 273.15} = 0.02498$ mol. $M = \dfrac{1.00\ \text{g}}{0.02498\ \text{mol}} =$ **40.0 g/mol**, so the gas is **argon** (39.95 g/mol).</Answer>
+<Answer>
+
+$T = 0\ °\text{C} + 273.15 = 273.15\ \text{K}$
+
+Pressure is in atm, so use $R = 0.08206\ \text{L·atm/(mol·K)}$
+
+$$
+\begin{aligned}
+n &= \frac{PV}{RT} \\[4pt]
+&= \frac{(1.00\ \text{atm})(0.560\ \text{L})}{\left(0.08206\ \dfrac{\text{L·atm}}{\text{mol·K}}\right) (273.15\ \text{K})} \\[4pt]
+&= 0.02498\ \text{mol}
+\end{aligned}
+$$
+
+$$
+M = \frac{m}{n} = \frac{1.00\ \text{g}}{0.02498\ \text{mol}} = \textbf{40.0 g/mol}
+$$
+
+The gas is **argon** (39.95 g/mol).
+
+</Answer>
