@@ -1,0 +1,77 @@
+---
+title: Spectrophotometry and Beer's Law
+subtitle: Answer key with worked solutions
+kind: answer-key
+level: intermediate
+status: review
+assisted: true
+---
+
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated by computer (mean, sample standard deviation with n − 1). Units shown on every quantity in every step; A and T have no units. */}
+
+## A. Understanding
+
+<Q n={1}>Definitions.</Q>
+<Answer>(a) **Transmittance** T = I ÷ I₀, the fraction of light passing through the sample. **Absorbance** A = −log T = log(I₀ ÷ I). (b) Absorption is **strongest** at $\lambda_\text{max}$, so the method is most **sensitive**, and small errors in the wavelength setting change A least. (c) A **blank** contains the solvent and reagents but not the analyte; it is used to **zero** the instrument so that only the analyte's absorption is measured.</Answer>
+
+## B. Absorbance and transmittance
+
+<Q n={2}>Conversions.</Q>
+<Answer>(a) A = −log(0.500) = **0.301** (b) A = −log(0.100) = **1.000** (c) T = 0.350, A = −log(0.350) = **0.456** (d) T = 10^(−0.200) = 0.631, so **63.1 %T** (e) T = 10^(−1.00) = 0.10, so **10 %T** (two decimal places in A give two significant figures in T)</Answer>
+
+## C. Beer's law
+
+<Q n={3}>Concentration.</Q>
+<Answer>
+
+$c = \dfrac{A}{\varepsilon b} = \dfrac{0.725}{(1.45 \times 10^{4}\ \text{L mol}^{-1}\,\text{cm}^{-1})(1.00\ \text{cm})} =$ **5.00 × 10⁻⁵ mol/L**
+
+</Answer>
+
+<Q n={4}>Molar absorptivity.</Q>
+<Answer>
+
+$\varepsilon = \dfrac{A}{bc} = \dfrac{0.360}{(1.00\ \text{cm})(2.50 \times 10^{-5}\ \text{mol/L})} =$ **1.44 × 10⁴ L mol⁻¹ cm⁻¹**
+
+</Answer>
+
+<Q n={5}>Predictions.</Q>
+<Answer>A is proportional to both b and c (A = εbc). (a) Doubling b doubles A: **0.720**. (b) Halving c halves A: **0.180**.</Answer>
+
+<Q n={6}>Dilution.</Q>
+<Answer>
+
+(a) $c = \dfrac{0.370}{(1.20 \times 10^{4}\ \text{L mol}^{-1}\,\text{cm}^{-1})(1.00\ \text{cm})} = 3.08 \times 10^{-5}\ \text{mol/L}$, so **3.08 × 10⁻⁵ mol/L**
+
+(b) Dilution factor $= \dfrac{50.00\ \text{mL}}{10.00\ \text{mL}} = 5.000$; $c = 3.083 \times 10^{-5}\ \text{mol/L} \times 5.000 =$ **1.54 × 10⁻⁴ mol/L**
+
+</Answer>
+
+## D. Calibration and replicates
+
+<Q n={7}>Triplicate unknown.</Q>
+<Answer>
+
+(a) Mean: $\bar{A} = \dfrac{0.334 + 0.338 + 0.331}{3} = 0.3343$; sample standard deviation $s = 0.0035$; RSD $= \dfrac{0.0035}{0.3343} \times 100\ \% = 1.05\ \%$. Report $\bar{A} = 0.3343 \pm 0.0035$ ($n = 3$).
+
+(b) $c = \dfrac{\bar{A} - 0.003}{0.0820\ \text{L/mg}} = \dfrac{0.3343 - 0.003}{0.0820\ \text{L/mg}} =$ **4.04 mg/L**
+
+</Answer>
+
+<Q n={8}>Good practice.</Q>
+<Answer>(a) A single reading cannot show its own **precision**. Replicates give a **mean** (a better estimate) and a **standard deviation** (how closely the readings agree), and reveal any reading that is out of line. (b) The straight line is only known to hold **between** the standards; outside them, Beer's law may fail (especially at high A), so the result could be wrong. (c) A large intercept suggests a **systematic error**, for example an incorrect blank, a contaminated reagent or a dirty cell.</Answer>
+
+## E. Challenge
+
+<Q n={9}>Copper in brass.</Q>
+<Answer>
+
+$c = \dfrac{A}{\varepsilon b} = \dfrac{0.409}{(395.0\ \text{L mol}^{-1}\,\text{cm}^{-1})(1.00\ \text{cm})} = 1.035 \times 10^{-3}\ \text{mol/L}$
+
+$n(\ce{Cu}) = 1.035 \times 10^{-3}\ \text{mol/L} \times 1.000\ \text{L} = 1.035 \times 10^{-3}\ \text{mol}$
+
+$m(\ce{Cu}) = 1.035 \times 10^{-3}\ \text{mol} \times 63.55\ \text{g/mol} = 0.06577\ \text{g}$
+
+$\%\ \ce{Cu} = \dfrac{0.06577\ \text{g}}{0.1000\ \text{g}} \times 100\ \% =$ **65.8 %**
+
+</Answer>

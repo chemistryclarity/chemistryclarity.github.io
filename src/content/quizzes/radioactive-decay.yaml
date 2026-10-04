@@ -1,0 +1,79 @@
+# Quiz: Radioactive Decay and Half-Life
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Nuclear equations checked by computer; values calculated by computer.
+title: 'Radioactive Decay and Half-Life: Quiz'
+description: 'Seven questions on nuclear equations, types of radiation, penetrating power and half-life calculations, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: nd-q1
+    prompt: 'How many neutrons are in a nucleus of carbon-14 (Z = 6)?'
+    choices:
+      - '6'
+      - '8'
+      - '14'
+      - '20'
+    answer: '8'
+    explanation: 'Neutrons = mass number − atomic number = 14 − 6 = 8.'
+    difficulty: easy
+  - id: nd-q2
+    prompt: 'Radium-226 (Z = 88) undergoes alpha decay. What is the product nucleus?'
+    choices:
+      - 'radon-222 (Z = 86)'
+      - 'radon-226 (Z = 86)'
+      - 'thorium-230 (Z = 90)'
+      - 'radium-222 (Z = 88)'
+    answer: 'radon-222 (Z = 86)'
+    explanation: 'Alpha decay removes 4 from A and 2 from Z: 226 − 4 = 222 and 88 − 2 = 86, which is radon.'
+    difficulty: easy
+  - id: nd-q3
+    prompt: 'In ²³⁴₉₀Th → ²³⁴₉₁Pa + X, what is X?'
+    choices:
+      - 'an alpha particle'
+      - 'a beta particle (electron)'
+      - 'a positron'
+      - 'a gamma ray'
+    answer: 'a beta particle (electron)'
+    explanation: 'A stays 234 and Z rises by 1, so X has A = 0 and Z = −1: an electron, ⁰₋₁e.'
+    difficulty: medium
+  - id: nd-q4
+    prompt: 'Which radiation is stopped by a sheet of paper?'
+    choices:
+      - 'alpha'
+      - 'beta'
+      - 'gamma'
+      - 'none of them'
+    answer: 'alpha'
+    explanation: 'Alpha particles are heavy and doubly charged, so they lose their energy quickly. Beta needs aluminium; gamma is only reduced by thick lead.'
+    difficulty: easy
+  - id: nd-q5
+    prompt: 'A sample of 160 mg has a half-life of 2.0 h. How much is left after 6.0 h?'
+    choices:
+      - '80 mg'
+      - '53 mg'
+      - '40 mg'
+      - '20 mg'
+    answer: '20 mg'
+    explanation: 'n = 6.0 h ÷ 2.0 h = 3.0 half-lives, so 160 mg × (½)³ = 20 mg.'
+    difficulty: medium
+  - id: nd-q6
+    prompt: 'The activity of a sample falls from 1200 Bq to 300 Bq in 16 days. What is its half-life?'
+    choices:
+      - '4 days'
+      - '8 days'
+      - '12 days'
+      - '16 days'
+    answer: '8 days'
+    explanation: '1200 Bq → 600 Bq → 300 Bq is 2 half-lives, so t½ = 16 days ÷ 2 = 8 days.'
+    difficulty: medium
+  - id: nd-q7
+    prompt: 'Fluorine-18 (Z = 9) emits a positron. What is the product?'
+    choices:
+      - 'oxygen-18 (Z = 8)'
+      - 'neon-18 (Z = 10)'
+      - 'fluorine-17 (Z = 9)'
+      - 'nitrogen-14 (Z = 7)'
+    answer: 'oxygen-18 (Z = 8)'
+    explanation: 'Positron emission keeps A the same and lowers Z by 1: Z = 8 is oxygen, so ¹⁸₉F → ¹⁸₈O + ⁰₊₁e.'
+    difficulty: hard

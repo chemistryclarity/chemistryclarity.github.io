@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .ax { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .axis { stroke: #8a94a6; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #e3e7ee; stroke-width: 1; }
+    .guide { stroke: #b45309; stroke-width: 1.3; stroke-dasharray: 4 3; fill: none; }
+    .curve { stroke: #0f766e; stroke-width: 2.6; fill: none; }
+    .pt { fill: #0f766e; } .ptB { fill: #b45309; }
+    .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .rayA { stroke: #b45309; stroke-width: 2.6; fill: none; } .rayB { stroke: #0f766e; stroke-width: 2.6; fill: none; } .rayC { stroke: #7c3aed; stroke-width: 2.6; fill: none; stroke-dasharray: 7 3; }
+    .rayCf { stroke: #7c3aed; stroke-width: 1.4; fill: none; stroke-dasharray: 3 3; }
+    .paper { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.2; } .al { fill: #d9dee7; stroke: #9aa5ba; stroke-width: 1.2; } .pb { fill: #8a94a6; stroke: #5b6577; stroke-width: 1.2; }
+    .src { fill: #14213d; } .srcT { fill: #ffffff; font-size: 10px; font-weight: 700; }
+    .box { fill: #f6f8fb; stroke: #8a94a6; stroke-width: 1.5; }
+    .beam { stroke: #d97706; stroke-width: 3; fill: none; } .beam2 { stroke: #d97706; stroke-width: 1.6; fill: none; }
+    .sol { fill: #c4b5fd; opacity: 0.75; } .cuv { fill: none; stroke: #14213d; stroke-width: 1.5; }
+    .dim { stroke: #14213d; stroke-width: 1.2; fill: none; marker-start: url(#hd); marker-end: url(#hd); }
+    .hd { fill: #14213d; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .ax { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .axis { stroke: #6b7894; } .grid { stroke: #2a3550; } .guide { stroke: #fbbf24; }
+      .curve, .rayB { stroke: #2dd4bf; } .pt, .lA { fill: #2dd4bf; } .ptB, .lB { fill: #fbbf24; } .rayA { stroke: #fbbf24; }
+      .lC { fill: #c4b5fd; } .rayC, .rayCf { stroke: #c4b5fd; }
+      .paper { fill: #3a4763; stroke: #6b7894; } .al { fill: #4b5875; stroke: #9aa5ba; } .pb { fill: #6b7894; stroke: #9aa5ba; }
+      .src { fill: #e9edf5; } .srcT { fill: #151e31; }
+      .box { fill: #1b263d; stroke: #6b7894; } .beam, .beam2 { stroke: #fbbf24; } .sol { fill: #7c3aed; opacity: 0.6; } .cuv { stroke: #e9edf5; }
+      .dim { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+    }
+  </style>
+  <defs><marker id="hd" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="hd" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="250" rx="14"/><text class="t" x="20" y="28">Inside a spectrophotometer</text><text class="sub" x="20" y="45">One wavelength passes through the sample.</text><circle class="box" cx="38" cy="120" r="15"/><text class="lab" x="38" y="154" text-anchor="middle">lamp</text><path class="beam" d="M54 120 H86"/><rect class="box" x="86" y="98" width="62" height="44" rx="6"/><text class="num" x="117" y="124" text-anchor="middle">grating</text><text class="lab" x="117" y="158" text-anchor="middle">mono-</text><text class="lab" x="117" y="172" text-anchor="middle">chromator</text><path class="beam" d="M148 120 H190"/><text class="lB" x="169" y="110" text-anchor="middle">I₀</text><rect class="sol" x="192" y="98" width="34" height="48"/><rect class="cuv" x="190" y="86" width="38" height="62" rx="2"/><path class="dim" d="M192 160 H226"/><text class="lab" x="209" y="176" text-anchor="middle">b</text><text class="num" x="209" y="189" text-anchor="middle">path length</text><text class="lab" x="209" y="78" text-anchor="middle">sample</text><path class="beam2" d="M228 120 H270"/><text class="lB" x="249" y="110" text-anchor="middle">I</text><rect class="box" x="270" y="98" width="54" height="44" rx="6"/><text class="lab" x="297" y="158" text-anchor="middle">detector</text><text class="num" x="297" y="124" text-anchor="middle">A = 0.412</text><text class="lab" x="20" y="216">T = I ÷ I₀</text><text class="lab" x="120" y="216">A = −log T = log(I₀ ÷ I)</text><text class="sub" x="20" y="236">Less light gets through (I below I₀): higher absorbance.</text>
+</svg>

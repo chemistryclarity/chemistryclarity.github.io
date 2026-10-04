@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/radioactive-decay-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Radioactive Decay and Half-Life Worksheet'
+description: '9 questions on nuclide notation, nuclear equations, types of radiation, half-life calculations and radiocarbon dating. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/radioactive-decay-worksheet.pdf'
+answerKey: '/downloads/radioactive-decay-worksheet-answers.pdf'
+preview: '/previews/radioactive-decay-worksheet.png'
+status: review

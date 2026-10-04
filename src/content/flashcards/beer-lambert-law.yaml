@@ -1,0 +1,39 @@
+# Flashcards: Spectrophotometry and Beer's Law
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: "Spectrophotometry and Beer's Law: Flashcards"
+description: "Revise transmittance, absorbance, Beer's law, the blank, calibration curves and replicate measurements."
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: bl-01
+    front: 'Define transmittance.'
+    back: 'T = I ÷ I₀, the fraction of light that passes through the sample (no unit). %T = T × 100 %.'
+  - id: bl-02
+    front: 'How is absorbance related to transmittance?'
+    back: 'A = −log T = log(I₀ ÷ I). It has no unit.'
+  - id: bl-03
+    front: "State Beer's law."
+    back: 'A = εbc: absorbance is proportional to concentration (ε in L mol⁻¹ cm⁻¹, b in cm, c in mol/L).'
+  - id: bl-04
+    front: 'What is ε?'
+    back: 'The molar absorptivity: a constant for a substance at a given wavelength, in L mol⁻¹ cm⁻¹.'
+  - id: bl-05
+    front: 'Why measure at λmax?'
+    back: 'Absorption is strongest there, so the method is most sensitive, and small wavelength errors matter least.'
+  - id: bl-06
+    front: 'What is a blank, and why is it used?'
+    back: 'The solvent and reagents without the analyte. It zeroes the instrument so only the analyte absorption is measured.'
+  - id: bl-07
+    front: 'What is a calibration curve?'
+    back: 'A plot of absorbance against concentration for standards of known concentration; the unknown is read from its best-fit line.'
+  - id: bl-08
+    front: 'Why measure the unknown in replicate?'
+    back: 'To assess precision: report the mean ± standard deviation (at least triplicate) instead of a single reading.'
+  - id: bl-09
+    front: 'What is the absorbance when 10 % of the light is transmitted?'
+    back: 'A = −log(0.100) = 1.000.'
+  - id: bl-10
+    front: 'When does Beer''s law break down?'
+    back: 'At high concentrations or high absorbances (above about 1), and with non-monochromatic light: the calibration line curves.'

@@ -1,0 +1,45 @@
+---
+title: Spectrophotometry and Beer's Law
+subtitle: Absorbance, Beer's law and calibration curves
+kind: worksheet
+level: intermediate
+time: 40 minutes
+status: review
+assisted: true
+---
+
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original questions; invented teaching data. Answer key: beer-lambert-law-worksheet-answers.mdx */}
+
+<DataBox
+  title="Equations and data"
+  items={['T = I ÷ I₀ · %T = T × 100 % · A = −log T · %T = 10^(−A) × 100 %', "Beer's law: A = εbc (ε in L mol⁻¹ cm⁻¹, b in cm, c in mol/L)", 'Mean and sample standard deviation (n − 1) · RSD = s ÷ mean × 100 % · Cu = 63.55 g/mol']}
+  note="Absorbance and transmittance have no units; show units on every other quantity."
+/>
+
+## A. Understanding
+
+<Q n={1} lines={4}>(a) Define transmittance and absorbance. (b) Why are measurements made at $\lambda_\text{max}$? (c) What is a blank, and why is it needed?</Q>
+
+## B. Absorbance and transmittance
+
+<Q n={2} box={4}>Find the absorbance for: (a) T = 0.500 (b) T = 0.100 (c) 35.0 %T. Find the %T for: (d) A = 0.200 (e) A = 1.00</Q>
+
+## C. Beer's law
+
+<Q n={3} box={3}>A solution in a 1.00 cm cell has A = 0.725. The molar absorptivity is 1.45 × 10⁴ L mol⁻¹ cm⁻¹. Find the concentration.</Q>
+
+<Q n={4} box={3}>A 2.50 × 10⁻⁵ mol/L solution gives A = 0.360 in a 1.00 cm cell. Calculate the molar absorptivity, with its units.</Q>
+
+<Q n={5} box={3}>For the solution in question 4, predict the absorbance (a) in a 2.00 cm cell (b) at half the concentration in a 1.00 cm cell. Explain using Beer's law.</Q>
+
+<Q n={6} box={5}>An unknown gives A = 1.85, which is above the calibration range. 10.00 mL of it is diluted to 50.00 mL, and the diluted solution gives A = 0.370 in a 1.00 cm cell ($\varepsilon$ = 1.20 × 10⁴ L mol⁻¹ cm⁻¹). Find the concentration of (a) the diluted solution (b) the original unknown.</Q>
+
+## D. Calibration and replicates
+
+<Q n={7} box={6}>A set of standards gives the best-fit line $A = (0.0820\ \text{L/mg})\,c + 0.003$. An unknown is measured in triplicate: A = 0.334, 0.338, 0.331. (a) Find the mean absorbance, the standard deviation and the RSD. (b) Find the concentration of the unknown.</Q>
+
+<Q n={8} lines={5}>Explain (a) why the unknown in question 7 is measured three times instead of once (b) why the unknown should lie inside the range of the standards (c) what a large intercept on the calibration line might show.</Q>
+
+## E. Challenge
+
+<Q n={9} box={6}>0.1000 g of brass is dissolved in acid, the copper is converted into a coloured complex, and the solution is diluted to exactly 1.000 L. It gives A = 0.409 in a 1.00 cm cell, and $\varepsilon$ of the complex is 395.0 L mol⁻¹ cm⁻¹. Calculate the percentage by mass of copper in the brass.</Q>

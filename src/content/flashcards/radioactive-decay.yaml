@@ -1,0 +1,39 @@
+# Flashcards: Radioactive Decay and Half-Life
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Nuclear equations checked by computer.
+title: 'Radioactive Decay and Half-Life: Flashcards'
+description: 'Revise nuclide notation, alpha, beta, positron and gamma decay, nuclear equations, penetrating power and half-life.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: nd-01
+    front: 'In nuclide notation, what do the top and bottom numbers mean?'
+    back: 'Top: mass number A (protons + neutrons). Bottom: atomic number Z (protons). E.g. uranium-238: A = 238, Z = 92.'
+  - id: nd-02
+    front: 'What is an alpha particle, and how does alpha decay change the nucleus?'
+    back: 'A helium-4 nucleus (2 protons + 2 neutrons). A decreases by 4, Z by 2.'
+  - id: nd-03
+    front: 'What happens in beta (β⁻) decay?'
+    back: 'A neutron becomes a proton and an electron; the electron is emitted. A stays the same, Z increases by 1.'
+  - id: nd-04
+    front: 'What happens in positron (β⁺) emission?'
+    back: 'A proton becomes a neutron and a positron is emitted. A stays the same, Z decreases by 1.'
+  - id: nd-05
+    front: 'What is gamma radiation?'
+    back: 'High-energy electromagnetic radiation from an excited nucleus. A and Z do not change.'
+  - id: nd-06
+    front: 'What must balance in a nuclear equation?'
+    back: 'The total mass number and the total atomic number on each side.'
+  - id: nd-07
+    front: 'What stops alpha, beta and gamma radiation?'
+    back: 'Alpha: paper or skin. Beta: a few mm of aluminium. Gamma: only reduced by thick lead or concrete.'
+  - id: nd-08
+    front: 'Define half-life.'
+    back: 'The time for half of the radioactive nuclei in a sample (and its activity) to decay.'
+  - id: nd-09
+    front: 'What fraction of a sample remains after 3 half-lives?'
+    back: '(½)³ = ⅛, i.e. 12.5 %.'
+  - id: nd-10
+    front: 'Equation for the amount left after time t?'
+    back: 'N = N₀ × (½)ⁿ, where n = t ÷ t½ (t and t½ in the same unit).'

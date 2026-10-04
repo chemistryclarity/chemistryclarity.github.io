@@ -1,0 +1,79 @@
+# Quiz: Spectrophotometry and Beer's Law
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: "Spectrophotometry and Beer's Law: Quiz"
+description: "Seven questions on absorbance, transmittance, Beer's law calculations and calibration curves, with explanations."
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: bl-q1
+    prompt: 'A solution transmits 50.0 % of the light. What is its absorbance?'
+    choices:
+      - '0.301'
+      - '0.500'
+      - '1.70'
+      - '−1.70'
+    answer: '0.301'
+    explanation: 'T = 0.500, so A = −log(0.500) = 0.301. Using 50.0 instead of 0.500 gives −1.70, which is impossible for a real sample.'
+    difficulty: easy
+  - id: bl-q2
+    prompt: 'If the concentration of a solution is doubled (same cell), the absorbance:'
+    choices:
+      - 'halves'
+      - 'stays the same'
+      - 'doubles'
+      - 'is squared'
+    answer: 'doubles'
+    explanation: "Beer's law, A = εbc: A is directly proportional to c."
+    difficulty: easy
+  - id: bl-q3
+    prompt: 'What are the units of molar absorptivity, ε?'
+    choices:
+      - 'mol L⁻¹ cm⁻¹'
+      - 'L mol⁻¹ cm⁻¹'
+      - 'cm mol L⁻¹'
+      - 'no units'
+    answer: 'L mol⁻¹ cm⁻¹'
+    explanation: 'A has no unit, so ε = A ÷ (b × c) has units 1 ÷ (cm × mol/L) = L mol⁻¹ cm⁻¹.'
+    difficulty: medium
+  - id: bl-q4
+    prompt: 'A = 0.450, ε = 1.50 × 10⁴ L mol⁻¹ cm⁻¹, b = 1.00 cm. What is c?'
+    choices:
+      - '3.00 × 10⁻⁵ mol/L'
+      - '6.75 × 10³ mol/L'
+      - '3.33 × 10⁴ mol/L'
+      - '3.00 × 10⁻³ mol/L'
+    answer: '3.00 × 10⁻⁵ mol/L'
+    explanation: 'c = A ÷ (εb) = 0.450 ÷ (1.50 × 10⁴ L mol⁻¹ cm⁻¹ × 1.00 cm) = 3.00 × 10⁻⁵ mol/L.'
+    difficulty: medium
+  - id: bl-q5
+    prompt: 'What is the purpose of the blank?'
+    choices:
+      - 'to set the wavelength'
+      - 'to zero the instrument so that only the analyte absorbance is measured'
+      - 'to give the most concentrated standard'
+      - 'to check the path length'
+    answer: 'to zero the instrument so that only the analyte absorbance is measured'
+    explanation: 'The blank contains everything except the analyte, so absorption by the solvent, reagents and cell is subtracted.'
+    difficulty: easy
+  - id: bl-q6
+    prompt: 'The same solution is moved from a 1.00 cm cell to a 2.00 cm cell. Its absorbance changes from 0.250 to:'
+    choices:
+      - '0.125'
+      - '0.250'
+      - '0.500'
+      - '1.00'
+    answer: '0.500'
+    explanation: 'A is proportional to the path length b: doubling b doubles A.'
+    difficulty: medium
+  - id: bl-q7
+    prompt: 'An unknown gives A = 1.85, but the standards only go up to A = 0.95. What should you do?'
+    choices:
+      - 'extend the line and read the concentration'
+      - 'dilute the unknown by a known factor, measure again and multiply by the factor'
+      - 'use a longer cell'
+      - 'report the result as the highest standard'
+    answer: 'dilute the unknown by a known factor, measure again and multiply by the factor'
+    explanation: 'The reading must fall inside the calibration range; Beer''s law may not hold at high absorbance. A longer cell would raise A even further.'
+    difficulty: hard

@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/beer-lambert-law-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: "Spectrophotometry and Beer's Law Worksheet"
+description: "9 questions on transmittance and absorbance, Beer's law, dilution, calibration curves with replicates, and a copper analysis. Answer key included."
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/beer-lambert-law-worksheet.pdf'
+answerKey: '/downloads/beer-lambert-law-worksheet-answers.pdf'
+preview: '/previews/beer-lambert-law-worksheet.png'
+status: review

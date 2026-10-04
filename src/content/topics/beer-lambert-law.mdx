@@ -1,0 +1,160 @@
+---
+title: Spectrophotometry and Beer's Law
+question: "How do chemists measure concentration with light, and what is Beer's law?"
+description: "Absorbance and transmittance, the spectrophotometer, Beer's law (A = εbc), calibration curves with replicate measurements, and finding an unknown concentration."
+area: analytical
+level: intermediate
+order: 10
+prerequisites: [molarity, significant-figures]
+related: [molarity, significant-figures, titration-curves]
+flashcards: beer-lambert-law
+quiz: beer-lambert-law
+resources: [beer-lambert-law-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  The calibration data and molar absorptivities are invented teaching values, not literature constants.
+  Every value calculated by computer (least-squares line, mean, sample standard deviation with n − 1). Units shown in every step; absorbance and transmittance have no units.
+*/}
+
+## What is it?
+
+A coloured solution looks coloured because it **absorbs** some wavelengths of light and lets the rest through. The more concentrated the solution, the more light it absorbs. **Spectrophotometry** measures this absorption to find the **concentration** of a substance, quickly and with very small samples.
+
+A **spectrophotometer** shines light of one chosen wavelength through the sample and measures how much comes out:
+
+- $I_0$ is the intensity of light **entering** the sample, and $I$ the intensity **leaving** it.
+- **Transmittance:** $T = \dfrac{I}{I_0}$ (between 0 and 1), or as a percentage, $\%T = T \times 100\ \%$.
+- **Absorbance:** $A = -\log T = \log \dfrac{I_0}{I}$
+
+Absorbance and transmittance are ratios, so they have **no units**. A = 0 means no light is absorbed; A = 1 means only 10 % gets through; A = 2, only 1 %.
+
+<KeyIdea>
+**Beer's law** (the Beer–Lambert law): absorbance is directly proportional to concentration.
+
+$$
+A = \varepsilon b c
+$$
+
+where $\varepsilon$ is the **molar absorptivity** (L mol⁻¹ cm⁻¹, a constant for that substance at that wavelength), $b$ is the **path length** of the cell (cm, usually 1.00 cm) and $c$ is the **concentration** (mol/L). Double the concentration, double the absorbance.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Medicine.** Blood tests for glucose, cholesterol and haemoglobin use colour reactions read by a spectrophotometer.
+- **Environment.** Nitrate, phosphate and iron in drinking water and rivers are measured this way.
+- **Biology and industry.** DNA and protein concentrations, food colourings and the progress of reactions are all followed by absorbance.
+
+## How does it work?
+
+### 1. The spectrophotometer
+
+Light from a **lamp** passes through a **monochromator** (a grating), which selects one wavelength. That light passes through the **sample** in a cuvette of path length $b$ and reaches a **detector**, which reports $T$ or $A$. The wavelength chosen is usually the one at which the substance absorbs most strongly, $\lambda_\text{max}$: there the measurement is most sensitive, and small errors in the wavelength setting matter least.
+
+### 2. Checking the units in Beer's law
+
+$$
+\begin{aligned}
+&A = \varepsilon \times b \times c \\[4pt]
+&\text{units: } \left(\text{L mol}^{-1}\,\text{cm}^{-1}\right) \\[4pt]
+&\qquad \times \text{cm} \times \left(\text{mol L}^{-1}\right)
+\end{aligned}
+$$
+
+All the units cancel, so $A$ has no unit, as it should.
+
+### 3. The calibration curve
+
+In practice, $\varepsilon$ is rarely taken from a table. Instead:
+
+1. Zero the instrument with a **blank**: the solvent and reagents, without the substance being measured. This removes absorption by everything else.
+2. Measure a series of **standards** of known concentration.
+3. Plot absorbance against concentration and draw the best-fit straight line (by least squares, using a calculator or spreadsheet).
+4. Measure the **unknown** in **replicate** (at least in triplicate), find the **mean** absorbance and its **standard deviation**, and read the concentration from the line.
+
+The unknown should lie **within** the range of the standards. If its absorbance is too high, dilute it by a known factor and measure again.
+
+<Analogy>
+Think of sunglasses. One pair of lenses dims the light by a certain fraction; two pairs stacked dim it again by the same fraction. A thicker or darker filter (a longer path length or a higher concentration) lets through less light. Absorbance is the scale that turns this "fraction of a fraction" behaviour into a simple straight line.
+</Analogy>
+
+<MorePrecisely>
+Beer's law holds best for **dilute** solutions and absorbances up to about 1. At high concentrations, molecules interact with one another, and at very high absorbances so little light reaches the detector that stray light causes errors; the calibration line then curves. Beer's law also assumes **monochromatic** light, which is why the monochromator matters. The **slope** of the calibration line is the sensitivity, and the intercept should be close to zero if the blank was correct.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/beer-law/spectrophotometer.svg" alt="A spectrophotometer drawn left to right: a lamp, a monochromator containing a grating, a sample in a cuvette with path length b, and a detector reading A = 0.412. The beam entering the sample is labelled I0 and is thick; the beam leaving is labelled I and is thinner. Formulas: T = I divided by I0, and A = −log T = log of I0 divided by I." caption="The sample absorbs part of the light: I is smaller than I₀." width={360} height={250} />
+
+<Figure src="/images/beer-law/calibration-curve.svg" alt="A calibration curve of absorbance against concentration in mg/L. Five standards at 1, 2, 3, 4 and 5 mg/L lie on a straight line, A = (0.1986 L/mg) c + 0.0020. The unknown, the mean of 3 replicates, has absorbance 0.412; a dashed line across to the calibration line and down to the axis gives c = 2.07 mg/L." caption="Standards give the line; the unknown's mean absorbance is read across and down." width={360} height={380} />
+
+## Worked example
+
+<Example title="From transmittance to absorbance">
+**Question:** A solution transmits 25.0 % of the light. What is its absorbance?
+
+1. $T = \dfrac{25.0\ \%}{100\ \%} = 0.250$
+2. $A = -\log(0.250) =$ **0.602** (no unit)
+</Example>
+
+<Example title="Using Beer's law">
+**Question:** A dye has $\varepsilon = 1.20 \times 10^{4}$ L mol⁻¹ cm⁻¹ at its $\lambda_\text{max}$. A solution of the dye in a 1.00 cm cell has an absorbance of 0.540. Find its concentration.
+
+1. Rearrange: $c = \dfrac{A}{\varepsilon b}$
+2. Substitute:
+
+   $$
+   \begin{aligned}
+   &\varepsilon b = \left(1.20 \times 10^{4}\ \tfrac{\text{L}}{\text{mol cm}}\right) \\[4pt]
+   &\qquad \times (1.00\ \text{cm}) \\[4pt]
+   &\quad = 1.20 \times 10^{4}\ \text{L/mol} \\[4pt]
+   &c = \frac{0.540}{1.20 \times 10^{4}\ \text{L/mol}} \\[4pt]
+   &\quad = 4.50 \times 10^{-5}\ \text{mol/L}
+   \end{aligned}
+   $$
+
+3. The cm cancels, and $\dfrac{1}{\text{L/mol}} = \text{mol/L}$: **4.50 × 10⁻⁵ mol/L**.
+</Example>
+
+<Example title="An unknown from a calibration curve, measured in triplicate">
+**Question:** Standards of an iron complex (1.00 to 5.00 mg/L) give the best-fit line $A = (0.1986\ \text{L/mg})\,c + 0.0020$. A water sample is measured three times: A = 0.412, 0.416 and 0.409. Find the iron concentration, and comment on the precision.
+
+1. Mean absorbance: $\bar{A} = \dfrac{0.412 + 0.416 + 0.409}{3} = 0.4123$
+2. Standard deviation (sample, $n - 1$): $s = 0.0035$; relative standard deviation $= \dfrac{0.0035}{0.4123} \times 100\ \% = 0.85\ \%$
+3. Rearrange the line: $c = \dfrac{\bar{A} - 0.0020}{0.1986\ \text{L/mg}}$
+4. Substitute: $c = \dfrac{0.4123 - 0.0020}{0.1986\ \text{L/mg}} =$ **2.07 mg/L**
+5. Report: $\bar{A} = 0.4123 \pm 0.0035$ ($n = 3$). An RSD below 1 % shows good precision; the result lies inside the range of the standards (1.00 to 5.00 mg/L), so the reading is reliable.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using %T directly in the absorbance formula">
+Convert a percentage to a fraction first: for 25.0 %T, $A = -\log(0.250) = 0.602$, not $-\log(25.0) = -1.40$. An absorbance is never negative for a real sample.
+</CommonMistake>
+
+<CommonMistake title="Thinking transmittance is proportional to concentration">
+Only **absorbance** is proportional to concentration. Doubling the concentration doubles A, but squares T (for example, T = 0.50 becomes T = 0.25).
+</CommonMistake>
+
+<CommonMistake title="Reading far outside the calibration range">
+A result outside the standards relies on the line continuing straight, which may not be true at high absorbance. Dilute the sample by a known factor (and multiply the result by it), or add more standards.
+</CommonMistake>
+
+<NotationNote>
+- Molar absorptivity $\varepsilon$ is also called the molar extinction coefficient; its units can be written L mol⁻¹ cm⁻¹ or M⁻¹ cm⁻¹.
+- Some books write $A = abc$ with $a$ the absorptivity in mass units (for example L g⁻¹ cm⁻¹), when $c$ is in g/L.
+- The blank is sometimes called the reference solution.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- $T = I/I_0$; $A = -\log T$. Both have no units.
+- Beer's law: $A = \varepsilon b c$, with $\varepsilon$ in L mol⁻¹ cm⁻¹, $b$ in cm, $c$ in mol/L.
+- Measure at $\lambda_\text{max}$, zero with a blank, and use a calibration curve of standards.
+- Measure unknowns in replicate (at least triplicate) and report the mean ± standard deviation; stay inside the calibration range.
+</RememberThis>

@@ -1,0 +1,170 @@
+---
+title: Radioactive Decay and Half-Life
+question: "What are alpha, beta and gamma decay, and how do you use half-life?"
+description: "Nuclide notation, alpha, beta, positron and gamma decay, balancing nuclear equations, penetrating power, half-life calculations and radiocarbon dating."
+area: nuclear
+level: intermediate
+order: 10
+prerequisites: [atomic-structure, isotopes-and-atomic-mass]
+related: [isotopes-and-atomic-mass, reaction-rates]
+flashcards: radioactive-decay
+quiz: radioactive-decay
+resources: [radioactive-decay-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Half-lives from standard nuclear data tables (rounded): C-14 5730 yr, I-131 8.02 d, Tc-99m 6.01 h, Rn-222 3.82 d, U-238 4.47 × 10^9 yr, F-18 110 min.
+  Every nuclear equation checked by computer for conservation of mass number and atomic number; every value calculated by computer. Units shown in every step.
+*/}
+
+## What is it?
+
+Most nuclei are stable, but some have an unstable combination of protons and neutrons. An unstable nucleus **decays**: it changes into a different nucleus and gives out **radiation**. This is **radioactivity**, and it happens on its own, whatever the temperature, pressure or chemical form of the atom.
+
+A nucleus is written in **nuclide notation**, with the **mass number** A (protons + neutrons) at the top left and the **atomic number** Z (protons) at the bottom left:
+
+$$
+\ce{^{238}_{92}U}
+$$
+
+Uranium-238 has 92 protons and 238 − 92 = 146 neutrons.
+
+The main types of radiation are:
+
+| Radiation | Symbol | What it is | Effect on the nucleus |
+|---|---|---|---|
+| Alpha (α) | $\ce{^{4}_{2}He}$ | 2 protons + 2 neutrons | A − 4, Z − 2 |
+| Beta (β⁻) | $\ce{^{0}_{-1}e}$ | a fast electron | A same, Z + 1 |
+| Positron (β⁺) | $\ce{^{0}_{+1}e}$ | a positive electron | A same, Z − 1 |
+| Gamma (γ) | $\ce{^{0}_{0}\gamma}$ | high-energy light | no change in A or Z |
+
+<KeyIdea>
+In every nuclear equation, the **mass numbers** add up to the same total on both sides, and so do the **atomic numbers**. Use these two sums to find any missing particle or nucleus.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Medicine.** Technetium-99m is used for medical imaging, fluorine-18 for PET scans, and iodine-131 and cobalt-60 to treat cancer.
+- **Dating.** Carbon-14 dates objects up to about 50 000 years old; uranium and potassium isotopes date rocks billions of years old.
+- **Safety and energy.** Radon gas from rocks is a health hazard in some homes, and nuclear power stations depend on radioactive fuels and produce radioactive waste.
+
+## How does it work?
+
+### 1. Types of decay
+
+- **Alpha decay:** a heavy nucleus emits a helium nucleus. $\ce{^{226}_{88}Ra -> ^{222}_{86}Rn + ^{4}_{2}He}$
+- **Beta decay:** a neutron turns into a proton and an electron, and the electron is emitted. $\ce{^{14}_{6}C -> ^{14}_{7}N + ^{0}_{-1}e}$
+- **Positron emission:** a proton turns into a neutron and a positron. $\ce{^{18}_{9}F -> ^{18}_{8}O + ^{0}_{+1}e}$
+- **Gamma emission:** a nucleus with excess energy releases it as a gamma ray, often just after alpha or beta decay. The element does not change.
+
+### 2. Balancing a nuclear equation
+
+1. Write the parent nucleus on the left and the known products on the right.
+2. **Mass numbers:** top numbers on the left = top numbers on the right.
+3. **Atomic numbers:** bottom numbers on the left = bottom numbers on the right.
+4. Use the atomic number of the unknown to find its **symbol** from the periodic table.
+
+### 3. Penetrating power
+
+Alpha particles are heavy and doubly charged: they ionize strongly but are stopped by a sheet of paper or the outer layer of skin. Beta particles get through paper but are stopped by a few millimetres of aluminium. Gamma rays are the most penetrating and are only reduced by thick lead or concrete. Alpha emitters are therefore most dangerous **inside** the body (if swallowed or inhaled).
+
+### 4. Half-life
+
+The **half-life**, $t_{1/2}$, is the time it takes for **half** of the radioactive nuclei in a sample to decay. After each half-life, the amount (and the **activity**, the number of decays per second) halves again:
+
+$$
+N = N_0 \left(\tfrac{1}{2}\right)^{n} \qquad n = \frac{t}{t_{1/2}}
+$$
+
+where $N_0$ is the starting amount, $N$ the amount left after time $t$, and $n$ the number of half-lives. The time and the half-life must be in the **same unit**, so $n$ has no unit. $N$ and $N_0$ can be masses, numbers of nuclei or activities, as long as both use the same unit.
+
+When $n$ is not a whole number, solve for $t$ with logarithms:
+
+$$
+t = t_{1/2} \times \frac{\ln(N_0/N)}{\ln 2}
+$$
+
+| Nuclide | Half-life |
+|---|---|
+| fluorine-18 | 110 min |
+| technetium-99m | 6.01 h |
+| radon-222 | 3.82 d |
+| iodine-131 | 8.02 d |
+| carbon-14 | 5730 yr |
+| uranium-238 | 4.47 × 10⁹ yr |
+
+### 5. Radiocarbon dating
+
+Living things take in carbon-14 from the air, so the ratio of carbon-14 to carbon-12 in them stays constant. After death no new carbon-14 enters, and the carbon-14 decays with a half-life of 5730 years. Comparing the carbon-14 activity of a sample with that of living material gives its age.
+
+<Analogy>
+Half-life is like a bowl of popcorn kernels in which each kernel has the same chance of popping each minute. You can't predict when one particular kernel pops, but you can say confidently that half of the kernels will have popped after a certain time, then half of the rest, and so on. In the same way, the decay of one nucleus is random, but a large sample follows the half-life exactly.
+</Analogy>
+
+<MorePrecisely>
+Radioactive decay is a **first-order** process: the rate is proportional to the number of nuclei present, $\text{activity} = kN$, with the decay constant $k = \ln 2 / t_{1/2}$. Activity is measured in **becquerels** (1 Bq = 1 decay per second). Another decay mode, **electron capture**, pulls an inner electron into the nucleus, turning a proton into a neutron (Z − 1, A unchanged). Whether a nucleus is stable depends mainly on its neutron-to-proton ratio: too many neutrons favours beta decay, too few favours positron emission or electron capture, and very heavy nuclei (Z above 83) undergo alpha decay.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/nuclear/penetration.svg" alt="Radiation from a source travels towards three barriers. The alpha ray is stopped by paper. The beta ray passes through the paper but is stopped by aluminium a few millimetres thick. The gamma ray passes through paper and aluminium and is greatly reduced by several centimetres of lead, with a faint dotted line continuing beyond: gamma is only reduced, never fully stopped." caption="Alpha is stopped by paper, beta by a few millimetres of aluminium; gamma is only reduced by thick lead." width={360} height={300} />
+
+<Figure src="/images/nuclear/decay-curve.svg" alt="A decay curve of percent of nuclei remaining against time in half-lives. The curve starts at 100 percent and falls to 50 percent after 1 half-life, 25 percent after 2, 12.5 percent after 3 and 6.25 percent after 4, with dashed guide lines at each point. The formula is N = N0 × (1/2) to the power n, where n = t divided by the half-life." caption="Each half-life halves what is left: 100 %, 50 %, 25 %, 12.5 %, 6.25 %." width={360} height={360} />
+
+## Worked example
+
+<Example title="Completing nuclear equations">
+**Question:** Complete: (a) $\ce{^{238}_{92}U -> ? + ^{4}_{2}He}$ (b) $\ce{^{131}_{53}I -> ? + ^{0}_{-1}e}$
+
+1. (a) Mass number: 238 = A + 4, so A = 234. Atomic number: 92 = Z + 2, so Z = 90, which is thorium: **$\ce{^{234}_{90}Th}$**.
+2. (b) Mass number: 131 = A + 0, so A = 131. Atomic number: 53 = Z + (−1), so Z = 54, which is xenon: **$\ce{^{131}_{54}Xe}$**.
+</Example>
+
+<Example title="A whole number of half-lives">
+**Question:** A hospital receives 80.0 mg of iodine-131 ($t_{1/2}$ = 8.02 d). How much is left after 24.06 d?
+
+1. $n = \dfrac{t}{t_{1/2}} = \dfrac{24.06\ \text{d}}{8.02\ \text{d}} = 3.00$ (the days cancel)
+2. $N = 80.0\ \text{mg} \times \left(\tfrac{1}{2}\right)^{3.00} = \dfrac{80.0\ \text{mg}}{8} =$ **10.0 mg**
+</Example>
+
+<Example title="Radiocarbon dating">
+**Question:** A piece of ancient wood has 35.0 % of the carbon-14 activity of living wood. How old is it? ($t_{1/2}$ = 5730 yr)
+
+1. $\dfrac{N_0}{N} = \dfrac{100.0\ \%}{35.0\ \%} = 2.857$ (a ratio, so no unit)
+2. $n = \dfrac{\ln 2.857}{\ln 2} = \dfrac{1.050}{0.6931} = 1.515$ half-lives
+3. $t = 1.515 \times 5730\ \text{yr} =$ **8.68 × 10³ yr** (about 8680 years)
+4. Check: 35.0 % lies between 50 % (1 half-life) and 25 % (2 half-lives), so the age must be between 5730 yr and 11 460 yr. ✓
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking everything is gone after two half-lives">
+After one half-life, half is left; after two, a **quarter** (not zero). The amount approaches zero but, in a large sample, takes many half-lives to become negligible: after 10 half-lives, about 0.1 % remains.
+</CommonMistake>
+
+<CommonMistake title="Changing the mass number in beta decay">
+Beta decay changes a neutron into a proton, so the mass number **stays the same** and the atomic number goes **up by 1**. $\ce{^{14}_{6}C}$ becomes $\ce{^{14}_{7}N}$, not $\ce{^{13}_{6}C}$.
+</CommonMistake>
+
+<CommonMistake title="Mixing time units">
+In $n = t/t_{1/2}$, both times must be in the same unit. For technetium-99m ($t_{1/2}$ = 6.01 h) after 2.00 days, first convert: $2.00\ \text{d} \times 24\ \text{h/d} = 48.0\ \text{h}$.
+</CommonMistake>
+
+<NotationNote>
+- In nuclide notation the mass number is on top and the atomic number below: $\ce{^{14}_{6}C}$. In text, write carbon-14 or C-14.
+- A beta particle can be written $\ce{^{0}_{-1}e}$ or $\ce{^{0}_{-1}\beta}$; an alpha particle $\ce{^{4}_{2}He}$ or $\ce{^{4}_{2}\alpha}$.
+- The "m" in technetium-99m means "metastable": an excited nucleus that releases gamma rays.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Alpha: A − 4, Z − 2. Beta (β⁻): A same, Z + 1. Positron (β⁺): A same, Z − 1. Gamma: no change.
+- Nuclear equations: mass numbers and atomic numbers both balance.
+- Penetration: alpha stopped by paper, beta by aluminium, gamma reduced by thick lead.
+- Half-life: $N = N_0(\tfrac{1}{2})^{n}$ with $n = t/t_{1/2}$ (same time units); for non-whole $n$, $t = t_{1/2} \times \ln(N_0/N)/\ln 2$.
+</RememberThis>
