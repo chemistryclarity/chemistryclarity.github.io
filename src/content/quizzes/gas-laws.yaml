@@ -1,0 +1,79 @@
+# Quiz: The Gas Laws
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Every answer checked by computer with K = °C + 273.15 and + 273.
+title: 'The Gas Laws: Quiz'
+description: 'Seven questions on the gas laws, kelvin temperatures and the ideal gas law, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: gl-q1
+    prompt: 'At constant temperature, the volume of a gas is halved. What happens to its pressure?'
+    choices:
+      - 'It halves'
+      - 'It doubles'
+      - 'It stays the same'
+      - 'It increases by a factor of four'
+    answer: 'It doubles'
+    explanation: 'Boyle''s law: P × V stays constant, so halving V doubles P.'
+    difficulty: easy
+  - id: gl-q2
+    prompt: 'A gas at constant pressure is heated from 100 °C to 200 °C. By what factor does its volume change?'
+    choices:
+      - '2.00'
+      - '1.27'
+      - '0.50'
+      - '1.00'
+    answer: '1.27'
+    explanation: 'Use kelvin: 473 K ÷ 373 K = 1.27. Doubling the Celsius number does not double the temperature.'
+    difficulty: medium
+  - id: gl-q3
+    prompt: 'Which temperature must be used in gas law calculations?'
+    choices:
+      - 'Degrees Celsius'
+      - 'Degrees Fahrenheit'
+      - 'Kelvin'
+      - 'Any unit, as long as both temperatures match'
+    answer: 'Kelvin'
+    explanation: 'Gas laws need an absolute scale that starts at zero. Even if both temperatures are in °C, the ratio is wrong.'
+    difficulty: easy
+  - id: gl-q4
+    prompt: 'A sealed can contains gas at 1.00 atm and 27 °C. It is heated to 327 °C. What is the new pressure?'
+    choices:
+      - '12.1 atm'
+      - '2.00 atm'
+      - '1.09 atm'
+      - '0.50 atm'
+    answer: '2.00 atm'
+    explanation: 'Gay-Lussac: P₂ = 1.00 × 600 K ÷ 300 K = 2.00 atm. (Using °C would give 12.1 atm, which is wrong.)'
+    difficulty: medium
+  - id: gl-q5
+    prompt: 'What is the pressure of 0.200 mol of gas in a 10.0 L container at 27 °C? (R = 8.314 L·kPa/(mol·K))'
+    choices:
+      - '4.49 kPa'
+      - '49.9 kPa'
+      - '499 kPa'
+      - '0.499 kPa'
+    answer: '49.9 kPa'
+    explanation: 'P = nRT/V = 0.200 × 8.314 × 300.15 ÷ 10.0 = 49.9 kPa.'
+    difficulty: medium
+  - id: gl-q6
+    prompt: 'At the same temperature and pressure, 2 mol of nitrogen and 2 mol of helium occupy…'
+    choices:
+      - 'the same volume'
+      - 'different volumes, because N₂ molecules are heavier'
+      - 'different volumes, because helium atoms are smaller'
+      - 'no volume, because gases have no fixed volume'
+    answer: 'the same volume'
+    explanation: 'Avogadro''s law: equal moles of ideal gases at the same T and P occupy equal volumes, whatever the gas.'
+    difficulty: medium
+  - id: gl-q7
+    prompt: 'Under which conditions does a real gas behave most like an ideal gas?'
+    choices:
+      - 'High pressure and low temperature'
+      - 'Low pressure and high temperature'
+      - 'High pressure and high temperature'
+      - 'Low pressure and low temperature'
+    answer: 'Low pressure and high temperature'
+    explanation: 'Then the particles are far apart and fast, so their own volume and the attractions between them matter least.'
+    difficulty: hard

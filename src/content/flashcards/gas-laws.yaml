@@ -1,0 +1,39 @@
+# Flashcards: The Gas Laws
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'The Gas Laws: Flashcards'
+description: 'Revise Boyle''s, Charles''s, Gay-Lussac''s and Avogadro''s laws, the combined gas law and PV = nRT.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: gl-01
+    front: 'State Boyle''s law.'
+    back: 'At constant n and T, pressure is inversely proportional to volume: $P_1V_1 = P_2V_2$'
+  - id: gl-02
+    front: 'State Charles''s law.'
+    back: 'At constant n and P, volume is proportional to kelvin temperature: $V_1/T_1 = V_2/T_2$'
+  - id: gl-03
+    front: 'State Gay-Lussac''s law.'
+    back: 'At constant n and V, pressure is proportional to kelvin temperature: $P_1/T_1 = P_2/T_2$'
+  - id: gl-04
+    front: 'State Avogadro''s law.'
+    back: 'At constant P and T, volume is proportional to the number of moles: $V_1/n_1 = V_2/n_2$'
+  - id: gl-05
+    front: 'Write the ideal gas law.'
+    back: '$PV = nRT$'
+  - id: gl-06
+    front: 'Give two values of the gas constant R.'
+    back: '0.08206 L·atm/(mol·K) and 8.314 L·kPa/(mol·K)'
+  - id: gl-07
+    front: 'Convert 25 °C to kelvin.'
+    back: '25 + 273.15 = 298.15 K (about 298 K)'
+  - id: gl-08
+    front: 'Why must gas law temperatures be in kelvin?'
+    back: 'Kelvin starts at absolute zero, so V and P are proportional to it. In °C, doubling the number does not double the temperature.'
+  - id: gl-09
+    front: 'What volume does 1 mol of ideal gas occupy at 0 °C and 1 atm?'
+    back: 'About 22.4 L'
+  - id: gl-10
+    front: 'Write the combined gas law.'
+    back: '$\dfrac{P_1V_1}{T_1} = \dfrac{P_2V_2}{T_2}$'

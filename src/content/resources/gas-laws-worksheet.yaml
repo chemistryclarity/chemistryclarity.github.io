@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/gas-laws-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Gas Laws Worksheet'
+description: '9 questions on Boyle''s, Charles''s and Gay-Lussac''s laws, the combined gas law and PV = nRT. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/gas-laws-worksheet.pdf'
+answerKey: '/downloads/gas-laws-worksheet-answers.pdf'
+preview: '/previews/gas-laws-worksheet.png'
+status: review

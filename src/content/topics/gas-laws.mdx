@@ -1,0 +1,158 @@
+---
+title: The Gas Laws
+question: "What are the gas laws and how do you use the ideal gas law?"
+description: "Boyle's, Charles's, Gay-Lussac's and Avogadro's laws, the combined gas law and the ideal gas law PV = nRT, with worked examples and unit tips."
+area: states-of-matter
+level: intermediate
+order: 10
+prerequisites: [mole-concept]
+related: [mole-concept, stoichiometry, molarity]
+flashcards: gas-laws
+quiz: gas-laws
+resources: [gas-laws-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  R = 0.08206 L·atm/(mol·K) = 8.314 L·kPa/(mol·K). 1 atm = 101.325 kPa = 760 mmHg.
+  Every answer checked by computer with both K = °C + 273.15 and K = °C + 273; all agree to 3 significant figures.
+  REVIEW: "STP" differs between courses: 0 °C and 1 atm (22.4 L/mol) or IUPAC 0 °C and 1 bar (22.7 L/mol). Both are mentioned.
+*/}
+
+## What is it?
+
+The **gas laws** describe how four quantities of a gas are related:
+
+| Quantity | Symbol | Common units |
+|---|---|---|
+| Pressure | $P$ | atm, kPa, mmHg |
+| Volume | $V$ | L, mL |
+| Temperature | $T$ | **K (kelvin) only** |
+| Amount | $n$ | mol |
+
+They all combine into a single equation, the **ideal gas law**:
+
+$$
+PV = nRT
+$$
+
+where $R$ is the **gas constant**: $R = 0.08206\ \text{L·atm/(mol·K)}$ or $R = 8.314\ \text{L·kPa/(mol·K)}$.
+
+<KeyIdea>
+Gas temperatures must always be in **kelvin**: $T(\text{K}) = T(°\text{C}) + 273.15$ (many courses use 273). Gas laws use kelvin because it starts from absolute zero, where the volume of an ideal gas would shrink to zero.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Everyday life:** tyres lose pressure in winter, aerosol cans warn "do not heat", and a sealed bag of crisps puffs up on a plane.
+- **Calculations:** with $PV = nRT$ you can turn a gas volume into moles and then use [stoichiometry](/chemistry/stoichiometry/) for reactions that make or use gases.
+- **Molar mass:** measuring the mass and volume of a gas sample lets you identify the gas.
+
+## How does it work?
+
+### 1. The simple gas laws
+
+Each law keeps two quantities fixed and links the other two:
+
+| Law | Fixed | Relationship | Equation |
+|---|---|---|---|
+| **Boyle's law** | $n$, $T$ | $P$ and $V$ inversely proportional | $P_1V_1 = P_2V_2$ |
+| **Charles's law** | $n$, $P$ | $V$ proportional to $T$ | $\dfrac{V_1}{T_1} = \dfrac{V_2}{T_2}$ |
+| **Gay-Lussac's law** | $n$, $V$ | $P$ proportional to $T$ | $\dfrac{P_1}{T_1} = \dfrac{P_2}{T_2}$ |
+| **Avogadro's law** | $P$, $T$ | $V$ proportional to $n$ | $\dfrac{V_1}{n_1} = \dfrac{V_2}{n_2}$ |
+
+### 2. Why gases behave this way
+
+Gas particles move quickly and randomly, and pressure comes from their **collisions with the container walls**.
+
+- **Smaller volume** (Boyle): the particles hit the walls more often, so pressure rises.
+- **Higher temperature** (Gay-Lussac): the particles move faster and hit the walls harder and more often, so pressure rises. If the container can expand (Charles), the volume grows instead.
+- **More particles** (Avogadro): more collisions, so at fixed pressure the gas takes up more space.
+
+### 3. The combined gas law
+
+When $n$ stays the same but $P$, $V$ and $T$ all change:
+
+$$
+\frac{P_1V_1}{T_1} = \frac{P_2V_2}{T_2}
+$$
+
+Any unit of pressure or volume works here, as long as **both sides use the same units**. Temperature must be in kelvin.
+
+### 4. The ideal gas law
+
+$PV = nRT$ works for a single state of a gas: give it any three of $P$, $V$, $n$ and $T$ and it finds the fourth. Choose $R$ to match your units:
+
+- $P$ in **atm**, $V$ in **L**: use $R = 0.08206$
+- $P$ in **kPa**, $V$ in **L**: use $R = 8.314$
+
+**Molar volume:** at 0 °C and 1 atm, one mole of any ideal gas occupies about **22.4 L**. At 25 °C and 1 atm it is about **24.5 L**.
+
+<Analogy>
+Picture a crowd of people moving around a room. Shrink the room (smaller V) or make everyone run faster (higher T), and they bump into the walls more often: that's higher pressure. Add more people (more n) and, to keep the bumping the same, you need a bigger room.
+</Analogy>
+
+<MorePrecisely>
+The ideal gas law assumes the particles have **no volume** and **no attractions** to each other. Real gases follow it closely at low pressure and high temperature, but deviate at high pressure and low temperature (especially near the point where they condense). "Standard temperature and pressure" (STP) is defined differently by different sources: 0 °C and 1 atm gives 22.4 L/mol, while the IUPAC definition of 0 °C and 1 bar (100 kPa) gives 22.7 L/mol. Check which one your course uses.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/gas-laws/gas-law-graphs.svg" alt="Two graphs. Top, Boyle's law: pressure against volume is a falling curve; at 2 L the pressure is 4 atm and at 4 L it is 2 atm, so halving the volume doubles the pressure. Bottom, Charles's law: volume against temperature in degrees Celsius is a straight line, 1 L at 0 °C rising to about 2.1 L at 300 °C; extended back as a dashed line, it reaches zero volume at −273 °C, which is 0 K or absolute zero." caption="Boyle's law is an inverse relationship; Charles's law is a straight line through absolute zero." width={360} height={560} />
+
+## Worked example
+
+<Example title="Boyle's law">
+**Question:** A gas occupies 2.0 L at 1.0 atm. It is compressed to 0.50 L at constant temperature. What is the new pressure?
+
+1. $P_1V_1 = P_2V_2$, so $P_2 = \dfrac{P_1V_1}{V_2} = \dfrac{1.0 \times 2.0}{0.50}$
+2. $P_2 =$ **4.0 atm**. The volume became 4 times smaller, so the pressure became 4 times larger.
+</Example>
+
+<Example title="Charles's law">
+**Question:** A balloon holds 3.00 L of gas at 27 °C. What is its volume at 127 °C, at the same pressure?
+
+1. Convert to kelvin: $T_1 = 300.15\ \text{K}$, $T_2 = 400.15\ \text{K}$
+2. $V_2 = V_1 \times \dfrac{T_2}{T_1} = 3.00 \times \dfrac{400.15}{300.15}$
+3. $V_2 =$ **4.00 L**
+</Example>
+
+<Example title="The ideal gas law">
+**Question:** What volume does 0.500 mol of gas occupy at 25 °C and 1.00 atm?
+
+1. $T = 25 + 273.15 = 298.15\ \text{K}$
+2. $V = \dfrac{nRT}{P} = \dfrac{0.500 \times 0.08206 \times 298.15}{1.00}$
+3. $V =$ **12.2 L**
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using degrees Celsius">
+Heating a gas from 100 °C to 200 °C does **not** double its volume. In kelvin it goes from 373 K to 473 K, so the volume increases by a factor of only about **1.27**.
+</CommonMistake>
+
+<CommonMistake title="Mixing units with R">
+With $R = 0.08206$, pressure must be in **atm** and volume in **L**. With $R = 8.314$, use **kPa** and **L**. Convert first: 1 atm = 101.325 kPa = 760 mmHg; 1 L = 1000 mL.
+</CommonMistake>
+
+<CommonMistake title="Flipping the relationship in Boyle's law">
+Pressure and volume are **inversely** proportional: when one goes up, the other goes down. Check that your answer makes sense.
+</CommonMistake>
+
+<NotationNote>
+- Pressure may be given in atm, kPa, mmHg, torr (1 torr = 1 mmHg) or bar (1 bar = 100 kPa).
+- Subscripts 1 and 2 mean "before" and "after" a change.
+- Some books write $V \propto T$ ("V is proportional to T").
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Always use kelvin: K = °C + 273.15.
+- Boyle $P_1V_1 = P_2V_2$; Charles $V/T$ constant; Gay-Lussac $P/T$ constant; Avogadro $V/n$ constant.
+- Combined: $\dfrac{P_1V_1}{T_1} = \dfrac{P_2V_2}{T_2}$; ideal: $PV = nRT$.
+- $R = 0.08206$ L·atm/(mol·K) or 8.314 L·kPa/(mol·K); about 22.4 L/mol at 0 °C and 1 atm.
+</RememberThis>
