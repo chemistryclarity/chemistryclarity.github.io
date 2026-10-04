@@ -1,0 +1,79 @@
+# Quiz: Le Chatelier's Principle
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Le Chatelier''s Principle: Quiz'
+description: 'Seven questions on how concentration, pressure, temperature and catalysts affect equilibria, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: lc-q1
+    prompt: 'For $\ce{N2 + 3H2 <=> 2NH3}$, what is the effect of removing $\ce{NH3}$ as it forms?'
+    choices:
+      - 'The equilibrium shifts left'
+      - 'The equilibrium shifts right, making more NH₃'
+      - 'K increases'
+      - 'No effect'
+    answer: 'The equilibrium shifts right, making more NH₃'
+    explanation: 'Removing a product makes Q smaller than K, so the reaction goes forward to replace some of it. K is unchanged.'
+    difficulty: easy
+  - id: lc-q2
+    prompt: 'Which equilibrium shifts to the right when the pressure is increased?'
+    choices:
+      - '$\ce{2NO2(g) <=> N2O4(g)}$'
+      - '$\ce{H2(g) + I2(g) <=> 2HI(g)}$'
+      - '$\ce{PCl5(g) <=> PCl3(g) + Cl2(g)}$'
+      - '$\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$'
+    answer: '$\ce{2NO2(g) <=> N2O4(g)}$'
+    explanation: 'Higher pressure favours fewer moles of gas: 2 mol → 1 mol. HI: no change (2 = 2). The other two have more gas on the right, so they shift left.'
+    difficulty: medium
+  - id: lc-q3
+    prompt: 'For an exothermic reaction at equilibrium, what does raising the temperature do?'
+    choices:
+      - 'Shifts right and increases K'
+      - 'Shifts left and decreases K'
+      - 'Shifts left but K is unchanged'
+      - 'Has no effect'
+    answer: 'Shifts left and decreases K'
+    explanation: 'Heat is a "product" of an exothermic reaction. Adding heat shifts the equilibrium left, and K itself becomes smaller.'
+    difficulty: medium
+  - id: lc-q4
+    prompt: 'What is the effect of adding a catalyst to an equilibrium mixture?'
+    choices:
+      - 'More products form'
+      - 'More reactants form'
+      - 'Equilibrium is reached faster, with the same composition'
+      - 'K increases'
+    answer: 'Equilibrium is reached faster, with the same composition'
+    explanation: 'A catalyst speeds up the forward and reverse reactions equally, so the position of equilibrium and K are unchanged.'
+    difficulty: easy
+  - id: lc-q5
+    prompt: 'Which change alters the value of $K_\text{c}$?'
+    choices:
+      - 'Adding more reactant'
+      - 'Increasing the pressure'
+      - 'Changing the temperature'
+      - 'Adding a catalyst'
+    answer: 'Changing the temperature'
+    explanation: 'Concentration and pressure changes shift the position but leave K unchanged. Only temperature changes K.'
+    difficulty: easy
+  - id: lc-q6
+    prompt: '$\ce{N2O4(g) <=> 2NO2(g)}$, ΔH = +57 kJ. $\ce{N2O4}$ is colourless and $\ce{NO2}$ is brown. What happens when the mixture is cooled?'
+    choices:
+      - 'It becomes darker brown'
+      - 'It becomes paler'
+      - 'No colour change'
+      - 'It turns colourless instantly'
+    answer: 'It becomes paler'
+    explanation: 'The forward reaction is endothermic. Cooling favours the exothermic reverse reaction, forming more colourless N₂O₄, so the brown colour fades.'
+    difficulty: medium
+  - id: lc-q7
+    prompt: 'An equilibrium mixture of $\ce{H2 + I2 <=> 2HI}$ ($K_\text{c} = 49.0$) has 0.0222 M H₂, 0.0222 M I₂ and 0.156 M HI. 0.100 M H₂ is added. What is Q just after the addition?'
+    choices:
+      - '49.0'
+      - '8.99'
+      - '0.111'
+      - '7.03'
+    answer: '8.99'
+    explanation: 'Q = (0.156 M)² / ((0.122 M)(0.0222 M)) = 8.99. Q < K, so the reaction goes forward, using up H₂ and I₂.'
+    difficulty: hard

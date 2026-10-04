@@ -1,0 +1,83 @@
+---
+title: Le Chatelier's Principle
+subtitle: Answer key with worked solutions
+kind: answer-key
+level: intermediate
+status: review
+assisted: true
+---
+
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer. Concentrations carry M in every step; Kc and Q are dimensionless. */}
+
+## A. Understanding
+
+<Q n={1}>Le Chatelier's principle.</Q>
+<Answer>If a system at equilibrium is disturbed by a change in concentration, pressure or temperature, the position of equilibrium shifts in the direction that **partly counteracts** the change.</Answer>
+
+## B. The Haber process
+
+<Q n={2}>Predictions.</Q>
+<Answer>(a) Shifts **right**: more $\ce{NH3}$; K unchanged. (b) Shifts **right**: more $\ce{NH3}$ forms; K unchanged. (c) Shifts **right** (4 mol gas → 2 mol gas): more $\ce{NH3}$; K unchanged. (d) Forward reaction is exothermic, so it shifts **left**: less $\ce{NH3}$; **K decreases**. (e) **No shift** and K unchanged; equilibrium is reached faster.</Answer>
+
+<Q n={3}>Why 450 °C.</Q>
+<Answer>At low temperatures the equilibrium yield is higher, but the **rate** is far too slow, even with a catalyst. 450 °C is a **compromise**: a reasonable yield produced quickly enough. (High pressure and recycling of unreacted gases also improve the overall yield.)</Answer>
+
+## C. Colour and temperature
+
+<Q n={4}>Cooling.</Q>
+<Answer>The forward reaction is endothermic (ΔH = +57 kJ), so cooling favours the **exothermic reverse** reaction. More colourless $\ce{N2O4}$ forms, and the mixture becomes **paler**.</Answer>
+
+<Q n={5}>Compression.</Q>
+<Answer>Halving the volume immediately **doubles all concentrations**, so the brown colour first **darkens**. The higher pressure then shifts the equilibrium toward **fewer moles of gas** (2 mol $\ce{NO2}$ → 1 mol $\ce{N2O4}$), so some $\ce{NO2}$ is used up and the colour becomes slightly **paler**. The change is only partly counteracted, so it stays darker than at the start.</Answer>
+
+## D. Special cases
+
+<Q n={6}>HI equilibrium.</Q>
+<Answer>There are **2 mol of gas on each side**, so neither direction reduces the number of gas molecules. Changing the pressure changes all concentrations by the same factor, and Q stays equal to K.</Answer>
+
+<Q n={7}>Adding CaCO₃.</Q>
+<Answer>**No shift.** $\ce{CaCO3}$ is a pure solid, so it does not appear in $K_\text{c} = [\ce{CO2}]$; adding more does not change Q.</Answer>
+
+## E. Using Q
+
+<Q n={8}>Q after adding H₂.</Q>
+<Answer>
+
+New $[\ce{H2}] = 0.0222\ \text{M} + 0.100\ \text{M} = 0.122\ \text{M}$
+
+$$
+Q = \frac{(0.156\ \text{M})^2}{(0.122\ \text{M})(0.0222\ \text{M})} = 8.99
+$$
+
+The units of M² cancel. $Q = 8.99 < K_\text{c} = 49.0$, so the reaction goes **forward** (right).
+
+</Answer>
+
+## F. Challenge
+
+<Q n={9}>New equilibrium.</Q>
+<Answer>
+
+Let $x$ (in M) be the decrease in $[\ce{I2}]$. New equilibrium: $[\ce{H2}] = 0.12222\ \text{M} - x$, $[\ce{I2}] = 0.02222\ \text{M} - x$, $[\ce{HI}] = 0.15556\ \text{M} + 2x$. Working in units of M:
+
+$$
+49.0 = \frac{(0.15556 + 2x)^2}{(0.12222 - x)(0.02222 - x)}
+$$
+
+Expanding and collecting terms:
+
+$$
+45.0x^2 - 7.700x + 0.1089 = 0
+$$
+
+$$
+x = \frac{7.700 - \sqrt{(7.700)^2 - 4(45.0)(0.1089)}}{2(45.0)} = \frac{7.700 - 6.300}{90.0} = 0.01556
+$$
+
+(The other root, 0.1556, would make $[\ce{I2}]$ negative, so it is rejected.)
+
+$[\ce{H2}] = 0.12222\ \text{M} - 0.01556\ \text{M} =$ **0.107 M**; $[\ce{I2}] = 0.02222\ \text{M} - 0.01556\ \text{M} =$ **0.00667 M**; $[\ce{HI}] = 0.15556\ \text{M} + 0.03111\ \text{M} =$ **0.187 M**
+
+Check: $\dfrac{(0.18667)^2}{(0.10667)(0.00667)} = 49.0$ ✓
+
+</Answer>

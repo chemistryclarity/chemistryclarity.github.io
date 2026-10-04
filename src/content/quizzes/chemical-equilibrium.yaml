@@ -1,0 +1,79 @@
+# Quiz: Chemical Equilibrium and Kc
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Chemical Equilibrium: Quiz'
+description: 'Seven questions on dynamic equilibrium, Kc, Q versus K and ICE tables, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ce-q1
+    prompt: 'Which statement describes a system at chemical equilibrium?'
+    choices:
+      - 'The reactions have stopped'
+      - 'The concentrations of reactants and products are equal'
+      - 'The forward and reverse rates are equal, and concentrations are constant'
+      - 'All the reactants have turned into products'
+    answer: 'The forward and reverse rates are equal, and concentrations are constant'
+    explanation: 'Equilibrium is dynamic: both reactions continue at the same rate, so concentrations stay constant, but they are generally not equal.'
+    difficulty: easy
+  - id: ce-q2
+    prompt: 'What is $K_\text{c}$ for $\ce{2SO2(g) + O2(g) <=> 2SO3(g)}$?'
+    choices:
+      - '$\dfrac{[\ce{SO3}]^2}{[\ce{SO2}]^2[\ce{O2}]}$'
+      - '$\dfrac{2[\ce{SO3}]}{2[\ce{SO2}][\ce{O2}]}$'
+      - '$\dfrac{[\ce{SO2}]^2[\ce{O2}]}{[\ce{SO3}]^2}$'
+      - '$\dfrac{[\ce{SO3}]}{[\ce{SO2}][\ce{O2}]}$'
+    answer: '$\dfrac{[\ce{SO3}]^2}{[\ce{SO2}]^2[\ce{O2}]}$'
+    explanation: 'Products over reactants, each raised to the power of its coefficient.'
+    difficulty: easy
+  - id: ce-q3
+    prompt: 'What is $K_\text{c}$ for $\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$?'
+    choices:
+      - '$\dfrac{[\ce{CaO}][\ce{CO2}]}{[\ce{CaCO3}]}$'
+      - '$[\ce{CO2}]$'
+      - '$\dfrac{1}{[\ce{CO2}]}$'
+      - '$[\ce{CaO}][\ce{CO2}]$'
+    answer: '$[\ce{CO2}]$'
+    explanation: 'Pure solids are left out of the expression, so only the gas remains.'
+    difficulty: medium
+  - id: ce-q4
+    prompt: 'An equilibrium mixture of $\ce{N2O4 <=> 2NO2}$ contains 0.0450 M $\ce{N2O4}$ and 0.0300 M $\ce{NO2}$. What is $K_\text{c}$?'
+    choices:
+      - '0.667'
+      - '0.0200'
+      - '1.33'
+      - '50.0'
+    answer: '0.0200'
+    explanation: '$K_\text{c} = (0.0300\ \text{M})^2 / (0.0450\ \text{M})$, with each concentration divided by 1 M: 0.000900 ÷ 0.0450 = 0.0200. The answer 0.667 forgets to square [NO₂].'
+    difficulty: medium
+  - id: ce-q5
+    prompt: 'For a reaction, $K_\text{c} = 49.0$ and $Q = 16$. What happens?'
+    choices:
+      - 'The system is at equilibrium'
+      - 'The reaction goes forward, making more products'
+      - 'The reaction goes in reverse, making more reactants'
+      - 'K increases to 16'
+    answer: 'The reaction goes forward, making more products'
+    explanation: '$Q < K$ means there are too few products, so the reaction goes forward until $Q = K$.'
+    difficulty: medium
+  - id: ce-q6
+    prompt: 'For $\ce{2SO2 + O2 <=> 2SO3}$, $K_\text{c} = 800$. What is $K_\text{c}$ for $\ce{SO2 + 1/2 O2 <=> SO3}$?'
+    choices:
+      - '400'
+      - '28.3'
+      - '1600'
+      - '0.00125'
+    answer: '28.3'
+    explanation: 'Halving all the coefficients raises K to the power ½: √800 = 28.3. The answer 0.00125 is K for the reverse reaction.'
+    difficulty: hard
+  - id: ce-q7
+    prompt: '0.100 M $\ce{H2}$ and 0.100 M $\ce{I2}$ react: $\ce{H2 + I2 <=> 2HI}$, $K_\text{c} = 49.0$. What is [HI] at equilibrium?'
+    choices:
+      - '0.0222 M'
+      - '0.0778 M'
+      - '0.156 M'
+      - '0.200 M'
+    answer: '0.156 M'
+    explanation: 'Taking the square root of 49.0 = (2x)² / (0.100 M − x)² gives 7.00 = 2x / (0.100 M − x), so x = 0.0778 M and [HI] = 2x = 0.156 M. 0.0778 M is x itself.'
+    difficulty: hard

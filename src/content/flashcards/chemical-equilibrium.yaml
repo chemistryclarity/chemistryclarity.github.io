@@ -1,0 +1,39 @@
+# Flashcards: Chemical Equilibrium and Kc
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Chemical Equilibrium: Flashcards'
+description: 'Revise dynamic equilibrium, Kc expressions, Q versus K and ICE tables.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ce-01
+    front: 'What is dynamic equilibrium?'
+    back: 'The state in which the forward and reverse reactions continue at equal rates, so concentrations stay constant.'
+  - id: ce-02
+    front: 'Are reactant and product concentrations equal at equilibrium?'
+    back: 'No. They are constant, not equal.'
+  - id: ce-03
+    front: 'Write $K_\text{c}$ for $\ce{N2 + 3H2 <=> 2NH3}$.'
+    back: '$K_\text{c} = \dfrac{[\ce{NH3}]^2}{[\ce{N2}][\ce{H2}]^3}$'
+  - id: ce-04
+    front: 'Which substances are left out of $K_\text{c}$?'
+    back: 'Pure solids and pure liquids (including water as the solvent).'
+  - id: ce-05
+    front: 'What does a very large $K_\text{c}$ mean?'
+    back: 'At equilibrium the mixture is mostly products: the reaction goes almost to completion.'
+  - id: ce-06
+    front: 'If $Q < K$, which way does the reaction go?'
+    back: 'Forward (→), making more products until $Q = K$.'
+  - id: ce-07
+    front: 'If K for a reaction is 800, what is K for the reverse reaction?'
+    back: '$\dfrac{1}{800} = 1.25 \times 10^{-3}$'
+  - id: ce-08
+    front: 'What is the only factor that changes the value of $K_\text{c}$?'
+    back: 'Temperature.'
+  - id: ce-09
+    front: 'What do the letters in an ICE table stand for?'
+    back: 'Initial, Change, Equilibrium (concentrations, in M).'
+  - id: ce-10
+    front: 'Why does $K_\text{c}$ have no unit?'
+    back: 'Each concentration is divided by the standard concentration $c° = 1\ \text{M}$, so the units cancel.'

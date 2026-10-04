@@ -1,0 +1,170 @@
+---
+title: Chemical Equilibrium and Kc
+question: "What is chemical equilibrium and how do you calculate Kc?"
+description: "Dynamic equilibrium, writing the equilibrium constant Kc, comparing Q with K to predict the direction of change, and solving equilibrium problems with ICE tables."
+area: equilibrium
+level: intermediate
+order: 10
+prerequisites: [molarity, balancing-equations]
+related: [le-chateliers-principle, weak-acids, buffers]
+flashcards: chemical-equilibrium
+quiz: chemical-equilibrium
+resources: [chemical-equilibrium-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Kc values in examples are given data (Kc = 49.0 for H2 + I2 <=> 2HI is close to the value near 450 °C). Every answer checked by computer.
+  Units: concentrations in M on every number; Kc is dimensionless (each concentration divided by c° = 1 M), shown explicitly in worked examples.
+  The graphs are calculated from a simple rate model (illustrative time axis).
+*/}
+
+## What is it?
+
+Many reactions do not go to completion. They are **reversible**: the products can react to re-form the reactants. In a closed container, a reversible reaction reaches **chemical equilibrium**:
+
+$$
+\ce{H2(g) + I2(g) <=> 2HI(g)}
+$$
+
+At equilibrium the **forward and reverse reactions continue at equal rates**, so the concentrations of reactants and products stay **constant**. This is a **dynamic** equilibrium: molecules keep reacting in both directions, but there is no overall change.
+
+<KeyIdea>
+At equilibrium, the concentrations are constant, **not equal**. The ratio between them is fixed by the **equilibrium constant**, $K_\text{c}$.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Yield.** Equilibrium sets the maximum amount of product a reversible reaction can give, which matters in industry (ammonia, sulfuric acid, methanol).
+- **Acids, bases and solubility.** $K_\text{a}$ for [weak acids](/chemistry/weak-acids/), buffers and solubility are all equilibrium constants.
+- **The body.** Oxygen binding to haemoglobin and the carbonic acid buffer in blood are equilibria.
+
+## How does it work?
+
+### 1. The equilibrium constant, Kc
+
+For a general reaction $\ce{aA + bB <=> cC + dD}$, the **equilibrium constant expression** is:
+
+$$
+K_\text{c} = \frac{[\ce{C}]^c\,[\ce{D}]^d}{[\ce{A}]^a\,[\ce{B}]^b}
+$$
+
+- Products go on top, reactants on the bottom.
+- Each concentration (in mol/L) is raised to the power of its **coefficient** in the balanced equation.
+- **Pure solids and pure liquids are left out** (their "concentration" does not change). For $\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$, $K_\text{c} = [\ce{CO2}]$.
+- $K_\text{c}$ is constant at a given **temperature**; it changes only when the temperature changes.
+
+**Units of Kc.** Strictly, each concentration is divided by the standard concentration $c° = 1\ \text{M}$, so the units cancel and $K_\text{c}$ has **no unit**. The worked examples show this step.
+
+### 2. What the size of K tells you
+
+| Value of $K_\text{c}$ | At equilibrium the mixture contains… |
+|---|---|
+| very large (e.g. $10^{10}$) | mostly products: the reaction goes almost to completion |
+| about 1 | significant amounts of both |
+| very small (e.g. $10^{-10}$) | mostly reactants: very little reaction |
+
+### 3. Related equilibria
+
+- **Reverse** the equation: $K_\text{reverse} = \dfrac{1}{K}$
+- **Multiply** the equation by $n$: $K_\text{new} = K^{\,n}$ (for example, halving the coefficients gives $\sqrt{K}$)
+
+### 4. The reaction quotient, Q
+
+$Q$ has the same form as $K$, but uses the concentrations **at any moment**, not only at equilibrium. Comparing $Q$ with $K$ predicts the direction of change:
+
+| Comparison | What happens |
+|---|---|
+| $Q < K$ | too few products: the reaction goes **forward** (→) |
+| $Q = K$ | at equilibrium: no net change |
+| $Q > K$ | too many products: the reaction goes in **reverse** (←) |
+
+### 5. ICE tables
+
+To find equilibrium concentrations, use an **ICE table**: **I**nitial, **C**hange, **E**quilibrium. The changes follow the mole ratio of the equation, written in terms of an unknown, $x$.
+
+<Analogy>
+Picture two shops connected by a door, with customers walking both ways. After a while, as many people walk from shop A to shop B each minute as walk back. The number of people in each shop stays the same, even though people never stop moving. That's dynamic equilibrium, and the shops need not hold equal numbers.
+</Analogy>
+
+<MorePrecisely>
+The thermodynamic equilibrium constant is defined with **activities**, which for dilute solutions are approximately $[\ce{X}]/c°$ and for gases $p_\text{X}/p°$. That is why equilibrium constants are dimensionless. For gases, $K_\text{p}$ uses partial pressures instead of concentrations; $K_\text{p}$ and $K_\text{c}$ are equal only when the number of moles of gas is the same on both sides.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/chemical-equilibrium/approach-to-equilibrium.svg" alt="Two graphs for H2 + I2 forming 2HI, starting with 0.100 M H2 and 0.100 M I2 and no HI, with Kc = 49.0. Top: the concentration of H2 (equal to I2) falls and levels off at 0.0222 M, while HI rises and levels off at 0.156 M; the shaded region marks equilibrium, where the concentrations are constant. Bottom: the forward rate starts high and falls, the reverse rate starts at zero and rises, and they become equal at equilibrium." caption="At equilibrium the concentrations stop changing because the forward and reverse rates are equal. Calculated from a simple rate model." width={360} height={480} />
+
+## Worked example
+
+<Example title="Calculating Kc">
+**Question:** At a certain temperature, an equilibrium mixture of $\ce{N2O4(g) <=> 2NO2(g)}$ contains $[\ce{N2O4}] = 0.0450$ M and $[\ce{NO2}] = 0.0300$ M. Calculate $K_\text{c}$.
+
+1. Write the expression: $K_\text{c} = \dfrac{[\ce{NO2}]^2}{[\ce{N2O4}]}$
+2. Substitute, dividing each concentration by $c° = 1$ M:
+
+   $$
+   \begin{aligned}
+   K_\text{c} &= \frac{(0.0300\ \text{M} / 1\ \text{M})^2}{0.0450\ \text{M} / 1\ \text{M}} \\[4pt]
+   &= \frac{(0.0300)^2}{0.0450} = 0.0200
+   \end{aligned}
+   $$
+
+3. The units cancel: $K_\text{c} = \textbf{0.0200}$.
+</Example>
+
+<Example title="Predicting the direction with Q">
+**Question:** For $\ce{H2(g) + I2(g) <=> 2HI(g)}$, $K_\text{c} = 49.0$. A mixture contains 0.050 M $\ce{H2}$, 0.050 M $\ce{I2}$ and 0.20 M HI. Is it at equilibrium? If not, which way will it shift?
+
+1. $Q = \dfrac{(0.20\ \text{M})^2}{(0.050\ \text{M})(0.050\ \text{M})} = 16$ (the units of M² cancel)
+2. $Q = 16 < K_\text{c} = 49.0$, so there is too little HI: the reaction goes **forward**, making more HI.
+</Example>
+
+<Example title="An ICE table">
+**Question:** 0.100 M $\ce{H2}$ and 0.100 M $\ce{I2}$ are mixed with no HI ($K_\text{c} = 49.0$). Find the equilibrium concentrations.
+
+1. ICE table, where $x$ is the decrease in $[\ce{H2}]$, in M:
+
+   | | $\ce{H2}$ | $\ce{I2}$ | $\ce{HI}$ |
+   |---|---|---|---|
+   | Initial | 0.100 M | 0.100 M | 0 M |
+   | Change | −x | −x | +2x |
+   | Equilibrium | 0.100 M − x | 0.100 M − x | 2x |
+
+2. Substitute: $49.0 = \dfrac{(2x)^2}{(0.100\ \text{M} - x)^2}$. Both sides are perfect squares, so take the square root: $7.00 = \dfrac{2x}{0.100\ \text{M} - x}$
+3. $0.700\ \text{M} - 7.00x = 2x$, so $x = \dfrac{0.700\ \text{M}}{9.00} = 0.0778\ \text{M}$
+4. $[\ce{HI}] = 2x =$ **0.156 M**; $[\ce{H2}] = [\ce{I2}] = 0.100\ \text{M} - 0.0778\ \text{M} =$ **0.0222 M**
+5. Check: $\dfrac{(0.156\ \text{M})^2}{(0.0222\ \text{M})^2} = 49.4 \approx 49.0$ (the small difference comes from rounding).
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking equilibrium means equal amounts">
+At equilibrium the concentrations are **constant**, not equal. In the example above there is seven times as much HI as $\ce{H2}$.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the coefficients as powers">
+For $\ce{H2 + I2 <=> 2HI}$, $K_\text{c} = \dfrac{[\ce{HI}]^2}{[\ce{H2}][\ce{I2}]}$, not $\dfrac{2[\ce{HI}]}{[\ce{H2}][\ce{I2}]}$. Coefficients become **exponents**.
+</CommonMistake>
+
+<CommonMistake title="Including solids, liquids or water">
+Pure solids and liquids (including water as the solvent) do not appear in $K_\text{c}$. That's why $K_\text{a}$ has no $[\ce{H2O}]$ term.
+</CommonMistake>
+
+<NotationNote>
+- The double half-arrow ⇌ shows a reversible reaction at equilibrium.
+- Square brackets mean concentration in mol/L: $[\ce{HI}]$ = concentration of HI.
+- "Position of equilibrium" describes whether reactants or products are favoured; it can change, but $K$ changes only with temperature.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Dynamic equilibrium: forward rate = reverse rate; concentrations constant, not equal.
+- $K_\text{c}$ = products over reactants, each to the power of its coefficient; leave out solids and liquids.
+- $Q < K$: forward. $Q > K$: reverse. $Q = K$: at equilibrium.
+- Use an ICE table; $K_\text{c}$ depends only on temperature.
+</RememberThis>

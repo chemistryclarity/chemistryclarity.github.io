@@ -1,0 +1,137 @@
+---
+title: Le Chatelier's Principle
+question: "How do changes in concentration, pressure and temperature affect an equilibrium?"
+description: "Use Le Chatelier's principle and Q versus K to predict how an equilibrium responds to changes in concentration, pressure, temperature and catalysts."
+area: equilibrium
+level: intermediate
+order: 20
+prerequisites: [chemical-equilibrium]
+related: [chemical-equilibrium, buffers]
+flashcards: le-chateliers-principle
+quiz: le-chateliers-principle
+resources: [le-chateliers-principle-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Enthalpy changes (rounded): N2 + 3H2 <=> 2NH3, ΔH = −92 kJ; N2O4 <=> 2NO2, ΔH = +57 kJ (per mole of reaction as written).
+  The graph is calculated from a simple rate model with Kc = 49.0 (illustrative time axis). Every number checked by computer.
+*/}
+
+## What is it?
+
+**Le Chatelier's principle:** if a system at equilibrium is disturbed by a change in concentration, pressure or temperature, the position of equilibrium shifts in the direction that **partly counteracts** the change.
+
+"Shifts to the right" means more products form; "shifts to the left" means more reactants form. The system never fully undoes the change; it only reduces its effect.
+
+<KeyIdea>
+Changes in concentration and pressure shift the equilibrium **without changing K**: they make $Q \ne K$, and the reaction runs until $Q = K$ again. A change in **temperature changes K itself**. A catalyst changes neither.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Industry.** Chemists choose temperatures and pressures that push equilibria toward the product, as in the Haber process for ammonia.
+- **Everyday chemistry.** A fizzy drink goes flat when opened because lowering the pressure shifts $\ce{CO2(aq) <=> CO2(g)}$ toward the gas.
+- **Living systems.** The body's buffers respond to added acid or base following the same principle.
+
+## How does it work?
+
+### 1. Changing a concentration
+
+- **Add** a reactant (or remove a product): $Q$ becomes smaller than $K$, so the equilibrium shifts **right** to use some of it up.
+- **Add** a product (or remove a reactant): $Q > K$, so it shifts **left**.
+
+### 2. Changing the pressure (gases)
+
+Increasing the pressure by **reducing the volume** shifts the equilibrium toward the side with **fewer moles of gas**, which lowers the pressure:
+
+$$
+\ce{N2(g) + 3H2(g) <=> 2NH3(g)}
+$$
+
+The left side has 1 mol + 3 mol = 4 mol of gas; the right side has 2 mol.
+
+Higher pressure shifts this equilibrium **right**, toward ammonia. If both sides have the same number of moles of gas (as in $\ce{H2 + I2 <=> 2HI}$), pressure has no effect on the position. Adding an inert gas at constant volume does not change any concentration, so it has no effect either.
+
+### 3. Changing the temperature
+
+Treat heat as a reactant or product:
+
+- **Exothermic** forward reaction (ΔH negative): heat is a "product". Raising the temperature shifts the equilibrium **left** and **decreases K**.
+- **Endothermic** forward reaction (ΔH positive): heat is a "reactant". Raising the temperature shifts it **right** and **increases K**.
+
+For $\ce{N2O4(g) <=> 2NO2(g)}$, ΔH = +57 kJ: on heating, more brown $\ce{NO2}$ forms, so the colourless-to-brown mixture gets **darker**.
+
+### 4. Adding a catalyst
+
+A catalyst speeds up the forward and reverse reactions **equally**. Equilibrium is reached **sooner**, but its position and $K$ are unchanged.
+
+| Change | Effect on position | Effect on K |
+|---|---|---|
+| Add reactant / remove product | shifts right | none |
+| Add product / remove reactant | shifts left | none |
+| Increase pressure (smaller volume) | toward fewer moles of gas | none |
+| Increase temperature | in the endothermic direction | changes |
+| Add a catalyst | none (equilibrium reached faster) | none |
+
+<Analogy>
+Think of a crowded room with two doors and people moving between it and the corridor at equal rates. Push more people into the room and, for a while, more people leave than enter, until the flows balance again. The room ends up a bit more crowded than before, but less crowded than right after the push: the change is partly counteracted.
+</Analogy>
+
+<MorePrecisely>
+Le Chatelier's principle predicts the **direction** of a shift; comparing $Q$ with $K$ explains **why**, and an ICE table gives the **new concentrations**. How strongly $K$ depends on temperature is described by the van 't Hoff equation, which links it to ΔH°.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/le-chateliers-principle/adding-reactant.svg" alt="Graph of concentration against time for H2 + I2 forming 2HI at equilibrium, Kc = 49.0. At first HI is constant at 0.156 M and H2 and I2 at 0.0222 M. Then 0.100 M H2 is added: H2 jumps up and then falls to 0.107 M, I2 falls to about 0.0067 M, and HI rises to 0.187 M, until a new equilibrium is reached." caption="Adding H₂ shifts the equilibrium to the right: some of the added H₂ is used up and more HI forms. Calculated from a simple rate model." width={360} height={420} />
+
+## Worked example
+
+<Example title="Predicting shifts in the Haber process">
+**Question:** For $\ce{N2(g) + 3H2(g) <=> 2NH3(g)}$, ΔH = −92 kJ, predict the effect on the amount of ammonia of (a) adding $\ce{N2}$ (b) increasing the pressure (c) increasing the temperature (d) adding an iron catalyst.
+
+1. Adding $\ce{N2}$ (a reactant): shifts **right**, so **more** $\ce{NH3}$.
+2. Higher pressure: 4 mol gas on the left, 2 mol on the right, so it shifts toward fewer moles: **right**, **more** $\ce{NH3}$.
+3. The forward reaction is exothermic, so heating shifts **left**: **less** $\ce{NH3}$ (and $K$ decreases).
+4. A catalyst does not shift the equilibrium: **no change** in the amount, but equilibrium is reached faster.
+</Example>
+
+<Example title="Checking a shift with Q">
+**Question:** An equilibrium mixture of $\ce{H2(g) + I2(g) <=> 2HI(g)}$ ($K_\text{c} = 49.0$) contains 0.0222 M $\ce{H2}$, 0.0222 M $\ce{I2}$ and 0.156 M HI. 0.100 M $\ce{H2}$ is added. Which way does the equilibrium shift?
+
+1. Just after the addition, $[\ce{H2}] = 0.0222\ \text{M} + 0.100\ \text{M} = 0.122\ \text{M}$
+2. $Q = \dfrac{(0.156\ \text{M})^2}{(0.122\ \text{M})(0.0222\ \text{M})} = 8.99$ (the units of M² cancel)
+3. $Q = 8.99 < K_\text{c} = 49.0$, so the reaction goes **forward**: $\ce{H2}$ and $\ce{I2}$ are used up and more HI forms, as Le Chatelier's principle predicts.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking concentration changes alter K">
+Adding a reactant shifts the **position**, but $K$ stays the same. Only temperature changes $K$.
+</CommonMistake>
+
+<CommonMistake title="Thinking a catalyst increases the yield">
+A catalyst makes equilibrium arrive faster but does not change how much product is present at equilibrium.
+</CommonMistake>
+
+<CommonMistake title="Counting all moles, not moles of gas">
+For pressure changes, count only **gases**. In $\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$ there is 0 mol of gas on the left and 1 mol on the right.
+</CommonMistake>
+
+<NotationNote>
+- "Shifts to the right / forward" = more products; "to the left / backward" = more reactants.
+- ΔH refers to the forward reaction as written; the reverse reaction has the opposite sign.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- A disturbed equilibrium shifts to partly counteract the change.
+- Add reactant or remove product: right. Higher pressure: fewer moles of gas.
+- Heating favours the endothermic direction and is the only change that alters $K$.
+- A catalyst gives equilibrium faster but does not move it.
+</RememberThis>

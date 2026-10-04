@@ -1,0 +1,39 @@
+# Flashcards: Le Chatelier's Principle
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true).
+title: 'Le Chatelier''s Principle: Flashcards'
+description: 'Revise how concentration, pressure, temperature and catalysts affect an equilibrium.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: lc-01
+    front: 'State Le Chatelier''s principle.'
+    back: 'If an equilibrium is disturbed, its position shifts in the direction that partly counteracts the change.'
+  - id: lc-02
+    front: 'A reactant is added to an equilibrium mixture. Which way does it shift?'
+    back: 'To the right (toward products): Q becomes smaller than K.'
+  - id: lc-03
+    front: 'A product is removed. Which way does the equilibrium shift?'
+    back: 'To the right, to replace some of the product.'
+  - id: lc-04
+    front: 'How does increasing the pressure (smaller volume) affect a gas equilibrium?'
+    back: 'It shifts toward the side with fewer moles of gas.'
+  - id: lc-05
+    front: 'Which way does $\ce{N2 + 3H2 <=> 2NH3}$ shift at higher pressure?'
+    back: 'Right: 4 mol of gas become 2 mol.'
+  - id: lc-06
+    front: 'How does raising the temperature affect an exothermic equilibrium?'
+    back: 'It shifts left (the endothermic direction) and K decreases.'
+  - id: lc-07
+    front: 'Which change alters the value of K?'
+    back: 'Only a change in temperature.'
+  - id: lc-08
+    front: 'What does a catalyst do to an equilibrium?'
+    back: 'Nothing to its position or K; equilibrium is just reached faster.'
+  - id: lc-09
+    front: '$\ce{N2O4 <=> 2NO2}$ (ΔH = +57 kJ; NO₂ is brown). What happens to the colour on heating?'
+    back: 'It gets darker: the endothermic forward reaction is favoured, forming more NO₂.'
+  - id: lc-10
+    front: 'Does pressure affect $\ce{H2 + I2 <=> 2HI}$?'
+    back: 'No: there are 2 mol of gas on each side.'
