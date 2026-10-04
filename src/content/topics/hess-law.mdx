@@ -1,0 +1,172 @@
+---
+title: Hess's Law and Enthalpies of Formation
+question: "How do you use Hess's law and enthalpies of formation to calculate ΔH?"
+description: "Hess's law, combining thermochemical equations, standard enthalpies of formation and calculating the enthalpy change of any reaction from a table."
+area: thermochemistry
+level: intermediate
+order: 20
+prerequisites: [enthalpy, balancing-equations]
+related: [enthalpy, stoichiometry]
+flashcards: hess-law
+quiz: hess-law
+resources: [hess-law-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Standard enthalpies of formation (kJ/mol, 25 °C) follow common data tables (CRC Handbook values):
+  CO2(g) −393.5, CO(g) −110.5, H2O(l) −285.8, H2O(g) −241.8, CH4(g) −74.6, C2H5OH(l) −277.6.
+  REVIEW: some textbooks give slightly different values (e.g. CH4 −74.8 kJ/mol); compare with the table your students use.
+  Units on every quantity in every step. Every answer checked by computer.
+*/}
+
+## What is it?
+
+**Hess's law:** the enthalpy change of a reaction is the **same whatever route** is taken from the reactants to the products. Enthalpy is a **state function**: it depends only on the start and end, not on the path.
+
+This means you can find $\Delta H$ for a reaction that is hard to measure directly by **adding up** the $\Delta H$ values of other reactions that combine to give it.
+
+<KeyIdea>
+If equations add up to the target equation, their $\Delta H$ values add up to the target $\Delta H$. Reverse an equation: change the sign of $\Delta H$. Multiply an equation: multiply $\Delta H$ by the same number.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Impossible measurements.** The formation of CO from carbon can't be measured cleanly, because some $\ce{CO2}$ always forms. Hess's law gets it from two easy combustions.
+- **Tables instead of experiments.** With a table of **enthalpies of formation**, you can calculate $\Delta H$ for thousands of reactions without doing any of them.
+- **Energy planning.** Fuel values, metabolic energy and industrial heat balances all rely on these calculations.
+
+## How does it work?
+
+### 1. Combining equations
+
+To reach a target equation:
+
+1. Write the given equations so that each **target reactant** is on the left and each **target product** is on the right; **reverse** an equation if needed (and change the sign of its $\Delta H$).
+2. **Multiply** equations so the amounts match the target (and multiply their $\Delta H$).
+3. **Add** the equations; substances that appear on both sides cancel. Add the $\Delta H$ values.
+
+### 2. Standard enthalpy of formation
+
+The **standard enthalpy of formation**, $\Delta H_\text{f}°$, is the enthalpy change when **1 mol** of a compound forms from its **elements in their standard states** (the most stable form at 1 bar and 25 °C):
+
+$$
+\begin{gathered}
+\ce{C(s, graphite) + O2(g) -> CO2(g)} \\[4pt]
+\Delta H_\text{f}° = -393.5\ \text{kJ/mol}
+\end{gathered}
+$$
+
+For an element in its standard state, such as $\ce{O2(g)}$, $\ce{H2(g)}$ or C(graphite), $\Delta H_\text{f}° = 0$.
+
+| Substance | $\Delta H_\text{f}°$ (kJ/mol) |
+|---|---|
+| $\ce{CO2(g)}$ | −393.5 |
+| $\ce{CO(g)}$ | −110.5 |
+| $\ce{H2O(l)}$ | −285.8 |
+| $\ce{H2O(g)}$ | −241.8 |
+| $\ce{CH4(g)}$ | −74.6 |
+| $\ce{C2H5OH(l)}$ | −277.6 |
+| $\ce{O2(g)}$, $\ce{H2(g)}$, C(graphite) | 0 |
+
+### 3. ΔH from enthalpies of formation
+
+$$
+\begin{aligned}
+&\Delta H°_\text{rxn} = \sum n\,\Delta H_\text{f}°(\text{products}) \\[4pt]
+&\qquad\quad - \sum n\,\Delta H_\text{f}°(\text{reactants})
+\end{aligned}
+$$
+
+where $n$ is each coefficient (in mol) in the balanced equation. "Products minus reactants."
+
+<Analogy>
+Climbing a mountain: your change in height between the car park and the summit is the same whether you take the steep direct path or the long zig-zag trail. Enthalpy works the same way: only the start and the end matter.
+</Analogy>
+
+<MorePrecisely>
+Hess's law follows from the first law of thermodynamics (energy is conserved). The formation-enthalpy formula is Hess's law applied to a two-step route: break the reactants down into their elements (the reverse of formation), then build the products from those elements. Average **bond enthalpies** give another estimate of $\Delta H$, but because they are averages, the result is only approximate.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/hess-law/hess-cycle-co.svg" alt="Enthalpy level diagram drawn to scale. C(s) + O2(g) is at 0 kJ, CO(g) + ½O2(g) at −110.5 kJ, and CO2(g) at −393.5 kJ. The direct route from C + O2 to CO2 releases 393.5 kJ. The indirect route goes first to CO (−110.5 kJ) and then to CO2 (−283.0 kJ). The two steps add up to the same −393.5 kJ." caption="Both routes from C + O₂ to CO₂ give the same total enthalpy change." width={360} height={380} />
+
+## Worked example
+
+<Example title="Combining equations">
+**Question:** Find $\Delta H$ for $\ce{C(s) + 1/2 O2(g) -> CO(g)}$ from:
+
+(1) $\ce{C(s) + O2(g) -> CO2(g)}$, $\Delta H_1 = -393.5$ kJ
+
+(2) $\ce{CO(g) + 1/2 O2(g) -> CO2(g)}$, $\Delta H_2 = -283.0$ kJ
+
+1. Keep (1): it has C on the left, as in the target.
+2. Reverse (2), so that CO is on the right: $\ce{CO2(g) -> CO(g) + 1/2 O2(g)}$, $\Delta H = +283.0$ kJ
+3. Add: $\ce{CO2}$ cancels, and $\ce{O2}$ on the left becomes 1 − ½ = ½ mol:
+
+   $$
+   \begin{aligned}
+   &\Delta H \\[4pt]
+   &= -393.5\ \text{kJ} + 283.0\ \text{kJ} \\[4pt]
+   &= -110.5\ \text{kJ}
+   \end{aligned}
+   $$
+
+This matches $\Delta H_\text{f}°$ of CO in the table.
+</Example>
+
+<Example title="Using enthalpies of formation">
+**Question:** Calculate $\Delta H°$ for the combustion of methane: $\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}$
+
+1. Products: $(1\ \text{mol})(-393.5\ \text{kJ/mol}) + (2\ \text{mol})(-285.8\ \text{kJ/mol}) = -965.1\ \text{kJ}$
+2. Reactants: $(1\ \text{mol})(-74.6\ \text{kJ/mol}) + (2\ \text{mol})(0\ \text{kJ/mol}) = -74.6\ \text{kJ}$
+3. Subtract:
+
+   $$
+   \begin{aligned}
+   &\Delta H° \\[4pt]
+   &= -965.1\ \text{kJ} \\[4pt]
+   &\quad - (-74.6\ \text{kJ}) \\[4pt]
+   &= -890.5\ \text{kJ}
+   \end{aligned}
+   $$
+
+4. The mol units cancel in each product, leaving kJ for the reaction as written (−890.5 kJ per mole of $\ce{CH4}$).
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Forgetting to change the sign">
+When you reverse an equation, $\Delta H$ changes sign: if A → B has $\Delta H = -100$ kJ, then B → A has $\Delta H = +100$ kJ.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the coefficients">
+Multiply each $\Delta H_\text{f}°$ by its coefficient. In methane combustion there are **2 mol** of water: 2 × (−285.8 kJ/mol) = −571.6 kJ.
+</CommonMistake>
+
+<CommonMistake title="Reactants minus products">
+The formula is **products minus reactants**. Reversing the order gives the right size with the wrong sign.
+</CommonMistake>
+
+<CommonMistake title="Mixing up the states of water">
+$\Delta H_\text{f}°$ of $\ce{H2O(l)}$ (−285.8 kJ/mol) and of $\ce{H2O(g)}$ (−241.8 kJ/mol) differ by 44.0 kJ/mol, the enthalpy of vaporization. Use the state in the equation.
+</CommonMistake>
+
+<NotationNote>
+- $\Delta H_\text{f}°$ is read "standard enthalpy of formation"; the ° means standard conditions (1 bar, usually 25 °C).
+- Σ ("sigma") means "the sum of".
+- Equations may contain fractional coefficients (such as ½ $\ce{O2}$) when the target is "per mole" of one substance.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Hess's law: ΔH is the same by any route (enthalpy is a state function).
+- Reverse an equation: change the sign of ΔH. Multiply it: multiply ΔH.
+- $\Delta H_\text{f}°$ = 1 mol of compound from elements in standard states; elements have $\Delta H_\text{f}° = 0$.
+- $\Delta H° = \sum n\Delta H_\text{f}°(\text{products}) - \sum n\Delta H_\text{f}°(\text{reactants})$.
+</RememberThis>

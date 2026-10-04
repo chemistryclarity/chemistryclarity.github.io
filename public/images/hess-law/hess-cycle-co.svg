@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .pt { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10.5px; }
+    .lvl { stroke: #14213d; stroke-width: 2.4; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; marker-end: url(#hd); }
+    .down { stroke: #0f766e; stroke-width: 2.4; fill: none; marker-end: url(#hdA); } .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .up { stroke: #b45309; stroke-width: 2.4; fill: none; marker-end: url(#hdB); } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    .step { stroke: #7c3aed; stroke-width: 2.2; fill: none; marker-end: url(#hdC); } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .hd { fill: #14213d; } .hdA { fill: #0f766e; } .hdB { fill: #b45309; } .hdC { fill: #7c3aed; }
+    .cup { fill: #f3f1ea; stroke: #8a94a6; stroke-width: 1.5; }
+    .liq { fill: #cfe8f3; stroke: none; }
+    .lid { fill: #e2dfd5; stroke: #8a94a6; stroke-width: 1.5; }
+    .rod { stroke: #14213d; stroke-width: 2; fill: none; }
+    .therm { fill: #ffffff; stroke: #14213d; stroke-width: 1.5; } .bulb { fill: #b91c1c; }
+    .lead { stroke: #8a94a6; stroke-width: 1; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .pt, .lab { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .lvl, .rod { stroke: #e9edf5; } .axis { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+      .down { stroke: #2dd4bf; } .lA, .hdA { fill: #2dd4bf; } .up { stroke: #fbbf24; } .lB, .hdB { fill: #fbbf24; }
+      .step { stroke: #c4b5fd; } .lC, .hdC { fill: #c4b5fd; }
+      .cup { fill: #1b263d; stroke: #6b7894; } .liq { fill: #1e4a5e; } .lid { fill: #2c3854; stroke: #6b7894; }
+      .therm { fill: #151e31; stroke: #e9edf5; } .bulb { fill: #f87171; } .lead { stroke: #6b7894; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker><marker id="hdA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdA" d="M0 0 10 5 0 10z"/></marker><marker id="hdB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdB" d="M0 0 10 5 0 10z"/></marker><marker id="hdC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdC" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="380" rx="14"/>
+  <text class="t" x="20" y="28">Hess's law: two routes, one total</text>
+  <text class="sub" x="20" y="45">Enthalpy levels drawn to scale (kJ per mole of C).</text>
+  <line class="lvl" x1="40" y1="86" x2="160" y2="86"/><text class="lab" x="40" y="79">C(s) + O₂(g)</text><text class="num" x="160" y="79" text-anchor="end">0 kJ</text><line class="lvl" x1="200" y1="143.9" x2="340" y2="143.9"/><text class="lab" x="214" y="136.9">CO(g) + ½O₂(g)</text><text class="num" x="340" y="158.9" text-anchor="end">−110.5 kJ</text><line class="lvl" x1="40" y1="292.1" x2="330" y2="292.1"/><text class="lab" x="40" y="285.1">CO₂(g)</text><text class="num" x="330" y="307.1" text-anchor="end">−393.5 kJ</text>
+  <path class="down" d="M100 89 V287.1"/>
+  <text class="lA" x="106" y="190.8">direct:</text><text class="lA" x="106" y="204.8">−393.5 kJ</text>
+  <path class="step" d="M150 89 L204 138.9"/>
+  <text class="lC" x="186" y="104.9">−110.5 kJ</text>
+  <path class="step" d="M270 146.9 V287.1"/>
+  <text class="lC" x="276" y="218">−283.0 kJ</text>
+  <text class="sub" x="20" y="340">−110.5 kJ + (−283.0 kJ) = −393.5 kJ: the total enthalpy</text>
+  <text class="sub" x="20" y="356">change is the same whichever route is taken.</text>
+</svg>

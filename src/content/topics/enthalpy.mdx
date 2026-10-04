@@ -1,0 +1,170 @@
+---
+title: Enthalpy and Calorimetry
+question: "What is enthalpy and how do you measure the heat of a reaction?"
+description: "Exothermic and endothermic reactions, enthalpy change ΔH, specific heat capacity and q = mcΔT, and how coffee-cup calorimetry measures ΔH per mole."
+area: thermochemistry
+level: intermediate
+order: 10
+prerequisites: [mole-concept, temperature-scales]
+related: [hess-law, activation-energy, le-chateliers-principle]
+flashcards: enthalpy
+quiz: enthalpy
+resources: [enthalpy-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  c(water) = 4.184 J/(g·°C). Calorimetry data are constructed (given) values; the neutralization result (−57 kJ/mol)
+  agrees with the accepted value for strong acid + strong base (about −56 to −57 kJ/mol).
+  Units on every quantity in every step; extra digits kept until the final answer; no exact-half roundings.
+*/}
+
+## What is it?
+
+Chemical reactions almost always **release or absorb heat**. The heat change of a reaction at constant pressure is its **enthalpy change**, $\Delta H$, usually given in **kJ/mol**.
+
+- **Exothermic** reaction: heat is **released** to the surroundings, which warm up. $\Delta H$ is **negative**. Examples: combustion, neutralization, respiration.
+- **Endothermic** reaction: heat is **absorbed** from the surroundings, which cool down. $\Delta H$ is **positive**. Examples: dissolving ammonium nitrate (instant cold packs), photosynthesis, thermal decomposition.
+
+<KeyIdea>
+$\Delta H = H_\text{products} - H_\text{reactants}$. Negative: exothermic (heat out). Positive: endothermic (heat in). The sign is always from the point of view of the **reaction** (the system).
+</KeyIdea>
+
+## Why does it matter?
+
+- **Energy.** Fuels are compared by the heat their combustion releases per gram or per mole.
+- **Food.** The energy content of food (in kJ or kcal) is measured by burning it in a calorimeter.
+- **Safety and design.** Chemists must know how much heat a reaction gives out to cool it safely, or how much to supply to keep it going.
+
+## How does it work?
+
+### 1. Thermochemical equations
+
+A thermochemical equation gives $\Delta H$ for the amounts in the **balanced equation**:
+
+$$
+\begin{gathered}
+\small \ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)} \\[4pt]
+\Delta H = -890.5\ \text{kJ}
+\end{gathered}
+$$
+
+- Doubling the equation **doubles** $\Delta H$.
+- Reversing the equation **changes the sign** of $\Delta H$.
+- **States matter**: forming $\ce{H2O(g)}$ instead of $\ce{H2O(l)}$ releases less heat.
+
+### 2. Specific heat capacity and q = mcΔT
+
+The **specific heat capacity**, $c$, is the heat needed to raise the temperature of **1 g** of a substance by **1 °C** (or 1 K). For water, $c = 4.184$ J/(g·°C). The heat $q$ gained or lost is:
+
+$$
+q = m \times c \times \Delta T
+$$
+
+where $m$ is the mass in g and $\Delta T = T_\text{final} - T_\text{initial}$. A change of 1 °C equals a change of 1 K, so $\Delta T$ is the same on both scales.
+
+### 3. Calorimetry
+
+A **calorimeter** measures heat changes. In a simple **coffee-cup calorimeter**, a reaction happens in water inside insulated cups:
+
+1. Measure the temperature change of the solution.
+2. Calculate $q_\text{solution} = m c \Delta T$ (assume the solution behaves like water: density 1.00 g/mL, $c$ = 4.184 J/(g·°C)).
+3. The reaction's heat is the opposite: $q_\text{reaction} = -q_\text{solution}$ (heat lost by one is gained by the other).
+4. Divide by the moles that reacted: $\Delta H = \dfrac{q_\text{reaction}}{n}$.
+
+<Analogy>
+Think of the reaction as a heater placed in a bath. You can't see the heat directly, but the bath's thermometer tells you: if the water warms, the "heater" gave heat out (exothermic); if the water cools, the reaction took heat in (endothermic).
+</Analogy>
+
+<MorePrecisely>
+Enthalpy, $H$, is defined as $H = U + PV$; at constant pressure, the heat transferred equals $\Delta H$. Coffee-cup calorimeters work at constant (atmospheric) pressure, so they measure $\Delta H$ directly. A **bomb calorimeter** works at constant volume, measures $\Delta U$, and is used for combustion. Simple calorimeters lose some heat to the surroundings and the cups, so measured values are usually slightly smaller in size than accepted ones.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/enthalpy/exo-endo.svg" alt="Two enthalpy diagrams. Exothermic: the reactants are at a higher enthalpy than the products, and a downward arrow shows ΔH less than zero. Endothermic: the reactants are lower than the products, and an upward arrow shows ΔH greater than zero." caption="ΔH is negative when the products are lower in enthalpy than the reactants." width={360} height={360} />
+
+<Figure src="/images/enthalpy/coffee-cup-calorimeter.svg" alt="A coffee-cup calorimeter: two nested polystyrene cups with a lid, holding the reaction mixture, which is mostly water. A thermometer and a stirrer pass through the lid. The heat of reaction changes the temperature of the solution; q of the solution equals m times c times delta T, and q of the reaction is minus q of the solution." caption="The solution's temperature change measures the heat of the reaction." width={360} height={360} />
+
+## Worked example
+
+<Example title="Heating water">
+**Question:** How much heat is needed to warm 250. g of water from 20.0 °C to 80.0 °C?
+
+1. $\Delta T = 80.0\ °\text{C} - 20.0\ °\text{C} = 60.0\ °\text{C}$
+2. Substitute:
+
+   $$
+   \begin{aligned}
+   &q = m c \Delta T \\[4pt]
+   &= (250.\ \text{g}) \\[4pt]
+   &\quad \times \left(4.184\ \tfrac{\text{J}}{\text{g·°C}}\right) \\[4pt]
+   &\quad \times (60.0\ °\text{C}) \\[4pt]
+   &= 6.28 \times 10^{4}\ \text{J} = 62.8\ \text{kJ}
+   \end{aligned}
+   $$
+
+3. The units of g and °C cancel, leaving J.
+</Example>
+
+<Example title="Enthalpy of neutralization">
+**Question:** 50.0 mL of 1.00 M HCl and 50.0 mL of 1.00 M NaOH, both at 21.0 °C, are mixed in a coffee-cup calorimeter. The temperature rises to 27.8 °C. Calculate ΔH per mole of water formed.
+
+1. Mass of solution: 100.0 mL × 1.00 g/mL = 100. g; $\Delta T = 27.8\ °\text{C} - 21.0\ °\text{C} = 6.8\ °\text{C}$
+2. Heat gained by the solution:
+
+   $$
+   \begin{aligned}
+   &q_\text{soln} = (100.\ \text{g}) \\[4pt]
+   &\quad \times \left(4.184\ \tfrac{\text{J}}{\text{g·°C}}\right) \\[4pt]
+   &\quad \times (6.8\ °\text{C}) \\[4pt]
+   &= 2845\ \text{J}
+   \end{aligned}
+   $$
+
+3. $q_\text{reaction} = -2845$ J (the reaction released this heat).
+4. Moles of water formed: $n = 1.00\ \text{mol/L} \times 0.0500\ \text{L} = 0.0500$ mol
+5. Divide:
+
+   $$
+   \begin{aligned}
+   &\Delta H = \frac{-2845\ \text{J}}{0.0500\ \text{mol}} \\[4pt]
+   &= -5.7 \times 10^{4}\ \text{J/mol} \\[4pt]
+   &= -57\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+6. ΔT (6.8 °C) has 2 significant figures, so the answer has 2. It is negative: the reaction is **exothermic**.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Getting the sign wrong">
+If the solution warms up, the reaction **gave out** heat: $q_\text{reaction}$ and $\Delta H$ are **negative**, even though $q_\text{solution}$ is positive.
+</CommonMistake>
+
+<CommonMistake title="Using only the mass of the solid">
+In $q = mc\Delta T$, $m$ is the mass of the **solution that changes temperature** (mostly water), not the mass of the substance that reacted.
+</CommonMistake>
+
+<CommonMistake title="Forgetting to divide by moles">
+$q$ is the heat for **this** experiment (in J). $\Delta H$ is per **mole** (kJ/mol), so divide by the moles that reacted and convert J to kJ.
+</CommonMistake>
+
+<NotationNote>
+- $\Delta H°$ (with a degree sign) is a **standard** enthalpy change: 1 bar and a stated temperature, usually 25 °C.
+- Units: c in J/(g·°C) = J/(g·K) = J g⁻¹ K⁻¹; ΔH in kJ/mol = kJ mol⁻¹.
+- Some textbooks write $q = mc\Delta T$ as $q = m c_\text{s} \Delta T$, with $c_\text{s}$ for specific heat.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Exothermic: heat released, ΔH negative. Endothermic: heat absorbed, ΔH positive.
+- $q = mc\Delta T$; for water $c = 4.184$ J/(g·°C); ΔT in °C equals ΔT in K.
+- Calorimetry: $q_\text{reaction} = -q_\text{solution}$; $\Delta H = q_\text{reaction}/n$, in kJ/mol.
+- Doubling an equation doubles ΔH; reversing it changes the sign.
+</RememberThis>

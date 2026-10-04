@@ -1,0 +1,39 @@
+# Flashcards: Hess's Law and Enthalpies of Formation
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Hess''s Law and Enthalpies of Formation: Flashcards'
+description: 'Revise Hess''s law, combining equations, standard enthalpies of formation and calculating ΔH.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: hl-01
+    front: 'State Hess''s law.'
+    back: 'The enthalpy change of a reaction is the same whatever route is taken from reactants to products.'
+  - id: hl-02
+    front: 'Why does Hess''s law work?'
+    back: 'Enthalpy is a state function: it depends only on the start and end, not the path (energy is conserved).'
+  - id: hl-03
+    front: 'An equation is reversed. What happens to ΔH?'
+    back: 'It changes sign.'
+  - id: hl-04
+    front: 'An equation is multiplied by 3. What happens to ΔH?'
+    back: 'ΔH is multiplied by 3.'
+  - id: hl-05
+    front: 'Define the standard enthalpy of formation, ΔHf°.'
+    back: 'The enthalpy change when 1 mol of a compound forms from its elements in their standard states (1 bar, usually 25 °C).'
+  - id: hl-06
+    front: 'What is ΔHf° of O₂(g)?'
+    back: '0 kJ/mol: it is an element in its standard state.'
+  - id: hl-07
+    front: 'Formula for ΔH° from enthalpies of formation?'
+    back: '$\Delta H° = \sum n\Delta H_\text{f}°(\text{products}) - \sum n\Delta H_\text{f}°(\text{reactants})$'
+  - id: hl-08
+    front: 'ΔH° for CH₄ + 2O₂ → CO₂ + 2H₂O(l)? (ΔHf°: CH₄ −74.6, CO₂ −393.5, H₂O(l) −285.8 kJ/mol)'
+    back: '[−393.5 kJ + 2(−285.8 kJ)] − (−74.6 kJ) = −890.5 kJ'
+  - id: hl-09
+    front: 'Why do ΔHf° of H₂O(l) and H₂O(g) differ?'
+    back: 'By the enthalpy of vaporization: −241.8 kJ/mol − (−285.8 kJ/mol) = +44.0 kJ/mol.'
+  - id: hl-10
+    front: 'Use C + O₂ → CO₂ (−393.5 kJ) and CO + ½O₂ → CO₂ (−283.0 kJ) to find ΔH for C + ½O₂ → CO.'
+    back: '−393.5 kJ + 283.0 kJ = −110.5 kJ (the second equation is reversed)'

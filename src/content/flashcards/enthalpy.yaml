@@ -1,0 +1,39 @@
+# Flashcards: Enthalpy and Calorimetry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Enthalpy and Calorimetry: Flashcards'
+description: 'Revise exothermic and endothermic reactions, ΔH, specific heat capacity, q = mcΔT and calorimetry.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: en-01
+    front: 'What is an exothermic reaction?'
+    back: 'A reaction that releases heat to the surroundings; ΔH is negative.'
+  - id: en-02
+    front: 'What is an endothermic reaction?'
+    back: 'A reaction that absorbs heat from the surroundings; ΔH is positive.'
+  - id: en-03
+    front: 'Define ΔH.'
+    back: 'The enthalpy change: the heat change at constant pressure, ΔH = H(products) − H(reactants).'
+  - id: en-04
+    front: 'Write the equation for the heat gained or lost by a substance.'
+    back: '$q = m \times c \times \Delta T$'
+  - id: en-05
+    front: 'What is the specific heat capacity of water?'
+    back: '4.184 J/(g·°C), the same as 4.184 J/(g·K)'
+  - id: en-06
+    front: 'Heat needed to warm 250. g of water by 60.0 °C?'
+    back: '(250. g)(4.184 J/(g·°C))(60.0 °C) = 6.28 × 10⁴ J = 62.8 kJ'
+  - id: en-07
+    front: 'In calorimetry, how is q(reaction) related to q(solution)?'
+    back: 'q(reaction) = −q(solution): heat lost by one is gained by the other.'
+  - id: en-08
+    front: 'The solution in a calorimeter warms up. Is the reaction exothermic or endothermic?'
+    back: 'Exothermic (ΔH negative): the reaction released heat to the solution.'
+  - id: en-09
+    front: 'CH₄ + 2O₂ → CO₂ + 2H₂O has ΔH = −890.5 kJ. What is ΔH for the reverse reaction?'
+    back: '+890.5 kJ (reversing changes the sign)'
+  - id: en-10
+    front: 'Why is ΔT the same in °C and in K?'
+    back: 'A degree Celsius and a kelvin are the same size; only the zero points differ.'

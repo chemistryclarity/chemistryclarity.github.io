@@ -1,0 +1,79 @@
+# Quiz: Hess's Law and Enthalpies of Formation
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Hess''s Law and Enthalpies of Formation: Quiz'
+description: 'Seven questions on Hess''s law, combining equations and enthalpies of formation, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: hl-q1
+    prompt: 'Which substance has a standard enthalpy of formation of 0 kJ/mol?'
+    choices:
+      - 'H₂O(l)'
+      - 'CO₂(g)'
+      - 'N₂(g)'
+      - 'O₃(g)'
+    answer: 'N₂(g)'
+    explanation: 'N₂(g) is an element in its standard state. O₃ is not the standard state of oxygen (O₂ is), so its ΔHf° is not zero.'
+    difficulty: easy
+  - id: hl-q2
+    prompt: 'A → B has ΔH = −50 kJ. What is ΔH for 2B → 2A?'
+    choices:
+      - '−100 kJ'
+      - '+100 kJ'
+      - '+50 kJ'
+      - '−50 kJ'
+    answer: '+100 kJ'
+    explanation: 'Reversing changes the sign (+50 kJ), and doubling multiplies by 2: +100 kJ.'
+    difficulty: medium
+  - id: hl-q3
+    prompt: 'N₂ + O₂ → 2NO, ΔH = +182.6 kJ; 2NO + O₂ → 2NO₂, ΔH = −116.2 kJ. What is ΔH for N₂ + 2O₂ → 2NO₂?'
+    choices:
+      - '+298.8 kJ'
+      - '+66.4 kJ'
+      - '−66.4 kJ'
+      - '+33.2 kJ'
+    answer: '+66.4 kJ'
+    explanation: 'The two equations add directly (2NO cancels): +182.6 kJ + (−116.2 kJ) = +66.4 kJ.'
+    difficulty: medium
+  - id: hl-q4
+    prompt: 'What is the formula for ΔH° from enthalpies of formation?'
+    choices:
+      - 'Σ ΔHf°(reactants) − Σ ΔHf°(products)'
+      - 'Σ nΔHf°(products) − Σ nΔHf°(reactants)'
+      - 'Σ ΔHf°(products) + Σ ΔHf°(reactants)'
+      - 'Σ nΔHf°(products) × Σ nΔHf°(reactants)'
+    answer: 'Σ nΔHf°(products) − Σ nΔHf°(reactants)'
+    explanation: 'Products minus reactants, each multiplied by its coefficient n.'
+    difficulty: easy
+  - id: hl-q5
+    prompt: 'Calculate ΔH° for C₂H₄(g) + H₂(g) → C₂H₆(g). (ΔHf°: C₂H₄ +52.4 kJ/mol, C₂H₆ −84.0 kJ/mol)'
+    choices:
+      - '−31.6 kJ'
+      - '+136.4 kJ'
+      - '−136.4 kJ'
+      - '−84.0 kJ'
+    answer: '−136.4 kJ'
+    explanation: 'ΔH° = (−84.0 kJ) − (+52.4 kJ + 0 kJ) = −136.4 kJ. H₂ is an element, so its ΔHf° is 0.'
+    difficulty: medium
+  - id: hl-q6
+    prompt: 'Why is Hess''s law useful for C(s) + ½O₂(g) → CO(g)?'
+    choices:
+      - 'The reaction is too fast to measure'
+      - 'Some CO₂ always forms, so the heat cannot be measured cleanly'
+      - 'CO is an element'
+      - 'The reaction has no enthalpy change'
+    answer: 'Some CO₂ always forms, so the heat cannot be measured cleanly'
+    explanation: 'Hess''s law gets ΔH from two reactions that can be measured: the combustions of C and of CO.'
+    difficulty: medium
+  - id: hl-q7
+    prompt: 'ΔH° for CH₄ + 2O₂ → CO₂ + 2H₂O(l) is −890.5 kJ. Which ΔHf° values does the calculation need?'
+    choices:
+      - 'Only CO₂ and H₂O'
+      - 'CH₄, CO₂ and H₂O (O₂ is zero)'
+      - 'CH₄ and O₂ only'
+      - 'None: ΔH is measured, not calculated'
+    answer: 'CH₄, CO₂ and H₂O (O₂ is zero)'
+    explanation: '[−393.5 kJ + 2(−285.8 kJ)] − [−74.6 kJ + 2(0 kJ)] = −890.5 kJ. O₂ is an element, so it contributes 0.'
+    difficulty: hard

@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/enthalpy-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Enthalpy and Calorimetry Worksheet'
+description: '9 questions on exothermic and endothermic reactions, q = mcΔT, calorimetry and heat transfer. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/enthalpy-worksheet.pdf'
+answerKey: '/downloads/enthalpy-worksheet-answers.pdf'
+preview: '/previews/enthalpy-worksheet.png'
+status: review

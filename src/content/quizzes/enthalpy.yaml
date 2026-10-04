@@ -1,0 +1,79 @@
+# Quiz: Enthalpy and Calorimetry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked by computer.
+title: 'Enthalpy and Calorimetry: Quiz'
+description: 'Seven questions on exothermic and endothermic reactions, q = mcΔT and calorimetry, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: en-q1
+    prompt: 'Which process is endothermic?'
+    choices:
+      - 'Burning methane'
+      - 'Neutralizing HCl with NaOH'
+      - 'Dissolving ammonium nitrate in water (a cold pack)'
+      - 'Respiration'
+    answer: 'Dissolving ammonium nitrate in water (a cold pack)'
+    explanation: 'The cold pack absorbs heat from its surroundings, so it feels cold: ΔH is positive. The others release heat.'
+    difficulty: easy
+  - id: en-q2
+    prompt: 'For an exothermic reaction, which is true?'
+    choices:
+      - 'ΔH > 0 and the surroundings cool down'
+      - 'ΔH < 0 and the surroundings warm up'
+      - 'ΔH > 0 and the surroundings warm up'
+      - 'ΔH < 0 and the surroundings cool down'
+    answer: 'ΔH < 0 and the surroundings warm up'
+    explanation: 'Heat flows out of the reaction into the surroundings, so the products are lower in enthalpy: ΔH is negative.'
+    difficulty: easy
+  - id: en-q3
+    prompt: 'How much heat is needed to raise the temperature of 40.0 g of copper (c = 0.385 J/(g·°C)) from 25.0 °C to 75.0 °C?'
+    choices:
+      - '770. J'
+      - '15.4 J'
+      - '1.16 × 10³ J'
+      - '8.37 × 10³ J'
+    answer: '770. J'
+    explanation: 'q = (40.0 g)(0.385 J/(g·°C))(50.0 °C) = 770. J. The answer 8.37 × 10³ J uses the specific heat of water.'
+    difficulty: medium
+  - id: en-q4
+    prompt: 'In a calorimeter, 100. g of solution warms by 6.8 °C during a reaction (c = 4.184 J/(g·°C)). What is q for the reaction?'
+    choices:
+      - '+2.8 kJ'
+      - '−2.8 kJ'
+      - '+28 kJ'
+      - '−0.68 kJ'
+    answer: '−2.8 kJ'
+    explanation: 'q(solution) = (100. g)(4.184 J/(g·°C))(6.8 °C) = 2845 J = +2.8 kJ, so q(reaction) = −2.8 kJ: the reaction released the heat.'
+    difficulty: medium
+  - id: en-q5
+    prompt: 'CH₄ + 2O₂ → CO₂ + 2H₂O, ΔH = −890.5 kJ. What is ΔH for 2CH₄ + 4O₂ → 2CO₂ + 4H₂O?'
+    choices:
+      - '−890.5 kJ'
+      - '−1781.0 kJ'
+      - '−445.3 kJ'
+      - '+1781.0 kJ'
+    answer: '−1781.0 kJ'
+    explanation: 'Doubling the equation doubles ΔH: 2 × (−890.5 kJ) = −1781.0 kJ.'
+    difficulty: easy
+  - id: en-q6
+    prompt: 'Why do simple coffee-cup calorimeters usually give ΔH values slightly smaller in size than accepted values?'
+    choices:
+      - 'Water has no specific heat'
+      - 'Some heat is lost to the surroundings and the cups'
+      - 'The reaction goes faster in polystyrene'
+      - 'Temperature is measured in °C instead of K'
+    answer: 'Some heat is lost to the surroundings and the cups'
+    explanation: 'Heat that escapes is not counted in q = mcΔT, so the measured heat change is a little too small.'
+    difficulty: medium
+  - id: en-q7
+    prompt: '0.0500 mol of water forms in a neutralization that releases 2.85 kJ. What is ΔH per mole of water?'
+    choices:
+      - '−0.143 kJ/mol'
+      - '−57.0 kJ/mol'
+      - '+57.0 kJ/mol'
+      - '−2.85 kJ/mol'
+    answer: '−57.0 kJ/mol'
+    explanation: 'ΔH = −2.85 kJ ÷ 0.0500 mol = −57.0 kJ/mol. It is negative because heat was released.'
+    difficulty: medium
