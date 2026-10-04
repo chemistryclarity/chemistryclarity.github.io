@@ -30,7 +30,7 @@ questions:
       - '4.5 mol'
       - '6.0 mol'
     answer: '2.0 mol'
-    explanation: 'Mole ratio = want ÷ have = 2/3. So $3.0 \times \dfrac{2}{3} = 2.0$ mol. The answer 4.5 mol uses the ratio upside down (3/2).'
+    explanation: 'Mole ratio = want ÷ have = 2/3. So $3.0\ \text{mol H}_2 \times \dfrac{2\ \text{mol NH}_3}{3\ \text{mol H}_2} = 2.0\ \text{mol NH}_3$. The answer 4.5 mol uses the ratio upside down (3/2).'
     difficulty: easy
 
   - id: st-q3
@@ -41,7 +41,7 @@ questions:
       - '5.00 mol'
       - '10.0 mol'
     answer: '10.0 mol'
-    explanation: '$2.00 \times \dfrac{5}{1} = 10.0$ mol of $\ce{O2}$. The answer 0.400 mol divides by 5 instead of multiplying.'
+    explanation: '$2.00\ \text{mol C}_3\text{H}_8 \times \dfrac{5\ \text{mol O}_2}{1\ \text{mol C}_3\text{H}_8} = 10.0\ \text{mol O}_2$. The answer 0.400 mol divides by 5 instead of multiplying.'
     difficulty: easy
 
   - id: st-q4
@@ -52,18 +52,18 @@ questions:
       - '132 g'
       - '220 g'
     answer: '132 g'
-    explanation: '1.00 mol of propane gives 3.00 mol of $\ce{CO2}$ (ratio 3/1). Mass = $3.00 \times 44.01 = 132$ g.'
+    explanation: '1.00 mol of propane gives 3.00 mol of $\ce{CO2}$ (ratio 3/1). Mass = $3.00\ \text{mol} \times 44.01\ \text{g/mol} = 132\ \text{g}$.'
     difficulty: medium
 
   - id: st-q5
-    prompt: 'What mass of ammonia forms from 28.0 g of nitrogen with excess hydrogen? $\ce{N2 + 3H2 -> 2NH3}$ (N = 14.01, H = 1.008)'
+    prompt: 'What mass of ammonia forms from 28.0 g of nitrogen with excess hydrogen? $\ce{N2 + 3H2 -> 2NH3}$ (N = 14.01 g/mol, H = 1.008 g/mol)'
     choices:
       - '17.0 g'
       - '28.0 g'
       - '34.0 g'
       - '56.0 g'
     answer: '34.0 g'
-    explanation: 'Moles of $\ce{N2}$ = 28.0 ÷ 28.02 = 0.9993 mol. Moles of $\ce{NH3}$ = 0.9993 × 2 = 1.999 mol. Mass = 1.999 × 17.03 = 34.0 g. The answer 28.0 g wrongly assumes the masses are equal.'
+    explanation: 'Moles of $\ce{N2}$ = 28.0 g ÷ 28.02 g/mol = 0.9993 mol. Moles of $\ce{NH3}$ = 0.9993 mol $\ce{N2}$ × (2 mol $\ce{NH3}$ / 1 mol $\ce{N2}$) = 1.999 mol. Mass = 1.999 mol × 17.03 g/mol = 34.0 g. The answer 28.0 g wrongly assumes the masses are equal.'
     difficulty: medium
 
   - id: st-q6
@@ -74,7 +74,7 @@ questions:
       - '6.00 mol'
       - '12.0 mol'
     answer: '3.00 mol'
-    explanation: 'Mole ratio = want ÷ have = 2/4. So $6.00 \times \dfrac{2}{4} = 3.00$ mol of $\ce{Fe2O3}$.'
+    explanation: 'Mole ratio = want ÷ have = 2/4. So $6.00\ \text{mol Fe} \times \dfrac{2\ \text{mol Fe}_2\text{O}_3}{4\ \text{mol Fe}} = 3.00\ \text{mol Fe}_2\text{O}_3$.'
     difficulty: medium
 
   - id: st-q7

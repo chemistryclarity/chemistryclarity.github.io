@@ -33,7 +33,7 @@ cards:
     back: 'Find $n$ = molar mass ÷ empirical formula mass, then multiply every subscript by $n$.'
   - id: ef-08
     front: 'A compound has empirical formula $\ce{CH2}$ and molar mass 42.08 g/mol. What is its molecular formula?'
-    back: '$n = 42.08 \div 14.03 = 3$, so $\ce{C3H6}$.'
+    back: 'Empirical formula mass of $\ce{CH2}$ = 14.03 g/mol; $n = 42.08\ \text{g/mol} \div 14.03\ \text{g/mol} = 3$, so $\ce{C3H6}$.'
   - id: ef-09
     front: 'Why can''t you use the percentages directly as the atom ratio?'
     back: 'Percentages compare **masses**. Atoms of different elements have different masses, so you must convert to moles first.'

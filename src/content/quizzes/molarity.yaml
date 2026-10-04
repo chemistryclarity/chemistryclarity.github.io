@@ -23,14 +23,14 @@ questions:
     difficulty: easy
 
   - id: mo-q2
-    prompt: '7.46 g of potassium chloride, KCl, is dissolved to make 500.0 mL of solution. What is the molarity? (K = 39.10, Cl = 35.45)'
+    prompt: '7.46 g of potassium chloride, KCl, is dissolved to make 500.0 mL of solution. What is the molarity? (K = 39.10 g/mol, Cl = 35.45 g/mol)'
     choices:
       - '0.100 M'
       - '0.200 M'
       - '0.0149 M'
       - '14.9 M'
     answer: '0.200 M'
-    explanation: 'Moles = 7.46 ÷ 74.55 = 0.1001 mol. Molarity = 0.1001 ÷ 0.5000 L = 0.200 M.'
+    explanation: 'Molar mass of KCl = 39.10 g/mol + 35.45 g/mol = 74.55 g/mol. Moles = 7.46 g ÷ 74.55 g/mol = 0.1001 mol. Molarity = 0.1001 mol ÷ 0.5000 L = 0.200 M.'
     difficulty: medium
 
   - id: mo-q3
@@ -41,7 +41,7 @@ questions:
       - '2.08 M'
       - '12.0 M'
     answer: '0.480 M'
-    explanation: '$M_2 = \dfrac{M_1V_1}{V_2} = \dfrac{12.0 \times 10.0}{250.0} = 0.480$ M. Dilution keeps the moles the same but spreads them through a larger volume.'
+    explanation: '$M_2 = \dfrac{M_1V_1}{V_2} = \dfrac{(12.0\ \text{M})(10.0\ \text{mL})}{250.0\ \text{mL}} = 0.480\ \text{M}$ (the units of mL cancel). Dilution keeps the moles the same but spreads them through a larger volume.'
     difficulty: medium
 
   - id: mo-q4
@@ -63,7 +63,7 @@ questions:
       - '40.0 mL'
       - '80.0 mL'
     answer: '40.0 mL'
-    explanation: 'Moles of HCl = 0.250 × 0.02000 = 0.005000 mol. The ratio is 1 : 1, so NaOH needed = 0.005000 mol, and volume = 0.005000 ÷ 0.125 = 0.0400 L = 40.0 mL. The answer 10.0 mL puts the concentrations the wrong way round.'
+    explanation: 'Moles of HCl = 0.250 mol/L × 0.02000 L = 0.005000 mol. The ratio is 1 : 1, so NaOH needed = 0.005000 mol, and volume = 0.005000 mol ÷ 0.125 mol/L = 0.0400 L = 40.0 mL. The answer 10.0 mL puts the concentrations the wrong way round.'
     difficulty: medium
 
   - id: mo-q6
@@ -74,7 +74,7 @@ questions:
       - '20.0 mL'
       - '40.0 mL'
     answer: '20.0 mL'
-    explanation: 'Moles of $\ce{H2SO4}$ = 0.100 × 0.02000 = 0.00200 mol. The ratio is 2 : 1, so NaOH needed = 0.00400 mol, and volume = 0.00400 ÷ 0.200 = 0.0200 L = 20.0 mL. The answer 10.0 mL ignores the 2 : 1 ratio.'
+    explanation: 'Moles of $\ce{H2SO4}$ = 0.100 mol/L × 0.02000 L = 0.00200 mol. The ratio is 2 : 1, so NaOH needed = 2 × 0.00200 mol = 0.00400 mol, and volume = 0.00400 mol ÷ 0.200 mol/L = 0.0200 L = 20.0 mL. The answer 10.0 mL ignores the 2 : 1 ratio.'
     difficulty: hard
 
   - id: mo-q7

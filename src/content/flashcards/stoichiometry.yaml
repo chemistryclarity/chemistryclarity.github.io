@@ -24,10 +24,10 @@ cards:
     back: 'Want ÷ have: (coefficient of the substance you want) ÷ (coefficient of the substance you know).'
   - id: st-05
     front: 'In $\ce{2H2 + O2 -> 2H2O}$, how many moles of $\ce{O2}$ react with 4 mol of $\ce{H2}$?'
-    back: '$4 \times \dfrac{1}{2} = 2$ mol of $\ce{O2}$'
+    back: '$4\ \text{mol H}_2 \times \dfrac{1\ \text{mol O}_2}{2\ \text{mol H}_2} = 2\ \text{mol O}_2$'
   - id: st-06
     front: 'In $\ce{N2 + 3H2 -> 2NH3}$, how many moles of $\ce{NH3}$ form from 3.0 mol of $\ce{H2}$?'
-    back: '$3.0 \times \dfrac{2}{3} = 2.0$ mol of $\ce{NH3}$'
+    back: '$3.0\ \text{mol H}_2 \times \dfrac{2\ \text{mol NH}_3}{3\ \text{mol H}_2} = 2.0\ \text{mol NH}_3$'
   - id: st-07
     front: 'Why must the equation be balanced before you calculate?'
     back: 'Only a balanced equation gives the correct mole ratio. An unbalanced one gives the wrong answer.'

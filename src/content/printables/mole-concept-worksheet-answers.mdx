@@ -8,7 +8,7 @@ assisted: true
 ---
 
 {/*
-  DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer.
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer. Units shown on every quantity in every step.
   Atomic masses: H 1.008, C 12.01, N 14.01, O 16.00, Na 22.99, Mg 24.31, Cl 35.45, Ca 40.08.
 */}
 
@@ -21,27 +21,27 @@ assisted: true
 <Answer>Yes. Both are one mole, so both contain 6.022 × 10²³ atoms. The masses differ because a magnesium atom is heavier than a carbon atom.</Answer>
 
 <Q n={3}>What is wrong?</Q>
-<Answer>Oxygen gas is made of $\ce{O2}$ molecules. One mole contains 6.022 × 10²³ *molecules*, which is 2 × 6.022 × 10²³ = 1.204 × 10²⁴ oxygen *atoms*.</Answer>
+<Answer>Oxygen gas is made of $\ce{O2}$ molecules. One mole contains 6.022 × 10²³ *molecules*, which is 2 atoms/molecule × 6.022 × 10²³ molecules = 1.204 × 10²⁴ oxygen *atoms*.</Answer>
 
 ## B. Molar mass
 
 <Q n={4}>Molar masses.</Q>
 <Answer>
 
-(a) $\ce{CH4}$: 12.01 + 4(1.008) = **16.04 g/mol**
+(a) $\ce{CH4}$: 12.01 g/mol + 4(1.008 g/mol) = **16.04 g/mol**
 
-(b) $\ce{NH3}$: 14.01 + 3(1.008) = **17.03 g/mol**
+(b) $\ce{NH3}$: 14.01 g/mol + 3(1.008 g/mol) = **17.03 g/mol**
 
-(c) $\ce{CaCO3}$: 40.08 + 12.01 + 3(16.00) = **100.09 g/mol**
+(c) $\ce{CaCO3}$: 40.08 g/mol + 12.01 g/mol + 3(16.00 g/mol) = **100.09 g/mol**
 
 </Answer>
 
 <Q n={5}>Molar masses.</Q>
 <Answer>
 
-(a) $\ce{C6H12O6}$: 6(12.01) + 12(1.008) + 6(16.00) = 72.06 + 12.096 + 96.00 = **180.16 g/mol**
+(a) $\ce{C6H12O6}$: 6(12.01 g/mol) + 12(1.008 g/mol) + 6(16.00 g/mol) = 72.06 g/mol + 12.096 g/mol + 96.00 g/mol = **180.16 g/mol**
 
-(b) $\ce{MgCl2}$: 24.31 + 2(35.45) = **95.21 g/mol**
+(b) $\ce{MgCl2}$: 24.31 g/mol + 2(35.45 g/mol) = **95.21 g/mol**
 
 </Answer>
 
@@ -54,15 +54,15 @@ assisted: true
 <Answer>$m = n \times M = 0.150\ \text{mol} \times 100.09\ \text{g/mol} =$ **15.0 g**</Answer>
 
 <Q n={8}>Molecules in 0.500 mol of $\ce{NH3}$.</Q>
-<Answer>$N = 0.500\ \text{mol} \times 6.022 \times 10^{23}\ \text{mol}^{-1} =$ **3.01 × 10²³ molecules**</Answer>
+<Answer>$N = 0.500\ \text{mol} \times 6.022 \times 10^{23}\ \text{molecules/mol} =$ **3.01 × 10²³ molecules**</Answer>
 
 <Q n={9}>Moles in 1.50 × 10²⁴ molecules of water.</Q>
-<Answer>$n = \dfrac{1.50 \times 10^{24}}{6.022 \times 10^{23}\ \text{mol}^{-1}} =$ **2.49 mol**</Answer>
+<Answer>$n = \dfrac{1.50 \times 10^{24}\ \text{molecules}}{6.022 \times 10^{23}\ \text{molecules/mol}} =$ **2.49 mol**</Answer>
 
 <Q n={10}>Mass of 3.01 × 10²³ sodium atoms.</Q>
 <Answer>
 
-$n = \dfrac{3.01 \times 10^{23}}{6.022 \times 10^{23}\ \text{mol}^{-1}} = 0.500\ \text{mol}$
+$n = \dfrac{3.01 \times 10^{23}\ \text{atoms}}{6.022 \times 10^{23}\ \text{atoms/mol}} = 0.500\ \text{mol}$
 
 $m = 0.500\ \text{mol} \times 22.99\ \text{g/mol} =$ **11.5 g**
 
@@ -71,16 +71,16 @@ $m = 0.500\ \text{mol} \times 22.99\ \text{g/mol} =$ **11.5 g**
 ## D. Counting atoms inside compounds
 
 <Q n={11}>Moles of H atoms in 2.00 mol of glucose.</Q>
-<Answer>Each $\ce{C6H12O6}$ contains 12 H atoms: 2.00 mol × 12 = **24.0 mol of H atoms**</Answer>
+<Answer>Each $\ce{C6H12O6}$ contains 12 H atoms: 2.00 mol glucose × (12 mol H / 1 mol glucose) = **24.0 mol of H atoms**</Answer>
 
 <Q n={12}>Oxygen atoms in 10.0 g of $\ce{CO2}$.</Q>
 <Answer>
 
-$M(\ce{CO2}) = 12.01 + 2(16.00) = 44.01\ \text{g/mol}$
+$M(\ce{CO2}) = 12.01\ \text{g/mol} + 2(16.00\ \text{g/mol}) = 44.01\ \text{g/mol}$
 
-$n(\ce{CO2}) = \dfrac{10.0}{44.01} = 0.2272\ \text{mol}$
+$n(\ce{CO2}) = \dfrac{10.0\ \text{g}}{44.01\ \text{g/mol}} = 0.2272\ \text{mol}$
 
-O atoms $= 2 \times 0.2272\ \text{mol} \times 6.022 \times 10^{23}\ \text{mol}^{-1} =$ **2.74 × 10²³ atoms**
+O atoms $= 2 \times 0.2272\ \text{mol} \times 6.022 \times 10^{23}\ \text{atoms/mol} =$ **2.74 × 10²³ atoms**
 
 </Answer>
 
@@ -92,11 +92,13 @@ O atoms $= 2 \times 0.2272\ \text{mol} \times 6.022 \times 10^{23}\ \text{mol}^{
 <Q n={14}>More molecules: 10.0 g of $\ce{H2O}$ or 10.0 g of $\ce{CO2}$?</Q>
 <Answer>
 
-$n(\ce{H2O}) = \dfrac{10.0}{18.02} = 0.555\ \text{mol}$ &nbsp;&nbsp; $n(\ce{CO2}) = \dfrac{10.0}{44.01} = 0.227\ \text{mol}$
+$n(\ce{H2O}) = \dfrac{10.0\ \text{g}}{18.02\ \text{g/mol}} = 0.555\ \text{mol}$
+
+$n(\ce{CO2}) = \dfrac{10.0\ \text{g}}{44.01\ \text{g/mol}} = 0.227\ \text{mol}$
 
 **Water** contains more molecules (3.34 × 10²³ compared with 1.37 × 10²³). Water molecules are lighter, so the same mass contains more of them.
 
 </Answer>
 
 <Q n={15}>Identify the element.</Q>
-<Answer>$M = \dfrac{m}{n} = \dfrac{5.00\ \text{g}}{0.125\ \text{mol}} = 40.0\ \text{g/mol}$. This matches **calcium** (Ca = 40.08).</Answer>
+<Answer>$M = \dfrac{m}{n} = \dfrac{5.00\ \text{g}}{0.125\ \text{mol}} = 40.0\ \text{g/mol}$. This matches **calcium** (Ca = 40.08 g/mol).</Answer>

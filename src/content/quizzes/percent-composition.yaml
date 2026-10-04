@@ -12,14 +12,14 @@ assisted: true
 
 questions:
   - id: pc-q1
-    prompt: 'What is the formula mass of calcium hydroxide, $\ce{Ca(OH)2}$? (Ca = 40.08, O = 16.00, H = 1.008)'
+    prompt: 'What is the formula mass of calcium hydroxide, $\ce{Ca(OH)2}$? (Ca = 40.08 u, O = 16.00 u, H = 1.008 u)'
     choices:
       - '57.09 u'
       - '58.10 u'
       - '74.10 u'
       - '148.19 u'
     answer: '74.10 u'
-    explanation: 'The subscript 2 after the parentheses applies to both O and H: $40.08 + 2(16.00 + 1.008) = 74.10$ u. The answer 58.10 u doubles only the H.'
+    explanation: 'The subscript 2 after the parentheses applies to both O and H: $40.08\ \text{u} + 2(16.00\ \text{u} + 1.008\ \text{u}) = 74.10\ \text{u}$. The answer 58.10 u doubles only the H.'
     difficulty: easy
 
   - id: pc-q2
@@ -30,7 +30,7 @@ questions:
       - '50.0%'
       - '88.81%'
     answer: '88.81%'
-    explanation: '$\dfrac{16.00}{18.016} \times 100\% = 88.81\%$. The answer 33.3% is the fraction of *atoms* that are oxygen (1 of 3), not the fraction of the mass.'
+    explanation: '$\dfrac{16.00\ \text{u}}{18.016\ \text{u}} \times 100\% = 88.81\%$. The answer 33.3% is the fraction of *atoms* that are oxygen (1 of 3), not the fraction of the mass.'
     difficulty: easy
 
   - id: pc-q3
@@ -41,7 +41,7 @@ questions:
       - '33.3%'
       - '72.71%'
     answer: '27.29%'
-    explanation: 'Formula mass = 12.01 + 2(16.00) = 44.01 u. % C = $\dfrac{12.01}{44.01} \times 100\% = 27.29\%$. The answer 72.71% is the percentage of oxygen.'
+    explanation: 'Formula mass = 12.01 u + 2(16.00 u) = 44.01 u. % C = $\dfrac{12.01\ \text{u}}{44.01\ \text{u}} \times 100\% = 27.29\%$. The answer 72.71% is the percentage of oxygen.'
     difficulty: medium
 
   - id: pc-q4
@@ -52,18 +52,18 @@ questions:
       - '25.0%'
       - '82.25%'
     answer: '82.25%'
-    explanation: 'Formula mass = 14.01 + 3(1.008) = 17.034 u. % N = $\dfrac{14.01}{17.034} \times 100\% = 82.25\%$. The answer 25.0% counts atoms (1 of 4) instead of mass.'
+    explanation: 'Formula mass = 14.01 u + 3(1.008 u) = 17.034 u. % N = $\dfrac{14.01\ \text{u}}{17.034\ \text{u}} \times 100\% = 82.25\%$. The answer 25.0% counts atoms (1 of 4) instead of mass.'
     difficulty: medium
 
   - id: pc-q5
-    prompt: 'What mass of iron is in 50.0 g of iron(III) oxide, $\ce{Fe2O3}$? (Fe = 55.85, O = 16.00)'
+    prompt: 'What mass of iron is in 50.0 g of iron(III) oxide, $\ce{Fe2O3}$? (Fe = 55.85 u, O = 16.00 u)'
     choices:
       - '17.5 g'
       - '35.0 g'
       - '50.0 g'
       - '69.9 g'
     answer: '35.0 g'
-    explanation: 'Formula mass = 2(55.85) + 3(16.00) = 159.70 u. Mass of Fe = $\dfrac{111.70}{159.70} \times 50.0\ \text{g} = 35.0$ g. The answer 17.5 g forgets that there are two Fe atoms in the formula.'
+    explanation: 'Formula mass = 2(55.85 u) + 3(16.00 u) = 159.70 u. Mass of Fe = $\dfrac{111.70\ \text{u}}{159.70\ \text{u}} \times 50.0\ \text{g} = 35.0\ \text{g}$. The answer 17.5 g forgets that there are two Fe atoms in the formula.'
     difficulty: hard
 
   - id: pc-q6
@@ -78,12 +78,12 @@ questions:
     difficulty: easy
 
   - id: pc-q7
-    prompt: 'What is the mass percent of calcium in calcium carbonate, $\ce{CaCO3}$? (Ca = 40.08, C = 12.01, O = 16.00)'
+    prompt: 'What is the mass percent of calcium in calcium carbonate, $\ce{CaCO3}$? (Ca = 40.08 u, C = 12.01 u, O = 16.00 u)'
     choices:
       - '12.00%'
       - '20.0%'
       - '40.04%'
       - '47.96%'
     answer: '40.04%'
-    explanation: 'Formula mass = 40.08 + 12.01 + 3(16.00) = 100.09 u. % Ca = $\dfrac{40.08}{100.09} \times 100\% = 40.04\%$. The answer 20.0% counts atoms (1 of 5).'
+    explanation: 'Formula mass = 40.08 u + 12.01 u + 3(16.00 u) = 100.09 u. % Ca = $\dfrac{40.08\ \text{u}}{100.09\ \text{u}} \times 100\% = 40.04\%$. The answer 20.0% counts atoms (1 of 5).'
     difficulty: medium

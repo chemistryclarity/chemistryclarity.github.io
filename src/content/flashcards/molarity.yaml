@@ -24,10 +24,10 @@ cards:
     back: '$M_1 V_1 = M_2 V_2$, because the moles of solute stay the same.'
   - id: mo-05
     front: 'How many moles of solute are in 250.0 mL of 0.400 M solution?'
-    back: '$0.400 \times 0.2500 = 0.100$ mol'
+    back: '$0.400\ \text{mol/L} \times 0.2500\ \text{L} = 0.100\ \text{mol}$ (250.0 mL = 0.2500 L)'
   - id: mo-06
     front: '10.0 mL of 12.0 M HCl is diluted to 250.0 mL. What is the new concentration?'
-    back: '$\dfrac{12.0 \times 10.0}{250.0} = 0.480$ M'
+    back: '$\dfrac{(12.0\ \text{M})(10.0\ \text{mL})}{250.0\ \text{mL}} = 0.480\ \text{M}$'
   - id: mo-07
     front: 'Why must you convert mL to L in molarity calculations?'
     back: 'Molarity is per **litre**. Using mL makes the answer 1000 times wrong.'

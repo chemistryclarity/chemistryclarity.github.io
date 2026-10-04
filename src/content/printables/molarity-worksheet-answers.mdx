@@ -7,7 +7,7 @@ status: published
 assisted: true
 ---
 
-{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer. */}
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All values calculated and checked by computer. Units shown on every quantity in every step. */}
 
 ## A. Understanding
 
@@ -20,26 +20,26 @@ assisted: true
 ## B. Calculating molarity and amounts
 
 <Q n={3}>10.0 g NaOH in 500.0 mL.</Q>
-<Answer>n = 10.0 ÷ 40.00 = 0.250 mol. Molarity = 0.250 ÷ 0.5000 L = **0.500 M**</Answer>
+<Answer>n = 10.0 g ÷ 40.00 g/mol = 0.250 mol. Molarity = 0.250 mol ÷ 0.5000 L = **0.500 M** (mol/L)</Answer>
 
 <Q n={4}>KCl for 250.0 mL of 0.150 M.</Q>
-<Answer>n = 0.150 × 0.2500 = 0.03750 mol. M(KCl) = 74.55 g/mol, so mass = 0.03750 × 74.55 = **2.80 g**</Answer>
+<Answer>n = 0.150 mol/L × 0.2500 L = 0.03750 mol. M(KCl) = 74.55 g/mol, so mass = 0.03750 mol × 74.55 g/mol = **2.80 g**</Answer>
 
 <Q n={5}>Moles in 35.0 mL of 0.200 M.</Q>
-<Answer>n = 0.200 × 0.0350 = **0.00700 mol**</Answer>
+<Answer>n = 0.200 mol/L × 0.0350 L = **0.00700 mol**</Answer>
 
 ## C. Dilution
 
 <Q n={6}>Volume of 12.0 M HCl needed.</Q>
-<Answer>$V_1 = \dfrac{M_2V_2}{M_1} = \dfrac{0.600 \times 500.0}{12.0} =$ **25.0 mL**</Answer>
+<Answer>$V_1 = \dfrac{M_2V_2}{M_1} = \dfrac{(0.600\ \text{M})(500.0\ \text{mL})}{12.0\ \text{M}} =$ **25.0 mL** (the units of M cancel)</Answer>
 
 <Q n={7}>New concentration.</Q>
-<Answer>$M_2 = \dfrac{2.00 \times 50.0}{400.0} =$ **0.250 M**</Answer>
+<Answer>$M_2 = \dfrac{M_1V_1}{V_2} = \dfrac{(2.00\ \text{M})(50.0\ \text{mL})}{400.0\ \text{mL}} =$ **0.250 M** (the units of mL cancel)</Answer>
 
 ## D. Titrations
 
 <Q n={8}>Concentration of HCl.</Q>
-<Answer>n(NaOH) = 0.120 × 0.02250 = 0.002700 mol = n(HCl) (1 : 1). [HCl] = 0.002700 ÷ 0.02500 = **0.108 M**</Answer>
+<Answer>n(NaOH) = 0.120 mol/L × 0.02250 L = 0.002700 mol = n(HCl) (1 : 1). [HCl] = 0.002700 mol ÷ 0.02500 L = **0.108 M**</Answer>
 
 <Q n={9}>Concentration of H₂SO₄.</Q>
-<Answer>n(NaOH) = 0.200 × 0.01875 = 0.003750 mol. n(H₂SO₄) = 0.003750 ÷ 2 = 0.001875 mol. [H₂SO₄] = 0.001875 ÷ 0.01500 = **0.125 M**</Answer>
+<Answer>n(NaOH) = 0.200 mol/L × 0.01875 L = 0.003750 mol. n(H₂SO₄) = 0.003750 mol NaOH × (1 mol H₂SO₄ / 2 mol NaOH) = 0.001875 mol. [H₂SO₄] = 0.001875 mol ÷ 0.01500 L = **0.125 M**</Answer>

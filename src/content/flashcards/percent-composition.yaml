@@ -20,11 +20,11 @@ cards:
     front: 'What is a formula mass?'
     back: 'The sum of the atomic masses of all the atoms in a chemical formula, in u.'
   - id: pc-04
-    front: 'What is the formula mass of $\ce{Ca(OH)2}$? (Ca = 40.08, O = 16.00, H = 1.008)'
-    back: '$40.08 + 2(16.00 + 1.008) = 74.10$ u. The 2 multiplies both O and H.'
+    front: 'What is the formula mass of $\ce{Ca(OH)2}$? (Ca = 40.08 u, O = 16.00 u, H = 1.008 u)'
+    back: '$40.08\ \text{u} + 2(16.00\ \text{u} + 1.008\ \text{u}) = 74.10\ \text{u}$. The 2 multiplies both O and H.'
   - id: pc-05
     front: 'What is the mass percent of hydrogen in water, $\ce{H2O}$?'
-    back: '$\dfrac{2(1.008)}{18.016} \times 100\% = 11.19\%$'
+    back: '$\dfrac{2(1.008\ \text{u})}{18.016\ \text{u}} \times 100\% = 11.19\%$'
   - id: pc-06
     front: 'Two-thirds of the atoms in water are hydrogen. Why is hydrogen only 11.19% of its mass?'
     back: 'Hydrogen atoms are much lighter than oxygen atoms. Percent composition is by mass, not by number of atoms.'

@@ -29,7 +29,7 @@ questions:
       - '64.00 u'
       - '64.31 u'
     answer: '63.55 u'
-    explanation: '(0.6915 × 62.930) + (0.3085 × 64.928) = 43.516 + 20.030 = 63.55 u. The answer 63.93 u is the simple (unweighted) average.'
+    explanation: '(0.6915 × 62.930 u) + (0.3085 × 64.928 u) = 43.516 u + 20.030 u = 63.55 u. The answer 63.93 u is the simple (unweighted) average.'
     difficulty: medium
 
   - id: is-q3
@@ -51,7 +51,7 @@ questions:
       - '80.00 u'
       - '7990 u'
     answer: '79.90 u'
-    explanation: '(0.5069 × 78.918) + (0.4931 × 80.916) = 79.90 u. Using percentages without dividing by 100 gives 7990, 100 times too big.'
+    explanation: '(0.5069 × 78.918 u) + (0.4931 × 80.916 u) = 79.90 u. Using percentages without dividing by 100 gives 7990, 100 times too big.'
     difficulty: medium
 
   - id: is-q5
@@ -62,7 +62,7 @@ questions:
       - '7.02 u'
       - '6.09 u'
     answer: '6.94 u'
-    explanation: '(0.0759 × 6.015) + (0.9241 × 7.016) = 6.94 u, close to 7 because lithium-7 is far more common.'
+    explanation: '(0.0759 × 6.015 u) + (0.9241 × 7.016 u) = 6.94 u, close to 7 because lithium-7 is far more common.'
     difficulty: medium
 
   - id: is-q6
@@ -73,7 +73,7 @@ questions:
       - '60.1%'
       - '69.7%'
     answer: '60.1%'
-    explanation: 'Let x = fraction of gallium-69: 68.926x + 70.925(1 − x) = 69.723, so x = 1.202 ÷ 1.999 = 0.601, or 60.1%. 39.9% is the abundance of gallium-71.'
+    explanation: 'Let x = fraction of gallium-69: (68.926 u)x + (70.925 u)(1 − x) = 69.723 u, so x = 1.202 u ÷ 1.999 u = 0.601, or 60.1%. 39.9% is the abundance of gallium-71.'
     difficulty: hard
 
   - id: is-q7

@@ -24,14 +24,14 @@ questions:
     difficulty: easy
 
   - id: mole-q2
-    prompt: 'What is the molar mass of carbon dioxide, $\ce{CO2}$? (C = 12.01, O = 16.00)'
+    prompt: 'What is the molar mass of carbon dioxide, $\ce{CO2}$? (C = 12.01 g/mol, O = 16.00 g/mol)'
     choices:
       - '28.01 g/mol'
       - '32.00 g/mol'
       - '44.01 g/mol'
       - '60.01 g/mol'
     answer: '44.01 g/mol'
-    explanation: 'One carbon atom plus two oxygen atoms: $12.01 + 2(16.00) = 44.01$ g/mol. The answer 28.01 g/mol forgets the subscript 2 (it is the molar mass of CO).'
+    explanation: 'One carbon atom plus two oxygen atoms: $12.01\ \text{g/mol} + 2(16.00\ \text{g/mol}) = 44.01\ \text{g/mol}$. The answer 28.01 g/mol forgets the subscript 2 (it is the molar mass of CO).'
     difficulty: easy
 
   - id: mole-q3
@@ -64,7 +64,7 @@ questions:
       - '$1.204 \times 10^{24}$'
       - '16.00'
     answer: '$1.204 \times 10^{24}$'
-    explanation: '1.00 mol of $\ce{O2}$ contains $6.022 \times 10^{23}$ *molecules*. Each molecule has 2 oxygen atoms, so there are $2 \times 6.022 \times 10^{23} = 1.204 \times 10^{24}$ atoms.'
+    explanation: '1.00 mol of $\ce{O2}$ contains $6.022 \times 10^{23}$ *molecules*. Each molecule has 2 oxygen atoms, so there are $2\ \text{atoms/molecule} \times 6.022 \times 10^{23}\ \text{molecules} = 1.204 \times 10^{24}\ \text{atoms}$.'
     difficulty: medium
 
   - id: mole-q6

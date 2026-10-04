@@ -23,7 +23,7 @@ questions:
       - Neither; they react exactly
       - Both run out at the same time
     answer: $\ce{H2}$
-    explanation: 1.0 mol of $\ce{H2}$ needs $1.0 \times \dfrac{1}{2} = 0.50$ mol of $\ce{O2}$. There is 0.6 mol available, so oxygen is in excess and hydrogen runs out first, even though there are fewer moles of oxygen.
+    explanation: 1.0 mol of $\ce{H2}$ needs $1.0\ \text{mol H}_2 \times \dfrac{1\ \text{mol O}_2}{2\ \text{mol H}_2} = 0.50\ \text{mol O}_2$. There is 0.6 mol available, so oxygen is in excess and hydrogen runs out first, even though there are fewer moles of oxygen.
     difficulty: medium
   - id: lr-q3
     prompt: In $\ce{N2 + 3H2 -> 2NH3}$, 2.0 mol of $\ce{N2}$ is mixed with 3.0 mol of $\ce{H2}$. How many moles of $\ce{NH3}$ can form?
@@ -33,7 +33,7 @@ questions:
       - 4.0 mol
       - 6.0 mol
     answer: 2.0 mol
-    explanation: 'All the $\ce{N2}$ would need 6.0 mol of $\ce{H2}$, but only 3.0 mol is available, so $\ce{H2}$ is limiting: $3.0 \times \dfrac{2}{3} = 2.0$ mol of $\ce{NH3}$. The answer 4.0 mol uses the excess reactant.'
+    explanation: 'All the $\ce{N2}$ would need 6.0 mol of $\ce{H2}$, but only 3.0 mol is available, so $\ce{H2}$ is limiting: $3.0\ \text{mol H}_2 \times \dfrac{2\ \text{mol NH}_3}{3\ \text{mol H}_2} = 2.0\ \text{mol NH}_3$. The answer 4.0 mol uses the excess reactant.'
     difficulty: medium
   - id: lr-q4
     prompt: The theoretical yield of a reaction is 50.0 g, and 42.5 g of product is collected. What is the percent yield?
@@ -43,7 +43,7 @@ questions:
       - 92.5%
       - 118%
     answer: 85.0%
-    explanation: Percent yield = $\dfrac{42.5}{50.0} \times 100\% = 85.0\%$. The answer 118% divides the wrong way round.
+    explanation: Percent yield = $\dfrac{42.5\ \text{g}}{50.0\ \text{g}} \times 100\% = 85.0\%$ (the units of g cancel). The answer 118% divides the wrong way round.
     difficulty: easy
   - id: lr-q5
     prompt: In $\ce{2H2 + O2 -> 2H2O}$, 4.0 mol of $\ce{H2}$ reacts with 3.0 mol of $\ce{O2}$. How much of the excess reactant is left over?
@@ -53,17 +53,17 @@ questions:
       - 1.0 mol of $\ce{H2}$
       - Nothing is left over
     answer: 1.0 mol of $\ce{O2}$
-    explanation: 4.0 mol of $\ce{H2}$ needs only 2.0 mol of $\ce{O2}$, so hydrogen is limiting. Oxygen left over = 3.0 − 2.0 = 1.0 mol.
+    explanation: 4.0 mol of $\ce{H2}$ needs only 2.0 mol of $\ce{O2}$, so hydrogen is limiting. Oxygen left over = 3.0 mol − 2.0 mol = 1.0 mol.
     difficulty: medium
   - id: lr-q6
-    prompt: '16.0 g of methane burns with 48.0 g of oxygen: $\ce{CH4 + 2O2 -> CO2 + 2H2O}$. What mass of $\ce{CO2}$ can form? (C = 12.01, H = 1.008, O = 16.00)'
+    prompt: '16.0 g of methane burns with 48.0 g of oxygen: $\ce{CH4 + 2O2 -> CO2 + 2H2O}$. What mass of $\ce{CO2}$ can form? (C = 12.01 g/mol, H = 1.008 g/mol, O = 16.00 g/mol)'
     choices:
       - 33.0 g
       - 43.9 g
       - 64.0 g
       - 66.0 g
     answer: 33.0 g
-    explanation: 'Moles: $\ce{CH4}$ = 16.0 ÷ 16.04 = 0.9974 mol; $\ce{O2}$ = 48.0 ÷ 32.00 = 1.50 mol. The methane would need 1.995 mol of $\ce{O2}$, so oxygen is limiting. $\ce{CO2}$ = 1.50 ÷ 2 = 0.750 mol, and 0.750 × 44.01 = 33.0 g. The answer 43.9 g uses the excess reactant (methane).'
+    explanation: 'Moles: $\ce{CH4}$ = 16.0 g ÷ 16.04 g/mol = 0.9974 mol; $\ce{O2}$ = 48.0 g ÷ 32.00 g/mol = 1.50 mol. The methane would need 1.995 mol of $\ce{O2}$, so oxygen is limiting. $\ce{CO2}$ = 1.50 mol $\ce{O2}$ × (1 mol $\ce{CO2}$ / 2 mol $\ce{O2}$) = 0.750 mol, and 0.750 mol × 44.01 g/mol = 33.0 g. The answer 43.9 g uses the excess reactant (methane).'
     difficulty: hard
   - id: lr-q7
     prompt: A student reports a percent yield of 112%. What is the most likely explanation?

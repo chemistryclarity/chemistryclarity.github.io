@@ -35,7 +35,7 @@ questions:
       - '5.04'
       - '5.44'
     answer: '5.04'
-    explanation: 'pH = 4.74 + log(0.20/0.10) = 4.74 + 0.30 = 5.04. The answer 4.44 puts the ratio upside down.'
+    explanation: 'pH = 4.74 + log(0.20 M / 0.10 M) = 4.74 + 0.30 = 5.04 (the units of M cancel). The answer 4.44 puts the ratio upside down.'
     difficulty: medium
   - id: bu-q4
     prompt: 'What is the pH of a buffer that is 0.20 M acetic acid and 0.10 M sodium acetate? (pKa = 4.74)'
@@ -45,7 +45,7 @@ questions:
       - '5.04'
       - '4.14'
     answer: '4.44'
-    explanation: 'pH = 4.74 + log(0.10/0.20) = 4.74 − 0.30 = 4.44. More acid than base gives a pH below the pKa.'
+    explanation: 'pH = 4.74 + log(0.10 M / 0.20 M) = 4.74 − 0.30 = 4.44. More acid than base gives a pH below the pKa.'
     difficulty: medium
   - id: bu-q5
     prompt: 'A buffer contains 0.10 mol of acetic acid and 0.10 mol of acetate. 0.010 mol of NaOH is added. What is the new pH? (pKa = 4.74)'
@@ -55,7 +55,7 @@ questions:
       - '4.83'
       - '12.00'
     answer: '4.83'
-    explanation: 'OH⁻ reacts with acetic acid: HA = 0.09 mol, A⁻ = 0.11 mol. pH = 4.74 + log(0.11/0.09) = 4.83. The pH rises only slightly.'
+    explanation: 'OH⁻ reacts with acetic acid: HA = 0.10 mol − 0.010 mol = 0.09 mol, A⁻ = 0.10 mol + 0.010 mol = 0.11 mol. pH = 4.74 + log(0.11 mol / 0.09 mol) = 4.83. The pH rises only slightly.'
     difficulty: hard
   - id: bu-q6
     prompt: 'You need a buffer at pH 9.5. Which conjugate pair is the best choice?'

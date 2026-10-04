@@ -52,7 +52,7 @@ questions:
       - '$\ce{CH4}$'
       - '$\ce{C3H}$'
     answer: '$\ce{CH4}$'
-    explanation: 'Moles in 100 g: C = 74.87 ÷ 12.01 = 6.234; H = 25.13 ÷ 1.008 = 24.93. Divide by 6.234: C = 1.00, H = 4.00, so $\ce{CH4}$. The answer $\ce{C3H}$ comes from using the percentages directly instead of moles.'
+    explanation: 'Moles in 100 g: C = 74.87 g ÷ 12.01 g/mol = 6.234 mol; H = 25.13 g ÷ 1.008 g/mol = 24.93 mol. Divide by 6.234 mol: C = 1.00, H = 4.00, so $\ce{CH4}$. The answer $\ce{C3H}$ comes from using the percentages directly instead of moles.'
     difficulty: medium
 
   - id: ef-q5
@@ -63,7 +63,7 @@ questions:
       - '$\ce{C3H6}$'
       - '$\ce{C6H12}$'
     answer: '$\ce{C3H6}$'
-    explanation: 'Empirical formula mass = 12.01 + 2(1.008) = 14.03 g/mol. $n = 42.08 \div 14.03 = 3.00$, so the molecular formula is $\ce{C3H6}$.'
+    explanation: 'Empirical formula mass = 12.01 g/mol + 2(1.008 g/mol) = 14.03 g/mol. $n = 42.08\ \text{g/mol} \div 14.03\ \text{g/mol} = 3.00$, so the molecular formula is $\ce{C3H6}$.'
     difficulty: medium
 
   - id: ef-q6
@@ -74,7 +74,7 @@ questions:
       - '$\ce{C6H6}$'
       - '$\ce{C8H8}$'
     answer: '$\ce{C6H6}$'
-    explanation: 'Empirical formula mass = 12.01 + 1.008 = 13.02 g/mol. $n = 78.11 \div 13.02 = 6.00$, so $\ce{C6H6}$.'
+    explanation: 'Empirical formula mass = 12.01 g/mol + 1.008 g/mol = 13.02 g/mol. $n = 78.11\ \text{g/mol} \div 13.02\ \text{g/mol} = 6.00$, so $\ce{C6H6}$.'
     difficulty: medium
 
   - id: ef-q7

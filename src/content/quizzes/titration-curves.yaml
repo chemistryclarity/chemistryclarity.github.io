@@ -45,7 +45,7 @@ questions:
       - '50.0 mL'
       - '2.50 mL'
     answer: '25.0 mL'
-    explanation: 'Moles HCl = 0.100 × 0.02500 = 0.00250 mol; volume NaOH = 0.00250 ÷ 0.100 = 0.0250 L = 25.0 mL.'
+    explanation: 'Moles HCl = 0.100 mol/L × 0.02500 L = 0.00250 mol; volume NaOH = 0.00250 mol ÷ 0.100 mol/L = 0.0250 L = 25.0 mL.'
     difficulty: easy
   - id: tc-q5
     prompt: '25.00 mL of 0.100 M HCl is titrated with 0.100 M NaOH. What is the pH after 12.50 mL of NaOH has been added?'
@@ -55,7 +55,7 @@ questions:
       - '1.30'
       - '7.00'
     answer: '1.48'
-    explanation: 'HCl left = 0.00250 − 0.00125 = 0.00125 mol in 37.50 mL: [H₃O⁺] = 0.0333 M, pH = 1.48. The answer 1.30 forgets that the volume has increased.'
+    explanation: 'HCl left = 0.00250 mol − 0.00125 mol = 0.00125 mol in 37.50 mL: [H₃O⁺] = 0.00125 mol ÷ 0.03750 L = 0.0333 M, pH = 1.48. The answer 1.30 forgets that the volume has increased.'
     difficulty: hard
   - id: tc-q6
     prompt: 'Which indicator is best for titrating acetic acid with NaOH?'

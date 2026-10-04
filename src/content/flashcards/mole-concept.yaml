@@ -27,10 +27,10 @@ cards:
     front: 'Which formula converts moles into a number of particles?'
     back: '$N = n \times N_\text{A}$ (particles = moles × $6.022 \times 10^{23}$)'
   - id: mole-06
-    front: 'What is the molar mass of water, $\ce{H2O}$? (H = 1.008, O = 16.00)'
-    back: '$2(1.008) + 16.00 = 18.02$ g/mol'
+    front: 'What is the molar mass of water, $\ce{H2O}$? (H = 1.008 g/mol, O = 16.00 g/mol)'
+    back: '$2(1.008\ \text{g/mol}) + 16.00\ \text{g/mol} = 18.02\ \text{g/mol}$'
   - id: mole-07
-    front: 'What is the mass of one mole of oxygen gas, $\ce{O2}$? (O = 16.00)'
+    front: 'What is the mass of one mole of oxygen gas, $\ce{O2}$? (O = 16.00 g/mol)'
     back: '32.00 g. Each $\ce{O2}$ molecule contains two oxygen atoms, so $M = 2 \times 16.00$ g/mol.'
   - id: mole-08
     front: 'How many oxygen *atoms* are in 1 mol of $\ce{O2}$?'
