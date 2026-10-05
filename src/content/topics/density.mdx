@@ -1,0 +1,219 @@
+---
+title: Density
+question: "What is density, and how do you measure it?"
+description: "What density means, how to calculate it from mass and volume, measure it for regular and irregular objects, predict floating and sinking, and report replicate results."
+area: foundations
+level: beginner
+order: 7
+prerequisites: [unit-conversions, significant-figures]
+related: [unit-conversions, significant-figures, classification-of-matter, laboratory-equipment-and-safety]
+flashcards: density
+quiz: density
+resources: [density-worksheet]
+references: [bipm-si-brochure-9, brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Densities are typical values at 20 °C unless stated. Every calculation checked by computer.
+  Units shown on every quantity in every step. Standard deviation is the sample standard deviation (n − 1).
+*/}
+
+## What is it?
+
+**Density** is the mass of a substance per unit volume. It tells you how tightly matter is packed:
+
+$$
+\rho = \frac{m}{V}
+$$
+
+where $\rho$ (the Greek letter rho) is density, $m$ is mass and $V$ is volume. In chemistry, density is usually given in **g/cm³** for solids and **g/mL** for liquids (these are the same, since 1 mL = 1 cm³). The SI unit is kg/m³, and 1 g/cm³ = 1000 kg/m³.
+
+| Substance (20 °C) | Density (g/cm³) |
+|---|---|
+| Air | 0.00120 |
+| Ethanol | 0.789 |
+| Ice (0 °C) | 0.917 |
+| Water | 0.998 |
+| Aluminium | 2.70 |
+| Iron | 7.87 |
+| Copper | 8.96 |
+| Lead | 11.3 |
+| Gold | 19.3 |
+
+<KeyIdea>
+Density is a **property of the substance**, not of the object. A paper clip and a steel girder have very different masses, but the same density. That's why density helps to **identify** a substance.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Identifying substances.** Measuring density is a quick test of what a material is, or whether it is pure: an alloy or a diluted liquid has a different density.
+- **Floating and sinking.** An object floats in a liquid if it is **less dense** than the liquid. Ice floats on water, oil floats on vinegar, and a ship floats because its average density, including the air inside, is less than that of water.
+- **Converting between mass and volume.** Density is a conversion factor: from a volume of liquid you can find its mass without weighing it, and the reverse.
+
+## How does it work?
+
+### 1. Calculating density
+
+Measure the **mass** on a balance and the **volume** by one of the methods below, then divide. Rearranging the formula gives the other two forms:
+
+$$
+m = \rho \times V \qquad V = \frac{m}{\rho}
+$$
+
+### 2. Measuring volume
+
+- **Regular solid** (cube, block, cylinder): measure the dimensions and calculate. For a block, $V = \text{length} \times \text{width} \times \text{height}$.
+- **Irregular solid** (a stone, a key): use **displacement**. Part-fill a measuring cylinder with water, read the volume, lower the object in and read again. The **rise** in volume equals the volume of the object.
+- **Liquid**: measure a volume accurately with a pipette or measuring cylinder, and weigh it.
+
+### 3. Floating and sinking
+
+Compare densities. If $\rho_\text{object} < \rho_\text{liquid}$ the object floats; if $\rho_\text{object} > \rho_\text{liquid}$ it sinks. Liquids that don't mix form layers, with the densest at the bottom.
+
+### 4. Replicate measurements
+
+As with any measurement, repeat it at least three times (**triplicate**), then report the **mean** and the **standard deviation**. Compare the mean with the accepted value to judge **accuracy**, and use the standard deviation to judge **precision** (see [Significant Figures and Measurement](/chemistry/significant-figures/)).
+
+<Analogy>
+Think of a lift. Ten people in a big lift and ten people in a small lift are the same "mass", but the small lift is more crowded. Density is how crowded the matter is: the same mass squeezed into a smaller volume means a higher density.
+</Analogy>
+
+<MorePrecisely>
+Density changes with **temperature**, because most substances expand when heated: their volume increases while their mass stays the same. That's why careful work states the temperature. Water is unusual: it is densest at about 4 °C (1.000 g/mL), and ice is **less** dense than liquid water, so lakes freeze from the top down and fish survive the winter underneath. Gases are about a thousand times less dense than liquids, and their density depends strongly on pressure too.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/density/displacement.svg" alt="Two measuring cylinders. The first holds water up to 25.0 mL. In the second, a stone has been lowered in and the water level has risen to 32.4 mL. The rise of 7.4 mL is the volume of the stone." caption="Measuring the volume of an irregular solid by displacement: the rise in the water level is the volume of the object." width={360} height={300} />
+
+## Worked example
+
+<Example title="A regular solid">
+**Question:** A metal block measures 2.00 cm × 3.00 cm × 5.00 cm and has a mass of 81.0 g. Find its density and suggest which metal it is.
+
+1. Volume:
+
+   $$
+   \begin{aligned}
+   &V = 2.00\ \text{cm} \times 3.00\ \text{cm} \\[4pt]
+   &\quad \times 5.00\ \text{cm} \\[4pt]
+   &= 30.0\ \text{cm}^3
+   \end{aligned}
+   $$
+
+2. Density:
+
+   $$
+   \begin{aligned}
+   &\rho = \frac{m}{V} = \frac{81.0\ \text{g}}{30.0\ \text{cm}^3} \\[4pt]
+   &= 2.70\ \text{g/cm}^3
+   \end{aligned}
+   $$
+
+3. This matches **aluminium** (2.70 g/cm³).
+</Example>
+
+<Example title="An irregular solid, by displacement">
+**Question:** A measuring cylinder holds 25.0 mL of water. A stone of mass 18.5 g is lowered in and the level rises to 32.4 mL. Find the density of the stone.
+
+1. Volume of the stone = rise in level:
+
+   $$
+   \begin{aligned}
+   &V = 32.4\ \text{mL} - 25.0\ \text{mL} \\[4pt]
+   &= 7.4\ \text{mL} = 7.4\ \text{cm}^3
+   \end{aligned}
+   $$
+
+2. Density:
+
+   $$
+   \rho = \frac{18.5\ \text{g}}{7.4\ \text{cm}^3} = 2.5\ \text{g/cm}^3
+   $$
+
+3. The volume has only 2 significant figures, so the answer is **2.5 g/cm³**.
+</Example>
+
+<Example title="Using density to find a volume">
+**Question:** What volume does 500. g of gold occupy? (density 19.3 g/cm³)
+
+$$
+\begin{aligned}
+&V = \frac{m}{\rho} = \frac{500.\ \text{g}}{19.3\ \text{g/cm}^3} \\[4pt]
+&= 25.9\ \text{cm}^3
+\end{aligned}
+$$
+
+Half a kilogram of gold is smaller than a matchbox.
+</Example>
+
+<Example title="Replicate measurements of a liquid">
+**Question:** A student weighs three separate 10.00 mL samples of a colourless liquid at 20 °C and calculates densities of 0.791 g/mL, 0.789 g/mL and 0.792 g/mL. Report the result and decide whether the liquid could be ethanol (0.789 g/mL).
+
+1. Mean:
+
+   $$
+   \begin{aligned}
+   &\bar{\rho} = \tfrac{1}{3}\,(0.791 + 0.789 \\[4pt]
+   &\qquad + 0.792)\ \text{g/mL} \\[4pt]
+   &= \frac{2.372\ \text{g/mL}}{3} \\[4pt]
+   &= 0.7907\ \text{g/mL}
+   \end{aligned}
+   $$
+
+2. Standard deviation, from the deviations +0.0003 g/mL, −0.0017 g/mL and +0.0013 g/mL:
+
+   $$
+   \begin{aligned}
+   &s = \sqrt{\frac{\sum (\rho_i - \bar{\rho})^2}{n - 1}} \\[4pt]
+   &s^2 = \frac{4.67 \times 10^{-6}\ \text{g}^2/\text{mL}^2}{2} \\[4pt]
+   &\phantom{s^2} = 2.33 \times 10^{-6}\ \text{g}^2/\text{mL}^2 \\[4pt]
+   &s = 0.0015\ \text{g/mL}
+   \end{aligned}
+   $$
+
+3. Result: **0.791 ± 0.002 g/mL (n = 3)**. The difference from ethanol, 0.791 g/mL − 0.789 g/mL = 0.002 g/mL, is about the size of the standard deviation, so the result is consistent with **ethanol**.
+</Example>
+
+<Example title="Will it float?">
+**Question:** A plastic toy has a mass of 50.0 g and a volume of 62.5 cm³. Does it float in water (0.998 g/cm³)?
+
+$$
+\rho = \frac{50.0\ \text{g}}{62.5\ \text{cm}^3} = 0.800\ \text{g/cm}^3
+$$
+
+0.800 g/cm³ is less than 0.998 g/cm³, so it **floats**.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Dividing the wrong way round">
+Density is mass **÷** volume, not volume ÷ mass. Check the units: the answer must come out in g/cm³ (mass on top). If you get cm³/g, the fraction is upside down.
+</CommonMistake>
+
+<CommonMistake title="Using the final reading as the volume">
+In displacement, the volume of the object is the **difference** between the two readings (32.4 mL − 25.0 mL), not the final reading of 32.4 mL.
+</CommonMistake>
+
+<CommonMistake title="Confusing heavy with dense">
+A large log is heavier than a small iron nail, yet the log floats and the nail sinks. Floating depends on **density**, not on mass.
+</CommonMistake>
+
+<NotationNote>
+- g/cm³ can also be written g cm⁻³; g/mL and g/cm³ are numerically identical.
+- Always state the temperature with a precise density, for example "0.998 g/mL at 20 °C".
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- $\rho = m/V$; rearranged, $m = \rho V$ and $V = m/\rho$.
+- 1 mL = 1 cm³, so g/mL = g/cm³; 1 g/cm³ = 1000 kg/m³.
+- Volume of an irregular solid = rise in level when it is submerged (displacement).
+- Less dense than the liquid: floats. Denser: sinks.
+- Density depends on temperature: state it, and measure in replicate (mean ± standard deviation).
+</RememberThis>

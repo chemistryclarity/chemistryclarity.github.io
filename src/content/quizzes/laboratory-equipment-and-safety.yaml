@@ -1,0 +1,79 @@
+# Quiz: Laboratory Equipment and Safety
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Laboratory Equipment and Safety: Quiz'
+description: 'Seven questions on hazard pictograms, safe practice, choosing glassware and reading a burette, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: ls-q1
+    prompt: 'A bottle of ethanol carries the flame pictogram. What does it mean?'
+    choices:
+      - 'Toxic'
+      - 'Flammable'
+      - 'Corrosive'
+      - 'Explosive'
+    answer: 'Flammable'
+    explanation: 'The flame pictogram means the substance or its vapour catches fire easily. Keep it away from flames; heat it with a water bath or hot plate.'
+    difficulty: easy
+  - id: ls-q2
+    prompt: 'What is the safe way to dilute concentrated sulfuric acid?'
+    choices:
+      - 'Pour water quickly into the acid'
+      - 'Add the acid slowly to the water, stirring'
+      - 'Add both at once into an empty beaker'
+      - 'Heat the acid first, then add water'
+    answer: 'Add the acid slowly to the water, stirring'
+    explanation: 'Mixing releases a lot of heat. Adding acid to a larger volume of water spreads the heat; adding water to acid can boil the water and spray acid.'
+    difficulty: easy
+  - id: ls-q3
+    prompt: 'Which equipment would you use to add a measured volume of acid drop by drop in a titration?'
+    choices:
+      - 'Beaker'
+      - 'Measuring cylinder'
+      - 'Burette'
+      - 'Volumetric flask'
+    answer: 'Burette'
+    explanation: 'A burette delivers a variable volume that is read accurately (to two decimal places) and can be added a drop at a time.'
+    difficulty: easy
+  - id: ls-q4
+    prompt: 'What is the percent uncertainty when 25.0 mL is measured with a measuring cylinder of uncertainty ±0.5 mL?'
+    choices:
+      - '0.5 %'
+      - '2 %'
+      - '0.02 %'
+      - '50 %'
+    answer: '2 %'
+    explanation: '(0.5 mL ÷ 25.0 mL) × 100 % = 2 %. A 25 mL pipette (±0.03 mL) gives only 0.12 %.'
+    difficulty: medium
+  - id: ls-q5
+    prompt: 'A burette reads 1.20 mL before and 24.70 mL after a titration. What is the titre?'
+    choices:
+      - '25.90 mL'
+      - '23.50 mL'
+      - '24.70 mL'
+      - '23.5 mL'
+    answer: '23.50 mL'
+    explanation: 'Titre = final − initial = 24.70 mL − 1.20 mL = 23.50 mL, recorded to two decimal places like the readings.'
+    difficulty: medium
+  - id: ls-q6
+    prompt: 'Why must your eye be level with the meniscus when reading a scale?'
+    choices:
+      - 'To avoid parallax error'
+      - 'To see the colour better'
+      - 'To stop the liquid evaporating'
+      - 'Because the meniscus moves'
+    answer: 'To avoid parallax error'
+    explanation: 'Viewed from above or below, the meniscus lines up with the wrong mark on the scale. This is parallax error.'
+    difficulty: medium
+  - id: ls-q7
+    prompt: 'Which choice gives the most precise way to make exactly 250.0 mL of a solution?'
+    choices:
+      - 'A 250 mL beaker'
+      - 'A 250 mL conical flask'
+      - 'A 250 mL volumetric flask'
+      - 'Five 50 mL measuring cylinder fills'
+    answer: 'A 250 mL volumetric flask'
+    explanation: 'A class A 250 mL volumetric flask is accurate to about ±0.15 mL (0.06 %). Beakers and conical flasks have only approximate marks, and five cylinder fills add five uncertainties.'
+    difficulty: hard

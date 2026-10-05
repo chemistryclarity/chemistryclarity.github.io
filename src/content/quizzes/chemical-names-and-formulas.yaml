@@ -1,0 +1,79 @@
+# Quiz: Chemical Names and Formulas
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Every formula and distractor checked for charge balance.
+title: 'Chemical Names and Formulas: Quiz'
+description: 'Seven questions on naming ionic and molecular compounds and writing their formulas, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: nf-q1
+    prompt: 'What is the correct name of MgCl₂?'
+    choices:
+      - 'magnesium dichloride'
+      - 'magnesium chloride'
+      - 'magnesium(II) chlorine'
+      - 'monomagnesium dichloride'
+    answer: 'magnesium chloride'
+    explanation: 'MgCl₂ is ionic (magnesium is a metal), so no prefixes are used. Magnesium forms only Mg²⁺, so no Roman numeral is needed either.'
+    difficulty: easy
+  - id: nf-q2
+    prompt: 'What is the formula of sodium sulfate?'
+    choices:
+      - 'Na₂S'
+      - 'NaSO₄'
+      - 'Na₂SO₄'
+      - 'Na(SO₄)₂'
+    answer: 'Na₂SO₄'
+    explanation: 'Na⁺ and SO₄²⁻: two sodium ions balance one sulfate ion, 2 × (+1) + (−2) = 0. Na₂S is sodium sulfide.'
+    difficulty: easy
+  - id: nf-q3
+    prompt: 'What is the formula of aluminium oxide?'
+    choices:
+      - 'AlO'
+      - 'Al₂O₃'
+      - 'Al₃O₂'
+      - 'AlO₃'
+    answer: 'Al₂O₃'
+    explanation: 'Al³⁺ and O²⁻: 2 × (+3) + 3 × (−2) = 0, so Al₂O₃.'
+    difficulty: easy
+  - id: nf-q4
+    prompt: 'What is the name of CuO?'
+    choices:
+      - 'copper oxide(II)'
+      - 'copper(I) oxide'
+      - 'copper(II) oxide'
+      - 'copper monoxide'
+    answer: 'copper(II) oxide'
+    explanation: 'Oxide is O²⁻, so copper must be +2 for the compound to be neutral. The Roman numeral goes straight after the metal: copper(II) oxide.'
+    difficulty: medium
+  - id: nf-q5
+    prompt: 'What is the formula of ammonium phosphate?'
+    choices:
+      - 'NH₄PO₄'
+      - '(NH₄)₃PO₄'
+      - 'NH₄(PO₄)₃'
+      - '(NH₄)₂PO₄'
+    answer: '(NH₄)₃PO₄'
+    explanation: 'NH₄⁺ and PO₄³⁻: three ammonium ions balance one phosphate ion, 3 × (+1) + (−3) = 0. The ammonium ion is bracketed because there are three of it.'
+    difficulty: medium
+  - id: nf-q6
+    prompt: 'What is the name of N₂O₄?'
+    choices:
+      - 'nitrogen oxide'
+      - 'dinitrogen tetroxide'
+      - 'nitrogen(IV) oxide'
+      - 'dinitrogen pentoxide'
+    answer: 'dinitrogen tetroxide'
+    explanation: 'Nitrogen and oxygen are both non-metals, so use prefixes: di (2) nitrogen, tetra (4) oxygen, with the "a" dropped before "oxide".'
+    difficulty: medium
+  - id: nf-q7
+    prompt: 'Which formula is written correctly?'
+    choices:
+      - 'CaOH₂'
+      - 'Ca(OH)₂'
+      - 'Ca₂OH'
+      - 'Ca(OH₂)'
+    answer: 'Ca(OH)₂'
+    explanation: 'Ca²⁺ needs two OH⁻ ions. The brackets show that the subscript 2 applies to the whole OH group; CaOH₂ would mean one O and two H.'
+    difficulty: hard

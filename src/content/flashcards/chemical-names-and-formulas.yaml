@@ -1,0 +1,39 @@
+# Flashcards: Chemical Names and Formulas
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Every formula checked for charge balance.
+title: 'Chemical Names and Formulas: Flashcards'
+description: 'Revise common ions and the rules for naming ionic and molecular compounds and writing their formulas.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: nf-01
+    front: 'How do you tell an ionic compound from a molecular one by its formula?'
+    back: 'Ionic: contains a metal (or $\ce{NH4+}$). Molecular: non-metals only.'
+  - id: nf-02
+    front: 'Give the formula and charge of the sulfate, nitrate, carbonate and hydroxide ions.'
+    back: '$\ce{SO4^2-}$, $\ce{NO3-}$, $\ce{CO3^2-}$, $\ce{OH-}$'
+  - id: nf-03
+    front: 'Give the formula and charge of the ammonium and phosphate ions.'
+    back: '$\ce{NH4+}$ and $\ce{PO4^3-}$'
+  - id: nf-04
+    front: 'Write the formula of aluminium oxide.'
+    back: '$\ce{Al2O3}$: 2 × (+3) + 3 × (−2) = 0'
+  - id: nf-05
+    front: 'Write the formula of calcium hydroxide.'
+    back: '$\ce{Ca(OH)2}$: brackets because there are two hydroxide ions.'
+  - id: nf-06
+    front: 'Name $\ce{FeCl3}$.'
+    back: 'Iron(III) chloride: three $\ce{Cl-}$ give −3, so iron is +3.'
+  - id: nf-07
+    front: 'What does -ide mean, and what does -ate mean?'
+    back: '-ide: an anion of one element (chloride, oxide). -ate: a polyatomic anion containing oxygen (sulfate, nitrate).'
+  - id: nf-08
+    front: 'List the Greek prefixes from 1 to 6.'
+    back: 'mono, di, tri, tetra, penta, hexa'
+  - id: nf-09
+    front: 'Name $\ce{N2O5}$ and $\ce{CO}$.'
+    back: 'Dinitrogen pentoxide; carbon monoxide (no "mono" on the first element).'
+  - id: nf-10
+    front: 'Give the formulas of hydrochloric, nitric and sulfuric acid.'
+    back: '$\ce{HCl}$, $\ce{HNO3}$, $\ce{H2SO4}$'

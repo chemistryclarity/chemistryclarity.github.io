@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .glass { fill: none; stroke: #5b6577; stroke-width: 2; }
+    .water { fill: #cfe8fb; }
+    .men { fill: none; stroke: #2563eb; stroke-width: 1.6; }
+    .tick { stroke: #8a94a6; stroke-width: 1; }
+    .lab { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 10.5px; }
+    .stone { fill: #8b7355; stroke: #5c4a35; stroke-width: 1.2; }
+    .rise { stroke: #b45309; stroke-width: 2; fill: none; }
+    .q { fill: #b45309; font-size: 12px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .ex { fill: #9aa5ba; }
+      .glass { stroke: #9aa5ba; }
+      .water { fill: #1e3a5f; }
+      .men { stroke: #60a5fa; }
+      .tick { stroke: #6b7894; }
+      .stone { fill: #a08868; stroke: #d6c3a5; }
+      .rise { stroke: #fbbf24; }
+      .q { fill: #fbbf24; }
+    }
+  </style>
+  <rect class="bg" width="360" height="300" rx="14"/>
+  <text class="t" x="20" y="28">Volume by displacement</text>
+  <text class="sub" x="20" y="45">The rise in the water level is the volume of the stone.</text>
+
+  <!-- Cylinder 1: water at 25.0 mL. Scale: 40 mL spans y=250 (0) to y=90 (40), 4 px per mL -->
+  <rect class="water" x="62" y="150" width="56" height="100"/>
+  <path class="men" d="M62 150 Q90 156 118 150"/>
+  <path class="glass" d="M62 75 V250 H118 V75"/>
+  <path class="glass" d="M52 250 H128"/>
+  <g class="tick">
+    <line x1="118" y1="210" x2="108" y2="210"/><line x1="118" y1="170" x2="108" y2="170"/>
+    <line x1="118" y1="130" x2="108" y2="130"/><line x1="118" y1="90" x2="108" y2="90"/>
+  </g>
+  <text class="ex" x="124" y="214">10</text><text class="ex" x="124" y="174">20</text>
+  <text class="ex" x="124" y="134">30</text><text class="ex" x="124" y="94">40</text>
+  <text class="lab" x="90" y="272" text-anchor="middle">25.0 mL</text>
+  <text class="ex" x="90" y="288" text-anchor="middle">water only</text>
+
+  <!-- Cylinder 2: water at 32.4 mL with stone -->
+  <rect class="water" x="222" y="120.4" width="56" height="129.6"/>
+  <path class="men" d="M222 120.4 Q250 126.4 278 120.4"/>
+  <path class="stone" d="M236 246 L242 226 L256 220 L268 230 L266 246 Z"/>
+  <path class="glass" d="M222 75 V250 H278 V75"/>
+  <path class="glass" d="M212 250 H288"/>
+  <g class="tick">
+    <line x1="278" y1="210" x2="268" y2="210"/><line x1="278" y1="170" x2="268" y2="170"/>
+    <line x1="278" y1="130" x2="268" y2="130"/><line x1="278" y1="90" x2="268" y2="90"/>
+  </g>
+  <text class="ex" x="284" y="214">10</text><text class="ex" x="284" y="174">20</text>
+  <text class="ex" x="284" y="134">30</text><text class="ex" x="284" y="94">40</text>
+  <text class="lab" x="250" y="272" text-anchor="middle">32.4 mL</text>
+  <text class="ex" x="250" y="288" text-anchor="middle">water + stone</text>
+
+  <!-- rise bracket -->
+  <path class="rise" d="M196 150 H206 M196 120.4 H206 M201 150 V120.4"/>
+  <text class="q" x="168" y="128" text-anchor="middle">+7.4</text>
+  <text class="q" x="168" y="142" text-anchor="middle">mL</text>
+  <line class="rise" x1="120" y1="150" x2="194" y2="150" stroke-dasharray="3 3"/>
+</svg>

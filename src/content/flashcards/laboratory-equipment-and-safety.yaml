@@ -1,0 +1,39 @@
+# Flashcards: Laboratory Equipment and Safety
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Laboratory Equipment and Safety: Flashcards'
+description: 'Revise hazard pictograms, safe habits, the precision of common glassware and how to read a burette.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: ls-01
+    front: 'What does the flame pictogram mean? And the flame over a circle?'
+    back: 'Flame: flammable. Flame over circle: oxidizer (makes fires burn more fiercely).'
+  - id: ls-02
+    front: 'What does the corrosion pictogram mean?'
+    back: 'The substance destroys skin, eyes or metals (e.g. concentrated acids, sodium hydroxide).'
+  - id: ls-03
+    front: 'Which signal word shows the more severe hazard: Danger or Warning?'
+    back: 'Danger.'
+  - id: ls-04
+    front: 'Where do you find full hazard and handling information for a chemical?'
+    back: 'On its safety data sheet (SDS), as well as the label.'
+  - id: ls-05
+    front: 'How should a concentrated acid be diluted?'
+    back: 'Add the acid slowly to the water, never water to acid: mixing releases heat and can make it spit.'
+  - id: ls-06
+    front: 'Which glassware delivers one exact, fixed volume?'
+    back: 'A volumetric pipette (e.g. 25.00 mL, ±0.03 mL).'
+  - id: ls-07
+    front: 'Why should you not measure volumes with a beaker?'
+    back: 'Its marks are only approximate (about ±5 %).'
+  - id: ls-08
+    front: 'Give the formula for percent uncertainty.'
+    back: 'Percent uncertainty = (uncertainty ÷ measured value) × 100 %'
+  - id: ls-09
+    front: 'Which part of the meniscus do you read for water, and from where?'
+    back: 'The bottom of the meniscus, with your eye level with it (to avoid parallax error).'
+  - id: ls-10
+    front: 'A burette reads 0.50 mL at the start and 23.35 mL at the end. What is the titre?'
+    back: '23.35 mL − 0.50 mL = 22.85 mL'

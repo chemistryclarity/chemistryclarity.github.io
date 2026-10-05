@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/chemical-names-and-formulas-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Chemical Names and Formulas Worksheet'
+description: '8 questions on naming ionic and molecular compounds, writing formulas with polyatomic ions and Roman numerals, and common acids. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/chemical-names-and-formulas-worksheet.pdf'
+answerKey: '/downloads/chemical-names-and-formulas-worksheet-answers.pdf'
+preview: '/previews/chemical-names-and-formulas-worksheet.png'
+status: review

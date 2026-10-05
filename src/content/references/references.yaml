@@ -11,3 +11,7 @@
 - id: bipm-si-brochure-9
   citation: "Bureau International des Poids et Mesures (BIPM). The International System of Units (SI), 9th ed.; BIPM, 2019."
   url: "https://www.bipm.org/en/publications/si-brochure"
+
+- id: un-ghs-rev10
+  citation: "United Nations. Globally Harmonized System of Classification and Labelling of Chemicals (GHS), 10th revised ed.; United Nations: New York and Geneva, 2023."
+  url: "https://unece.org/about-ghs"

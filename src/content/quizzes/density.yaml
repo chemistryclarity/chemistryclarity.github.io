@@ -1,0 +1,79 @@
+# Quiz: Density
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Density: Quiz'
+description: 'Seven questions on calculating and measuring density, floating and sinking, and replicate results, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: de-q1
+    prompt: 'Which formula gives density?'
+    choices:
+      - 'ρ = m × V'
+      - 'ρ = m / V'
+      - 'ρ = V / m'
+      - 'ρ = m − V'
+    answer: 'ρ = m / V'
+    explanation: 'Density is mass per unit volume, so ρ = m / V. Check the units: g ÷ cm³ gives g/cm³.'
+    difficulty: easy
+  - id: de-q2
+    prompt: 'A 54.0 g sample has a volume of 20.0 cm³. What is its density?'
+    choices:
+      - '0.370 g/cm³'
+      - '1.08 g/cm³'
+      - '2.70 g/cm³'
+      - '1080 g/cm³'
+    answer: '2.70 g/cm³'
+    explanation: 'ρ = 54.0 g ÷ 20.0 cm³ = 2.70 g/cm³. 0.370 is the fraction upside down (cm³/g).'
+    difficulty: easy
+  - id: de-q3
+    prompt: 'Water in a measuring cylinder rises from 30.0 mL to 45.2 mL when a metal piece is added. What is the volume of the metal?'
+    choices:
+      - '15.2 mL'
+      - '30.0 mL'
+      - '45.2 mL'
+      - '75.2 mL'
+    answer: '15.2 mL'
+    explanation: 'The volume of the object is the rise in level: 45.2 mL − 30.0 mL = 15.2 mL (= 15.2 cm³).'
+    difficulty: easy
+  - id: de-q4
+    prompt: 'Which object will float in water (0.998 g/cm³)?'
+    choices:
+      - 'Mass 20.0 g, volume 25.0 cm³'
+      - 'Mass 30.0 g, volume 25.0 cm³'
+      - 'Mass 50.0 g, volume 10.0 cm³'
+      - 'Mass 12.0 g, volume 4.00 cm³'
+    answer: 'Mass 20.0 g, volume 25.0 cm³'
+    explanation: '20.0 g ÷ 25.0 cm³ = 0.800 g/cm³, less than water, so it floats. The others are 1.20 g/cm³, 5.00 g/cm³ and 3.00 g/cm³: all sink.'
+    difficulty: medium
+  - id: de-q5
+    prompt: 'Ethanol has a density of 0.789 g/mL. What is the mass of 200. mL of ethanol?'
+    choices:
+      - '158 g'
+      - '253 g'
+      - '0.00395 g'
+      - '200. g'
+    answer: '158 g'
+    explanation: 'm = ρV = 0.789 g/mL × 200. mL = 157.8 g, which is 158 g to 3 significant figures. 253 g comes from dividing (200. ÷ 0.789).'
+    difficulty: medium
+  - id: de-q6
+    prompt: 'Why does ice float on liquid water?'
+    choices:
+      - 'Ice is lighter than water'
+      - 'Ice is less dense than liquid water'
+      - 'Ice contains trapped air'
+      - 'Cold objects always float'
+    answer: 'Ice is less dense than liquid water'
+    explanation: 'Ice (0.917 g/cm³) is less dense than liquid water (about 1.00 g/mL) because water molecules are held further apart in the ice structure. Floating depends on density, not on mass.'
+    difficulty: medium
+  - id: de-q7
+    prompt: 'Five measurements of a metal density are 2.68, 2.71, 2.69, 2.72 and 2.70 g/cm³. Which is the best report?'
+    choices:
+      - '2.70 ± 0.02 g/cm³ (n = 5)'
+      - '2.72 g/cm³'
+      - '2.70 ± 0.04 g/cm³ (n = 5)'
+      - '13.50 g/cm³'
+    answer: '2.70 ± 0.02 g/cm³ (n = 5)'
+    explanation: 'Mean = 13.50 g/cm³ ÷ 5 = 2.70 g/cm³. Sample standard deviation s = 0.016 g/cm³, which rounds to 0.02 g/cm³. ±0.04 is the range (2.72 − 2.68), not the standard deviation.'
+    difficulty: hard

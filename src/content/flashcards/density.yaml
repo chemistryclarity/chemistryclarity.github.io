@@ -1,0 +1,39 @@
+# Flashcards: Density
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Density: Flashcards'
+description: 'Revise the density formula, measuring volume by displacement, floating and sinking, and replicate measurements.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: de-01
+    front: 'What is density?'
+    back: 'Mass per unit volume: $\rho = \dfrac{m}{V}$'
+  - id: de-02
+    front: 'Rearrange $\rho = m/V$ to give mass and volume.'
+    back: '$m = \rho V$ and $V = \dfrac{m}{\rho}$'
+  - id: de-03
+    front: 'Which units are used for density in chemistry?'
+    back: 'g/cm³ for solids and g/mL for liquids (the same, since 1 mL = 1 cm³). SI unit: kg/m³.'
+  - id: de-04
+    front: 'Convert 1 g/cm³ to kg/m³.'
+    back: '1 g/cm³ = 1000 kg/m³'
+  - id: de-05
+    front: 'How do you measure the volume of an irregular solid?'
+    back: 'By displacement: the rise in the water level in a measuring cylinder when the object is submerged.'
+  - id: de-06
+    front: 'When does an object float in a liquid?'
+    back: 'When its density is less than the density of the liquid.'
+  - id: de-07
+    front: 'A block of 81.0 g measures 2.00 cm × 3.00 cm × 5.00 cm. What is its density?'
+    back: '81.0 g ÷ 30.0 cm³ = 2.70 g/cm³ (aluminium)'
+  - id: de-08
+    front: 'Why must you state the temperature with a precise density?'
+    back: 'Most substances expand when heated, so their volume rises and their density falls.'
+  - id: de-09
+    front: 'At what temperature is water densest?'
+    back: 'About 4 °C (1.000 g/mL). Ice (0.917 g/cm³) is less dense than water, so it floats.'
+  - id: de-10
+    front: 'How should a measured density be reported?'
+    back: 'As the mean ± standard deviation of replicate measurements (at least three), with n and the temperature.'

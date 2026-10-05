@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/density-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Density Worksheet'
+description: '8 questions on calculating density, displacement, floating and sinking, using density as a conversion factor and replicate measurements. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/density-worksheet.pdf'
+answerKey: '/downloads/density-worksheet-answers.pdf'
+preview: '/previews/density-worksheet.png'
+status: review
