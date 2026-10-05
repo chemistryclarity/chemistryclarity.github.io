@@ -1,0 +1,163 @@
+---
+title: Electrolysis
+question: "What happens at each electrode during electrolysis, and how much product does a current make?"
+description: "Electrolytic cells, molten and aqueous electrolytes, predicting the products at each electrode, brine, aluminium and copper refining, and Faraday's-law calculations."
+area: redox-and-electrochemistry
+level: intermediate
+order: 30
+prerequisites: [galvanic-cells, redox-reactions]
+related: [galvanic-cells, redox-reactions, gas-laws, stoichiometry]
+flashcards: electrolysis
+quiz: electrolysis
+resources: [electrolysis-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  F = 96 485 C/mol; R = 0.08206 L atm mol^-1 K^-1. The 1.00 × 10^5 A aluminium cell is a round teaching value (modern cells run at a few hundred kA).
+  Every equation checked by computer for atom and charge balance; every value calculated by computer. Units shown in every step.
+*/}
+
+## What is it?
+
+**Electrolysis** uses electricity to drive a redox reaction that would **not** happen on its own. It is the reverse of a galvanic cell: there, a spontaneous reaction makes electricity; here, electricity forces a non-spontaneous reaction.
+
+An **electrolytic cell** has:
+
+- a **DC power supply**, which pumps electrons;
+- two **electrodes**, often inert (graphite or platinum);
+- an **electrolyte**: an ionic compound that is **molten** or **dissolved**, so that its ions can move.
+
+The **anode** is connected to the **positive** terminal: negative ions (anions) move to it and are **oxidized**. The **cathode** is connected to the **negative** terminal: positive ions (cations) move to it and are **reduced**.
+
+<KeyIdea>
+In every cell, **oxidation at the anode, reduction at the cathode**. In electrolysis the anode is **positive** and the cathode **negative**, the opposite signs to a galvanic cell, because the power supply decides the charges.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Metals.** All aluminium, and the most reactive metals (sodium, magnesium), are extracted by electrolysis because no chemical reducing agent is strong enough.
+- **Chemicals.** Electrolysis of brine makes chlorine, hydrogen and sodium hydroxide, used in plastics (PVC), bleach, soap and water treatment.
+- **Purity and protection.** Copper for electrical wiring is purified by electrolysis, and electroplating coats objects with chromium, nickel, silver or gold.
+
+## How does it work?
+
+### 1. Molten electrolytes
+
+A molten salt contains only its own ions, so the products are the elements:
+
+- molten NaCl: cathode $\ce{Na+ + e- -> Na}$; anode $\ce{2Cl- -> Cl2 + 2e-}$.
+
+### 2. Aqueous electrolytes: water competes
+
+In solution, water molecules can also be reduced or oxidized, so the more easily discharged species wins:
+
+| Electrode | Product | Rule |
+|---|---|---|
+| Cathode (−) | the **metal** | if the metal is less reactive than hydrogen (Cu, Ag, Au) |
+| Cathode (−) | **hydrogen** | if the metal is reactive (Na, K, Mg, Al): $\ce{2H2O + 2e- -> H2 + 2OH-}$ |
+| Anode (+) | the **halogen** | for concentrated chloride, bromide or iodide |
+| Anode (+) | **oxygen** | for sulfate, nitrate (and dilute chloride): $\ce{2H2O -> O2 + 4H+ + 4e-}$ |
+
+### 3. Three important industrial processes
+
+- **Brine** (concentrated NaCl solution): chlorine at the anode, hydrogen at the cathode, and sodium hydroxide left in solution.
+- **Aluminium:** aluminium oxide is dissolved in molten cryolite at about 950 °C. Cathode: $\ce{Al^3+ + 3e- -> Al}$. Oxygen forms at the carbon anodes, which burn away to $\ce{CO2}$ and must be replaced.
+- **Copper refining:** an impure copper **anode** dissolves ($\ce{Cu -> Cu^2+ + 2e-}$), and pure copper deposits on the **cathode**; impurities such as silver and gold fall to the bottom as "anode sludge".
+
+### 4. Faraday's law
+
+The amount of product depends only on the **charge** passed:
+
+$$
+\begin{aligned}
+&Q = It \\[2pt]
+&n(e^-) = \frac{Q}{F} \\[2pt]
+&F = 96\,485\ \text{C/mol}
+\end{aligned}
+$$
+
+Then use the half-equation to convert moles of electrons into moles of product: 1 mol $\ce{Ag}$ needs 1 mol e⁻, 1 mol $\ce{Cu}$ needs 2 mol e⁻, 1 mol $\ce{Al}$ needs 3 mol e⁻, and 1 mol $\ce{Cl2}$ releases 2 mol e⁻.
+
+<Analogy>
+A galvanic cell is a ball rolling downhill and turning a wheel on the way. Electrolysis is pushing the ball back up the hill with a motor: it only goes as long as you keep supplying energy, and the amount moved depends on how hard and how long you push (current × time).
+</Analogy>
+
+<MorePrecisely>
+Which ion is discharged in solution depends on the electrode potentials, the concentrations and the electrode material. Concentrated chloride gives chlorine (not oxygen) even though oxygen has the less negative potential, because oxygen formation needs a large extra voltage (an **overpotential**) at most electrodes. The minimum voltage for electrolysis equals $-E°_\text{cell}$ of the reverse, spontaneous reaction, but real cells need more, to overcome resistance and overpotentials.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/electrolysis/brine-electrolysis.svg" alt="Electrolysis of concentrated brine. A DC supply is connected to two electrodes in salt solution. Electrons flow from the anode to the positive terminal and from the negative terminal to the cathode. At the anode (positive, oxidation), chloride ions are attracted and chlorine gas bubbles off: 2Cl− → Cl2 + 2e−. At the cathode (negative, reduction), sodium ions are attracted but water is reduced, giving hydrogen gas: 2H2O + 2e− → H2 + 2OH−. Na+ and OH− stay in solution as sodium hydroxide." caption="Brine gives three products: chlorine, hydrogen and sodium hydroxide." width={360} height={400} />
+
+## Worked example
+
+<Example title="Predicting the products">
+**Question:** Give the products at each electrode (inert electrodes) for: (a) molten $\ce{PbBr2}$ (b) aqueous $\ce{CuSO4}$ (c) dilute $\ce{H2SO4}$.
+
+1. (a) Molten: cathode **lead** ($\ce{Pb^2+ + 2e- -> Pb}$), anode **bromine** ($\ce{2Br- -> Br2 + 2e-}$).
+2. (b) Cathode **copper** (less reactive than hydrogen); anode **oxygen** (sulfate is not discharged). The blue colour fades as $\ce{Cu^2+}$ is used up, and the solution becomes acidic.
+3. (c) Cathode **hydrogen**, anode **oxygen**, in a 2 : 1 volume ratio: overall, water is split, $\ce{2H2O -> 2H2 + O2}$.
+</Example>
+
+<Example title="Aluminium from a cell">
+**Question:** What mass of aluminium is produced by a cell running at 1.00 × 10⁵ A for 24.0 h? ($\ce{Al^3+ + 3e- -> Al}$; Al = 26.98 g/mol)
+
+1. $t = 24.0\ \text{h} \times 3600\ \text{s/h} = 8.64 \times 10^{4}\ \text{s}$
+2. $Q = It = (1.00 \times 10^{5}\ \text{C/s})(8.64 \times 10^{4}\ \text{s}) = 8.64 \times 10^{9}\ \text{C}$
+3. $n(e^-) = \dfrac{8.64 \times 10^{9}\ \text{C}}{96\,485\ \text{C/mol}} = 8.955 \times 10^{4}\ \text{mol}$
+4. $n(\ce{Al}) = 8.955 \times 10^{4}\ \text{mol}\ e^- \times \dfrac{1\ \text{mol Al}}{3\ \text{mol}\ e^-} = 2.985 \times 10^{4}\ \text{mol}$
+5. $m = 2.985 \times 10^{4}\ \text{mol} \times 26.98\ \text{g/mol} = 8.05 \times 10^{5}\ \text{g} =$ **805 kg**
+</Example>
+
+<Example title="Volume of chlorine from brine">
+**Question:** A current of 2.00 A passes through brine for 1.00 h. What volume of $\ce{Cl2}$ forms at 25.0 °C and 1.00 atm?
+
+1. $Q = (2.00\ \text{C/s})(3600\ \text{s}) = 7200\ \text{C}$; $n(e^-) = \dfrac{7200\ \text{C}}{96\,485\ \text{C/mol}} = 0.07462\ \text{mol}$
+2. $\ce{2Cl- -> Cl2 + 2e-}$: $n(\ce{Cl2}) = \dfrac{0.07462\ \text{mol}}{2} = 0.03731\ \text{mol}$
+3. Ideal gas law:
+
+   $$
+   \begin{aligned}
+   &V = \frac{nRT}{P} \\[4pt]
+   &= (0.03731\ \text{mol}) \\[4pt]
+   &\quad \times \left(0.08206\ \tfrac{\text{L atm}}{\text{mol K}}\right) \\[4pt]
+   &\quad \times (298.15\ \text{K}) \\[4pt]
+   &\quad \div (1.00\ \text{atm}) \\[4pt]
+   &= \textbf{0.913 L}
+   \end{aligned}
+   $$
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using galvanic-cell signs">
+In electrolysis the anode is **positive**; in a galvanic cell it is negative. What never changes is that oxidation happens at the anode.
+</CommonMistake>
+
+<CommonMistake title="Expecting a reactive metal from its solution">
+Electrolysis of aqueous NaCl does not give sodium: water is reduced instead, giving hydrogen. Sodium is made only from **molten** sodium chloride.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the electron ratio">
+After finding moles of electrons, divide by the number of electrons in the half-equation: 3 for $\ce{Al^3+}$, 2 for $\ce{Cu^2+}$ and $\ce{Cl2}$. Skipping this step makes the answer two or three times too large.
+</CommonMistake>
+
+<NotationNote>
+- 1 A = 1 C/s; 1 faraday = 96 485 C, the charge on one mole of electrons.
+- "Inert" electrodes (graphite, platinum) conduct electricity but do not react.
+- "Discharged" means an ion gains or loses electrons at an electrode and becomes a neutral atom or molecule.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Electrolysis: electricity forces a non-spontaneous redox reaction. Anode (+): oxidation; cathode (−): reduction.
+- Molten salts give the elements. In water: cathode gives the metal (if below hydrogen) or H₂; anode gives the halogen (concentrated halide) or O₂.
+- Brine → Cl₂, H₂, NaOH. Aluminium from molten Al₂O₃ in cryolite. Copper refined with an impure copper anode.
+- $Q = It$, $n(e^-) = Q/F$, then the half-equation ratio.
+</RememberThis>

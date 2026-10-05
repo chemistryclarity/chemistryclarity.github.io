@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/electrolysis-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Electrolysis Worksheet'
+description: '9 questions on electrode products, half-equations, industrial electrolysis, and Faraday''s-law mass, time, gas-volume and energy calculations. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/electrolysis-worksheet.pdf'
+answerKey: '/downloads/electrolysis-worksheet-answers.pdf'
+preview: '/previews/electrolysis-worksheet.png'
+status: review

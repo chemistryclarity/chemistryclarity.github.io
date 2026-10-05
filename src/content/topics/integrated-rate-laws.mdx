@@ -1,0 +1,142 @@
+---
+title: Integrated Rate Laws and Reaction Mechanisms
+question: "How does concentration change with time, how do you find the order from data, and what is a reaction mechanism?"
+description: "Zero-, first- and second-order integrated rate laws, straight-line plots to find the order, half-lives for each order, and mechanisms with a rate-determining step."
+area: kinetics
+level: advanced
+order: 30
+prerequisites: [reaction-rates]
+related: [reaction-rates, activation-energy, radioactive-decay]
+flashcards: integrated-rate-laws
+quiz: integrated-rate-laws
+resources: [integrated-rate-laws-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  The concentration–time data in the figure and examples are invented teaching data (second order, k = 0.0500 M^-1 s^-1).
+  The NO2 + CO mechanism is the standard textbook example (valid below about 500 K).
+  Every value calculated by computer. Units shown in every step, including the units of k.
+*/}
+
+## What is it?
+
+A rate law, such as rate $= k[\ce{A}]^n$, tells you how fast a reaction goes **at one moment**. An **integrated rate law** tells you the **concentration at any time**. Each order gives a different equation, and each can be rearranged into a **straight line**:
+
+| Order | Integrated rate law | Straight-line plot | Slope | Half-life |
+|---|---|---|---|---|
+| 0 | $[\ce{A}] = [\ce{A}]_0 - kt$ | [A] against t | $-k$ | $\dfrac{[\ce{A}]_0}{2k}$ |
+| 1 | $\ln[\ce{A}] = \ln[\ce{A}]_0 - kt$ | ln[A] against t | $-k$ | $\dfrac{\ln 2}{k}$ |
+| 2 | $\dfrac{1}{[\ce{A}]} = \dfrac{1}{[\ce{A}]_0} + kt$ | 1/[A] against t | $+k$ | $\dfrac{1}{k[\ce{A}]_0}$ |
+
+<KeyIdea>
+To find the order from concentration–time data, plot [A], ln[A] and 1/[A] against time. **Only one plot is a straight line**, and it tells you the order; its slope gives $k$. A **constant half-life** is the signature of a first-order reaction.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Medicine.** Drug levels in the blood usually fall by first-order kinetics, so doses are spaced by the drug's half-life.
+- **Shelf life.** Manufacturers use integrated rate laws to predict how long medicines and foods stay within their limits.
+- **Understanding reactions.** The rate law is a clue to the **mechanism**: the sequence of simple steps by which a reaction actually happens.
+
+## How does it work?
+
+### 1. Using the integrated rate laws
+
+Each equation links four quantities: $[\ce{A}]_0$, $[\ce{A}]$, $k$ and $t$. Knowing any three, you can find the fourth. Make sure the units of $k$ match the time unit, and that $kt$ has the right units: no units for first order (s⁻¹ × s), M⁻¹ for second order (M⁻¹ s⁻¹ × s).
+
+### 2. Half-lives
+
+- **First order:** $t_{1/2} = \ln 2/k$, independent of concentration. Each half-life halves what is left, just like radioactive decay.
+- **Second order:** $t_{1/2} = 1/(k[\ce{A}]_0)$: each half-life is **twice** as long as the one before, because the concentration has halved.
+- **Zero order:** $t_{1/2} = [\ce{A}]_0/(2k)$: each half-life is **half** as long as the one before.
+
+### 3. Reaction mechanisms
+
+Most reactions happen in several **elementary steps**. For an elementary step (only), the rate law follows from how many particles collide: a step $\ce{A + B ->}$ has rate $= k[\ce{A}][\ce{B}]$.
+
+- The **slowest** step is the **rate-determining step**: the overall reaction cannot go faster than it.
+- A species made in one step and used up in a later one is an **intermediate**; it does not appear in the overall equation.
+- A proposed mechanism must (1) add up to the overall equation and (2) give a rate law that matches experiment.
+
+For $\ce{NO2 + CO -> NO + CO2}$, experiments give rate $= k[\ce{NO2}]^2$, with no CO. The accepted mechanism is:
+
+$$
+\begin{aligned}
+&\ce{NO2 + NO2 -> NO3 + NO}\ \ \text{(slow)} \\[2pt]
+&\ce{NO3 + CO -> NO2 + CO2}\ \ \text{(fast)}
+\end{aligned}
+$$
+
+The slow first step involves two $\ce{NO2}$ molecules, so rate $= k[\ce{NO2}]^2$; CO only appears in the fast step, so it does not affect the rate. $\ce{NO3}$ is the intermediate.
+
+<Analogy>
+A mechanism is like an assembly line. However fast the other workers are, the number of finished products per hour is set by the slowest worker (the rate-determining step). Speeding up a fast step changes nothing; speeding up the slow step speeds up everything.
+</Analogy>
+
+<MorePrecisely>
+The integrated laws come from calculus: for first order, $-\dfrac{d[\ce{A}]}{dt} = k[\ce{A}]$ integrates to $\ln[\ce{A}] = \ln[\ce{A}]_0 - kt$. When a fast, reversible step comes **before** the slow step, the rate law can include species from that earlier step (the pre-equilibrium approach). A mechanism can never be proved, only supported: a mechanism that fits the data may still be replaced if new evidence appears.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/kinetics/order-plots.svg" alt="Three graphs of the same data against time from 0 to 200 s. [A] against time is curved, so the reaction is not zero order. ln[A] against time is also curved, so it is not first order. 1/[A] against time is a straight line rising from 10 to 20 M⁻¹, so the reaction is second order. The slope of 1/[A] against t gives k = 0.0500 M⁻¹ s⁻¹." caption="Plot the data three ways: the straight-line plot identifies the order, and its slope gives k." width={360} height={560} />
+
+<Figure src="/images/kinetics/two-step-profile.svg" alt="An energy profile for a two-step mechanism. From the reactants, the energy rises to a high first transition state (TS 1), labelled Ea step 1, slow; it falls to an intermediate in a shallow valley, rises to a lower second transition state (TS 2), labelled step 2, fast, and falls to the products. Step 1: NO2 + NO2 → NO3 + NO (slow). Step 2: NO3 + CO → NO2 + CO2 (fast). Rate = k[NO2] squared." caption="The step with the highest barrier is the rate-determining step; the intermediate sits in the valley between the two." width={360} height={340} />
+
+## Worked example
+
+<Example title="First order: concentration and time">
+**Question:** A first-order reaction has $k = 2.50 \times 10^{-3}\ \text{s}^{-1}$ and $[\ce{A}]_0 = 0.500$ M. Find (a) [A] after 300. s (b) the time for [A] to fall to 0.100 M (c) the half-life.
+
+1. (a) $\ln[\ce{A}] = \ln(0.500) - (2.50 \times 10^{-3}\ \text{s}^{-1})(300.\ \text{s}) = -0.6931 - 0.750 = -1.443$, so $[\ce{A}] = e^{-1.443} =$ **0.236 M**
+2. (b) $t = \dfrac{\ln([\ce{A}]_0/[\ce{A}])}{k} = \dfrac{\ln(0.500\ \text{M}/0.100\ \text{M})}{2.50 \times 10^{-3}\ \text{s}^{-1}} = \dfrac{1.609}{2.50 \times 10^{-3}\ \text{s}^{-1}} =$ **644 s**
+3. (c) $t_{1/2} = \dfrac{0.6931}{2.50 \times 10^{-3}\ \text{s}^{-1}} =$ **277 s**
+</Example>
+
+<Example title="Second order">
+**Question:** A second-order reaction has $k = 0.0400\ \text{M}^{-1}\,\text{s}^{-1}$ and $[\ce{A}]_0 = 0.200$ M. Find [A] after 100. s and the first half-life.
+
+1. $\dfrac{1}{[\ce{A}]} = \dfrac{1}{0.200\ \text{M}} + (0.0400\ \text{M}^{-1}\,\text{s}^{-1})(100.\ \text{s}) = 5.00\ \text{M}^{-1} + 4.00\ \text{M}^{-1} = 9.00\ \text{M}^{-1}$
+2. $[\ce{A}] = \dfrac{1}{9.00\ \text{M}^{-1}} =$ **0.111 M**
+3. $t_{1/2} = \dfrac{1}{(0.0400\ \text{M}^{-1}\,\text{s}^{-1})(0.200\ \text{M})} =$ **125 s**
+</Example>
+
+<Example title="Finding the order from data">
+**Question:** [A] = 0.100, 0.0800, 0.0667, 0.0571 and 0.0500 M at t = 0, 50, 100, 150 and 200 s. Find the order and $k$.
+
+1. ln[A] = −2.303, −2.526, −2.708, −2.862, −2.996: the differences shrink (−0.223, −0.182, −0.154, −0.134), so ln[A] is **not** linear: not first order.
+2. 1/[A] = 10.0, 12.5, 15.0, 17.5, 20.0 M⁻¹: it rises by exactly 2.5 M⁻¹ every 50 s, a **straight line**: **second order**.
+3. $k = \text{slope} = \dfrac{2.5\ \text{M}^{-1}}{50\ \text{s}} =$ **0.0500 M⁻¹ s⁻¹**
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using the first-order half-life for every reaction">
+$t_{1/2} = 0.693/k$ is only for **first-order** reactions. For second order the half-life depends on the starting concentration and grows as the reaction proceeds.
+</CommonMistake>
+
+<CommonMistake title="Writing a rate law from the overall equation">
+Orders come from experiment or from the **slow elementary step**, not from the coefficients of the overall equation. For $\ce{NO2 + CO -> NO + CO2}$, the rate law is $k[\ce{NO2}]^2$, not $k[\ce{NO2}][\ce{CO}]$.
+</CommonMistake>
+
+<CommonMistake title="Mixing time units">
+If $k$ is in s⁻¹, time must be in seconds. Convert minutes or hours first, or $kt$ will be wrong by a factor of 60 or 3600.
+</CommonMistake>
+
+<NotationNote>
+- $[\ce{A}]_0$ is the initial concentration; [A] or $[\ce{A}]_t$ is the concentration at time $t$.
+- "ln" is the natural logarithm (base e); ln 2 = 0.6931.
+- M⁻¹ s⁻¹ can also be written L mol⁻¹ s⁻¹.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Zero order: [A] linear in t. First order: ln[A] linear (slope −k). Second order: 1/[A] linear (slope +k).
+- Half-lives: zero $[\ce{A}]_0/2k$; first $\ln 2/k$ (constant); second $1/(k[\ce{A}]_0)$.
+- The slow step is rate-determining; intermediates are made then used up; a mechanism must add up to the overall equation and match the rate law.
+</RememberThis>

@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/gibbs-free-energy-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Entropy and Gibbs Free Energy Worksheet'
+description: '9 questions on predicting ΔS, calculating ΔS° and ΔG°, switching temperatures, ΔG° and K, and the link to cell voltage. Answer key included.'
+type: worksheet
+level: advanced
+access: free
+file: '/downloads/gibbs-free-energy-worksheet.pdf'
+answerKey: '/downloads/gibbs-free-energy-worksheet-answers.pdf'
+preview: '/previews/gibbs-free-energy-worksheet.png'
+status: review

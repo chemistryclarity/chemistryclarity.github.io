@@ -1,0 +1,79 @@
+# Quiz: Entropy and Gibbs Free Energy
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Entropy and Gibbs Free Energy: Quiz'
+description: 'Seven questions on entropy changes, ΔG = ΔH − TΔS, spontaneity and the link between ΔG° and K, with explanations.'
+level: advanced
+access: free
+status: review
+assisted: true
+questions:
+  - id: gf-q1
+    prompt: 'Which process has a negative ΔS?'
+    choices:
+      - 'ice melting'
+      - 'water boiling'
+      - '2SO₂(g) + O₂(g) → 2SO₃(g)'
+      - 'CaCO₃(s) → CaO(s) + CO₂(g)'
+    answer: '2SO₂(g) + O₂(g) → 2SO₃(g)'
+    explanation: '3 mol of gas become 2 mol, so the entropy decreases. The others increase disorder or the moles of gas.'
+    difficulty: easy
+  - id: gf-q2
+    prompt: 'ΔH = +50.0 kJ and ΔS = +0.200 kJ/K. Above what temperature is the reaction spontaneous?'
+    choices:
+      - '0.250 K'
+      - '250. K'
+      - '10.0 K'
+      - '4.00 × 10³ K'
+    answer: '250. K'
+    explanation: 'T = ΔH ÷ ΔS = 50.0 kJ ÷ 0.200 kJ/K = 250. K. Above this, TΔS outweighs ΔH.'
+    difficulty: medium
+  - id: gf-q3
+    prompt: 'A reaction has ΔH negative and ΔS positive. It is spontaneous:'
+    choices:
+      - 'at all temperatures'
+      - 'only at high temperatures'
+      - 'only at low temperatures'
+      - 'never'
+    answer: 'at all temperatures'
+    explanation: 'ΔG = ΔH − TΔS = (negative) − (positive) is negative for every T.'
+    difficulty: easy
+  - id: gf-q4
+    prompt: 'Calculate ΔG at 300. K for ΔH = −100. kJ and ΔS = −200. J/K.'
+    choices:
+      - '−40.0 kJ'
+      - '−160. kJ'
+      - '+59 900 kJ'
+      - '−100. kJ'
+    answer: '−40.0 kJ'
+    explanation: 'ΔS = −0.200 kJ/K; ΔG = −100. kJ − (300. K)(−0.200 kJ/K) = −100. kJ + 60.0 kJ = −40.0 kJ. Forgetting to convert J to kJ gives the large wrong answer.'
+    difficulty: medium
+  - id: gf-q5
+    prompt: 'If ΔG° for a reaction is positive, the equilibrium constant K is:'
+    choices:
+      - 'greater than 1'
+      - 'equal to 1'
+      - 'less than 1'
+      - 'negative'
+    answer: 'less than 1'
+    explanation: 'ΔG° = −RT ln K: positive ΔG° means ln K is negative, so K is less than 1 (reactants favoured).'
+    difficulty: medium
+  - id: gf-q6
+    prompt: 'Why must limestone be heated strongly to make lime?'
+    choices:
+      - 'ΔH and ΔS are both negative'
+      - 'ΔH and ΔS are both positive, so ΔG is only negative at high T'
+      - 'the reaction is exothermic'
+      - 'heating lowers the entropy'
+    answer: 'ΔH and ΔS are both positive, so ΔG is only negative at high T'
+    explanation: 'For CaCO₃ → CaO + CO₂, ΔH = +179.2 kJ and ΔS = +160.2 J/K, so ΔG becomes negative above about 1119 K.'
+    difficulty: medium
+  - id: gf-q7
+    prompt: 'Which statement about a spontaneous reaction is correct?'
+    choices:
+      - 'it must be fast'
+      - 'it must be exothermic'
+      - 'it increases the total entropy of the universe'
+      - 'it has a positive ΔG'
+    answer: 'it increases the total entropy of the universe'
+    explanation: 'That is the second law. Spontaneous reactions can be slow and can be endothermic (e.g. ice melting at 25 °C).'
+    difficulty: hard

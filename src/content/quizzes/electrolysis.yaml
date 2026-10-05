@@ -1,0 +1,79 @@
+# Quiz: Electrolysis
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Electrolysis: Quiz'
+description: 'Seven questions on electrode signs, predicting products, industrial electrolysis and Faraday''s-law calculations, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: el-q1
+    prompt: 'In an electrolytic cell, the anode is:'
+    choices:
+      - 'negative, where reduction happens'
+      - 'positive, where oxidation happens'
+      - 'negative, where oxidation happens'
+      - 'positive, where reduction happens'
+    answer: 'positive, where oxidation happens'
+    explanation: 'Oxidation always happens at the anode; in electrolysis it is connected to the positive terminal.'
+    difficulty: easy
+  - id: el-q2
+    prompt: 'What forms at the cathode when aqueous KNO₃ is electrolysed (inert electrodes)?'
+    choices:
+      - 'potassium'
+      - 'hydrogen'
+      - 'oxygen'
+      - 'nitrogen'
+    answer: 'hydrogen'
+    explanation: 'Potassium is far more reactive than hydrogen, so water is reduced: 2H₂O + 2e⁻ → H₂ + 2OH⁻.'
+    difficulty: medium
+  - id: el-q3
+    prompt: 'What forms at the anode when aqueous CuSO₄ is electrolysed (inert electrodes)?'
+    choices:
+      - 'copper'
+      - 'sulfur'
+      - 'oxygen'
+      - 'hydrogen'
+    answer: 'oxygen'
+    explanation: 'Sulfate is not discharged; water is oxidized: 2H₂O → O₂ + 4H⁺ + 4e⁻. Copper forms at the cathode.'
+    difficulty: medium
+  - id: el-q4
+    prompt: 'Why is sodium made from molten NaCl and not from salt solution?'
+    choices:
+      - 'molten NaCl is cheaper'
+      - 'in solution, water is reduced instead of Na⁺'
+      - 'sodium dissolves in molten NaCl'
+      - 'chlorine does not form in solution'
+    answer: 'in solution, water is reduced instead of Na⁺'
+    explanation: 'Na⁺ is very hard to reduce; in water, hydrogen forms at the cathode instead.'
+    difficulty: medium
+  - id: el-q5
+    prompt: 'A current of 1.00 A flows for 965 s. How many moles of electrons pass?'
+    choices:
+      - '0.0100 mol'
+      - '0.100 mol'
+      - '965 mol'
+      - '1.00 mol'
+    answer: '0.0100 mol'
+    explanation: 'Q = 1.00 C/s × 965 s = 965 C; n = 965 C ÷ 96 485 C/mol = 0.0100 mol.'
+    difficulty: medium
+  - id: el-q6
+    prompt: 'The same charge deposits 0.0300 mol of Ag. How many moles of Cu would it deposit?'
+    choices:
+      - '0.0150 mol'
+      - '0.0300 mol'
+      - '0.0600 mol'
+      - '0.0100 mol'
+    answer: '0.0150 mol'
+    explanation: '0.0300 mol Ag needs 0.0300 mol e⁻; Cu²⁺ needs 2 e⁻ per atom, so 0.0300 ÷ 2 = 0.0150 mol Cu.'
+    difficulty: hard
+  - id: el-q7
+    prompt: 'In copper refining, the impure copper is:'
+    choices:
+      - 'the cathode'
+      - 'the anode'
+      - 'the electrolyte'
+      - 'not used'
+    answer: 'the anode'
+    explanation: 'The impure anode is oxidized and dissolves (Cu → Cu²⁺ + 2e⁻); pure copper is deposited on the cathode.'
+    difficulty: easy

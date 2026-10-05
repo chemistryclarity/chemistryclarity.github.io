@@ -1,0 +1,39 @@
+# Flashcards: Electrolysis
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Equations checked by computer.
+title: 'Electrolysis: Flashcards'
+description: 'Revise electrolytic cells, electrode products in molten and aqueous electrolytes, industrial electrolysis and Faraday''s law.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: el-01
+    front: 'What is electrolysis?'
+    back: 'Using electricity to drive a non-spontaneous redox reaction.'
+  - id: el-02
+    front: 'Signs and reactions at the electrodes in electrolysis?'
+    back: 'Anode (+): oxidation. Cathode (−): reduction.'
+  - id: el-03
+    front: 'Products of electrolysing molten NaCl?'
+    back: 'Sodium at the cathode, chlorine at the anode.'
+  - id: el-04
+    front: 'When does a metal NOT form at the cathode in aqueous solution?'
+    back: 'When the metal is more reactive than hydrogen (e.g. Na, K, Mg, Al): water is reduced to H₂ instead.'
+  - id: el-05
+    front: 'What forms at the anode in aqueous solution?'
+    back: 'The halogen from a concentrated halide; otherwise oxygen (e.g. with sulfate or nitrate).'
+  - id: el-06
+    front: 'Products of electrolysing concentrated brine?'
+    back: 'Chlorine (anode), hydrogen (cathode) and sodium hydroxide (left in solution).'
+  - id: el-07
+    front: 'How is aluminium extracted?'
+    back: 'Electrolysis of Al₂O₃ dissolved in molten cryolite (about 950 °C); Al³⁺ + 3e⁻ → Al; carbon anodes burn away.'
+  - id: el-08
+    front: 'How is copper purified?'
+    back: 'Impure copper anode dissolves; pure copper deposits on the cathode; impurities fall as anode sludge.'
+  - id: el-09
+    front: 'Faraday''s-law steps?'
+    back: 'Q = It; n(e⁻) = Q ÷ F (F = 96 485 C/mol); use the half-equation ratio; then mass or volume.'
+  - id: el-10
+    front: 'Moles of electrons per mole of Ag, Cu, Al and Cl₂?'
+    back: 'Ag 1, Cu 2, Al 3, Cl₂ 2.'

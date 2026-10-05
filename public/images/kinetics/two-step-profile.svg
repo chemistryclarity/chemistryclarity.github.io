@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .small { fill: #14213d; font-size: 10.5px; font-weight: 600; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .ax { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .axis { stroke: #8a94a6; stroke-width: 1.3; fill: none; }
+    .grid { stroke: #e3e7ee; stroke-width: 1; } .zero { stroke: #5b6577; stroke-width: 1.2; stroke-dasharray: 5 3; }
+    .lnA { stroke: #0f766e; stroke-width: 2.4; fill: none; } .lnB { stroke: #b45309; stroke-width: 2.4; fill: none; } .lnC { stroke: #7c3aed; stroke-width: 2.4; fill: none; }
+    .pA { fill: #0f766e; } .pB { fill: #b45309; } .pC { fill: #7c3aed; }
+    .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .shadeG { fill: #0f766e; opacity: 0.07; } .shadeR { fill: #b45309; opacity: 0.07; }
+    .ok { fill: #0f766e; font-size: 11px; font-weight: 700; } .bad { fill: #be123c; font-size: 11px; font-weight: 700; }
+    .beaker { fill: none; stroke: #8a94a6; stroke-width: 1.8; } .sol { fill: #e6eef5; }
+    .elec { fill: #5b6577; } .wire { stroke: #14213d; stroke-width: 2; fill: none; }
+    .batt { fill: #ffffff; stroke: #14213d; stroke-width: 1.8; } .bub { fill: none; stroke: #5b6577; stroke-width: 1; }
+    .ion { fill: #14213d; font-size: 10.5px; font-weight: 700; }
+    .arrE { stroke: #7c3aed; stroke-width: 2; fill: none; marker-end: url(#hC); } .hC { fill: #7c3aed; }
+    .arrI { stroke: #5b6577; stroke-width: 1.4; fill: none; marker-end: url(#hD); } .hD { fill: #5b6577; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .lab, .ax, .small, .ion { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .axis { stroke: #6b7894; } .grid { stroke: #2a3550; } .zero { stroke: #9aa5ba; }
+      .lnA { stroke: #2dd4bf; } .pA, .lA, .ok { fill: #2dd4bf; } .lnB { stroke: #fbbf24; } .pB, .lB { fill: #fbbf24; }
+      .lnC { stroke: #c4b5fd; } .pC, .lC, .hC { fill: #c4b5fd; } .arrE { stroke: #c4b5fd; } .bad { fill: #fb7185; }
+      .shadeG { fill: #2dd4bf; } .shadeR { fill: #fbbf24; }
+      .beaker { stroke: #6b7894; } .sol { fill: #1b2a40; } .elec { fill: #9aa5ba; } .wire { stroke: #e9edf5; }
+      .batt { fill: #151e31; stroke: #e9edf5; } .bub { stroke: #9aa5ba; } .arrI { stroke: #9aa5ba; } .hD { fill: #9aa5ba; }
+    }
+  </style>
+  <defs><marker id="hC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hC" d="M0 0 10 5 0 10z"/></marker><marker id="hD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hD" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="340" rx="14"/><text class="t" x="20" y="28">A two-step mechanism</text><text class="sub" x="20" y="45">The step with the higher barrier is slow and sets the rate.</text><path class="axis" d="M40 64 V280 H340"/><path class="lnA" d="M95.52 217 L104 217 C133.68 217, 133.68 95.19999999999999, 163.36 95.19999999999999 C186.68 95.19999999999999, 186.68 175, 210 175 C231.2 175, 231.2 141.4, 252.39999999999998 141.4 C284.2 141.4, 284.2 254.8, 316 254.8 L324.48 254.8"/><path class="arrI" d="M120.96000000000001 217 V98.19999999999999"/><text class="lB" x="114.96000000000001" y="149.8" text-anchor="end">Eₐ step 1</text><text class="lB" x="114.96000000000001" y="162.8" text-anchor="end">(slow)</text><path class="arrI" d="M222.72000000000003 175 V144.4"/><text class="lC" x="269.36" y="112">step 2</text><text class="lC" x="269.36" y="125">(fast)</text><text class="small" x="104" y="235" text-anchor="middle">reactants</text><text class="small" x="210" y="193" text-anchor="middle">intermediate</text><text class="small" x="316" y="272.8" text-anchor="middle">products</text><text class="num" x="163.36" y="87.19999999999999" text-anchor="middle">TS 1</text><text class="num" x="252.39999999999998" y="133.4" text-anchor="middle">TS 2</text><text class="ax" x="188" y="298" text-anchor="middle">reaction progress</text><text class="ax" transform="translate(24 175) rotate(-90)" text-anchor="middle">energy</text><text class="sub" x="20" y="312">Step 1: NO₂ + NO₂ → NO₃ + NO (slow)</text><text class="sub" x="20" y="327">Step 2: NO₃ + CO → NO₂ + CO₂ (fast). Rate = k[NO₂]²</text>
+</svg>

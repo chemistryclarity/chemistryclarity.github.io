@@ -1,0 +1,79 @@
+# Quiz: Integrated Rate Laws and Reaction Mechanisms
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Integrated Rate Laws and Mechanisms: Quiz'
+description: 'Seven questions on integrated rate laws, straight-line plots, half-lives and rate-determining steps, with explanations.'
+level: advanced
+access: free
+status: review
+assisted: true
+questions:
+  - id: ir-q1
+    prompt: 'For a first-order reaction, which plot gives a straight line?'
+    choices:
+      - '[A] against t'
+      - 'ln[A] against t'
+      - '1/[A] against t'
+      - 'rate against t'
+    answer: 'ln[A] against t'
+    explanation: 'ln[A] = ln[A]₀ − kt has the form y = c + mx, with slope −k.'
+    difficulty: easy
+  - id: ir-q2
+    prompt: 'A first-order reaction has a half-life of 20.0 min. What fraction remains after 60.0 min?'
+    choices:
+      - '1/3'
+      - '1/6'
+      - '1/8'
+      - '1/9'
+    answer: '1/8'
+    explanation: '60.0 min is 3 half-lives: (½)³ = 1/8.'
+    difficulty: easy
+  - id: ir-q3
+    prompt: 'For a second-order reaction with k = 0.100 M⁻¹ s⁻¹ and [A]₀ = 0.500 M, what is the first half-life?'
+    choices:
+      - '6.93 s'
+      - '10.0 s'
+      - '20.0 s'
+      - '0.0500 s'
+    answer: '20.0 s'
+    explanation: 't½ = 1/(k[A]₀) = 1/(0.100 M⁻¹ s⁻¹ × 0.500 M) = 20.0 s.'
+    difficulty: medium
+  - id: ir-q4
+    prompt: 'A plot of 1/[A] against time is a straight line with slope 0.0250 M⁻¹ s⁻¹. What is k?'
+    choices:
+      - '0.0250 s⁻¹'
+      - '0.0250 M⁻¹ s⁻¹'
+      - '−0.0250 M⁻¹ s⁻¹'
+      - '40.0 M s'
+    answer: '0.0250 M⁻¹ s⁻¹'
+    explanation: 'For second order, the slope of 1/[A] against t equals +k, with units M⁻¹ s⁻¹.'
+    difficulty: medium
+  - id: ir-q5
+    prompt: 'A mechanism is: step 1 NO₂ + NO₂ → NO₃ + NO (slow); step 2 NO₃ + CO → NO₂ + CO₂ (fast). What is the rate law?'
+    choices:
+      - 'rate = k[NO₂][CO]'
+      - 'rate = k[NO₂]²'
+      - 'rate = k[NO₃][CO]'
+      - 'rate = k[CO]'
+    answer: 'rate = k[NO₂]²'
+    explanation: 'The slow step sets the rate, and it involves two NO₂ molecules.'
+    difficulty: medium
+  - id: ir-q6
+    prompt: 'In the mechanism in the previous question, NO₃ is:'
+    choices:
+      - 'a reactant'
+      - 'a product'
+      - 'a catalyst'
+      - 'an intermediate'
+    answer: 'an intermediate'
+    explanation: 'It is made in step 1 and used up in step 2, so it does not appear in the overall equation.'
+    difficulty: easy
+  - id: ir-q7
+    prompt: 'Successive half-lives of a reaction are 50 s, 100 s and 200 s. What is the order?'
+    choices:
+      - 'zero'
+      - 'first'
+      - 'second'
+      - 'cannot tell'
+    answer: 'second'
+    explanation: 'Doubling half-lives are the signature of second order (t½ = 1/k[A]₀). First order gives constant half-lives; zero order gives shrinking ones.'
+    difficulty: hard

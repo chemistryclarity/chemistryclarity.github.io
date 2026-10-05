@@ -1,0 +1,39 @@
+# Flashcards: Integrated Rate Laws and Reaction Mechanisms
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Integrated Rate Laws and Mechanisms: Flashcards'
+description: 'Revise zero-, first- and second-order integrated rate laws, straight-line plots, half-lives and reaction mechanisms.'
+level: advanced
+access: free
+status: review
+assisted: true
+cards:
+  - id: ir-01
+    front: 'Zero-order integrated rate law and straight-line plot?'
+    back: '[A] = [A]₀ − kt; [A] against t is a straight line with slope −k.'
+  - id: ir-02
+    front: 'First-order integrated rate law and straight-line plot?'
+    back: 'ln[A] = ln[A]₀ − kt; ln[A] against t is a straight line with slope −k.'
+  - id: ir-03
+    front: 'Second-order integrated rate law and straight-line plot?'
+    back: '1/[A] = 1/[A]₀ + kt; 1/[A] against t is a straight line with slope +k.'
+  - id: ir-04
+    front: 'Half-life for each order?'
+    back: 'Zero: [A]₀/2k. First: ln 2/k (constant). Second: 1/(k[A]₀).'
+  - id: ir-05
+    front: 'How can you recognize first order from data?'
+    back: 'Equal time intervals give equal fractions remaining, and the half-life is constant; ln[A] against t is straight.'
+  - id: ir-06
+    front: 'What happens to successive second-order half-lives?'
+    back: 'Each is twice as long as the one before, because [A]₀ halves each time.'
+  - id: ir-07
+    front: 'What is an elementary step?'
+    back: 'A single step in a mechanism; its rate law follows directly from the particles that collide.'
+  - id: ir-08
+    front: 'What is the rate-determining step?'
+    back: 'The slowest step in a mechanism; it sets the overall rate.'
+  - id: ir-09
+    front: 'What is an intermediate?'
+    back: 'A species formed in one step and used up in a later step; it does not appear in the overall equation.'
+  - id: ir-10
+    front: 'Two conditions for a valid mechanism?'
+    back: 'The steps add up to the overall equation, and the predicted rate law matches the experimental one.'

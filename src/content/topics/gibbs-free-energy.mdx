@@ -1,0 +1,178 @@
+---
+title: Entropy and Gibbs Free Energy
+question: "What decides whether a reaction is spontaneous, and how do entropy and Gibbs free energy predict it?"
+description: "Entropy and the second law, predicting the sign of ΔS, calculating ΔS° from standard entropies, ΔG = ΔH − TΔS, the temperature of change, and ΔG° = −RT ln K."
+area: thermochemistry
+level: advanced
+order: 30
+prerequisites: [enthalpy, hess-law]
+related: [enthalpy, chemical-equilibrium, galvanic-cells]
+flashcards: gibbs-free-energy
+quiz: gibbs-free-energy
+resources: [gibbs-free-energy-worksheet]
+references: [brown-central-science]
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Standard data at 298.15 K (CRC Handbook values): ΔHf° NH3(g) −45.9, CaCO3(s) −1207.6, CaO(s) −634.9, CO2(g) −393.5 kJ/mol;
+  S° N2(g) 191.6, H2(g) 130.7, NH3(g) 192.8, CaCO3(s) 91.7, CaO(s) 38.1, CO2(g) 213.8 J mol^-1 K^-1. R = 8.314 J mol^-1 K^-1.
+  Every value calculated by computer. Units shown in every step, with J converted to kJ before combining with ΔH.
+*/}
+
+## What is it?
+
+Some reactions happen on their own once started (they are **spontaneous**); others need a continuous input of energy. Enthalpy alone cannot decide which: ice melts spontaneously at room temperature even though melting is **endothermic**. A second quantity is needed.
+
+**Entropy**, $S$, measures how spread out energy and matter are: the number of ways the particles and their energy can be arranged. Gases have high entropy, liquids less, and solids the least.
+
+The **second law of thermodynamics**: in a spontaneous process, the total entropy of the universe increases.
+
+Chemists combine enthalpy and entropy into the **Gibbs free energy** change:
+
+$$
+\Delta G = \Delta H - T\Delta S
+$$
+
+where $T$ is the temperature in **kelvin**.
+
+<KeyIdea>
+At constant temperature and pressure, a reaction is **spontaneous** when $\Delta G$ is **negative**, at equilibrium when $\Delta G = 0$, and non-spontaneous (the reverse is spontaneous) when $\Delta G$ is positive. "Spontaneous" says nothing about speed: diamond turning into graphite is spontaneous, but immeasurably slow.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Predicting reactions.** $\Delta G$ tells chemists whether a reaction can go at all, and at what temperature it becomes possible, before they try it.
+- **Industry.** Lime ($\ce{CaO}$) is made by heating limestone above about 850 °C, the temperature at which $\Delta G$ for the decomposition becomes negative.
+- **Life and batteries.** Cells couple reactions with negative $\Delta G$ (such as using ATP) to drive ones with positive $\Delta G$; a battery's voltage is a direct measure of $\Delta G$ ($\Delta G = -nFE$).
+
+## How does it work?
+
+### 1. Predicting the sign of ΔS
+
+Entropy **increases** ($\Delta S$ positive) when:
+
+- a solid melts or a liquid boils (solid → liquid → gas);
+- the number of **moles of gas** increases, for example $\ce{CaCO3(s) -> CaO(s) + CO2(g)}$;
+- a solid dissolves to form ions in solution (usually);
+- the temperature rises.
+
+Entropy **decreases** when gas molecules combine into fewer molecules, for example $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$ (4 mol of gas → 2 mol).
+
+### 2. Calculating ΔS°
+
+Unlike enthalpies of formation, **absolute** standard entropies, $S°$, can be measured for every substance, including elements (they are not zero). Then:
+
+$$
+\begin{aligned}
+&\Delta S° = \textstyle\sum n S°(\text{products}) \\[2pt]
+&\qquad - \textstyle\sum n S°(\text{reactants})
+\end{aligned}
+$$
+
+$S°$ values are in J mol⁻¹ K⁻¹, so $\Delta S°$ comes out in J/K. **Convert it to kJ/K** before combining it with $\Delta H°$ in kJ.
+
+### 3. The four cases
+
+| ΔH | ΔS | ΔG = ΔH − TΔS | Spontaneous? |
+|---|---|---|---|
+| − | + | always negative | at all temperatures |
+| + | − | always positive | never (the reverse is) |
+| − | − | negative when T is low | at **low** temperature |
+| + | + | negative when T is high | at **high** temperature |
+
+In the last two cases, the reaction switches at the temperature where $\Delta G = 0$:
+
+$$
+T = \frac{\Delta H}{\Delta S}
+$$
+
+### 4. ΔG° and the equilibrium constant
+
+The standard free energy change is linked to the equilibrium constant:
+
+$$
+\Delta G° = -RT \ln K
+$$
+
+with $R$ = 8.314 J mol⁻¹ K⁻¹. A large negative $\Delta G°$ means a large $K$ (products favoured); a positive $\Delta G°$ means $K$ is less than 1.
+
+<Analogy>
+Think of a tidy bedroom. Left alone, it gets messier, because there are far more messy arrangements than tidy ones: that is entropy. Tidying it needs energy (an enthalpy cost). Whether the room ends up tidy depends on both: how much energy you put in, and how strongly "messiness" wins. Temperature sets how much weight entropy gets in the balance.
+</Analogy>
+
+<MorePrecisely>
+$\Delta G$ is the maximum useful (non-expansion) work a process can do at constant temperature and pressure. The relation $\Delta G = \Delta H - T\Delta S$ comes from the total entropy change: $\Delta S_\text{universe} = \Delta S_\text{system} - \Delta H/T$, so $\Delta G = -T\Delta S_\text{universe}$, and a negative $\Delta G$ is the same as an increase in the entropy of the universe. Using $\Delta H°$ and $\Delta S°$ at 298 K for other temperatures is an approximation, because both change a little with temperature.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/gibbs/delta-g-temperature.svg" alt="A graph of ΔG° in kJ against temperature in kelvin from 0 to 1400 K, with the region below zero shaded as spontaneous. The line for N2 + 3H2 → 2NH3 (ΔH° and ΔS° both negative) starts at −91.8 kJ and rises, crossing zero at 463 K: spontaneous when cool. The line for CaCO3 → CaO + CO2 (ΔH° and ΔS° both positive) starts at 179.2 kJ and falls, crossing zero at 1119 K: spontaneous when hot. Crossing point: T = ΔH° divided by ΔS°." caption="When ΔH and ΔS have the same sign, temperature decides: the line crosses ΔG° = 0 at T = ΔH°/ΔS°." width={360} height={400} />
+
+## Worked example
+
+<Example title="ΔS°, ΔG° and the switching temperature for ammonia synthesis">
+**Question:** For $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$, $\Delta H°$ = −91.8 kJ. Using $S°$ (J mol⁻¹ K⁻¹): $\ce{N2}$ 191.6, $\ce{H2}$ 130.7, $\ce{NH3}$ 192.8, find $\Delta S°$, $\Delta G°$ at 298.15 K, and the temperature above which the reaction is no longer spontaneous.
+
+1. $\Delta S° = 2(192.8) - [191.6 + 3(130.7)] = 385.6 - 583.7 = -198.1\ \text{J/K} = -0.1981\ \text{kJ/K}$ (negative: 4 mol of gas become 2)
+2. $\Delta G°$:
+
+   $$
+   \small\begin{aligned}
+   &\Delta G° = -91.8\ \text{kJ} \\[4pt]
+   &\quad - (298.15\ \text{K}) \\[4pt]
+   &\quad\quad \times (-0.1981\ \text{kJ/K}) \\[4pt]
+   &\quad = -91.8\ \text{kJ} + 59.06\ \text{kJ} \\[4pt]
+   &\quad = \mathbf{-32.7\ kJ}
+   \end{aligned}
+   $$
+
+3. Spontaneous at 298 K. Switching temperature: $T = \dfrac{\Delta H°}{\Delta S°} = \dfrac{-91.8\ \text{kJ}}{-0.1981\ \text{kJ/K}} =$ **463 K**. Above this, $\Delta G°$ is positive.
+</Example>
+
+<Example title="Why limestone must be heated">
+**Question:** For $\ce{CaCO3(s) -> CaO(s) + CO2(g)}$, find $\Delta H°$, $\Delta S°$ and $\Delta G°$ at 298.15 K, and the minimum temperature for decomposition. (Data in the note above.)
+
+1. $\Delta H° = [-634.9 + (-393.5)] - (-1207.6) = +179.2\ \text{kJ}$
+2. $\Delta S° = [38.1 + 213.8] - 91.7 = +160.2\ \text{J/K} = +0.1602\ \text{kJ/K}$
+3. $\Delta G°_{298} = 179.2\ \text{kJ} - (298.15\ \text{K})(0.1602\ \text{kJ/K}) = 179.2\ \text{kJ} - 47.76\ \text{kJ} =$ **+131.4 kJ**: not spontaneous at room temperature.
+4. $T = \dfrac{179.2\ \text{kJ}}{0.1602\ \text{kJ/K}} =$ **1119 K** (about 846 °C). Lime kilns run hotter than this.
+</Example>
+
+<Example title="From ΔG° to K">
+**Question:** Estimate $K$ at 298.15 K for ammonia synthesis ($\Delta G°$ = −32.7 kJ = −3.27 × 10⁴ J).
+
+1. $\ln K = -\dfrac{\Delta G°}{RT} = -\dfrac{-3.27 \times 10^{4}\ \text{J/mol}}{(8.314\ \text{J mol}^{-1}\,\text{K}^{-1})(298.15\ \text{K})} = 13.2$
+2. $K = e^{13.2} \approx$ **5 × 10⁵**: products are strongly favoured at 298 K (even though the reaction is too slow without a catalyst).
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Mixing J and kJ">
+$\Delta S°$ is usually in J/K but $\Delta H°$ in kJ. Convert $\Delta S°$ to kJ/K (divide by 1000) before calculating $\Delta H - T\Delta S$, or the entropy term will be 1000 times too large.
+</CommonMistake>
+
+<CommonMistake title="Using °C in ΔG = ΔH − TΔS">
+$T$ must be in **kelvin**. At 25 °C, use 298.15 K; using 25 would make the entropy term about twelve times too small.
+</CommonMistake>
+
+<CommonMistake title="Thinking spontaneous means fast">
+A negative $\Delta G$ says a reaction **can** happen, not how fast. Speed is kinetics (activation energy); a mixture of hydrogen and oxygen is spontaneous but does nothing until a spark starts it.
+</CommonMistake>
+
+<NotationNote>
+- The degree sign (°) means standard conditions: 1 bar and, unless stated, 298.15 K.
+- Entropy units: J mol⁻¹ K⁻¹ for $S°$, J/K for $\Delta S°$ of a reaction as written.
+- Some books use "feasible" or "thermodynamically favourable" instead of "spontaneous".
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Entropy: gases high, solids low; ΔS is positive when moles of gas increase.
+- $\Delta S° = \sum nS°(\text{products}) - \sum nS°(\text{reactants})$, in J/K; convert to kJ/K.
+- $\Delta G = \Delta H - T\Delta S$ (T in K). Negative ΔG: spontaneous. Switching temperature $T = \Delta H/\Delta S$.
+- $\Delta G° = -RT\ln K$ and $\Delta G° = -nFE°$.
+</RememberThis>

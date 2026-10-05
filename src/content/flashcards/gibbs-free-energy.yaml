@@ -1,0 +1,39 @@
+# Flashcards: Entropy and Gibbs Free Energy
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). Values calculated by computer.
+title: 'Entropy and Gibbs Free Energy: Flashcards'
+description: 'Revise entropy, the second law, predicting ΔS, ΔG = ΔH − TΔS, the four sign cases and ΔG° = −RT ln K.'
+level: advanced
+access: free
+status: review
+assisted: true
+cards:
+  - id: gf-01
+    front: 'What is entropy?'
+    back: 'A measure of how spread out energy and matter are (the number of possible arrangements). Unit of S°: J mol⁻¹ K⁻¹.'
+  - id: gf-02
+    front: 'State the second law of thermodynamics.'
+    back: 'In a spontaneous process, the total entropy of the universe increases.'
+  - id: gf-03
+    front: 'When is ΔS of a reaction positive?'
+    back: 'When moles of gas increase, a solid melts or a liquid boils, or (usually) a solid dissolves.'
+  - id: gf-04
+    front: 'Gibbs free energy equation?'
+    back: 'ΔG = ΔH − TΔS, with T in kelvin and ΔS converted to kJ/K.'
+  - id: gf-05
+    front: 'What does the sign of ΔG tell you?'
+    back: 'Negative: spontaneous. Zero: at equilibrium. Positive: not spontaneous (the reverse is).'
+  - id: gf-06
+    front: 'ΔH negative and ΔS positive?'
+    back: 'ΔG is negative at all temperatures: always spontaneous.'
+  - id: gf-07
+    front: 'ΔH positive and ΔS positive?'
+    back: 'Spontaneous only at high temperature, above T = ΔH ÷ ΔS (e.g. CaCO₃ → CaO + CO₂).'
+  - id: gf-08
+    front: 'ΔH negative and ΔS negative?'
+    back: 'Spontaneous only at low temperature, below T = ΔH ÷ ΔS (e.g. N₂ + 3H₂ → 2NH₃).'
+  - id: gf-09
+    front: 'How is ΔG° related to K?'
+    back: 'ΔG° = −RT ln K (R = 8.314 J mol⁻¹ K⁻¹). Negative ΔG° means K greater than 1.'
+  - id: gf-10
+    front: 'Does a negative ΔG mean a reaction is fast?'
+    back: 'No. It means the reaction can happen; its speed depends on the activation energy.'
