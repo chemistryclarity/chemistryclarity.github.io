@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 470" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .h { fill: #7c3aed; font-size: 12.5px; font-weight: 800; letter-spacing: 0.04em; }
+    .m { fill: #14213d; font-size: 15px; font-weight: 600; }
+    .mS { fill: #14213d; font-size: 13.5px; font-weight: 600; }
+    .note { fill: #5b6577; font-size: 10.5px; font-weight: 600; }
+    .good { fill: #15803d; font-size: 11px; font-weight: 700; } .bad { fill: #be123c; font-size: 11px; font-weight: 700; }
+    .plus { fill: #be123c; font-size: 12px; font-weight: 800; } .minus { fill: #1d4ed8; font-size: 13px; font-weight: 800; }
+    .curly { stroke: #be123c; stroke-width: 1.7; fill: none; marker-end: url(#hr); } .hr { fill: #be123c; }
+    .rx { stroke: #14213d; stroke-width: 1.6; fill: none; marker-end: url(#hk); } .hk { fill: #14213d; }
+    .rxF { stroke: #8a94a6; stroke-width: 1.4; fill: none; stroke-dasharray: 4 3; marker-end: url(#hg); } .hg { fill: #8a94a6; }
+    .sep { stroke: #e3e7ee; stroke-width: 1; }
+    .ts { fill: none; stroke: #8a94a6; stroke-width: 1.2; }
+    .dash { stroke: #14213d; stroke-width: 1.4; stroke-dasharray: 3 3; }
+    .bond { stroke: #14213d; stroke-width: 1.6; }
+    .box { fill: #f3effe; stroke: #c4b5fd; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .m, .mS { fill: #e9edf5; } .sub, .note { fill: #9aa5ba; } .h { fill: #c4b5fd; }
+      .good { fill: #4ade80; } .bad, .plus { fill: #fb7185; } .minus { fill: #93c5fd; }
+      .curly { stroke: #fb7185; } .hr { fill: #fb7185; } .rx, .bond, .dash { stroke: #e9edf5; } .hk { fill: #e9edf5; }
+      .sep { stroke: #2a3550; } .box { fill: #241b3d; stroke: #5b4b8a; }
+    }
+  </style>
+  <defs><marker id="hr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hr" d="M0 0 10 5 0 10z"/></marker><marker id="hk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hk" d="M0 0 10 5 0 10z"/></marker><marker id="hg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hg" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="470" rx="14"/><text class="t" x="20" y="28" text-anchor="start">SN2 and SN1: two ways to substitute</text><text class="sub" x="20" y="45" text-anchor="start">Red curved arrows show where electron pairs move.</text><text class="h" x="20" y="74" text-anchor="start">SN2 · ONE STEP · rate = k[RX][Nu⁻]</text><text class="m" x="20" y="116" text-anchor="start">HO<tspan class="minus" dy="-8" font-size="12">−</tspan></text><text class="m" x="20" y="100" text-anchor="start">··</text><text class="m" x="80" y="116" text-anchor="start">H₃C</text><line class="bond" x1="112" y1="111" x2="128" y2="111"/><text class="m" x="131" y="116" text-anchor="start">Br</text><path class="curly" d="M34 96 C 46 74, 82 74, 90 100"/><path class="curly" d="M120 114 C 124 132, 140 132, 142 122"/><path class="rx" d="M160 111 H184"/><text class="mS" x="196" y="116" text-anchor="start">[HO···C···Br]<tspan dy="-8" font-size="11">‡</tspan></text><text class="note" x="196" y="134" text-anchor="start">transition state</text><path class="rx" d="M240 142 L240 158"/><text class="m" x="170" y="174" text-anchor="start">HO–CH₃  +  Br<tspan class="minus" dy="-8" font-size="12">−</tspan></text><text class="note" x="20" y="196" text-anchor="start">Backside attack: the nucleophile enters as the leaving group leaves.</text><text class="note" x="20" y="210" text-anchor="start">Configuration is inverted. Best for CH₃ and 1° carbons.</text><line class="sep" x1="20" y1="232" x2="340" y2="232"/><text class="h" x="20" y="258" text-anchor="start">SN1 · TWO STEPS · rate = k[RX]</text><text class="m" x="20" y="300" text-anchor="start">(CH₃)₃C</text><line class="bond" x1="80" y1="295" x2="96" y2="295"/><text class="m" x="99" y="300" text-anchor="start">Br</text><path class="curly" d="M88 298 C 92 318, 108 318, 110 307"/><path class="rx" d="M128 295 H162"/><text class="note" x="145" y="288" text-anchor="middle">slow</text><text class="m" x="172" y="300" text-anchor="start">(CH₃)₃C<tspan class="plus" dy="-8" font-size="11">+</tspan><tspan dy="8">  +  Br</tspan><tspan class="minus" dy="-8" font-size="12">−</tspan></text><text class="note" x="172" y="318" text-anchor="start">carbocation (planar)</text><path class="rx" d="M206 326 L206 346"/><text class="note" x="214" y="340" text-anchor="start">+ H₂O, fast</text><text class="m" x="120" y="368" text-anchor="start">(CH₃)₃C–OH  +  H<tspan class="plus" dy="-8" font-size="11">+</tspan></text><text class="note" x="20" y="394" text-anchor="start">The slow step makes the carbocation; the nucleophile adds after.</text><text class="note" x="20" y="408" text-anchor="start">Attack from either face: a mixture (racemization at a</text><text class="note" x="20" y="422" text-anchor="start">stereocentre). Best for 3° carbons in polar protic solvents.</text><rect class="box" x="20" y="436" width="320" height="22" rx="6"/><text class="note" x="180" y="451" text-anchor="middle">Methyl, 1°: SN2  ·  3°: SN1  ·  2°: either</text>
+</svg>

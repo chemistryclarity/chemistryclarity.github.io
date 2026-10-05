@@ -1,0 +1,80 @@
+---
+title: "Electrophilic Addition to Alkenes and Markovnikov's Rule"
+section: organic-mechanisms
+subtitle: Why HBr adds to propene the way it does, explained by carbocation stability.
+description: "The two-step mechanism of electrophilic addition, curved arrows, why the more stable carbocation wins (Markovnikov's rule), and the bromonium ion in bromine addition."
+order: 20
+level: advanced
+facts:
+  - { label: 'Reaction type', value: 'Electrophilic addition across a C=C double bond' }
+  - { label: 'Electrophiles', value: 'H⁺ (from HBr, HCl, H₂O/H⁺), Br₂' }
+  - { label: 'Key intermediate', value: 'Carbocation (or bromonium ion for Br₂)' }
+  - { label: 'Rule', value: 'Markovnikov (1870): H adds to the carbon that already has more H atoms' }
+  - { label: 'Used in', value: 'Making haloalkanes and alcohols; the bromine-water test for C=C' }
+timeline:
+  - { year: 1870, event: 'Vladimir Markovnikov publishes his rule for the addition of hydrogen halides to unsymmetrical alkenes.' }
+  - { year: 1933, event: 'Morris Kharasch and Frank Mayo explain the "peroxide effect": with peroxides, HBr adds the opposite way (anti-Markovnikov) by a radical mechanism.' }
+  - { year: 1937, event: 'Irving Roberts and George Kimball propose the bridged bromonium ion to explain anti addition of bromine.' }
+related: [organic-reactions, hydrocarbons-and-alkanes, functional-groups]
+seeAlso: [sn1-sn2]
+sources:
+  - { label: 'Wikipedia: Electrophilic addition', url: 'https://en.wikipedia.org/wiki/Electrophilic_addition' }
+  - { label: "Wikipedia: Markovnikov's rule", url: 'https://en.wikipedia.org/wiki/Markovnikov%27s_rule' }
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording and figure. Equations checked by computer.
+*/}
+
+## Why alkenes attract electrophiles
+
+A C=C double bond contains a **π bond**: a cloud of electron density above and below the plane of the molecule. Those electrons are held less tightly than in a single bond, so the double bond behaves as a **nucleophile** and is attacked by **electrophiles**: electron-poor species such as $\ce{H+}$.
+
+<KeyIdea>
+Electrophilic addition has **two steps**: (1) the π electrons attack the electrophile, forming a **carbocation**; (2) a nucleophile (such as $\ce{Br-}$) bonds to the carbocation. The **more stable carbocation** forms faster, and that decides the product.
+</KeyIdea>
+
+## Step by step: HBr + propene
+
+<Figure src="/images/explore/markovnikov-addition.svg" alt="Step 1: a curved arrow goes from the C=C double bond of propene to the H of H–Br, while a second arrow moves the H–Br bonding pair onto bromine. Two carbocations are possible: the secondary carbocation CH3–C+H–CH3, which is more stable and forms much faster, and the primary carbocation CH3–CH2–CH2+, which is less stable and hardly forms. Step 2: a curved arrow from Br− to the positive carbon of the secondary carbocation gives CH3CHBrCH3, 2-bromopropane, the major product. Markovnikov: H adds to the carbon with more H atoms, because that gives the more stable carbocation." caption="Two possible carbocations; the more stable 2° carbocation leads to the major product." width={360} height={420} />
+
+1. The π bond attacks the H of H–Br, and the H–Br bond breaks, leaving $\ce{Br-}$. The H can add to either end of the double bond, so **two carbocations** are possible.
+2. Adding H to the **end** carbon ($\ce{CH2}$) puts the positive charge on the middle carbon: a **secondary (2°)** carbocation. Adding H to the middle carbon gives a **primary (1°)** carbocation.
+3. $\ce{Br-}$ bonds to whichever carbocation formed. Since the 2° carbocation forms much faster, the major product is **2-bromopropane**.
+
+$$
+\small \ce{CH3CH=CH2 + HBr -> CH3CHBrCH3}
+$$
+
+## Why carbocation stability matters
+
+Carbocation stability: **3° > 2° > 1° > methyl**. Alkyl groups stabilize the positive carbon by pushing electron density towards it (an **inductive** effect) and by **hyperconjugation** (neighbouring C–H bonds share some electron density with the empty p orbital). A more stable carbocation has a lower-energy transition state leading to it, so it forms faster.
+
+That is the modern explanation of **Markovnikov's rule** (1870): *in the addition of HX to an unsymmetrical alkene, the hydrogen adds to the carbon that already has more hydrogen atoms*.
+
+<Example title="Predicting the major product">
+**Question:** Predict the major product of (a) 2-methylpropene + HCl (b) propene + water with an acid catalyst.
+
+1. (a) H adds to the $\ce{CH2}$ end, giving the **3°** carbocation $\ce{(CH3)3C+}$; $\ce{Cl-}$ adds to it: **2-chloro-2-methylpropane**, $\ce{(CH3)3CCl}$.
+2. (b) $\ce{H+}$ adds to the end carbon, giving the 2° carbocation; water attacks it and loses $\ce{H+}$: **propan-2-ol**, $\ce{CH3CH(OH)CH3}$ (the major product).
+</Example>
+
+## Bromine: the bromonium ion
+
+$\ce{Br2}$ has no H, but as it approaches the electron-rich double bond, the Br–Br bond becomes polarized. The near Br is attacked by the π bond, and instead of an open carbocation a three-membered **bromonium ion** forms. $\ce{Br-}$ then attacks from the **opposite face**, so the two bromine atoms end up on opposite sides (**anti addition**). This reaction is the basis of the **bromine-water test**: the orange colour disappears as $\ce{Br2}$ adds across the C=C.
+
+## Common mistakes
+
+<CommonMistake title="Putting Br on the carbon with more H">
+Markovnikov's rule is about where the **H** goes. The H goes to the carbon with more H; the Br (or OH, Cl) goes to the **other** carbon, the more substituted one.
+</CommonMistake>
+
+<CommonMistake title="Drawing the arrow from H+ to the double bond">
+The electrons come from the π bond, so the curved arrow starts at the **double bond** and points to the H.
+</CommonMistake>
+
+<MorePrecisely>
+When a carbocation can become more stable by moving a neighbouring H or $\ce{CH3}$ group with its electron pair (a **rearrangement**), it often does, giving unexpected products. In the presence of peroxides, HBr (but not HCl) adds by a **radical** mechanism and gives the anti-Markovnikov product, 1-bromopropane; this was explained by Kharasch and Mayo in 1933.
+</MorePrecisely>

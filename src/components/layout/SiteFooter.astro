@@ -3,12 +3,17 @@ import Logo from './Logo.astro';
 import { site, newsletterEnabled } from '../../config/site';
 import { footerNav } from '../../config/navigation';
 import { url } from '../../lib/url';
+import { getVisible } from '../../lib/content';
 
 const year = new Date().getFullYear();
 const years = year > site.copyrightStart ? `${site.copyrightStart}–${year}` : `${year}`;
-const groups = footerNav.map((g) =>
-  g.heading === 'Learn' && newsletterEnabled ? { ...g, links: [...g.links, { label: 'Newsletter', href: '/newsletter/' }] } : g,
-);
+// The Explore link appears only once at least one Explore article is published.
+const hasExplore = (await getVisible('explore')).length > 0;
+const groups = footerNav
+  .map((g) => ({ ...g, links: g.links.filter((l) => l.href !== '/explore/' || hasExplore) }))
+  .map((g) =>
+    g.heading === 'Learn' && newsletterEnabled ? { ...g, links: [...g.links, { label: 'Newsletter', href: '/newsletter/' }] } : g,
+  );
 const socials = Object.entries(site.social).filter(([, href]) => href);
 const socialLabels: Record<string, string> = {
   youtube: 'YouTube', instagram: 'Instagram', tiktok: 'TikTok', facebook: 'Facebook',

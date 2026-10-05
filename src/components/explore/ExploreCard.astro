@@ -1,0 +1,80 @@
+---
+/** Card for an Explore article. Chemist profiles show an initials badge and life years. */
+import type { CollectionEntry } from 'astro:content';
+import { url } from '../../lib/url';
+import { isDraft } from '../../lib/content';
+
+export interface Props {
+  entry: CollectionEntry<'explore'>;
+  as?: 'h2' | 'h3';
+}
+const { entry, as: Heading = 'h3' } = Astro.props;
+const { title, subtitle, description, section, lifespan, prizes } = entry.data;
+const isChemist = section === 'chemists';
+const initials = title.split(/\s+/).filter((w) => /^[A-Z]/.test(w)).map((w) => w[0]).slice(0, 2).join('');
+// Short prize label: "Nobel Prize in Chemistry, 1964" or "2 Nobel Prizes (1903, 1911)".
+const nobels = prizes.filter((p) => /Nobel/.test(p.name));
+const short = (name: string) => name.replace(/\s*\(.*\)\s*$/, '');
+const prizeLabel = nobels.length > 1
+  ? `${nobels.length} Nobel Prizes (${nobels.map((p) => p.year).join(', ')})`
+  : nobels[0] ? `${short(nobels[0].name)}, ${nobels[0].year}` : prizes[0] ? `${short(prizes[0].name)}, ${prizes[0].year}` : '';
+---
+
+<article class:list={['ecard', `ecard--${section}`]}>
+  {isChemist && <span class="ecard__mono" aria-hidden="true">{initials}</span>}
+  <div class="ecard__body">
+    <Heading class="ecard__title"><a href={url(`/explore/${section}/${entry.id}/`)}>{title}</a></Heading>
+    {isChemist && lifespan && <p class="ecard__years">{lifespan}</p>}
+    {!isChemist && subtitle && <p class="ecard__sub">{subtitle}</p>}
+    <p class="ecard__desc">{description}</p>
+    <div class="ecard__meta">
+      {isChemist && prizeLabel && <span class="badge ecard__prize">{prizeLabel}</span>}
+      {isDraft(entry) && <span class="badge badge--draft">Draft</span>}
+    </div>
+  </div>
+</article>
+
+<style>
+  .ecard {
+    position: relative;
+    display: flex;
+    gap: var(--space-4);
+    height: 100%;
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .ecard--natural-products { border-top-color: var(--hue-green); }
+  .ecard--organic-mechanisms { border-top-color: var(--hue-violet); }
+  .ecard--chemists { border-top-color: var(--hue-amber); }
+  .ecard:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+  .ecard__mono {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background: var(--surface-2);
+    border: 2px solid var(--hue-amber);
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .ecard__body { display: grid; gap: var(--space-2); align-content: start; min-width: 0; }
+  .ecard__title { font-size: var(--step-1); }
+  .ecard__title a { color: var(--ink); text-decoration: none; }
+  .ecard__title a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  .ecard:has(a:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .ecard__title a:focus-visible { outline: none; }
+  .ecard__years { font-weight: 650; color: var(--muted); font-size: var(--step--1); }
+  .ecard__sub { font-weight: 600; color: var(--ink-soft); font-size: var(--step--1); }
+  .ecard__desc { font-size: var(--step--1); color: var(--muted); }
+  .ecard__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .ecard__prize { white-space: normal; text-align: left; }
+  .ecard__desc, .ecard__title { overflow-wrap: anywhere; }
+</style>

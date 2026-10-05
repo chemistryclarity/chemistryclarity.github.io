@@ -16,6 +16,8 @@ export const GET: APIRoute = async () => {
   const areas = (await getAreas()).filter((a) => topics.some((t) => t.data.area.id === a.id));
   const pages = await getCollection('pages');
   const news = await getCollection('news', published);
+  const explore = await getCollection('explore', published);
+  const exploreSections = [...new Set(explore.map((e) => e.data.section))];
 
   // Sections with their own pages: /<section>/ and /<section>/<id>/
   const sections = [
@@ -37,6 +39,13 @@ export const GET: APIRoute = async () => {
     ),
     ...(news.length
       ? [{ path: '/news/' }, ...news.map((n) => ({ path: `/news/${n.id}/`, lastmod: n.data.updated ?? n.data.date }))]
+      : []),
+    ...(explore.length
+      ? [
+          { path: '/explore/' },
+          ...exploreSections.map((s) => ({ path: `/explore/${s}/` })),
+          ...explore.map((e) => ({ path: `/explore/${e.data.section}/${e.id}/`, lastmod: e.data.lastReviewed })),
+        ]
       : []),
     ...pages.map((p) => ({ path: `/${p.id}/`, lastmod: p.data.updated })),
   ];

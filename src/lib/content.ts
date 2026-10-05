@@ -2,7 +2,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import { site } from '../config/site';
 
 type WithStatus = { data: { status: 'draft' | 'review' | 'published' } };
-type StatusCollection = 'topics' | 'flashcards' | 'quizzes' | 'videos' | 'notes' | 'resources' | 'products' | 'news';
+type StatusCollection = 'topics' | 'flashcards' | 'quizzes' | 'videos' | 'notes' | 'resources' | 'products' | 'news' | 'explore';
 
 /**
  * Should this entry be LISTED on the site (menus, cards, index pages, sitemap, links from other pages)?

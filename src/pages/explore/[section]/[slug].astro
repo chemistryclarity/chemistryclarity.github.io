@@ -1,0 +1,197 @@
+---
+/**
+ * Explore article page: /explore/<section>/<slug>/.
+ * Chemist profiles get a profile card (life years, key facts, prizes with years);
+ * every article can show key facts, a timeline, related lessons and sources.
+ */
+import type { GetStaticPaths } from 'astro';
+import { getEntries, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/layout/Breadcrumbs.astro';
+import MathStyles from '../../../components/lesson/MathStyles.astro';
+import Timeline from '../../../components/explore/Timeline.astro';
+import ExploreCard from '../../../components/explore/ExploreCard.astro';
+import { lessonComponents } from '../../../components/lesson';
+import { getAll, isDraft, isVisible } from '../../../lib/content';
+import { exploreSections } from '../../../config/explore';
+import { absoluteUrl, routes, url } from '../../../lib/url';
+import { site } from '../../../config/site';
+
+export const getStaticPaths = (async () => {
+  const all = await getAll('explore');
+  return all.map((entry) => ({ params: { section: entry.data.section, slug: entry.id }, props: { entry, all } }));
+}) satisfies GetStaticPaths;
+
+const { entry, all } = Astro.props;
+const { data } = entry;
+const meta = exploreSections[data.section];
+const path = `/explore/${data.section}/${entry.id}/`;
+const draft = isDraft(entry);
+const { Content, headings } = await render(entry);
+const related = (await getEntries(data.related)).filter(isVisible);
+const seeAlso = data.seeAlso.map((id) => all.find((a) => a.id === id)).filter((a) => a && (isVisible(a) || draft)) as typeof all;
+const isChemist = data.section === 'chemists';
+const initials = data.title.split(/\s+/).filter((w) => /^[A-Z]/.test(w)).map((w) => w[0]).slice(0, 2).join('');
+const toc = [
+  ...headings.filter((h) => h.depth === 2).map((h) => ({ slug: h.slug, text: h.text })),
+  ...(data.timeline.length ? [{ slug: 'timeline', text: 'Timeline' }] : []),
+  ...(data.sources.length ? [{ slug: 'sources', text: 'Sources and further reading' }] : []),
+];
+
+const jsonLd = [
+  {
+    '@type': isChemist ? 'ProfilePage' : 'Article',
+    name: data.title,
+    headline: data.title,
+    description: data.description,
+    url: absoluteUrl(path),
+    inLanguage: site.language,
+    isAccessibleForFree: true,
+    publisher: { '@id': `${absoluteUrl('/')}#organization` },
+    ...(isChemist ? { mainEntity: { '@type': 'Person', name: data.title, ...(data.prizes.length ? { award: data.prizes.map((p) => `${p.name} (${p.year})`) } : {}) } } : {}),
+    ...(data.lastReviewed ? { dateModified: data.lastReviewed.toISOString().slice(0, 10) } : {}),
+  },
+];
+const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<BaseLayout title={data.title} description={data.description} path={path} type="article" jsonLd={jsonLd} draft={draft}>
+  <MathStyles />
+  <div class="container section section--tight">
+    <Breadcrumbs items={[{ label: 'Explore', href: '/explore/' }, { label: meta.title, href: `/explore/${data.section}/` }, { label: data.title }]} />
+
+    <header class:list={['head', `head--${data.section}`]}>
+      <p class="eyebrow">{meta.title}</p>
+      <div class="head__row">
+        {isChemist && <span class="mono" aria-hidden="true">{initials}</span>}
+        <div>
+          <h1>{data.title}</h1>
+          {isChemist && data.lifespan && <p class="head__years">{data.lifespan}</p>}
+        </div>
+      </div>
+      {data.subtitle && <p class="lead">{data.subtitle}</p>}
+      {data.lastReviewed && <p class="muted head__date">Last reviewed {fmtDate(data.lastReviewed)}</p>}
+    </header>
+
+    <div class="layout">
+      <aside class="side">
+        {(data.facts.length > 0 || data.prizes.length > 0) && (
+          <div class="facts">
+            {data.facts.length > 0 && (
+              <>
+                <h2 class="facts__title">{isChemist ? 'Profile' : 'Key facts'}</h2>
+                <dl>
+                  {data.facts.map((f) => (
+                    <div class="facts__row"><dt>{f.label}</dt><dd>{f.value}</dd></div>
+                  ))}
+                </dl>
+              </>
+            )}
+            {data.prizes.length > 0 && (
+              <>
+                <h2 class="facts__title">Prizes and honours</h2>
+                <ul class="prizes" role="list">
+                  {data.prizes.map((p) => <li><span class="prizes__year">{p.year}</span> {p.name}</li>)}
+                </ul>
+              </>
+            )}
+          </div>
+        )}
+        {toc.length > 2 && (
+          <nav class="toc no-print" aria-label="On this page">
+            <p class="toc__title">On this page</p>
+            <ol role="list">{toc.map((t) => <li><a href={`#${t.slug}`}>{t.text}</a></li>)}</ol>
+          </nav>
+        )}
+      </aside>
+
+      <article class="main">
+        <div class="prose">
+          <Content components={lessonComponents} />
+        </div>
+
+        {data.timeline.length > 0 && (
+          <section class="block" aria-labelledby="timeline">
+            <h2 id="timeline">Timeline</h2>
+            <Timeline items={data.timeline} />
+          </section>
+        )}
+
+        {related.length > 0 && (
+          <nav class="block" aria-labelledby="related-h">
+            <h2 id="related-h">Learn the chemistry</h2>
+            <ul class="links" role="list">{related.map((r) => <li><a href={routes.topic(r.id)}>{r.data.title}</a></li>)}</ul>
+          </nav>
+        )}
+
+        {data.sources.length > 0 && (
+          <section class="block" aria-labelledby="sources">
+            <h2 id="sources">Sources and further reading</h2>
+            <ul class="links" role="list">
+              {data.sources.map((s) => <li><a href={s.url} rel="noopener">{s.label}<span aria-hidden="true"> ↗</span></a></li>)}
+            </ul>
+          </section>
+        )}
+
+        {seeAlso.length > 0 && (
+          <section class="block no-print" aria-labelledby="next-h">
+            <h2 id="next-h">Explore next</h2>
+            <ul class="grid" role="list">{seeAlso.map((a) => <li><ExploreCard entry={a} /></li>)}</ul>
+          </section>
+        )}
+
+        <p class="back no-print"><a href={url(`/explore/${data.section}/`)}>← All {meta.title.toLowerCase()}</a></p>
+        <p class="report">Spotted a mistake? <a href={url('/contact/')}>Let us know</a> and we'll fix it.</p>
+      </article>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .head { margin-block: var(--space-4) var(--space-6); max-width: var(--measure); }
+  .head > * + * { margin-top: var(--space-3); }
+  .head--natural-products .eyebrow { color: var(--hue-green); }
+  .head--organic-mechanisms .eyebrow { color: var(--hue-violet); }
+  .head--chemists .eyebrow { color: var(--hue-amber); }
+  .head__row { display: flex; align-items: center; gap: var(--space-4); }
+  .mono {
+    flex: none; display: grid; place-items: center; width: 4.2rem; height: 4.2rem; border-radius: 50%;
+    background: var(--surface-2); border: 3px solid var(--hue-amber); font-weight: 800; font-size: var(--step-1); color: var(--ink);
+  }
+  .head__years { font-weight: 650; color: var(--muted); margin-top: var(--space-1); }
+  .head__date { font-size: var(--step--1); }
+
+  .layout { display: grid; gap: var(--space-6); }
+  .main { min-width: 0; max-width: var(--measure); }
+  @media (min-width: 64rem) {
+    .layout { grid-template-columns: minmax(0, var(--measure)) 17rem; justify-content: space-between; gap: var(--space-7); }
+    .side { grid-column: 2; grid-row: 1; }
+    .main { grid-column: 1; grid-row: 1; }
+    .side > :last-child { position: sticky; top: 5.5rem; }
+  }
+  .facts { padding: var(--space-4) var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); font-size: var(--step--1); }
+  .facts + .toc { margin-top: var(--space-4); }
+  .facts__title { font-size: var(--step-0); margin: 0 0 var(--space-2); }
+  .facts__title:not(:first-child) { margin-top: var(--space-4); }
+  .facts dl { margin: 0; display: grid; gap: var(--space-2); }
+  .facts__row { display: grid; gap: 0.1rem; }
+  @media (min-width: 40rem) and (max-width: 63.99rem) { .facts__row { grid-template-columns: 8rem 1fr; gap: var(--space-3); } }
+  .facts dt { font-weight: 650; color: var(--muted); }
+  .facts dd { margin: 0; color: var(--ink); }
+  .prizes { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
+  .prizes__year { display: inline-block; min-width: 2.9rem; font-weight: 750; color: var(--hue-amber); }
+  .toc { padding: var(--space-3) var(--space-4); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); font-size: var(--step--1); }
+  .toc__title { font-weight: 700; }
+  .toc ol { list-style: none; padding: 0; margin-top: var(--space-2); display: grid; gap: var(--space-1); }
+  .toc a { color: var(--ink-soft); text-decoration: none; }
+  .toc a:hover { color: var(--accent); text-decoration: underline; }
+
+  .block { margin-top: var(--space-8); scroll-margin-top: 5rem; }
+  .block > h2 { font-size: var(--step-2); margin-bottom: var(--space-4); }
+  .prose :global(h2) { scroll-margin-top: 5rem; }
+  .links { padding-left: 1.2em; }
+  .links li + li { margin-top: var(--space-2); }
+  .grid { list-style: none; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); }
+  .back { margin-top: var(--space-7); font-weight: 650; }
+  .report { margin-top: var(--space-4); font-size: var(--step--1); color: var(--muted); }
+</style>

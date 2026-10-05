@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/layout/PageHeader.astro';
+import ExploreCard from '../../components/explore/ExploreCard.astro';
+import { getAll, isVisible } from '../../lib/content';
+import { exploreSections, exploreSectionIds } from '../../config/explore';
+import { url } from '../../lib/url';
+
+// Until an article is published, this page is a private preview (draft banner, hidden from search)
+// that shows the articles waiting for review.
+const all = await getAll('explore');
+const published = all.filter(isVisible);
+const preview = published.length === 0;
+const articles = preview ? all : published;
+const bySection = exploreSectionIds.map((id) => ({
+  id,
+  meta: exploreSections[id],
+  items: articles.filter((a) => a.data.section === id).sort((a, b) => a.data.order - b.data.order),
+}));
+---
+
+<BaseLayout
+  title="Explore: Special Topics in Chemistry"
+  description="Special topics beyond the lessons: stories of natural products and drug discovery, guides to tricky organic mechanisms, and profiles of famous chemists."
+  path="/explore/"
+  draft={preview}
+>
+  <div class="container section section--tight">
+    <PageHeader
+      crumbs={[{ label: 'Explore' }]}
+      eyebrow="Special topics"
+      title="Explore"
+      lead="Go beyond the lessons: the stories behind medicines from nature, the organic mechanisms students find hardest, and the chemists who shaped the subject."
+    />
+
+    <ul class="sections" role="list">
+      {bySection.map((s) => (
+        <li>
+          <a class:list={['sec', `sec--${s.id}`]} href={url(`/explore/${s.id}/`)}>
+            <span class="sec__eyebrow">{s.meta.eyebrow}</span>
+            <span class="sec__title">{s.meta.title}</span>
+            <span class="sec__intro">{s.meta.intro}</span>
+            <span class="sec__count">{s.items.length ? `${s.items.length} article${s.items.length === 1 ? '' : 's'} →` : 'Coming soon'}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    {bySection.filter((s) => s.items.length).map((s) => (
+      <section class="group" aria-labelledby={`h-${s.id}`}>
+        <h2 id={`h-${s.id}`}>{s.meta.title}</h2>
+        <ul class="grid" role="list">
+          {s.items.slice(0, 3).map((a) => <li><ExploreCard entry={a} /></li>)}
+        </ul>
+        {s.items.length > 3 && <p class="more"><a href={url(`/explore/${s.id}/`)}>All {s.meta.title.toLowerCase()} →</a></p>}
+      </section>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .sections { list-style: none; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+  .sec {
+    display: grid;
+    gap: var(--space-2);
+    height: 100%;
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--accent);
+    background: var(--surface);
+    box-shadow: var(--shadow-1);
+    text-decoration: none;
+    color: var(--ink);
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .sec:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); color: var(--ink); }
+  .sec--natural-products { border-top-color: var(--hue-green); }
+  .sec--organic-mechanisms { border-top-color: var(--hue-violet); }
+  .sec--chemists { border-top-color: var(--hue-amber); }
+  .sec__eyebrow { font-size: var(--step--1); font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .sec__title { font-size: var(--step-2); font-weight: 750; }
+  .sec__intro { color: var(--ink-soft); font-size: var(--step--1); }
+  .sec__count { margin-top: auto; font-weight: 700; color: var(--accent); font-size: var(--step--1); }
+  .group { margin-top: var(--space-8); }
+  .group h2 { font-size: var(--step-2); margin-bottom: var(--space-4); }
+  .grid { list-style: none; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); }
+  .more { margin-top: var(--space-3); font-weight: 650; }
+</style>

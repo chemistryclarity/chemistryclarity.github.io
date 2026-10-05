@@ -1,0 +1,45 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/layout/PageHeader.astro';
+import ExploreCard from '../../../components/explore/ExploreCard.astro';
+import { getAll, isVisible } from '../../../lib/content';
+import { exploreSections, exploreSectionIds, type ExploreSection } from '../../../config/explore';
+import { url } from '../../../lib/url';
+
+export const getStaticPaths = (() => exploreSectionIds.map((section) => ({ params: { section } }))) satisfies GetStaticPaths;
+
+const section = Astro.params.section as ExploreSection;
+const meta = exploreSections[section];
+const inSection = (await getAll('explore')).filter((a) => a.data.section === section);
+const published = inSection.filter(isVisible);
+// No published article yet: a private preview of the articles waiting for review.
+const preview = published.length === 0;
+const items = (preview ? inSection : published).sort((a, b) => a.data.order - b.data.order);
+const others = exploreSectionIds.filter((id) => id !== section);
+---
+
+<BaseLayout title={meta.title} description={meta.intro} path={`/explore/${section}/`} draft={preview}>
+  <div class="container section section--tight">
+    <PageHeader crumbs={[{ label: 'Explore', href: '/explore/' }, { label: meta.title }]} eyebrow={meta.eyebrow} title={meta.title} lead={meta.intro} />
+
+    {items.length > 0 ? (
+      <ul class="grid" role="list">{items.map((a) => <li><ExploreCard entry={a} as="h2" /></li>)}</ul>
+    ) : (
+      <p class="muted">The first articles are on the way.</p>
+    )}
+
+    <nav class="others" aria-label="Other special topics">
+      <p>More to explore:</p>
+      <ul role="list">
+        {others.map((id) => <li><a href={url(`/explore/${id}/`)}>{exploreSections[id].title} →</a></li>)}
+      </ul>
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  .grid { list-style: none; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); }
+  .others { margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); align-items: baseline; font-weight: 650; }
+  .others ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
+</style>

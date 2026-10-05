@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .h { fill: #7c3aed; font-size: 12.5px; font-weight: 800; letter-spacing: 0.04em; }
+    .m { fill: #14213d; font-size: 15px; font-weight: 600; }
+    .mS { fill: #14213d; font-size: 13.5px; font-weight: 600; }
+    .note { fill: #5b6577; font-size: 10.5px; font-weight: 600; }
+    .good { fill: #15803d; font-size: 11px; font-weight: 700; } .bad { fill: #be123c; font-size: 11px; font-weight: 700; }
+    .plus { fill: #be123c; font-size: 12px; font-weight: 800; } .minus { fill: #1d4ed8; font-size: 13px; font-weight: 800; }
+    .curly { stroke: #be123c; stroke-width: 1.7; fill: none; marker-end: url(#hr); } .hr { fill: #be123c; }
+    .rx { stroke: #14213d; stroke-width: 1.6; fill: none; marker-end: url(#hk); } .hk { fill: #14213d; }
+    .rxF { stroke: #8a94a6; stroke-width: 1.4; fill: none; stroke-dasharray: 4 3; marker-end: url(#hg); } .hg { fill: #8a94a6; }
+    .sep { stroke: #e3e7ee; stroke-width: 1; }
+    .ts { fill: none; stroke: #8a94a6; stroke-width: 1.2; }
+    .dash { stroke: #14213d; stroke-width: 1.4; stroke-dasharray: 3 3; }
+    .bond { stroke: #14213d; stroke-width: 1.6; }
+    .box { fill: #f3effe; stroke: #c4b5fd; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .m, .mS { fill: #e9edf5; } .sub, .note { fill: #9aa5ba; } .h { fill: #c4b5fd; }
+      .good { fill: #4ade80; } .bad, .plus { fill: #fb7185; } .minus { fill: #93c5fd; }
+      .curly { stroke: #fb7185; } .hr { fill: #fb7185; } .rx, .bond, .dash { stroke: #e9edf5; } .hk { fill: #e9edf5; }
+      .sep { stroke: #2a3550; } .box { fill: #241b3d; stroke: #5b4b8a; }
+    }
+  </style>
+  <defs><marker id="hr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hr" d="M0 0 10 5 0 10z"/></marker><marker id="hk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hk" d="M0 0 10 5 0 10z"/></marker><marker id="hg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="hg" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="420" rx="14"/><text class="t" x="20" y="28" text-anchor="start">HBr adds to propene: why 2-bromopropane?</text><text class="sub" x="20" y="45" text-anchor="start">The more stable carbocation forms faster.</text><text class="h" x="20" y="74" text-anchor="start">STEP 1 · THE C=C ATTACKS H</text><text class="m" x="20" y="112" text-anchor="start">CH₃–CH=CH₂</text><text class="m" x="128" y="112" text-anchor="start">+</text><text class="m" x="146" y="112" text-anchor="start">H</text><line class="bond" x1="160" y1="107" x2="176" y2="107"/><text class="m" x="179" y="112" text-anchor="start">Br</text><path class="curly" d="M78 96 C 92 72, 140 72, 150 96"/><path class="curly" d="M168 110 C 172 128, 188 128, 190 118"/><path class="rx" d="M110 126 L 80 158"/><path class="rxF" d="M150 126 L 230 158"/><text class="m" x="20" y="184" text-anchor="start">CH₃–C<tspan class="plus" dy="-8" font-size="11">+</tspan><tspan dy="8">H–CH₃</tspan></text><text class="good" x="20" y="202" text-anchor="start">2° carbocation</text><text class="note" x="20" y="216" text-anchor="start">more stable: forms</text><text class="note" x="20" y="229" text-anchor="start">much faster</text><text class="mS" x="212" y="184" text-anchor="start">CH₃–CH₂–CH₂<tspan class="plus" dy="-8" font-size="11">+</tspan></text><text class="bad" x="212" y="202" text-anchor="start">1° carbocation</text><text class="note" x="212" y="216" text-anchor="start">less stable: hardly</text><text class="note" x="212" y="229" text-anchor="start">forms</text><line class="sep" x1="20" y1="248" x2="340" y2="248"/><text class="h" x="20" y="274" text-anchor="start">STEP 2 · Br⁻ BONDS TO THE CARBOCATION</text><text class="m" x="20" y="314" text-anchor="start">CH₃–C<tspan class="plus" dy="-8" font-size="11">+</tspan><tspan dy="8">H–CH₃</tspan></text><text class="m" x="140" y="314" text-anchor="start">+</text><text class="m" x="160" y="314" text-anchor="start">Br<tspan class="minus" dy="-8" font-size="12">−</tspan></text><path class="curly" d="M166 296 C 150 274, 80 274, 64 296"/><path class="rx" d="M200 309 H222"/><text class="mS" x="232" y="314" text-anchor="start">CH₃CHBrCH₃</text><text class="good" x="232" y="332" text-anchor="start">2-bromopropane</text><text class="note" x="232" y="346" text-anchor="start">(major product)</text><rect class="box" x="20" y="366" width="320" height="38" rx="6"/><text class="note" x="180" y="381" text-anchor="middle">Markovnikov: H adds to the carbon with more H atoms,</text><text class="note" x="180" y="396" text-anchor="middle">because that gives the more stable carbocation.</text>
+</svg>

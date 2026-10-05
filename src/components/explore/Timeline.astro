@@ -1,0 +1,52 @@
+---
+/** A vertical timeline of dated milestones (years on the left, events on the right). */
+export interface Props {
+  items: { year: number | string; event: string }[];
+}
+const { items } = Astro.props;
+---
+
+<ol class="tl" role="list">
+  {items.map((i) => (
+    <li class="tl__item">
+      <span class="tl__year">{i.year}</span>
+      <span class="tl__dot" aria-hidden="true"></span>
+      <span class="tl__event">{i.event}</span>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .tl { list-style: none; padding: 0; margin: 0; position: relative; }
+  .tl__item {
+    display: grid;
+    grid-template-columns: 4.6rem 1rem 1fr;
+    gap: var(--space-3);
+    align-items: start;
+    position: relative;
+    padding-bottom: var(--space-4);
+  }
+  .tl__item::before {
+    content: '';
+    position: absolute;
+    left: calc(4.6rem + var(--space-3) + 0.5rem - 1px);
+    top: 0.9rem;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl__item:last-child::before { display: none; }
+  .tl__year { font-weight: 750; color: var(--accent); text-align: right; font-variant-numeric: tabular-nums; }
+  .tl__dot {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 3px solid var(--accent);
+    position: relative;
+    z-index: 1;
+  }
+  .tl__event { color: var(--ink-soft); }
+  @media print { .tl__item { break-inside: avoid; } }
+</style>

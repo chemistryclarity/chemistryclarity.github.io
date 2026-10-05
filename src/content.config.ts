@@ -251,7 +251,47 @@ const pages = defineCollection({
   }),
 });
 
+/**
+ * Explore: special-topic articles outside the lesson sequence, in three sections:
+ *   natural-products     stories of natural products and drug discovery
+ *   organic-mechanisms   key organic reactions and mechanisms students find hard
+ *   chemists             profiles of famous chemists (contributions, discoveries, prizes, with years)
+ * One file per article: src/content/explore/<slug>.mdx → /explore/<section>/<slug>/
+ */
+const explore = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/explore' }),
+  schema: z.object({
+    title: z.string(),
+    section: z.enum(['natural-products', 'organic-mechanisms', 'chemists']),
+    /** One line under the title, e.g. "From willow bark to the world's most-used medicine". */
+    subtitle: blank(z.string()),
+    /** 1–2 sentences for cards and search results. */
+    description: z.string().max(220),
+    /** Position in its section list (lower first). */
+    order: z.number().default(100),
+    level: level.default('intermediate'),
+    /** Chemists: life years shown with the name, e.g. "1867–1934". */
+    lifespan: blank(z.string()),
+    /** Key facts shown in a box at the top, e.g. { label: 'Born', value: '7 November 1867, Warsaw' }. */
+    facts: list(z.object({ label: z.string(), value: z.string() })),
+    /** Prizes and honours with years (chemists). */
+    prizes: list(z.object({ year: z.number(), name: z.string() })),
+    /** Dated milestones, shown as a timeline. */
+    timeline: list(z.object({ year: z.union([z.number(), z.string()]), event: z.string() })),
+    /** Lessons to read alongside. */
+    related: list(reference('topics')),
+    /** Other Explore articles to read next (their file names). */
+    seeAlso: list(z.string()),
+    /** Further reading (reputable sources). */
+    sources: list(z.object({ label: z.string(), url: z.url() })),
+    status,
+    assisted: z.boolean().default(false),
+    lastReviewed: blank(z.coerce.date()),
+  }),
+});
+
 export const collections = {
+  explore,
   areas,
   topics,
   flashcards,

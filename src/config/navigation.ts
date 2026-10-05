@@ -4,6 +4,7 @@ export const mainNav = [
   { label: 'Flashcards', href: '/flashcards/' },
   { label: 'Quizzes', href: '/quizzes/' },
   { label: 'Resources', href: '/resources/' },
+  { label: 'Explore', href: '/explore/' },
   { label: 'News', href: '/news/' },
   { label: 'About', href: '/about/' },
 ];
@@ -18,6 +19,7 @@ export const footerNav = [
       { label: 'Flashcards', href: '/flashcards/' },
       { label: 'Quizzes', href: '/quizzes/' },
       { label: 'Resources', href: '/resources/' },
+      { label: 'Explore', href: '/explore/' },
     ],
   },
   {

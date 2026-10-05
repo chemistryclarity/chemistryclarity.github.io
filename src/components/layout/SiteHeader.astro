@@ -3,6 +3,7 @@ import Logo from './Logo.astro';
 import { mainNav } from '../../config/navigation';
 import { url } from '../../lib/url';
 import { getAreas, getTopics, getVisible, groupByArea } from '../../lib/content';
+import { exploreSections, exploreSectionIds } from '../../config/explore';
 
 const current = Astro.url.pathname;
 const isActive = (href: string) => current.startsWith(url(href));
@@ -14,6 +15,9 @@ const [areas, topics, decks, quizzes, notes, videos] = await Promise.all([
   getAreas(), getTopics(), getVisible('flashcards'), getVisible('quizzes'), getVisible('notes'), getVisible('videos'),
 ]);
 const subjects = areas.filter((a) => topics.some((t) => t.data.area.id === a.id));
+// The Explore tab appears only once at least one Explore article is published.
+const exploreLive = (await getVisible('explore')).length > 0;
+const navItems = mainNav.filter((i) => i.href !== '/explore/' || exploreLive);
 const deckGroups = (await groupByArea(decks, 'flashcards')).groups;
 const quizGroups = (await groupByArea(quizzes, 'quiz')).groups;
 
@@ -35,6 +39,10 @@ const children: Record<string, Link[]> = {
     { label: 'Premium Mastery Packs', href: '/resources/#premium' },
     ...(notes.length ? [{ label: 'Lecture notes', href: '/notes/' }] : []),
     ...(videos.length ? [{ label: 'Videos', href: '/videos/' }] : []),
+  ],
+  '/explore/': [
+    { label: 'All special topics', href: '/explore/' },
+    ...exploreSectionIds.map((id) => ({ label: exploreSections[id].menuLabel, href: `/explore/${id}/` })),
   ],
   '/news/': [
     { label: 'Latest news', href: '/news/' },
@@ -60,7 +68,7 @@ const alignEnd = new Set(['/news/', '/about/']);
           Menu
         </summary>
         <ul class="menu__list" role="list">
-          {mainNav.map((item) => {
+          {navItems.map((item) => {
             const subs = children[item.href];
             if (!subs) {
               return (
@@ -195,7 +203,7 @@ const alignEnd = new Set(['/news/', '/about/']);
   .dd__panel li:first-child a { font-weight: 700; color: var(--ink); }
 
   /* Desktop: horizontal tabs; each tab opens a panel downward */
-  @media (min-width: 48rem) {
+  @media (min-width: 64rem) {
     .menu__toggle { display: none; }
     .menu__list {
       position: static;
@@ -236,7 +244,7 @@ const alignEnd = new Set(['/news/', '/about/']);
   const menu = document.querySelector<HTMLDetailsElement>('.menu');
   const dds = Array.from(document.querySelectorAll<HTMLDetailsElement>('.dd'));
   if (menu) {
-    const mq = window.matchMedia('(min-width: 48rem)');
+    const mq = window.matchMedia("(min-width: 64rem)");
     const sync = () => { menu.open = mq.matches; dds.forEach((d) => (d.open = false)); };
     sync();
     mq.addEventListener('change', sync);

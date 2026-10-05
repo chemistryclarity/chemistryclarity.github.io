@@ -1,0 +1,95 @@
+---
+title: "SN1 vs SN2: Choosing the Right Substitution Mechanism"
+section: organic-mechanisms
+subtitle: One step or two? How to predict which mechanism a haloalkane follows, and why it matters.
+description: "Nucleophilic substitution step by step: curved arrows, rate laws, stereochemistry, and the four factors (substrate, nucleophile, solvent, leaving group) that decide between SN1 and SN2."
+order: 10
+level: advanced
+facts:
+  - { label: 'Reaction type', value: 'Nucleophilic substitution at an sp³ carbon' }
+  - { label: 'SN2', value: 'One step; rate = k[RX][Nu⁻]; inversion of configuration' }
+  - { label: 'SN1', value: 'Two steps via a carbocation; rate = k[RX]; racemization' }
+  - { label: 'Key factor', value: 'How crowded the carbon is (methyl, 1°, 2°, 3°)' }
+  - { label: 'Used in', value: 'Making alcohols, ethers, nitriles and amines; drug synthesis' }
+timeline:
+  - { year: 1896, event: 'Paul Walden discovers that some substitutions invert the configuration of a chiral carbon (the Walden inversion).' }
+  - { year: 1935, event: 'Edward Hughes and Christopher Ingold propose the SN1 and SN2 mechanisms and their labels.' }
+related: [organic-reactions, functional-groups, reaction-rates, integrated-rate-laws]
+seeAlso: [electrophilic-addition-alkenes]
+sources:
+  - { label: 'Wikipedia: SN2 reaction', url: 'https://en.wikipedia.org/wiki/SN2_reaction' }
+  - { label: 'Wikipedia: SN1 reaction', url: 'https://en.wikipedia.org/wiki/SN1_reaction' }
+status: review
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording and figure. The rate data in the worked example are invented teaching values.
+  Equations checked by computer. Units shown in every step.
+*/}
+
+## The reaction
+
+In a **nucleophilic substitution**, an electron-rich **nucleophile** (Nu⁻, such as $\ce{OH-}$, $\ce{CN-}$ or water) replaces a **leaving group** (such as $\ce{Br-}$) on a carbon atom:
+
+$$
+\ce{R-Br + OH- -> R-OH + Br-}
+$$
+
+The overall equation hides **how** it happens. There are two mechanisms, and students often mix them up.
+
+<KeyIdea>
+**SN2** happens in **one step**: the nucleophile pushes in from the back as the leaving group leaves. **SN1** happens in **two steps**: the leaving group leaves first to give a **carbocation**, which the nucleophile then attacks. The "1" and "2" refer to how many species are in the **rate-determining step**.
+</KeyIdea>
+
+## Read the curved arrows
+
+A curved arrow shows **a pair of electrons moving**. It always starts at electrons (a lone pair or a bond) and points to where they go.
+
+<Figure src="/images/explore/sn1-sn2.svg" alt="Two mechanisms. SN2, one step, rate = k[RX][Nu−]: a curved arrow goes from a lone pair on HO− to the carbon of H3C–Br while a second arrow moves the C–Br bonding pair onto bromine; through a transition state [HO···C···Br] the products HO–CH3 and Br− form. Backside attack inverts the configuration; best for methyl and primary carbons. SN1, two steps, rate = k[RX]: in a slow step the C–Br bond breaks to give the planar carbocation (CH3)3C+ and Br−; in a fast step water adds to give (CH3)3C–OH and H+. Attack from either face gives racemization at a stereocentre; best for tertiary carbons in polar protic solvents. Summary: methyl and primary go SN2, tertiary SN1, secondary either." caption="SN2 bonds and breaks at the same time; SN1 breaks first, then bonds." width={360} height={470} />
+
+## Four factors decide the mechanism
+
+| Factor | Favours SN2 | Favours SN1 |
+|---|---|---|
+| **Substrate** | methyl, 1° (little crowding) | 3° (stable carbocation) |
+| **Nucleophile** | strong, negatively charged ($\ce{OH-}$, $\ce{CN-}$) | weak, neutral ($\ce{H2O}$, $\ce{CH3OH}$) |
+| **Solvent** | polar **aprotic** (propanone, DMSO) | polar **protic** (water, alcohols) |
+| **Leaving group** | good in both: I⁻ > Br⁻ > Cl⁻ ≫ F⁻ | good in both |
+
+**Why the substrate matters most.** In SN2 the nucleophile must reach the back of the carbon; three bulky groups on a 3° carbon block the way (**steric hindrance**). In SN1 the slow step makes a carbocation; alkyl groups push electron density towards the positive carbon and stabilize it, so 3° carbocations form far more easily than 1° ones.
+
+## Evidence from rates and shapes
+
+- **Rate law.** For SN2, rate = k[RX][Nu⁻]: doubling either concentration doubles the rate. For SN1, rate = k[RX]: the nucleophile is not in the slow step, so its concentration does not matter.
+- **Stereochemistry.** SN2 attack from the back turns the molecule inside out like an umbrella in the wind (**inversion**). The SN1 carbocation is **planar**, so the nucleophile can attack from either face, giving a mixture of both mirror-image products (**racemization**).
+
+<Example title="Using the rate law">
+**Question:** For the SN2 reaction of bromomethane with hydroxide, the initial rate is $4.0 \times 10^{-6}$ M/s when $[\ce{CH3Br}] = 0.10$ M and $[\ce{OH-}] = 0.20$ M. Find k, and predict the rate if $[\ce{OH-}]$ is doubled.
+
+1. $k = \dfrac{\text{rate}}{[\ce{CH3Br}][\ce{OH-}]} = \dfrac{4.0 \times 10^{-6}\ \text{M/s}}{(0.10\ \text{M})(0.20\ \text{M})} =$ **$2.0 \times 10^{-4}\ \text{M}^{-1}\,\text{s}^{-1}$**
+2. The reaction is first order in $\ce{OH-}$, so doubling $[\ce{OH-}]$ doubles the rate: **$8.0 \times 10^{-6}$ M/s**.
+3. For an SN1 reaction, doubling the nucleophile concentration would leave the rate **unchanged**.
+</Example>
+
+<Example title="Predicting the mechanism">
+**Question:** Predict SN1 or SN2: (a) 1-bromobutane + NaOH in propanone (b) 2-bromo-2-methylpropane in water (c) bromomethane + NaCN.
+
+1. (a) 1° substrate, strong nucleophile, aprotic solvent: **SN2**.
+2. (b) 3° substrate, weak nucleophile, protic solvent: **SN1**.
+3. (c) methyl substrate, strong nucleophile: **SN2** (it also adds one carbon to the chain, a useful trick in synthesis).
+</Example>
+
+## Common mistakes
+
+<CommonMistake title="Arrows pointing the wrong way">
+Curved arrows show electrons, so they start at the **nucleophile's lone pair** and end at the carbon, never from the carbon to the nucleophile.
+</CommonMistake>
+
+<CommonMistake title="Primary carbocations in SN1">
+1° carbocations are too unstable to form under normal conditions. A 1° haloalkane reacts by SN2, not SN1.
+</CommonMistake>
+
+<MorePrecisely>
+Substitution competes with **elimination** (E1 and E2), which forms alkenes, especially with strong, bulky bases and at higher temperatures. Secondary substrates are the hardest to predict and often give mixtures. The labels SN1 and SN2 ("substitution, nucleophilic, unimolecular / bimolecular") were introduced by Hughes and Ingold in 1935.
+</MorePrecisely>
