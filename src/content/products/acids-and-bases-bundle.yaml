@@ -1,0 +1,13 @@
+# Premium Mastery Pack sold on Gumroad. Hidden until it has a price and checkoutUrl and status: published
+# (and features.shop is true in src/config/site.ts). The PDFs live in the PRIVATE premium folder, never here.
+title: "Acids & Bases Complete Bundle"
+description: "All five Acids & Bases Mastery Packs in one download: acid–base basics, pH, weak acids and Ka, buffers, and titration curves."
+price: ""
+checkoutUrl: ""
+includes:
+  - "5 summary sheets"
+  - "69 graded exam-style questions with marks"
+  - "5 answer keys with full worked solutions"
+  - "Printable PDFs"
+placeholder: false
+status: draft

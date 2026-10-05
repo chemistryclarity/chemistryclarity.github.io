@@ -2,9 +2,52 @@
 import Logo from './Logo.astro';
 import { mainNav } from '../../config/navigation';
 import { url } from '../../lib/url';
+import { getAreas, getTopics, getVisible, groupByArea } from '../../lib/content';
 
 const current = Astro.url.pathname;
 const isActive = (href: string) => current.startsWith(url(href));
+
+// Sub-menus that open downward under each main tab. Subject lists are built from the
+// published lessons, so a new subject appears in the menu as soon as it has a lesson.
+type Link = { label: string; href: string };
+const [areas, topics, decks, quizzes, notes, videos] = await Promise.all([
+  getAreas(), getTopics(), getVisible('flashcards'), getVisible('quizzes'), getVisible('notes'), getVisible('videos'),
+]);
+const subjects = areas.filter((a) => topics.some((t) => t.data.area.id === a.id));
+const deckGroups = (await groupByArea(decks, 'flashcards')).groups;
+const quizGroups = (await groupByArea(quizzes, 'quiz')).groups;
+
+const children: Record<string, Link[]> = {
+  '/learn/': [
+    { label: 'All subjects', href: '/learn/' },
+    ...subjects.map((a) => ({ label: a.data.title, href: `/learn/${a.id}/` })),
+  ],
+  '/flashcards/': [
+    { label: 'All flashcards', href: '/flashcards/' },
+    ...deckGroups.map((g) => ({ label: g.area.data.title, href: `/flashcards/#${g.area.id}` })),
+  ],
+  '/quizzes/': [
+    { label: 'All quizzes', href: '/quizzes/' },
+    ...quizGroups.map((g) => ({ label: g.area.data.title, href: `/quizzes/#${g.area.id}` })),
+  ],
+  '/resources/': [
+    { label: 'Free worksheets', href: '/resources/#free' },
+    { label: 'Premium Mastery Packs', href: '/resources/#premium' },
+    ...(notes.length ? [{ label: 'Lecture notes', href: '/notes/' }] : []),
+    ...(videos.length ? [{ label: 'Videos', href: '/videos/' }] : []),
+  ],
+  '/news/': [
+    { label: 'Latest news', href: '/news/' },
+    { label: 'Upcoming events', href: '/news/#events' },
+  ],
+  '/about/': [
+    { label: 'About Chemistry Clarity', href: '/about/' },
+    { label: 'Editorial standards', href: '/editorial-standards/' },
+    { label: 'Contact', href: '/contact/' },
+  ],
+};
+const wide = new Set(['/learn/', '/flashcards/', '/quizzes/']);
+const alignEnd = new Set(['/news/', '/about/']);
 ---
 
 <header class="site-header">
@@ -17,13 +60,30 @@ const isActive = (href: string) => current.startsWith(url(href));
           Menu
         </summary>
         <ul class="menu__list" role="list">
-          {mainNav.map((item) => (
-            <li>
-              <a href={url(item.href)} aria-current={isActive(item.href) ? 'page' : undefined}>
-                {item.label}
-              </a>
-            </li>
-          ))}
+          {mainNav.map((item) => {
+            const subs = children[item.href];
+            if (!subs) {
+              return (
+                <li>
+                  <a class="menu__link" href={url(item.href)} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
+                </li>
+              );
+            }
+            return (
+              <li>
+                <details class:list={['dd', { 'dd--wide': wide.has(item.href), 'dd--end': alignEnd.has(item.href) }]}>
+                  <summary class="menu__link dd__toggle" aria-current={isActive(item.href) ? 'page' : undefined}>
+                    {item.label}<span class="dd__chev" aria-hidden="true"></span>
+                  </summary>
+                  <ul class="dd__panel" role="list">
+                    {subs.map((s) => (
+                      <li><a href={url(s.href)}>{s.label}</a></li>
+                    ))}
+                  </ul>
+                </details>
+              </li>
+            );
+          })}
         </ul>
       </details>
     </nav>
@@ -47,7 +107,7 @@ const isActive = (href: string) => current.startsWith(url(href));
     gap: var(--space-4);
   }
 
-  /* Mobile: disclosure menu (works without JavaScript) */
+  /* Mobile: disclosure menu with sub-menus that open downward (works without JavaScript) */
   .menu { position: relative; }
   .menu__toggle {
     list-style: none;
@@ -63,7 +123,8 @@ const isActive = (href: string) => current.startsWith(url(href));
     cursor: pointer;
     background: var(--surface);
   }
-  .menu__toggle::-webkit-details-marker { display: none; }
+  .menu__toggle::-webkit-details-marker,
+  .dd__toggle::-webkit-details-marker { display: none; }
   .menu__icon,
   .menu__icon::before,
   .menu__icon::after {
@@ -82,7 +143,9 @@ const isActive = (href: string) => current.startsWith(url(href));
     position: absolute;
     right: 0;
     top: calc(100% + 0.5rem);
-    min-width: 13rem;
+    width: min(20rem, calc(100vw - 2rem));
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
     padding: var(--space-2);
     list-style: none;
     background: var(--surface);
@@ -90,44 +153,115 @@ const isActive = (href: string) => current.startsWith(url(href));
     border-radius: var(--radius);
     box-shadow: var(--shadow-2);
   }
-  .menu__list a {
-    display: block;
+  .menu__link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     padding: 0.7rem var(--space-3);
     border-radius: var(--radius-sm);
     color: var(--ink);
     text-decoration: none;
     font-weight: 550;
+    cursor: pointer;
+    list-style: none;
   }
-  .menu__list a:hover { background: var(--surface-2); }
-  .menu__list a[aria-current='page'] { color: var(--accent); background: var(--accent-soft); }
+  .menu__link:hover { background: var(--surface-2); }
+  .menu__link[aria-current='page'] { color: var(--accent); background: var(--accent-soft); }
+  .dd__chev {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.15s;
+    margin-left: auto;
+  }
+  .dd[open] .dd__chev { transform: translateY(2px) rotate(-135deg); }
+  .dd__panel {
+    list-style: none;
+    padding: 0 0 var(--space-2) var(--space-3);
+    margin: 0;
+  }
+  .dd__panel a {
+    display: block;
+    padding: 0.55rem var(--space-3);
+    border-radius: var(--radius-sm);
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: var(--step--1);
+    font-weight: 550;
+  }
+  .dd__panel a:hover { background: var(--surface-2); color: var(--accent); }
+  .dd__panel li:first-child a { font-weight: 700; color: var(--ink); }
 
-  /* Desktop: plain horizontal menu */
+  /* Desktop: horizontal tabs; each tab opens a panel downward */
   @media (min-width: 48rem) {
     .menu__toggle { display: none; }
     .menu__list {
       position: static;
       display: flex;
       gap: var(--space-1);
+      width: auto;
+      max-height: none;
+      overflow: visible;
       padding: 0;
       border: 0;
       box-shadow: none;
       background: none;
-      min-width: 0;
     }
-    .menu__list a { padding: 0.5rem 0.85rem; }
+    .menu__link { padding: 0.5rem 0.75rem; }
+    .dd__chev { margin-left: 0.2rem; }
+    .dd { position: relative; }
+    .dd__panel {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 0.4rem);
+      min-width: 15rem;
+      padding: var(--space-2);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-2);
+      z-index: 60;
+    }
+    .dd--wide .dd__panel { display: grid; grid-template-columns: repeat(2, minmax(13rem, 1fr)); column-gap: var(--space-2); min-width: 30rem; }
+    .dd--wide .dd__panel li:first-child { grid-column: 1 / -1; }
+    .dd--end .dd__panel { left: auto; right: 0; }
   }
 </style>
 
 <script>
-  // Desktop: keep the menu open. Mobile: close it after choosing a link or pressing Escape.
+  // Desktop: keep the main menu open. Mobile: close it after choosing a link or pressing Escape.
+  // Sub-menus: only one open at a time; click outside or press Escape to close.
   const menu = document.querySelector<HTMLDetailsElement>('.menu');
+  const dds = Array.from(document.querySelectorAll<HTMLDetailsElement>('.dd'));
   if (menu) {
     const mq = window.matchMedia('(min-width: 48rem)');
-    const sync = () => { menu.open = mq.matches; };
+    const sync = () => { menu.open = mq.matches; dds.forEach((d) => (d.open = false)); };
     sync();
     mq.addEventListener('change', sync);
-    menu.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !mq.matches && menu.open) {
+    dds.forEach((d) =>
+      d.addEventListener('toggle', () => {
+        if (d.open) dds.forEach((o) => { if (o !== d) o.open = false; });
+      }),
+    );
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!(target instanceof Element)) return;
+      if (mq.matches && !dds.some((d) => d.contains(target))) dds.forEach((d) => (d.open = false));
+      // Following a link inside a panel: close the panels (and the mobile menu).
+      if (target.closest('.dd__panel a')) {
+        dds.forEach((d) => (d.open = false));
+        if (!mq.matches) menu.open = false;
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const openDd = dds.find((d) => d.open);
+      if (openDd) {
+        openDd.open = false;
+        openDd.querySelector('summary')?.focus();
+      } else if (!mq.matches && menu.open) {
         menu.open = false;
         menu.querySelector('summary')?.focus();
       }

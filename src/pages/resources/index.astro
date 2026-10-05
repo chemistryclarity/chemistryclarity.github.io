@@ -1,17 +1,28 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
+import Accordion from '../../components/layout/Accordion.astro';
 import ResourceCard from '../../components/cards/ResourceCard.astro';
-import { getVisible, isDraft } from '../../lib/content';
+import ProductCard from '../../components/monetization/ProductCard.astro';
+import { getVisible, isDraft, groupByArea } from '../../lib/content';
+import { site } from '../../config/site';
 
 const resources = await getVisible('resources');
 const free = resources.filter((r) => r.data.access === 'free');
-const premium = resources.filter((r) => r.data.access === 'premium');
+const { groups, other } = await groupByArea(free, 'resources');
+const sections = [
+  ...groups.map((g) => ({ id: g.area.id, title: g.area.data.title, items: g.items })),
+  ...(other.length ? [{ id: 'other-free', title: 'More resources', items: other }] : []),
+];
+// Premium packs are sold on Gumroad. A pack appears here only once it is published
+// with a real checkout link (and the shop switch in src/config/site.ts is on).
+const products = (await getVisible('products')).filter((p) => !p.data.placeholder && p.data.checkoutUrl && site.features.shop);
+const plural = (n: number) => `${n} worksheet${n === 1 ? '' : 's'}`;
 ---
 
 <BaseLayout
   title="Printable Chemistry Resources"
-  description="Printable chemistry worksheets, cheat sheets, formula sheets and practice tests."
+  description="Free printable chemistry worksheets with answer keys, plus premium Mastery Packs with full worked solutions."
   path="/resources/"
   noindex={resources.every(isDraft)}
 >
@@ -20,31 +31,43 @@ const premium = resources.filter((r) => r.data.access === 'premium');
       crumbs={[{ label: 'Resources' }]}
       eyebrow="Print & practise"
       title="Resources"
-      lead="Worksheets, cheat sheets, formula sheets and practice tests to print and use."
+      lead="Free worksheets with answer keys for every lesson, and premium Mastery Packs for deeper practice."
     />
 
-    {free.length > 0 && (
-      <section aria-labelledby="free-heading">
-        <h2 id="free-heading" class="group-title">Free resources</h2>
-        <ul class="grid" role="list">{free.map((r) => <li><ResourceCard resource={r} /></li>)}</ul>
-      </section>
-    )}
+    <section id="free" aria-labelledby="free-heading" class="group">
+      <h2 id="free-heading" class="group-title">Free worksheets</h2>
+      <p class="muted">Choose a subject to see its worksheets. Each comes with a printable answer key.</p>
+      {sections.map((s) => (
+        <Accordion id={s.id} title={s.title} count={plural(s.items.length)}>
+          <ul class="grid" role="list">{s.items.map((r) => <li><ResourceCard resource={r} /></li>)}</ul>
+        </Accordion>
+      ))}
+      {free.length === 0 && <p class="muted">Printable resources are on the way.</p>}
+    </section>
 
-    {premium.length > 0 && (
-      <section aria-labelledby="premium-heading" class="group">
-        <h2 id="premium-heading" class="group-title">Premium resources</h2>
-        <p class="muted">In-depth study packs to support you further. The free lessons always stay free.</p>
-        <ul class="grid" role="list">{premium.map((r) => <li><ResourceCard resource={r} /></li>)}</ul>
-      </section>
-    )}
-
-    {resources.length === 0 && <p class="muted">Printable resources are on the way.</p>}
+    <section id="premium" aria-labelledby="premium-heading" class="group premium">
+      <h2 id="premium-heading" class="group-title">Premium Mastery Packs</h2>
+      <p>
+        For students and teachers who want more practice. Each Mastery Pack covers one lesson with a
+        summary sheet, a graded set of exam-style questions (from core skills to challenge
+        problems) and a separate answer key with full worked solutions, units in every step.
+        Packs are sold as PDF downloads through Gumroad. The free lessons, quizzes and worksheets always stay free.
+      </p>
+      {products.length > 0 ? (
+        <ul class="grid" role="list">{products.map((p) => <li><ProductCard product={p} /></li>)}</ul>
+      ) : (
+        <p class="soon"><strong>Coming soon.</strong> The first Mastery Packs are being prepared.</p>
+      )}
+    </section>
   </div>
 </BaseLayout>
 
 <style>
-  .group { margin-top: var(--space-8); }
-  .group-title { font-size: var(--step-2); margin-bottom: var(--space-4); }
-  .group > p { margin-top: calc(-1 * var(--space-2)); margin-bottom: var(--space-4); }
+  .group + .group { margin-top: var(--space-8); }
+  .group { scroll-margin-top: 5rem; }
+  .group-title { font-size: var(--step-2); margin-bottom: var(--space-2); }
+  .group > p { margin-bottom: var(--space-4); max-width: var(--measure); }
   .grid { list-style: none; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+  .premium { padding: var(--space-5); border: 1px solid var(--border); border-top: 3px solid var(--hue-amber); border-radius: var(--radius-lg); background: var(--surface); }
+  .soon { color: var(--ink-soft); }
 </style>

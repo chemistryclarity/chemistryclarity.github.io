@@ -1,0 +1,12 @@
+# Premium Mastery Pack sold on Gumroad. Hidden until it has a price and checkoutUrl and status: published
+# (and features.shop is true in src/config/site.ts). The PDFs live in the PRIVATE premium folder, never here.
+title: "Acid–Base Titration Curves Mastery Pack"
+description: "Titration curves point by point, indicators, unknown acids, concordant titres and an aspirin analysis."
+price: ""
+checkoutUrl: ""
+includes:
+  - "Summary sheet"
+  - "13 graded questions (59 marks)"
+  - "Answer key with full worked solutions"
+placeholder: false
+status: draft

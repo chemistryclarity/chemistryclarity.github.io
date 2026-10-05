@@ -63,6 +63,39 @@ export async function getTopicsUsing(
   });
 }
 
+/**
+ * Group decks, quizzes or resources by the subject area of the lesson that uses them,
+ * in area order (and lesson order within an area). Entries not used by any lesson go in `other`.
+ */
+export async function groupByArea<T extends { id: string }>(
+  entries: T[],
+  field: 'flashcards' | 'quiz' | 'resources',
+) {
+  const [areas, topics] = await Promise.all([getAreas(), getTopics()]);
+  const areaOf = new Map<string, string>();
+  const orderOf = new Map<string, number>();
+  for (const t of topics) {
+    const value = t.data[field];
+    const ids = Array.isArray(value) ? value.map((ref) => ref.id) : value ? [value.id] : [];
+    for (const id of ids) {
+      if (!areaOf.has(id)) {
+        areaOf.set(id, t.data.area.id);
+        orderOf.set(id, t.data.order);
+      }
+    }
+  }
+  const groups = areas
+    .map((area) => ({
+      area,
+      items: entries
+        .filter((e) => areaOf.get(e.id) === area.id)
+        .sort((a, b) => (orderOf.get(a.id) ?? 0) - (orderOf.get(b.id) ?? 0)),
+    }))
+    .filter((g) => g.items.length > 0);
+  const other = entries.filter((e) => !areaOf.has(e.id));
+  return { groups, other };
+}
+
 /** Previous and next topic within the same subject area. */
 export async function getPrevNext(topic: CollectionEntry<'topics'>) {
   const siblings = await getTopicsByArea(topic.data.area.id);

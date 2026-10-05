@@ -26,7 +26,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
       title="News"
       lead="Discoveries, research and events in chemistry, with links to the original sources."
     />
-    <EventCountdown />
+    <div id="events" class="events"><EventCountdown /></div>
     <ol class="list" role="list">
       {items.map(({ n, topics }) => (
         <li class="item">
@@ -57,6 +57,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
 </BaseLayout>
 
 <style>
+  .events { scroll-margin-top: 5rem; }
   .list { list-style: none; padding: 0; display: grid; gap: var(--space-4); max-width: var(--measure); }
   .item { padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
   .date { display: block; font-size: var(--step--1); }

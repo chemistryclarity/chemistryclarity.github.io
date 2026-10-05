@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
+import Accordion from '../../components/layout/Accordion.astro';
 import LevelBadge from '../../components/cards/LevelBadge.astro';
-import { getVisible, isDraft } from '../../lib/content';
+import { getVisible, isDraft, groupByArea } from '../../lib/content';
 import { url } from '../../lib/url';
 
 const quizzes = await getVisible('quizzes');
+const { groups, other } = await groupByArea(quizzes, 'quiz');
+const sections = [
+  ...groups.map((g) => ({ id: g.area.id, title: g.area.data.title, items: g.items })),
+  ...(other.length ? [{ id: 'other', title: 'More quizzes', items: other }] : []),
+];
+const plural = (n: number) => `${n} quiz${n === 1 ? '' : 'zes'}`;
 ---
 
 <BaseLayout
@@ -19,28 +26,32 @@ const quizzes = await getVisible('quizzes');
       crumbs={[{ label: 'Quizzes' }]}
       eyebrow="Practice"
       title="Quizzes"
-      lead="Test your understanding. Every question comes with an explanation, so you learn from mistakes too."
+      lead="Test your understanding. Choose a subject to see its quizzes; every question comes with an explanation."
     />
-    <ul class="list" role="list">
-      {quizzes.map((quiz) => (
-        <li class="item">
-          <h2><a href={url(`/quizzes/${quiz.id}/`)}>{quiz.data.title}</a></h2>
-          <div class="meta">
-            <span class="badge">{quiz.data.questions.length} questions</span>
-            <LevelBadge level={quiz.data.level} />
-            {isDraft(quiz) && <span class="badge badge--draft">Draft</span>}
-          </div>
-        </li>
-      ))}
-    </ul>
+    {sections.map((s) => (
+      <Accordion id={s.id} title={s.title} count={plural(s.items.length)}>
+        <ul class="list" role="list">
+          {s.items.map((quiz) => (
+            <li class="item">
+              <h2><a href={url(`/quizzes/${quiz.id}/`)}>{quiz.data.title}</a></h2>
+              <div class="meta">
+                <span class="badge">{quiz.data.questions.length} questions</span>
+                <LevelBadge level={quiz.data.level} />
+                {isDraft(quiz) && <span class="badge badge--draft">Draft</span>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </Accordion>
+    ))}
     {quizzes.length === 0 && <p class="muted">Quizzes are on the way.</p>}
   </div>
 </BaseLayout>
 
 <style>
-  .list { list-style: none; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); }
-  .item { padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
-  .item h2 { font-size: var(--step-1); }
+  .list { list-style: none; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+  .item { padding: var(--space-4); background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); }
+  .item h2 { font-size: var(--step-0); }
   .item a { color: var(--ink); }
   .meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
 </style>

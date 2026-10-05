@@ -1,0 +1,76 @@
+---
+/**
+ * A section that opens downward when its heading is clicked (works without JavaScript).
+ * Opens automatically when the page address ends in #<id>, e.g. /quizzes/#acids-and-bases.
+ */
+export interface Props {
+  id: string;
+  title: string;
+  /** Small label after the title, e.g. "5 decks". */
+  count?: string;
+  open?: boolean;
+}
+const { id, title, count, open = false } = Astro.props;
+---
+
+<details class="acc" id={id} open={open}>
+  <summary class="acc__head">
+    <span class="acc__title">{title}</span>
+    {count && <span class="acc__count">{count}</span>}
+    <span class="acc__chev" aria-hidden="true"></span>
+  </summary>
+  <div class="acc__body">
+    <slot />
+  </div>
+</details>
+
+<style>
+  .acc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    scroll-margin-top: 5rem;
+  }
+  .acc { margin-top: var(--space-3); }
+  .acc__head {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 44px;
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    font-weight: 650;
+    font-size: var(--step-1);
+  }
+  .acc__head::-webkit-details-marker { display: none; }
+  .acc__head:hover .acc__title { color: var(--accent); }
+  .acc__count { font-size: var(--step--1); font-weight: 600; color: var(--muted); white-space: nowrap; }
+  .acc__chev {
+    margin-left: auto;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.15s;
+    flex: none;
+  }
+  .acc[open] .acc__chev { transform: rotate(-135deg); }
+  .acc__body { padding: 0 var(--space-5) var(--space-5); }
+</style>
+
+<script>
+  // Open the section named in the address (#id), on load and when the address changes.
+  const openFromHash = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el instanceof HTMLDetailsElement) {
+      el.open = true;
+      el.scrollIntoView({ block: 'start' });
+    }
+  };
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+</script>

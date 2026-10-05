@@ -34,7 +34,7 @@ const canBuy = site.features.shop && !placeholder && checkoutUrl;
     </>
   )}
   {canBuy ? (
-    <a class="btn btn--primary" href={checkoutUrl} rel="noopener">Get it{price ? ` for ${price}` : ''}</a>
+    <a class="btn btn--primary" href={checkoutUrl} rel="noopener">Buy on Gumroad{price ? ` · ${price}` : ''}</a>
   ) : (
     <button class="btn btn--ghost" type="button" disabled>Coming soon</button>
   )}
