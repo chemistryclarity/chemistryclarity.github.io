@@ -257,6 +257,95 @@ collections:
       - { name: placeholder, label: Example only (not for sale), widget: boolean, default: true, required: false }
       - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
 
+  # ─────────────────────────────── EXPLORE (special topics) ───────────────────────────────
+  - name: explore
+    label: Explore (special topics)
+    label_singular: Explore article
+    description: 'Special topics outside the lessons, in three sections: Natural Products (stories of drugs from nature), Organic Mechanisms, and Chemist Profiles. Natural products are listed as a timeline by their milestone year; chemist profiles show a profile card, prizes and a timeline.'
+    folder: src/content/explore
+    extension: mdx
+    format: yaml-frontmatter
+    create: true
+    slug:
+      template: '{{slug}}'
+      editable: [create]
+      pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Use lowercase letters, numbers and hyphens only, e.g. linus-pauling']
+      hint: 'Becomes the web address: chemistryclarity.com/explore/SECTION/THIS-NAME/. It cannot be changed later.'
+    preview_path: 'explore/{{fields.section}}/{{slug}}/'
+    summary: '{{title}} · {{section}} · {{status}}'
+    sortable_fields: [title, section, order, status]
+    view_groups:
+      - { label: Section, field: section }
+    editor: { preview: false }
+    fields:
+      - { name: title, label: Title, widget: string, hint: 'For a chemist profile, just the name, e.g. Linus Pauling.' }
+      - name: section
+        label: Section
+        widget: select
+        options:
+          - { label: Natural Products, value: natural-products }
+          - { label: Organic Mechanisms, value: organic-mechanisms }
+          - { label: Chemist Profiles, value: chemists }
+      - { name: subtitle, label: Subtitle, widget: string, required: false, hint: 'One line under the title.' }
+      - { name: description, label: Short description, widget: text, hint: '1–2 sentences (up to 220 characters) for cards and search results.' }
+      - { name: order, label: Order in the section, widget: number, value_type: int, default: 100, hint: 'Lower numbers first. Natural products: follow the milestone years (10, 20, 30…).' }
+      - name: milestone
+        label: Milestone (natural products)
+        widget: object
+        required: false
+        collapsed: true
+        hint: 'Shown on the timeline, e.g. 1804 · Morphine isolated from opium.'
+        fields:
+          - { name: year, label: Year, widget: string, hint: 'e.g. 1804 or 1990s' }
+          - { name: label, label: What happened, widget: string }
+      - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced], default: intermediate }
+      - { name: lifespan, label: Life years (chemists), widget: string, required: false, hint: 'e.g. 1867–1934, or born 1930' }
+      - name: facts
+        label: Key facts box
+        widget: list
+        required: false
+        summary: '{{fields.label}}: {{fields.value}}'
+        hint: 'Chemists: Born, Died, Nationality, Field, Known for… Natural products: Natural source, Compound, Used for…'
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: value, label: Value, widget: string }
+      - name: prizes
+        label: Prizes and honours (chemists)
+        widget: list
+        required: false
+        summary: '{{fields.year}} · {{fields.name}}'
+        fields:
+          - { name: year, label: Year, widget: number, value_type: int }
+          - { name: name, label: Prize, widget: string }
+      - name: timeline
+        label: Timeline
+        widget: list
+        required: false
+        summary: '{{fields.year}} · {{fields.event}}'
+        hint: 'Dated milestones, oldest first.'
+        fields:
+          - { name: year, label: Year, widget: string, hint: 'e.g. 1898, c. 340, or 1960s' }
+          - { name: event, label: Event, widget: text }
+      - { name: related, label: Related lessons, widget: relation, collection: topics, multiple: true, required: false, search_fields: [title, question] }
+      - { name: seeAlso, label: Explore next, widget: relation, collection: explore, value_field: '{{slug}}', search_fields: [title], display_fields: [title], multiple: true, required: false }
+      - name: sources
+        label: Sources and further reading
+        widget: list
+        required: false
+        summary: '{{fields.label}}'
+        hint: 'Reputable sources only, e.g. nobelprize.org. Use full links starting with https://'
+        fields:
+          - { name: label, label: Title, widget: string }
+          - { name: url, label: Link, widget: string, pattern: ['^https://.+', 'Must be a full link starting with https://'] }
+      - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft, hint: 'review = private preview at its address; published = listed in Explore and the menu.' }
+      - { name: assisted, label: Drafted with assistance, widget: boolean, default: false, required: false }
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
+      - name: body
+        label: Article text
+        widget: markdown
+        modes: [raw]
+        hint: 'Markdown with the same boxes as lessons (<KeyIdea>, <Example title="…">, <MorePrecisely>…). Pictures: <Figure src="/images/…" alt="…" caption="…" width={360} height={300} />. Leave a blank line before and after each box.'
+
   # ─────────────────────────────── NEWS ───────────────────────────────
   - name: news
     label: News
