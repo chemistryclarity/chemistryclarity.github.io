@@ -1,0 +1,39 @@
+# Flashcards: Precipitation Reactions and Net Ionic Equations
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All equations and calculations checked.
+title: 'Precipitation and Net Ionic Equations: Flashcards'
+description: 'Revise solubility rules, predicting precipitates, spectator ions and writing net ionic equations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: pn-01
+    front: 'What is a precipitate?'
+    back: 'An insoluble solid that forms when two solutions are mixed.'
+  - id: pn-02
+    front: 'Which ionic compounds are always soluble?'
+    back: 'Compounds of Group 1 ions and NH₄⁺, and all nitrates (and ethanoates).'
+  - id: pn-03
+    front: 'Which chlorides are insoluble?'
+    back: 'AgCl and PbCl₂.'
+  - id: pn-04
+    front: 'Which sulfates are insoluble?'
+    back: 'BaSO₄ and PbSO₄ (CaSO₄ only slightly soluble).'
+  - id: pn-05
+    front: 'Are carbonates and hydroxides usually soluble?'
+    back: 'No: mostly insoluble, except with Group 1 ions and NH₄⁺ (Ba(OH)₂ is soluble).'
+  - id: pn-06
+    front: 'What is a spectator ion?'
+    back: 'An ion present on both sides of the equation, unchanged: it does not take part in the reaction.'
+  - id: pn-07
+    front: 'Write the net ionic equation for AgNO₃(aq) + NaCl(aq).'
+    back: '$\ce{Ag+(aq) + Cl-(aq) -> AgCl(s)}$'
+  - id: pn-08
+    front: 'Which compounds are split into ions in a complete ionic equation?'
+    back: 'Only soluble (aq) ionic compounds, strong acids and strong bases. Solids, liquids and gases stay as formulas.'
+  - id: pn-09
+    front: 'What is the net ionic equation for a strong acid reacting with a strong base?'
+    back: '$\ce{H+(aq) + OH-(aq) -> H2O(l)}$'
+  - id: pn-10
+    front: 'What two things must balance in a net ionic equation?'
+    back: 'Atoms and charge.'

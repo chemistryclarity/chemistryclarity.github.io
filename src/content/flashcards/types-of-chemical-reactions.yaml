@@ -1,0 +1,39 @@
+# Flashcards: Types of Chemical Reactions
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All equations checked.
+title: 'Types of Chemical Reactions: Flashcards'
+description: 'Revise synthesis, decomposition, single and double displacement and combustion, and the activity series.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: tr-01
+    front: 'Give the general pattern of a synthesis and a decomposition reaction.'
+    back: 'Synthesis: A + B → AB. Decomposition: AB → A + B.'
+  - id: tr-02
+    front: 'Give the general pattern of single and double displacement.'
+    back: 'Single: A + BC → AC + B. Double: AB + CD → AD + CB.'
+  - id: tr-03
+    front: 'What are the products of complete combustion of a hydrocarbon?'
+    back: 'Carbon dioxide and water.'
+  - id: tr-04
+    front: 'What does incomplete combustion produce?'
+    back: 'Carbon monoxide (CO) and/or soot (C), as well as water.'
+  - id: tr-05
+    front: 'When does a single displacement reaction happen?'
+    back: 'When the free element is more reactive (higher in the activity series) than the element it replaces.'
+  - id: tr-06
+    front: 'Does Cu react with ZnSO₄ solution?'
+    back: 'No: copper is below zinc in the activity series.'
+  - id: tr-07
+    front: 'When does a double displacement reaction happen?'
+    back: 'When a precipitate, water or a gas forms.'
+  - id: tr-08
+    front: 'What do metal carbonates give when heated?'
+    back: 'The metal oxide and carbon dioxide, e.g. CaCO₃ → CaO + CO₂.'
+  - id: tr-09
+    front: 'Which metals displace hydrogen from acids?'
+    back: 'Metals above hydrogen in the activity series (e.g. Mg, Zn, Fe), not Cu, Ag or Au.'
+  - id: tr-10
+    front: 'Balance the complete combustion of propane, C₃H₈.'
+    back: 'C₃H₈ + 5O₂ → 3CO₂ + 4H₂O'

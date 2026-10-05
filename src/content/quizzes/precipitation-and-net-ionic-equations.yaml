@@ -1,0 +1,79 @@
+# Quiz: Precipitation Reactions and Net Ionic Equations
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked by computer.
+title: 'Precipitation and Net Ionic Equations: Quiz'
+description: 'Seven questions on solubility rules, precipitates, spectator ions and net ionic equations, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: pn-q1
+    prompt: 'Which compound is insoluble in water?'
+    choices:
+      - 'NaNO₃'
+      - 'KCl'
+      - 'BaSO₄'
+      - '(NH₄)₂CO₃'
+    answer: 'BaSO₄'
+    explanation: 'Sulfates are usually soluble, but barium sulfate is an exception. Sodium, potassium and ammonium compounds, and all nitrates, are soluble.'
+    difficulty: easy
+  - id: pn-q2
+    prompt: 'Which mixture of solutions gives a precipitate?'
+    choices:
+      - 'KNO₃ + NaCl'
+      - 'AgNO₃ + KBr'
+      - 'NH₄Cl + NaNO₃'
+      - 'Na₂SO₄ + KCl'
+    answer: 'AgNO₃ + KBr'
+    explanation: 'Silver bromide (AgBr) is insoluble and precipitates (cream colour). In the other mixtures all possible products are soluble.'
+    difficulty: easy
+  - id: pn-q3
+    prompt: 'In the reaction of BaCl₂(aq) with Na₂SO₄(aq), which ions are spectators?'
+    choices:
+      - 'Ba²⁺ and SO₄²⁻'
+      - 'Na⁺ and Cl⁻'
+      - 'Ba²⁺ and Cl⁻'
+      - 'Only Na⁺'
+    answer: 'Na⁺ and Cl⁻'
+    explanation: 'Ba²⁺ and SO₄²⁻ form the BaSO₄ precipitate. Na⁺ and Cl⁻ stay dissolved, unchanged: they are spectator ions.'
+    difficulty: medium
+  - id: pn-q4
+    prompt: 'What is the net ionic equation for Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq)?'
+    choices:
+      - 'Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s)'
+      - 'K⁺(aq) + NO₃⁻(aq) → KNO₃(aq)'
+      - 'Pb²⁺(aq) + I⁻(aq) → PbI(s)'
+      - 'Pb(NO₃)₂ + 2KI → PbI₂ + 2KNO₃'
+    answer: 'Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s)'
+    explanation: 'K⁺ and NO₃⁻ are spectators. The net reaction is lead(II) ions combining with two iodide ions; atoms and charge both balance.'
+    difficulty: medium
+  - id: pn-q5
+    prompt: 'Which substance should NOT be split into ions in a complete ionic equation?'
+    choices:
+      - 'NaCl(aq)'
+      - 'HNO₃(aq)'
+      - 'AgCl(s)'
+      - 'K₂SO₄(aq)'
+    answer: 'AgCl(s)'
+    explanation: 'AgCl is a solid precipitate, so it is written as a formula. Soluble salts and strong acids in solution are written as ions.'
+    difficulty: medium
+  - id: pn-q6
+    prompt: 'Which hydroxide is soluble in water?'
+    choices:
+      - 'Fe(OH)₃'
+      - 'Cu(OH)₂'
+      - 'Mg(OH)₂'
+      - 'KOH'
+    answer: 'KOH'
+    explanation: 'Hydroxides are mostly insoluble, except those of Group 1 metals (and Ba(OH)₂). Potassium hydroxide is soluble.'
+    difficulty: medium
+  - id: pn-q7
+    prompt: 'Excess AgNO₃ is added to 25.0 mL of 0.100 mol/L NaCl. What mass of AgCl (143.32 g/mol) precipitates?'
+    choices:
+      - '0.358 g'
+      - '3.58 g'
+      - '0.0358 g'
+      - '358 g'
+    answer: '0.358 g'
+    explanation: 'n(Cl⁻) = 0.100 mol/L × 0.0250 L = 2.50 × 10⁻³ mol; mass = 2.50 × 10⁻³ mol × 143.32 g/mol = 0.358 g. 358 g comes from using 25.0 L.'
+    difficulty: hard

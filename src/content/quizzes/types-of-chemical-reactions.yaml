@@ -1,0 +1,79 @@
+# Quiz: Types of Chemical Reactions
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Types of Chemical Reactions: Quiz'
+description: 'Seven questions on classifying reactions, the activity series and predicting products, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: tr-q1
+    prompt: 'What type of reaction is 2H₂O₂ → 2H₂O + O₂?'
+    choices:
+      - 'Synthesis'
+      - 'Decomposition'
+      - 'Single displacement'
+      - 'Double displacement'
+    answer: 'Decomposition'
+    explanation: 'One compound breaks into two simpler substances: decomposition.'
+    difficulty: easy
+  - id: tr-q2
+    prompt: 'What type of reaction is Mg + 2HCl → MgCl₂ + H₂?'
+    choices:
+      - 'Synthesis'
+      - 'Decomposition'
+      - 'Single displacement'
+      - 'Combustion'
+    answer: 'Single displacement'
+    explanation: 'An element (Mg) replaces hydrogen in a compound: single displacement. Magnesium is above hydrogen in the activity series.'
+    difficulty: easy
+  - id: tr-q3
+    prompt: 'What are the products of the complete combustion of ethanol, C₂H₅OH?'
+    choices:
+      - 'CO and H₂'
+      - 'CO₂ and H₂O'
+      - 'C and H₂O'
+      - 'CO₂ and H₂'
+    answer: 'CO₂ and H₂O'
+    explanation: 'Complete combustion of a compound of C, H and O gives carbon dioxide and water: C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O.'
+    difficulty: easy
+  - id: tr-q4
+    prompt: 'Which metal will displace copper from copper(II) sulfate solution?'
+    choices:
+      - 'Silver'
+      - 'Gold'
+      - 'Iron'
+      - 'None of these'
+    answer: 'Iron'
+    explanation: 'Iron is above copper in the activity series: Fe + CuSO₄ → FeSO₄ + Cu. Silver and gold are below copper.'
+    difficulty: medium
+  - id: tr-q5
+    prompt: 'Which halogen reaction takes place?'
+    choices:
+      - 'I₂ + 2KCl → 2KI + Cl₂'
+      - 'Br₂ + 2KCl → 2KBr + Cl₂'
+      - 'Cl₂ + 2KI → 2KCl + I₂'
+      - 'I₂ + 2KBr → 2KI + Br₂'
+    answer: 'Cl₂ + 2KI → 2KCl + I₂'
+    explanation: 'A more reactive halogen displaces a less reactive one (F > Cl > Br > I). Only chlorine displacing iodine fits.'
+    difficulty: medium
+  - id: tr-q6
+    prompt: 'Why do KNO₃(aq) and NaCl(aq) not react when mixed?'
+    choices:
+      - 'They are both solids'
+      - 'No precipitate, water or gas can form'
+      - 'Potassium is too reactive'
+      - 'They form a precipitate of KCl'
+    answer: 'No precipitate, water or gas can form'
+    explanation: 'The possible products KCl and NaNO₃ are both soluble, so the ions stay in solution and there is no reaction.'
+    difficulty: medium
+  - id: tr-q7
+    prompt: 'What mass of CO₂ is released when 10.0 g of CaCO₃ (100.09 g/mol) decomposes completely? (CO₂: 44.01 g/mol)'
+    choices:
+      - '2.27 g'
+      - '4.40 g'
+      - '5.60 g'
+      - '10.0 g'
+    answer: '4.40 g'
+    explanation: '10.0 g ÷ 100.09 g/mol = 0.0999 mol CaCO₃ = 0.0999 mol CO₂; × 44.01 g/mol = 4.40 g. 5.60 g is the mass of CaO formed.'
+    difficulty: hard
