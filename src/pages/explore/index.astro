@@ -36,12 +36,21 @@ const bySection = exploreSectionIds.map((id) => ({
     <ul class="sections" role="list">
       {bySection.map((s) => (
         <li>
-          <a class:list={['sec', `sec--${s.id}`]} href={url(`/explore/${s.id}/`)}>
-            <span class="sec__eyebrow">{s.meta.eyebrow}</span>
-            <span class="sec__title">{s.meta.title}</span>
-            <span class="sec__intro">{s.meta.intro}</span>
-            <span class="sec__count">{s.items.length ? `${s.items.length} article${s.items.length === 1 ? '' : 's'} →` : 'Coming soon'}</span>
-          </a>
+          {s.items.length ? (
+            <a class:list={['sec', `sec--${s.id}`]} href={url(`/explore/${s.id}/`)}>
+              <span class="sec__eyebrow">{s.meta.eyebrow}</span>
+              <span class="sec__title">{s.meta.title}</span>
+              <span class="sec__intro">{s.meta.intro}</span>
+              <span class="sec__count">{`${s.items.length} article${s.items.length === 1 ? '' : 's'} →`}</span>
+            </a>
+          ) : (
+            <div class:list={['sec', 'sec--soon', `sec--${s.id}`]}>
+              <span class="sec__eyebrow">{s.meta.eyebrow}</span>
+              <span class="sec__title">{s.meta.title}</span>
+              <span class="sec__intro">{s.meta.intro}</span>
+              <span class="sec__count">Coming soon</span>
+            </div>
+          )}
         </li>
       ))}
     </ul>
@@ -75,6 +84,8 @@ const bySection = exploreSectionIds.map((id) => ({
     transition: box-shadow 0.15s, transform 0.15s;
   }
   .sec:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); color: var(--ink); }
+  .sec--soon, .sec--soon:hover { transform: none; box-shadow: var(--shadow-1); opacity: 0.75; }
+  .sec--soon .sec__count { color: var(--muted); }
   .sec--natural-products { border-top-color: var(--hue-green); }
   .sec--organic-mechanisms { border-top-color: var(--hue-violet); }
   .sec--chemists { border-top-color: var(--hue-amber); }

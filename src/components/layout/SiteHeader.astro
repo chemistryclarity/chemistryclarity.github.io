@@ -16,7 +16,9 @@ const [areas, topics, decks, quizzes, notes, videos] = await Promise.all([
 ]);
 const subjects = areas.filter((a) => topics.some((t) => t.data.area.id === a.id));
 // The Explore tab appears only once at least one Explore article is published.
-const exploreLive = (await getVisible('explore')).length > 0;
+const exploreArticles = await getVisible('explore');
+const exploreLive = exploreArticles.length > 0;
+const exploreLiveSections = exploreSectionIds.filter((id) => exploreArticles.some((a) => a.data.section === id));
 const navItems = mainNav.filter((i) => i.href !== '/explore/' || exploreLive);
 const deckGroups = (await groupByArea(decks, 'flashcards')).groups;
 const quizGroups = (await groupByArea(quizzes, 'quiz')).groups;
@@ -42,7 +44,7 @@ const children: Record<string, Link[]> = {
   ],
   '/explore/': [
     { label: 'All special topics', href: '/explore/' },
-    ...exploreSectionIds.map((id) => ({ label: exploreSections[id].menuLabel, href: `/explore/${id}/` })),
+    ...exploreLiveSections.map((id) => ({ label: exploreSections[id].menuLabel, href: `/explore/${id}/` })),
   ],
   '/news/': [
     { label: 'Latest news', href: '/news/' },

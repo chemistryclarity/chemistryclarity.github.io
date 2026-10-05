@@ -7,9 +7,11 @@ import { isDraft } from '../../lib/content';
 export interface Props {
   entry: CollectionEntry<'explore'>;
   as?: 'h2' | 'h3';
+  /** Hide the milestone line (the timeline layout shows the year separately). */
+  hideMilestone?: boolean;
 }
-const { entry, as: Heading = 'h3' } = Astro.props;
-const { title, subtitle, description, section, lifespan, prizes } = entry.data;
+const { entry, as: Heading = 'h3', hideMilestone = false } = Astro.props;
+const { title, subtitle, description, section, lifespan, prizes, milestone } = entry.data;
 const isChemist = section === 'chemists';
 const initials = title.split(/\s+/).filter((w) => /^[A-Z]/.test(w)).map((w) => w[0]).slice(0, 2).join('');
 // Short prize label: "Nobel Prize in Chemistry, 1964" or "2 Nobel Prizes (1903, 1911)".
@@ -23,6 +25,7 @@ const prizeLabel = nobels.length > 1
 <article class:list={['ecard', `ecard--${section}`]}>
   {isChemist && <span class="ecard__mono" aria-hidden="true">{initials}</span>}
   <div class="ecard__body">
+    {milestone && !hideMilestone && <p class="ecard__ms"><span>{milestone.year}</span> {milestone.label}</p>}
     <Heading class="ecard__title"><a href={url(`/explore/${section}/${entry.id}/`)}>{title}</a></Heading>
     {isChemist && lifespan && <p class="ecard__years">{lifespan}</p>}
     {!isChemist && subtitle && <p class="ecard__sub">{subtitle}</p>}
@@ -76,5 +79,7 @@ const prizeLabel = nobels.length > 1
   .ecard__desc { font-size: var(--step--1); color: var(--muted); }
   .ecard__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); }
   .ecard__prize { white-space: normal; text-align: left; }
+  .ecard__ms { font-size: var(--step--1); font-weight: 600; color: var(--muted); }
+  .ecard__ms span { font-weight: 800; color: var(--hue-green); margin-right: 0.3em; }
   .ecard__desc, .ecard__title { overflow-wrap: anywhere; }
 </style>

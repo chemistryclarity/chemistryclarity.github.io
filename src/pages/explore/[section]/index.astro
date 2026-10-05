@@ -17,13 +17,31 @@ const published = inSection.filter(isVisible);
 const preview = published.length === 0;
 const items = (preview ? inSection : published).sort((a, b) => a.data.order - b.data.order);
 const others = exploreSectionIds.filter((id) => id !== section);
+// Sections whose articles all carry a milestone year are shown as a timeline (oldest first).
+const timeline = items.length > 0 && items.every((a) => a.data.milestone);
 ---
 
 <BaseLayout title={meta.title} description={meta.intro} path={`/explore/${section}/`} draft={preview}>
   <div class="container section section--tight">
     <PageHeader crumbs={[{ label: 'Explore', href: '/explore/' }, { label: meta.title }]} eyebrow={meta.eyebrow} title={meta.title} lead={meta.intro} />
 
-    {items.length > 0 ? (
+    {items.length > 0 && timeline ? (
+      <>
+        <p class="tl-intro">Arranged as a timeline, from the oldest discovery to the most recent.</p>
+        <ol class="tline" role="list">
+          {items.map((a) => (
+            <li class="tline__item">
+              <div class="tline__when">
+                <span class="tline__year">{a.data.milestone?.year}</span>
+                <span class="tline__what">{a.data.milestone?.label}</span>
+              </div>
+              <span class="tline__dot" aria-hidden="true"></span>
+              <div class="tline__card"><ExploreCard entry={a} as="h2" hideMilestone /></div>
+            </li>
+          ))}
+        </ol>
+      </>
+    ) : items.length > 0 ? (
       <ul class="grid" role="list">{items.map((a) => <li><ExploreCard entry={a} as="h2" /></li>)}</ul>
     ) : (
       <p class="muted">The first articles are on the way.</p>
@@ -40,6 +58,22 @@ const others = exploreSectionIds.filter((id) => id !== section);
 
 <style>
   .grid { list-style: none; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); }
+  .tl-intro { color: var(--muted); font-size: var(--step--1); margin-bottom: var(--space-5); }
+  .tline { list-style: none; padding: 0; margin: 0; position: relative; max-width: 56rem; }
+  .tline::before { content: ''; position: absolute; top: 0.6rem; bottom: 0.6rem; width: 3px; background: color-mix(in srgb, var(--hue-green) 35%, var(--border)); left: 0.55rem; }
+  .tline__item { position: relative; display: grid; grid-template-columns: 1.4rem 1fr; gap: var(--space-2) var(--space-4); padding-bottom: var(--space-5); }
+  .tline__dot { grid-column: 1; grid-row: 1; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--surface); border: 4px solid var(--hue-green); position: relative; z-index: 1; }
+  .tline__when { grid-column: 2; grid-row: 1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--space-3); }
+  .tline__year { font-size: var(--step-2); font-weight: 800; color: var(--hue-green); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .tline__what { font-weight: 600; color: var(--ink-soft); font-size: var(--step--1); }
+  .tline__card { grid-column: 2; grid-row: 2; }
+  @media (min-width: 48rem) {
+    .tline::before { left: calc(8rem + var(--space-4) + 0.55rem); }
+    .tline__item { grid-template-columns: 8rem 1.4rem 1fr; }
+    .tline__when { grid-column: 1; flex-direction: column; align-items: flex-end; text-align: right; }
+    .tline__dot { grid-column: 2; margin-top: 0.35rem; }
+    .tline__card { grid-column: 3; grid-row: 1; }
+  }
   .others { margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); align-items: baseline; font-weight: 650; }
   .others ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
 </style>

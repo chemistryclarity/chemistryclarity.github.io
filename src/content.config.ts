@@ -267,8 +267,10 @@ const explore = defineCollection({
     subtitle: blank(z.string()),
     /** 1–2 sentences for cards and search results. */
     description: z.string().max(220),
-    /** Position in its section list (lower first). */
+    /** Position in its section list (lower first). Natural products are ordered by their milestone year. */
     order: z.number().default(100),
+    /** Key milestone shown on cards and the timeline, e.g. { year: '1804', label: 'Morphine isolated' }. */
+    milestone: z.object({ year: z.string(), label: z.string() }).optional(),
     level: level.default('intermediate'),
     /** Chemists: life years shown with the name, e.g. "1867–1934". */
     lifespan: blank(z.string()),
