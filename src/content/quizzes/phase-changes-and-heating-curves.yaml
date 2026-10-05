@@ -1,0 +1,79 @@
+# Quiz: Phase Changes and Heating Curves
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Phase Changes and Heating Curves: Quiz'
+description: 'Seven questions on phase changes, heating curves, enthalpies of phase change and boiling, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: pc-q1
+    prompt: 'Which phase change is exothermic?'
+    choices:
+      - 'Melting'
+      - 'Sublimation'
+      - 'Condensation'
+      - 'Vaporization'
+    answer: 'Condensation'
+    explanation: 'In condensation, gas particles come together and attractions form, releasing energy. Melting, sublimation and vaporization absorb energy.'
+    difficulty: easy
+  - id: pc-q2
+    prompt: 'What is the name for a solid changing directly into a gas?'
+    choices:
+      - 'Deposition'
+      - 'Sublimation'
+      - 'Evaporation'
+      - 'Fusion'
+    answer: 'Sublimation'
+    explanation: 'Sublimation is solid → gas (e.g. dry ice). Deposition is the reverse, gas → solid.'
+    difficulty: easy
+  - id: pc-q3
+    prompt: 'On a heating curve, what is happening along a flat section?'
+    choices:
+      - 'The particles are speeding up'
+      - 'A phase change: energy overcomes intermolecular forces'
+      - 'No heat is being added'
+      - 'The substance is decomposing'
+    answer: 'A phase change: energy overcomes intermolecular forces'
+    explanation: 'Heat is still being added, but it goes into changing state, so the temperature (average kinetic energy) does not rise.'
+    difficulty: easy
+  - id: pc-q4
+    prompt: 'How much heat is needed to vaporize 10.0 g of ethanol (46.07 g/mol, ΔH(vap) = 38.6 kJ/mol)?'
+    choices:
+      - '8.38 kJ'
+      - '386 kJ'
+      - '0.217 kJ'
+      - '1778 kJ'
+    answer: '8.38 kJ'
+    explanation: 'n = 10.0 g ÷ 46.07 g/mol = 0.2171 mol; q = 0.2171 mol × 38.6 kJ/mol = 8.38 kJ.'
+    difficulty: medium
+  - id: pc-q5
+    prompt: 'Why does steam at 100 °C cause worse burns than water at 100 °C?'
+    choices:
+      - 'Steam is hotter'
+      - 'Steam releases its enthalpy of vaporization when it condenses on the skin'
+      - 'Water cannot transfer heat'
+      - 'Steam contains more oxygen'
+    answer: 'Steam releases its enthalpy of vaporization when it condenses on the skin'
+    explanation: 'Both are at 100 °C, but condensing steam first releases 40.7 kJ/mol before cooling, giving many times more heat than the water alone.'
+    difficulty: medium
+  - id: pc-q6
+    prompt: 'A liquid boils when:'
+    choices:
+      - 'it reaches 100 °C'
+      - 'its vapour pressure equals the external pressure'
+      - 'all its molecules have the same energy'
+      - 'its vapour pressure is zero'
+    answer: 'its vapour pressure equals the external pressure'
+    explanation: 'Boiling starts when vapour bubbles can form inside the liquid, which happens once the vapour pressure equals the pressure above the liquid. 100 °C is only water''s boiling point at 1 atm.'
+    difficulty: medium
+  - id: pc-q7
+    prompt: 'How much heat turns 10.0 g of ice at −20.0 °C into water at 50.0 °C? (c(ice) 2.09, c(water) 4.184 J/(g·°C); ΔH(fus) 6.01 kJ/mol)'
+    choices:
+      - '2.51 kJ'
+      - '3.34 kJ'
+      - '5.85 kJ'
+      - '43.0 kJ'
+    answer: '5.85 kJ'
+    explanation: 'Warm ice 0.418 kJ + melt (10.0 g ÷ 18.02 g/mol × 6.01 kJ/mol) 3.34 kJ + warm water 2.09 kJ = 5.85 kJ. 2.51 kJ leaves out the melting step.'
+    difficulty: hard

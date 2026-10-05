@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .ax { stroke: #3d4657; stroke-width: 1.5; fill: none; }
+    .line { stroke: #0f766e; stroke-width: 2.6; fill: none; }
+    .atm { stroke: #b45309; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .reg { fill: #14213d; font-size: 14px; font-weight: 800; opacity: 0.75; }
+    .pt { fill: #7c3aed; }
+    .ptl { fill: #7c3aed; font-size: 10px; font-weight: 700; }
+    .atml { fill: #b45309; font-size: 10px; font-weight: 700; }
+    .axl { fill: #5b6577; font-size: 10.5px; font-weight: 600; }
+    .sol { fill: #e0f2fe; } .liq { fill: #dbeafe; } .gas { fill: #f8fafc; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .reg { fill: #e9edf5; }
+      .sub, .axl { fill: #9aa5ba; }
+      .ax { stroke: #c7cfdd; }
+      .line { stroke: #2dd4bf; }
+      .atm { stroke: #fbbf24; } .atml { fill: #fbbf24; }
+      .pt { fill: #c4b5fd; } .ptl { fill: #c4b5fd; }
+      .sol { fill: #12304a; } .liq { fill: #1a2b55; } .gas { fill: #151e31; }
+    }
+  </style>
+  <rect class="bg" width="360" height="320" rx="14"/>
+  <text class="t" x="16" y="28">Phase diagram of water</text>
+  <text class="sub" x="16" y="45">Schematic: not to scale</text>
+
+  <!-- plot area: x 50..340, y 60..280 -->
+  <!-- triple point T at (120, 230); critical point C at (300, 90) -->
+  <!-- regions -->
+  <path class="sol" d="M50 60 L112 60 L120 230 Q90 250 50 268 Z"/>
+  <path class="liq" d="M112 60 L340 60 L340 90 L300 90 Q220 140 120 230 Z"/>
+  <!-- lines -->
+  <path class="line" d="M120 230 L112 60"/>
+  <path class="line" d="M120 230 Q220 140 300 90"/>
+  <path class="line" d="M120 230 Q90 250 50 268"/>
+  <!-- 1 atm line at y = 160 -->
+  <line class="atm" x1="50" y1="160" x2="340" y2="160"/>
+  <text class="atml" x="338" y="154" text-anchor="end">1 atm</text>
+  <!-- intersections: melting line x at y=160 ≈ 116.7; boiling curve crosses near x≈190 -->
+  <circle class="pt" cx="116.7" cy="160" r="3"/>
+  <circle class="pt" cx="202" cy="160" r="3"/>
+  <text class="ptl" x="112" y="176" text-anchor="end">0 °C</text>
+  <text class="ptl" x="206" y="176">100 °C</text>
+  <!-- triple and critical points -->
+  <circle class="pt" cx="120" cy="230" r="4.5"/>
+  <text class="ptl" x="128" y="246">triple point</text>
+  <text class="ptl" x="128" y="258">0.01 °C, 0.006 atm</text>
+  <circle class="pt" cx="300" cy="90" r="4.5"/>
+  <text class="ptl" x="296" y="78" text-anchor="end">critical point</text>
+  <text class="ptl" x="296" y="110" text-anchor="end">374 °C, 218 atm</text>
+
+  <text class="reg" x="74" y="110">Solid</text>
+  <text class="reg" x="140" y="100">Liquid</text>
+  <text class="reg" x="250" y="230">Gas</text>
+
+  <path class="ax" d="M50 56 V280 H342"/>
+  <text class="axl" x="16" y="70">P</text>
+  <text class="axl" x="340" y="298" text-anchor="end">temperature →</text>
+  <text class="axl" x="16" y="84">↑</text>
+</svg>

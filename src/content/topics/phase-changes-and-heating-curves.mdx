@@ -1,0 +1,196 @@
+---
+title: Phase Changes and Heating Curves
+question: "What happens to energy and temperature when a substance melts or boils?"
+description: "The six phase changes, why temperature stays constant while a substance melts or boils, enthalpies of fusion and vaporization, heating-curve calculations, and vapour pressure and boiling."
+area: states-of-matter
+level: intermediate
+order: 25
+prerequisites: [intermolecular-forces, enthalpy]
+related: [intermolecular-forces, enthalpy, phase-diagrams, energy-heat-and-work, temperature-scales]
+flashcards: phase-changes-and-heating-curves
+quiz: phase-changes-and-heating-curves
+resources: [phase-changes-and-heating-curves-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Water data: c(ice) = 2.09 J/(g·°C), c(liquid) = 4.184 J/(g·°C), c(steam) = 2.01 J/(g·°C);
+  ΔH(fus) = 6.01 kJ/mol at 0 °C; ΔH(vap) = 40.7 kJ/mol at 100 °C; M(H₂O) = 18.02 g/mol.
+  Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+A **phase change** (change of state) turns a substance from one state into another without changing what it is: ice, liquid water and steam are all $\ce{H2O}$.
+
+| Change | From → to | Energy |
+|---|---|---|
+| **Melting** (fusion) | solid → liquid | absorbed (endothermic) |
+| **Freezing** | liquid → solid | released (exothermic) |
+| **Vaporization** (boiling, evaporation) | liquid → gas | absorbed |
+| **Condensation** | gas → liquid | released |
+| **Sublimation** | solid → gas | absorbed |
+| **Deposition** | gas → solid | released |
+
+Changes that pull particles **apart** (overcoming intermolecular forces) absorb energy; changes that bring them **together** release it.
+
+<KeyIdea>
+While a pure substance is melting or boiling, its **temperature stays constant**, even though heat is still being added. All the energy goes into overcoming the forces between particles, not into making them move faster. That's why a heating curve has **flat sections**.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Cooling and heating.** Sweat cools you because evaporation absorbs heat; ice keeps drinks at 0 °C while it melts; refrigerators work by evaporating and condensing a fluid.
+- **Steam burns.** Steam at 100 °C burns far worse than water at 100 °C, because it releases its large enthalpy of vaporization as it condenses on the skin.
+- **Cooking and climate.** Water boils at a lower temperature at altitude; huge amounts of energy are moved around the planet as water evaporates and condenses.
+
+## How does it work?
+
+### 1. The heating curve
+
+Heating ice at −15 °C steadily until it becomes steam at 125 °C gives five stages:
+
+1. ice warms (sloped): $q = mc_\text{ice}\Delta T$
+2. ice melts at 0 °C (flat): $q = n\Delta H_\text{fus}$
+3. water warms (sloped): $q = mc_\text{water}\Delta T$
+4. water boils at 100 °C (flat): $q = n\Delta H_\text{vap}$
+5. steam warms (sloped): $q = mc_\text{steam}\Delta T$
+
+The total heat is the sum of the five steps.
+
+### 2. Enthalpies of fusion and vaporization
+
+The **enthalpy of fusion**, $\Delta H_\text{fus}$, is the energy to melt one mole of solid at its melting point; the **enthalpy of vaporization**, $\Delta H_\text{vap}$, is the energy to vaporize one mole of liquid. For water, $\Delta H_\text{fus} = 6.01$ kJ/mol and $\Delta H_\text{vap} = 40.7$ kJ/mol. Vaporization needs far more energy because the molecules must be separated **completely**, while melting only loosens them.
+
+### 3. Vapour pressure and boiling
+
+Even below its boiling point, some molecules at the surface of a liquid have enough energy to escape: **evaporation**. In a closed container, the vapour builds up until evaporation and condensation balance. The pressure of the vapour then is the **vapour pressure**, which rises steeply with temperature.
+
+A liquid **boils** when its vapour pressure equals the **external pressure**: bubbles of vapour can then form throughout the liquid. At 1 atm (760 mmHg) this is the **normal boiling point**: 100 °C for water. Where the air pressure is lower, such as on a mountain, water boils below 100 °C; in a pressure cooker it boils above 100 °C.
+
+<Analogy>
+Melting is like a crowd leaving a packed hall. While people are still squeezing out of the doors (the phase change), the crowd's speed doesn't increase: all the effort goes into getting through. Only once everyone is outside can they start to move faster (the temperature rises again).
+</Analogy>
+
+<MorePrecisely>
+Evaporation happens at any temperature, from the surface only; boiling happens at one temperature (for a given pressure), throughout the liquid. The temperature stays constant during a phase change only while both phases are present and the pressure is constant. $\Delta H_\text{vap}$ itself changes slightly with temperature (water: 44.0 kJ/mol at 25 °C, 40.7 kJ/mol at 100 °C). The relationship between vapour pressure and temperature is described by the Clausius–Clapeyron equation.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/phase-changes-and-heating-curves/heating-curve.svg" alt="Heating curve of water: temperature against heat added. A rising line for ice from minus 15 degrees to 0, a flat section at 0 degrees where ice melts, a rising line for liquid water from 0 to 100, a long flat section at 100 degrees where water boils, and a rising line for steam above 100." caption="Heating curve of water. The flat sections are phase changes; boiling takes by far the most energy." width={360} height={300} />
+
+## Worked example
+
+<Example title="Melting ice">
+**Question:** How much heat is needed to melt 100. g of ice at 0 °C?
+
+1. Moles: $n = \dfrac{100.\ \text{g}}{18.02\ \text{g/mol}} = 5.549\ \text{mol}$
+2. Heat:
+
+   $$
+   \small\begin{aligned}
+   &q = n\Delta H_\text{fus} = 5.549\ \cancel{\text{mol}} \\[4pt]
+   &\quad \times 6.01\ \frac{\text{kJ}}{\cancel{\text{mol}}} \\[4pt]
+   &= 33.4\ \text{kJ}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="A full heating curve">
+**Question:** How much heat turns 25.0 g of ice at −15.0 °C into steam at 125.0 °C? ($n = 25.0\ \text{g} \div 18.02\ \text{g/mol} = 1.387$ mol)
+
+1. Warm ice:
+
+   $$
+   \small\begin{aligned}
+   &q_1 = 25.0\ \text{g} \times 2.09\ \tfrac{\text{J}}{\text{g °C}} \\[4pt]
+   &\quad \times 15.0\ \text{°C} \\[4pt]
+   &= 784\ \text{J} = 0.784\ \text{kJ}
+   \end{aligned}
+   $$
+
+2. Melt: $q_2 = 1.387\ \text{mol} \times 6.01\ \text{kJ/mol} = 8.34\ \text{kJ}$
+3. Warm water:
+
+   $$
+   \small\begin{aligned}
+   &q_3 = 25.0\ \text{g} \times 4.184\ \tfrac{\text{J}}{\text{g °C}} \\[4pt]
+   &\quad \times 100.0\ \text{°C} \\[4pt]
+   &= 10\,460\ \text{J} = 10.46\ \text{kJ}
+   \end{aligned}
+   $$
+
+4. Boil: $q_4 = 1.387\ \text{mol} \times 40.7\ \text{kJ/mol} = 56.47\ \text{kJ}$
+5. Warm steam:
+
+   $$
+   \small\begin{aligned}
+   &q_5 = 25.0\ \text{g} \times 2.01\ \tfrac{\text{J}}{\text{g °C}} \\[4pt]
+   &\quad \times 25.0\ \text{°C} \\[4pt]
+   &= 1256\ \text{J} = 1.26\ \text{kJ}
+   \end{aligned}
+   $$
+
+6. Total:
+
+   $$
+   \small\begin{aligned}
+   &q = (0.784 + 8.34 + 10.46 \\[4pt]
+   &\qquad + 56.47 + 1.26)\ \text{kJ} \\[4pt]
+   &= 77.3\ \text{kJ}
+   \end{aligned}
+   $$
+
+   Boiling alone is about 73 % of the total.
+</Example>
+
+<Example title="Why steam burns">
+**Question:** Compare the heat released to the skin (at 37 °C) by 5.00 g of steam at 100 °C and by 5.00 g of water at 100 °C.
+
+1. Water cooling from 100 °C to 37 °C:
+
+   $$
+   \small\begin{aligned}
+   &q = 5.00\ \text{g} \times 4.184\ \tfrac{\text{J}}{\text{g °C}} \\[4pt]
+   &\quad \times 63\ \text{°C} \\[4pt]
+   &= 1318\ \text{J} = 1.32\ \text{kJ}
+   \end{aligned}
+   $$
+
+2. Steam first condenses: $\dfrac{5.00\ \text{g}}{18.02\ \text{g/mol}} \times 40.7\ \text{kJ/mol} = 11.29\ \text{kJ}$, then cools like the water (1.32 kJ): **12.6 kJ** in total.
+3. The steam delivers almost **ten times** as much heat.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using q = mcΔT during a phase change">
+During melting or boiling, ΔT = 0, but heat is still absorbed. Use $q = n\Delta H$ for the flat parts and $q = mc\Delta T$ only for the sloped parts, with the right $c$ for each state.
+</CommonMistake>
+
+<CommonMistake title="Mixing J and kJ">
+$mc\Delta T$ usually gives joules, while $n\Delta H$ gives kilojoules. Convert to the same unit before adding.
+</CommonMistake>
+
+<CommonMistake title="Thinking boiling breaks bonds within molecules">
+When water boils, the bubbles contain $\ce{H2O}$ molecules. Only intermolecular forces are overcome.
+</CommonMistake>
+
+<NotationNote>
+- "Latent heat" is an older name for the enthalpy of a phase change.
+- ΔH(fus) is positive for melting; for freezing the same value is negative.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Melting, vaporization, sublimation: endothermic. Freezing, condensation, deposition: exothermic.
+- Temperature is constant during a phase change: all the energy overcomes intermolecular forces.
+- Sloped parts: $q = mc\Delta T$. Flat parts: $q = n\Delta H_\text{fus}$ or $n\Delta H_\text{vap}$.
+- Water: $\Delta H_\text{fus} = 6.01$ kJ/mol; $\Delta H_\text{vap} = 40.7$ kJ/mol.
+- A liquid boils when its vapour pressure equals the external pressure.
+</RememberThis>

@@ -1,0 +1,39 @@
+# Flashcards: Gas Mixtures and Gas Stoichiometry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Gas Mixtures and Gas Stoichiometry: Flashcards'
+description: 'Revise Dalton''s law, mole fractions, collecting gases over water, molar volume and gas stoichiometry.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: gm-01
+    front: 'State Dalton''s law of partial pressures.'
+    back: 'The total pressure of a gas mixture is the sum of the partial pressures: P(total) = P(A) + P(B) + ...'
+  - id: gm-02
+    front: 'How is a partial pressure related to the mole fraction?'
+    back: 'P(A) = x(A) × P(total), where x(A) = n(A) ÷ n(total).'
+  - id: gm-03
+    front: 'Air is 21 % O₂. What is the partial pressure of O₂ at 1.00 atm?'
+    back: 'About 0.21 atm.'
+  - id: gm-04
+    front: 'How do you find the pressure of a dry gas collected over water?'
+    back: 'P(gas) = P(total) − vapour pressure of water at that temperature.'
+  - id: gm-05
+    front: 'What is the molar volume of a gas at 0 °C and 1 atm? At 25 °C and 1 atm?'
+    back: '22.4 L/mol and 24.5 L/mol.'
+  - id: gm-06
+    front: 'State Avogadro''s law.'
+    back: 'Equal volumes of gases at the same temperature and pressure contain equal numbers of moles.'
+  - id: gm-07
+    front: 'Outline the steps of a gas stoichiometry calculation.'
+    back: 'Convert to moles (n = PV/RT or from mass) → mole ratio from the equation → convert to the answer (V = nRT/P or mass).'
+  - id: gm-08
+    front: 'For gases at the same T and P, what volume of O₂ reacts with 2.00 L of C₃H₈? (C₃H₈ + 5O₂ → 3CO₂ + 4H₂O)'
+    back: '10.0 L: volume ratios equal mole ratios.'
+  - id: gm-09
+    front: 'What do the mole fractions in a mixture add up to?'
+    back: '1'
+  - id: gm-10
+    front: 'Which value of R goes with pressures in atm and volumes in L?'
+    back: '0.08206 L·atm/(mol·K)'

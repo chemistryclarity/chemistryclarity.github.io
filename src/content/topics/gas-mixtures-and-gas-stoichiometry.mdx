@@ -1,0 +1,209 @@
+---
+title: Gas Mixtures and Gas Stoichiometry
+question: "How do you handle mixtures of gases and the volumes of gases in reactions?"
+description: "Dalton's law of partial pressures, mole fractions, collecting a gas over water, molar volume, and using PV = nRT in stoichiometry calculations."
+area: states-of-matter
+level: intermediate
+order: 15
+prerequisites: [gas-laws, stoichiometry]
+related: [gas-laws, stoichiometry, mole-concept, types-of-chemical-reactions]
+flashcards: gas-mixtures-and-gas-stoichiometry
+quiz: gas-mixtures-and-gas-stoichiometry
+resources: [gas-mixtures-and-gas-stoichiometry-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  R = 0.08206 L·atm/(mol·K); T(K) = t(°C) + 273.15; 1 atm = 760 mmHg = 101.325 kPa.
+  Vapour pressure of water at 25 °C = 23.8 mmHg. Molar volume: 22.4 L/mol at 0 °C and 1 atm; 24.5 L/mol at 25 °C and 1 atm.
+  Molar masses (g/mol): CaCO₃ 100.09, KClO₃ 122.55, H₂ 2.016. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+In a mixture of gases that don't react, each gas behaves as if it were alone in the container. The pressure each gas would exert on its own is its **partial pressure**. **Dalton's law** says the total pressure is the sum of the partial pressures:
+
+$$
+\small\begin{aligned}
+&P_\text{total} \\[4pt]
+&= P_\text{A} + P_\text{B} + P_\text{C} + \cdots
+\end{aligned}
+$$
+
+Because pressure depends only on the number of moles (at fixed $V$ and $T$), each gas's share of the pressure equals its share of the moles, its **mole fraction** $x$:
+
+$$
+\small\begin{aligned}
+&P_\text{A} = x_\text{A} P_\text{total} \\[4pt]
+&x_\text{A} = \frac{n_\text{A}}{n_\text{total}}
+\end{aligned}
+$$
+
+<KeyIdea>
+For gases, **volume is a measure of moles**. At the same temperature and pressure, equal volumes of gases contain equal numbers of moles (Avogadro's law). So $PV = nRT$ turns any gas volume into moles, and moles are the link to the balanced equation.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Breathing and diving.** Air is about 21 % oxygen, so the partial pressure of oxygen at sea level is about 0.21 atm. At high altitude it is lower, which is why climbers carry oxygen; divers breathing compressed air risk taking in too much nitrogen.
+- **Collecting gases in the lab.** Gases collected over water are mixed with water vapour, which has to be subtracted.
+- **Airbags, baking and industry.** Calculating the volume of gas a reaction produces is gas stoichiometry.
+
+## How does it work?
+
+### 1. Partial pressures
+
+Find each partial pressure with $P_\text{A} = n_\text{A}RT/V$, or from the mole fraction. Add them to get the total.
+
+### 2. Collecting a gas over water
+
+A gas bubbled into an upturned bottle of water becomes saturated with water vapour. The pressure inside equals atmospheric pressure, so:
+
+$$
+P_\text{gas} = P_\text{total} - P_{\text{H}_2\text{O}}
+$$
+
+The vapour pressure of water depends only on temperature (23.8 mmHg at 25 °C).
+
+### 3. Molar volume
+
+One mole of any ideal gas occupies **22.4 L at 0 °C and 1 atm**, and **24.5 L at 25 °C and 1 atm**. (Check which "standard" conditions your course uses; IUPAC STP, 0 °C and 1 bar, gives 22.7 L/mol.)
+
+### 4. Gas stoichiometry
+
+1. Convert what you know to **moles** (from mass, or from a gas volume with $n = PV/RT$).
+2. Use the **mole ratio** from the balanced equation.
+3. Convert to what you want (mass, or a gas volume with $V = nRT/P$).
+
+<Analogy>
+Partial pressures are like voices in a choir. Each singer adds to the total sound, and a section with more singers is louder. The total volume of sound is the sum of every section, and each section's share depends only on how many singers it has.
+</Analogy>
+
+<MorePrecisely>
+Dalton's law holds exactly for ideal gases and very closely for real gases at ordinary pressures. Because the partial pressure is proportional to moles, mole fraction is also the **volume fraction** of an ideal-gas mixture: air is about 78 % N₂, 21 % O₂ and 1 % Ar by volume and by moles. Vapour pressure tables give the partial pressure of water above liquid water at each temperature; at 100 °C it reaches 760 mmHg, which is why water boils there at 1 atm.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/gas-mixtures-and-gas-stoichiometry/dalton.svg" alt="Three identical containers. The first holds nitrogen molecules alone at a pressure of 0.979 atm. The second holds oxygen molecules alone at 0.245 atm. The third holds both together, at a total pressure of 1.22 atm, the sum of the two." caption="Dalton's law: in the same container, each gas contributes its own partial pressure." width={368} height={260} />
+
+## Worked example
+
+<Example title="Partial pressures">
+**Question:** A 5.00 L flask at 25 °C contains 0.200 mol of N₂ and 0.0500 mol of O₂. Find each partial pressure and the total pressure.
+
+1. $T = 25 + 273.15 = 298.15$ K. It saves work to find $RT$ first:
+
+   $$
+   \small\begin{aligned}
+   &RT = 0.08206\ \tfrac{\text{L atm}}{\text{mol K}} \\[4pt]
+   &\quad \times 298.15\ \text{K} \\[4pt]
+   &= 24.47\ \text{L atm/mol}
+   \end{aligned}
+   $$
+
+2. Nitrogen:
+
+   $$
+   \small\begin{aligned}
+   &nRT = 0.200\ \text{mol} \\[4pt]
+   &\quad \times 24.47\ \tfrac{\text{L atm}}{\text{mol}} \\[4pt]
+   &= 4.894\ \text{L atm} \\[4pt]
+   &P_{\text{N}_2} = \frac{nRT}{V} \\[4pt]
+   &= \frac{4.894\ \text{L atm}}{5.00\ \text{L}} \\[4pt]
+   &= 0.979\ \text{atm}
+   \end{aligned}
+   $$
+
+3. Oxygen has a quarter of the moles, so $P_{\text{O}_2} = 0.245$ atm.
+4. Total: $P = 0.979\ \text{atm} + 0.245\ \text{atm} = 1.22\ \text{atm}$
+</Example>
+
+<Example title="A gas collected over water">
+**Question:** Hydrogen is collected over water at 25 °C. The volume is 0.250 L and the total pressure is 755 mmHg. How many moles of H₂ were collected?
+
+1. Pressure of the dry hydrogen:
+
+   $$
+   \small\begin{aligned}
+   &P_{\text{H}_2} = 755\ \text{mmHg} \\[4pt]
+   &\quad - 23.8\ \text{mmHg} \\[4pt]
+   &= 731.2\ \cancel{\text{mmHg}} \\[4pt]
+   &\quad \times \frac{1\ \text{atm}}{760\ \cancel{\text{mmHg}}} \\[4pt]
+   &= 0.9621\ \text{atm}
+   \end{aligned}
+   $$
+
+2. Moles, using $RT = 24.47$ L atm/mol at 25 °C (from the first example):
+
+   $$
+   \small\begin{aligned}
+   &n = \frac{PV}{RT} \\[4pt]
+   &= \frac{0.9621\ \text{atm} \times 0.250\ \text{L}}{24.47\ \text{L atm/mol}} \\[4pt]
+   &= 9.83 \times 10^{-3}\ \text{mol}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Volume of gas from a reaction">
+**Question:** What volume of CO₂, at 25 °C and 1.00 atm, is released when 10.0 g of CaCO₃ decomposes? $\ce{CaCO3 -> CaO + CO2}$
+
+1. Moles of CaCO₃: $\dfrac{10.0\ \text{g}}{100.09\ \text{g/mol}} = 0.09991\ \text{mol}$, so 0.09991 mol CO₂ (1 : 1).
+2. Volume, with $RT = 24.47$ L atm/mol at 25 °C:
+
+   $$
+   \small\begin{aligned}
+   &nRT = 0.09991\ \text{mol} \\[4pt]
+   &\quad \times 24.47\ \tfrac{\text{L atm}}{\text{mol}} \\[4pt]
+   &= 2.4448\ \text{L atm} \\[4pt]
+   &V = \frac{nRT}{P} = \frac{2.4448\ \text{L atm}}{1.00\ \text{atm}} \\[4pt]
+   &= 2.44\ \text{L}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Using molar volume">
+**Question:** 5.00 g of potassium chlorate is heated: $\ce{2KClO3 -> 2KCl + 3O2}$. What volume of O₂ forms at 0 °C and 1 atm?
+
+$$
+\small\begin{aligned}
+&5.00\ \cancel{\text{g KClO}_3} \\[4pt]
+&\times \frac{1\ \cancel{\text{mol KClO}_3}}{122.55\ \cancel{\text{g KClO}_3}} \\[4pt]
+&\quad \times \frac{3\ \cancel{\text{mol O}_2}}{2\ \cancel{\text{mol KClO}_3}} \\[4pt]
+&\quad \times \frac{22.4\ \text{L O}_2}{1\ \cancel{\text{mol O}_2}} \\[4pt]
+&= 1.37\ \text{L O}_2
+\end{aligned}
+$$
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Forgetting the water vapour">
+A gas collected over water is not pure. Subtract the vapour pressure of water before using $PV = nRT$, or the moles of gas will be too high.
+</CommonMistake>
+
+<CommonMistake title="Using 22.4 L/mol at room temperature">
+22.4 L/mol applies only at **0 °C and 1 atm**. At 25 °C and 1 atm, a mole of gas occupies 24.5 L. When conditions are not standard, use $PV = nRT$.
+</CommonMistake>
+
+<CommonMistake title="Mixing pressure units">
+With $R = 0.08206$ L·atm/(mol·K), pressure must be in atm. Convert mmHg (÷ 760) or kPa (÷ 101.325) first.
+</CommonMistake>
+
+<NotationNote>
+- $x_\text{A}$ (or $\chi_\text{A}$) is the mole fraction; mole fractions of all components add up to 1.
+- 1 mmHg = 1 torr.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Dalton: $P_\text{total} = P_\text{A} + P_\text{B} + \cdots$; $P_\text{A} = x_\text{A}P_\text{total}$.
+- Over water: $P_\text{gas} = P_\text{total} - P_{\text{H}_2\text{O}}$.
+- Molar volume: 22.4 L/mol at 0 °C, 1 atm; 24.5 L/mol at 25 °C, 1 atm.
+- Gas stoichiometry: gas volume ↔ moles with $PV = nRT$; moles ↔ moles with the equation.
+</RememberThis>

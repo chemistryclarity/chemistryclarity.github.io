@@ -1,0 +1,39 @@
+# Flashcards: Phase Changes and Heating Curves
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Phase Changes and Heating Curves: Flashcards'
+description: 'Revise the six phase changes, heating curves, enthalpies of fusion and vaporization, and vapour pressure.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: pc-01
+    front: 'Name the six phase changes.'
+    back: 'Melting, freezing, vaporization, condensation, sublimation, deposition.'
+  - id: pc-02
+    front: 'Which phase changes are endothermic?'
+    back: 'Melting, vaporization and sublimation (particles are pulled apart).'
+  - id: pc-03
+    front: 'Why does the temperature stay constant while ice melts?'
+    back: 'All the heat goes into overcoming intermolecular forces, not into increasing the kinetic energy of the particles.'
+  - id: pc-04
+    front: 'Which equation is used on the flat parts of a heating curve?'
+    back: '$q = n\Delta H$ (ΔH of fusion or vaporization).'
+  - id: pc-05
+    front: 'Which equation is used on the sloped parts of a heating curve?'
+    back: '$q = mc\Delta T$, with the specific heat capacity of that state.'
+  - id: pc-06
+    front: 'Give ΔH(fus) and ΔH(vap) for water.'
+    back: '6.01 kJ/mol and 40.7 kJ/mol.'
+  - id: pc-07
+    front: 'Why is ΔH(vap) much larger than ΔH(fus)?'
+    back: 'Vaporizing separates the molecules completely; melting only loosens them.'
+  - id: pc-08
+    front: 'When does a liquid boil?'
+    back: 'When its vapour pressure equals the external pressure.'
+  - id: pc-09
+    front: 'Why does water boil below 100 °C on a mountain?'
+    back: 'The air pressure is lower, so the vapour pressure reaches it at a lower temperature.'
+  - id: pc-10
+    front: 'How much heat melts 100. g of ice at 0 °C?'
+    back: '(100. g ÷ 18.02 g/mol) × 6.01 kJ/mol = 33.4 kJ'

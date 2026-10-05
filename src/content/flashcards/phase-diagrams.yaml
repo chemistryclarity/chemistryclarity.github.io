@@ -1,0 +1,39 @@
+# Flashcards: Phase Diagrams
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All data checked.
+title: 'Phase Diagrams: Flashcards'
+description: 'Revise reading phase diagrams, the triple and critical points, and the diagrams of water and carbon dioxide.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: pd-01
+    front: 'What does a phase diagram show?'
+    back: 'Which phase of a substance is stable at each temperature (x-axis) and pressure (y-axis).'
+  - id: pd-02
+    front: 'What do the lines on a phase diagram represent?'
+    back: 'Conditions where two phases coexist in equilibrium (melting, boiling or sublimation points).'
+  - id: pd-03
+    front: 'What is the triple point?'
+    back: 'The single temperature and pressure at which solid, liquid and gas coexist.'
+  - id: pd-04
+    front: 'What is the critical point?'
+    back: 'The end of the liquid–gas line; beyond it the substance is a supercritical fluid.'
+  - id: pd-05
+    front: 'Where are the normal melting and boiling points on a phase diagram?'
+    back: 'Where the 1 atm line crosses the solid–liquid and liquid–gas lines.'
+  - id: pd-06
+    front: 'Why does water''s solid–liquid line slope to the left?'
+    back: 'Ice is less dense than liquid water, so higher pressure favours the liquid and lowers the melting point.'
+  - id: pd-07
+    front: 'Give the triple point of water.'
+    back: '0.01 °C and 0.00604 atm (611.7 Pa).'
+  - id: pd-08
+    front: 'Give the triple point of CO₂.'
+    back: '−56.6 °C and 5.11 atm.'
+  - id: pd-09
+    front: 'Why does dry ice sublime at 1 atm?'
+    back: 'Its triple-point pressure (5.11 atm) is above 1 atm, so liquid CO₂ cannot exist at 1 atm.'
+  - id: pd-10
+    front: 'In which state is CO₂ at 100 atm and 40 °C?'
+    back: 'Supercritical fluid (above 72.8 atm and 31.0 °C).'

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368 260" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .box { fill: #f3f1ea; stroke: #5b6577; stroke-width: 1.6; }
+    .n2 { fill: #93c5fd; stroke: #2563eb; stroke-width: 1; }
+    .o2 { fill: #fca5a5; stroke: #dc2626; stroke-width: 1; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 700; }
+    .pv { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .op { fill: #5b6577; font-size: 18px; font-weight: 700; }
+    .note { fill: #5b6577; font-size: 10.5px; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .op, .note { fill: #9aa5ba; }
+      .box { fill: #1b263d; stroke: #9aa5ba; }
+      .n2 { fill: #1e3a8a; stroke: #93c5fd; }
+      .o2 { fill: #7f1d1d; stroke: #fca5a5; }
+      .pv { fill: #2dd4bf; }
+    }
+  </style>
+  <rect class="bg" width="368" height="260" rx="14"/>
+  <text class="t" x="14" y="28">Dalton's law of partial pressures</text>
+  <text class="sub" x="14" y="45">Same 5.00 L flask, same temperature (25 °C)</text>
+  <rect class="box" x="14" y="64" width="100" height="120" rx="6"/><g transform="translate(63.3 129.6) rotate(21)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(45.6 118.8) rotate(91)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(33.7 158.9) rotate(106)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(57.6 104.2) rotate(141)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(75.3 85.0) rotate(90)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(44.9 139.8) rotate(28)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(40.7 82.6) rotate(169)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(97.8 89.1) rotate(80)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><text class="lab" x="64" y="204" text-anchor="middle">N₂ only</text><text class="pv" x="64" y="222" text-anchor="middle">0.979 atm</text><text class="op" x="124" y="128" text-anchor="middle">+</text><rect class="box" x="134" y="64" width="100" height="120" rx="6"/><g transform="translate(216.8 95.4) rotate(75)"><circle class="o2" cx="-4" cy="0" r="4.5"/><circle class="o2" cx="4" cy="0" r="4.5"/></g><g transform="translate(187.6 139.8) rotate(51)"><circle class="o2" cx="-4" cy="0" r="4.5"/><circle class="o2" cx="4" cy="0" r="4.5"/></g><text class="lab" x="184" y="204" text-anchor="middle">O₂ only</text><text class="pv" x="184" y="222" text-anchor="middle">0.245 atm</text><text class="op" x="244" y="128" text-anchor="middle">=</text><rect class="box" x="254" y="64" width="100" height="120" rx="6"/><g transform="translate(303.3 129.6) rotate(21)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(285.6 118.8) rotate(91)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(273.7 158.9) rotate(106)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(297.6 104.2) rotate(141)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(315.3 85.0) rotate(90)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(284.9 139.8) rotate(28)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(280.7 82.6) rotate(169)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(337.8 89.1) rotate(80)"><circle class="n2" cx="-4" cy="0" r="4.5"/><circle class="n2" cx="4" cy="0" r="4.5"/></g><g transform="translate(316.4 103.8) rotate(31)"><circle class="o2" cx="-4" cy="0" r="4.5"/><circle class="o2" cx="4" cy="0" r="4.5"/></g><g transform="translate(339.0 119.0) rotate(42)"><circle class="o2" cx="-4" cy="0" r="4.5"/><circle class="o2" cx="4" cy="0" r="4.5"/></g><text class="lab" x="304" y="204" text-anchor="middle">N₂ + O₂</text><text class="pv" x="304" y="222" text-anchor="middle">1.22 atm</text>
+  <text class="note" x="184" y="248" text-anchor="middle">0.200 mol N₂ and 0.0500 mol O₂: P(total) = P(N₂) + P(O₂)</text>
+</svg>

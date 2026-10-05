@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/phase-diagrams-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Phase Diagrams Worksheet'
+description: '8 questions on reading the phase diagrams of water and carbon dioxide, triple and critical points, sublimation and unit conversions. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/phase-diagrams-worksheet.pdf'
+answerKey: '/downloads/phase-diagrams-worksheet-answers.pdf'
+preview: '/previews/phase-diagrams-worksheet.png'
+status: review

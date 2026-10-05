@@ -1,0 +1,157 @@
+---
+title: Phase Diagrams
+question: "How can you tell which state a substance is in at any temperature and pressure?"
+description: "Reading phase diagrams: solid, liquid and gas regions, the lines between them, the triple point and critical point, and why water and carbon dioxide behave so differently."
+area: states-of-matter
+level: intermediate
+order: 28
+prerequisites: [phase-changes-and-heating-curves]
+related: [phase-changes-and-heating-curves, intermolecular-forces, gas-laws, density]
+flashcards: phase-diagrams
+quiz: phase-diagrams
+resources: [phase-diagrams-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Water: triple point 0.01 °C, 611.7 Pa (0.00604 atm); critical point 374 °C, 218 atm.
+  CO₂: triple point −56.6 °C, 5.11 atm; critical point 31.0 °C, 72.8 atm; sublimes at −78.5 °C at 1 atm;
+  vapour pressure of liquid CO₂ at 0 °C ≈ 34 atm. The figure is schematic (not to scale).
+*/}
+
+## What is it?
+
+A **phase diagram** is a map that shows which state (phase) of a substance is stable at each combination of **temperature** (horizontal axis) and **pressure** (vertical axis).
+
+- The three **areas** are the regions where the substance is solid, liquid or gas.
+- The **lines** between them show the conditions where two phases exist together in equilibrium. Crossing a line means a phase change: the solid–liquid line gives the melting point at each pressure, the liquid–gas line the boiling point, and the solid–gas line the sublimation point.
+- At the **triple point**, all three phases coexist.
+- The liquid–gas line ends at the **critical point**. Above it, liquid and gas can no longer be told apart: the substance is a **supercritical fluid**.
+
+<KeyIdea>
+To read a phase diagram, find the point for the given temperature and pressure and see which region it lies in. The **normal** melting and boiling points are where the horizontal line at **1 atm** crosses the solid–liquid and liquid–gas lines.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Dry ice.** Solid CO₂ turns straight into gas at room pressure, with no liquid: the phase diagram explains why.
+- **Freeze-drying and decaffeination.** Freeze-drying works below water's triple point, where ice sublimes. Supercritical CO₂ is used to remove caffeine from coffee.
+- **Weather and planets.** Phase diagrams explain why liquid water cannot exist on the surface of Mars, where the pressure is below water's triple point.
+
+## How does it work?
+
+### 1. Reading the diagram
+
+For a point at a given temperature and pressure:
+
+- **left** (low temperature) and **high pressure**: solid;
+- **middle**: liquid;
+- **right** (high temperature) and **low pressure**: gas.
+
+Moving **horizontally** (changing temperature at constant pressure) traces a heating or cooling curve. Moving **vertically** (changing pressure at constant temperature) shows what compression or expansion does.
+
+### 2. Water: an unusual slope
+
+For almost every substance the solid–liquid line slopes **to the right** (more pressure raises the melting point), because the solid is denser than the liquid. **Water's line slopes to the left**: ice is **less** dense than liquid water, so squeezing ice favours the liquid and **lowers** the melting point slightly.
+
+| | Water | Carbon dioxide |
+|---|---|---|
+| Triple point | 0.01 °C, 0.00604 atm | −56.6 °C, 5.11 atm |
+| Critical point | 374 °C, 218 atm | 31.0 °C, 72.8 atm |
+| At 1 atm | melts at 0 °C, boils at 100 °C | sublimes at −78.5 °C |
+| Solid–liquid line | slopes left | slopes right |
+
+### 3. Carbon dioxide: no liquid at 1 atm
+
+The triple-point pressure of CO₂ (5.11 atm) is **above** 1 atm. At atmospheric pressure the horizontal line misses the liquid region completely, so solid CO₂ goes straight to gas. Liquid CO₂ only exists above 5.11 atm, for example inside a fire extinguisher.
+
+<Analogy>
+A phase diagram is like a map with three countries: Solid, Liquid and Gas. The borders are the lines, where two countries meet. The triple point is the one spot where all three borders meet. The critical point is where the border between Liquid and Gas simply fades away.
+</Analogy>
+
+<MorePrecisely>
+The slope of each line is given by the Clapeyron equation: it depends on the enthalpy and the volume change of the transition. Because ice has a larger volume than liquid water, the volume change on melting is negative and the slope is negative. The liquid–gas line is the vapour-pressure curve: each point gives the vapour pressure of the liquid at that temperature. Real phase diagrams of water are much more complicated at very high pressures, with many different forms of ice.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/phase-diagrams/water-phase-diagram.svg" alt="Schematic phase diagram of water, pressure against temperature. Solid region at the upper left, liquid region at the top middle, gas region at the lower right. The solid–liquid line slopes slightly to the left. The three lines meet at the triple point, 0.01 degrees Celsius and 0.006 atm. The liquid–gas line ends at the critical point, 374 degrees and 218 atm. A dashed line at 1 atm crosses the melting line at 0 degrees and the boiling line at 100 degrees." caption="Phase diagram of water (schematic, not to scale)." width={360} height={320} />
+
+## Worked example
+
+<Example title="Reading the CO₂ data">
+**Question:** In which state is carbon dioxide at (a) 1 atm and 25 °C (b) 60 atm and 0 °C (c) 100 atm and 40 °C?
+
+1. (a) Above its sublimation point at 1 atm (−78.5 °C): **gas**.
+2. (b) Above the triple-point pressure, and 60 atm is above the vapour pressure of liquid CO₂ at 0 °C (about 34 atm): **liquid**.
+3. (c) Above both 31.0 °C and 72.8 atm, the critical point: **supercritical fluid**.
+</Example>
+
+<Example title="Why dry ice sublimes">
+**Question:** Explain why solid CO₂ at 1 atm turns directly into gas, while ice melts.
+
+At 1 atm, CO₂ is below its triple-point pressure (5.11 atm), so the 1 atm line passes from the solid region straight into the gas region: **sublimation**. For water, 1 atm is far above the triple-point pressure (0.00604 atm), so the 1 atm line crosses the liquid region: ice **melts**, then boils.
+</Example>
+
+<Example title="Converting triple-point pressures">
+**Question:** Express the triple-point pressures of water (611.7 Pa) and CO₂ (5.11 atm) in kPa.
+
+1. Water:
+
+   $$
+   \small\begin{aligned}
+   &611.7\ \cancel{\text{Pa}} \times \frac{1\ \text{kPa}}{1000\ \cancel{\text{Pa}}} \\[4pt]
+   &= 0.6117\ \text{kPa}
+   \end{aligned}
+   $$
+
+2. CO₂:
+
+   $$
+   \small\begin{aligned}
+   &5.11\ \cancel{\text{atm}} \times \frac{101.325\ \text{kPa}}{1\ \cancel{\text{atm}}} \\[4pt]
+   &= 518\ \text{kPa}
+   \end{aligned}
+   $$
+
+3. CO₂'s triple point is about 850 times higher in pressure than water's.
+</Example>
+
+<Example title="Pressure and ice">
+**Question:** Ice at −1 °C is squeezed very hard. Using water's phase diagram, what could happen?
+
+Because water's solid–liquid line slopes to the **left**, a vertical move upwards (higher pressure) from a point just left of the line can cross into the **liquid** region. Enough pressure can melt ice slightly below 0 °C.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Swapping the axes">
+Phase diagrams almost always have **temperature on the x-axis** and **pressure on the y-axis**. Read the axis labels before deciding which way "higher" is.
+</CommonMistake>
+
+<CommonMistake title="Thinking the triple point is a normal melting point">
+The triple point is at one specific pressure (0.00604 atm for water), not at 1 atm. The normal melting point (0 °C) and the triple point (0.01 °C) are close for water, but they are different points.
+</CommonMistake>
+
+<CommonMistake title="Assuming every substance has a liquid at 1 atm">
+CO₂ has no liquid at 1 atm, because its triple point lies above 1 atm.
+</CommonMistake>
+
+<NotationNote>
+- "Normal" melting and boiling points are measured at exactly 1 atm.
+- The pressure axis is often drawn on a stretched or logarithmic scale, so diagrams are usually not to scale.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Axes: temperature (x) and pressure (y); areas = single phases; lines = two phases in equilibrium.
+- Triple point: all three phases coexist. Critical point: end of the liquid–gas line; beyond it, a supercritical fluid.
+- Normal melting and boiling points lie on the 1 atm line.
+- Water's solid–liquid line slopes left because ice is less dense than liquid water.
+- CO₂ sublimes at 1 atm because its triple-point pressure (5.11 atm) is above 1 atm.
+</RememberThis>

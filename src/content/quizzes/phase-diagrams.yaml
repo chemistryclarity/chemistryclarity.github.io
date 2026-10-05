@@ -1,0 +1,79 @@
+# Quiz: Phase Diagrams
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Phase Diagrams: Quiz'
+description: 'Seven questions on reading phase diagrams, triple and critical points, and the diagrams of water and CO₂, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: pd-q1
+    prompt: 'On a phase diagram, what is found at the triple point?'
+    choices:
+      - 'Only the gas'
+      - 'Solid, liquid and gas in equilibrium'
+      - 'A supercritical fluid'
+      - 'The normal boiling point'
+    answer: 'Solid, liquid and gas in equilibrium'
+    explanation: 'The triple point is where the three lines meet: all three phases coexist.'
+    difficulty: easy
+  - id: pd-q2
+    prompt: 'What lies beyond the critical point?'
+    choices:
+      - 'A solid'
+      - 'A supercritical fluid'
+      - 'A mixture of solid and gas'
+      - 'Nothing: the substance decomposes'
+    answer: 'A supercritical fluid'
+    explanation: 'Above the critical temperature and pressure, liquid and gas can no longer be distinguished: the substance is a supercritical fluid.'
+    difficulty: easy
+  - id: pd-q3
+    prompt: 'What state is water in at 1 atm and 50 °C?'
+    choices:
+      - 'Solid'
+      - 'Liquid'
+      - 'Gas'
+      - 'Supercritical fluid'
+    answer: 'Liquid'
+    explanation: 'At 1 atm water melts at 0 °C and boils at 100 °C, so at 50 °C it is liquid.'
+    difficulty: easy
+  - id: pd-q4
+    prompt: 'Why does solid CO₂ sublime at atmospheric pressure?'
+    choices:
+      - 'It is very cold'
+      - 'Its triple-point pressure (5.11 atm) is above 1 atm'
+      - 'It has no intermolecular forces'
+      - 'Its critical point is below 0 °C'
+    answer: 'Its triple-point pressure (5.11 atm) is above 1 atm'
+    explanation: 'Liquid CO₂ only exists above 5.11 atm. At 1 atm the solid region borders the gas region directly.'
+    difficulty: medium
+  - id: pd-q5
+    prompt: 'Water''s solid–liquid line slopes to the left. What does this mean?'
+    choices:
+      - 'Increasing pressure raises the melting point'
+      - 'Increasing pressure lowers the melting point'
+      - 'Ice is denser than liquid water'
+      - 'Water has no triple point'
+    answer: 'Increasing pressure lowers the melting point'
+    explanation: 'Because ice is less dense than liquid water, squeezing ice favours the liquid, so the melting point falls slightly as pressure rises.'
+    difficulty: medium
+  - id: pd-q6
+    prompt: 'In which state is CO₂ at 60 atm and 0 °C? (Triple point −56.6 °C, 5.11 atm; vapour pressure of liquid CO₂ at 0 °C ≈ 34 atm)'
+    choices:
+      - 'Solid'
+      - 'Liquid'
+      - 'Gas'
+      - 'Supercritical fluid'
+    answer: 'Liquid'
+    explanation: 'The pressure is above the vapour pressure at 0 °C, and both T and P are below the critical point (31.0 °C, 72.8 atm), so CO₂ is liquid, as in a fire extinguisher.'
+    difficulty: hard
+  - id: pd-q7
+    prompt: 'Moving straight up on a phase diagram (at constant temperature) means:'
+    choices:
+      - 'heating at constant pressure'
+      - 'increasing the pressure at constant temperature'
+      - 'cooling at constant pressure'
+      - 'lowering the pressure at constant temperature'
+    answer: 'increasing the pressure at constant temperature'
+    explanation: 'Pressure is on the y-axis, so a vertical move upward is compression at constant temperature.'
+    difficulty: medium

@@ -1,0 +1,79 @@
+# Quiz: Gas Mixtures and Gas Stoichiometry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Gas Mixtures and Gas Stoichiometry: Quiz'
+description: 'Seven questions on partial pressures, mole fractions, gases collected over water and gas stoichiometry, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: gm-q1
+    prompt: 'A mixture contains N₂ at 0.60 atm, O₂ at 0.25 atm and CO₂ at 0.15 atm. What is the total pressure?'
+    choices:
+      - '0.15 atm'
+      - '0.60 atm'
+      - '1.00 atm'
+      - '0.33 atm'
+    answer: '1.00 atm'
+    explanation: 'Dalton''s law: P(total) = 0.60 atm + 0.25 atm + 0.15 atm = 1.00 atm.'
+    difficulty: easy
+  - id: gm-q2
+    prompt: 'A gas mixture is 40 % He by moles at a total pressure of 2.0 atm. What is the partial pressure of He?'
+    choices:
+      - '0.40 atm'
+      - '0.80 atm'
+      - '1.2 atm'
+      - '5.0 atm'
+    answer: '0.80 atm'
+    explanation: 'P(He) = x(He) × P(total) = 0.40 × 2.0 atm = 0.80 atm.'
+    difficulty: easy
+  - id: gm-q3
+    prompt: 'Oxygen is collected over water at 25 °C (water vapour pressure 23.8 mmHg). The total pressure is 760 mmHg. What is the pressure of the oxygen?'
+    choices:
+      - '760 mmHg'
+      - '783.8 mmHg'
+      - '736.2 mmHg'
+      - '23.8 mmHg'
+    answer: '736.2 mmHg'
+    explanation: 'P(O₂) = P(total) − P(H₂O) = 760 mmHg − 23.8 mmHg = 736.2 mmHg.'
+    difficulty: easy
+  - id: gm-q4
+    prompt: 'What volume does 0.500 mol of a gas occupy at 0 °C and 1 atm?'
+    choices:
+      - '11.2 L'
+      - '22.4 L'
+      - '12.2 L'
+      - '44.8 L'
+    answer: '11.2 L'
+    explanation: '0.500 mol × 22.4 L/mol = 11.2 L. 12.2 L would be the volume at 25 °C (24.5 L/mol).'
+    difficulty: medium
+  - id: gm-q5
+    prompt: 'At the same temperature and pressure, what volume of NH₃ forms from 10.0 L of N₂? (N₂ + 3H₂ → 2NH₃)'
+    choices:
+      - '5.00 L'
+      - '10.0 L'
+      - '20.0 L'
+      - '30.0 L'
+    answer: '20.0 L'
+    explanation: 'For gases at the same T and P, volumes are in the mole ratio: 1 N₂ : 2 NH₃, so 10.0 L × 2 = 20.0 L.'
+    difficulty: medium
+  - id: gm-q6
+    prompt: 'What volume of H₂ at 25 °C and 1.00 atm is produced when 1.31 g of Zn (65.38 g/mol) reacts with excess HCl? (Zn + 2HCl → ZnCl₂ + H₂)'
+    choices:
+      - '0.449 L'
+      - '0.490 L'
+      - '0.980 L'
+      - '32.0 L'
+    answer: '0.490 L'
+    explanation: 'n(Zn) = 1.31 g ÷ 65.38 g/mol = 0.0200 mol = n(H₂). V = nRT/P = 0.0200 mol × 0.08206 L·atm/(mol·K) × 298.15 K ÷ 1.00 atm = 0.490 L. 0.449 L uses 22.4 L/mol at the wrong temperature.'
+    difficulty: hard
+  - id: gm-q7
+    prompt: 'Why must the vapour pressure of water be subtracted when a gas is collected over water?'
+    choices:
+      - 'Water vapour reacts with the gas'
+      - 'The collected gas is mixed with water vapour, which contributes to the total pressure'
+      - 'Water absorbs all of the gas'
+      - 'It makes the temperature lower'
+    answer: 'The collected gas is mixed with water vapour, which contributes to the total pressure'
+    explanation: 'By Dalton''s law the measured pressure is the sum of the gas pressure and the water vapour pressure, so the vapour pressure is subtracted.'
+    difficulty: medium
