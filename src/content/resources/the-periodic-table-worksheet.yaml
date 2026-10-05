@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/the-periodic-table-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'The Periodic Table Worksheet'
+description: '8 questions on periods and groups, families, metals and non-metals, valence electrons, ions, blocks and Mendeleev''s predictions. Answer key included.'
+type: worksheet
+level: beginner
+access: free
+file: '/downloads/the-periodic-table-worksheet.pdf'
+answerKey: '/downloads/the-periodic-table-worksheet-answers.pdf'
+preview: '/previews/the-periodic-table-worksheet.png'
+status: review

@@ -1,0 +1,219 @@
+---
+title: Light and Atomic Spectra
+question: "How does light reveal the energy levels inside atoms?"
+description: "Wavelength, frequency and photon energy (c = λν, E = hν), the electromagnetic spectrum, line spectra and the Bohr model of the hydrogen atom, with worked examples."
+area: atomic-structure
+level: intermediate
+order: 25
+prerequisites: [atomic-structure]
+related: [electron-configuration, quantum-numbers-and-orbitals, beer-lambert-law, energy-heat-and-work]
+flashcards: light-and-atomic-spectra
+quiz: light-and-atomic-spectra
+resources: [light-and-atomic-spectra-worksheet]
+references: [bipm-si-brochure-9, brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Constants: c = 2.998 × 10⁸ m/s, h = 6.626 × 10⁻³⁴ J s, N_A = 6.022 × 10²³ mol⁻¹,
+  Bohr constant for hydrogen R_H = 2.179 × 10⁻¹⁸ J. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+Light is **electromagnetic radiation**: a wave of electric and magnetic fields that travels through space at the **speed of light**, $c = 2.998 \times 10^{8}$ m/s. A wave is described by its:
+
+- **wavelength**, $\lambda$ (lambda): the distance from one crest to the next, in m or nm;
+- **frequency**, $\nu$ (nu): the number of waves passing a point each second, in s⁻¹ or hertz (Hz).
+
+They are linked by
+
+$$
+c = \lambda \nu
+$$
+
+Light also behaves as a stream of particles called **photons**. Each photon carries a fixed amount (a **quantum**) of energy:
+
+$$
+E = h\nu = \frac{hc}{\lambda}
+$$
+
+where $h = 6.626 \times 10^{-34}$ J s is **Planck's constant**. Short wavelength means high frequency and **high energy**.
+
+<KeyIdea>
+When atoms are heated or excited by electricity, they emit light of only certain **exact wavelengths**: a **line spectrum**, different for every element. This shows that electrons in atoms can have only certain **energies** (energy levels). Each line is a photon released when an electron drops from a higher level to a lower one.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Identifying elements.** Every element has its own line spectrum, like a fingerprint. Flame tests, street lamps and the analysis of starlight all rely on it; helium was discovered in the Sun's spectrum before it was found on Earth.
+- **Energy levels lead to electron configurations.** The idea of quantized energy levels is the starting point for shells, subshells and orbitals.
+- **Light and chemistry.** Photons with enough energy break bonds (UV light causes sunburn), and the colours of solutions are the basis of spectrophotometry.
+
+## How does it work?
+
+### 1. The electromagnetic spectrum
+
+From low to high energy: radio waves, microwaves, infrared, **visible light** (about 400 nm violet to 700 nm red), ultraviolet, X-rays and gamma rays. Only a narrow band is visible to us.
+
+### 2. Line spectra
+
+A hot solid gives a **continuous spectrum** (all colours, like a rainbow). A gas of one element, excited by heat or electricity, gives an **emission line spectrum**: bright lines at fixed wavelengths on a dark background. Hydrogen's visible lines are at 656 nm (red), 486 nm (blue-green), 434 nm and 410 nm (violet). Cool gas in front of a bright source **absorbs** the same wavelengths, giving dark lines (an absorption spectrum).
+
+### 3. The Bohr model of hydrogen
+
+In 1913 Niels Bohr proposed that the electron in a hydrogen atom can only occupy orbits with certain energies:
+
+$$
+E_n = -\frac{2.179 \times 10^{-18}\ \text{J}}{n^2}
+$$
+
+where $n = 1, 2, 3, \dots$
+
+- $n = 1$ is the **ground state**, the lowest energy. Higher $n$ are **excited states**.
+- Energies are **negative** because the electron is bound: zero energy means the electron has been removed ($n = \infty$).
+- When the electron drops from a higher level to a lower one, it emits **one photon** whose energy equals the gap:
+
+$$
+\begin{aligned}
+&\Delta E = 2.179 \times 10^{-18}\ \text{J} \\[4pt]
+&\quad \times \left(\frac{1}{n_\text{f}^2} - \frac{1}{n_\text{i}^2}\right)
+\end{aligned}
+$$
+
+(written as a positive energy for the photon emitted, with $n_\text{f}$ the lower level). Drops to $n = 2$ give the **visible** lines of hydrogen; drops to $n = 1$ give ultraviolet lines.
+
+<Analogy>
+Energy levels are like the rungs of a ladder, not a ramp. You can stand on a rung, but not between rungs. Jumping down from one rung to another always releases the same exact amount of energy, which is why each jump gives light of one exact colour.
+</Analogy>
+
+<MorePrecisely>
+Bohr's model works perfectly only for hydrogen and other one-electron ions. It was replaced by **quantum mechanics**, in which electrons are described by **orbitals** (regions where the electron is likely to be found) rather than fixed orbits. The energy levels of hydrogen predicted by quantum mechanics are the same as Bohr's, which is why his formula is still used. The wave–particle nature of light was confirmed by the photoelectric effect, explained by Einstein in 1905.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/light-and-atomic-spectra/hydrogen-levels.svg" alt="Energy level diagram for hydrogen with levels n = 1 to n = 5 getting closer together towards the top. Downward arrows from n = 3, 4, 5 and 6 to n = 2 produce the visible lines at 656 nm (red), 486 nm (blue-green), 434 nm and 410 nm (violet), shown below as coloured lines on a dark spectrum strip." caption="Each visible line of hydrogen comes from an electron dropping to the n = 2 level." width={360} height={360} />
+
+## Worked example
+
+<Example title="Frequency from wavelength">
+**Question:** Hydrogen's red line has a wavelength of 656 nm. What is its frequency?
+
+1. Convert to metres: $656\ \text{nm} = 656 \times 10^{-9}\ \text{m}$
+2. Rearrange $c = \lambda\nu$:
+
+   $$
+   \begin{aligned}
+   &\nu = \frac{c}{\lambda} \\[4pt]
+   &= \frac{2.998 \times 10^{8}\ \text{m/s}}{656 \times 10^{-9}\ \text{m}} \\[4pt]
+   &= 4.57 \times 10^{14}\ \text{s}^{-1}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Energy of a photon and of a mole of photons">
+**Question:** What is the energy of one photon of the 656 nm light, and of one mole of these photons?
+
+1. One photon:
+
+   $$
+   \begin{aligned}
+   &E = h\nu \\[4pt]
+   &= 6.626 \times 10^{-34}\ \text{J}\,\cancel{\text{s}} \\[4pt]
+   &\quad \times 4.570 \times 10^{14}\ \cancel{\text{s}^{-1}} \\[4pt]
+   &= 3.03 \times 10^{-19}\ \text{J}
+   \end{aligned}
+   $$
+
+2. One mole:
+
+   $$
+   \begin{aligned}
+   &3.028 \times 10^{-19}\ \text{J} \\[4pt]
+   &\quad \times 6.022 \times 10^{23}\ \text{mol}^{-1} \\[4pt]
+   &= 1.824 \times 10^{5}\ \text{J/mol} \\[4pt]
+   &= 182\ \text{kJ/mol}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Predicting a line with the Bohr model">
+**Question:** Calculate the wavelength of the photon emitted when a hydrogen electron drops from $n = 3$ to $n = 2$.
+
+1. Energy gap:
+
+   $$
+   \small\begin{aligned}
+   &\Delta E = 2.179 \times 10^{-18}\ \text{J} \\[4pt]
+   &\quad \times \left(\frac{1}{2^2} - \frac{1}{3^2}\right) \\[4pt]
+   &= 2.179 \times 10^{-18}\ \text{J} \\[4pt]
+   &\quad \times 0.1389 \\[4pt]
+   &= 3.026 \times 10^{-19}\ \text{J}
+   \end{aligned}
+   $$
+
+2. Wavelength, from $E = hc/\lambda$:
+
+   $$
+   \small\begin{aligned}
+   &\lambda = \frac{hc}{\Delta E} \\[4pt]
+   &= \frac{6.626 \times 10^{-34}\ \text{J s}}{3.026 \times 10^{-19}\ \text{J}} \\[4pt]
+   &\quad \times 2.998 \times 10^{8}\ \text{m/s} \\[4pt]
+   &= 6.56 \times 10^{-7}\ \text{m} \\[4pt]
+   &= 656\ \text{nm}
+   \end{aligned}
+   $$
+
+3. This is exactly hydrogen's red line: the Bohr model explains the observed spectrum.
+</Example>
+
+<Example title="Ionization energy of hydrogen">
+**Question:** How much energy is needed to remove the electron from a hydrogen atom in its ground state? Give the answer per mole.
+
+1. From $n = 1$ ($E_1 = -2.179 \times 10^{-18}$ J) to $n = \infty$ ($E = 0$): $\Delta E = +2.179 \times 10^{-18}$ J per atom.
+2. Per mole:
+
+   $$
+   \begin{aligned}
+   &2.179 \times 10^{-18}\ \text{J} \\[4pt]
+   &\quad \times 6.022 \times 10^{23}\ \text{mol}^{-1} \\[4pt]
+   &= 1.312 \times 10^{6}\ \text{J/mol} \\[4pt]
+   &= 1312\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+3. This matches the measured first ionization energy of hydrogen, 1312 kJ/mol.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Forgetting to convert nm to m">
+In $c = \lambda\nu$ and $E = hc/\lambda$, the wavelength must be in **metres** to match $c$ in m/s. 656 nm is $6.56 \times 10^{-7}$ m, not 656 m.
+</CommonMistake>
+
+<CommonMistake title="Thinking longer wavelength means more energy">
+Energy is **inversely** proportional to wavelength. Red light (700 nm) has **less** energy per photon than violet light (400 nm), and UV has more than both.
+</CommonMistake>
+
+<CommonMistake title="Mixing per-photon and per-mole energies">
+$E = h\nu$ gives the energy of **one** photon (about $10^{-19}$ J). To compare with bond energies in kJ/mol, multiply by Avogadro's number and divide by 1000.
+</CommonMistake>
+
+<NotationNote>
+- $\nu$ is the Greek letter nu (frequency), not the letter v (velocity).
+- 1 Hz = 1 s⁻¹; 1 nm = 10⁻⁹ m.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- $c = \lambda\nu$ and $E = h\nu = hc/\lambda$; $c = 2.998 \times 10^{8}$ m/s, $h = 6.626 \times 10^{-34}$ J s.
+- Short wavelength = high frequency = high energy. Visible light: about 400–700 nm.
+- Atoms emit and absorb only certain wavelengths (line spectra) because electron energy levels are quantized.
+- Bohr: $E_n = -2.179 \times 10^{-18}\ \text{J}/n^2$; a photon carries the energy difference between two levels.
+- Per mole: multiply the photon energy by $N_\text{A}$.
+</RememberThis>

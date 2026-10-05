@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .ax { stroke: #8a94a6; stroke-width: 1; stroke-dasharray: 3 3; }
+    .axl { fill: #5b6577; font-size: 9.5px; font-style: italic; }
+    .p1 { fill: #99e0d4; stroke: #0f766e; stroke-width: 1.4; fill-opacity: 0.85; }
+    .p2 { fill: #fcd9a8; stroke: #b45309; stroke-width: 1.4; fill-opacity: 0.85; }
+    .lab { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .nuc { fill: #14213d; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .axl { fill: #9aa5ba; }
+      .ax { stroke: #6b7894; }
+      .p1 { fill: #115e59; stroke: #2dd4bf; }
+      .p2 { fill: #78400f; stroke: #fbbf24; }
+      .nuc { fill: #e9edf5; }
+    }
+  </style>
+  <rect class="bg" width="360" height="300" rx="14"/>
+  <text class="t" x="20" y="28">Orbital shapes</text>
+  <text class="sub" x="20" y="45">Boundary surfaces (schematic). Colours show the phases.</text>
+
+  <!-- s -->
+  <g transform="translate(65 125)">
+    <circle class="p1" r="30"/>
+    <circle class="nuc" r="2"/>
+    <text class="lab" y="58" text-anchor="middle">s</text>
+  </g>
+
+  <!-- px (along the diagonal "x" axis) -->
+  <g transform="translate(180 125)">
+    <line class="ax" x1="30" y1="-30" x2="-30" y2="30"/><text class="axl" x="-38" y="42">x</text>
+    <ellipse class="p1" cx="-17" cy="17" rx="12" ry="24" transform="rotate(45 -17 17)"/>
+    <ellipse class="p2" cx="17" cy="-17" rx="12" ry="24" transform="rotate(45 17 -17)"/>
+    <circle class="nuc" r="2"/>
+    <text class="lab" y="58" text-anchor="middle">p<tspan dy="3" font-size="9.5">x</tspan></text>
+  </g>
+
+  <!-- py (horizontal) -->
+  <g transform="translate(295 125)">
+    <line class="ax" x1="-52" y1="0" x2="52" y2="0"/><text class="axl" x="48" y="-5">y</text>
+    <ellipse class="p2" cx="-24" cy="0" rx="24" ry="12"/>
+    <ellipse class="p1" cx="24" cy="0" rx="24" ry="12"/>
+    <circle class="nuc" r="2"/>
+    <text class="lab" y="58" text-anchor="middle">p<tspan dy="3" font-size="9.5">y</tspan></text>
+  </g>
+
+  <!-- pz (vertical) -->
+  <g transform="translate(110 235)">
+    <line class="ax" x1="0" y1="-50" x2="0" y2="50"/><text class="axl" x="5" y="-44">z</text>
+    <ellipse class="p1" cx="0" cy="-24" rx="12" ry="24"/>
+    <ellipse class="p2" cx="0" cy="24" rx="12" ry="24"/>
+    <circle class="nuc" r="2"/>
+    <text class="lab" x="40" y="5" text-anchor="middle">p<tspan dy="3" font-size="9.5">z</tspan></text>
+  </g>
+
+  <!-- d (cloverleaf between the axes) -->
+  <g transform="translate(250 235)">
+    <line class="ax" x1="-50" y1="0" x2="50" y2="0"/><line class="ax" x1="0" y1="-50" x2="0" y2="50"/>
+    <ellipse class="p1" cx="-18" cy="-18" rx="10" ry="22" transform="rotate(-45 -18 -18)"/>
+    <ellipse class="p1" cx="18" cy="18" rx="10" ry="22" transform="rotate(-45 18 18)"/>
+    <ellipse class="p2" cx="18" cy="-18" rx="10" ry="22" transform="rotate(45 18 -18)"/>
+    <ellipse class="p2" cx="-18" cy="18" rx="10" ry="22" transform="rotate(45 -18 18)"/>
+    <circle class="nuc" r="2"/>
+    <text class="lab" x="62" y="5" text-anchor="middle">d</text>
+  </g>
+</svg>

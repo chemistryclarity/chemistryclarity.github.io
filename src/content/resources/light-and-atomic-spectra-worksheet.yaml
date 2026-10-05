@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/light-and-atomic-spectra-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Light and Atomic Spectra Worksheet'
+description: '8 questions on wavelength, frequency and photon energy, line spectra and Bohr-model calculations for hydrogen. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/light-and-atomic-spectra-worksheet.pdf'
+answerKey: '/downloads/light-and-atomic-spectra-worksheet-answers.pdf'
+preview: '/previews/light-and-atomic-spectra-worksheet.png'
+status: review

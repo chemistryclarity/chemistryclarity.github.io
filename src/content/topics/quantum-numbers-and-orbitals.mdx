@@ -1,0 +1,148 @@
+---
+title: Quantum Numbers and Orbitals
+question: "What do the four quantum numbers tell you about an electron?"
+description: "The four quantum numbers (n, l, mₗ, mₛ), which combinations are allowed, how many orbitals and electrons each shell holds, orbital shapes and nodes."
+area: atomic-structure
+level: intermediate
+order: 35
+prerequisites: [electron-configuration, light-and-atomic-spectra]
+related: [electron-configuration, light-and-atomic-spectra, periodic-trends, molecular-shapes]
+flashcards: quantum-numbers-and-orbitals
+quiz: quantum-numbers-and-orbitals
+resources: [quantum-numbers-and-orbitals-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Quantum numbers are dimensionless. Orbital drawings are schematic boundary surfaces, not to scale.
+*/}
+
+## What is it?
+
+In quantum mechanics, an electron in an atom is described by an **orbital**: a region of space where the electron is likely to be found. Each orbital, and each electron in it, is labelled by **quantum numbers**, like an address:
+
+| Quantum number | Symbol | Allowed values | What it describes |
+|---|---|---|---|
+| Principal | $n$ | 1, 2, 3, ... | The shell: size and main energy level |
+| Angular momentum (azimuthal) | $l$ | 0 to $n - 1$ | The subshell: shape of the orbital |
+| Magnetic | $m_l$ | $-l$ to $+l$, in steps of 1 | The orientation of the orbital in space |
+| Spin | $m_s$ | $+\tfrac{1}{2}$ or $-\tfrac{1}{2}$ | The spin of the electron |
+
+The value of $l$ is usually given as a letter: $l = 0$ is **s**, $l = 1$ is **p**, $l = 2$ is **d** and $l = 3$ is **f**. So $n = 3, l = 1$ is the **3p** subshell.
+
+<KeyIdea>
+The first three quantum numbers ($n$, $l$, $m_l$) identify an **orbital**; the fourth ($m_s$) identifies one of the two electrons in it. **Pauli exclusion principle:** no two electrons in an atom can have the same set of all four quantum numbers. That's why each orbital holds at most two electrons, with opposite spins.
+</KeyIdea>
+
+## Why does it matter?
+
+- **It explains the electron configuration rules.** The number of $m_l$ values gives the number of orbitals per subshell (1, 3, 5, 7), and so the capacities 2, 6, 10 and 14 electrons that build the periodic table.
+- **It explains the shape of the periodic table.** The s, p, d and f blocks are 2, 6, 10 and 14 elements wide.
+- **Orbital shapes explain bonding.** The directions of p and d orbitals determine bond angles and molecular shapes.
+
+## How does it work?
+
+### 1. Counting orbitals and electrons
+
+For a given $l$, $m_l$ takes $2l + 1$ values, so there are $2l + 1$ orbitals in the subshell:
+
+| Subshell | $l$ | $m_l$ values | Orbitals | Max electrons |
+|---|---|---|---|---|
+| s | 0 | 0 | 1 | 2 |
+| p | 1 | −1, 0, +1 | 3 | 6 |
+| d | 2 | −2, −1, 0, +1, +2 | 5 | 10 |
+| f | 3 | −3 to +3 | 7 | 14 |
+
+Shell $n$ contains $n$ subshells, $n^2$ orbitals and at most $2n^2$ electrons. For example, the $n = 2$ shell has 2s and 2p: 4 orbitals, 8 electrons.
+
+### 2. Orbital shapes
+
+- **s orbitals** are **spherical**. Larger $n$ gives a larger sphere.
+- **p orbitals** have **two lobes** (a dumbbell) on opposite sides of the nucleus, with a nodal plane between them. The three p orbitals point along the x, y and z axes: $p_x$, $p_y$, $p_z$.
+- **d orbitals** mostly have **four lobes** (a cloverleaf); one ($d_{z^2}$) has two lobes and a ring.
+
+### 3. Nodes
+
+A **node** is a surface where the chance of finding the electron is zero. An orbital has $n - 1$ nodes in total: $l$ of them are **angular** (planes or cones), and $n - l - 1$ are **radial** (spheres).
+
+<Analogy>
+The quantum numbers are like an address in a city. $n$ is the district (how far from the centre), $l$ is the type of street (its shape), $m_l$ is which way the street points, and $m_s$ is which of the two apartments in the building the electron lives in. No two electrons share the same full address.
+</Analogy>
+
+<MorePrecisely>
+An orbital is a solution of the Schrödinger equation, a **wavefunction**, $\psi$. The probability of finding the electron is proportional to $\psi^2$. The usual drawings are **boundary surfaces** enclosing about 90 % of that probability. In hydrogen all subshells with the same $n$ have the same energy; in many-electron atoms, shielding makes s lower than p, and p lower than d, which leads to the Aufbau filling order. The two lobes of a p orbital have opposite **phases** (signs of $\psi$), which matters when orbitals overlap to form bonds.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/quantum-numbers-and-orbitals/orbital-shapes.svg" alt="Schematic orbital shapes. An s orbital is a sphere. The three p orbitals are dumbbells with two lobes along the x, y and z axes. A d orbital is drawn as a cloverleaf of four lobes between the axes." caption="Boundary surfaces of s, p and d orbitals (schematic). The two colours show the opposite phases of the lobes." width={360} height={300} />
+
+## Worked example
+
+<Example title="Allowed values in a shell">
+**Question:** List the allowed values of $l$ and $m_l$ for $n = 3$. How many orbitals and electrons can the shell hold?
+
+1. $l$ = 0, 1, 2 (3s, 3p, 3d).
+2. $m_l$: for $l = 0$: 0; for $l = 1$: −1, 0, +1; for $l = 2$: −2, −1, 0, +1, +2.
+3. Orbitals: 1 + 3 + 5 = **9** $= 3^2$. Electrons: $2 \times 9 = $ **18** $= 2 \times 3^2$.
+</Example>
+
+<Example title="Which sets are allowed?">
+**Question:** Which of these sets $(n, l, m_l, m_s)$ are allowed? (a) $(2, 1, 0, +\tfrac{1}{2})$ (b) $(2, 2, 0, +\tfrac{1}{2})$ (c) $(3, 1, -2, -\tfrac{1}{2})$ (d) $(4, 0, 0, 0)$
+
+1. (a) **Allowed**: $l$ is below $n$, $m_l$ lies between $-l$ and $+l$: a 2p electron.
+2. (b) **Not allowed**: $l$ must be at most $n - 1 = 1$.
+3. (c) **Not allowed**: for $l = 1$, $m_l$ can only be −1, 0 or +1.
+4. (d) **Not allowed**: $m_s$ must be $+\tfrac{1}{2}$ or $-\tfrac{1}{2}$.
+</Example>
+
+<Example title="Naming a subshell">
+**Question:** Name the subshell with $n = 4$, $l = 2$, and state how many electrons it can hold.
+
+$l = 2$ is d, so this is **4d**. It has $2l + 1 = 5$ orbitals, holding **10** electrons.
+</Example>
+
+<Example title="Quantum numbers of a valence electron">
+**Question:** Give a possible set of quantum numbers for the outermost electron of sodium (1s² 2s² 2p⁶ 3s¹).
+
+The electron is in 3s: $n = 3$, $l = 0$, $m_l = 0$, $m_s = +\tfrac{1}{2}$ (or $-\tfrac{1}{2}$).
+</Example>
+
+<Example title="Counting nodes">
+**Question:** How many nodes of each kind does a 3p orbital have?
+
+Total $= n - 1 = 2$. Angular $= l = 1$ (a nodal plane). Radial $= n - l - 1 = 1$ (a nodal sphere).
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Letting l equal n">
+$l$ runs from 0 to $n - 1$. There is no 1p or 2d subshell: the first p subshell is 2p and the first d subshell is 3d.
+</CommonMistake>
+
+<CommonMistake title="Confusing orbitals with electrons">
+A p subshell has **3 orbitals** but holds up to **6 electrons**. Always check whether a question asks for orbitals or electrons.
+</CommonMistake>
+
+<CommonMistake title="Thinking an orbital is a path">
+An orbital is not an orbit the electron travels around. It is a region of probability; the electron has no definite path.
+</CommonMistake>
+
+<NotationNote>
+- $l$ is a lower-case L; some books write it $\ell$.
+- A subshell is written number + letter (3p), and its electron count as a superscript (3p⁴).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- $n$ = 1, 2, 3...; $l$ = 0 to $n - 1$ (s, p, d, f); $m_l$ = $-l$ to $+l$; $m_s$ = $\pm\tfrac{1}{2}$.
+- Orbitals per subshell: $2l + 1$ (1, 3, 5, 7). Per shell: $n^2$ orbitals, $2n^2$ electrons.
+- Pauli: no two electrons have the same four quantum numbers, so 2 electrons per orbital.
+- s spherical, p two lobes (x, y, z), d mostly four lobes.
+- Nodes: $n - 1$ total; $l$ angular; $n - l - 1$ radial.
+</RememberThis>

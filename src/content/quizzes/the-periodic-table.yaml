@@ -1,0 +1,79 @@
+# Quiz: The Periodic Table
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'The Periodic Table: Quiz'
+description: 'Seven questions on periods, groups, families, metals and non-metals, ions and blocks, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: pt-q1
+    prompt: 'Which element is in period 3, group 2?'
+    choices:
+      - 'Beryllium'
+      - 'Magnesium'
+      - 'Calcium'
+      - 'Aluminium'
+    answer: 'Magnesium'
+    explanation: 'Period 3 is the third row; group 2 is the second column: magnesium (Mg), an alkaline earth metal.'
+    difficulty: easy
+  - id: pt-q2
+    prompt: 'Which group contains the halogens?'
+    choices:
+      - 'Group 1'
+      - 'Group 2'
+      - 'Group 17'
+      - 'Group 18'
+    answer: 'Group 17'
+    explanation: 'The halogens (F, Cl, Br, I, At) are in group 17. Group 18 is the noble gases.'
+    difficulty: easy
+  - id: pt-q3
+    prompt: 'Which element is a metalloid?'
+    choices:
+      - 'Sodium'
+      - 'Silicon'
+      - 'Sulfur'
+      - 'Argon'
+    answer: 'Silicon'
+    explanation: 'Silicon lies on the staircase line and has properties between those of metals and non-metals; it is a semiconductor.'
+    difficulty: easy
+  - id: pt-q4
+    prompt: 'Which ion does sulfur (group 16) usually form?'
+    choices:
+      - 'S⁺'
+      - 'S²⁺'
+      - 'S²⁻'
+      - 'S⁶⁻'
+    answer: 'S²⁻'
+    explanation: 'Sulfur has 6 valence electrons and gains 2 to reach the arrangement of argon, forming the sulfide ion S²⁻.'
+    difficulty: medium
+  - id: pt-q5
+    prompt: 'Why do lithium, sodium and potassium react in similar ways?'
+    choices:
+      - 'They have similar atomic masses'
+      - 'They are in the same period'
+      - 'They each have one valence electron'
+      - 'They are all gases'
+    answer: 'They each have one valence electron'
+    explanation: 'Group 1 elements all have one outer electron, which they lose easily to form 1+ ions. Their masses are quite different and they are in different periods.'
+    difficulty: medium
+  - id: pt-q6
+    prompt: 'Iron is in group 8. Which block is it in?'
+    choices:
+      - 's-block'
+      - 'p-block'
+      - 'd-block'
+      - 'f-block'
+    answer: 'd-block'
+    explanation: 'Groups 3–12 form the d-block (transition metals); iron''s outer electrons are filling the 3d subshell.'
+    difficulty: medium
+  - id: pt-q7
+    prompt: 'What is the formula of the compound formed by aluminium and oxygen, predicted from their groups?'
+    choices:
+      - 'AlO'
+      - 'Al₂O₃'
+      - 'Al₃O₂'
+      - 'AlO₂'
+    answer: 'Al₂O₃'
+    explanation: 'Aluminium (group 13) forms Al³⁺; oxygen (group 16) forms O²⁻. 2 × (+3) + 3 × (−2) = 0, so Al₂O₃.'
+    difficulty: hard

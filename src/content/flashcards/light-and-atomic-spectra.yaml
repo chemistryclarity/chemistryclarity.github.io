@@ -1,0 +1,39 @@
+# Flashcards: Light and Atomic Spectra
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Light and Atomic Spectra: Flashcards'
+description: 'Revise wavelength, frequency and photon energy, line spectra and the Bohr model of hydrogen.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ls2-01
+    front: 'Give the equation linking the speed of light, wavelength and frequency.'
+    back: '$c = \lambda\nu$, with $c = 2.998 \times 10^{8}$ m/s'
+  - id: ls2-02
+    front: 'Give the equation for the energy of a photon.'
+    back: '$E = h\nu = \dfrac{hc}{\lambda}$, with $h = 6.626 \times 10^{-34}$ J s'
+  - id: ls2-03
+    front: 'Which has more energy per photon: red light or violet light?'
+    back: 'Violet: shorter wavelength, higher frequency, more energy.'
+  - id: ls2-04
+    front: 'What is the approximate wavelength range of visible light?'
+    back: 'About 400 nm (violet) to 700 nm (red).'
+  - id: ls2-05
+    front: 'What is a line spectrum, and what does it show?'
+    back: 'Light of only certain exact wavelengths, emitted by an excited element. It shows that electron energy levels are quantized.'
+  - id: ls2-06
+    front: 'Give the Bohr energy of level n in hydrogen.'
+    back: '$E_n = -\dfrac{2.179 \times 10^{-18}\ \text{J}}{n^2}$'
+  - id: ls2-07
+    front: 'Why are the Bohr energies negative?'
+    back: 'The electron is bound to the nucleus; zero energy means it has been removed (n = ∞).'
+  - id: ls2-08
+    front: 'Which drops give hydrogen''s visible lines?'
+    back: 'Drops from higher levels down to n = 2 (656, 486, 434 and 410 nm).'
+  - id: ls2-09
+    front: 'What is the frequency of 656 nm light?'
+    back: '(2.998 × 10⁸ m/s) ÷ (656 × 10⁻⁹ m) = 4.57 × 10¹⁴ s⁻¹'
+  - id: ls2-10
+    front: 'How do you convert the energy of one photon into kJ/mol?'
+    back: 'Multiply by Avogadro''s number (6.022 × 10²³ mol⁻¹) and divide by 1000.'

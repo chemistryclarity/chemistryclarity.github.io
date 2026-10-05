@@ -1,0 +1,39 @@
+# Flashcards: Quantum Numbers and Orbitals
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All counts checked.
+title: 'Quantum Numbers and Orbitals: Flashcards'
+description: 'Revise the four quantum numbers, allowed combinations, orbital and electron counts, shapes and nodes.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: qn-01
+    front: 'Name the four quantum numbers and their symbols.'
+    back: 'Principal $n$, angular momentum $l$, magnetic $m_l$, spin $m_s$.'
+  - id: qn-02
+    front: 'What values can $l$ take for a given $n$?'
+    back: '0, 1, 2, ..., $n - 1$'
+  - id: qn-03
+    front: 'What letters stand for $l$ = 0, 1, 2 and 3?'
+    back: 's, p, d, f'
+  - id: qn-04
+    front: 'What values can $m_l$ take?'
+    back: 'Whole numbers from $-l$ to $+l$: $2l + 1$ values.'
+  - id: qn-05
+    front: 'How many orbitals are in an s, p, d and f subshell?'
+    back: '1, 3, 5 and 7'
+  - id: qn-06
+    front: 'How many orbitals and electrons fit in shell $n$?'
+    back: '$n^2$ orbitals and $2n^2$ electrons (e.g. n = 3: 9 orbitals, 18 electrons).'
+  - id: qn-07
+    front: 'State the Pauli exclusion principle.'
+    back: 'No two electrons in an atom can have the same four quantum numbers, so an orbital holds at most two electrons, with opposite spins.'
+  - id: qn-08
+    front: 'Describe the shapes of s and p orbitals.'
+    back: 's: spherical. p: two lobes (dumbbell) along the x, y or z axis.'
+  - id: qn-09
+    front: 'Is the set $(2, 2, 0, +\tfrac{1}{2})$ allowed?'
+    back: 'No: $l$ cannot equal $n$ (maximum $l$ for $n = 2$ is 1).'
+  - id: qn-10
+    front: 'How many radial and angular nodes does a 3p orbital have?'
+    back: 'Angular: $l = 1$. Radial: $n - l - 1 = 1$. Total: $n - 1 = 2$.'

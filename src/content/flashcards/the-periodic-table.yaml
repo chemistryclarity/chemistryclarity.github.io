@@ -1,0 +1,39 @@
+# Flashcards: The Periodic Table
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All facts and calculations checked.
+title: 'The Periodic Table: Flashcards'
+description: 'Revise periods and groups, the main families, metals, non-metals and metalloids, blocks and predicting ions.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: pt-01
+    front: 'In what order are elements arranged in the modern periodic table?'
+    back: 'Increasing atomic number (number of protons).'
+  - id: pt-02
+    front: 'What is a period, and what is a group?'
+    back: 'Period: a horizontal row (1–7). Group: a vertical column (1–18).'
+  - id: pt-03
+    front: 'Why do elements in the same group have similar properties?'
+    back: 'They have the same number of valence (outer) electrons.'
+  - id: pt-04
+    front: 'Name the families in groups 1, 2, 17 and 18.'
+    back: 'Alkali metals, alkaline earth metals, halogens, noble gases.'
+  - id: pt-05
+    front: 'Where are the metalloids, and name three.'
+    back: 'Along the staircase line from boron to astatine: e.g. B, Si, Ge (also As, Sb, Te).'
+  - id: pt-06
+    front: 'Which ions do groups 1, 2 and 13 form? And groups 15, 16 and 17?'
+    back: '1+, 2+, 3+; and 3−, 2−, 1−.'
+  - id: pt-07
+    front: 'How many valence electrons does an element in group 16 have?'
+    back: '6 (group number minus 10).'
+  - id: pt-08
+    front: 'Name the four blocks and their widths.'
+    back: 's (2), p (6), d (10), f (14): the electron capacities of the subshells.'
+  - id: pt-09
+    front: 'Which element did Mendeleev call eka-silicon?'
+    back: 'Germanium, discovered in 1886 with the properties he had predicted.'
+  - id: pt-10
+    front: 'Why does argon come before potassium, although it is heavier?'
+    back: 'The table is ordered by atomic number: Ar has 18 protons, K has 19.'

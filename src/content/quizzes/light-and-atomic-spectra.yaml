@@ -1,0 +1,79 @@
+# Quiz: Light and Atomic Spectra
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Light and Atomic Spectra: Quiz'
+description: 'Seven questions on wavelength, frequency, photon energy, line spectra and the Bohr model, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ls2-q1
+    prompt: 'As the wavelength of light decreases, what happens to its frequency and photon energy?'
+    choices:
+      - 'Both decrease'
+      - 'Both increase'
+      - 'Frequency increases, energy decreases'
+      - 'Both stay the same'
+    answer: 'Both increase'
+    explanation: 'c = λν, so a shorter wavelength means a higher frequency; E = hν, so the energy rises too.'
+    difficulty: easy
+  - id: ls2-q2
+    prompt: 'Which type of radiation has the highest energy per photon?'
+    choices:
+      - 'Radio waves'
+      - 'Infrared'
+      - 'Visible light'
+      - 'Ultraviolet'
+    answer: 'Ultraviolet'
+    explanation: 'Of these, ultraviolet has the shortest wavelength and therefore the highest photon energy, which is why it can damage skin.'
+    difficulty: easy
+  - id: ls2-q3
+    prompt: 'What is the wavelength of an FM radio signal of frequency 98.1 MHz?'
+    choices:
+      - '3.06 m'
+      - '0.327 m'
+      - '2.94 × 10¹⁶ m'
+      - '3.06 × 10⁻⁶ m'
+    answer: '3.06 m'
+    explanation: 'λ = c/ν = (2.998 × 10⁸ m/s) ÷ (98.1 × 10⁶ s⁻¹) = 3.06 m. Remember that 1 MHz = 10⁶ Hz.'
+    difficulty: medium
+  - id: ls2-q4
+    prompt: 'What is the energy of one photon of blue light with a wavelength of 450 nm?'
+    choices:
+      - '4.41 × 10⁻¹⁹ J'
+      - '4.41 × 10⁻²⁸ J'
+      - '2.98 × 10⁻²⁵ J'
+      - '266 J'
+    answer: '4.41 × 10⁻¹⁹ J'
+    explanation: 'E = hc/λ = (6.626 × 10⁻³⁴ J s × 2.998 × 10⁸ m/s) ÷ (450 × 10⁻⁹ m) = 4.41 × 10⁻¹⁹ J. 4.41 × 10⁻²⁸ J results from leaving λ in nm.'
+    difficulty: medium
+  - id: ls2-q5
+    prompt: 'Why does each element have its own line spectrum?'
+    choices:
+      - 'Its atoms have different masses'
+      - 'Its electrons can only have certain energies, which differ from element to element'
+      - 'It reflects light of one colour'
+      - 'Its nucleus emits light'
+    answer: 'Its electrons can only have certain energies, which differ from element to element'
+    explanation: 'Each line is a photon emitted when an electron drops between two allowed energy levels. The levels are different in every element, so the pattern of lines is unique.'
+    difficulty: medium
+  - id: ls2-q6
+    prompt: 'In the Bohr model, which electron drop in hydrogen produces the line at 486 nm?'
+    choices:
+      - 'n = 2 to n = 1'
+      - 'n = 3 to n = 2'
+      - 'n = 4 to n = 2'
+      - 'n = 4 to n = 3'
+    answer: 'n = 4 to n = 2'
+    explanation: 'ΔE = 2.179 × 10⁻¹⁸ J × (1/2² − 1/4²) = 4.086 × 10⁻¹⁹ J, and λ = hc/ΔE = 486 nm. The drop from 3 to 2 gives 656 nm.'
+    difficulty: hard
+  - id: ls2-q7
+    prompt: 'How much energy is needed to ionize one mole of hydrogen atoms from the ground state?'
+    choices:
+      - '2.179 × 10⁻¹⁸ kJ/mol'
+      - '328 kJ/mol'
+      - '1312 kJ/mol'
+      - '1.312 × 10⁹ kJ/mol'
+    answer: '1312 kJ/mol'
+    explanation: '2.179 × 10⁻¹⁸ J per atom × 6.022 × 10²³ mol⁻¹ = 1.312 × 10⁶ J/mol = 1312 kJ/mol. 328 kJ/mol would be from n = 2.'
+    difficulty: hard
