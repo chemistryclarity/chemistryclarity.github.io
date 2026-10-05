@@ -1,0 +1,39 @@
+# Flashcards: Bond Enthalpies
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Bond Enthalpies: Flashcards'
+description: 'Revise bond enthalpy, bond order and length, and estimating ΔH from bonds broken and formed.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: be-01
+    front: 'What is bond enthalpy?'
+    back: 'The energy needed to break one mole of a bond in gaseous molecules, forming gaseous atoms.'
+  - id: be-02
+    front: 'Is breaking a bond endothermic or exothermic? And forming one?'
+    back: 'Breaking: endothermic (energy in). Forming: exothermic (energy out).'
+  - id: be-03
+    front: 'Give the formula for estimating ΔH from bond enthalpies.'
+    back: 'ΔH ≈ Σ(bonds broken) − Σ(bonds formed)'
+  - id: be-04
+    front: 'How do bond length and strength change with bond order?'
+    back: 'Higher order: shorter and stronger. C–C 154 pm, 348 kJ/mol; C=C 134 pm, 614 kJ/mol; C≡C 120 pm, 839 kJ/mol.'
+  - id: be-05
+    front: 'Why is a C=C bond less than twice as strong as C–C?'
+    back: 'The second bond is a π bond, which is weaker than a σ bond.'
+  - id: be-06
+    front: 'Why are bond-enthalpy calculations only estimates?'
+    back: 'Most values are averages over many compounds, and they apply only to gases.'
+  - id: be-07
+    front: 'Estimate ΔH for H₂ + Cl₂ → 2HCl (H–H 436, Cl–Cl 242, H–Cl 431 kJ/mol).'
+    back: '(436 + 242) − 2 × 431 = −184 kJ/mol'
+  - id: be-08
+    front: 'Why is nitrogen gas so unreactive?'
+    back: 'The N≡N triple bond is very strong (945 kJ/mol).'
+  - id: be-09
+    front: 'When is a reaction exothermic, in terms of bonds?'
+    back: 'When the bonds formed are stronger in total than the bonds broken.'
+  - id: be-10
+    front: 'How many O–H bonds are formed in CH₄ + 2O₂ → CO₂ + 2H₂O?'
+    back: 'Four (two in each water molecule).'

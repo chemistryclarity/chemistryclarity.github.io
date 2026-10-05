@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .hy { fill: #99e0d4; stroke: #0f766e; stroke-width: 1.2; fill-opacity: 0.9; }
+    .hy2 { fill: #99e0d4; stroke: #0f766e; stroke-width: 1.1; fill-opacity: 0.55; stroke-dasharray: 3 2; }
+    .po { fill: #fcd9a8; stroke: #b45309; stroke-width: 1.1; fill-opacity: 0.8; }
+    .ov { fill: #7c3aed; fill-opacity: 0.35; }
+    .nuc { fill: #14213d; }
+    .axis { stroke: #8a94a6; stroke-width: 1; stroke-dasharray: 3 3; }
+    .lab { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 10px; }
+    .line { stroke: #c9c5b8; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .ex { fill: #9aa5ba; }
+      .hy, .hy2 { fill: #115e59; stroke: #2dd4bf; }
+      .po { fill: #78400f; stroke: #fbbf24; }
+      .ov { fill: #c4b5fd; }
+      .nuc { fill: #e9edf5; }
+      .axis { stroke: #6b7894; }
+      .line { stroke: #3a4763; }
+    }
+  </style>
+  <rect class="bg" width="360" height="340" rx="14"/>
+  <text class="t" x="16" y="28">Hybrid orbitals and bond types</text>
+  <text class="sub" x="16" y="45">Teal: hybrid orbitals · amber: unhybridized p orbitals</text>
+  <line class="line" x1="16" y1="232" x2="344" y2="232"/>
+  <ellipse class="hy" cx="62.0" cy="108.0" rx="20.0" ry="10.0" transform="rotate(-90 62.0 108.0)"/><ellipse class="hy" cx="79.3" cy="138.0" rx="20.0" ry="10.0" transform="rotate(30 79.3 138.0)"/><ellipse class="hy" cx="44.7" cy="138.0" rx="20.0" ry="10.0" transform="rotate(150 44.7 138.0)"/><ellipse class="hy2" cx="64.6" cy="142.8" rx="15.0" ry="8.0" transform="rotate(80 64.6 142.8)"/><ellipse class="po" cx="180.0" cy="110.0" rx="18.0" ry="7.5" transform="rotate(-90 180.0 110.0)"/><ellipse class="po" cx="180.0" cy="146.0" rx="18.0" ry="7.5" transform="rotate(90 180.0 146.0)"/><ellipse class="hy" cx="160.0" cy="128.0" rx="20.0" ry="9.0" transform="rotate(180 160.0 128.0)"/><ellipse class="hy" cx="196.4" cy="139.5" rx="20.0" ry="9.0" transform="rotate(35 196.4 139.5)"/><ellipse class="hy" cx="196.4" cy="116.5" rx="20.0" ry="9.0" transform="rotate(-35 196.4 116.5)"/><ellipse class="po" cx="298.0" cy="111.0" rx="17.0" ry="7.0" transform="rotate(-90 298.0 111.0)"/><ellipse class="po" cx="298.0" cy="145.0" rx="17.0" ry="7.0" transform="rotate(90 298.0 145.0)"/><ellipse class="po" cx="309.5" cy="118.4" rx="15.0" ry="6.0" transform="rotate(-40 309.5 118.4)"/><ellipse class="po" cx="286.5" cy="137.6" rx="15.0" ry="6.0" transform="rotate(140 286.5 137.6)"/><ellipse class="hy" cx="320.0" cy="128.0" rx="22.0" ry="9.0" transform="rotate(0 320.0 128.0)"/><ellipse class="hy" cx="276.0" cy="128.0" rx="22.0" ry="9.0" transform="rotate(180 276.0 128.0)"/><circle class="nuc" cx="62" cy="128" r="3"/><circle class="nuc" cx="180" cy="128" r="3"/><circle class="nuc" cx="298" cy="128" r="3"/><text class="lab" x="62" y="190" text-anchor="middle">sp³</text><text class="ex" x="62" y="204" text-anchor="middle">4 domains · 109.5°</text><text class="ex" x="62" y="217" text-anchor="middle">e.g. CH₄</text><text class="lab" x="180" y="190" text-anchor="middle">sp²</text><text class="ex" x="180" y="204" text-anchor="middle">3 domains · 120°</text><text class="ex" x="180" y="217" text-anchor="middle">e.g. C₂H₄</text><text class="lab" x="298" y="190" text-anchor="middle">sp</text><text class="ex" x="298" y="204" text-anchor="middle">2 domains · 180°</text><text class="ex" x="298" y="217" text-anchor="middle">e.g. C₂H₂</text><ellipse class="hy" cx="60.0" cy="272.0" rx="20.0" ry="9.0" transform="rotate(0 60.0 272.0)"/><ellipse class="hy" cx="100.0" cy="272.0" rx="20.0" ry="9.0" transform="rotate(180 100.0 272.0)"/><ellipse class="ov" cx="80" cy="272" rx="10" ry="8"/><circle class="nuc" cx="40" cy="272" r="3"/><circle class="nuc" cx="120" cy="272" r="3"/><line class="axis" x1="24" y1="272" x2="136" y2="272"/><text class="lab" x="80" y="314" text-anchor="middle">σ bond</text><text class="ex" x="80" y="327" text-anchor="middle">head-on overlap</text><ellipse class="po" cx="240.0" cy="257.0" rx="15.0" ry="9.0" transform="rotate(-90 240.0 257.0)"/><ellipse class="po" cx="240.0" cy="287.0" rx="15.0" ry="9.0" transform="rotate(90 240.0 287.0)"/><ellipse class="po" cx="282.0" cy="257.0" rx="15.0" ry="9.0" transform="rotate(-90 282.0 257.0)"/><ellipse class="po" cx="282.0" cy="287.0" rx="15.0" ry="9.0" transform="rotate(90 282.0 287.0)"/><ellipse class="ov" cx="261" cy="254" rx="12" ry="8"/><ellipse class="ov" cx="261" cy="290" rx="12" ry="8"/><circle class="nuc" cx="240" cy="272" r="3"/><circle class="nuc" cx="282" cy="272" r="3"/><line class="axis" x1="224" y1="272" x2="298" y2="272"/><text class="lab" x="261" y="314" text-anchor="middle">π bond</text><text class="ex" x="261" y="327" text-anchor="middle">side-on overlap</text>
+</svg>

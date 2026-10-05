@@ -1,0 +1,39 @@
+# Flashcards: Hybridization and Sigma and Pi Bonds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All counts checked.
+title: 'Hybridization and Sigma and Pi Bonds: Flashcards'
+description: 'Revise sp³, sp² and sp hybridization, electron domains and counting sigma and pi bonds.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: hy-01
+    front: 'What is hybridization?'
+    back: 'The mixing of an atom''s valence orbitals to form an equal number of identical hybrid orbitals pointing towards the bonds.'
+  - id: hy-02
+    front: 'Which hybridization goes with 4, 3 and 2 electron domains?'
+    back: '4 → sp³ (109.5°), 3 → sp² (120°), 2 → sp (180°)'
+  - id: hy-03
+    front: 'How many hybrid and unhybridized p orbitals does an sp² atom have?'
+    back: '3 sp² hybrids and 1 unhybridized p orbital.'
+  - id: hy-04
+    front: 'What is a sigma (σ) bond?'
+    back: 'A bond formed by head-on overlap of orbitals along the line between the nuclei. Every single bond is σ.'
+  - id: hy-05
+    front: 'What is a pi (π) bond?'
+    back: 'A bond formed by side-on overlap of parallel p orbitals, above and below the bond axis.'
+  - id: hy-06
+    front: 'What bonds make up a double bond and a triple bond?'
+    back: 'Double: 1σ + 1π. Triple: 1σ + 2π.'
+  - id: hy-07
+    front: 'What is the hybridization of carbon in ethene and in ethyne?'
+    back: 'Ethene: sp². Ethyne: sp.'
+  - id: hy-08
+    front: 'What is the hybridization of N in NH₃?'
+    back: 'sp³: 3 bonds + 1 lone pair = 4 domains.'
+  - id: hy-09
+    front: 'Why can''t groups rotate freely about a C=C double bond?'
+    back: 'Rotation would break the side-on overlap of the π bond.'
+  - id: hy-10
+    front: 'How many σ and π bonds are in CH₃COOH?'
+    back: '7 σ and 1 π.'

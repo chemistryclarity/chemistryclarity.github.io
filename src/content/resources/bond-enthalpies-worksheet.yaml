@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/bond-enthalpies-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Bond Enthalpies Worksheet'
+description: '8 questions on bond enthalpy, bond order and length, estimating ΔH from bonds broken and formed, and finding an unknown bond enthalpy. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/bond-enthalpies-worksheet.pdf'
+answerKey: '/downloads/bond-enthalpies-worksheet-answers.pdf'
+preview: '/previews/bond-enthalpies-worksheet.png'
+status: review

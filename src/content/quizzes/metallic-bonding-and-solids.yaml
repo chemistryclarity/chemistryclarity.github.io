@@ -1,0 +1,79 @@
+# Quiz: Metallic Bonding and Types of Solids
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Metallic Bonding and Types of Solids: Quiz'
+description: 'Seven questions on metallic bonding, alloys and the four types of solid, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: ms-q1
+    prompt: 'What carries the electric current in a metal?'
+    choices:
+      - 'Positive ions'
+      - 'Negative ions'
+      - 'Delocalized electrons'
+      - 'Protons'
+    answer: 'Delocalized electrons'
+    explanation: 'In metallic bonding the outer electrons are delocalized and free to move, so they carry the current. The positive ions stay in the lattice.'
+    difficulty: easy
+  - id: ms-q2
+    prompt: 'Which type of solid has the lowest melting point, typically?'
+    choices:
+      - 'Ionic'
+      - 'Molecular'
+      - 'Covalent network'
+      - 'Metallic'
+    answer: 'Molecular'
+    explanation: 'Melting a molecular solid only overcomes the weak forces between molecules, so molecular solids usually melt at low temperatures.'
+    difficulty: easy
+  - id: ms-q3
+    prompt: 'Why does molten sodium chloride conduct electricity?'
+    choices:
+      - 'It has free electrons'
+      - 'Its ions are free to move'
+      - 'Its molecules are polar'
+      - 'Its covalent bonds break'
+    answer: 'Its ions are free to move'
+    explanation: 'In the solid the ions are fixed in the lattice; when molten they can move and carry charge. NaCl has no delocalized electrons.'
+    difficulty: easy
+  - id: ms-q4
+    prompt: 'A solid melts at about 1700 °C and does not conduct, even when molten. What type of solid is it most likely to be?'
+    choices:
+      - 'Ionic'
+      - 'Molecular'
+      - 'Covalent network'
+      - 'Metallic'
+    answer: 'Covalent network'
+    explanation: 'A very high melting point means strong bonds throughout; no conduction even when molten rules out ionic and metallic solids. Silicon dioxide fits.'
+    difficulty: medium
+  - id: ms-q5
+    prompt: 'Why is graphite soft and slippery?'
+    choices:
+      - 'Its covalent bonds are weak'
+      - 'Its layers are held together only weakly and can slide'
+      - 'It is a metal'
+      - 'It contains ions'
+    answer: 'Its layers are held together only weakly and can slide'
+    explanation: 'Within each layer the covalent bonds are very strong, but the forces between layers are weak, so the layers slide over each other.'
+    difficulty: medium
+  - id: ms-q6
+    prompt: 'Why is steel harder than pure iron?'
+    choices:
+      - 'Carbon atoms make the electron sea larger'
+      - 'Carbon atoms disrupt the layers so they slide less easily'
+      - 'Steel is an ionic compound'
+      - 'Steel has no delocalized electrons'
+    answer: 'Carbon atoms disrupt the layers so they slide less easily'
+    explanation: 'Atoms of a different size distort the regular layers of iron ions, making it harder for layers to slide: the alloy is harder and stronger.'
+    difficulty: medium
+  - id: ms-q7
+    prompt: 'When ice melts, what is overcome?'
+    choices:
+      - 'O–H covalent bonds within water molecules'
+      - 'Forces between water molecules (including hydrogen bonds)'
+      - 'Ionic bonds'
+      - 'Metallic bonds'
+    answer: 'Forces between water molecules (including hydrogen bonds)'
+    explanation: 'Ice is a molecular solid. Melting overcomes the intermolecular forces, mainly hydrogen bonds; the O–H bonds inside each molecule are not broken.'
+    difficulty: hard

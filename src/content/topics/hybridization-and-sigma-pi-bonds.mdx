@@ -1,0 +1,145 @@
+---
+title: Hybridization and Sigma and Pi Bonds
+question: "How do orbitals mix to explain bond angles and double bonds?"
+description: "Valence bond theory: sp³, sp² and sp hybrid orbitals, how to find an atom's hybridization from its electron domains, and sigma (σ) and pi (π) bonds in single, double and triple bonds."
+area: bonding
+level: intermediate
+order: 40
+prerequisites: [molecular-shapes, quantum-numbers-and-orbitals]
+related: [molecular-shapes, lewis-structures, quantum-numbers-and-orbitals, bond-enthalpies, hydrocarbons-and-alkanes]
+flashcards: hybridization-and-sigma-pi-bonds
+quiz: hybridization-and-sigma-pi-bonds
+resources: [hybridization-and-sigma-pi-bonds-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Hybridization is treated within valence bond theory and limited to sp³, sp² and sp (no expanded-octet hybrids).
+  Bond angles are ideal values.
+*/}
+
+## What is it?
+
+Carbon's outer electrons are in one 2s and three 2p orbitals, which point in different directions at 90° to each other. Yet the four bonds in methane are **identical** and point to the corners of a tetrahedron at **109.5°**. **Hybridization** explains this: an atom's valence orbitals **mix** to form an equal number of new, identical **hybrid orbitals** that point where the bonds are.
+
+| Hybridization | Orbitals mixed | Hybrid orbitals | Electron domains | Geometry | Angle |
+|---|---|---|---|---|---|
+| **sp³** | one s + three p | 4 | 4 | Tetrahedral | 109.5° |
+| **sp²** | one s + two p | 3 (+ 1 unhybridized p) | 3 | Trigonal planar | 120° |
+| **sp** | one s + one p | 2 (+ 2 unhybridized p) | 2 | Linear | 180° |
+
+Bonds come in two kinds:
+
+- A **sigma (σ) bond** forms when orbitals overlap **head-on**, along the line between the two nuclei. **Every single bond is a σ bond.**
+- A **pi (π) bond** forms when two parallel **p orbitals** overlap **side-on**, above and below the line between the nuclei.
+
+A **double bond** is one σ + one π; a **triple bond** is one σ + two π.
+
+<KeyIdea>
+Count the **electron domains** (bonded atoms + lone pairs) around an atom, exactly as in VSEPR. **4 domains → sp³, 3 → sp², 2 → sp.** The p orbitals that are left over are the ones that form π bonds.
+</KeyIdea>
+
+## Why does it matter?
+
+- **It connects shape to orbitals.** VSEPR predicts the shape; hybridization explains which orbitals make it.
+- **Double bonds don't rotate.** Twisting a π bond would break the side-on overlap, so groups on a C=C are locked in place. This is why *cis* and *trans* isomers exist.
+- **Reactivity.** π electrons sit above and below the bond, exposed to attack, which is why alkenes react by addition (see [Electrophilic Addition to Alkenes](/explore/organic-mechanisms/electrophilic-addition-alkenes/)).
+
+## How does it work?
+
+### 1. Finding the hybridization
+
+1. Draw the Lewis structure.
+2. Count electron domains around the atom: each **bonded atom** counts as one (whether the bond is single, double or triple), and each **lone pair** counts as one.
+3. Match: 4 → sp³, 3 → sp², 2 → sp.
+
+### 2. Three carbon compounds
+
+- **Ethane**, $\ce{CH3CH3}$: each C has 4 domains, so **sp³**, 109.5°; 7 σ bonds, free rotation about C–C.
+- **Ethene**, $\ce{CH2=CH2}$: each C has 3 domains, so **sp²**, 120°, planar. The C=C is one σ (sp²–sp²) plus one π (from the leftover p orbitals).
+- **Ethyne**, $\ce{HC#CH}$: each C has 2 domains, so **sp**, 180°, linear. The C≡C is one σ plus two π bonds at right angles.
+
+### 3. Atoms with lone pairs
+
+Lone pairs occupy hybrid orbitals too. In $\ce{NH3}$, N has 3 bonds + 1 lone pair = 4 domains: **sp³** (bond angle squeezed to about 107°). In $\ce{H2O}$, O has 2 bonds + 2 lone pairs: **sp³** (about 104.5°).
+
+### 4. Counting σ and π bonds
+
+Single = 1σ. Double = 1σ + 1π. Triple = 1σ + 2π. Count every bond in the full structure, including C–H bonds.
+
+<Analogy>
+Mixing orbitals is like mixing paint. One tin of white (s) and three tins of blue (p) make four identical tins of light blue (sp³). The colour is "25 % s, 75 % p", and all four tins are the same. Mix one white with two blue and you get three tins of sp², with one blue tin left unmixed: that leftover p orbital is ready to make a π bond.
+</Analogy>
+
+<MorePrecisely>
+Hybridization is a model within **valence bond theory**; it is a way of describing the bonding, not a step that atoms "do". **Molecular orbital theory** is a more complete description that explains, for example, why $\ce{O2}$ is magnetic. A π bond is weaker than a σ bond, because side-on overlap is smaller than head-on overlap: the C=C bond (614 kJ/mol) is less than twice as strong as C–C (348 kJ/mol). Atoms with more than four electron domains, such as S in $\ce{SF6}$, are better described without d-orbital hybrids, so they are left out here.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/hybridization-and-sigma-pi-bonds/hybrids.svg" alt="Three panels. sp3: four hybrid orbitals pointing to the corners of a tetrahedron, 109.5 degrees, as in methane. sp2: three hybrid orbitals in a plane at 120 degrees with one unhybridized p orbital above and below the plane, as in ethene. sp: two hybrid orbitals at 180 degrees with two unhybridized p orbitals at right angles, as in ethyne. Below: a sigma bond as head-on overlap and a pi bond as side-on overlap of two p orbitals." caption="sp³, sp² and sp hybrids, and the difference between σ (head-on) and π (side-on) overlap." width={360} height={340} />
+
+## Worked example
+
+<Example title="Hybridization of carbon">
+**Question:** Give the hybridization of carbon in (a) $\ce{CH4}$ (b) $\ce{H2C=O}$ (methanal) (c) $\ce{CO2}$.
+
+1. (a) 4 bonded atoms, no lone pairs: 4 domains, **sp³**.
+2. (b) 3 bonded atoms (2 H, 1 O): 3 domains, **sp²**, trigonal planar.
+3. (c) 2 bonded atoms (O=C=O): 2 domains, **sp**, linear.
+</Example>
+
+<Example title="Counting σ and π bonds">
+**Question:** How many σ and π bonds are in ethanoic acid, $\ce{CH3COOH}$?
+
+1. Bonds: 3 × C–H, 1 × C–C, 1 × C=O, 1 × C–O, 1 × O–H.
+2. σ bonds: every bond has one, so 3 + 1 + 1 + 1 + 1 = **7 σ**.
+3. π bonds: only the C=O has one: **1 π**.
+</Example>
+
+<Example title="A triple bond">
+**Question:** Describe the bonding in hydrogen cyanide, $\ce{H-C#N}$.
+
+1. Carbon has 2 domains (H and N): **sp**, linear, 180°.
+2. C–H is a σ bond (sp–s). C≡N is 1 σ + 2 π.
+3. Total: **2 σ** and **2 π**. Nitrogen also has 2 domains (C and its lone pair), so it is **sp** too.
+</Example>
+
+<Example title="An atom with lone pairs">
+**Question:** What is the hybridization of the oxygen atom in water, and why is the bond angle less than 109.5°?
+
+O has 2 bonds + 2 lone pairs = 4 domains: **sp³**. The lone pairs repel more strongly than bonding pairs, squeezing the H–O–H angle to about **104.5°**.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Counting a double bond as two domains">
+A double or triple bond counts as **one** electron domain, because it points in one direction. $\ce{CO2}$ has two domains on carbon (sp), not four.
+</CommonMistake>
+
+<CommonMistake title="Forgetting that every bond has a σ">
+A double bond is σ + π, not two π bonds. The first bond between two atoms is always σ.
+</CommonMistake>
+
+<CommonMistake title="Forgetting lone pairs">
+Lone pairs count as domains: N in $\ce{NH3}$ is sp³, not sp², even though it has only three bonds.
+</CommonMistake>
+
+<NotationNote>
+- sp³ is read "s-p-three"; the superscript counts the p orbitals mixed, not electrons.
+- σ is the Greek letter sigma; π is pi.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Electron domains = bonded atoms + lone pairs. 4 → sp³ (109.5°), 3 → sp² (120°), 2 → sp (180°).
+- σ: head-on overlap, along the bond axis. π: side-on overlap of parallel p orbitals.
+- Single = σ; double = σ + π; triple = σ + 2π.
+- Leftover (unhybridized) p orbitals make the π bonds.
+- π bonds prevent rotation about double bonds.
+</RememberThis>

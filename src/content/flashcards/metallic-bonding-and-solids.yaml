@@ -1,0 +1,39 @@
+# Flashcards: Metallic Bonding and Types of Solids
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All facts checked.
+title: 'Metallic Bonding and Types of Solids: Flashcards'
+description: 'Revise metallic bonding, alloys and the properties of ionic, molecular, covalent network and metallic solids.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: ms-01
+    front: 'What is metallic bonding?'
+    back: 'The attraction between positive metal ions in a lattice and a sea of delocalized electrons.'
+  - id: ms-02
+    front: 'Why do metals conduct electricity?'
+    back: 'Their delocalized electrons are free to move through the structure.'
+  - id: ms-03
+    front: 'Why are metals malleable but ionic crystals brittle?'
+    back: 'Metal layers slide without breaking the bonding; in an ionic crystal, sliding brings like charges together and it shatters.'
+  - id: ms-04
+    front: 'Why are alloys harder than pure metals?'
+    back: 'Atoms of a different size disrupt the layers, so they slide less easily.'
+  - id: ms-05
+    front: 'Name the four types of solid.'
+    back: 'Ionic, molecular, covalent network, metallic.'
+  - id: ms-06
+    front: 'Why do molecular solids have low melting points?'
+    back: 'Only weak forces between molecules need to be overcome; the covalent bonds inside the molecules stay intact.'
+  - id: ms-07
+    front: 'When does an ionic compound conduct electricity?'
+    back: 'When molten or dissolved, because the ions are then free to move.'
+  - id: ms-08
+    front: 'Give two examples of covalent network solids.'
+    back: 'Diamond, graphite, silicon dioxide (quartz), silicon.'
+  - id: ms-09
+    front: 'Why does graphite conduct electricity but diamond does not?'
+    back: 'In graphite each C bonds to 3 others, leaving one delocalized electron per atom; in diamond all 4 outer electrons are in bonds.'
+  - id: ms-10
+    front: 'A solid melts at 801 °C and conducts only when molten. What type is it?'
+    back: 'Ionic (e.g. sodium chloride).'

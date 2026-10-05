@@ -1,0 +1,79 @@
+# Quiz: Bond Enthalpies
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Bond Enthalpies: Quiz'
+description: 'Seven questions on bond enthalpy, bond order and estimating ΔH from bonds broken and formed, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: be-q1
+    prompt: 'Which statement is correct?'
+    choices:
+      - 'Breaking bonds releases energy'
+      - 'Breaking bonds requires energy'
+      - 'Forming bonds requires energy'
+      - 'Bond enthalpies are negative'
+    answer: 'Breaking bonds requires energy'
+    explanation: 'Energy must be supplied to pull atoms apart, so bond breaking is endothermic; forming bonds releases the same energy. Bond enthalpies are positive.'
+    difficulty: easy
+  - id: be-q2
+    prompt: 'Which bond is the shortest and strongest?'
+    choices:
+      - 'C–C'
+      - 'C=C'
+      - 'C≡C'
+      - 'They are all equal'
+    answer: 'C≡C'
+    explanation: 'Higher bond order means a shorter, stronger bond: C≡C (120 pm, 839 kJ/mol) beats C=C and C–C.'
+    difficulty: easy
+  - id: be-q3
+    prompt: 'Estimate ΔH for H₂ + Br₂ → 2HBr (all gases). H–H 436, Br–Br 193, H–Br 366 kJ/mol.'
+    choices:
+      - '+103 kJ/mol'
+      - '−103 kJ/mol'
+      - '−263 kJ/mol'
+      - '+263 kJ/mol'
+    answer: '−103 kJ/mol'
+    explanation: 'Broken: 436 + 193 = 629 kJ/mol. Formed: 2 × 366 = 732 kJ/mol. ΔH ≈ 629 − 732 = −103 kJ/mol. −263 forgets the factor of 2.'
+    difficulty: medium
+  - id: be-q4
+    prompt: 'Estimate ΔH for 2H₂ + O₂ → 2H₂O (gases). H–H 436, O=O 498, O–H 463 kJ/mol.'
+    choices:
+      - '−482 kJ/mol'
+      - '+482 kJ/mol'
+      - '−471 kJ/mol'
+      - '−9 kJ/mol'
+    answer: '−482 kJ/mol'
+    explanation: 'Broken: 2 × 436 + 498 = 1370 kJ/mol. Formed: 4 O–H = 4 × 463 = 1852 kJ/mol. ΔH ≈ 1370 − 1852 = −482 kJ/mol.'
+    difficulty: medium
+  - id: be-q5
+    prompt: 'Why is the ΔH from bond enthalpies only an estimate?'
+    choices:
+      - 'Bond enthalpies change with pressure'
+      - 'Most bond enthalpies are averages, and apply to gases only'
+      - 'Bonds cannot be broken'
+      - 'It ignores the coefficients'
+    answer: 'Most bond enthalpies are averages, and apply to gases only'
+    explanation: 'A C–H bond is slightly different in every molecule, so tables give averages; changes of state are also left out.'
+    difficulty: medium
+  - id: be-q6
+    prompt: 'For H₂ + I₂ → 2HI, ΔH = −9 kJ/mol. With H–H 436 and I–I 151 kJ/mol, what is the H–I bond enthalpy?'
+    choices:
+      - '289 kJ/mol'
+      - '298 kJ/mol'
+      - '596 kJ/mol'
+      - '587 kJ/mol'
+    answer: '298 kJ/mol'
+    explanation: '−9 = (436 + 151) − 2x, so 2x = 596 and x = 298 kJ/mol. 596 kJ/mol is the energy for two H–I bonds.'
+    difficulty: hard
+  - id: be-q7
+    prompt: 'In terms of bonds, why is burning methane exothermic?'
+    choices:
+      - 'Methane has no bonds'
+      - 'The bonds in CO₂ and H₂O are stronger in total than those in CH₄ and O₂'
+      - 'Breaking C–H bonds releases energy'
+      - 'Oxygen has a weak bond'
+    answer: 'The bonds in CO₂ and H₂O are stronger in total than those in CH₄ and O₂'
+    explanation: 'Bonds broken total 2648 kJ/mol; bonds formed total 3450 kJ/mol. More energy is released than absorbed: ΔH ≈ −802 kJ/mol.'
+    difficulty: hard

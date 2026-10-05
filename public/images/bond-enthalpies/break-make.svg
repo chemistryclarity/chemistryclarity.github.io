@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .lvl { stroke: #3d4657; stroke-width: 2.4; }
+    .lab { fill: #14213d; font-size: 12px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 10.5px; }
+    .up { stroke: #c2410c; stroke-width: 2.5; fill: none; }
+    .dn { stroke: #0f766e; stroke-width: 2.5; fill: none; }
+    .upt { fill: #c2410c; font-size: 11px; font-weight: 700; }
+    .dnt { fill: #0f766e; font-size: 11px; font-weight: 700; }
+    .dh { stroke: #7c3aed; stroke-width: 2; fill: none; }
+    .dht { fill: #7c3aed; font-size: 11px; font-weight: 700; }
+    .axis { stroke: #8a94a6; stroke-width: 1.4; }
+    .hu { fill: #c2410c; } .hd { fill: #0f766e; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .ex { fill: #9aa5ba; }
+      .lvl { stroke: #c7cfdd; }
+      .up { stroke: #fb923c; } .upt { fill: #fb923c; } .hu { fill: #fb923c; }
+      .dn { stroke: #2dd4bf; } .dnt { fill: #2dd4bf; } .hd { fill: #2dd4bf; }
+      .dh { stroke: #c4b5fd; } .dht { fill: #c4b5fd; }
+      .axis { stroke: #6b7894; }
+    }
+  </style>
+  <defs>
+    <marker id="au" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="hu" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="320" rx="14"/>
+  <text class="t" x="16" y="28">Bonds broken, bonds formed</text>
+  <text class="sub" x="16" y="45">H₂ + Cl₂ → 2HCl (energies in kJ/mol)</text>
+
+  <line class="axis" x1="22" y1="290" x2="22" y2="60"/>
+  <text class="ex" x="16" y="302">Energy ↑</text>
+
+  <!-- levels: reactants 0 at y=210; atoms +678 at y=80; products -184 at y=245 -->
+  <line class="lvl" x1="40" y1="210" x2="130" y2="210"/>
+  <text class="lab" x="85" y="228" text-anchor="middle">H₂ + Cl₂</text>
+
+  <line class="lvl" x1="110" y1="80" x2="260" y2="80"/>
+  <text class="lab" x="185" y="72" text-anchor="middle">2H + 2Cl (atoms)</text>
+
+  <line class="lvl" x1="230" y1="245" x2="330" y2="245"/>
+  <text class="lab" x="280" y="263" text-anchor="middle">2HCl</text>
+
+  <path class="up" d="M120 207 V86" marker-end="url(#au)"/>
+  <text class="upt" x="114" y="140" text-anchor="end">break:</text>
+  <text class="upt" x="114" y="154" text-anchor="end">+678</text>
+
+  <path class="dn" d="M248 83 V239" marker-end="url(#ad)"/>
+  <text class="dnt" x="254" y="150">form:</text>
+  <text class="dnt" x="254" y="164">−862</text>
+
+  <line class="dh" x1="130" y1="210" x2="330" y2="210" stroke-dasharray="4 3"/>
+  <path class="dh" d="M318 212 V243"/>
+  <text class="dht" x="314" y="200" text-anchor="end">ΔH = −184</text>
+</svg>

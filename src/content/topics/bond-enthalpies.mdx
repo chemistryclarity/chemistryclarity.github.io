@@ -1,0 +1,225 @@
+---
+title: Bond Enthalpies
+question: "How can bond strengths be used to estimate the enthalpy change of a reaction?"
+description: "Bond enthalpy, bond order and bond length, and how to estimate ΔH of a reaction from the bonds broken and formed, with worked examples and their limits."
+area: bonding
+level: intermediate
+order: 50
+prerequisites: [lewis-structures, enthalpy]
+related: [enthalpy, hess-law, hybridization-and-sigma-pi-bonds, energy-heat-and-work]
+flashcards: bond-enthalpies
+quiz: bond-enthalpies
+resources: [bond-enthalpies-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Average bond enthalpies (kJ/mol, gas phase): H–H 436, Cl–Cl 242, H–Cl 431, C–H 413, C–C 348, C=C 614,
+  C≡C 839, O=O 498, C=O (in CO₂) 799, O–H 463, N≡N 945, N–H 391, Br–Br 193, H–Br 366, C–Cl 328.
+  Tables differ by a few kJ/mol between sources. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+The **bond enthalpy** (bond energy) is the energy needed to **break one mole** of a particular bond in gaseous molecules, forming gaseous atoms. For hydrogen:
+
+$$
+\begin{aligned}
+&\ce{H2(g) -> 2H(g)} \\[4pt]
+&\Delta H = +436\ \text{kJ/mol}
+\end{aligned}
+$$
+
+- **Breaking** a bond always **needs** energy (endothermic, positive).
+- **Forming** a bond always **releases** the same amount of energy (exothermic, negative).
+
+| Bond | Bond enthalpy (kJ/mol) | Bond | Bond enthalpy (kJ/mol) |
+|---|---|---|---|
+| H–H | 436 | C–C | 348 |
+| Cl–Cl | 242 | C=C | 614 |
+| H–Cl | 431 | C≡C | 839 |
+| C–H | 413 | O=O | 498 |
+| O–H | 463 | C=O (in CO₂) | 799 |
+| N–H | 391 | N≡N | 945 |
+
+Except for diatomic molecules such as H–H, these are **average** values: a C–H bond in methane is not exactly as strong as one in ethanol, so tables give an average over many compounds.
+
+<KeyIdea>
+A reaction breaks the old bonds and makes new ones. The enthalpy change is the energy **taken in** to break bonds minus the energy **given out** when new bonds form:
+
+$$
+\begin{aligned}
+&\Delta H \approx \textstyle\sum(\text{bonds broken}) \\[4pt]
+&\qquad - \textstyle\sum(\text{bonds formed})
+\end{aligned}
+$$
+
+If the new bonds are stronger than the old ones, more energy is released than taken in, and the reaction is **exothermic**.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Explaining energy changes.** Fuels release energy because the bonds in $\ce{CO2}$ and $\ce{H2O}$ are stronger than those in the fuel and oxygen.
+- **Quick estimates.** You can estimate ΔH for a reaction even when no enthalpies of formation are available.
+- **Bond strength and reactivity.** The very strong N≡N bond (945 kJ/mol) explains why nitrogen gas is so unreactive, and why making ammonia needs a catalyst.
+
+## How does it work?
+
+### 1. Bond order, length and strength
+
+The **bond order** is the number of shared pairs: 1 for single, 2 for double, 3 for triple. As bond order rises, the bond gets **shorter** and **stronger**:
+
+| Bond | Order | Length (pm) | Enthalpy (kJ/mol) |
+|---|---|---|---|
+| C–C | 1 | 154 | 348 |
+| C=C | 2 | 134 | 614 |
+| C≡C | 3 | 120 | 839 |
+
+A double bond is not twice as strong as a single bond, because the π bond is weaker than the σ bond.
+
+### 2. Estimating ΔH: the steps
+
+1. Draw the structures and **list every bond** in the reactants and the products, using the coefficients.
+2. Add up the bond enthalpies of the bonds **broken** (reactants).
+3. Add up the bond enthalpies of the bonds **formed** (products).
+4. $\Delta H \approx$ broken − formed.
+
+### 3. Why it is only an estimate
+
+The answer is approximate because the bond enthalpies are **averages**, and because they apply to **gases**: if a reactant or product is a liquid or solid, the energy of changing state is left out. Enthalpies of formation (Hess's law) give more accurate values.
+
+<Analogy>
+Think of bonds as money. Breaking bonds is spending: you pay energy to pull atoms apart. Making bonds is earning: you are paid energy back. If you earn more from the new bonds than you spent on the old ones, you finish with a profit: the reaction gives out energy (exothermic).
+</Analogy>
+
+<MorePrecisely>
+Bond enthalpies are measured for the gas phase, so the estimate works best when every species is a gas. For a diatomic molecule the bond enthalpy is an exact value (the **bond dissociation enthalpy**); for bonds in larger molecules it depends on the rest of the molecule. The value for C=O in CO₂ (799 kJ/mol) differs from the average C=O in aldehydes and ketones (about 745 kJ/mol), which is why the table says "in CO₂". Some tables give 495 kJ/mol for O=O or 941 kJ/mol for N≡N; small differences like these change the estimate by a few kJ/mol.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/bond-enthalpies/break-make.svg" alt="Energy diagram for H2 plus Cl2 forming 2 HCl. From the reactants, an upward arrow of plus 678 kilojoules per mole breaks the bonds to give separate atoms 2H plus 2Cl. A larger downward arrow of minus 862 kilojoules per mole forms the new bonds. The products end 184 kilojoules per mole below the reactants: delta H is minus 184 kilojoules per mole." caption="Breaking bonds takes energy in; forming bonds gives more out. The difference is ΔH." width={360} height={320} />
+
+## Worked example
+
+<Example title="Hydrogen and chlorine">
+**Question:** Estimate ΔH for $\ce{H2(g) + Cl2(g) -> 2HCl(g)}$.
+
+1. Bonds broken: one H–H and one Cl–Cl:
+
+   $$
+   \begin{aligned}
+   &436\ \text{kJ/mol} \\[4pt]
+   &\quad + 242\ \text{kJ/mol} \\[4pt]
+   &= 678\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+2. Bonds formed: two H–Cl:
+
+   $$
+   \begin{aligned}
+   &2 \times 431\ \text{kJ/mol} \\[4pt]
+   &= 862\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+3. Enthalpy change:
+
+   $$
+   \begin{aligned}
+   &\Delta H \approx 678\ \text{kJ/mol} \\[4pt]
+   &\quad - 862\ \text{kJ/mol} \\[4pt]
+   &= -184\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+   Exothermic: the H–Cl bonds are stronger in total than the bonds broken.
+</Example>
+
+<Example title="Burning methane">
+**Question:** Estimate ΔH for $\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(g)}$.
+
+1. Broken: 4 C–H and 2 O=O:
+
+   $$
+   \begin{aligned}
+   &4 \times 413\ \text{kJ/mol} \\[4pt]
+   &\quad + 2 \times 498\ \text{kJ/mol} \\[4pt]
+   &= 2648\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+2. Formed: 2 C=O (in $\ce{CO2}$) and 4 O–H (in 2 $\ce{H2O}$):
+
+   $$
+   \begin{aligned}
+   &2 \times 799\ \text{kJ/mol} \\[4pt]
+   &\quad + 4 \times 463\ \text{kJ/mol} \\[4pt]
+   &= 3450\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+3. Enthalpy change:
+
+   $$
+   \begin{aligned}
+   &\Delta H \approx 2648\ \text{kJ/mol} \\[4pt]
+   &\quad - 3450\ \text{kJ/mol} \\[4pt]
+   &= -802\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+   This agrees closely with the measured value for gaseous water.
+</Example>
+
+<Example title="Making ammonia">
+**Question:** Estimate ΔH for $\ce{N2(g) + 3H2(g) -> 2NH3(g)}$ and compare it with the measured value of −92 kJ/mol.
+
+1. Broken: 1 N≡N and 3 H–H: $945\ \text{kJ/mol} + 3 \times 436\ \text{kJ/mol} = 2253\ \text{kJ/mol}$
+2. Formed: 2 $\ce{NH3}$ contain 6 N–H: $6 \times 391\ \text{kJ/mol} = 2346\ \text{kJ/mol}$
+3. Enthalpy change:
+
+   $$
+   \begin{aligned}
+   &\Delta H \approx 2253\ \text{kJ/mol} \\[4pt]
+   &\quad - 2346\ \text{kJ/mol} \\[4pt]
+   &= -93\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+4. Within about 1 kJ/mol of the measured −92 kJ/mol. The difference comes from using an average N–H value.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Subtracting the wrong way round">
+It is **broken − formed** (reactants − products). This is the opposite order to the enthalpy-of-formation formula (products − reactants), because bond enthalpies are energies **taken in**. Check: forming strong bonds should make ΔH negative.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the coefficients or missing bonds">
+In $\ce{CH4 + 2O2}$ there are **two** O=O bonds to break, and two water molecules contain **four** O–H bonds. Draw every molecule and count every bond.
+</CommonMistake>
+
+<CommonMistake title="Using a single-bond value for a double bond">
+C=O, C=C and N≡N have their own values. Using C–O (358 kJ/mol) for the C=O in CO₂ gives a badly wrong answer.
+</CommonMistake>
+
+<NotationNote>
+- Bond enthalpy is sometimes written $D$ or $E$, e.g. $D(\text{H–H}) = 436$ kJ/mol.
+- 1 pm (picometre) = $10^{-12}$ m.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Bond enthalpy: energy to break 1 mol of a bond in the gas phase (always positive).
+- Breaking bonds is endothermic; forming bonds is exothermic.
+- $\Delta H \approx \sum(\text{broken}) - \sum(\text{formed})$.
+- Higher bond order: shorter and stronger (C–C 348, C=C 614, C≡C 839 kJ/mol).
+- Results are estimates: values are averages and apply to gases.
+</RememberThis>

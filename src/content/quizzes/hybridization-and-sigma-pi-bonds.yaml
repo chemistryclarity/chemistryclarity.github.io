@@ -1,0 +1,79 @@
+# Quiz: Hybridization and Sigma and Pi Bonds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Hybridization and Sigma and Pi Bonds: Quiz'
+description: 'Seven questions on hybridization, electron domains and sigma and pi bonds, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: hy-q1
+    prompt: 'What is the hybridization of carbon in methane, CH₄?'
+    choices:
+      - 'sp'
+      - 'sp²'
+      - 'sp³'
+      - 'Not hybridized'
+    answer: 'sp³'
+    explanation: 'Carbon has 4 bonded atoms and no lone pairs: 4 electron domains, so sp³, tetrahedral, 109.5°.'
+    difficulty: easy
+  - id: hy-q2
+    prompt: 'A double bond consists of:'
+    choices:
+      - 'two σ bonds'
+      - 'two π bonds'
+      - 'one σ and one π bond'
+      - 'one σ and two π bonds'
+    answer: 'one σ and one π bond'
+    explanation: 'The first bond between two atoms is always σ (head-on); the second is a π bond (side-on overlap of p orbitals).'
+    difficulty: easy
+  - id: hy-q3
+    prompt: 'What is the hybridization of carbon in CO₂?'
+    choices:
+      - 'sp'
+      - 'sp²'
+      - 'sp³'
+      - 'sp³d'
+    answer: 'sp'
+    explanation: 'Carbon is bonded to two O atoms with no lone pairs: 2 domains (each double bond counts once), so sp and linear.'
+    difficulty: medium
+  - id: hy-q4
+    prompt: 'What is the bond angle around an sp²-hybridized carbon with no lone pairs?'
+    choices:
+      - '90°'
+      - '109.5°'
+      - '120°'
+      - '180°'
+    answer: '120°'
+    explanation: 'Three sp² hybrids lie in a plane, as far apart as possible: 120° (trigonal planar).'
+    difficulty: medium
+  - id: hy-q5
+    prompt: 'How many σ and π bonds are in ethyne, HC≡CH?'
+    choices:
+      - '3 σ, 2 π'
+      - '2 σ, 3 π'
+      - '5 σ, 0 π'
+      - '3 σ, 1 π'
+    answer: '3 σ, 2 π'
+    explanation: 'Two C–H bonds (2 σ) plus the C≡C (1 σ + 2 π): 3 σ and 2 π in total.'
+    difficulty: medium
+  - id: hy-q6
+    prompt: 'What is the hybridization of the oxygen atom in water?'
+    choices:
+      - 'sp'
+      - 'sp²'
+      - 'sp³'
+      - 'Oxygen is not hybridized because it has only two bonds'
+    answer: 'sp³'
+    explanation: 'O has 2 bonds and 2 lone pairs: 4 domains, so sp³. Lone pairs count as domains.'
+    difficulty: medium
+  - id: hy-q7
+    prompt: 'Why is the π bond in C=C weaker than the σ bond?'
+    choices:
+      - 'It contains fewer electrons'
+      - 'Side-on overlap of p orbitals is smaller than head-on overlap'
+      - 'It is longer than the σ bond'
+      - 'It is formed from s orbitals'
+    answer: 'Side-on overlap of p orbitals is smaller than head-on overlap'
+    explanation: 'Both bonds hold two electrons, but side-on overlap is less effective, so the π bond is weaker: C=C (614 kJ/mol) is less than twice C–C (348 kJ/mol).'
+    difficulty: hard
