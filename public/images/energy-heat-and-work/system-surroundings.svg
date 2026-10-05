@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .sur { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.3; }
+    .sys { fill: #e6f4f1; stroke: #0f766e; stroke-width: 2; }
+    .lab { fill: #14213d; font-size: 12.5px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 10.5px; }
+    .heat { stroke: #c2410c; stroke-width: 2.5; fill: none; }
+    .work { stroke: #7c3aed; stroke-width: 2.5; fill: none; }
+    .ht { fill: #c2410c; font-size: 11px; font-weight: 700; }
+    .wt { fill: #7c3aed; font-size: 11px; font-weight: 700; }
+    .hh { fill: #c2410c; }
+    .wh { fill: #7c3aed; }
+    .eq { fill: #14213d; font-size: 14px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab, .eq { fill: #e9edf5; }
+      .sub, .ex { fill: #9aa5ba; }
+      .sur { fill: #1b263d; stroke: #3a4763; }
+      .sys { fill: #123a3a; stroke: #2dd4bf; }
+      .heat { stroke: #fb923c; } .ht { fill: #fb923c; } .hh { fill: #fb923c; }
+      .work { stroke: #c4b5fd; } .wt { fill: #c4b5fd; } .wh { fill: #c4b5fd; }
+    }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="hh" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="aw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="wh" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="300" rx="14"/>
+  <text class="t" x="20" y="28">System and surroundings</text>
+  <text class="sub" x="20" y="45">Arrows into the system are positive.</text>
+
+  <rect class="sur" x="14" y="56" width="332" height="196" rx="10"/>
+  <text class="ex" x="24" y="72">SURROUNDINGS</text>
+
+  <rect class="sys" x="120" y="104" width="120" height="100" rx="8"/>
+  <text class="lab" x="180" y="150" text-anchor="middle">SYSTEM</text>
+  <text class="ex" x="180" y="166" text-anchor="middle">internal energy U</text>
+
+  <!-- heat in (left, top) and out (left, bottom) -->
+  <path class="heat" d="M36 128 H114" marker-end="url(#ah)"/>
+  <text class="ht" x="40" y="120">heat in: q +</text>
+  <path class="heat" d="M114 184 H36" marker-end="url(#ah)"/>
+  <text class="ht" x="40" y="202">heat out: q −</text>
+
+  <!-- work on (right, top) and by (right, bottom) -->
+  <path class="work" d="M324 128 H246" marker-end="url(#aw)"/>
+  <text class="wt" x="320" y="120" text-anchor="end">work on: w +</text>
+  <path class="work" d="M246 184 H324" marker-end="url(#aw)"/>
+  <text class="wt" x="320" y="202" text-anchor="end">work by: w −</text>
+
+  <text class="eq" x="180" y="280" text-anchor="middle">ΔU = q + w</text>
+</svg>

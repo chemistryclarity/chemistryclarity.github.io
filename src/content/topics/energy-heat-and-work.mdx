@@ -1,0 +1,197 @@
+---
+title: Energy, Heat and Work
+question: "What are energy, heat and work, and how are they related?"
+description: "Forms and units of energy, system and surroundings, heat versus temperature, work done by an expanding gas, and the first law of thermodynamics, ΔU = q + w."
+area: thermochemistry
+level: beginner
+order: 5
+prerequisites: [unit-conversions, temperature-scales]
+related: [enthalpy, gas-laws, hess-law, gibbs-free-energy]
+flashcards: energy-heat-and-work
+quiz: energy-heat-and-work
+resources: [energy-heat-and-work-worksheet]
+references: [bipm-si-brochure-9, brown-central-science]
+status: review
+lastReviewed: 2026-10-05
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Sign convention: the IUPAC (chemistry) convention, ΔU = q + w, with q and w positive when energy enters the system.
+  Exact constants: 1 cal = 4.184 J (thermochemical calorie); 1 atm = 101 325 Pa, so 1 L·atm = 101.325 J; 1 kWh = 3.6 × 10⁶ J.
+  g = 9.81 m/s². Every calculation checked by computer; units shown on every quantity in every step.
+*/}
+
+## What is it?
+
+**Energy** is the capacity to do work or to transfer heat. It comes in two broad kinds:
+
+- **Kinetic energy**, the energy of motion: $E_\text{k} = \tfrac{1}{2}mv^2$. The random motion of particles is **thermal energy**.
+- **Potential energy**, energy stored because of position or arrangement: a raised object ($E_\text{p} = mgh$), charges near each other, or the **chemical energy** stored in the arrangement of atoms and electrons in bonds.
+
+Energy is measured in **joules** (J). One joule is the energy of a force of one newton acting over one metre: $1\ \text{J} = 1\ \text{kg m}^2\,\text{s}^{-2}$. Other units you will meet:
+
+| Unit | In joules |
+|---|---|
+| kilojoule, kJ | $10^{3}$ J |
+| calorie, cal | 4.184 J (exactly) |
+| food Calorie, Cal (= 1 kcal) | 4184 J |
+| kilowatt-hour, kWh | $3.6 \times 10^{6}$ J |
+| litre-atmosphere, L·atm | 101.325 J |
+
+Energy moves between things in only two ways: as **heat** ($q$), a transfer caused by a **temperature difference**, or as **work** ($w$), a transfer caused by a **force acting through a distance**, such as a gas pushing back a piston.
+
+<KeyIdea>
+Energy is **never created or destroyed**, only transferred or changed from one form to another. This is the **first law of thermodynamics**. For a chemical system:
+
+$$
+\Delta U = q + w
+$$
+
+The change in the system's **internal energy**, $\Delta U$, equals the heat added to it plus the work done on it.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Every reaction involves energy.** Burning fuel, charging a battery and digesting food all convert chemical energy into heat, work or electrical energy.
+- **It is the foundation of thermochemistry.** Enthalpy, Hess's law and Gibbs free energy are all built on the first law.
+- **Everyday units.** Food labels give energy in kJ and kcal; electricity bills in kWh. Converting between them is the same dimensional analysis you already know.
+
+## How does it work?
+
+### 1. System and surroundings
+
+The **system** is the part we study (for example, the chemicals in a flask); the **surroundings** are everything else. Systems can be:
+
+- **open**: matter and energy can cross the boundary (an open pan of boiling water);
+- **closed**: energy can cross but matter cannot (a sealed flask);
+- **isolated**: neither can cross (an ideal sealed, insulated flask).
+
+### 2. Heat is not temperature
+
+**Temperature** measures how hot something is: it reflects the **average** kinetic energy of its particles. **Heat** is **energy in transit** from a hotter object to a colder one. A bath of warm water has a lower temperature than a cup of boiling water, but it holds far more thermal energy, because it contains far more particles. Heat always flows from **higher to lower temperature**, until both are at the same temperature (thermal equilibrium).
+
+### 3. Work done by a gas
+
+When a gas expands against a constant external pressure, it pushes the surroundings back and does work on them:
+
+$$
+w = -P_\text{ext}\,\Delta V
+$$
+
+The minus sign means that when the gas **expands** ($\Delta V$ positive) the system **loses** energy ($w$ negative). When the gas is **compressed**, $w$ is positive. If the volume does not change, no expansion work is done ($w = 0$).
+
+### 4. Sign convention
+
+Chemistry looks at everything **from the system's point of view**:
+
+| | Positive (+) | Negative (−) |
+|---|---|---|
+| $q$ | Heat flows **into** the system | Heat flows **out** |
+| $w$ | Work is done **on** the system | Work is done **by** the system |
+| $\Delta U$ | Internal energy **increases** | Internal energy **decreases** |
+
+<Analogy>
+Think of the system's internal energy as a bank account. Heat and work are the only two kinds of transaction: deposits are positive, withdrawals are negative. The balance ($U$) only changes by the sum of the transactions, and money is never printed or destroyed.
+</Analogy>
+
+<MorePrecisely>
+Internal energy is a **state function**: $\Delta U$ depends only on the start and end states, not on the route. Heat and work are **not** state functions: the same $\Delta U$ can be reached with different splits of $q$ and $w$. Many physics books write the first law as $\Delta U = Q - W$, where $W$ is work done **by** the system; it is the same law with a different sign convention. At constant pressure, the heat transferred equals the **enthalpy change**, $q_P = \Delta H$, which is why chemists usually measure $\Delta H$ (see [Enthalpy and Calorimetry](/chemistry/enthalpy/)).
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/energy-heat-and-work/system-surroundings.svg" alt="A box labelled system inside a larger region labelled surroundings. Arrows show heat flowing into the system (q positive) and out of it (q negative), work done on the system (w positive) and by the system (w negative). The first law, delta U equals q plus w, is written below." caption="Energy crosses the boundary of a system only as heat or work. Arrows into the system are positive." width={360} height={300} />
+
+## Worked example
+
+<Example title="Kinetic energy">
+**Question:** A 0.145 kg baseball travels at 40.0 m/s. What is its kinetic energy?
+
+$$
+\begin{aligned}
+&E_\text{k} = \tfrac{1}{2}mv^2 \\[4pt]
+&= \tfrac{1}{2} \times 0.145\ \text{kg} \times (40.0\ \text{m/s})^2 \\[4pt]
+&= 116\ \text{kg m}^2\,\text{s}^{-2} \\[4pt]
+&= 116\ \text{J}
+\end{aligned}
+$$
+</Example>
+
+<Example title="Converting energy units">
+**Question:** A snack bar provides 250 kcal. Express this in kilojoules.
+
+$$
+\begin{aligned}
+&250\ \cancel{\text{kcal}} \times \frac{4.184\ \text{kJ}}{1\ \cancel{\text{kcal}}} \\[4pt]
+&= 1046\ \text{kJ} = 1.05 \times 10^{3}\ \text{kJ}
+\end{aligned}
+$$
+</Example>
+
+<Example title="Work done by an expanding gas">
+**Question:** A gas expands from 2.00 L to 5.00 L against a constant external pressure of 1.50 atm. Calculate the work in joules.
+
+1. Change in volume: $\Delta V = 5.00\ \text{L} - 2.00\ \text{L} = 3.00\ \text{L}$
+2. Work:
+
+   $$
+   \begin{aligned}
+   &w = -P_\text{ext}\,\Delta V \\[4pt]
+   &= -1.50\ \text{atm} \times 3.00\ \text{L} \\[4pt]
+   &= -4.50\ \cancel{\text{L atm}} \\[4pt]
+   &\quad \times \frac{101.325\ \text{J}}{1\ \cancel{\text{L atm}}} \\[4pt]
+   &= -456\ \text{J}
+   \end{aligned}
+   $$
+
+3. The sign is negative: the gas does work **on the surroundings** and loses 456 J.
+</Example>
+
+<Example title="The first law">
+**Question:** While expanding as in the last example, the gas absorbs 1.20 kJ of heat. What is $\Delta U$?
+
+1. Heat flows in, so $q = +1.20\ \text{kJ} = +1200\ \text{J}$. From the last example, $w = -456\ \text{J}$.
+2. First law:
+
+   $$
+   \begin{aligned}
+   &\Delta U = q + w \\[4pt]
+   &= (+1200\ \text{J}) + (-456\ \text{J}) \\[4pt]
+   &= +744\ \text{J}
+   \end{aligned}
+   $$
+
+3. The internal energy of the gas **increases** by 744 J: it gained more energy as heat than it lost as work.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Treating heat and temperature as the same thing">
+Temperature is a property of an object (in °C or K); heat is energy transferred (in J). A spark at 1000 °C carries very little heat; a warm bath at 40 °C can deliver a lot.
+</CommonMistake>
+
+<CommonMistake title="Getting the sign of work wrong">
+An **expanding** gas does work on the surroundings, so $w$ is **negative**. Check: the system is spending energy, so its share must go down.
+</CommonMistake>
+
+<CommonMistake title="Leaving work in L·atm">
+$P\Delta V$ in atm × L gives L·atm, not joules. Multiply by 101.325 J/(L·atm) before adding $w$ to a heat in joules.
+</CommonMistake>
+
+<NotationNote>
+- $U$ is internal energy (some books use $E$); $q$ is heat; $w$ is work.
+- The symbol Δ ("change in") always means final minus initial: $\Delta V = V_\text{final} - V_\text{initial}$.
+- A food "Calorie" with a capital C is a kilocalorie: 1 Cal = 1 kcal = 4.184 kJ.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Energy: kinetic ($\tfrac{1}{2}mv^2$) or potential ($mgh$, chemical); unit J; 1 cal = 4.184 J; 1 L·atm = 101.325 J.
+- Energy crosses a boundary only as heat ($q$, driven by a temperature difference) or work ($w$, a force through a distance).
+- Temperature is not heat: temperature measures average particle energy; heat is energy in transit.
+- Gas expansion work: $w = -P_\text{ext}\Delta V$; no volume change means no expansion work.
+- First law: $\Delta U = q + w$; positive means energy **into** the system.
+</RememberThis>

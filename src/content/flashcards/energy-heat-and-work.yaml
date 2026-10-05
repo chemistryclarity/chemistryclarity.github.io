@@ -1,0 +1,39 @@
+# Flashcards: Energy, Heat and Work
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Energy, Heat and Work: Flashcards'
+description: 'Revise forms and units of energy, heat versus temperature, gas expansion work and the first law of thermodynamics.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: ew-01
+    front: 'What is energy?'
+    back: 'The capacity to do work or to transfer heat. SI unit: the joule, J (1 J = 1 kg m² s⁻²).'
+  - id: ew-02
+    front: 'Give the formulas for kinetic energy and gravitational potential energy.'
+    back: '$E_\text{k} = \tfrac{1}{2}mv^2$ and $E_\text{p} = mgh$'
+  - id: ew-03
+    front: 'How many joules are in 1 cal, 1 kcal and 1 kWh?'
+    back: '1 cal = 4.184 J; 1 kcal = 4184 J; 1 kWh = 3.6 × 10⁶ J'
+  - id: ew-04
+    front: 'What is the difference between heat and temperature?'
+    back: 'Temperature reflects the average kinetic energy of the particles; heat is energy transferred because of a temperature difference.'
+  - id: ew-05
+    front: 'Open, closed or isolated: which systems exchange energy but not matter?'
+    back: 'Closed systems.'
+  - id: ew-06
+    front: 'State the first law of thermodynamics as an equation.'
+    back: '$\Delta U = q + w$: energy is conserved.'
+  - id: ew-07
+    front: 'What is the sign of w when a gas expands? And of q when heat leaves the system?'
+    back: 'Both negative: the system loses energy.'
+  - id: ew-08
+    front: 'Give the formula for the work done when a gas expands against a constant external pressure.'
+    back: '$w = -P_\text{ext}\,\Delta V$'
+  - id: ew-09
+    front: 'How many joules are in 1 L·atm?'
+    back: '101.325 J'
+  - id: ew-10
+    front: 'A gas absorbs 1200 J of heat and does 456 J of work. What is ΔU?'
+    back: 'ΔU = (+1200 J) + (−456 J) = +744 J'

@@ -1,0 +1,79 @@
+# Quiz: Energy, Heat and Work
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Energy, Heat and Work: Quiz'
+description: 'Seven questions on energy and its units, heat versus temperature, gas expansion work and the first law, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: ew-q1
+    prompt: 'Which statement about heat and temperature is correct?'
+    choices:
+      - 'Heat and temperature are the same thing'
+      - 'Heat is energy transferred because of a temperature difference'
+      - 'A hotter object always contains more heat'
+      - 'Heat flows from cold objects to hot objects'
+    answer: 'Heat is energy transferred because of a temperature difference'
+    explanation: 'Temperature reflects the average particle energy; heat is energy in transit, always from hotter to colder. A large warm bath holds more thermal energy than a small cup of boiling water.'
+    difficulty: easy
+  - id: ew-q2
+    prompt: 'What is the kinetic energy of a 1000 kg car moving at 20.0 m/s?'
+    choices:
+      - '10.0 kJ'
+      - '20.0 kJ'
+      - '200. kJ'
+      - '400. kJ'
+    answer: '200. kJ'
+    explanation: 'E = ½mv² = ½ × 1000 kg × (20.0 m/s)² = 2.00 × 10⁵ J = 200. kJ. 400. kJ forgets the ½; 20.0 kJ forgets to square the speed.'
+    difficulty: easy
+  - id: ew-q3
+    prompt: 'A snack bar provides 250 kcal. How many kilojoules is this?'
+    choices:
+      - '59.8 kJ'
+      - '250 kJ'
+      - '1.05 × 10³ kJ'
+      - '1.05 × 10⁶ kJ'
+    answer: '1.05 × 10³ kJ'
+    explanation: '250 kcal × 4.184 kJ/kcal = 1046 kJ = 1.05 × 10³ kJ. 59.8 kJ comes from dividing instead of multiplying.'
+    difficulty: easy
+  - id: ew-q4
+    prompt: 'A sealed, rigid steel container is heated. Which is true?'
+    choices:
+      - 'w = 0, so ΔU = q'
+      - 'q = 0, so ΔU = w'
+      - 'ΔU = 0'
+      - 'w is negative'
+    answer: 'w = 0, so ΔU = q'
+    explanation: 'A rigid container cannot change volume, so no expansion work is done (ΔV = 0, w = 0). All the heat added raises the internal energy: ΔU = q.'
+    difficulty: medium
+  - id: ew-q5
+    prompt: 'A gas expands by 2.00 L against a constant external pressure of 3.00 atm. What is w?'
+    choices:
+      - '+608 J'
+      - '−608 J'
+      - '−6.00 J'
+      - '−0.0592 J'
+    answer: '−608 J'
+    explanation: 'w = −PΔV = −3.00 atm × 2.00 L = −6.00 L·atm × 101.325 J/(L·atm) = −608 J. It is negative because the expanding gas does work on the surroundings.'
+    difficulty: medium
+  - id: ew-q6
+    prompt: 'A system releases 300. J of heat while 150. J of work is done on it. What is ΔU?'
+    choices:
+      - '+450. J'
+      - '−450. J'
+      - '−150. J'
+      - '+150. J'
+    answer: '−150. J'
+    explanation: 'q = −300. J (heat out), w = +150. J (work on the system). ΔU = q + w = −300. J + 150. J = −150. J.'
+    difficulty: medium
+  - id: ew-q7
+    prompt: 'Which kind of system can exchange energy but not matter with its surroundings?'
+    choices:
+      - 'Open'
+      - 'Closed'
+      - 'Isolated'
+      - 'None of these'
+    answer: 'Closed'
+    explanation: 'A closed system (e.g. a sealed flask) lets energy cross its boundary as heat or work, but not matter. An open system exchanges both; an isolated system exchanges neither.'
+    difficulty: hard
