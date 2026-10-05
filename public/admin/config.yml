@@ -242,7 +242,7 @@ collections:
   - name: products
     label: Premium products
     label_singular: Product
-    description: Shown on the site; sold and delivered by an external store (set up later).
+    description: Premium Mastery Packs, sold and delivered by Gumroad. A pack appears in Resources → Premium only when it has a Gumroad link, a price and Status = published.
     folder: src/content/products
     extension: yaml
     format: yaml
@@ -251,8 +251,8 @@ collections:
     fields:
       - { name: title, label: Title, widget: string }
       - { name: description, label: Description, widget: text }
-      - { name: price, label: Price as shown, widget: string, required: false, hint: 'e.g. US$9' }
-      - { name: checkoutUrl, label: Store checkout link, widget: string, required: false }
+      - { name: price, label: Price as shown, widget: string, required: false, hint: 'Exactly as you want it shown, e.g. US$3' }
+      - { name: checkoutUrl, label: Gumroad link, widget: string, required: false, hint: 'Paste the product link from Gumroad, e.g. https://yourname.gumroad.com/l/abcde', pattern: ['^(https://.+)?$', 'Must be a full link starting with https://'] }
       - { name: includes, label: Includes, widget: list, required: false }
       - { name: placeholder, label: Example only (not for sale), widget: boolean, default: true, required: false }
       - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }

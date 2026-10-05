@@ -46,7 +46,7 @@ export const site = {
   features: {
     showDrafts: false,
     newsletter: true,
-    shop: false,
+    shop: true,
     ads: false,
     search: false,
   },
