@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 620" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .top { fill: #eef2ff; stroke: #4f46e5; stroke-width: 1.6; }
+    .topt { fill: #1e1b4b; font-size: 13px; font-weight: 800; }
+    .cat { fill: #e0f2fe; stroke: #0284c7; stroke-width: 1.5; }
+    .ani { fill: #dcfce7; stroke: #16a34a; stroke-width: 1.5; }
+    .head { fill: #14213d; font-size: 12.5px; font-weight: 800; }
+    .hsub { fill: #3d4657; font-size: 9.5px; }
+    .card { fill: #ffffff; stroke: #c9c5b8; stroke-width: 1.2; }
+    .ct { fill: #14213d; font-size: 10.5px; font-weight: 800; }
+    .eg { fill: #5b6577; font-size: 9.5px; font-style: italic; }
+    .eq { fill: #14213d; font-size: 9.6px; }
+    .acid { fill: #fee2e2; stroke: #dc2626; stroke-width: 1.1; }
+    .neut { fill: #f1f5f9; stroke: #64748b; stroke-width: 1.1; }
+    .base { fill: #ede9fe; stroke: #7c3aed; stroke-width: 1.1; }
+    .rt { font-size: 9.8px; font-weight: 800; }
+    .rta { fill: #b91c1c; } .rtn { fill: #475569; } .rtb { fill: #6d28d9; }
+    .ln { stroke: #8a94a6; stroke-width: 1.3; fill: none; }
+    .tip { fill: #fef9c3; stroke: #ca8a04; stroke-width: 1.1; }
+    .tipt { fill: #713f12; font-size: 9.6px; }
+    .tbl { fill: #f8fafc; stroke: #4f46e5; stroke-width: 1.4; }
+    .th { fill: #1e1b4b; font-size: 11.5px; font-weight: 800; }
+    .td { fill: #14213d; font-size: 10px; }
+    .tdb { fill: #14213d; font-size: 10px; font-weight: 800; }
+    .row { stroke: #dbe2ea; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .head, .ct, .eq, .td, .tdb { fill: #e9edf5; }
+      .sub, .eg, .hsub { fill: #9aa5ba; }
+      .top, .tbl { fill: #1e1b4b; stroke: #a5b4fc; }
+      .topt, .th { fill: #e0e7ff; }
+      .cat { fill: #0c2a3e; stroke: #38bdf8; }
+      .ani { fill: #0f2e1d; stroke: #4ade80; }
+      .card { fill: #1b263d; stroke: #3a4763; }
+      .acid { fill: #3f1515; stroke: #f87171; }
+      .neut { fill: #263042; stroke: #94a3b8; }
+      .base { fill: #2a2347; stroke: #c4b5fd; }
+      .rta { fill: #fca5a5; } .rtn { fill: #cbd5e1; } .rtb { fill: #c4b5fd; }
+      .ln { stroke: #6b7894; }
+      .tip { fill: #3a2f0b; stroke: #facc15; }
+      .tipt { fill: #fde68a; }
+      .row { stroke: #2a3550; }
+    }
+  </style>
+  <rect class="bg" width="360" height="620" rx="14"/>
+  <text class="t" x="16" y="28">pH of a salt solution: a summary</text>
+  <text class="sub" x="16" y="45">Look at each ion of the salt X⁺Y⁻ separately, then combine.</text>
+
+  <!-- top equation -->
+  <rect class="top" x="40" y="56" width="280" height="30" rx="8"/>
+  <text class="topt" x="180" y="76" text-anchor="middle">Acid + Base → Salt (X⁺Y⁻) + H₂O</text>
+  <path class="ln" d="M180 86 V96 H95 V106 M180 96 H265 V106"/>
+
+  <!-- column heads -->
+  <rect class="cat" x="14" y="106" width="162" height="38" rx="8"/>
+  <text class="head" x="95" y="122" text-anchor="middle">Cation X⁺</text>
+  <text class="hsub" x="95" y="136" text-anchor="middle">can only make it acidic</text>
+  <rect class="ani" x="184" y="106" width="162" height="38" rx="8"/>
+  <text class="head" x="265" y="122" text-anchor="middle">Anion Y⁻</text>
+  <text class="hsub" x="265" y="136" text-anchor="middle">can only make it basic</text>
+  <path class="ln" d="M95 144 V152 M265 144 V152"/>
+
+  <!-- cation cards -->
+  <!-- 1: from weak base -->
+  <rect class="card" x="14" y="152" width="162" height="88" rx="8"/>
+  <text class="ct" x="22" y="168">① From a weak base</text>
+  <text class="eg" x="22" y="181">e.g. NH₄⁺ (from NH₃)</text>
+  <text class="eq" x="22" y="198">NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺</text>
+  <rect class="acid" x="22" y="210" width="146" height="20" rx="10"/>
+  <text class="rt rta" x="95" y="224" text-anchor="middle">Result: acidic</text>
+
+  <!-- 1: highly charged metal ion -->
+  <rect class="card" x="14" y="248" width="162" height="100" rx="8"/>
+  <text class="ct" x="22" y="264">① Small, highly charged</text>
+  <text class="ct" x="22" y="277">metal ion</text>
+  <text class="eg" x="22" y="290">e.g. Al³⁺, Fe³⁺</text>
+  <text class="eq" x="22" y="306">[Al(H₂O)₆]³⁺ + H₂O ⇌</text>
+  <text class="eq" x="30" y="319">[Al(H₂O)₅OH]²⁺ + H₃O⁺</text>
+  <rect class="acid" x="22" y="324" width="146" height="18" rx="9"/>
+  <text class="rt rta" x="95" y="337" text-anchor="middle">Result: acidic</text>
+
+  <!-- 2: from strong base -->
+  <rect class="card" x="14" y="356" width="162" height="88" rx="8"/>
+  <text class="ct" x="22" y="372">② From a strong base</text>
+  <text class="eg" x="22" y="385">e.g. Na⁺, K⁺ (Group 1)</text>
+  <text class="eq" x="22" y="402">X⁺ + H₂O → no reaction</text>
+  <rect class="neut" x="22" y="414" width="146" height="20" rx="10"/>
+  <text class="rt rtn" x="95" y="428" text-anchor="middle">Result: neutral</text>
+
+  <!-- anion cards -->
+  <!-- 3: from weak acid -->
+  <rect class="card" x="184" y="152" width="162" height="100" rx="8"/>
+  <text class="ct" x="192" y="168">③ From a weak acid</text>
+  <text class="eg" x="192" y="181">e.g. CH₃COO⁻, F⁻, CO₃²⁻</text>
+  <text class="eq" x="192" y="198">Y⁻ + H₂O ⇌ HY + OH⁻</text>
+  <text class="eg" x="192" y="214">CH₃COO⁻ + H₂O ⇌</text>
+  <text class="eg" x="200" y="226">CH₃COOH + OH⁻</text>
+  <rect class="base" x="192" y="230" width="146" height="16" rx="8"/>
+  <text class="rt rtb" x="265" y="242" text-anchor="middle">Result: basic</text>
+
+  <!-- 4: from strong acid -->
+  <rect class="card" x="184" y="260" width="162" height="88" rx="8"/>
+  <text class="ct" x="192" y="276">④ From a strong acid</text>
+  <text class="eg" x="192" y="289">e.g. Cl⁻, Br⁻, I⁻, NO₃⁻</text>
+  <text class="eq" x="192" y="306">Y⁻ + H₂O → no reaction</text>
+  <rect class="neut" x="192" y="318" width="146" height="20" rx="10"/>
+  <text class="rt rtn" x="265" y="332" text-anchor="middle">Result: neutral</text>
+
+  <!-- tip -->
+  <rect class="tip" x="184" y="356" width="162" height="88" rx="8"/>
+  <text class="tipt" x="192" y="374">Tip: the partner of a</text>
+  <text class="tipt" x="192" y="388">STRONG acid or base is a</text>
+  <text class="tipt" x="192" y="402">spectator. Only the partner</text>
+  <text class="tipt" x="192" y="416">of a WEAK one (or a small,</text>
+  <text class="tipt" x="192" y="430">highly charged ion) reacts.</text>
+
+  <!-- connectors to combined table -->
+  <path class="ln" d="M95 444 V456 H265 M265 444 V456 M180 456 V464"/>
+
+  <!-- combined effect table -->
+  <rect class="tbl" x="14" y="464" width="332" height="146" rx="9"/>
+  <text class="th" x="180" y="484" text-anchor="middle">Combined effect: cation + anion</text>
+  <line class="row" x1="22" y1="492" x2="338" y2="492"/>
+  <text class="tdb" x="24" y="508">① + ④</text><text class="td" x="74" y="508">acidic</text><text class="eg" x="140" y="508">NH₄Cl, AlCl₃, NH₄NO₃</text>
+  <line class="row" x1="22" y1="516" x2="338" y2="516"/>
+  <text class="tdb" x="24" y="532">② + ③</text><text class="td" x="74" y="532">basic</text><text class="eg" x="140" y="532">CH₃COONa, NaF, Na₂CO₃</text>
+  <line class="row" x1="22" y1="540" x2="338" y2="540"/>
+  <text class="tdb" x="24" y="556">② + ④</text><text class="td" x="74" y="556">neutral</text><text class="eg" x="140" y="556">NaCl, KNO₃, KBr</text>
+  <line class="row" x1="22" y1="564" x2="338" y2="564"/>
+  <text class="tdb" x="24" y="580">① + ③</text><text class="td" x="74" y="580">compare Ka(X⁺) with Kb(Y⁻)</text>
+  <text class="eg" x="74" y="598">NH₄F: Ka 5.6×10⁻¹⁰ > Kb 1.5×10⁻¹¹ → acidic</text>
+</svg>
