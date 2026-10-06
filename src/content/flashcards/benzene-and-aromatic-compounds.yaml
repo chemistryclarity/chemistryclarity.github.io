@@ -1,0 +1,39 @@
+# Flashcards: Benzene and Aromatic Compounds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked.
+title: 'Benzene and Aromatic Compounds: Flashcards'
+description: 'Revise the delocalized structure of benzene, the evidence for it, naming aromatic compounds and electrophilic substitution.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: bz-01
+    front: 'Describe the bonding in benzene.'
+    back: 'A planar ring of six sp² carbons; six p electrons are delocalized above and below the ring.'
+  - id: bz-02
+    front: 'What is the C–C bond length in benzene, compared with single and double bonds?'
+    back: '139 pm, between C–C (154 pm) and C=C (134 pm); all six bonds are equal.'
+  - id: bz-03
+    front: 'How does the enthalpy of hydrogenation show that benzene is extra stable?'
+    back: 'Expected 3 × −120 = −360 kJ/mol; actual −208 kJ/mol, so benzene is about 152 kJ/mol more stable.'
+  - id: bz-04
+    front: 'Why does benzene undergo substitution rather than addition?'
+    back: 'Substitution keeps the stable delocalized ring intact; addition would destroy it.'
+  - id: bz-05
+    front: 'Does benzene decolourize bromine water?'
+    back: 'No (unlike alkenes).'
+  - id: bz-06
+    front: 'Give the reagents and conditions for nitrating benzene.'
+    back: 'Concentrated HNO₃ and concentrated H₂SO₄, about 50 °C.'
+  - id: bz-07
+    front: 'What catalyst is needed to brominate benzene?'
+    back: 'FeBr₃ (or iron filings), a halogen carrier.'
+  - id: bz-08
+    front: 'What is the electrophile in nitration?'
+    back: 'The nitronium ion, NO₂⁺.'
+  - id: bz-09
+    front: 'Name C₆H₅CH₃, C₆H₅OH and C₆H₅NH₂.'
+    back: 'Methylbenzene (toluene), phenol, phenylamine (aniline).'
+  - id: bz-10
+    front: 'What is the catalyst in Friedel–Crafts reactions?'
+    back: 'Aluminium chloride, AlCl₃.'

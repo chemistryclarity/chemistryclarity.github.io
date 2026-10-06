@@ -1,0 +1,79 @@
+# Quiz: Benzene and Aromatic Compounds
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Benzene and Aromatic Compounds: Quiz'
+description: 'Seven questions on the structure and stability of benzene, naming aromatic compounds and electrophilic substitution, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: bz-q1
+    prompt: 'Which statement about the C–C bonds in benzene is correct?'
+    choices:
+      - 'Three are short and three are long'
+      - 'All six are the same length, between a single and a double bond'
+      - 'All six are double bonds'
+      - 'All six are single bonds'
+    answer: 'All six are the same length, between a single and a double bond'
+    explanation: 'All C–C bonds are 139 pm, between C–C (154 pm) and C=C (134 pm), because the π electrons are delocalized.'
+    difficulty: easy
+  - id: bz-q2
+    prompt: 'What type of reaction does benzene usually undergo?'
+    choices:
+      - 'Electrophilic addition'
+      - 'Electrophilic substitution'
+      - 'Elimination'
+      - 'Nucleophilic addition'
+    answer: 'Electrophilic substitution'
+    explanation: 'An electrophile replaces a hydrogen, keeping the stable aromatic ring intact.'
+    difficulty: easy
+  - id: bz-q3
+    prompt: 'Cyclohexene and benzene are each shaken with bromine water. What is observed?'
+    choices:
+      - 'Both decolourize it'
+      - 'Only cyclohexene decolourizes it'
+      - 'Only benzene decolourizes it'
+      - 'Neither changes'
+    answer: 'Only cyclohexene decolourizes it'
+    explanation: 'Bromine adds across the C=C of cyclohexene. Benzene does not react without a catalyst, because addition would destroy its delocalized ring.'
+    difficulty: easy
+  - id: bz-q4
+    prompt: 'ΔH(hydrogenation) of cyclohexene is −120 kJ/mol and of benzene −208 kJ/mol. What is the delocalization energy of benzene?'
+    choices:
+      - '88 kJ/mol'
+      - '152 kJ/mol'
+      - '328 kJ/mol'
+      - '568 kJ/mol'
+    answer: '152 kJ/mol'
+    explanation: 'Expected for 3 C=C: 3 × (−120) = −360 kJ/mol. Actual −208 kJ/mol. Difference: 360 − 208 = 152 kJ/mol.'
+    difficulty: medium
+  - id: bz-q5
+    prompt: 'Which reagents nitrate benzene?'
+    choices:
+      - 'Dilute nitric acid alone'
+      - 'Concentrated HNO₃ and concentrated H₂SO₄'
+      - 'NaNO₃ and water'
+      - 'HNO₃ and AlCl₃'
+    answer: 'Concentrated HNO₃ and concentrated H₂SO₄'
+    explanation: 'Sulfuric acid helps form the nitronium ion, NO₂⁺, the electrophile that attacks the ring (about 50 °C).'
+    difficulty: medium
+  - id: bz-q6
+    prompt: 'What is the name of C₆H₅NH₂?'
+    choices:
+      - 'Benzamide'
+      - 'Phenylamine'
+      - 'Aminohexane'
+      - 'Nitrobenzene'
+    answer: 'Phenylamine'
+    explanation: 'C₆H₅– is the phenyl group, so C₆H₅NH₂ is phenylamine (common name aniline).'
+    difficulty: medium
+  - id: bz-q7
+    prompt: 'What mass of nitrobenzene (123.11 g/mol) can form from 7.80 g of benzene (78.11 g/mol)?'
+    choices:
+      - '4.95 g'
+      - '7.80 g'
+      - '12.3 g'
+      - '9.83 g'
+    answer: '12.3 g'
+    explanation: '7.80 g ÷ 78.11 g/mol = 0.09986 mol; × 123.11 g/mol = 12.3 g (1 : 1). 9.83 g is the mass at 80 % yield.'
+    difficulty: hard

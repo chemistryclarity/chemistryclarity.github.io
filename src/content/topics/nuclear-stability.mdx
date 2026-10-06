@@ -1,0 +1,142 @@
+---
+title: Nuclear Stability
+question: "Why are some nuclei stable and others radioactive, and how can you predict the type of decay?"
+description: "The strong nuclear force, the band of stability and the neutron-to-proton ratio, predicting alpha, beta-minus and positron decay, magic numbers, and radioactive decay series."
+area: nuclear
+level: intermediate
+order: 15
+prerequisites: [radioactive-decay, atomic-structure]
+related: [radioactive-decay, fission-and-fusion, nuclear-medicine, isotopes-and-atomic-mass]
+flashcards: nuclear-stability
+quiz: nuclear-stability
+resources: [nuclear-stability-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Ratios are neutrons ÷ protons (N/Z), dimensionless. The band-of-stability figure is schematic.
+  Decay predictions use the general trends; individual nuclides can have more than one decay mode.
+*/}
+
+## What is it?
+
+A nucleus contains positively charged protons packed together with neutrons. The protons repel each other strongly, yet most nuclei hold together because of the **strong nuclear force**: a very short-range attraction between all nucleons (protons and neutrons). Neutrons add this attraction **without** adding repulsion, so they act as a nuclear "glue".
+
+Whether a nucleus is stable depends mainly on its **neutron-to-proton ratio**, $N/Z$:
+
+- For light elements (up to about $Z = 20$), stable nuclei have $N/Z \approx 1$ (for example $\ce{^{12}_{6}C}$, $\ce{^{16}_{8}O}$).
+- For heavier elements, more neutrons are needed to dilute the proton repulsion: $N/Z$ rises to about 1.5 for lead ($\ce{^{206}_{82}Pb}$: 124/82 = 1.51).
+- Every nucleus with $Z$ above 83 (bismuth) is radioactive.
+
+Plotting $N$ against $Z$ for all stable nuclei gives a narrow **band of stability**.
+
+<KeyIdea>
+Radioactive nuclei decay in the direction that brings them **towards the band of stability**. Where a nuclide lies relative to the band predicts how it decays.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Predicting decay.** Knowing the N/Z ratio tells you whether to expect beta-minus, positron or alpha decay, which matters for medicine, energy and waste storage.
+- **Medical isotopes.** Positron emitters such as fluorine-18 (used in PET scans) are made by adding protons, putting them below the band.
+- **The origin of the elements.** Stability patterns explain why iron, nickel and lead are so common, and why heavy elements decay in long chains.
+
+## How does it work?
+
+### 1. Predicting the type of decay
+
+| Position relative to the band | Problem | Decay | Effect on N/Z |
+|---|---|---|---|
+| **Above** the band | too many neutrons | **beta-minus** (β⁻): a neutron becomes a proton, $\ce{^{1}_{0}n -> ^{1}_{1}p + ^{0}_{-1}e}$ | decreases |
+| **Below** the band | too many protons | **positron emission** (β⁺) or **electron capture**: a proton becomes a neutron | increases |
+| **Beyond** $Z = 83$ | too large | **alpha** (α): loses 2 protons and 2 neutrons | moves towards smaller, stabler nuclei |
+
+A quick check: compare the nuclide with the **stable isotope** of the same element. More neutrons than that: β⁻. Fewer: β⁺ or electron capture.
+
+### 2. Extra stability: even numbers and magic numbers
+
+Nuclei with **even** numbers of protons and neutrons are especially common: most stable nuclides are even–even. Nuclei with 2, 8, 20, 28, 50, 82 or 126 protons or neutrons (**magic numbers**) are unusually stable, like the full electron shells of noble gases. Lead-208 (82 protons, 126 neutrons) is "doubly magic".
+
+### 3. Decay series
+
+A heavy nucleus such as uranium-238 cannot reach the band in one step. It undergoes a **decay series** of alpha and beta-minus decays until it reaches a stable nuclide (lead-206). To count the steps:
+
+- Only **alpha** decay changes the mass number (by 4), so: number of α = (change in mass number) ÷ 4.
+- Then use the change in atomic number: each α lowers $Z$ by 2; each β⁻ raises it by 1.
+
+<Analogy>
+Think of the band of stability as a narrow mountain ridge. Nuclei off the ridge slide back towards it: those on the "too many neutrons" slope convert neutrons to protons (β⁻), those on the "too many protons" slope convert protons to neutrons (β⁺), and the very heaviest throw off chunks (α) to get down to a lower, stabler height.
+</Analogy>
+
+<MorePrecisely>
+The strong force acts only over about $10^{-15}$ m (the width of a few nucleons), while the electrostatic repulsion between protons acts across the whole nucleus. In large nuclei, each proton feels the repulsion of all the others but the attraction of only its neighbours, which is why heavy nuclei need extra neutrons and why nothing beyond bismuth is permanently stable. Bismuth-209 itself is very slightly radioactive, with a half-life about a billion times the age of the universe. Some nuclides decay by more than one route: potassium-40 undergoes both β⁻ decay and electron capture.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/nuclear-stability/band-of-stability.svg" alt="Graph of number of neutrons N against number of protons Z. A straight line shows N equals Z. The band of stable nuclei follows this line for light elements, then curves above it, reaching N about 1.5 Z for lead at Z 82. Nuclei above the band undergo beta-minus decay; nuclei below it undergo positron emission or electron capture; nuclei beyond Z 83 undergo alpha decay." caption="The band of stability (schematic). Arrows show the direction each decay moves a nucleus." width={360} height={320} />
+
+## Worked example
+
+<Example title="Carbon-14 and oxygen-15">
+**Question:** Predict the decay of (a) carbon-14 (b) oxygen-15. Stable carbon is $\ce{^{12}C}$ and $\ce{^{13}C}$; stable oxygen is $\ce{^{16}O}$.
+
+1. (a) $\ce{^{14}_{6}C}$: N/Z = 8/6 = 1.33, more neutrons than stable carbon: **β⁻ decay**:
+
+   $$
+   \ce{^{14}_{6}C -> ^{14}_{7}N + ^{0}_{-1}e}
+   $$
+
+2. (b) $\ce{^{15}_{8}O}$: N/Z = 7/8 = 0.875, fewer neutrons than oxygen-16: **positron emission**:
+
+   $$
+   \ce{^{15}_{8}O -> ^{15}_{7}N + ^{0}_{+1}e}
+   $$
+</Example>
+
+<Example title="Iodine-131 and sodium-22">
+**Question:** Predict how iodine-131 and sodium-22 decay. (Stable isotopes: iodine-127, sodium-23.)
+
+1. I-131 has 4 more neutrons than stable I-127 (N/Z = 78/53 = 1.47 versus 74/53 = 1.40): too many neutrons, **β⁻**.
+2. Na-22 has 1 fewer neutron than stable Na-23 (N/Z = 11/11 = 1.00 versus 12/11 = 1.09): too few neutrons, **β⁺ (or electron capture)**.
+</Example>
+
+<Example title="Counting a decay series">
+**Question:** Uranium-238 decays through a series to lead-206. How many α and β⁻ decays occur?
+
+1. Mass number falls by 238 − 206 = 32, so there are 32 ÷ 4 = **8 α decays**.
+2. Eight α decays lower $Z$ by 16: 92 − 16 = 76. Lead has $Z = 82$, so $Z$ must rise by 6: **6 β⁻ decays**.
+3. Check: $Z = 92 - 2(8) + 6 = 82$ ✓
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using N/Z = 1 for heavy elements">
+Stable heavy nuclei have **more** neutrons than protons (lead-206: N/Z = 1.51). An N/Z of 1 is "too few neutrons" only for light elements up to about calcium.
+</CommonMistake>
+
+<CommonMistake title="Getting the direction of beta decay backwards">
+β⁻ decay turns a **neutron into a proton** (N down, Z up), so it fixes **too many neutrons**. Positron emission does the reverse.
+</CommonMistake>
+
+<CommonMistake title="Counting beta decays first in a decay series">
+Beta decay does not change the mass number, so always count the **alpha** decays from the change in mass number first.
+</CommonMistake>
+
+<NotationNote>
+- N = number of neutrons = A − Z; Z = atomic number.
+- A positron is written $\ce{^{0}_{+1}e}$ (or β⁺); an electron from beta decay is $\ce{^{0}_{-1}e}$ (or β⁻).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- The strong nuclear force holds nucleons together; neutrons add attraction without repulsion.
+- Stable light nuclei: N/Z ≈ 1. Stable heavy nuclei: N/Z up to about 1.5. All nuclei beyond Z = 83 are radioactive.
+- Above the band (too many n): β⁻. Below (too many p): β⁺ or electron capture. Very heavy: α.
+- Even numbers and magic numbers (2, 8, 20, 28, 50, 82, 126) give extra stability.
+- Decay series: α count = ΔA ÷ 4; then β⁻ count from the change in Z.
+</RememberThis>

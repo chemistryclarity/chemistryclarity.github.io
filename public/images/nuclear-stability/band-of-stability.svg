@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .ax { stroke: #3d4657; stroke-width: 1.5; fill: none; }
+    .eq { stroke: #8a94a6; stroke-width: 1.3; stroke-dasharray: 5 4; }
+    .band { fill: #14b8a6; fill-opacity: 0.45; stroke: #0f766e; stroke-width: 1.2; }
+    .heavy { fill: #fde68a; fill-opacity: 0.5; }
+    .tick { fill: #5b6577; font-size: 10px; }
+    .axl { fill: #5b6577; font-size: 10.5px; font-weight: 600; }
+    .bm { stroke: #2563eb; stroke-width: 2.2; } .bp { stroke: #dc2626; stroke-width: 2.2; } .al { stroke: #b45309; stroke-width: 2.2; }
+    .hbm { fill: #2563eb; } .hbp { fill: #dc2626; } .hal { fill: #b45309; }
+    .lbm { fill: #1d4ed8; font-size: 10.5px; font-weight: 700; } .lbp { fill: #b91c1c; font-size: 10.5px; font-weight: 700; } .lal { fill: #92400e; font-size: 10.5px; font-weight: 700; }
+    .lab { fill: #0f766e; font-size: 10.5px; font-weight: 700; }
+    .eql { fill: #5b6577; font-size: 10px; font-style: italic; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t { fill: #e9edf5; }
+      .sub, .tick, .axl, .eql { fill: #9aa5ba; }
+      .ax { stroke: #c7cfdd; } .eq { stroke: #6b7894; }
+      .band { fill: #2dd4bf; stroke: #5eead4; fill-opacity: 0.35; }
+      .heavy { fill: #713f12; }
+      .bm { stroke: #60a5fa; } .bp { stroke: #f87171; } .al { stroke: #fbbf24; }
+      .hbm { fill: #60a5fa; } .hbp { fill: #f87171; } .hal { fill: #fbbf24; }
+      .lbm { fill: #93c5fd; } .lbp { fill: #fca5a5; } .lal { fill: #fde68a; } .lab { fill: #5eead4; }
+    }
+  </style>
+  <defs>
+    <marker id="m-bm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="hbm" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="m-bp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="hbp" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="m-al" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="hal" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="320" rx="14"/>
+  <text class="t" x="16" y="28">The band of stability</text>
+  <text class="sub" x="16" y="45">Stable nuclei lie in a narrow band (schematic)</text>
+  <rect class="heavy" x="290.7" y="60" width="49.3" height="230"/>
+  <line class="eq" x1="50" y1="290" x2="340" y2="136.66666666666669"/>
+  <text class="eql" x="305.2" y="161.2">N = Z</text>
+  <polygon class="band" points="52.9,285.3 58.7,282.0 64.5,278.7 70.3,275.2 76.1,271.7 81.9,268.1 87.7,264.4 93.5,260.7 99.3,256.9 105.1,253.0 110.9,249.1 116.7,245.0 122.5,240.9 128.3,236.8 134.1,232.5 139.9,228.2 145.7,223.8 151.5,219.3 157.3,214.8 163.1,210.2 168.9,205.5 174.7,200.7 180.5,195.9 186.3,190.9 192.1,186.0 197.9,180.9 203.7,175.8 209.5,170.6 215.3,165.3 221.1,159.9 226.9,154.5 232.7,149.0 238.5,143.4 244.3,137.8 250.1,132.0 255.9,126.2 261.7,120.4 267.5,114.4 273.3,108.4 279.1,102.3 284.9,96.2 290.7,89.9 290.7,108.8 284.9,114.7 279.1,120.6 273.3,126.4 267.5,132.1 261.7,137.7 255.9,143.3 250.1,148.8 244.3,154.2 238.5,159.5 232.7,164.8 226.9,170.0 221.1,175.1 215.3,180.1 209.5,185.1 203.7,190.0 197.9,194.8 192.1,199.6 186.3,204.3 180.5,208.9 174.7,213.4 168.9,217.9 163.1,222.3 157.3,226.6 151.5,230.8 145.7,235.0 139.9,239.1 134.1,243.1 128.3,247.0 122.5,250.9 116.7,254.7 110.9,258.4 105.1,262.1 99.3,265.6 93.5,269.1 87.7,272.6 81.9,275.9 76.1,279.2 70.3,282.4 64.5,285.6 58.7,288.6 52.9,291.6"/>
+  <text class="lab" x="186.29999999999998" y="161.2">band of</text>
+  <text class="lab" x="186.29999999999998" y="173.2">stability</text>
+  <line class="bm" x1="113.8" y1="210.26666666666665" x2="137" y2="222.53333333333333" marker-end="url(#m-bm)"/>
+  <text class="lbm" x="61.6" y="191.86666666666667">too many n:</text>
+  <text class="lbm" x="61.6" y="203.86666666666667">β⁻ decay</text>
+  <line class="bp" x1="224" y1="210.26666666666665" x2="200.8" y2="198" marker-end="url(#m-bp)"/>
+  <text class="lbp" x="212.4" y="231.73333333333332">too many p:</text>
+  <text class="lbp" x="212.4" y="243.73333333333332">β⁺ or electron capture</text>
+  <line class="al" x1="322.59999999999997" y1="66.13333333333333" x2="305.2" y2="78.39999999999998" marker-end="url(#m-al)"/>
+  <text class="lal" x="295.6" y="109.06666666666666">Z beyond 83:</text>
+  <text class="lal" x="295.6" y="121.06666666666666">α decay</text>
+  <path class="ax" d="M50 56 V290 H342"/>
+  <text class="tick" x="108" y="303" text-anchor="middle">20</text>
+  <text class="tick" x="195" y="303" text-anchor="middle">50</text>
+  <text class="tick" x="290.7" y="303" text-anchor="middle">83</text>
+  <text class="tick" x="44" y="216.33333333333334" text-anchor="end">50</text>
+  <text class="tick" x="44" y="139.66666666666669" text-anchor="end">100</text>
+  <text class="tick" x="44" y="99.80000000000001" text-anchor="end">126</text>
+  <text class="axl" x="16" y="70">N</text>
+  <text class="axl" x="340" y="316" text-anchor="end">protons, Z →</text>
+</svg>

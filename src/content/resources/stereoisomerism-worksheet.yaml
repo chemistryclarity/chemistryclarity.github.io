@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/stereoisomerism-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Stereoisomerism Worksheet'
+description: '8 questions on types of isomerism, cis–trans and E/Z isomers, chiral centres, enantiomers and the importance of chirality in medicines. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/stereoisomerism-worksheet.pdf'
+answerKey: '/downloads/stereoisomerism-worksheet-answers.pdf'
+preview: '/previews/stereoisomerism-worksheet.png'
+status: review

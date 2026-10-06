@@ -1,0 +1,79 @@
+# Quiz: Nuclear Stability
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Nuclear Stability: Quiz'
+description: 'Seven questions on the band of stability, N/Z ratios, predicting decay modes and decay series, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ns-q1
+    prompt: 'What force holds protons and neutrons together in the nucleus?'
+    choices:
+      - 'Gravity'
+      - 'Electrostatic attraction'
+      - 'The strong nuclear force'
+      - 'Hydrogen bonding'
+    answer: 'The strong nuclear force'
+    explanation: 'The strong force attracts all nucleons over very short distances, overcoming the repulsion between protons.'
+    difficulty: easy
+  - id: ns-q2
+    prompt: 'Iodine-131 has more neutrons than the stable iodine-127. How does it decay?'
+    choices:
+      - 'Alpha decay'
+      - 'Beta-minus decay'
+      - 'Positron emission'
+      - 'It is stable'
+    answer: 'Beta-minus decay'
+    explanation: 'Too many neutrons: a neutron changes into a proton (β⁻), lowering N/Z towards the band of stability.'
+    difficulty: easy
+  - id: ns-q3
+    prompt: 'Fluorine-18 has fewer neutrons than the stable fluorine-19. How does it decay?'
+    choices:
+      - 'Beta-minus decay'
+      - 'Alpha decay'
+      - 'Positron emission'
+      - 'Gamma emission only'
+    answer: 'Positron emission'
+    explanation: 'Too many protons for its neutrons: a proton becomes a neutron by emitting a positron. This is why F-18 is used in PET scans.'
+    difficulty: medium
+  - id: ns-q4
+    prompt: 'Which nucleus is most likely to undergo alpha decay?'
+    choices:
+      - 'Carbon-14'
+      - 'Sodium-22'
+      - 'Polonium-210'
+      - 'Cobalt-60'
+    answer: 'Polonium-210'
+    explanation: 'Polonium (Z = 84) is beyond Z = 83, so it is too large and decays by alpha emission. C-14 and Co-60 are β⁻ emitters; Na-22 is a β⁺ emitter.'
+    difficulty: medium
+  - id: ns-q5
+    prompt: 'What is the N/Z ratio of lead-206 (Z = 82)?'
+    choices:
+      - '1.00'
+      - '1.51'
+      - '2.51'
+      - '0.66'
+    answer: '1.51'
+    explanation: 'N = 206 − 82 = 124; N/Z = 124 ÷ 82 = 1.51. Heavy stable nuclei need about 1.5 neutrons per proton.'
+    difficulty: medium
+  - id: ns-q6
+    prompt: 'Thorium-232 decays through a series to lead-208. How many alpha decays occur?'
+    choices:
+      - '4'
+      - '6'
+      - '8'
+      - '24'
+    answer: '6'
+    explanation: 'Only alpha decay changes the mass number: (232 − 208) ÷ 4 = 6 alpha decays.'
+    difficulty: hard
+  - id: ns-q7
+    prompt: 'In the series Th-232 → Pb-208 (Z: 90 → 82), how many beta-minus decays occur?'
+    choices:
+      - '2'
+      - '4'
+      - '6'
+      - '8'
+    answer: '4'
+    explanation: '6 alpha decays lower Z by 12, to 78. Lead has Z = 82, so Z must rise by 4: 4 β⁻ decays.'
+    difficulty: hard

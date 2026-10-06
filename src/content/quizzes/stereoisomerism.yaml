@@ -1,0 +1,79 @@
+# Quiz: Stereoisomerism
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Stereoisomerism: Quiz'
+description: 'Seven questions on structural and stereoisomers, cis–trans and E/Z isomerism, chiral centres and enantiomers, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: st-q1
+    prompt: 'Butane and methylpropane are:'
+    choices:
+      - 'cis–trans isomers'
+      - 'enantiomers'
+      - 'structural isomers'
+      - 'the same compound'
+    answer: 'structural isomers'
+    explanation: 'Both are C₄H₁₀ but the carbon atoms are joined differently (straight chain versus branched).'
+    difficulty: easy
+  - id: st-q2
+    prompt: 'Which compound shows cis–trans isomerism?'
+    choices:
+      - 'Propene, CH₂=CHCH₃'
+      - 'But-2-ene, CH₃CH=CHCH₃'
+      - 'Ethene, CH₂=CH₂'
+      - 'But-1-ene, CH₂=CHCH₂CH₃'
+    answer: 'But-2-ene, CH₃CH=CHCH₃'
+    explanation: 'Each carbon of the double bond in but-2-ene carries two different groups (H and CH₃). The others have a carbon with two H atoms.'
+    difficulty: easy
+  - id: st-q3
+    prompt: 'Why do cis–trans isomers exist?'
+    choices:
+      - 'Single bonds cannot rotate'
+      - 'The π bond in C=C prevents rotation'
+      - 'The molecules have different formulas'
+      - 'Carbon has four bonds'
+    answer: 'The π bond in C=C prevents rotation'
+    explanation: 'Rotating about a double bond would break the side-on overlap of the π bond, so the groups are locked in place.'
+    difficulty: easy
+  - id: st-q4
+    prompt: 'Which molecule contains a chiral centre?'
+    choices:
+      - 'CH₃CH₂OH'
+      - 'CH₃CH(OH)CH₂CH₃'
+      - 'CH₂Cl₂'
+      - '(CH₃)₂CHOH'
+    answer: 'CH₃CH(OH)CH₂CH₃'
+    explanation: 'In butan-2-ol, carbon 2 has four different groups (H, OH, CH₃, C₂H₅). In propan-2-ol the central carbon has two identical CH₃ groups.'
+    difficulty: medium
+  - id: st-q5
+    prompt: 'In CHCl=CHBr, the Cl and Br are on opposite sides of the double bond. Which isomer is it?'
+    choices:
+      - 'Z'
+      - 'E'
+      - 'Neither: it has no stereoisomers'
+      - 'Optical isomer'
+    answer: 'E'
+    explanation: 'On each carbon the halogen outranks H. The two higher-priority atoms (Cl and Br) are on opposite sides: E.'
+    difficulty: medium
+  - id: st-q6
+    prompt: 'Which property is different for two enantiomers?'
+    choices:
+      - 'Boiling point'
+      - 'Molar mass'
+      - 'Direction of rotation of plane-polarized light'
+      - 'Density'
+    answer: 'Direction of rotation of plane-polarized light'
+    explanation: 'Enantiomers have identical physical properties except that they rotate plane-polarized light in opposite directions (and interact differently with other chiral molecules).'
+    difficulty: medium
+  - id: st-q7
+    prompt: 'Why does a racemic mixture not rotate plane-polarized light?'
+    choices:
+      - 'It contains no chiral molecules'
+      - 'Equal amounts of the two enantiomers rotate the light equally in opposite directions'
+      - 'It is not a solution'
+      - 'Racemic molecules are planar'
+    answer: 'Equal amounts of the two enantiomers rotate the light equally in opposite directions'
+    explanation: 'The two equal and opposite rotations cancel out.'
+    difficulty: hard

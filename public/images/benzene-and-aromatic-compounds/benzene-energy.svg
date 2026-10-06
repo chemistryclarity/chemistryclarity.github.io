@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .ring { stroke: #14213d; stroke-width: 1.8; fill: none; }
+    .circ { stroke: #7c3aed; stroke-width: 1.8; fill: none; }
+    .lab { fill: #14213d; font-size: 10.5px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 9.8px; }
+    .arr { fill: #5b6577; font-size: 13px; font-weight: 700; }
+    .lvl { stroke: #3d4657; stroke-width: 2.2; }
+    .dn { stroke: #0f766e; stroke-width: 2.2; fill: none; }
+    .dnt { fill: #0f766e; font-size: 10px; font-weight: 700; }
+    .gap { stroke: #7c3aed; stroke-width: 1.8; }
+    .gapt { fill: #6d28d9; font-size: 10.5px; font-weight: 800; }
+    .hd { fill: #0f766e; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .ex, .arr { fill: #9aa5ba; }
+      .ring { stroke: #e9edf5; }
+      .circ, .gap { stroke: #c4b5fd; } .gapt { fill: #c4b5fd; }
+      .lvl { stroke: #c7cfdd; }
+      .dn { stroke: #2dd4bf; } .dnt { fill: #2dd4bf; } .hd { fill: #2dd4bf; }
+    }
+  </style>
+  <defs><marker id="hd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="300" rx="14"/>
+  <text class="t" x="16" y="28">The structure and stability of benzene</text>
+  <text class="sub" x="16" y="45">Kekulé structures ⇄ delocalized ring</text>
+
+  <!-- hexagon helper: centre (cx,cy), radius 20, flat-topped vertices -->
+  <!-- Kekulé 1 at (50,90) -->
+  <g transform="translate(46 92)">
+    <polygon class="ring" points="20,0 10,17.3 -10,17.3 -20,0 -10,-17.3 10,-17.3"/>
+    <line class="ring" x1="15" y1="-1.5" x2="7" y2="-14"/><line class="ring" x1="-7" y1="14" x2="7" y2="14"/><line class="ring" x1="-15" y1="-1.5" x2="-7" y2="-14"/>
+  </g>
+  <text class="arr" x="84" y="97" text-anchor="middle">↔</text>
+  <!-- Kekulé 2 at (122,92) -->
+  <g transform="translate(122 92)">
+    <polygon class="ring" points="20,0 10,17.3 -10,17.3 -20,0 -10,-17.3 10,-17.3"/>
+    <line class="ring" x1="15" y1="1.5" x2="7" y2="14"/><line class="ring" x1="-7" y1="-14" x2="7" y2="-14"/><line class="ring" x1="-15" y1="1.5" x2="-7" y2="14"/>
+  </g>
+  <text class="arr" x="160" y="97" text-anchor="middle">=</text>
+  <g transform="translate(198 92)">
+    <polygon class="ring" points="20,0 10,17.3 -10,17.3 -20,0 -10,-17.3 10,-17.3"/>
+    <circle class="circ" r="10"/>
+  </g>
+  <text class="ex" x="84" y="128" text-anchor="middle">Kekulé structures</text>
+  <text class="ex" x="198" y="128" text-anchor="middle">delocalized</text>
+  <text class="ex" x="250" y="80">all C–C bonds</text>
+  <text class="lab" x="250" y="94">139 pm</text>
+  <text class="ex" x="250" y="108">(C–C 154 · C=C 134)</text>
+
+  <!-- energy diagram: top level y=150 (start), scale 0.36 px per kJ: -120 -> 193, -208 -> 225, -360 -> 280 -->
+  <line class="lvl" x1="24" y1="150" x2="336" y2="150"/>
+  <text class="ex" x="24" y="144">reactants + H₂</text>
+  <line class="lvl" x1="30" y1="193" x2="100" y2="193"/>
+  <path class="dn" d="M65 152 V189" marker-end="url(#hd)"/>
+  <text class="dnt" x="70" y="176">−120</text>
+  <text class="ex" x="65" y="206" text-anchor="middle">cyclohexene</text>
+
+  <line class="lvl" x1="140" y1="280" x2="210" y2="280"/>
+  <path class="dn" d="M175 152 V276" marker-end="url(#hd)"/>
+  <text class="dnt" x="180" y="210">−360</text>
+  <text class="ex" x="175" y="292" text-anchor="middle">expected: 3 C=C</text>
+
+  <line class="lvl" x1="250" y1="225" x2="320" y2="225"/>
+  <path class="dn" d="M285 152 V221" marker-end="url(#hd)"/>
+  <text class="dnt" x="290" y="190">−208</text>
+  <text class="ex" x="285" y="238" text-anchor="middle">benzene (actual)</text>
+
+  <line class="gap" x1="212" y1="280" x2="240" y2="280" stroke-dasharray="3 3"/>
+  <line class="gap" x1="240" y1="229" x2="240" y2="278"/>
+  <text class="gapt" x="246" y="258">152 kJ/mol</text>
+  <text class="ex" x="246" y="270">more stable</text>
+  <text class="ex" x="336" y="292" text-anchor="end">kJ/mol</text>
+</svg>

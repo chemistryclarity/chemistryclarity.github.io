@@ -1,0 +1,39 @@
+# Flashcards: Nuclear Stability
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked.
+title: 'Nuclear Stability: Flashcards'
+description: 'Revise the strong force, the band of stability, predicting decay type, magic numbers and decay series.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ns-01
+    front: 'What holds the nucleus together?'
+    back: 'The strong nuclear force: a very short-range attraction between all nucleons.'
+  - id: ns-02
+    front: 'Why do heavier nuclei need more neutrons than protons?'
+    back: 'Neutrons add strong-force attraction without adding electrostatic repulsion between protons.'
+  - id: ns-03
+    front: 'What is the N/Z ratio of stable light nuclei, and of stable lead?'
+    back: 'About 1 for light nuclei (up to Z ≈ 20); about 1.5 for lead-206 (124/82).'
+  - id: ns-04
+    front: 'Above which atomic number are all nuclei radioactive?'
+    back: 'Z = 83 (bismuth): every element beyond it is radioactive.'
+  - id: ns-05
+    front: 'How does a nucleus with too many neutrons decay?'
+    back: 'Beta-minus decay: a neutron becomes a proton and an electron is emitted.'
+  - id: ns-06
+    front: 'How does a nucleus with too many protons decay?'
+    back: 'Positron emission (β⁺) or electron capture: a proton becomes a neutron.'
+  - id: ns-07
+    front: 'How do very heavy nuclei (Z above 83) usually decay?'
+    back: 'Alpha decay (losing 2 protons and 2 neutrons).'
+  - id: ns-08
+    front: 'Name the magic numbers.'
+    back: '2, 8, 20, 28, 50, 82, 126 (protons or neutrons).'
+  - id: ns-09
+    front: 'How many α and β⁻ decays take U-238 to Pb-206?'
+    back: '8 α (mass falls by 32) and 6 β⁻.'
+  - id: ns-10
+    front: 'Predict how carbon-14 decays.'
+    back: 'β⁻ (too many neutrons): ¹⁴C → ¹⁴N + e⁻.'

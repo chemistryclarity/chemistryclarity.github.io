@@ -1,0 +1,171 @@
+---
+title: Benzene and Aromatic Compounds
+question: "Why is benzene so stable, and why does it react by substitution rather than addition?"
+description: "The structure of benzene from Kekulé to the delocalized ring, the evidence from bond lengths and enthalpies of hydrogenation, naming aromatic compounds, and electrophilic substitution reactions."
+area: organic
+level: intermediate
+order: 35
+prerequisites: [functional-groups, organic-reactions, hybridization-and-sigma-pi-bonds]
+related: [organic-reactions, functional-groups, hybridization-and-sigma-pi-bonds, bond-enthalpies, polymers]
+flashcards: benzene-and-aromatic-compounds
+quiz: benzene-and-aromatic-compounds
+resources: [benzene-and-aromatic-compounds-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Data: C–C 154 pm, C=C 134 pm, benzene C–C 139 pm; ΔH(hydrogenation): cyclohexene −120 kJ/mol, benzene −208 kJ/mol.
+  Molar masses (g/mol): C₆H₆ 78.11, C₆H₅NO₂ 123.11. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+**Benzene**, $\ce{C6H6}$, is a ring of six carbon atoms, each bonded to one hydrogen. It is the parent of the **aromatic** compounds (arenes), a huge family that includes aspirin, paracetamol, many dyes and polystyrene.
+
+In 1865 August Kekulé proposed a ring of **alternating** single and double bonds. But benzene does not behave like a molecule with three C=C bonds:
+
+- all six C–C bonds are the **same length**, 139 pm, between a single bond (154 pm) and a double bond (134 pm);
+- it is much **more stable** than expected;
+- it does **not** decolourize bromine water, and it reacts by **substitution**, not addition.
+
+The modern picture: each carbon is **sp²** hybridized, and the six leftover p orbitals overlap side-on all around the ring. The six π electrons are **delocalized** above and below the ring, shared by all six carbons. This is drawn as a hexagon with a **circle** inside.
+
+<KeyIdea>
+Delocalizing the six π electrons over the whole ring makes benzene unusually stable (by about 152 kJ/mol). Reactions that keep the ring intact (**substitution**) are therefore favoured over reactions that would destroy it (**addition**).
+</KeyIdea>
+
+## Why does it matter?
+
+- **Medicines and materials.** Aspirin, paracetamol, ibuprofen, many antibiotics, dyes, explosives (TNT) and plastics (polystyrene, PET) all contain benzene rings.
+- **Biology.** Several amino acids (phenylalanine, tyrosine, tryptophan) contain aromatic rings, as do the bases of DNA.
+- **Health.** Benzene itself is toxic and causes cancer, so it has been replaced as a solvent by methylbenzene (toluene) in most uses.
+
+## How does it work?
+
+### 1. Evidence from enthalpies of hydrogenation
+
+Adding hydrogen to one C=C in cyclohexene releases 120 kJ/mol. If benzene had three separate C=C bonds, hydrogenating it to cyclohexane should release about $3 \times 120 = 360$ kJ/mol. The measured value is only 208 kJ/mol, so benzene is about **152 kJ/mol more stable** than the Kekulé structure: the **delocalization (resonance) energy**.
+
+### 2. Naming aromatic compounds
+
+| Formula | Name | Common name |
+|---|---|---|
+| $\ce{C6H5CH3}$ | methylbenzene | toluene |
+| $\ce{C6H5OH}$ | phenol | phenol |
+| $\ce{C6H5NH2}$ | phenylamine | aniline |
+| $\ce{C6H5COOH}$ | benzoic acid | benzoic acid |
+| $\ce{C6H5NO2}$ | nitrobenzene | nitrobenzene |
+| $\ce{C6H5Cl}$ | chlorobenzene | chlorobenzene |
+
+With two groups, number the ring carbons: 1,2- (adjacent), 1,3- or 1,4- (opposite), for example 1,4-dimethylbenzene.
+
+### 3. Electrophilic substitution
+
+The electron-rich ring attracts **electrophiles** (electron-pair acceptors, E⁺). An electrophile replaces a hydrogen atom, and the ring stays aromatic:
+
+$$
+\ce{C6H6 + E+ -> C6H5E + H+}
+$$
+
+| Reaction | Reagents and conditions | Product |
+|---|---|---|
+| Nitration | concentrated $\ce{HNO3}$ + concentrated $\ce{H2SO4}$, about 50 °C | nitrobenzene |
+| Halogenation | $\ce{Br2}$ with an $\ce{FeBr3}$ (or Fe) catalyst | bromobenzene + HBr |
+| Friedel–Crafts alkylation | haloalkane with an $\ce{AlCl3}$ catalyst | alkylbenzene |
+| Friedel–Crafts acylation | acyl chloride with an $\ce{AlCl3}$ catalyst | aromatic ketone |
+
+Unlike alkenes, benzene needs a **catalyst** to react with bromine, because its stable delocalized ring is reluctant to give up its electrons.
+
+<Analogy>
+The six π electrons in benzene are like six people sharing a round table instead of sitting in three fixed pairs. Shared around the whole table, everyone is more comfortable (more stable). Swapping one diner for a newcomer (substitution) keeps the table intact; breaking the table apart (addition) costs too much.
+</Analogy>
+
+<MorePrecisely>
+A ring is aromatic when it is planar, cyclic and fully conjugated, with $4n + 2$ π electrons (Hückel's rule; benzene has 6, with $n = 1$). In nitration, the electrophile is the nitronium ion, $\ce{NO2+}$, formed when sulfuric acid protonates nitric acid. Groups already on the ring change both the rate and the position of further substitution: $\ce{-OH}$ and $\ce{-CH3}$ make the ring more reactive and direct new groups to the 2- and 4-positions, while $\ce{-NO2}$ makes it less reactive and directs to the 3-position.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/benzene-and-aromatic-compounds/benzene-energy.svg" alt="Left: two Kekulé structures with alternating double bonds, and the delocalized structure, a hexagon with a circle inside. Right: an energy diagram for hydrogenation. Cyclohexene releases 120 kilojoules per mole. A hypothetical cyclohexa-1,3,5-triene with three double bonds would release 360. Benzene actually releases only 208, so it lies 152 kilojoules per mole lower: the delocalization energy." caption="Benzene is more stable than three separate double bonds would suggest." width={360} height={300} />
+
+## Worked example
+
+<Example title="The delocalization energy">
+**Question:** Use ΔH(hydrogenation) of cyclohexene, −120 kJ/mol, and of benzene, −208 kJ/mol, to estimate how much more stable benzene is than the Kekulé structure.
+
+1. Expected for three C=C bonds: $3 \times (-120\ \text{kJ/mol}) = -360\ \text{kJ/mol}$
+2. Difference:
+
+   $$
+   \small\begin{aligned}
+   &-208\ \text{kJ/mol} \\[4pt]
+   &\quad - (-360\ \text{kJ/mol}) \\[4pt]
+   &= +152\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+3. Benzene releases 152 kJ/mol **less** energy, so it is about **152 kJ/mol more stable**.
+</Example>
+
+<Example title="Alkene or arene?">
+**Question:** Bromine water is shaken separately with cyclohexene and with benzene. What is seen, and why?
+
+Cyclohexene **decolourizes** bromine water quickly: bromine **adds** across the C=C. Benzene gives **no change** at room temperature without a catalyst: addition would destroy the stable delocalized ring.
+</Example>
+
+<Example title="Yield of nitrobenzene">
+**Question:** 7.80 g of benzene is nitrated: $\ce{C6H6 + HNO3 -> C6H5NO2 + H2O}$. Calculate the theoretical yield of nitrobenzene, and the mass obtained at an 80.0 % yield.
+
+1. Moles of benzene:
+
+   $$
+   \begin{aligned}
+   &n = \frac{7.80\ \text{g}}{78.11\ \text{g/mol}} \\[4pt]
+   &= 0.09986\ \text{mol}
+   \end{aligned}
+   $$
+
+2. 1 : 1, so the theoretical yield is:
+
+   $$
+   \small\begin{aligned}
+   &0.09986\ \text{mol} \\[4pt]
+   &\quad \times 123.11\ \text{g/mol} \\[4pt]
+   &= 12.3\ \text{g}
+   \end{aligned}
+   $$
+
+3. At 80.0 %: $0.800 \times 12.29\ \text{g} = 9.83\ \text{g}$
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Drawing benzene as cyclohexene with three double bonds">
+The Kekulé structure is a useful drawing, but benzene does **not** have three short and three long bonds. All six bonds are identical; the circle notation shows the delocalized π electrons.
+</CommonMistake>
+
+<CommonMistake title="Expecting addition reactions">
+Benzene reacts mainly by **substitution**. Addition (for example, hydrogenation to cyclohexane) is possible but needs harsh conditions.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the catalyst">
+Bromine reacts with benzene only with a halogen carrier catalyst such as $\ce{FeBr3}$; nitration needs concentrated sulfuric acid to make the $\ce{NO2+}$ electrophile.
+</CommonMistake>
+
+<NotationNote>
+- $\ce{C6H5-}$ is the **phenyl** group (Ph). Phenol is $\ce{C6H5OH}$; phenylamine is $\ce{C6H5NH2}$.
+- "Aromatic" in chemistry means a stable conjugated ring, not a pleasant smell (though many aromatic compounds do smell).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Benzene: planar ring of 6 sp² carbons, 6 delocalized π electrons; all C–C bonds 139 pm.
+- Evidence: equal bond lengths; ΔH(hydrogenation) −208 kJ/mol instead of −360 kJ/mol: about 152 kJ/mol extra stability.
+- Benzene reacts by electrophilic substitution, keeping the ring intact; it does not decolourize bromine water.
+- Nitration: conc. HNO₃ + conc. H₂SO₄, about 50 °C. Bromination: Br₂ + FeBr₃. Friedel–Crafts: AlCl₃ catalyst.
+</RememberThis>

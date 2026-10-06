@@ -1,0 +1,39 @@
+# Flashcards: Stereoisomerism
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers checked.
+title: 'Stereoisomerism: Flashcards'
+description: 'Revise structural isomers and stereoisomers, cis–trans and E/Z isomerism, chiral centres and enantiomers.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: st-01
+    front: 'What is the difference between structural isomers and stereoisomers?'
+    back: 'Structural: atoms joined in a different order. Stereoisomers: same order, different arrangement in space.'
+  - id: st-02
+    front: 'Why can C=C double bonds give cis–trans isomers?'
+    back: 'The π bond prevents rotation about the double bond.'
+  - id: st-03
+    front: 'What condition is needed for cis–trans isomerism in an alkene?'
+    back: 'Each carbon of the C=C must carry two different groups.'
+  - id: st-04
+    front: 'Does but-1-ene show cis–trans isomerism?'
+    back: 'No: one carbon of the double bond has two H atoms.'
+  - id: st-05
+    front: 'What do Z and E mean?'
+    back: 'Z: higher-priority groups on the same side. E: on opposite sides. Priority = higher atomic number.'
+  - id: st-06
+    front: 'What is a chiral centre?'
+    back: 'A carbon atom bonded to four different atoms or groups.'
+  - id: st-07
+    front: 'What are enantiomers?'
+    back: 'A pair of non-superimposable mirror-image molecules.'
+  - id: st-08
+    front: 'How do enantiomers differ in their properties?'
+    back: 'They rotate plane-polarized light in opposite directions and can interact differently with other chiral molecules (e.g. enzymes).'
+  - id: st-09
+    front: 'What is a racemic mixture?'
+    back: 'A 50 : 50 mixture of two enantiomers; it does not rotate plane-polarized light.'
+  - id: st-10
+    front: 'Which carbon in butan-2-ol is chiral?'
+    back: 'Carbon 2, bonded to H, OH, CH₃ and CH₂CH₃.'
