@@ -1,7 +1,7 @@
 ---
 title: Stereoisomerism
 question: "How can two molecules with the same atoms, joined in the same order, still be different?"
-description: "Structural isomers versus stereoisomers, cis–trans (E/Z) isomerism around double bonds, chiral centres, enantiomers and optical activity, and why molecular shape matters in medicines."
+description: "Structural isomers and stereoisomers: cis–trans and E/Z isomerism, chiral centres and enantiomers, optical activity, the Cahn–Ingold–Prelog priority rules, and assigning R and S."
 area: organic
 level: intermediate
 order: 25
@@ -11,7 +11,7 @@ flashcards: stereoisomerism
 quiz: stereoisomerism
 resources: [stereoisomerism-worksheet]
 references: [brown-central-science]
-status: review
+status: published
 lastReviewed: 2026-10-06
 assisted: true
 ---
@@ -57,7 +57,7 @@ But-2-ene ($\ce{CH3CH=CHCH3}$) has cis and trans isomers. But-1-ene ($\ce{CH2=CH
 
 ### 2. The E/Z system
 
-When the groups are all different, "cis" and "trans" are ambiguous. The **E/Z** system ranks the two groups on each carbon by **atomic number**:
+When the groups are all different, "cis" and "trans" are ambiguous. The **E/Z** system ranks the two groups on **each** carbon separately, using the **Cahn–Ingold–Prelog (CIP) priority rules** (section 4). The first rule is simply: higher atomic number = higher priority.
 
 - **Z** (*zusammen*, together): the two higher-priority groups are on the **same side**.
 - **E** (*entgegen*, opposite): they are on **opposite sides**.
@@ -71,17 +71,44 @@ A carbon bonded to four **different** atoms or groups is a **chiral centre** (of
 
 A 50 : 50 mixture of two enantiomers is a **racemic mixture**; it does not rotate polarized light, because the two effects cancel.
 
+### 4. The Cahn–Ingold–Prelog (CIP) priority rules
+
+Both E/Z and R/S labels depend on ranking groups. Apply these rules **in order**, stopping as soon as the groups are ranked:
+
+1. **Look at the atom directly attached.** Higher atomic number = higher priority:
+   I > Br > Cl > S > F > O > N > C > H. (For isotopes, the heavier wins: D > H.)
+2. **If there is a tie, move outwards.** For each tied group, list the **three** atoms attached to that first atom, highest first, and compare the lists item by item. The **first point of difference** decides.
+   - $\ce{-CH2CH3}$ is (C, H, H) and beats $\ce{-CH3}$, which is (H, H, H).
+   - $\ce{-CH2OH}$ is (O, H, H) and beats $\ce{-CH(CH3)2}$, which is (C, C, H), because O beats C at the first comparison; you never add up the atoms.
+3. **Count multiple bonds as duplicated atoms.** A double bond counts as two single bonds to the same element: C=O is treated as C attached to (O, O); C≡N as (N, N, N).
+   - $\ce{-COOH}$ is (O, O, O); $\ce{-CHO}$ is (O, O, H); so $\ce{-COOH}$ beats $\ce{-CHO}$.
+
+### 5. Assigning R or S: step by step
+
+Each chiral centre is labelled **R** or **S**, and the label becomes part of the name, for example (R)-butan-2-ol.
+
+1. **Find the chiral centre**: the carbon with four different groups.
+2. **Rank the four groups** 1 (highest) to 4 (lowest) with the CIP rules.
+3. **Point group 4 away from you.** In a wedge-and-dash drawing it should be on the **hashed** bond. (Group 4 is very often H.)
+4. **Trace a path from 1 to 2 to 3**, ignoring group 4.
+5. **Read the direction:** **clockwise = R** (*rectus*, right); **anticlockwise = S** (*sinister*, left).
+6. **If group 4 points towards you** (on a solid wedge), work out the direction as drawn and then **reverse** it: clockwise means S, anticlockwise means R.
+
+A helpful check: swapping **any two** groups on a chiral centre turns R into S (and S into R).
+
 <Analogy>
 Your hands are the classic chiral objects: they are mirror images, but no matter how you turn them, a left hand never fits exactly over a right one. A left-hand glove won't fit a right hand, just as one enantiomer of a drug may not fit its target in the body.
 </Analogy>
 
 <MorePrecisely>
-The full Cahn–Ingold–Prelog rules look further along a chain when the first atoms tie, and they are also used to label chiral centres R or S. Optical rotation, + or −, is measured with a polarimeter and is not directly linked to the R/S label. Molecules can have more than one chiral centre; a molecule with $n$ chiral centres can have up to $2^n$ stereoisomers.
+R and S describe the **arrangement in space**; the sign of optical rotation, + or −, is **measured** with a polarimeter. The two are not linked: some R compounds rotate light to the right (+) and others to the left (−). Older books label amino acids and sugars D or L instead, a system based on comparison with glyceraldehyde. Molecules can have more than one chiral centre; a molecule with $n$ chiral centres can have up to $2^n$ stereoisomers.
 </MorePrecisely>
 
 ## Visualise it
 
 <Figure src="/images/stereoisomerism/isomer-types.svg" alt="A tree of isomer types. Isomers divide into structural isomers (chain, position and functional group) and stereoisomers. Stereoisomers divide into cis–trans isomers, shown as cis- and trans-but-2-ene with the methyl groups on the same and opposite sides of the double bond, and optical isomers, shown as two mirror-image tetrahedral carbons with four different groups." caption="Types of isomerism, with cis/trans-but-2-ene and a pair of mirror-image (chiral) molecules." width={360} height={340} />
+
+<Figure src="/images/stereoisomerism/r-s-assignment.svg" alt="Assigning R and S to the two enantiomers of butan-2-ol. In each, the hydrogen (priority 4) is on a hashed bond pointing away. The OH group is priority 1, the ethyl group priority 2 and the methyl group priority 3. In the left molecule the path from 1 to 2 to 3 runs clockwise, so it is R. In the mirror image the path runs anticlockwise, so it is S." caption="R/S in three steps: rank the groups, put group 4 at the back, then trace 1 → 2 → 3 (clockwise = R, anticlockwise = S)." width={360} height={330} />
 
 ## Worked example
 
@@ -107,6 +134,31 @@ The full Cahn–Ingold–Prelog rules look further along a chain when the first 
 Carbon 2 is bonded to **four different groups**: $\ce{-H}$, $\ce{-OH}$, $\ce{-CH3}$ and $\ce{-CH2CH3}$. It is a chiral centre, so butan-2-ol exists as **two enantiomers**. No other carbon qualifies: each of the others carries at least two H atoms.
 </Example>
 
+<Example title="Ranking groups with the CIP rules">
+**Question:** Rank the four groups on the chiral carbon of alanine, $\ce{CH3CH(NH2)COOH}$.
+
+1. Attached atoms: N (in $\ce{-NH2}$), C (in $\ce{-COOH}$), C (in $\ce{-CH3}$) and H.
+2. N has the highest atomic number: $\ce{-NH2}$ is **1**. H is lowest: **4**.
+3. Tie between the two carbons: $\ce{-COOH}$ is (O, O, O), counting C=O twice; $\ce{-CH3}$ is (H, H, H). So $\ce{-COOH}$ is **2** and $\ce{-CH3}$ is **3**.
+</Example>
+
+<Example title="Assigning R or S">
+**Question:** A drawing of butan-2-ol shows the chiral carbon with H on a hashed bond (pointing away), OH at the top, $\ce{CH2CH3}$ at the lower right and $\ce{CH3}$ at the lower left. Is it R or S?
+
+1. Priorities: $\ce{-OH}$ **1** (O); $\ce{-CH2CH3}$ **2** (C, H, H); $\ce{-CH3}$ **3** (H, H, H); $\ce{-H}$ **4**.
+2. Group 4 (H) already points away from you.
+3. Trace 1 → 2 → 3: top → lower right → lower left. That is **clockwise**, so the molecule is **(R)-butan-2-ol** (the left-hand molecule in the figure).
+4. If the same drawing had H on a solid wedge (towards you), the clockwise path would have to be reversed: it would be **S**.
+</Example>
+
+<Example title="E or Z with a tie-break">
+**Question:** In 3-methylpent-2-ene, $\ce{CH3CH=C(CH3)CH2CH3}$, the $\ce{CH3}$ on carbon 2 and the $\ce{CH2CH3}$ on carbon 3 are on the same side. Is it E or Z?
+
+1. Carbon 2 carries $\ce{-CH3}$ and $\ce{-H}$: $\ce{-CH3}$ has the higher priority.
+2. Carbon 3 carries $\ce{-CH3}$ and $\ce{-CH2CH3}$: both start with C, so move outwards: (C, H, H) beats (H, H, H), so $\ce{-CH2CH3}$ has the higher priority.
+3. The two higher-priority groups are on the **same side**: **Z**.
+</Example>
+
 <Example title="Amino acids">
 **Question:** Explain why alanine, $\ce{CH3CH(NH2)COOH}$, is chiral but glycine, $\ce{CH2(NH2)COOH}$, is not.
 
@@ -127,6 +179,18 @@ A chiral centre needs four **different** groups. A $\ce{CH2}$ or $\ce{CH3}$ carb
 E/Z depends on **priority**, not on which groups look alike. In some molecules the E isomer has the similar groups on the same side, so "E = trans" is only true when the two pairs of groups are the same.
 </CommonMistake>
 
+<CommonMistake title="Forgetting to reverse when group 4 points towards you">
+The clockwise = R rule only works when the lowest-priority group points **away** from you. If it is on a solid wedge, the answer you read off must be **reversed**.
+</CommonMistake>
+
+<CommonMistake title="Adding up atoms in a tie-break">
+CIP ranking compares atoms **one at a time**, highest first, and stops at the first difference. (O, H, H) beats (C, C, C), because O beats C straight away.
+</CommonMistake>
+
+<CommonMistake title="Thinking R means (+)">
+R and S come from the 3D arrangement; + and − come from an experiment with polarized light. There is no simple link between them.
+</CommonMistake>
+
 <NotationNote>
 - Wedges (▲) point towards you; hashed wedges point away; plain lines lie in the page.
 - A chiral centre is often marked with an asterisk: C*.
@@ -137,7 +201,9 @@ E/Z depends on **priority**, not on which groups look alike. In some molecules t
 <RememberThis>
 - Structural isomers: different connections. Stereoisomers: same connections, different 3D arrangement.
 - Cis–trans needs a C=C (no rotation) with two different groups on each carbon.
-- E/Z: rank by atomic number; Z = higher priorities together; E = opposite.
+- CIP rules: higher atomic number first; if tied, move outwards and compare at the first difference; multiple bonds count as duplicated atoms.
+- E/Z: rank the two groups on each carbon; Z = higher priorities together; E = opposite.
+- R/S: rank 1–4, point 4 away, trace 1 → 2 → 3: clockwise R, anticlockwise S (reverse if 4 points towards you).
 - A chiral centre has four different groups; it gives a pair of non-superimposable mirror images (enantiomers).
 - Enantiomers rotate plane-polarized light in opposite directions; a racemic mixture does not rotate it.
 </RememberThis>

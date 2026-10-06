@@ -1,10 +1,10 @@
 # Quiz: Stereoisomerism
 # DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
 title: 'Stereoisomerism: Quiz'
-description: 'Seven questions on structural and stereoisomers, cis–trans and E/Z isomerism, chiral centres and enantiomers, with explanations.'
+description: 'Eleven questions on structural and stereoisomers, cis–trans and E/Z isomerism, chiral centres, enantiomers, CIP priorities and R/S assignment, with explanations.'
 level: intermediate
 access: free
-status: review
+status: published
 assisted: true
 questions:
   - id: st-q1
@@ -76,4 +76,44 @@ questions:
       - 'Racemic molecules are planar'
     answer: 'Equal amounts of the two enantiomers rotate the light equally in opposite directions'
     explanation: 'The two equal and opposite rotations cancel out.'
+    difficulty: hard
+  - id: st-q8
+    prompt: 'Which group has the highest CIP priority?'
+    choices:
+      - '–CH₃'
+      - '–CH₂CH₃'
+      - '–OH'
+      - '–NH₂'
+    answer: '–OH'
+    explanation: 'Compare the attached atoms: O (8) beats N (7), which beats C (6). So –OH is highest.'
+    difficulty: easy
+  - id: st-q9
+    prompt: 'Which group ranks higher: –CH₂OH or –CH(CH₃)₂?'
+    choices:
+      - '–CH(CH₃)₂, because it has more carbon atoms'
+      - '–CH₂OH, because O beats C at the first point of difference'
+      - 'They have equal priority'
+      - 'It cannot be decided'
+    answer: '–CH₂OH, because O beats C at the first point of difference'
+    explanation: 'Both start with C. Compare the attached sets: (O, H, H) versus (C, C, H). The first atoms differ, O against C, so –CH₂OH wins. Atoms are not added up.'
+    difficulty: medium
+  - id: st-q10
+    prompt: 'Group 4 points away from you, and the path 1 → 2 → 3 runs anticlockwise. What is the configuration?'
+    choices:
+      - 'R'
+      - 'S'
+      - 'E'
+      - 'Z'
+    answer: 'S'
+    explanation: 'With the lowest-priority group at the back, anticlockwise means S (sinister).'
+    difficulty: medium
+  - id: st-q11
+    prompt: 'Group 4 is on a solid wedge (towards you), and 1 → 2 → 3 runs clockwise as drawn. What is the configuration?'
+    choices:
+      - 'R'
+      - 'S'
+      - 'It cannot be assigned'
+      - 'Racemic'
+    answer: 'S'
+    explanation: 'When group 4 points towards you, the direction you see must be reversed: clockwise as drawn means S.'
     difficulty: hard

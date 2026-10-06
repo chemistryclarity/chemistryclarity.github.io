@@ -4,7 +4,7 @@ title: 'Stereoisomerism: Flashcards'
 description: 'Revise structural isomers and stereoisomers, cis–trans and E/Z isomerism, chiral centres and enantiomers.'
 level: intermediate
 access: free
-status: review
+status: published
 assisted: true
 cards:
   - id: st-01
@@ -37,3 +37,15 @@ cards:
   - id: st-10
     front: 'Which carbon in butan-2-ol is chiral?'
     back: 'Carbon 2, bonded to H, OH, CH₃ and CH₂CH₃.'
+  - id: st-11
+    front: 'State the three CIP priority rules.'
+    back: '1. Higher atomic number of the attached atom wins. 2. If tied, move outwards and compare at the first difference. 3. Multiple bonds count as duplicated atoms.'
+  - id: st-12
+    front: 'How do you assign R or S to a chiral centre?'
+    back: 'Rank groups 1–4; point group 4 away; trace 1 → 2 → 3. Clockwise = R, anticlockwise = S. If 4 points towards you, reverse the answer.'
+  - id: st-13
+    front: 'Rank –COOH, –CHO, –CH₂OH and –CH₃.'
+    back: '–COOH (O,O,O) > –CHO (O,O,H) > –CH₂OH (O,H,H) > –CH₃ (H,H,H).'
+  - id: st-14
+    front: 'Does R mean the compound rotates light clockwise (+)?'
+    back: 'No. R/S comes from the 3D arrangement; + / − is measured with a polarimeter. They are not linked.'
