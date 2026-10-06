@@ -1,0 +1,79 @@
+# Quiz: NMR Spectroscopy
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'NMR Spectroscopy: Quiz'
+description: 'Seven questions on hydrogen environments, chemical shift, integration and splitting, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: nm-q1
+    prompt: 'How many ¹H NMR signals does ethanol, CH₃CH₂OH, give?'
+    choices:
+      - '1'
+      - '2'
+      - '3'
+      - '6'
+    answer: '3'
+    explanation: 'Three hydrogen environments: CH₃, CH₂ and OH, in a 3 : 2 : 1 ratio.'
+    difficulty: easy
+  - id: nm-q2
+    prompt: 'Into how many peaks is a CH₂ signal split if the neighbouring carbon is a CH₃?'
+    choices:
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+    answer: '4'
+    explanation: 'n + 1 rule: 3 neighbouring H give 3 + 1 = 4 peaks (a quartet).'
+    difficulty: easy
+  - id: nm-q3
+    prompt: 'A signal at about 9.7 ppm most likely comes from:'
+    choices:
+      - 'an alkyl CH₃'
+      - 'an aldehyde CHO'
+      - 'an O–CH₃ group'
+      - 'TMS'
+    answer: 'an aldehyde CHO'
+    explanation: 'Aldehyde hydrogens appear at 9–10 ppm. Alkyl H are around 1 ppm, O–CH₃ about 3.3–4.3 ppm, and TMS is 0.'
+    difficulty: easy
+  - id: nm-q4
+    prompt: 'On a 300 MHz spectrometer, a signal is 360 Hz from TMS. What is δ?'
+    choices:
+      - '0.83 ppm'
+      - '1.20 ppm'
+      - '120 ppm'
+      - '108 ppm'
+    answer: '1.20 ppm'
+    explanation: 'δ = 360 Hz ÷ 300 MHz = 1.20 ppm.'
+    difficulty: medium
+  - id: nm-q5
+    prompt: 'Methyl ethanoate, CH₃COOCH₃, gives which ¹H NMR spectrum?'
+    choices:
+      - 'One singlet (6H)'
+      - 'Two singlets (3H each), at about 2.0 and 3.7 ppm'
+      - 'A quartet and a triplet'
+      - 'Two doublets'
+    answer: 'Two singlets (3H each), at about 2.0 and 3.7 ppm'
+    explanation: 'The two CH₃ groups are in different environments (next to C=O and on O). Neither has H on a neighbouring carbon, so both are singlets.'
+    difficulty: medium
+  - id: nm-q6
+    prompt: 'What splitting does the CH₃ signal of 2-bromopropane, (CH₃)₂CHBr, show?'
+    choices:
+      - 'Singlet'
+      - 'Doublet'
+      - 'Triplet'
+      - 'Septet'
+    answer: 'Doublet'
+    explanation: 'Each CH₃ is next to the CH, which has 1 H: 1 + 1 = 2 peaks. (The CH itself is split by 6 H into a septet.)'
+    difficulty: hard
+  - id: nm-q7
+    prompt: 'A compound C₃H₈O shows a doublet (6H) at 1.2 ppm, a septet (1H) at 4.0 ppm and a singlet (1H) at 2.2 ppm. What is it?'
+    choices:
+      - 'Propan-1-ol'
+      - 'Propan-2-ol'
+      - 'Methoxyethane'
+      - 'Propanone'
+    answer: 'Propan-2-ol'
+    explanation: 'Two equivalent CH₃ (6H, doublet) next to one CH (septet, on C–O at 4.0 ppm), plus an OH singlet: (CH₃)₂CHOH.'
+    difficulty: hard

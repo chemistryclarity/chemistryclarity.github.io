@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/nmr-spectroscopy-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'NMR Spectroscopy Worksheet'
+description: '8 questions on hydrogen environments, chemical shift calculations, splitting, predicting spectra, ¹³C NMR and solving structures from spectra. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/nmr-spectroscopy-worksheet.pdf'
+answerKey: '/downloads/nmr-spectroscopy-worksheet-answers.pdf'
+preview: '/previews/nmr-spectroscopy-worksheet.png'
+status: review

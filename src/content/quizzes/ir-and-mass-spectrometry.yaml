@@ -1,0 +1,79 @@
+# Quiz: Infrared Spectroscopy and Mass Spectrometry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'IR Spectroscopy and Mass Spectrometry: Quiz'
+description: 'Seven questions on interpreting IR spectra, molecular ions, fragments and isotope patterns, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: im-q1
+    prompt: 'A strong, sharp IR absorption at 1715 cm⁻¹ indicates which bond?'
+    choices:
+      - 'O–H'
+      - 'C–H'
+      - 'C=O'
+      - 'C–O'
+    answer: 'C=O'
+    explanation: 'C=O bonds absorb strongly at 1680–1750 cm⁻¹ (aldehydes, ketones, acids, esters).'
+    difficulty: easy
+  - id: im-q2
+    prompt: 'An IR spectrum shows a broad absorption at 3350 cm⁻¹ and none near 1700 cm⁻¹. The compound is most likely:'
+    choices:
+      - 'a ketone'
+      - 'an alcohol'
+      - 'a carboxylic acid'
+      - 'an alkane'
+    answer: 'an alcohol'
+    explanation: 'A broad band at 3200–3550 cm⁻¹ is an alcohol O–H. No C=O rules out ketones and acids.'
+    difficulty: easy
+  - id: im-q3
+    prompt: 'In a mass spectrum, the peak at the highest m/z (ignoring tiny isotope peaks) is the:'
+    choices:
+      - 'base peak'
+      - 'molecular ion'
+      - 'fragment ion'
+      - 'fingerprint'
+    answer: 'molecular ion'
+    explanation: 'The molecular ion M⁺ is the whole molecule minus one electron; its m/z gives the molar mass. The base peak is the tallest peak.'
+    difficulty: easy
+  - id: im-q4
+    prompt: 'A compound shows peaks at m/z 78 and 80 in a 3 : 1 ratio. What does it contain?'
+    choices:
+      - 'One bromine atom'
+      - 'One chlorine atom'
+      - 'Two oxygen atoms'
+      - 'A benzene ring'
+    answer: 'One chlorine atom'
+    explanation: '³⁵Cl and ³⁷Cl occur in about a 3 : 1 ratio, giving M and M+2 peaks 2 units apart in that ratio. One Br would give 1 : 1.'
+    difficulty: medium
+  - id: im-q5
+    prompt: 'Propanone (M = 58) shows its base peak at m/z 43. Which fragment is lost?'
+    choices:
+      - 'CH₃ (15)'
+      - 'O (16)'
+      - 'C₂H₅ (29)'
+      - 'CO (28)'
+    answer: 'CH₃ (15)'
+    explanation: '58 − 43 = 15: loss of a methyl group leaves CH₃CO⁺ at m/z 43.'
+    difficulty: medium
+  - id: im-q6
+    prompt: 'What is the wavelength of IR radiation with a wavenumber of 3300 cm⁻¹?'
+    choices:
+      - '3.03 μm'
+      - '3300 μm'
+      - '0.303 μm'
+      - '30.3 μm'
+    answer: '3.03 μm'
+    explanation: 'λ = 1/3300 cm⁻¹ = 3.03 × 10⁻⁴ cm = 3.03 μm (1 cm = 10⁴ μm).'
+    difficulty: hard
+  - id: im-q7
+    prompt: 'Which pair of IR absorptions would best identify a carboxylic acid?'
+    choices:
+      - 'Broad 3200–3550 cm⁻¹ and 1050 cm⁻¹'
+      - 'Very broad 2500–3300 cm⁻¹ and strong 1700–1725 cm⁻¹'
+      - 'Sharp 2250 cm⁻¹ only'
+      - '1650 cm⁻¹ and 3050 cm⁻¹'
+    answer: 'Very broad 2500–3300 cm⁻¹ and strong 1700–1725 cm⁻¹'
+    explanation: 'A carboxylic acid has both an O–H (very broad, overlapping the C–H region) and a C=O. The first pair is an alcohol; 2250 is C≡N; 1650 + 3050 suggests an alkene.'
+    difficulty: medium

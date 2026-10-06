@@ -1,0 +1,173 @@
+---
+title: NMR Spectroscopy
+question: "How does NMR reveal the carbon–hydrogen framework of a molecule?"
+description: "Proton (¹H) NMR: chemical environments, chemical shift in ppm, integration, splitting by the n + 1 rule, a short look at ¹³C NMR, and solving structures with NMR, IR and mass spectra."
+area: analytical
+level: intermediate
+order: 40
+prerequisites: [ir-and-mass-spectrometry, functional-groups]
+related: [ir-and-mass-spectrometry, functional-groups, stereoisomerism, hydrocarbons-and-alkanes]
+flashcards: nmr-spectroscopy
+quiz: nmr-spectroscopy
+resources: [nmr-spectroscopy-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Chemical-shift ranges are typical values; exact values depend on the molecule and solvent.
+  δ (ppm) = shift from TMS (Hz) ÷ spectrometer frequency (MHz). Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+**Nuclear magnetic resonance (NMR)** spectroscopy places a sample in a strong magnetic field and probes it with radio waves. Hydrogen nuclei (protons) in **different chemical environments** absorb at slightly different frequencies, so a ¹H NMR spectrum shows how the hydrogen atoms in a molecule are arranged.
+
+A ¹H NMR spectrum gives **four** pieces of information:
+
+1. **Number of signals:** how many different hydrogen environments there are.
+2. **Chemical shift**, $\delta$ (in ppm): what kind of environment each one is.
+3. **Integration** (relative area): how many hydrogens are in each environment.
+4. **Splitting** (multiplicity): how many hydrogens are on the **neighbouring** carbons.
+
+Hydrogens are in the **same environment** if they are interchangeable by symmetry: the six H atoms in propanone, $\ce{CH3COCH3}$, are all equivalent, so propanone gives **one** signal.
+
+<KeyIdea>
+Each signal is a group of equivalent hydrogens. Its **position** tells you what is nearby (an oxygen, a C=O, a benzene ring), its **area** tells you how many H atoms it represents, and its **splitting** tells you how many H atoms sit on the next carbon along.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Structure determination.** NMR is the most powerful tool chemists have for working out how atoms are connected in a new molecule.
+- **Medicine.** MRI (magnetic resonance imaging) is NMR of the hydrogen nuclei in water and fat in the body.
+- **Industry and research.** NMR checks the purity of medicines and follows reactions as they happen.
+
+## How does it work?
+
+### 1. Chemical shift
+
+Shifts are measured relative to a reference, **TMS** (tetramethylsilane, set at $\delta = 0$), and are given in **parts per million** so that they are the same on every spectrometer:
+
+$$
+\small\begin{aligned}
+&\delta\ (\text{ppm}) \\[4pt]
+&= \frac{\text{shift from TMS (Hz)}}{\text{spectrometer frequency (MHz)}}
+\end{aligned}
+$$
+
+Nearby **electronegative atoms** and **C=O** or aromatic rings pull electron density away from a hydrogen ("deshielding"), moving its signal to a **higher** δ:
+
+| Type of hydrogen | Typical δ (ppm) |
+|---|---|
+| alkyl, $\ce{R-CH3}$, $\ce{R-CH2-R}$ | 0.9–1.7 |
+| next to C=O, $\ce{-CO-CH3}$ | 2.0–2.7 |
+| on carbon next to O, $\ce{-O-CH2-}$, $\ce{-O-CH3}$ | 3.3–4.3 |
+| alkene, $\ce{C=C-H}$ | 4.5–6.5 |
+| aromatic, on a benzene ring | 6.5–8.0 |
+| aldehyde, $\ce{-CHO}$ | 9–10 |
+| carboxylic acid, $\ce{-COOH}$ | 10–12 |
+| alcohol $\ce{-OH}$ | 1–5 (variable) |
+
+### 2. Integration
+
+The area under each signal is proportional to the number of hydrogens it represents. Spectrometers print the areas as a **ratio**, such as 3 : 2 : 1 for ethanol.
+
+### 3. Splitting: the n + 1 rule
+
+A signal from hydrogens with **n** equivalent hydrogens on **adjacent** carbons is split into **n + 1** peaks:
+
+| H on neighbouring carbons (n) | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| Peaks (n + 1) | 1, singlet | 2, doublet | 3, triplet | 4, quartet |
+
+So an ethyl group, $\ce{-CH2CH3}$, always shows a **quartet** (the $\ce{CH2}$, split by 3 H) and a **triplet** (the $\ce{CH3}$, split by 2 H). An **O–H** hydrogen usually appears as a **singlet** and is not split by, nor does it split, its neighbours.
+
+### 4. ¹³C NMR in brief
+
+¹³C NMR shows one signal for each **carbon environment** (without splitting in the usual spectra). Typical ranges: alkyl carbons 0–50 ppm, carbons bonded to O 50–90 ppm, alkene and aromatic carbons 110–160 ppm, and C=O carbons 160–220 ppm.
+
+<Analogy>
+Reading an NMR spectrum is like working out where people live from a list of neighbours. Each signal is a household; its shift says which part of town it is in (near an oxygen, near a ring); its area says how many people live there; and its splitting says how many people live next door.
+</Analogy>
+
+<MorePrecisely>
+The n + 1 rule works when the neighbouring hydrogens are all equivalent and couple equally; more complex molecules give multiplets. Adding a drop of $\ce{D2O}$ makes an O–H or N–H signal disappear, because deuterium replaces the hydrogen and does not show in ¹H NMR; this is a useful way to identify them. Spectrometers are described by their proton frequency (300 MHz, 400 MHz...); a higher frequency spreads the signals out more in Hz, but δ in ppm stays the same.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/nmr-spectroscopy/ethanol-nmr.svg" alt="Schematic proton NMR spectrum of ethanol, CH3CH2OH, with chemical shift decreasing from left to right. A quartet near 3.7 ppm with relative area 2 (the CH2, next to oxygen and split by the CH3), a singlet near 2.6 ppm with area 1 (the OH), and a triplet near 1.2 ppm with area 3 (the CH3, split by the CH2). TMS is at 0 ppm." caption="¹H NMR spectrum of ethanol (schematic): three environments in a 2 : 1 : 3 ratio." width={360} height={260} />
+
+## Worked example
+
+<Example title="Counting environments">
+**Question:** How many ¹H NMR signals do these give: (a) propanone, $\ce{CH3COCH3}$ (b) ethanol, $\ce{CH3CH2OH}$ (c) methyl ethanoate, $\ce{CH3COOCH3}$?
+
+1. (a) Both $\ce{CH3}$ groups are equivalent: **1 signal** (6H).
+2. (b) $\ce{CH3}$, $\ce{CH2}$ and $\ce{OH}$: **3 signals** (3 : 2 : 1).
+3. (c) The $\ce{CH3}$ next to C=O and the $\ce{CH3}$ on O are different: **2 signals**, at about 2.0 and 3.7 ppm, both singlets (no neighbouring H).
+</Example>
+
+<Example title="Chemical shift in ppm">
+**Question:** On a 400 MHz spectrometer, a signal appears 1092 Hz from TMS. Calculate δ, and say what kind of hydrogen it might be.
+
+$$
+\begin{aligned}
+&\delta = \frac{1092\ \text{Hz}}{400\ \text{MHz}} \\[4pt]
+&= 2.73\ \text{ppm}
+\end{aligned}
+$$
+
+(1 Hz per MHz = 1 ppm.) At 2.73 ppm, it is probably a hydrogen on a carbon **next to a C=O** group.
+</Example>
+
+<Example title="Predicting a spectrum: ethyl ethanoate">
+**Question:** Predict the ¹H NMR spectrum of ethyl ethanoate, $\ce{CH3COOCH2CH3}$.
+
+| Group | δ (ppm) | Area | Neighbours (n) | Splitting |
+|---|---|---|---|---|
+| $\ce{CH3-CO}$ | about 2.0 | 3 | 0 | singlet |
+| $\ce{O-CH2}$ | about 4.1 | 2 | 3 | quartet |
+| $\ce{CH2-CH3}$ | about 1.3 | 3 | 2 | triplet |
+</Example>
+
+<Example title="Solving a structure">
+**Question:** A compound $\ce{C4H8O2}$ shows a strong IR absorption at 1740 cm⁻¹ (no O–H). Its ¹H NMR spectrum has a triplet at 1.2 ppm (3H), a quartet at 2.3 ppm (2H) and a singlet at 3.7 ppm (3H). Identify it.
+
+1. IR: C=O with no O–H, and two O atoms: an **ester**.
+2. Triplet (3H) + quartet (2H): an **ethyl group**. The quartet at 2.3 ppm means the $\ce{CH2}$ is next to **C=O**: $\ce{CH3CH2-CO-}$.
+3. Singlet at 3.7 ppm (3H): a $\ce{CH3}$ on **oxygen** with no neighbours: $\ce{-O-CH3}$.
+4. The compound is **methyl propanoate**, $\ce{CH3CH2COOCH3}$ (4 C, 8 H, 2 O ✓).
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Counting the hydrogens on the same carbon">
+Splitting comes from hydrogens on the **neighbouring** carbons, not on the same carbon. The $\ce{CH3}$ in an ethyl group is a triplet because its neighbour, $\ce{CH2}$, has 2 H.
+</CommonMistake>
+
+<CommonMistake title="Treating integration as an exact count">
+Integration gives a **ratio**. If the areas are 1 : 1.5, the actual numbers could be 2 : 3 or 4 : 6. Use the molecular formula to fix the totals.
+</CommonMistake>
+
+<CommonMistake title="Expecting O–H to be split">
+In most spectra the O–H hydrogen appears as a **singlet** and does not split neighbouring signals, because it exchanges rapidly between molecules.
+</CommonMistake>
+
+<NotationNote>
+- δ is read "delta"; NMR spectra are drawn with δ **decreasing** from left to right (like IR).
+- s = singlet, d = doublet, t = triplet, q = quartet, m = multiplet.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Number of signals = number of H environments. Integration = relative number of H in each.
+- δ (ppm) = shift (Hz) ÷ spectrometer frequency (MHz); TMS = 0 ppm.
+- Higher δ near electronegative atoms, C=O and rings: about 1 (alkyl), 2–2.7 (next to C=O), 3.3–4.3 (on C–O), 6.5–8 (aromatic), 9–10 (CHO), 10–12 (COOH).
+- n + 1 rule: n neighbouring H give n + 1 peaks; ethyl = quartet + triplet.
+- Combine MS (mass), IR (functional groups) and NMR (C–H framework) to solve a structure.
+</RememberThis>

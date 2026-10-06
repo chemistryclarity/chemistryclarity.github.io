@@ -1,0 +1,39 @@
+# Flashcards: NMR Spectroscopy
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked.
+title: 'NMR Spectroscopy: Flashcards'
+description: 'Revise chemical environments, chemical shift, integration, the n + 1 rule and ¹³C NMR.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: nm-01
+    front: 'What four things does a ¹H NMR spectrum tell you?'
+    back: 'Number of H environments (signals), type of environment (δ), number of H in each (integration), and number of neighbouring H (splitting).'
+  - id: nm-02
+    front: 'What is TMS used for?'
+    back: 'It is the reference compound, set at δ = 0 ppm.'
+  - id: nm-03
+    front: 'How is chemical shift calculated?'
+    back: 'δ (ppm) = shift from TMS (Hz) ÷ spectrometer frequency (MHz).'
+  - id: nm-04
+    front: 'Why do H atoms near oxygen appear at higher δ?'
+    back: 'Electronegative O pulls electron density away (deshielding), shifting the signal to higher δ (about 3.3–4.3 ppm).'
+  - id: nm-05
+    front: 'Give typical δ values for aldehyde, carboxylic acid and aromatic H.'
+    back: 'Aldehyde 9–10 ppm; carboxylic acid 10–12 ppm; aromatic 6.5–8.0 ppm.'
+  - id: nm-06
+    front: 'State the n + 1 rule.'
+    back: 'A signal from H with n equivalent H on adjacent carbons is split into n + 1 peaks.'
+  - id: nm-07
+    front: 'What splitting pattern does an ethyl group give?'
+    back: 'A quartet (CH₂, next to 3 H) and a triplet (CH₃, next to 2 H).'
+  - id: nm-08
+    front: 'How many ¹H NMR signals does propanone give?'
+    back: 'One (6 equivalent H), a singlet.'
+  - id: nm-09
+    front: 'How can you identify an O–H signal?'
+    back: 'Add D₂O: the O–H signal disappears. O–H usually appears as a singlet.'
+  - id: nm-10
+    front: 'In ¹³C NMR, where do C=O carbons appear?'
+    back: 'About 160–220 ppm.'

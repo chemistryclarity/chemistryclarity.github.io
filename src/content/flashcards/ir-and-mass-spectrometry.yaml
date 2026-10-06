@@ -1,0 +1,39 @@
+# Flashcards: Infrared Spectroscopy and Mass Spectrometry
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked.
+title: 'IR Spectroscopy and Mass Spectrometry: Flashcards'
+description: 'Revise IR absorptions of functional groups, the fingerprint region, molecular ions, fragments and isotope patterns.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: im-01
+    front: 'What does an IR spectrum show?'
+    back: 'Which bonds (functional groups) are present: each bond absorbs IR at a characteristic wavenumber.'
+  - id: im-02
+    front: 'What is a wavenumber?'
+    back: 'The number of waves per centimetre, 1/λ, in cm⁻¹. Higher wavenumber = higher energy.'
+  - id: im-03
+    front: 'Where does a C=O bond absorb in IR, and what does it look like?'
+    back: '1680–1750 cm⁻¹, strong and sharp.'
+  - id: im-04
+    front: 'How do the O–H absorptions of alcohols and carboxylic acids differ?'
+    back: 'Alcohol: broad, 3200–3550 cm⁻¹. Acid: very broad, 2500–3300 cm⁻¹.'
+  - id: im-05
+    front: 'What is the fingerprint region?'
+    back: 'Below about 1500 cm⁻¹: complex, unique to each compound, used to match a known spectrum.'
+  - id: im-06
+    front: 'In a mass spectrum, what is the molecular ion?'
+    back: 'M⁺, the peak at the highest m/z (ignoring small isotope peaks); its m/z equals the molar mass.'
+  - id: im-07
+    front: 'What is the base peak?'
+    back: 'The tallest peak (100 %), from the most stable fragment.'
+  - id: im-08
+    front: 'Give the ions for fragments at m/z 15, 29 and 43.'
+    back: '15: CH₃⁺. 29: C₂H₅⁺ or CHO⁺. 43: C₃H₇⁺ or CH₃CO⁺.'
+  - id: im-09
+    front: 'What M : M+2 ratio shows one Cl atom? One Br atom?'
+    back: 'Cl: 3 : 1. Br: 1 : 1.'
+  - id: im-10
+    front: 'Why do N₂ and O₂ not absorb IR?'
+    back: 'Their vibration does not change the dipole moment of the molecule.'

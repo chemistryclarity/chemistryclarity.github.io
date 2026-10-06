@@ -1,0 +1,158 @@
+---
+title: Infrared Spectroscopy and Mass Spectrometry
+question: "How can chemists identify a compound's functional groups and molar mass from its spectra?"
+description: "How infrared spectra reveal functional groups, reading wavenumbers and the fingerprint region, how mass spectrometry gives the molar mass, fragments and isotope patterns, and using both together."
+area: analytical
+level: intermediate
+order: 30
+prerequisites: [functional-groups, light-and-atomic-spectra]
+related: [nmr-spectroscopy, beer-lambert-law, functional-groups, isotopes-and-atomic-mass, chromatography]
+flashcards: ir-and-mass-spectrometry
+quiz: ir-and-mass-spectrometry
+resources: [ir-and-mass-spectrometry-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  IR ranges are typical values (tables vary slightly). Isotope data: ³⁵Cl 34.969 (75.76 %), ³⁷Cl 36.966 (24.24 %).
+  Spectra in the figure are schematic, not measured. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+**Spectroscopy** and **spectrometry** let chemists identify a compound without a chemical test, using only a few milligrams.
+
+- **Infrared (IR) spectroscopy** shines infrared light through a sample. Covalent bonds **vibrate** (stretch and bend), and each type of bond absorbs IR at a characteristic **wavenumber**, measured in cm⁻¹. The absorptions show which **functional groups** are present.
+- **Mass spectrometry (MS)** turns molecules into positive ions, breaks some of them into fragments, and sorts the ions by their **mass-to-charge ratio**, $m/z$. The heaviest ion usually gives the **molar mass**.
+
+The wavenumber is the number of waves per centimetre, the reciprocal of the wavelength: $\tilde{\nu} = 1/\lambda$. A higher wavenumber means a higher frequency and more energy.
+
+<KeyIdea>
+IR answers **"which functional groups?"**; mass spectrometry answers **"how heavy, and in what pieces?"** Together with NMR, they let chemists work out the structure of almost any organic compound.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Identifying unknowns.** Forensic laboratories, drug testing and quality control identify substances from their spectra.
+- **Breathalysers** measure ethanol in breath using its IR absorption.
+- **Climate.** Carbon dioxide, methane and water vapour absorb infrared radiation from the Earth, which is the greenhouse effect.
+- **Space and medicine.** Mass spectrometers analyse the atmospheres of planets, detect drugs in sport and identify proteins in disease.
+
+## How does it work?
+
+### 1. Reading an IR spectrum
+
+An IR spectrum plots **transmittance** (%) against **wavenumber**, with wavenumber decreasing from left (about 4000 cm⁻¹) to right (about 500 cm⁻¹). Absorptions appear as **dips** ("peaks" pointing down).
+
+| Bond | Where found | Wavenumber (cm⁻¹) | Appearance |
+|---|---|---|---|
+| O–H | alcohols | 3200–3550 | strong, **broad** |
+| O–H | carboxylic acids | 2500–3300 | very broad |
+| N–H | amines, amides | 3300–3500 | medium |
+| C–H | almost all organic compounds | 2850–3100 | medium–strong |
+| C≡N | nitriles | about 2250 | medium, sharp |
+| C=O | aldehydes, ketones, acids, esters | 1680–1750 | **strong, sharp** |
+| C=C | alkenes | 1620–1680 | weak–medium |
+| C–O | alcohols, esters, ethers | 1000–1300 | strong |
+
+The region below about 1500 cm⁻¹ contains many overlapping absorptions. It is called the **fingerprint region**: it is unique to each compound, so it can be matched against a database to confirm an identity.
+
+### 2. Reading a mass spectrum
+
+A mass spectrum is a bar chart of **relative abundance** against $m/z$ (for ions with a 1+ charge, $m/z$ is simply the mass).
+
+- The **molecular ion**, $\ce{M+}$, is the peak at the highest $m/z$ (ignoring small isotope peaks). Its $m/z$ equals the **molar mass**.
+- The tallest peak is the **base peak** (set to 100 %). It comes from the most stable fragment.
+- **Fragments** reveal pieces of the molecule: $m/z$ 15 ($\ce{CH3+}$), 29 ($\ce{C2H5+}$ or $\ce{CHO+}$), 31 ($\ce{CH2OH+}$), 43 ($\ce{C3H7+}$ or $\ce{CH3CO+}$), 45 ($\ce{COOH+}$).
+- **Isotope patterns:** a compound with one Cl atom shows peaks at M and M+2 in a **3 : 1** ratio ($\ce{^{35}Cl}$ and $\ce{^{37}Cl}$); one Br atom gives M and M+2 in a **1 : 1** ratio.
+
+<Analogy>
+IR spectroscopy is like listening to an orchestra: each type of bond "plays" at its own pitch, so you can hear which instruments (functional groups) are present. Mass spectrometry is like weighing a vase and then the pieces it breaks into: the whole vase gives the total mass, and the pieces hint at how it was put together.
+</Analogy>
+
+<MorePrecisely>
+A bond absorbs IR only if its vibration **changes the dipole moment** of the molecule, which is why $\ce{N2}$ and $\ce{O2}$ do not absorb but $\ce{CO2}$ and $\ce{H2O}$ do. Stronger bonds and lighter atoms vibrate faster, so they absorb at higher wavenumbers: C≡C absorbs higher than C=C, which absorbs higher than C–C. In MS, the most common method (electron impact) knocks an electron out of the molecule; the small M+1 peak comes mainly from carbon-13 (1.1 % of carbon atoms), and high-resolution MS measures masses to four decimal places, enough to fix the molecular formula.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/ir-and-mass-spectrometry/ir-ms.svg" alt="Top: schematic IR spectrum of ethanoic acid, transmittance against wavenumber from 4000 to 500 per centimetre, with a very broad O–H absorption from 2500 to 3300, a C–H dip near 2950, a strong sharp C=O dip near 1710 and a C–O dip near 1250, and the fingerprint region below 1500 marked. Bottom: schematic mass spectrum of propanone with bars at m/z 15, 43 (the base peak, 100 per cent) and 58 (the molecular ion)." caption="Top: IR spectrum of ethanoic acid. Bottom: mass spectrum of propanone. (Schematic.)" width={360} height={380} />
+
+## Worked example
+
+<Example title="Wavenumber and wavelength">
+**Question:** A C=O absorption appears at 1715 cm⁻¹. What is its wavelength in micrometres?
+
+$$
+\small\begin{aligned}
+&\lambda = \frac{1}{\tilde{\nu}} = \frac{1}{1715\ \text{cm}^{-1}} \\[4pt]
+&= 5.831 \times 10^{-4}\ \text{cm} \\[4pt]
+&= 5.831 \times 10^{-4}\ \cancel{\text{cm}} \\[4pt]
+&\quad \times \frac{10^{4}\ \mu\text{m}}{1\ \cancel{\text{cm}}} = 5.83\ \mu\text{m}
+\end{aligned}
+$$
+</Example>
+
+<Example title="Alcohol, acid or ketone?">
+**Question:** Three compounds give these IR absorptions. Identify the functional group in each. (a) broad 3350 cm⁻¹, 1050 cm⁻¹, nothing near 1700 cm⁻¹ (b) very broad 2500–3300 cm⁻¹ and strong 1710 cm⁻¹ (c) strong 1715 cm⁻¹, no absorption above 3100 cm⁻¹
+
+1. (a) O–H (alcohol) and C–O, no C=O: an **alcohol**.
+2. (b) Very broad acid O–H plus C=O: a **carboxylic acid**.
+3. (c) C=O but no O–H: a **ketone** or **aldehyde** (or ester).
+</Example>
+
+<Example title="Average atomic mass from a mass spectrum">
+**Question:** The mass spectrum of chlorine atoms shows $\ce{^{35}Cl}$ (34.969, 75.76 %) and $\ce{^{37}Cl}$ (36.966, 24.24 %). Calculate the relative atomic mass of chlorine.
+
+$$
+\small\begin{aligned}
+&A_\text{r} = 34.969 \\[4pt]
+&\quad \times 0.7576 + 36.966 \times 0.2424 \\[4pt]
+&= 35.45
+\end{aligned}
+$$
+
+The 3 : 1 ratio of the isotopes is why chlorine compounds show M and M+2 peaks in a 3 : 1 ratio.
+</Example>
+
+<Example title="Putting IR and MS together">
+**Question:** An unknown has the formula $\ce{C3H6O}$. Its IR spectrum shows a strong absorption at 1715 cm⁻¹ and none at 3200–3550 cm⁻¹. Its mass spectrum shows $\ce{M+}$ at $m/z$ 58 and the base peak at $m/z$ 43. Identify it.
+
+1. $\ce{M+}$ = 58 matches $\ce{C3H6O}$ (58.08 g/mol).
+2. IR: C=O present, no O–H: an aldehyde or a ketone.
+3. MS: a base peak at 43 is $\ce{CH3CO+}$, formed when the molecule loses $\ce{CH3}$ (58 − 15 = 43).
+4. The compound is **propanone**, $\ce{CH3COCH3}$. (Its isomer propanal would give a strong peak at 29, $\ce{CHO+}$ or $\ce{C2H5+}$.)
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Reading the wavenumber axis the wrong way">
+IR spectra are drawn with wavenumber **decreasing** from left to right. An O–H band near 3300 cm⁻¹ is on the **left**; C=O near 1700 cm⁻¹ is in the middle.
+</CommonMistake>
+
+<CommonMistake title="Taking the tallest peak as the molar mass">
+The tallest peak is the **base peak**, usually a fragment. The molar mass is given by the **molecular ion**, the peak at the highest $m/z$ (apart from small isotope peaks).
+</CommonMistake>
+
+<CommonMistake title="Trying to identify everything in the fingerprint region">
+Below 1500 cm⁻¹ the absorptions overlap. Use the fingerprint region to **match** a known spectrum, and the region above 1500 cm⁻¹ to identify functional groups.
+</CommonMistake>
+
+<NotationNote>
+- Wavenumber: $\tilde{\nu}$, in cm⁻¹ (read "per centimetre" or "reciprocal centimetres").
+- $\ce{M+}$: molecular ion; M+2: an ion 2 mass units heavier, usually from an isotope.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- IR: bonds absorb at characteristic wavenumbers. Broad 3200–3550: alcohol O–H. Very broad 2500–3300: acid O–H. Strong 1680–1750: C=O.
+- Below 1500 cm⁻¹: fingerprint region, unique to each compound.
+- MS: molecular ion (highest m/z) = molar mass; base peak = tallest; fragments show pieces.
+- Cl: M and M+2 in 3 : 1; Br: 1 : 1.
+- Combine: MS gives the mass, IR the functional groups, NMR the carbon–hydrogen framework.
+</RememberThis>
