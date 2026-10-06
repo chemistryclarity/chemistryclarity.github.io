@@ -1,0 +1,244 @@
+---
+title: Reaction Mechanisms and Catalysis
+question: "How do mechanisms explain rate laws, and how do catalysts and enzymes work?"
+description: "Elementary steps, molecularity, rate-determining steps and pre-equilibria; intermediates versus catalysts; surface catalysis; enzymes and Michaelis–Menten kinetics."
+area: kinetics
+level: advanced
+order: 40
+prerequisites: [integrated-rate-laws, activation-energy]
+related: [reaction-rates, activation-energy, integrated-rate-laws, chemical-equilibrium, organic-reactions]
+flashcards: reaction-mechanisms-and-catalysis
+quiz: reaction-mechanisms-and-catalysis
+resources: [reaction-mechanisms-and-catalysis-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Mechanisms used: 2NO + Br2 → 2NOBr (fast pre-equilibrium, then slow step); ozone destruction by Cl atoms.
+  Enzyme example data are given values (Vmax = 120 µmol L⁻¹ min⁻¹, Km = 2.0 mmol/L), chosen for clean arithmetic.
+  Carbonic anhydrase turnover: about 10⁶ s⁻¹ (commonly quoted order of magnitude).
+  Builds on the short mechanisms section in Integrated Rate Laws (NO2 + CO example) without repeating it.
+  Units on every quantity in every step. Every answer checked by computer.
+*/}
+
+## What is it?
+
+A **reaction mechanism** is the sequence of **elementary steps** by which reactants turn into products. Each elementary step is a single event, a collision or a molecule falling apart, that happens exactly as written.
+
+The [Integrated Rate Laws](/chemistry/integrated-rate-laws/) lesson introduced the key ideas: the slowest step is **rate-determining**, and an **intermediate** is made in one step and used up in a later one. This lesson goes further: how to derive a rate law when the slow step comes **second**, how catalysts fit into a mechanism, and how **enzymes**, nature's catalysts, behave.
+
+<KeyIdea>
+The rate law of an elementary step follows directly from its equation. The rate law of the overall reaction follows from the mechanism: it is set by the rate-determining step, written using only species that appear in the overall reaction (or a catalyst).
+</KeyIdea>
+
+## Why does it matter?
+
+- **Designing better reactions.** Knowing which step is slow tells chemists what to change: a different catalyst, solvent or temperature.
+- **The ozone layer.** Chlorine atoms from CFCs destroy ozone by a catalytic mechanism, which is why tiny amounts did so much damage.
+- **Industry.** Most industrial chemicals, fuels and plastics are made with catalysts, from iron in the Haber process to zeolites in oil refining.
+- **Life and medicine.** Every reaction in a cell is run by an enzyme. Many drugs work by **inhibiting** an enzyme, and enzymes are now designed for industry, as in the work of [Frances Arnold](/explore/chemists/frances-arnold/).
+
+## How does it work?
+
+### 1. Elementary steps and molecularity
+
+The **molecularity** of an elementary step is the number of particles that react in it:
+
+| Molecularity | Example step | Rate law |
+|---|---|---|
+| **unimolecular** | $\ce{A -> products}$ | rate $= k[\ce{A}]$ |
+| **bimolecular** | $\ce{A + B -> products}$ | rate $= k[\ce{A}][\ce{B}]$ |
+| **bimolecular** | $\ce{2A -> products}$ | rate $= k[\ce{A}]^2$ |
+| **termolecular** (rare) | $\ce{A + B + C -> products}$ | rate $= k[\ce{A}][\ce{B}][\ce{C}]$ |
+
+Only for an **elementary step** can you write the rate law from the coefficients. Three particles colliding at exactly the same moment is very unlikely, so termolecular steps are rare, and steps with four or more particles are not seen.
+
+### 2. A valid mechanism
+
+A proposed mechanism must:
+
+1. **add up** to the overall balanced equation;
+2. give a rate law that **matches the experimental** rate law;
+3. be **chemically reasonable** (mostly uni- and bimolecular steps).
+
+### 3. When the slow step comes second: the pre-equilibrium
+
+If a fast, **reversible** first step comes before the slow step, the slow step's rate law contains an intermediate. Replace it using the equilibrium of the fast step.
+
+For $\ce{2NO(g) + Br2(g) -> 2NOBr(g)}$:
+
+$$
+\begin{aligned}
+&\text{Step 1 (fast, reversible):} \\[2pt]
+&\ce{NO + Br2 <=> NOBr2} \\[6pt]
+&\text{Step 2 (slow):} \\[2pt]
+&\ce{NOBr2 + NO -> 2NOBr}
+\end{aligned}
+$$
+
+1. Rate of the slow step: rate $= k_2[\ce{NOBr2}][\ce{NO}]$. But $\ce{NOBr2}$ is an intermediate, so it can't appear in the final rate law.
+2. Step 1 is fast in both directions, so it stays at equilibrium:
+
+   $$
+   K_1 = \frac{[\ce{NOBr2}]}{[\ce{NO}][\ce{Br2}]}
+   $$
+
+   so $[\ce{NOBr2}] = K_1[\ce{NO}][\ce{Br2}]$.
+3. Substitute:
+
+   $$
+   \begin{aligned}
+   \text{rate} &= k_2 K_1 [\ce{NO}]^2[\ce{Br2}] \\[2pt]
+   &= k[\ce{NO}]^2[\ce{Br2}]
+   \end{aligned}
+   $$
+
+The reaction is second order in NO and first order in $\ce{Br2}$, third order overall, which matches experiment, without any three-particle collision.
+
+### 4. Intermediates and catalysts
+
+Both are absent from the overall equation, but they appear in the mechanism in opposite orders:
+
+- An **intermediate** is **made first, then used up**.
+- A **catalyst** is **used first, then regenerated**.
+
+Chlorine atoms high in the atmosphere destroy ozone:
+
+$$
+\begin{aligned}
+&\ce{Cl + O3 -> ClO + O2} \\[2pt]
+&\ce{ClO + O -> Cl + O2} \\[4pt]
+&\text{Overall: } \ce{O3 + O -> 2O2}
+\end{aligned}
+$$
+
+Cl is the **catalyst** (used, then given back), so one Cl atom can destroy many thousands of ozone molecules. ClO is an **intermediate**.
+
+### 5. Surface (heterogeneous) catalysis
+
+A solid catalyst works in four stages:
+
+1. **Adsorption:** reactant molecules bond to **active sites** on the surface.
+2. **Weakening:** bonds within the reactants are stretched or broken (for example, H–H on nickel).
+3. **Reaction:** the adsorbed species react on the surface.
+4. **Desorption:** the products leave, freeing the sites.
+
+A good catalyst adsorbs strongly enough to weaken bonds, but weakly enough to let the products go. Catalysts are spread thinly over a large surface area (a catalytic converter coats a honeycomb with platinum, palladium and rhodium), and they can be **poisoned** by substances, such as lead or sulfur, that bind to the active sites permanently.
+
+### 6. Enzymes
+
+Enzymes are protein catalysts. The **substrate** binds to the enzyme's **active site**, a pocket whose shape and chemical groups fit it closely (**induced fit**: the site adjusts its shape as the substrate binds):
+
+$$
+\ce{E + S <=> ES -> E + P}
+$$
+
+- **Specific:** each enzyme acts on one substrate or a small group of similar ones.
+- **Fast:** carbonic anhydrase converts about a million $\ce{CO2}$ molecules per second at each active site.
+- **Saturation:** at low [S], the rate rises in proportion to [S]. At high [S], every active site is busy and the rate levels off at $V_\text{max}$. This is described by the **Michaelis–Menten equation**:
+
+$$
+v = \frac{V_\text{max}[\ce{S}]}{K_\text{m} + [\ce{S}]}
+$$
+
+- $K_\text{m}$ (the Michaelis constant) is the substrate concentration at which $v = \tfrac{1}{2}V_\text{max}$. A small $K_\text{m}$ means the enzyme works well even at low [S].
+- **Temperature and pH:** the rate rises with temperature up to an **optimum**, then falls sharply as the protein **denatures** (loses its shape). Each enzyme also has an optimum pH.
+- **Inhibitors:** a **competitive** inhibitor resembles the substrate and blocks the active site; adding more substrate overcomes it ($K_\text{m}$ appears larger, $V_\text{max}$ unchanged). A **non-competitive** inhibitor binds elsewhere and changes the enzyme's shape; it lowers $V_\text{max}$, and more substrate doesn't help.
+
+<Analogy>
+An enzyme is like a car wash with a fixed number of bays. When few cars arrive, doubling the arrivals doubles the number washed per hour. When the queue stretches down the road, every bay is busy and extra cars make no difference: the wash runs at its maximum rate ($V_\text{max}$). A competitive inhibitor is a broken-down car parked in a bay: more customers push it out of the way eventually. A non-competitive inhibitor is a bay closed for repairs: more customers can't help.
+</Analogy>
+
+<MorePrecisely>
+The Michaelis–Menten equation comes from assuming that [ES] stays roughly constant during the reaction (the **steady-state approximation**), giving $K_\text{m} = \dfrac{k_{-1} + k_2}{k_1}$. At low [S] ($[\ce{S}] \ll K_\text{m}$), $v \approx \dfrac{V_\text{max}}{K_\text{m}}[\ce{S}]$: first order in S. At high [S], $v \approx V_\text{max}$: zero order. The **turnover number**, $k_\text{cat} = V_\text{max}/[\ce{E}]_\text{total}$, is the number of substrate molecules each active site converts per second when saturated.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/reaction-mechanisms-and-catalysis/two-step-profile.svg" alt="Energy profile for a two-step mechanism. The curve rises from the reactants to a first transition state, TS₁, falls into a valley where the intermediate sits, rises to a lower second transition state, TS₂, and then falls to the products, which are lower in energy than the reactants (ΔH is negative). The activation energy of step 1 is larger than that of step 2." caption="Each step has its own transition state. The intermediate sits in the valley between them." width={360} height={400} />
+
+<Figure src="/images/reaction-mechanisms-and-catalysis/michaelis-menten.svg" alt="Graph of enzyme rate against substrate concentration from 0 to 20 mmol/L. The solid curve (no inhibitor) rises steeply, passes half of Vmax (60) at Km = 2.0 mmol/L, and levels off towards Vmax = 120 µmol per litre per minute. A dashed curve with a competitive inhibitor rises more slowly, reaching half of Vmax only at 6.0 mmol/L, but approaches the same Vmax at high substrate concentration." caption="Enzymes saturate. A competitive inhibitor shifts the curve to the right but does not lower Vmax." width={360} height={400} />
+
+## Worked example
+
+<Example title="Deriving a rate law from a mechanism">
+**Question:** The reaction $\ce{2NO2Cl -> 2NO2 + Cl2}$ has the mechanism:
+
+Step 1 (slow): $\ce{NO2Cl -> NO2 + Cl}$ · Step 2 (fast): $\ce{NO2Cl + Cl -> NO2 + Cl2}$
+
+(a) Show that the steps add up to the overall equation. (b) Identify the intermediate. (c) Write the rate law.
+
+1. Add the steps: $\ce{2NO2Cl + Cl -> 2NO2 + Cl + Cl2}$. Cl appears on both sides and cancels, giving $\ce{2NO2Cl -> 2NO2 + Cl2}$. ✓
+2. **Cl** is made in step 1 and used in step 2: it is the intermediate.
+3. Step 1 is slow and unimolecular: **rate $= k[\ce{NO2Cl}]$**, first order.
+</Example>
+
+<Example title="Michaelis–Menten kinetics">
+**Question:** An enzyme has $V_\text{max} = 120\ \mu\text{mol L}^{-1}\ \text{min}^{-1}$ and $K_\text{m} = 2.0$ mmol/L. (a) Calculate the rate at $[\ce{S}] = 6.0$ mmol/L. (b) The total enzyme concentration is 0.010 µmol/L. Calculate the turnover number in $\text{s}^{-1}$.
+
+1. (a) First find the fraction of $V_\text{max}$, with $K_\text{m} + [\ce{S}] = 2.0\ \text{mmol/L} + 6.0\ \text{mmol/L} = 8.0\ \text{mmol/L}$:
+
+   $$
+   \small\begin{aligned}
+   &\frac{[\ce{S}]}{K_\text{m} + [\ce{S}]} \\[4pt]
+   &= \frac{6.0\ \text{mmol/L}}{8.0\ \text{mmol/L}} = 0.75 \\[8pt]
+   &v = 0.75 \\[4pt]
+   &\quad \times 120\ \mu\text{mol L}^{-1}\ \text{min}^{-1} \\[4pt]
+   &= 90\ \mu\text{mol L}^{-1}\ \text{min}^{-1}
+   \end{aligned}
+   $$
+
+   The mmol/L units cancel. At three times $K_\text{m}$, the rate is three-quarters of $V_\text{max}$.
+
+2. (b) Turnover number:
+
+   $$
+   \small\begin{aligned}
+   &k_\text{cat} = \frac{V_\text{max}}{[\ce{E}]_\text{total}} \\[4pt]
+   &= \frac{120\ \mu\text{mol L}^{-1}\ \text{min}^{-1}}{0.010\ \mu\text{mol L}^{-1}} \\[4pt]
+   &= 1.2 \times 10^{4}\ \text{min}^{-1} \\[4pt]
+   &= \frac{1.2 \times 10^{4}\ \text{min}^{-1}}{60\ \text{s/min}} \\[4pt]
+   &= 2.0 \times 10^{2}\ \text{s}^{-1}
+   \end{aligned}
+   $$
+
+   Each active site converts 200 substrate molecules per second.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Writing the rate law from the overall equation">
+Coefficients in the **overall** equation do not give the orders. $\ce{2NO2Cl -> 2NO2 + Cl2}$ is first order in $\ce{NO2Cl}$, not second. Only elementary steps can be read directly.
+</CommonMistake>
+
+<CommonMistake title="Leaving an intermediate in the rate law">
+If the slow step contains an intermediate, replace its concentration using the fast pre-equilibrium. A final rate law contains only reactants (and sometimes products or a catalyst), never an intermediate.
+</CommonMistake>
+
+<CommonMistake title="Mixing up catalysts and intermediates">
+Look at where the species appears first. **Used, then regenerated:** catalyst. **Made, then used up:** intermediate.
+</CommonMistake>
+
+<CommonMistake title="Thinking enzymes are destroyed by heat at once">
+Below the optimum, enzyme reactions speed up with temperature like any reaction. Above it, the rate falls because the protein denatures, not because the reaction itself becomes slower.
+</CommonMistake>
+
+<NotationNote>
+- $k_1$, $k_{-1}$, $k_2$: rate constants of step 1 forward, step 1 reverse and step 2. $K_1 = k_1/k_{-1}$.
+- E, S, ES, P: enzyme, substrate, enzyme–substrate complex, product.
+- $V_\text{max}$: maximum rate; $K_\text{m}$: Michaelis constant (a concentration); $k_\text{cat}$: turnover number.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Elementary steps: the rate law follows the coefficients (uni-, bi-, rarely termolecular).
+- A mechanism must add up, match the experimental rate law and be reasonable.
+- Slow step second: replace the intermediate using the fast pre-equilibrium.
+- Intermediate: made, then used up. Catalyst: used, then regenerated.
+- Enzymes saturate: $v = V_\text{max}[\ce{S}]/(K_\text{m} + [\ce{S}])$; $K_\text{m}$ is [S] at half $V_\text{max}$.
+</RememberThis>

@@ -1,0 +1,229 @@
+---
+title: Lattice Enthalpy and Born–Haber Cycles
+question: "How strong is an ionic lattice, and how is lattice enthalpy found?"
+description: "Lattice enthalpy, the steps of a Born–Haber cycle, calculating lattice enthalpy with Hess's law, and how ion charge and size control lattice strength."
+area: thermochemistry
+level: intermediate
+order: 25
+prerequisites: [hess-law, ionic-and-covalent-bonds, periodic-trends]
+related: [hess-law, ionic-and-covalent-bonds, periodic-trends, electrolytes-and-dissolving, bond-enthalpies]
+flashcards: born-haber-cycles
+quiz: born-haber-cycles
+resources: [born-haber-cycles-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Data (kJ/mol, 25 °C) follow common data tables (CRC Handbook / NIST values):
+  NaCl: ΔHf −411.2; atomization Na +107.5; IE1 Na +495.8; ½Cl2 → Cl +121.3; first EA Cl −348.6.
+  MgCl2: ΔHf −641.3; atomization Mg +147.1; IE1 Mg +737.7; IE2 Mg +1450.7.
+  REVIEW: lattice enthalpies differ by a few kJ/mol between data books (e.g. NaCl −786 or −787 kJ/mol;
+  MgO about −3790 to −3800 kJ/mol). The trend table uses rounded values; compare with the table your students use.
+  Sign convention: lattice enthalpy is defined here as FORMATION of the lattice (exothermic, negative). Some books use
+  the dissociation convention (positive); this is flagged in a Common mistake box.
+  Units on every quantity in every step. Every answer checked by computer.
+*/}
+
+## What is it?
+
+The **lattice enthalpy** of an ionic compound is the enthalpy change when **1 mol** of the solid forms from its **gaseous ions**, under standard conditions:
+
+$$
+\begin{gathered}
+\ce{Na+(g) + Cl-(g) -> NaCl(s)} \\[4pt]
+\Delta H_\text{latt}° = -787.2\ \text{kJ/mol}
+\end{gathered}
+$$
+
+It is always **exothermic** (negative): oppositely charged ions attract, so energy is released as they come together. The **more negative** the lattice enthalpy, the **stronger** the ionic bonding.
+
+Lattice enthalpy can't be measured directly: you can't collect a mole of separate gaseous ions and let them crash together. Instead it is calculated with a **Born–Haber cycle**, an application of Hess's law that builds the solid from its elements by two routes.
+
+<KeyIdea>
+Lattice enthalpy measures the strength of an ionic lattice. It is found indirectly: the enthalpy of formation equals the sum of all the steps that turn the elements into gaseous ions and then into the solid, so the one unknown step can be calculated.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Properties of ionic solids.** A more negative lattice enthalpy goes with a higher melting point and greater hardness: MgO melts at about 2800 °C, NaCl at 801 °C.
+- **Testing the ionic model.** Comparing a Born–Haber value with one calculated from a purely ionic model shows how ionic a compound really is.
+- **Dissolving.** Whether a salt dissolves, and whether its solution warms or cools, depends on the balance between lattice enthalpy and the hydration of the ions (see [Electrolytes and Dissolving](/chemistry/electrolytes-and-dissolving/)).
+- **Why formulas are what they are.** Born–Haber cycles explain why magnesium forms $\ce{MgCl2}$, not MgCl, even though removing a second electron costs a lot of energy.
+
+## How does it work?
+
+### 1. The steps
+
+Every step is per mole of the compound, under standard conditions:
+
+| Step | Name | Sign |
+|---|---|---|
+| $\ce{Na(s) -> Na(g)}$ | enthalpy of **atomization** of the metal | + |
+| $\ce{1/2 Cl2(g) -> Cl(g)}$ | enthalpy of **atomization** of the non-metal (half the bond enthalpy) | + |
+| $\ce{Na(g) -> Na+(g) + e-}$ | first **ionization energy** (IE) | + |
+| $\ce{Cl(g) + e- -> Cl-(g)}$ | first **electron affinity** (EA) | − |
+| $\ce{Na+(g) + Cl-(g) -> NaCl(s)}$ | **lattice enthalpy** | − |
+| $\ce{Na(s) + 1/2 Cl2(g) -> NaCl(s)}$ | enthalpy of **formation** | usually − |
+
+- Enthalpies of atomization are always **per mole of atoms formed**, so for $\ce{Cl}$ it is **half** the Cl–Cl bond enthalpy (242.6 kJ/mol ÷ 2 = 121.3 kJ/mol).
+- A first electron affinity is usually **exothermic**: the nucleus attracts the incoming electron. A **second** electron affinity ($\ce{O- + e- -> O^2-}$) is **endothermic**: the electron is pushed away by the negative ion.
+
+### 2. Using the cycle
+
+By Hess's law, the direct route (formation) equals the indirect route (all the other steps):
+
+$$
+\small\begin{aligned}
+&\Delta H_\text{f}° \\[4pt]
+&= \Delta H_\text{atom}(\text{metal}) \\[4pt]
+&\quad + \Delta H_\text{atom}(\text{non-metal}) \\[4pt]
+&\quad + \text{IE} + \text{EA} + \Delta H_\text{latt}°
+\end{aligned}
+$$
+
+Rearrange to find whichever value is unknown, usually the lattice enthalpy:
+
+$$
+\small\begin{aligned}
+&\Delta H_\text{latt}° = \Delta H_\text{f}° \\[4pt]
+&\quad - \big(\Delta H_\text{atom} + \Delta H_\text{atom} \\[4pt]
+&\qquad + \text{IE} + \text{EA}\big)
+\end{aligned}
+$$
+
+Multiply each step by the number of times it happens: for $\ce{MgCl2}$, Mg loses **two** electrons (IE₁ + IE₂), and **two** Cl atoms each form and each gain an electron.
+
+### 3. What makes a lattice strong?
+
+The attraction between two ions follows Coulomb's law, so the lattice enthalpy gets more negative with:
+
+- **Higher charges** on the ions (the product of the charges).
+- **Smaller ions** (the ions can get closer together).
+
+| Compound | Ions | $\Delta H_\text{latt}°$ (kJ/mol, approx.) |
+|---|---|---|
+| NaF | $\ce{Na+}$, $\ce{F-}$ | −923 |
+| NaCl | $\ce{Na+}$, $\ce{Cl-}$ | −787 |
+| NaBr | $\ce{Na+}$, $\ce{Br-}$ | −747 |
+| NaI | $\ce{Na+}$, $\ce{I-}$ | −704 |
+| $\ce{MgCl2}$ | $\ce{Mg^2+}$, 2 $\ce{Cl-}$ | −2522 |
+| MgO | $\ce{Mg^2+}$, $\ce{O^2-}$ | about −3800 |
+
+Down Group 17 the halide ion gets bigger, so the lattice enthalpy gets less negative. MgO, with 2+ and 2− ions that are both small, has a lattice enthalpy almost five times that of NaCl.
+
+<Analogy>
+Think of a Born–Haber cycle as working out the cost of one item on a shopping receipt when only the total is printed. You know the total (the enthalpy of formation) and the price of every other item (atomization, ionization, electron affinity), so the missing price (the lattice enthalpy) is the total minus everything else.
+</Analogy>
+
+<MorePrecisely>
+Lattice enthalpy can also be calculated from a model that treats the solid as perfect spherical ions (the Born–Landé equation). For the alkali metal halides, the model and the Born–Haber values agree within a few percent, so these compounds are close to purely ionic. For silver halides such as AgI, the Born–Haber value is noticeably **more negative** than the model predicts: the large, polarizable iodide ion shares some electron density with $\ce{Ag+}$, so the bonding has partial **covalent character**. The cycle is named after Max Born and [Fritz Haber](/explore/chemists/fritz-haber/), who devised it in 1919.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/born-haber-cycles/born-haber-nacl.svg" alt="Born–Haber cycle for sodium chloride with enthalpy levels drawn to scale. From Na(s) + ½Cl₂(g) at 0, three upward steps: atomize Na, +107.5 kJ/mol; atomize ½Cl₂, +121.3 kJ/mol; first ionization energy of Na, +495.8 kJ/mol, reaching Na⁺(g) + e⁻ + Cl(g). A downward step, the electron affinity of Cl, −348.6 kJ/mol, reaches Na⁺(g) + Cl⁻(g). The largest downward step, the lattice enthalpy, −787.2 kJ/mol, reaches NaCl(s). The direct route, ΔHf = −411.2 kJ/mol, goes straight from the elements to NaCl(s)." caption="Up arrows are endothermic steps, down arrows exothermic. The lattice enthalpy is the biggest step of all." width={360} height={495} />
+
+## Worked example
+
+<Example title="The lattice enthalpy of sodium chloride">
+**Question:** Use the data to calculate the lattice enthalpy of NaCl.
+
+$\Delta H_\text{f}°(\ce{NaCl}) = -411.2$ kJ/mol · atomization of Na $= +107.5$ kJ/mol · atomization of ½$\ce{Cl2}$ $= +121.3$ kJ/mol · IE₁(Na) $= +495.8$ kJ/mol · EA₁(Cl) $= -348.6$ kJ/mol
+
+1. Add the steps that turn the elements into gaseous ions:
+
+   $$
+   \small\begin{aligned}
+   &107.5\ \text{kJ/mol} \\[4pt]
+   &\quad + 121.3\ \text{kJ/mol} \\[4pt]
+   &\quad + 495.8\ \text{kJ/mol} \\[4pt]
+   &\quad - 348.6\ \text{kJ/mol} \\[4pt]
+   &= +376.0\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+2. Subtract this from the enthalpy of formation:
+
+   $$
+   \small\begin{aligned}
+   &\Delta H_\text{latt}° \\[4pt]
+   &= -411.2\ \text{kJ/mol} \\[4pt]
+   &\quad - 376.0\ \text{kJ/mol} \\[4pt]
+   &= -787.2\ \text{kJ/mol}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="A 2+ ion: magnesium chloride">
+**Question:** Calculate the lattice enthalpy of $\ce{MgCl2}$.
+
+$\Delta H_\text{f}°(\ce{MgCl2}) = -641.3$ kJ/mol · atomization of Mg $= +147.1$ kJ/mol · IE₁(Mg) $= +737.7$ kJ/mol · IE₂(Mg) $= +1450.7$ kJ/mol · atomization of ½$\ce{Cl2}$ $= +121.3$ kJ/mol · EA₁(Cl) $= -348.6$ kJ/mol
+
+1. Count each step: one Mg atom loses **two** electrons; **two** Cl atoms form, and each gains one electron.
+2. The two chlorine steps:
+
+   $$
+   \small\begin{aligned}
+   &2 \times (+121.3\ \text{kJ/mol}) \\[4pt]
+   &= +242.6\ \text{kJ/mol} \\[10pt]
+   &2 \times (-348.6\ \text{kJ/mol}) \\[4pt]
+   &= -697.2\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+3. All the steps to the gaseous ions:
+
+   $$
+   \small\begin{aligned}
+   &147.1 + 737.7 + 1450.7 \\[4pt]
+   &\quad + 242.6 - 697.2\ (\text{kJ/mol}) \\[4pt]
+   &= +1880.9\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+4. Lattice enthalpy:
+
+   $$
+   \small\begin{aligned}
+   &\Delta H_\text{latt}° \\[4pt]
+   &= -641.3\ \text{kJ/mol} \\[4pt]
+   &\quad - 1880.9\ \text{kJ/mol} \\[4pt]
+   &= -2522.2\ \text{kJ/mol}
+   \end{aligned}
+   $$
+
+Removing the second electron from Mg costs 1450.7 kJ/mol, but the lattice with $\ce{Mg^2+}$ ions is so much stronger that $\ce{MgCl2}$ is still very stable.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Mixing up the sign conventions">
+This lesson defines lattice enthalpy as **forming** the lattice from gaseous ions (negative). Some books define it as **breaking** the lattice into gaseous ions (positive, the "lattice dissociation enthalpy"). The size is the same; check which definition a question uses before writing the sign.
+</CommonMistake>
+
+<CommonMistake title="Using the whole bond enthalpy">
+Atomization makes **one mole of atoms**. For NaCl you need only one Cl atom, so use **half** the Cl–Cl bond enthalpy (121.3 kJ/mol, not 242.6 kJ/mol). For $\ce{MgCl2}$ you need two Cl atoms: 2 × 121.3 kJ/mol, which equals the full bond enthalpy.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the second ionization energy">
+To make $\ce{Mg^2+}$ you need IE₁ **and** IE₂. To make $\ce{O^2-}$ you need the first electron affinity (exothermic) **and** the second (endothermic).
+</CommonMistake>
+
+<NotationNote>
+- $\Delta H_\text{latt}°$ is the standard lattice enthalpy; $\Delta H_\text{f}°$ the standard enthalpy of formation; $\Delta H_\text{atom}$ the enthalpy of atomization.
+- IE and EA values are per mole of atoms or ions, in kJ/mol.
+- In the figure, up arrows are endothermic (+) and down arrows are exothermic (−).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Lattice enthalpy: 1 mol of ionic solid from its gaseous ions; exothermic; more negative = stronger lattice.
+- Born–Haber cycle: $\Delta H_\text{f}°$ = atomizations + IEs + EAs + $\Delta H_\text{latt}°$ (Hess's law).
+- Count every step: half the bond enthalpy per non-metal atom; IE₁ + IE₂ for a 2+ ion.
+- Higher ion charges and smaller ions give more negative lattice enthalpies.
+</RememberThis>

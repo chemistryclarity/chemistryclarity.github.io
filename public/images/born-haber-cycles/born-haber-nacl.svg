@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 495" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .al { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .grid { stroke: #ece9e1; stroke-width: 1; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .lvl { stroke: #14213d; stroke-width: 2.4; }
+    .cA { stroke: #0f766e; stroke-width: 2.6; fill: none; } .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .cB { stroke: #b45309; stroke-width: 2.6; fill: none; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    .cC { stroke: #7c3aed; stroke-width: 2.2; fill: none; stroke-dasharray: 6 4; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .down { stroke: #0f766e; stroke-width: 2.4; fill: none; marker-end: url(#hdA); }
+    .up { stroke: #b45309; stroke-width: 2.4; fill: none; marker-end: url(#hdB); }
+    .step { stroke: #7c3aed; stroke-width: 2.2; fill: none; marker-end: url(#hdC); }
+    .guide { stroke: #8a94a6; stroke-width: 1.1; stroke-dasharray: 3 3; fill: none; }
+    .dot { fill: #b45309; }
+    .arr { stroke: #14213d; stroke-width: 1.4; fill: none; marker-end: url(#hd); marker-start: url(#hs); }
+    .hd { fill: #14213d; } .hdA { fill: #0f766e; } .hdB { fill: #b45309; } .hdC { fill: #7c3aed; }
+    .ar { fill: #14213d; font-size: 11px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .al, .ar, .lab { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .grid { stroke: #27324a; } .axis, .arr, .lvl { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+      .cA, .down { stroke: #2dd4bf; } .lA, .hdA { fill: #2dd4bf; } .cB, .up { stroke: #fbbf24; } .lB, .hdB, .dot { fill: #fbbf24; }
+      .cC, .step { stroke: #c4b5fd; } .lC, .hdC { fill: #c4b5fd; } .guide { stroke: #6b7894; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M10 0 0 5 10 10z"/></marker>
+    <marker id="hdA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdA" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hdB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdB" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hdC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdC" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="495" rx="14"/>
+  <text class="t" x="20" y="28">Born–Haber cycle for sodium chloride</text>
+  <text class="sub" x="20" y="45">Enthalpy levels drawn to scale (kJ/mol).</text>
+  <line class="lvl" x1="110" y1="84" x2="340" y2="84"/><text class="lab" x="150" y="78">Na⁺(g) + e⁻ + Cl(g)</text>
+  <line class="lvl" x1="150" y1="188.6" x2="340" y2="188.6"/><text class="lab" x="152" y="182.6">Na⁺(g) + Cl⁻(g)</text>
+  <line class="lvl" x1="20" y1="232.7" x2="140" y2="232.7"/><text class="lab" x="20" y="226.7">Na(g) + Cl(g)</text>
+  <line class="lvl" x1="20" y1="269.1" x2="140" y2="269.1"/><text class="lab" x="20" y="263.1">Na(g) + ½Cl₂(g)</text>
+  <line class="lvl" x1="20" y1="301.4" x2="140" y2="301.4"/><text class="lab" x="20" y="295.4">Na(s) + ½Cl₂(g)</text>
+  <line class="lvl" x1="20" y1="424.7" x2="340" y2="424.7"/><text class="lab" x="150" y="418.7">NaCl(s)</text>
+  <path class="up" d="M120 299.4 V273.1"/>
+  <path class="up" d="M120 267.1 V236.7"/>
+  <path class="up" d="M120 230.7 V88"/>
+  <text class="lB" x="148" y="289.3">+107.5 atomize Na</text>
+  <text class="lB" x="148" y="254.9">+121.3 atomize ½Cl₂</text>
+  <text class="lB" x="128" y="122">+495.8</text><text class="lB" x="128" y="136">IE₁ of Na</text>
+  <path class="down" d="M296 86 V184.6"/><text class="lA" x="303" y="136.3">−348.6</text><text class="lA" x="303" y="150.3">EA of Cl</text>
+  <path class="down" d="M296 190.6 V420.7"/><text class="lA" x="303" y="326.7">−787.2</text><text class="lA" x="303" y="340.7">lattice</text>
+  <path class="step" d="M60 303.4 V420.7"/><text class="lC" x="68" y="363">−411.2</text><text class="lC" x="68" y="377">ΔH<tspan font-size="8.5" dy="3">f</tspan></text>
+  <text class="sub" x="20" y="464.7">Lattice enthalpy = −411.2 − (107.5 + 121.3 + 495.8 − 348.6)</text>
+  <text class="sub" x="20" y="479.7">= −411.2 − 376.0 = −787.2 kJ/mol</text>
+</svg>

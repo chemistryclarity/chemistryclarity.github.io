@@ -1,0 +1,79 @@
+# Quiz: Reaction Mechanisms and Catalysis
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Reaction Mechanisms and Catalysis: Quiz'
+description: 'Seven questions on elementary steps, rate laws from mechanisms, catalysts, intermediates and enzymes, with explanations.'
+level: advanced
+access: free
+status: review
+assisted: true
+questions:
+  - id: mc-q1
+    prompt: 'What is the rate law of the elementary step 2NO₂ → N₂O₄?'
+    choices:
+      - 'rate = k[NO₂]'
+      - 'rate = k[NO₂]²'
+      - 'rate = k[N₂O₄]'
+      - 'It cannot be written without experiments'
+    answer: 'rate = k[NO₂]²'
+    explanation: 'For an elementary step the rate law follows the coefficients: two NO₂ molecules collide, so the step is second order in NO₂.'
+    difficulty: easy
+  - id: mc-q2
+    prompt: 'In the mechanism Cl + O₃ → ClO + O₂, then ClO + O → Cl + O₂, what is Cl?'
+    choices:
+      - 'An intermediate'
+      - 'A catalyst'
+      - 'A product'
+      - 'A transition state'
+    answer: 'A catalyst'
+    explanation: 'Cl is used in step 1 and regenerated in step 2. ClO, made then used up, is the intermediate.'
+    difficulty: easy
+  - id: mc-q3
+    prompt: 'For 2NO₂Cl → 2NO₂ + Cl₂, step 1 (slow) is NO₂Cl → NO₂ + Cl. What is the rate law?'
+    choices:
+      - 'rate = k[NO₂Cl]²'
+      - 'rate = k[NO₂Cl]'
+      - 'rate = k[NO₂Cl][Cl]'
+      - 'rate = k[NO₂]²[Cl₂]'
+    answer: 'rate = k[NO₂Cl]'
+    explanation: 'The slow step is unimolecular, so the reaction is first order in NO₂Cl, even though the overall equation has a coefficient of 2.'
+    difficulty: medium
+  - id: mc-q4
+    prompt: 'A fast equilibrium NO + Br₂ ⇌ NOBr₂ is followed by the slow step NOBr₂ + NO → 2NOBr. What is the rate law?'
+    choices:
+      - 'rate = k[NOBr₂][NO]'
+      - 'rate = k[NO][Br₂]'
+      - 'rate = k[NO]²[Br₂]'
+      - 'rate = k[NO]²'
+    answer: 'rate = k[NO]²[Br₂]'
+    explanation: 'Rate = k₂[NOBr₂][NO], and [NOBr₂] = K₁[NO][Br₂] from the pre-equilibrium, so rate = k₂K₁[NO]²[Br₂].'
+    difficulty: hard
+  - id: mc-q5
+    prompt: 'An enzyme has Vmax = 80 µmol L⁻¹ min⁻¹ and Km = 4.0 mmol/L. What is the rate at [S] = 4.0 mmol/L?'
+    choices:
+      - '20 µmol L⁻¹ min⁻¹'
+      - '40 µmol L⁻¹ min⁻¹'
+      - '60 µmol L⁻¹ min⁻¹'
+      - '80 µmol L⁻¹ min⁻¹'
+    answer: '40 µmol L⁻¹ min⁻¹'
+    explanation: 'When [S] = Km, v = ½Vmax = ½ × 80 µmol L⁻¹ min⁻¹ = 40 µmol L⁻¹ min⁻¹.'
+    difficulty: medium
+  - id: mc-q6
+    prompt: 'Adding much more substrate restores the full rate of an inhibited enzyme. What type of inhibitor is present?'
+    choices:
+      - 'Competitive'
+      - 'Non-competitive'
+      - 'A catalyst poison that binds permanently'
+      - 'None: the enzyme was denatured'
+    answer: 'Competitive'
+    explanation: 'A competitive inhibitor competes for the active site, so a large excess of substrate outcompetes it and the rate approaches the same Vmax.'
+    difficulty: medium
+  - id: mc-q7
+    prompt: 'Why does an enzyme-catalysed reaction slow down above its optimum temperature?'
+    choices:
+      - 'The activation energy rises'
+      - 'Molecules collide less often'
+      - 'The enzyme denatures and loses the shape of its active site'
+      - 'The equilibrium constant falls'
+    answer: 'The enzyme denatures and loses the shape of its active site'
+    explanation: 'Heat disrupts the weak interactions that hold the protein in shape, so the active site no longer fits the substrate.'
+    difficulty: easy

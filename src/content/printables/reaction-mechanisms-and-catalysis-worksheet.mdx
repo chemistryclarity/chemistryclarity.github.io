@@ -1,0 +1,41 @@
+---
+title: Reaction Mechanisms and Catalysis
+subtitle: Elementary steps, catalysts and enzymes
+kind: worksheet
+level: advanced
+time: 50 minutes
+status: review
+assisted: true
+---
+
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original questions; every calculation checked by computer. Answer key: reaction-mechanisms-and-catalysis-worksheet-answers.mdx */}
+
+<DataBox
+  title="Key relationships"
+  items={['Elementary step: rate law follows the coefficients (A + B → … : rate = k[A][B])', 'Pre-equilibrium: fast A + B ⇌ I gives [I] = K₁[A][B]', 'Michaelis–Menten: v = Vmax[S] / (Km + [S]) · turnover number kcat = Vmax / [E]total']}
+  note="Enzyme data: Vmax = 150 µmol L⁻¹ min⁻¹ and Km = 0.50 mmol/L unless stated. Show units in every calculation step."
+/>
+
+## A. Elementary steps
+
+<Q n={1} box={3}>Give the molecularity and the rate law of each elementary step: (a) $\ce{O3 -> O2 + O}$ (b) $\ce{NO + O3 -> NO2 + O2}$ (c) $\ce{2NO2 -> N2O4}$</Q>
+
+<Q n={2} box={4}>Hydrogen peroxide decomposes in the presence of iodide ions: step 1 (slow) $\ce{H2O2 + I- -> H2O + IO-}$; step 2 (fast) $\ce{H2O2 + IO- -> H2O + O2 + I-}$. (a) Write the overall equation. (b) Identify the catalyst and the intermediate. (c) Write the rate law. (d) Is this homogeneous or heterogeneous catalysis?</Q>
+
+## B. Testing mechanisms
+
+<Q n={3} box={4}>For $\ce{2NO + O2 -> 2NO2}$, rate $= k[\ce{NO}]^2[\ce{O2}]$. Mechanism A is one termolecular step. Mechanism B is $\ce{2NO <=> N2O2}$ (fast), then $\ce{N2O2 + O2 -> 2NO2}$ (slow). (a) Show that both mechanisms give the experimental rate law. (b) Which is more likely, and why?</Q>
+
+<Q n={4} box={4}>Ozone decomposes, $\ce{2O3 -> 3O2}$, by: $\ce{O3 <=> O2 + O}$ (fast), then $\ce{O + O3 -> 2O2}$ (slow). Derive the rate law, and explain why adding $\ce{O2}$ slows the reaction.</Q>
+
+## C. Catalysts and enzymes
+
+<Q n={5} box={3}>Ethene reacts with hydrogen on a nickel catalyst. Describe the four stages of the catalysed reaction, and explain why the nickel is used as a fine powder.</Q>
+
+<Q n={6} box={4}>Using the enzyme data, calculate the rate at (a) $[\ce{S}] = 0.50$ mmol/L (b) $[\ce{S}] = 4.5$ mmol/L. (c) At what [S] is the rate 90 % of $V_\text{max}$? (d) At $[\ce{S}] = 0.050$ mmol/L, compare the exact rate with the low-[S] approximation $v \approx (V_\text{max}/K_\text{m})[\ce{S}]$.</Q>
+
+## D. Challenge
+
+<Q n={7} box={4}>Two inhibitors are tested at $[\ce{S}] = 1.0$ mmol/L. Inhibitor X is competitive (apparent $K_\text{m} = 1.5$ mmol/L, $V_\text{max}$ unchanged). Inhibitor Y is non-competitive ($V_\text{max}$ falls to 90 µmol L⁻¹ min⁻¹, $K_\text{m}$ unchanged). (a) Calculate the rate with no inhibitor, with X and with Y. (b) Explain how measuring the rates at $[\ce{S}] = 10$ mmol/L would tell the two inhibitors apart.</Q>
+
+<Q n={8} box={3}>The enzyme concentration in the experiment is 0.025 µmol/L. (a) Calculate the turnover number in $\text{s}^{-1}$. (b) Explain why the rate of the enzyme reaction first rises and then falls as the temperature is raised from 20 °C to 70 °C.</Q>

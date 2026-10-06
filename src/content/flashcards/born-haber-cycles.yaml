@@ -1,0 +1,39 @@
+# Flashcards: Lattice Enthalpy and Born–Haber Cycles
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked.
+title: 'Lattice Enthalpy and Born–Haber Cycles: Flashcards'
+description: 'Revise lattice enthalpy, the steps of a Born–Haber cycle and what makes an ionic lattice strong.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: bh-01
+    front: 'Define lattice enthalpy (formation convention).'
+    back: 'The enthalpy change when 1 mol of an ionic solid forms from its gaseous ions under standard conditions. It is always exothermic (negative).'
+  - id: bh-02
+    front: 'Why can''t lattice enthalpy be measured directly?'
+    back: 'You cannot collect a mole of separate gaseous ions and combine them. It is calculated with a Born–Haber cycle (Hess''s law).'
+  - id: bh-03
+    front: 'What is the enthalpy of atomization of chlorine?'
+    back: 'The enthalpy change to form 1 mol of Cl(g) atoms from Cl₂(g): half the Cl–Cl bond enthalpy, +121.3 kJ/mol.'
+  - id: bh-04
+    front: 'Is a first electron affinity usually exothermic or endothermic?'
+    back: 'Exothermic (negative): the nucleus attracts the incoming electron. For Cl, EA₁ = −348.6 kJ/mol.'
+  - id: bh-05
+    front: 'Why is the second electron affinity of oxygen endothermic?'
+    back: 'The electron is being added to an ion that is already negative (O⁻), so it is repelled; energy must be put in.'
+  - id: bh-06
+    front: 'Write the Born–Haber equation for lattice enthalpy.'
+    back: 'ΔH(latt) = ΔHf − (atomization enthalpies + ionization energies + electron affinities).'
+  - id: bh-07
+    front: 'Which ionization energies are needed to form Mg²⁺(g)?'
+    back: 'Both the first and the second: IE₁ + IE₂ = 737.7 kJ/mol + 1450.7 kJ/mol.'
+  - id: bh-08
+    front: 'Name two factors that make a lattice enthalpy more negative.'
+    back: 'Higher charges on the ions, and smaller ions (which can get closer together).'
+  - id: bh-09
+    front: 'Put NaF, NaCl, NaBr and NaI in order of decreasingly negative lattice enthalpy.'
+    back: 'NaF (−923) > NaCl (−787) > NaBr (−747) > NaI (−704) kJ/mol: the halide ion gets larger down the group.'
+  - id: bh-10
+    front: 'What does it mean if a Born–Haber lattice enthalpy is more negative than the ionic-model value?'
+    back: 'The bonding has some covalent character (for example in AgI), so it is stronger than pure ionic attraction predicts.'

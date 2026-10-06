@@ -1,0 +1,124 @@
+---
+title: Reaction Mechanisms and Catalysis
+subtitle: Answer key with worked solutions
+kind: answer-key
+level: advanced
+status: review
+assisted: true
+---
+
+{/* DRAFTED WITH CLAUDE FOR YOUR REVIEW. All calculations checked by computer. Units shown on every quantity in every step. */}
+
+## A. Elementary steps
+
+<Q n={1}>Molecularity.</Q>
+<Answer>(a) unimolecular: rate $= k[\ce{O3}]$ (b) bimolecular: rate $= k[\ce{NO}][\ce{O3}]$ (c) bimolecular: rate $= k[\ce{NO2}]^2$</Answer>
+
+<Q n={2}>Hydrogen peroxide and iodide.</Q>
+<Answer>(a) Adding the steps and cancelling $\ce{I-}$ and $\ce{IO-}$: $\ce{2H2O2 -> 2H2O + O2}$. (b) $\ce{I-}$ is the **catalyst** (used in step 1, regenerated in step 2); $\ce{IO-}$ is the **intermediate** (made in step 1, used in step 2). (c) From the slow step: rate $= k[\ce{H2O2}][\ce{I-}]$. (d) **Homogeneous**: the catalyst is in the same phase (aqueous solution) as the reactant.</Answer>
+
+## B. Testing mechanisms
+
+<Q n={3}>Two mechanisms for NO + O₂.</Q>
+<Answer>
+
+(a) A: one elementary step $\ce{2NO + O2 -> 2NO2}$, so rate $= k[\ce{NO}]^2[\ce{O2}]$. B: slow step rate $= k_2[\ce{N2O2}][\ce{O2}]$; the pre-equilibrium gives $[\ce{N2O2}] = K_1[\ce{NO}]^2$, so rate $= k_2K_1[\ce{NO}]^2[\ce{O2}]$. Both match.
+
+(b) **B**: it uses only bimolecular steps, whereas A needs three molecules to collide at once, which is very unlikely. The rate law alone can't decide between them: it can rule a mechanism out, but not prove one.
+
+</Answer>
+
+<Q n={4}>Ozone.</Q>
+<Answer>
+
+Slow step: rate $= k_2[\ce{O}][\ce{O3}]$. From the fast equilibrium:
+
+$$
+K_1 = \frac{[\ce{O2}][\ce{O}]}{[\ce{O3}]}, \quad [\ce{O}] = \frac{K_1[\ce{O3}]}{[\ce{O2}]}
+$$
+
+$$
+\text{rate} = \frac{k_2K_1[\ce{O3}]^2}{[\ce{O2}]} = \frac{k[\ce{O3}]^2}{[\ce{O2}]}
+$$
+
+Adding $\ce{O2}$ shifts the fast equilibrium to the left, lowering [O], the intermediate needed in the slow step: the reaction is order −1 in $\ce{O2}$.
+
+</Answer>
+
+## C. Catalysts and enzymes
+
+<Q n={5}>Hydrogenation on nickel.</Q>
+<Answer>(1) **Adsorption**: $\ce{H2}$ and ethene bond to active sites on the nickel surface. (2) **Weakening**: the H–H bond (and the C=C π bond) weakens or breaks. (3) **Reaction**: H atoms add to the adsorbed ethene, forming ethane. (4) **Desorption**: ethane leaves the surface, freeing the sites. A fine powder has a much larger **surface area**, so there are more active sites and the reaction is faster.</Answer>
+
+<Q n={6}>Michaelis–Menten.</Q>
+<Answer>
+
+(a) $[\ce{S}] = K_\text{m}$, so $v = \tfrac{1}{2}V_\text{max} =$ **75 µmol L⁻¹ min⁻¹**
+
+(b)
+
+$$
+\begin{aligned}
+v &= \frac{(150\ \mu\text{mol L}^{-1}\ \text{min}^{-1})(4.5\ \text{mmol/L})}{0.50\ \text{mmol/L} + 4.5\ \text{mmol/L}} \\[4pt]
+&= \boldsymbol{135\ \mu\textbf{mol L}^{-1}\ \textbf{min}^{-1}}
+\end{aligned}
+$$
+
+(c) $0.90 = \dfrac{[\ce{S}]}{K_\text{m} + [\ce{S}]}$ gives $[\ce{S}] = 9K_\text{m} = 9 \times 0.50\ \text{mmol/L} =$ **4.5 mmol/L** (consistent with b).
+
+(d) Exact:
+
+$$
+\begin{aligned}
+v &= \frac{(150\ \mu\text{mol L}^{-1}\ \text{min}^{-1})(0.050\ \text{mmol/L})}{0.55\ \text{mmol/L}} \\[4pt]
+&= 14\ \mu\text{mol L}^{-1}\ \text{min}^{-1}
+\end{aligned}
+$$
+
+Approximation:
+
+$$
+\begin{aligned}
+v &\approx \frac{150\ \mu\text{mol L}^{-1}\ \text{min}^{-1}}{0.50\ \text{mmol/L}} \times 0.050\ \text{mmol/L} \\[4pt]
+&= 15\ \mu\text{mol L}^{-1}\ \text{min}^{-1}
+\end{aligned}
+$$
+
+Close (within 10 %), because [S] is well below $K_\text{m}$: the reaction is nearly first order in S.
+
+</Answer>
+
+## D. Challenge
+
+<Q n={7}>Inhibitors.</Q>
+<Answer>
+
+(a) No inhibitor:
+
+$$
+v = \frac{(150\ \mu\text{mol L}^{-1}\ \text{min}^{-1})(1.0\ \text{mmol/L})}{1.5\ \text{mmol/L}} = \boldsymbol{100\ \mu\textbf{mol L}^{-1}\ \textbf{min}^{-1}}
+$$
+
+X: $\dfrac{(150\ \mu\text{mol L}^{-1}\ \text{min}^{-1})(1.0\ \text{mmol/L})}{2.5\ \text{mmol/L}} =$ **60 µmol L⁻¹ min⁻¹**
+
+Y: $\dfrac{(90\ \mu\text{mol L}^{-1}\ \text{min}^{-1})(1.0\ \text{mmol/L})}{1.5\ \text{mmol/L}} =$ **60 µmol L⁻¹ min⁻¹**
+
+(b) At 10 mmol/L, X gives about 130 µmol L⁻¹ min⁻¹ (excess substrate outcompetes it, so the rate approaches 150) but Y gives only about 86 µmol L⁻¹ min⁻¹ (it can never exceed its lowered $V_\text{max}$ of 90). The inhibitor whose effect shrinks at high [S] is the competitive one.
+
+</Answer>
+
+<Q n={8}>Turnover and temperature.</Q>
+<Answer>
+
+(a)
+
+$$
+\begin{aligned}
+k_\text{cat} &= \frac{150\ \mu\text{mol L}^{-1}\ \text{min}^{-1}}{0.025\ \mu\text{mol L}^{-1}} = 6.0 \times 10^{3}\ \text{min}^{-1} \\[4pt]
+&= \frac{6.0 \times 10^{3}\ \text{min}^{-1}}{60\ \text{s/min}} = \boldsymbol{1.0 \times 10^{2}\ \textbf{s}^{-1}}
+\end{aligned}
+$$
+
+(b) At first, raising the temperature gives more collisions with enough energy to react, so the rate rises. Above the optimum (often about 37–45 °C for human enzymes), the protein **denatures**: the weak interactions holding its shape break, the active site no longer fits the substrate, and the rate falls sharply.
+
+</Answer>

@@ -1,0 +1,39 @@
+# Flashcards: Reaction Mechanisms and Catalysis
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All values checked.
+title: 'Reaction Mechanisms and Catalysis: Flashcards'
+description: 'Revise elementary steps, molecularity, pre-equilibria, catalysts versus intermediates, surface catalysis and enzymes.'
+level: advanced
+access: free
+status: review
+assisted: true
+cards:
+  - id: mc-01
+    front: 'What is an elementary step?'
+    back: 'A single molecular event (one collision or one molecule breaking apart) that happens exactly as written. Its rate law follows its coefficients.'
+  - id: mc-02
+    front: 'What is molecularity?'
+    back: 'The number of particles reacting in an elementary step: unimolecular (1), bimolecular (2), termolecular (3, rare).'
+  - id: mc-03
+    front: 'Give three tests of a proposed mechanism.'
+    back: 'The steps add up to the overall equation; the predicted rate law matches experiment; the steps are reasonable (mostly uni- or bimolecular).'
+  - id: mc-04
+    front: 'How do you handle an intermediate in the slow step?'
+    back: 'Use the fast, reversible step before it (pre-equilibrium): K₁ = [intermediate]/[reactants], then substitute into the slow step''s rate law.'
+  - id: mc-05
+    front: 'How do you tell a catalyst from an intermediate in a mechanism?'
+    back: 'A catalyst is used first and regenerated later. An intermediate is made first and used up later.'
+  - id: mc-06
+    front: 'Name the four stages of surface catalysis.'
+    back: 'Adsorption onto active sites, weakening of bonds, reaction on the surface, desorption of products.'
+  - id: mc-07
+    front: 'What is catalyst poisoning?'
+    back: 'A substance (such as lead or sulfur) binds permanently to the active sites, blocking them.'
+  - id: mc-08
+    front: 'Write the Michaelis–Menten equation.'
+    back: 'v = Vmax[S] / (Km + [S]). Km is the substrate concentration at which v = ½Vmax.'
+  - id: mc-09
+    front: 'Why does an enzyme''s rate level off at high substrate concentration?'
+    back: 'All the active sites are occupied (saturated), so extra substrate cannot be processed any faster: v approaches Vmax.'
+  - id: mc-10
+    front: 'How do competitive and non-competitive inhibitors differ?'
+    back: 'Competitive: binds the active site; more substrate overcomes it (Km appears larger, Vmax unchanged). Non-competitive: binds elsewhere; lowers Vmax.'

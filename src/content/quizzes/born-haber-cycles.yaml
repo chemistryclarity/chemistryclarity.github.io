@@ -1,0 +1,79 @@
+# Quiz: Lattice Enthalpy and Born–Haber Cycles
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All answers and distractors checked.
+title: 'Lattice Enthalpy and Born–Haber Cycles: Quiz'
+description: 'Seven questions on lattice enthalpy, the steps of a Born–Haber cycle and lattice strength, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: bh-q1
+    prompt: 'Which equation represents the lattice enthalpy of potassium chloride (formation convention)?'
+    choices:
+      - 'K(s) + ½Cl₂(g) → KCl(s)'
+      - 'K⁺(g) + Cl⁻(g) → KCl(s)'
+      - 'KCl(s) → K⁺(g) + Cl⁻(g)'
+      - 'K⁺(aq) + Cl⁻(aq) → KCl(s)'
+    answer: 'K⁺(g) + Cl⁻(g) → KCl(s)'
+    explanation: 'Lattice enthalpy starts from gaseous ions and forms 1 mol of solid. The first equation is the enthalpy of formation; the third is the dissociation convention.'
+    difficulty: easy
+  - id: bh-q2
+    prompt: 'Which step in a Born–Haber cycle is usually exothermic?'
+    choices:
+      - 'Atomization of the metal'
+      - 'First ionization energy of the metal'
+      - 'First electron affinity of the non-metal'
+      - 'Second electron affinity of oxygen'
+    answer: 'First electron affinity of the non-metal'
+    explanation: 'The nucleus attracts the added electron, releasing energy. Atomization and ionization need energy, and adding a second electron to O⁻ is endothermic.'
+    difficulty: easy
+  - id: bh-q3
+    prompt: 'The Cl–Cl bond enthalpy is 242.6 kJ/mol. What value is used for the atomization of chlorine in the cycle for NaCl?'
+    choices:
+      - '+121.3 kJ/mol'
+      - '+242.6 kJ/mol'
+      - '−121.3 kJ/mol'
+      - '+485.2 kJ/mol'
+    answer: '+121.3 kJ/mol'
+    explanation: 'NaCl needs one Cl atom, so half a mole of Cl₂ is atomized: 242.6 kJ/mol ÷ 2 = +121.3 kJ/mol.'
+    difficulty: easy
+  - id: bh-q4
+    prompt: 'Which compound has the most negative lattice enthalpy?'
+    choices:
+      - 'NaCl'
+      - 'NaI'
+      - 'KCl'
+      - 'MgO'
+    answer: 'MgO'
+    explanation: 'Mg²⁺ and O²⁻ have double charges and are small, so the attraction is far stronger (about −3800 kJ/mol, compared with −787 kJ/mol for NaCl).'
+    difficulty: medium
+  - id: bh-q5
+    prompt: 'ΔHf(NaCl) = −411.2 kJ/mol and the steps to form Na⁺(g) + Cl⁻(g) from the elements total +376.0 kJ/mol. What is the lattice enthalpy?'
+    choices:
+      - '−35.2 kJ/mol'
+      - '+787.2 kJ/mol'
+      - '−787.2 kJ/mol'
+      - '−411.2 kJ/mol'
+    answer: '−787.2 kJ/mol'
+    explanation: 'ΔH(latt) = −411.2 kJ/mol − 376.0 kJ/mol = −787.2 kJ/mol.'
+    difficulty: medium
+  - id: bh-q6
+    prompt: 'In the Born–Haber cycle for MgCl₂, which set of steps is correct?'
+    choices:
+      - 'IE₁(Mg), 1 × atomization of Cl, 1 × EA(Cl)'
+      - 'IE₁ + IE₂ (Mg), 2 × atomization of Cl, 2 × EA(Cl)'
+      - 'IE₁ + IE₂ (Mg), 1 × atomization of Cl, 2 × EA(Cl)'
+      - 'IE₂(Mg) only, 2 × atomization of Cl, 2 × EA(Cl)'
+    answer: 'IE₁ + IE₂ (Mg), 2 × atomization of Cl, 2 × EA(Cl)'
+    explanation: 'Mg must lose two electrons (IE₁ then IE₂), and two Cl atoms must each form and each gain one electron.'
+    difficulty: hard
+  - id: bh-q7
+    prompt: 'The Born–Haber lattice enthalpy of AgI is more negative than the value from a purely ionic model. What does this suggest?'
+    choices:
+      - 'The data are wrong'
+      - 'AgI has some covalent character'
+      - 'The ions in AgI are larger than expected'
+      - 'AgI is a metal'
+    answer: 'AgI has some covalent character'
+    explanation: 'The large, polarizable I⁻ ion shares some electron density with Ag⁺, adding covalent bonding to the ionic attraction.'
+    difficulty: hard

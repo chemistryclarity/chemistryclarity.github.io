@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/reaction-mechanisms-and-catalysis-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Reaction Mechanisms and Catalysis Worksheet'
+description: '8 questions on elementary steps, testing mechanisms, pre-equilibria, catalysts and intermediates, surface catalysis and Michaelis–Menten enzyme kinetics. Answer key included.'
+type: worksheet
+level: advanced
+access: free
+file: '/downloads/reaction-mechanisms-and-catalysis-worksheet.pdf'
+answerKey: '/downloads/reaction-mechanisms-and-catalysis-worksheet-answers.pdf'
+preview: '/previews/reaction-mechanisms-and-catalysis-worksheet.png'
+status: review

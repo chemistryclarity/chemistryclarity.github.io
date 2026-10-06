@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .num { fill: #5b6577; font-size: 10px; }
+    .al { fill: #14213d; font-size: 11px; font-weight: 600; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 600; }
+    .grid { stroke: #ece9e1; stroke-width: 1; }
+    .axis { stroke: #14213d; stroke-width: 1.3; fill: none; }
+    .lvl { stroke: #14213d; stroke-width: 2.4; }
+    .cA { stroke: #0f766e; stroke-width: 2.6; fill: none; } .lA { fill: #0f766e; font-size: 11.5px; font-weight: 700; }
+    .cB { stroke: #b45309; stroke-width: 2.6; fill: none; } .lB { fill: #b45309; font-size: 11.5px; font-weight: 700; }
+    .cC { stroke: #7c3aed; stroke-width: 2.2; fill: none; stroke-dasharray: 6 4; } .lC { fill: #7c3aed; font-size: 11.5px; font-weight: 700; }
+    .down { stroke: #0f766e; stroke-width: 2.4; fill: none; marker-end: url(#hdA); }
+    .up { stroke: #b45309; stroke-width: 2.4; fill: none; marker-end: url(#hdB); }
+    .step { stroke: #7c3aed; stroke-width: 2.2; fill: none; marker-end: url(#hdC); }
+    .guide { stroke: #8a94a6; stroke-width: 1.1; stroke-dasharray: 3 3; fill: none; }
+    .dot { fill: #b45309; }
+    .arr { stroke: #14213d; stroke-width: 1.4; fill: none; marker-end: url(#hd); marker-start: url(#hs); }
+    .hd { fill: #14213d; } .hdA { fill: #0f766e; } .hdB { fill: #b45309; } .hdC { fill: #7c3aed; }
+    .ar { fill: #14213d; font-size: 11px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; } .t, .al, .ar, .lab { fill: #e9edf5; } .sub, .num { fill: #9aa5ba; }
+      .grid { stroke: #27324a; } .axis, .arr, .lvl { stroke: #e9edf5; } .hd { fill: #e9edf5; }
+      .cA, .down { stroke: #2dd4bf; } .lA, .hdA { fill: #2dd4bf; } .cB, .up { stroke: #fbbf24; } .lB, .hdB, .dot { fill: #fbbf24; }
+      .cC, .step { stroke: #c4b5fd; } .lC, .hdC { fill: #c4b5fd; } .guide { stroke: #6b7894; }
+    }
+  </style>
+  <defs>
+    <marker id="hd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hd" d="M10 0 0 5 10 10z"/></marker>
+    <marker id="hdA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdA" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hdB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdB" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="hdC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="hdC" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="400" rx="14"/>
+  <text class="t" x="20" y="28">A two-step mechanism</text>
+  <text class="sub" x="20" y="45">Two transition states, with an intermediate in the valley.</text>
+  <path class="axis" d="M64 66 V328 H336"/>
+  <path class="cA" d="M64 216.3 L65.3 216.3 L66.7 216.3 L68 216.3 L69.3 216.3 L70.7 216.3 L72 216.3 L73.3 216.3 L74.7 216.3 L76 216.3 L77.3 216.3 L78.7 216.3 L80 216.3 L81.3 216.3 L82.7 216.3 L84 216.3 L85.3 216.3 L86.7 216.3 L88 216.3 L89.3 216.3 L90.7 216.3 L92 216.3 L93.3 216.3 L94.7 216.3 L96 216.3 L97.9 215.8 L99.8 214.4 L101.8 212.2 L103.7 209.1 L105.6 205.2 L107.5 200.6 L109.4 195.3 L111.3 189.5 L113.3 183.3 L115.2 176.6 L117.1 169.8 L119 162.8 L120.9 155.8 L122.8 149 L124.8 142.4 L126.7 136.1 L128.6 130.3 L130.5 125 L132.4 120.4 L134.3 116.5 L136.3 113.4 L138.2 111.2 L140.1 109.8 L142 109.4 L143.9 109.6 L145.8 110.3 L147.8 111.5 L149.7 113.2 L151.6 115.3 L153.5 117.7 L155.4 120.5 L157.3 123.6 L159.3 127 L161.2 130.5 L163.1 134.2 L165 137.9 L166.9 141.6 L168.8 145.3 L170.8 148.8 L172.7 152.1 L174.6 155.2 L176.5 158 L178.4 160.5 L180.3 162.6 L182.3 164.2 L184.2 165.4 L186.1 166.1 L188 166.4 L189.8 166.3 L191.7 165.9 L193.5 165.3 L195.3 164.5 L197.2 163.4 L199 162.2 L200.8 160.8 L202.7 159.3 L204.5 157.6 L206.3 155.8 L208.2 154 L210 152.1 L211.8 150.3 L213.7 148.4 L215.5 146.7 L217.3 145 L219.2 143.5 L221 142 L222.8 140.8 L224.7 139.8 L226.5 139 L228.3 138.4 L230.2 138 L232 137.9 L234.3 138.5 L236.7 140.4 L239 143.6 L241.3 147.9 L243.7 153.3 L246 159.8 L248.3 167.1 L250.7 175.3 L253 184.1 L255.3 193.3 L257.7 202.9 L260 212.7 L262.3 222.5 L264.7 232.1 L267 241.3 L269.3 250.1 L271.7 258.2 L274 265.6 L276.3 272 L278.7 277.5 L281 281.8 L283.3 285 L285.7 286.9 L288 287.5 L290 287.5 L292 287.5 L294 287.5 L296 287.5 L298 287.5 L300 287.5 L302 287.5 L304 287.5 L306 287.5 L308 287.5 L310 287.5 L312 287.5 L314 287.5 L316 287.5 L318 287.5 L320 287.5 L322 287.5 L324 287.5 L326 287.5 L328 287.5 L330 287.5 L332 287.5 L334 287.5 L336 287.5"/>
+  <path class="guide" d="M70 216.3 H150 M70 287.5 H330 M130 109.4 H170 M180 166.4 H250 M220 137.9 H260"/>
+  <path class="arr" d="M118 214.3 V111.4"/><text class="ar" x="112" y="158.9" text-anchor="end">E<tspan font-size="8.5" dy="3">a</tspan><tspan dy="-3"></tspan></text><text class="ar" x="112" y="172.9" text-anchor="end">step 1</text>
+  <text class="ar" x="252" y="156.2">E<tspan font-size="8.5" dy="3">a</tspan><tspan dy="-3"> step 2</tspan></text>
+  <text class="lB" x="142" y="99.4" text-anchor="middle">TS₁</text><text class="lB" x="232" y="127.9" text-anchor="middle">TS₂</text>
+  <circle class="dot" cx="188" cy="166.4" r="4"/><text class="lB" x="188" y="186.4" text-anchor="middle">intermediate</text>
+  <path class="arr" d="M246 164.4 V139.9"/>
+  <path class="arr" d="M318 218.3 V285.5"/><text class="ar" x="312" y="255.9" text-anchor="end">ΔH</text>
+  <text class="ar" x="68" y="234.3">reactants</text><text class="ar" x="330" y="303.5" text-anchor="end">products</text>
+  <text class="al" x="200" y="346" text-anchor="middle">Reaction progress</text>
+  <text class="al" x="40" y="191" text-anchor="middle" transform="rotate(-90 40 191)">Energy</text>
+  <text class="sub" x="20" y="370">Step 1 has the higher barrier from the reactants, so it is</text>
+  <text class="sub" x="20" y="384">the slow, rate-determining step.</text>
+</svg>
