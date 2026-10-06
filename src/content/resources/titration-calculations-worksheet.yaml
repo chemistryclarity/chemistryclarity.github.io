@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/titration-calculations-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Titration Calculations Worksheet'
+description: '8 questions on concordant titres, standardisation, diprotic acids, dilutions and aliquots, back titrations and uncertainty. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/titration-calculations-worksheet.pdf'
+answerKey: '/downloads/titration-calculations-worksheet-answers.pdf'
+preview: '/previews/titration-calculations-worksheet.png'
+status: review

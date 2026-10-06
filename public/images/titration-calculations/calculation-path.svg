@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .box { fill: #e6f4f1; stroke: #0f766e; stroke-width: 1.4; }
+    .box2 { fill: #f3effe; stroke: #7c3aed; stroke-width: 1.4; }
+    .box3 { fill: #fef3c7; stroke: #b45309; stroke-width: 1.4; }
+    .lab { fill: #14213d; font-size: 11.5px; font-weight: 700; }
+    .ex { fill: #3d4657; font-size: 10px; }
+    .arr { stroke: #5b6577; stroke-width: 1.8; fill: none; }
+    .ah { fill: #5b6577; }
+    .op { fill: #5b6577; font-size: 10px; font-style: italic; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .op { fill: #9aa5ba; }
+      .ex { fill: #c7cfdd; }
+      .box { fill: #123a3a; stroke: #2dd4bf; }
+      .box2 { fill: #2a2347; stroke: #c4b5fd; }
+      .box3 { fill: #45320f; stroke: #fbbf24; }
+      .arr { stroke: #9aa5ba; } .ah { fill: #9aa5ba; }
+    }
+  </style>
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="ah" d="M0 0 10 5 0 10z"/></marker></defs>
+  <rect class="bg" width="360" height="300" rx="14"/>
+  <text class="t" x="16" y="28">The titration calculation path</text>
+  <text class="sub" x="16" y="45">Work from what you know to what you want</text>
+
+  <rect class="box" x="70" y="58" width="220" height="40" rx="7"/>
+  <text class="lab" x="180" y="75" text-anchor="middle">Standard solution</text>
+  <text class="ex" x="180" y="90" text-anchor="middle">concentration c and mean titre V</text>
+  <path class="arr" d="M180 98 V116" marker-end="url(#ah)"/>
+  <text class="op" x="188" y="111">n = c × V (V in L)</text>
+
+  <rect class="box" x="70" y="120" width="220" height="32" rx="7"/>
+  <text class="lab" x="180" y="141" text-anchor="middle">Moles of titrant</text>
+  <path class="arr" d="M180 152 V170" marker-end="url(#ah)"/>
+  <text class="op" x="188" y="165">× mole ratio from the equation</text>
+
+  <rect class="box2" x="70" y="174" width="220" height="32" rx="7"/>
+  <text class="lab" x="180" y="195" text-anchor="middle">Moles of analyte</text>
+
+  <path class="arr" d="M110 206 L62 236" marker-end="url(#ah)"/>
+  <path class="arr" d="M180 206 V236" marker-end="url(#ah)"/>
+  <path class="arr" d="M250 206 L298 236" marker-end="url(#ah)"/>
+
+  <rect class="box3" x="14" y="240" width="100" height="44" rx="7"/>
+  <text class="lab" x="64" y="258" text-anchor="middle">Concentration</text>
+  <text class="ex" x="64" y="273" text-anchor="middle">÷ aliquot volume</text>
+  <rect class="box3" x="130" y="240" width="100" height="44" rx="7"/>
+  <text class="lab" x="180" y="258" text-anchor="middle">Mass</text>
+  <text class="ex" x="180" y="273" text-anchor="middle">× molar mass</text>
+  <rect class="box3" x="246" y="240" width="100" height="44" rx="7"/>
+  <text class="lab" x="296" y="258" text-anchor="middle">Purity</text>
+  <text class="ex" x="296" y="273" text-anchor="middle">÷ sample mass</text>
+</svg>

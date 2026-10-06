@@ -1,0 +1,39 @@
+# Flashcards: Titration Calculations
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Titration Calculations: Flashcards'
+description: 'Revise titration terms, concordant titres, mole ratios, dilutions and back titrations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: tc-01
+    front: 'What is a titre?'
+    back: 'The volume of solution delivered from the burette to reach the end point.'
+  - id: tc-02
+    front: 'What are concordant titres?'
+    back: 'Accurate titres that agree closely, usually within 0.10 mL.'
+  - id: tc-03
+    front: 'Why is the rough titre left out of the mean?'
+    back: 'It is only a quick guide to the end point and is usually overshot.'
+  - id: tc-04
+    front: 'Give the equation linking moles, concentration and volume.'
+    back: 'n = c × V, with V in litres.'
+  - id: tc-05
+    front: 'What is the mole ratio of H₂SO₄ to NaOH?'
+    back: '1 : 2 (H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O)'
+  - id: tc-06
+    front: 'What is the difference between the end point and the equivalence point?'
+    back: 'Equivalence point: exact stoichiometric amount added. End point: where the indicator changes colour.'
+  - id: tc-07
+    front: 'A 25.00 mL aliquot is taken from a 250.0 mL flask. How do you find the moles in the flask?'
+    back: 'Multiply the moles in the aliquot by 250.0 ÷ 25.00 = 10.'
+  - id: tc-08
+    front: 'What is a back titration?'
+    back: 'A known excess of reagent is added; the leftover is titrated to find how much reacted.'
+  - id: tc-09
+    front: 'In a back titration, how do you find the moles that reacted?'
+    back: 'Moles added − moles left over (found by titration).'
+  - id: tc-10
+    front: 'What is a primary standard?'
+    back: 'A very pure, stable solid used to make a solution of accurately known concentration (e.g. Na₂CO₃).'

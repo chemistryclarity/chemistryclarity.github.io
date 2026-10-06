@@ -1,0 +1,79 @@
+# Quiz: Titration Calculations
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Titration Calculations: Quiz'
+description: 'Seven questions on concordant titres, concentrations, mole ratios, dilutions and back titrations, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: tc-q1
+    prompt: 'Titres: rough 24.10 mL, then 23.45, 23.50 and 23.40 mL. What mean titre should be used?'
+    choices:
+      - '23.45 mL'
+      - '23.61 mL'
+      - '24.10 mL'
+      - '23.50 mL'
+    answer: '23.45 mL'
+    explanation: 'Leave out the rough titre and average the three concordant ones: (23.45 + 23.50 + 23.40) mL ÷ 3 = 23.45 mL. 23.61 mL includes the rough titre.'
+    difficulty: easy
+  - id: tc-q2
+    prompt: 'How many moles are in 23.45 mL of 0.1000 mol/L HCl?'
+    choices:
+      - '2.345 mol'
+      - '2.345 × 10⁻³ mol'
+      - '0.2345 mol'
+      - '4.264 × 10⁻³ mol'
+    answer: '2.345 × 10⁻³ mol'
+    explanation: 'n = c × V = 0.1000 mol/L × 0.02345 L = 2.345 × 10⁻³ mol. The volume must be in litres.'
+    difficulty: easy
+  - id: tc-q3
+    prompt: '25.00 mL of NaOH needs 23.45 mL of 0.1000 mol/L HCl. What is the NaOH concentration?'
+    choices:
+      - '0.1066 mol/L'
+      - '0.09380 mol/L'
+      - '0.04690 mol/L'
+      - '2.345 mol/L'
+    answer: '0.09380 mol/L'
+    explanation: 'n(NaOH) = n(HCl) = 2.345 × 10⁻³ mol (1 : 1); c = 2.345 × 10⁻³ mol ÷ 0.02500 L = 0.09380 mol/L.'
+    difficulty: medium
+  - id: tc-q4
+    prompt: '20.00 mL of H₂SO₄ needs 24.80 mL of 0.1500 mol/L NaOH. What is the acid concentration?'
+    choices:
+      - '0.1860 mol/L'
+      - '0.09300 mol/L'
+      - '0.1500 mol/L'
+      - '0.04650 mol/L'
+    answer: '0.09300 mol/L'
+    explanation: 'n(NaOH) = 3.720 × 10⁻³ mol; H₂SO₄ : NaOH = 1 : 2, so n(H₂SO₄) = 1.860 × 10⁻³ mol; c = 1.860 × 10⁻³ mol ÷ 0.02000 L = 0.09300 mol/L. 0.1860 forgets the ratio.'
+    difficulty: medium
+  - id: tc-q5
+    prompt: 'A 25.00 mL aliquot taken from a 100.0 mL flask contains 1.760 × 10⁻³ mol of acid. How many moles were in the flask?'
+    choices:
+      - '4.400 × 10⁻⁴ mol'
+      - '1.760 × 10⁻³ mol'
+      - '7.040 × 10⁻³ mol'
+      - '1.760 × 10⁻² mol'
+    answer: '7.040 × 10⁻³ mol'
+    explanation: 'The flask holds 100.0 ÷ 25.00 = 4 aliquots: 4 × 1.760 × 10⁻³ mol = 7.040 × 10⁻³ mol.'
+    difficulty: medium
+  - id: tc-q6
+    prompt: 'In a back titration, 1.000 × 10⁻² mol HCl is added and 1.240 × 10⁻³ mol is left over. How much HCl reacted with the sample?'
+    choices:
+      - '1.124 × 10⁻² mol'
+      - '8.760 × 10⁻³ mol'
+      - '1.240 × 10⁻³ mol'
+      - '4.380 × 10⁻³ mol'
+    answer: '8.760 × 10⁻³ mol'
+    explanation: 'Reacted = added − left over = 1.000 × 10⁻² mol − 1.240 × 10⁻³ mol = 8.760 × 10⁻³ mol. 4.380 × 10⁻³ mol is the CaCO₃ it reacts with (1 : 2).'
+    difficulty: hard
+  - id: tc-q7
+    prompt: 'Why is a back titration used for limestone (CaCO₃)?'
+    choices:
+      - 'CaCO₃ is a strong base'
+      - 'CaCO₃ is insoluble and reacts slowly, so it can''t be titrated directly'
+      - 'There is no indicator for CaCO₃'
+      - 'It gives a larger titre'
+    answer: 'CaCO₃ is insoluble and reacts slowly, so it can''t be titrated directly'
+    explanation: 'An excess of acid is added so the solid reacts completely; the leftover acid is then titrated.'
+    difficulty: medium

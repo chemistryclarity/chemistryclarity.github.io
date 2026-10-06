@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .tick { fill: #5b6577; font-size: 10px; }
+    .lab { fill: #14213d; font-size: 10.5px; font-weight: 700; }
+    .ex { fill: #5b6577; font-size: 9.5px; }
+    .pin { stroke: #14213d; stroke-width: 1.4; }
+    .dot { fill: #14213d; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .tick, .ex { fill: #9aa5ba; }
+      .pin { stroke: #e9edf5; }
+      .dot { fill: #e9edf5; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="ph" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#dc2626"/><stop offset="0.25" stop-color="#f59e0b"/>
+      <stop offset="0.5" stop-color="#22c55e"/><stop offset="0.75" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect class="bg" width="360" height="240" rx="14"/>
+  <text class="t" x="16" y="28">pH of salt solutions</text>
+  <text class="sub" x="16" y="45">Parent acid + parent base decide the pH</text>
+
+  <!-- scale: pH 0..14 mapped to x 30..330 (21.43 px per unit); bar at y 120..136 -->
+  <rect x="30" y="120" width="300" height="16" rx="4" fill="url(#ph)"/>
+  <text class="tick" x="30" y="114" text-anchor="middle">0</text>
+  <text class="tick" x="180" y="114" text-anchor="middle">7</text>
+  <text class="tick" x="330" y="114" text-anchor="middle">14</text>
+  <text class="tick" x="80" y="164">acidic</text>
+  <text class="tick" x="280" y="164" text-anchor="end">basic</text>
+
+  <!-- NH4Cl pH 4.98 -> x = 30 + 4.98*21.43 = 136.7 -->
+  <line class="pin" x1="136.7" y1="86" x2="136.7" y2="118"/><circle class="dot" cx="136.7" cy="118" r="2.5"/>
+  <text class="lab" x="136.7" y="70" text-anchor="middle">NH₄Cl</text>
+  <text class="ex" x="136.7" y="82" text-anchor="middle">pH 4.98</text>
+  <!-- NaCl pH 7 -> 180 -->
+  <line class="pin" x1="180" y1="180" x2="180" y2="138"/><circle class="dot" cx="180" cy="138" r="2.5"/>
+  <text class="lab" x="180" y="194" text-anchor="middle">NaCl</text>
+  <text class="ex" x="180" y="206" text-anchor="middle">pH 7.00</text>
+  <!-- NaF pH 7.93 -> 199.9 -->
+  <line class="pin" x1="199.9" y1="86" x2="199.9" y2="118"/><circle class="dot" cx="199.9" cy="118" r="2.5"/>
+  <text class="lab" x="206" y="70" text-anchor="middle">NaF</text>
+  <text class="ex" x="206" y="82" text-anchor="middle">pH 7.93</text>
+  <!-- CH3COONa pH 8.87 -> 220.1 -->
+  <line class="pin" x1="220.1" y1="180" x2="220.1" y2="138"/><circle class="dot" cx="220.1" cy="138" r="2.5"/>
+  <text class="lab" x="248" y="194" text-anchor="middle">CH₃COONa</text>
+  <text class="ex" x="248" y="206" text-anchor="middle">pH 8.87</text>
+
+  <text class="ex" x="180" y="228" text-anchor="middle">0.20 M NH₄Cl · 0.10 M NaCl · 0.050 M NaF · 0.10 M CH₃COONa</text>
+</svg>

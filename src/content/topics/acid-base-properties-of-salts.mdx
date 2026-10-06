@@ -1,0 +1,200 @@
+---
+title: Acid–Base Properties of Salts
+question: "Why are some salt solutions acidic or basic, and how do you calculate their pH?"
+description: "Why salts of weak acids are basic and salts of weak bases are acidic, the relationship Ka × Kb = Kw, predicting whether a salt solution is acidic, basic or neutral, and calculating its pH."
+area: acids-and-bases
+level: intermediate
+order: 35
+prerequisites: [weak-acids, ph]
+related: [weak-acids, buffers, titration-curves, electrolytes-and-dissolving, acids-and-bases]
+flashcards: acid-base-properties-of-salts
+quiz: acid-base-properties-of-salts
+resources: [acid-base-properties-of-salts-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  25 °C values: Kw = 1.0 × 10⁻¹⁴; Ka(CH₃COOH) = 1.8 × 10⁻⁵; Ka(HF) = 6.8 × 10⁻⁴; Kb(NH₃) = 1.8 × 10⁻⁵ (as in Weak Acids).
+  The small-x approximation is used and checked (under 5 %). Every calculation checked by computer.
+*/}
+
+## What is it?
+
+A **salt** is the ionic compound formed when an acid neutralizes a base. You might expect every salt solution to be neutral, but many are not:
+
+- Sodium chloride solution has pH 7.
+- Sodium ethanoate (sodium acetate) solution is **basic**.
+- Ammonium chloride solution is **acidic**.
+
+The reason is that some ions react with water. This reaction is called **hydrolysis**.
+
+- The **conjugate base of a weak acid** (such as $\ce{CH3COO-}$ or $\ce{F-}$) takes a proton from water, making $\ce{OH-}$:
+
+$$
+\small\begin{aligned}
+&\ce{CH3COO-(aq) + H2O(l)} \\[4pt]
+&\quad \ce{<=> CH3COOH(aq) + OH-(aq)}
+\end{aligned}
+$$
+
+- The **conjugate acid of a weak base** (such as $\ce{NH4+}$) gives a proton to water, making $\ce{H3O+}$:
+
+$$
+\small\begin{aligned}
+&\ce{NH4+(aq) + H2O(l)} \\[4pt]
+&\quad \ce{<=> NH3(aq) + H3O+(aq)}
+\end{aligned}
+$$
+
+- The conjugates of **strong** acids and bases ($\ce{Cl-}$, $\ce{NO3-}$, $\ce{Na+}$, $\ce{K+}$) are far too weak to react with water: they are **neutral**.
+
+<KeyIdea>
+Look at where the salt came from. **The "parent" that is stronger wins.** Strong acid + strong base gives a neutral salt; strong acid + weak base gives an **acidic** salt; weak acid + strong base gives a **basic** salt.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Titration end points.** At the equivalence point of a weak acid–strong base titration, the solution contains only the salt, so the pH is **above 7**. This decides which indicator to use.
+- **Everyday chemistry.** Baking soda and washing soda solutions are basic; ammonium salts in fertilizers make soil more acidic.
+- **Medicine and biology.** Many drugs are given as salts, and their pH in solution affects how they are absorbed.
+
+## How does it work?
+
+### 1. Predicting acidic, basic or neutral
+
+| Salt made from | Example | Ion that hydrolyses | Solution |
+|---|---|---|---|
+| Strong acid + strong base | NaCl, KNO₃ | none | **neutral**, pH 7 |
+| Strong acid + weak base | NH₄Cl | $\ce{NH4+}$ | **acidic**, pH below 7 |
+| Weak acid + strong base | CH₃COONa, NaF | $\ce{CH3COO-}$, $\ce{F-}$ | **basic**, pH above 7 |
+
+(For a salt of a weak acid **and** a weak base, compare $K_\text{a}$ of the cation with $K_\text{b}$ of the anion.)
+
+### 2. Ka × Kb = Kw
+
+For any conjugate acid–base pair in water:
+
+$$
+\small\begin{aligned}
+&K_\text{a} \times K_\text{b} = K_\text{w} = 1.0 \\[4pt]
+&\quad \times 10^{-14}\ \text{at 25 °C}
+\end{aligned}
+$$
+
+So the **weaker** the acid, the **stronger** its conjugate base. You can find $K_\text{b}$ for $\ce{CH3COO-}$ from $K_\text{a}$ for ethanoic acid, and $K_\text{a}$ for $\ce{NH4+}$ from $K_\text{b}$ for ammonia.
+
+### 3. Calculating the pH of a salt solution
+
+Treat the hydrolysing ion as a weak base (or weak acid) and use the same method as for weak acids:
+
+1. Find $K_\text{b}$ (or $K_\text{a}$) of the ion from $K_\text{a} K_\text{b} = K_\text{w}$.
+2. Set up the equilibrium: $x = [\ce{OH-}]$ (or $[\ce{H3O+}]$), and $x \approx \sqrt{K C}$ if $x$ is small.
+3. Convert to pH.
+
+<Analogy>
+Think of a tug of war between two teams, the parent acid and the parent base. If both teams are strong, they cancel and the rope doesn't move (neutral). If one is strong and the other weak, the strong side's partner (the conjugate ion of the weak side) still pulls a little: the solution leans towards the weak parent's opposite.
+</Analogy>
+
+<MorePrecisely>
+Small, highly charged metal ions such as $\ce{Al^3+}$ and $\ce{Fe^3+}$ also make solutions acidic: the hydrated ion, e.g. $\ce{[Al(H2O)6]^3+}$, releases a proton from one of its water molecules. The relationship $K_\text{a}K_\text{b} = K_\text{w}$ can also be written $\text{p}K_\text{a} + \text{p}K_\text{b} = 14.00$ at 25 °C. $K_\text{w}$ increases with temperature, so neutral pH is slightly below 7 in hot water.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/acid-base-properties-of-salts/salt-chart.svg" alt="A chart of salts on a pH scale. Ammonium chloride, from a strong acid and a weak base, is on the acidic side. Sodium chloride, from a strong acid and a strong base, is at pH 7. Sodium ethanoate and sodium fluoride, from weak acids and a strong base, are on the basic side." caption="The parent acid and base decide whether a salt solution is acidic, neutral or basic." width={360} height={240} />
+
+## Worked example
+
+<Example title="Acidic, basic or neutral?">
+**Question:** Predict whether solutions of (a) KNO₃ (b) NH₄NO₃ (c) Na₂CO₃ (d) KF are acidic, basic or neutral.
+
+1. (a) From $\ce{HNO3}$ (strong) and $\ce{KOH}$ (strong): **neutral**.
+2. (b) $\ce{NH4+}$ comes from $\ce{NH3}$ (weak base); $\ce{NO3-}$ is neutral: **acidic**.
+3. (c) $\ce{CO3^2-}$ comes from a weak acid; $\ce{Na+}$ is neutral: **basic**.
+4. (d) $\ce{F-}$ comes from HF (weak acid): **basic**.
+</Example>
+
+<Example title="Finding Kb from Ka">
+**Question:** Find $K_\text{b}$ for the ethanoate ion, given $K_\text{a}(\ce{CH3COOH}) = 1.8 \times 10^{-5}$.
+
+$$
+\small\begin{aligned}
+&K_\text{b} = \frac{K_\text{w}}{K_\text{a}} \\[4pt]
+&= \frac{1.0 \times 10^{-14}}{1.8 \times 10^{-5}} \\[4pt]
+&= 5.6 \times 10^{-10}
+\end{aligned}
+$$
+</Example>
+
+<Example title="pH of a basic salt">
+**Question:** Calculate the pH of 0.10 mol/L sodium ethanoate.
+
+1. $\ce{CH3COO-}$ is a weak base with $K_\text{b} = 5.6 \times 10^{-10}$. Let $x = [\ce{OH-}]$:
+
+   $$
+   \begin{aligned}
+   &x \approx \sqrt{K_\text{b} C} \\[4pt]
+   &= \sqrt{5.6 \times 10^{-10} \times 0.10} \\[4pt]
+   &= 7.48 \times 10^{-6}\ \text{mol/L}
+   \end{aligned}
+   $$
+
+2. Check: $x$ is far below 5 % of 0.10 mol/L, so the approximation holds.
+3. pOH and pH:
+
+   $$
+   \small\begin{aligned}
+   &\text{pOH} = -\log(7.48 \times 10^{-6}) \\[4pt]
+   &= 5.13 \\[4pt]
+   &\text{pH} = 14.00 - 5.13 = 8.87
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="pH of an acidic salt">
+**Question:** Calculate the pH of 0.20 mol/L ammonium chloride. ($K_\text{b}(\ce{NH3}) = 1.8 \times 10^{-5}$)
+
+1. $K_\text{a}(\ce{NH4+}) = \dfrac{1.0 \times 10^{-14}}{1.8 \times 10^{-5}} = 5.6 \times 10^{-10}$
+2. Let $x = [\ce{H3O+}]$:
+
+   $$
+   \begin{aligned}
+   &x \approx \sqrt{5.6 \times 10^{-10} \times 0.20} \\[4pt]
+   &= 1.058 \times 10^{-5}\ \text{mol/L}
+   \end{aligned}
+   $$
+
+3. $\text{pH} = -\log(1.058 \times 10^{-5}) = 4.98$
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Assuming every salt is neutral">
+"Salt" does not mean "neutral". Only salts of a **strong** acid and a **strong** base give pH 7. Check the parents of both ions.
+</CommonMistake>
+
+<CommonMistake title="Using Ka of the parent acid directly">
+The base in a sodium ethanoate solution is $\ce{CH3COO-}$, not ethanoic acid. Convert first: $K_\text{b} = K_\text{w}/K_\text{a}$.
+</CommonMistake>
+
+<CommonMistake title="Forgetting to convert pOH to pH">
+For a basic salt, the calculation gives $[\ce{OH-}]$ and pOH. Finish with pH = 14.00 − pOH.
+</CommonMistake>
+
+<NotationNote>
+- Hydrolysis is shown with equilibrium arrows (⇌) because only a small fraction of the ions react.
+- Units: $K_\text{a}$ and $K_\text{b}$ are written without units (they are ratios of concentrations relative to 1 mol/L).
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Strong acid + strong base → neutral salt; strong acid + weak base → acidic; weak acid + strong base → basic.
+- Conjugates of strong acids and bases ($\ce{Cl-}$, $\ce{NO3-}$, $\ce{Na+}$, $\ce{K+}$) don't hydrolyse.
+- $K_\text{a} \times K_\text{b} = K_\text{w} = 1.0 \times 10^{-14}$ at 25 °C.
+- pH of a salt: find K of the hydrolysing ion, then $x \approx \sqrt{KC}$, then pH.
+</RememberThis>

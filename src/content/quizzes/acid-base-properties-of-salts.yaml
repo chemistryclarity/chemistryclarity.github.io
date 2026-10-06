@@ -1,0 +1,79 @@
+# Quiz: Acid–Base Properties of Salts
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Acid–Base Properties of Salts: Quiz'
+description: 'Seven questions on predicting the pH of salt solutions, Ka × Kb = Kw and salt-solution pH calculations, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: sa-q1
+    prompt: 'Which salt gives a basic solution?'
+    choices:
+      - 'KCl'
+      - 'NH₄NO₃'
+      - 'K₂CO₃'
+      - 'NaNO₃'
+    answer: 'K₂CO₃'
+    explanation: 'CO₃²⁻ is the conjugate base of a weak acid, so it takes protons from water and forms OH⁻. K⁺ is neutral.'
+    difficulty: easy
+  - id: sa-q2
+    prompt: 'Which salt gives an acidic solution?'
+    choices:
+      - 'NH₄Cl'
+      - 'NaCl'
+      - 'CH₃COONa'
+      - 'KF'
+    answer: 'NH₄Cl'
+    explanation: 'NH₄⁺ is the conjugate acid of the weak base NH₃ and donates a proton to water. Cl⁻ is neutral.'
+    difficulty: easy
+  - id: sa-q3
+    prompt: 'Why is a solution of NaCl neutral?'
+    choices:
+      - 'Na⁺ and Cl⁻ both hydrolyse equally'
+      - 'Neither Na⁺ nor Cl⁻ reacts with water to change [H⁺] or [OH⁻]'
+      - 'NaCl is insoluble'
+      - 'Cl⁻ is a strong base'
+    answer: 'Neither Na⁺ nor Cl⁻ reacts with water to change [H⁺] or [OH⁻]'
+    explanation: 'Both ions come from a strong base and a strong acid, so they are far too weak to react with water.'
+    difficulty: easy
+  - id: sa-q4
+    prompt: 'Ka of HCN is 4.9 × 10⁻¹⁰. What is Kb of CN⁻?'
+    choices:
+      - '4.9 × 10⁻¹⁰'
+      - '2.0 × 10⁻⁵'
+      - '4.9 × 10⁻²⁴'
+      - '2.0 × 10⁹'
+    answer: '2.0 × 10⁻⁵'
+    explanation: 'Kb = Kw ÷ Ka = 1.0 × 10⁻¹⁴ ÷ 4.9 × 10⁻¹⁰ = 2.0 × 10⁻⁵. A very weak acid has a fairly strong conjugate base.'
+    difficulty: medium
+  - id: sa-q5
+    prompt: 'What is the pH of 0.10 mol/L NaCN? (Kb of CN⁻ = 2.0 × 10⁻⁵)'
+    choices:
+      - '2.85'
+      - '7.00'
+      - '11.15'
+      - '13.00'
+    answer: '11.15'
+    explanation: '[OH⁻] ≈ √(2.0 × 10⁻⁵ × 0.10) = 1.41 × 10⁻³ mol/L, pOH = 2.85, pH = 14.00 − 2.85 = 11.15. 2.85 is the pOH.'
+    difficulty: hard
+  - id: sa-q6
+    prompt: 'The equivalence point of a titration of ethanoic acid with NaOH has a pH of about:'
+    choices:
+      - '3'
+      - '5'
+      - '7'
+      - '9'
+    answer: '9'
+    explanation: 'At equivalence the solution contains sodium ethanoate, a basic salt, so the pH is above 7 (about 8.7 for 0.050 mol/L).'
+    difficulty: medium
+  - id: sa-q7
+    prompt: 'Put these 0.10 mol/L solutions in order of increasing pH: NaCN, NH₄Cl, NaCl, CH₃COONa.'
+    choices:
+      - 'NH₄Cl, NaCl, CH₃COONa, NaCN'
+      - 'NaCN, CH₃COONa, NaCl, NH₄Cl'
+      - 'NaCl, NH₄Cl, NaCN, CH₃COONa'
+      - 'NH₄Cl, CH₃COONa, NaCl, NaCN'
+    answer: 'NH₄Cl, NaCl, CH₃COONa, NaCN'
+    explanation: 'NH₄Cl is acidic; NaCl is neutral; CH₃COO⁻ (Kb 5.6 × 10⁻¹⁰) is a weaker base than CN⁻ (Kb 2.0 × 10⁻⁵), so NaCN has the highest pH.'
+    difficulty: hard

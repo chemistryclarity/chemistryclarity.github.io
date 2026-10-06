@@ -1,0 +1,39 @@
+# Flashcards: Acid–Base Properties of Salts
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Acid–Base Properties of Salts: Flashcards'
+description: 'Revise salt hydrolysis, predicting acidic, basic and neutral salts, Ka × Kb = Kw and the pH of salt solutions.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: sa-01
+    front: 'What is hydrolysis of a salt?'
+    back: 'The reaction of an ion with water, producing H₃O⁺ or OH⁻ and changing the pH.'
+  - id: sa-02
+    front: 'Is a salt of a strong acid and a strong base acidic, basic or neutral?'
+    back: 'Neutral (pH 7), e.g. NaCl, KNO₃.'
+  - id: sa-03
+    front: 'Is a salt of a strong acid and a weak base acidic, basic or neutral?'
+    back: 'Acidic, e.g. NH₄Cl: NH₄⁺ gives H⁺ to water.'
+  - id: sa-04
+    front: 'Is a salt of a weak acid and a strong base acidic, basic or neutral?'
+    back: 'Basic, e.g. CH₃COONa: CH₃COO⁻ takes H⁺ from water, forming OH⁻.'
+  - id: sa-05
+    front: 'Which ions do not hydrolyse?'
+    back: 'Conjugates of strong acids and bases: Cl⁻, Br⁻, I⁻, NO₃⁻, Na⁺, K⁺ (and other Group 1 ions).'
+  - id: sa-06
+    front: 'State the relationship between Ka and Kb for a conjugate pair.'
+    back: '$K_\text{a} \times K_\text{b} = K_\text{w} = 1.0 \times 10^{-14}$ at 25 °C'
+  - id: sa-07
+    front: 'Ka of ethanoic acid is 1.8 × 10⁻⁵. What is Kb of the ethanoate ion?'
+    back: '1.0 × 10⁻¹⁴ ÷ 1.8 × 10⁻⁵ = 5.6 × 10⁻¹⁰'
+  - id: sa-08
+    front: 'Why is the pH at the equivalence point of a weak acid–strong base titration above 7?'
+    back: 'The solution contains the salt of the weak acid, whose anion is a weak base.'
+  - id: sa-09
+    front: 'Why are solutions of Al³⁺ or Fe³⁺ salts acidic?'
+    back: 'The small, highly charged hydrated ions release H⁺ from their attached water molecules.'
+  - id: sa-10
+    front: 'Outline how to calculate the pH of 0.10 mol/L sodium ethanoate.'
+    back: 'Kb = Kw/Ka → [OH⁻] ≈ √(Kb × C) → pOH → pH = 14.00 − pOH (answer 8.87).'

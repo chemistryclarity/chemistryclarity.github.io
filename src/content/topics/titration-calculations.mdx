@@ -1,0 +1,213 @@
+---
+title: Titration Calculations
+question: "How do you turn titration results into a concentration, a mass or a purity?"
+description: "Concordant titres and replicate results, finding an unknown concentration, diprotic acids, dilution and aliquots, and back titrations, step by step with worked examples."
+area: acids-and-bases
+level: intermediate
+order: 55
+prerequisites: [molarity, titration-curves]
+related: [titration-curves, molarity, stoichiometry, significant-figures, laboratory-equipment-and-safety]
+flashcards: titration-calculations
+quiz: titration-calculations
+resources: [titration-calculations-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Molar masses (g/mol): CH₃COOH 60.05, CaCO₃ 100.09. Burette readings to 0.05 mL; concordant titres within 0.10 mL.
+  Standard deviation is the sample standard deviation (n − 1). Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+In a **titration**, a solution of known concentration (the **standard solution** or **titrant**, in the burette) is added to a measured volume of an unknown solution (the **analyte**, delivered by pipette as an **aliquot**) until the reaction is exactly complete: the **equivalence point**, shown by an indicator colour change (the **end point**).
+
+The volume delivered from the burette is the **titre**. A rough titre is followed by accurate repeats until at least two or three **concordant** titres agree closely (usually within 0.10 mL). Their **mean** is used in the calculation, and the **standard deviation** shows how precise the titrations were.
+
+<KeyIdea>
+Every titration calculation follows the same path:
+
+**known solution** (volume × concentration) → **moles** → **mole ratio** from the balanced equation → **moles of unknown** → concentration, mass or purity.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Quality control.** Titrations check the acidity of vinegar and wine, the vitamin C in juice and the purity of medicines.
+- **Precision chemistry.** With a burette and pipette, results to 3 or 4 significant figures are routine.
+- **Exams and lab work.** Titration calculations appear in almost every chemistry course and practical assessment.
+
+## How does it work?
+
+### 1. Choosing the titres
+
+Leave out the rough titre and any titre that does not agree with the others. Average the concordant ones, and calculate the standard deviation to report precision.
+
+### 2. The basic calculation
+
+$$
+n = c \times V \qquad c = \frac{n}{V}
+$$
+
+with $V$ in **litres**. Always write the balanced equation: the mole ratio is often not 1 : 1 (for example, $\ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}$).
+
+### 3. Dilutions and aliquots
+
+If the original sample was diluted before titrating, scale the moles back up: a 25.00 mL aliquot from a 100.0 mL flask contains one quarter of the moles in the flask.
+
+### 4. Back titration
+
+When a substance doesn't react quickly or doesn't dissolve (such as limestone, $\ce{CaCO3}$), add a **known excess** of acid, let it react completely, then titrate the **leftover** acid with a base. The acid that reacted = acid added − acid left over.
+
+<Analogy>
+A back titration is like finding out how much a friend ate from a full bag of sweets. You can't count what they ate directly, but you know how many were in the bag and you can count what is left. Eaten = started with − left over.
+</Analogy>
+
+<MorePrecisely>
+The end point (indicator change) and the equivalence point (exact stoichiometric amount) are not quite the same; a well-chosen indicator makes the difference smaller than the burette's reading uncertainty. A titre is the difference of two burette readings, each uncertain by about ±0.05 mL, so the titre is uncertain by about ±0.10 mL; larger titres give a smaller percent uncertainty. Standard solutions are made from **primary standards**, very pure, stable solids such as sodium carbonate or potassium hydrogen phthalate.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/titration-calculations/calculation-path.svg" alt="Flowchart. Volume and concentration of the standard solution give moles of titrant. The mole ratio from the balanced equation gives moles of analyte. Dividing by the aliquot volume gives the concentration; multiplying by molar mass gives the mass; comparing with the sample mass gives the purity." caption="The calculation path for any titration." width={360} height={300} />
+
+## Worked example
+
+<Example title="Concentration from concordant titres">
+**Question:** 25.00 mL of NaOH is titrated with 0.1000 mol/L HCl. Titres: rough 24.10 mL, then 23.45 mL, 23.50 mL and 23.40 mL. Find the concentration of the NaOH.
+
+1. Mean of the three accurate titres:
+
+   $$
+   \small\begin{aligned}
+   &\bar{V} = \tfrac{1}{3}(23.45 + 23.50 \\[4pt]
+   &\qquad + 23.40)\ \text{mL} \\[4pt]
+   &= 23.45\ \text{mL}
+   \end{aligned}
+   $$
+
+   The standard deviation is 0.05 mL: the titres are precise.
+2. Moles of HCl:
+
+   $$
+   \small\begin{aligned}
+   &n = 0.1000\ \tfrac{\text{mol}}{\text{L}} \\[4pt]
+   &\quad \times 0.02345\ \text{L} \\[4pt]
+   &= 2.345 \times 10^{-3}\ \text{mol}
+   \end{aligned}
+   $$
+
+3. $\ce{HCl + NaOH -> NaCl + H2O}$ (1 : 1), so $n(\ce{NaOH}) = 2.345 \times 10^{-3}$ mol.
+4. Concentration:
+
+   $$
+   \small\begin{aligned}
+   &c \\[4pt]
+   &= \frac{2.345 \times 10^{-3}\ \text{mol}}{0.02500\ \text{L}} \\[4pt]
+   &= 0.09380\ \text{mol/L}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="A diprotic acid">
+**Question:** 20.00 mL of sulfuric acid needs 24.80 mL of 0.1500 mol/L NaOH. Find the concentration of the acid.
+
+1. $n(\ce{NaOH}) = 0.1500\ \text{mol/L} \times 0.02480\ \text{L} = 3.720 \times 10^{-3}\ \text{mol}$
+2. $\ce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}$, so $n(\ce{H2SO4}) = \tfrac{1}{2} \times 3.720 \times 10^{-3}\ \text{mol} = 1.860 \times 10^{-3}\ \text{mol}$
+3. Concentration:
+
+   $$
+   \small\begin{aligned}
+   &c \\[4pt]
+   &= \frac{1.860 \times 10^{-3}\ \text{mol}}{0.02000\ \text{L}} \\[4pt]
+   &= 0.09300\ \text{mol/L}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Dilution and an aliquot: vinegar">
+**Question:** 10.00 mL of vinegar is diluted to 100.0 mL. A 25.00 mL aliquot needs 17.60 mL of 0.1000 mol/L NaOH. Find the concentration of ethanoic acid in the original vinegar, and the mass of acid in 100 mL of vinegar.
+
+1. Moles in the aliquot (1 : 1 reaction):
+
+   $$
+   \small\begin{aligned}
+   &n = 0.1000\ \tfrac{\text{mol}}{\text{L}} \\[4pt]
+   &\quad \times 0.01760\ \text{L} \\[4pt]
+   &= 1.760 \times 10^{-3}\ \text{mol}
+   \end{aligned}
+   $$
+
+2. The flask holds $\frac{100.0}{25.00} = 4$ aliquots: $4 \times 1.760 \times 10^{-3}\ \text{mol} = 7.040 \times 10^{-3}\ \text{mol}$, all from the 10.00 mL of vinegar.
+3. Concentration:
+
+   $$
+   \small\begin{aligned}
+   &c \\[4pt]
+   &= \frac{7.040 \times 10^{-3}\ \text{mol}}{0.01000\ \text{L}} \\[4pt]
+   &= 0.7040\ \text{mol/L}
+   \end{aligned}
+   $$
+
+4. Mass in 100 mL (0.1000 L): $0.7040\ \text{mol/L} \times 0.1000\ \text{L} \times 60.05\ \text{g/mol} = 4.23\ \text{g}$, so the vinegar is about 4.2 % acid.
+</Example>
+
+<Example title="A back titration: purity of limestone">
+**Question:** 0.500 g of limestone is added to 50.00 mL of 0.2000 mol/L HCl (an excess). The leftover HCl needs 12.40 mL of 0.1000 mol/L NaOH. Find the percent of $\ce{CaCO3}$ in the limestone.
+
+1. HCl added: $0.2000\ \text{mol/L} \times 0.05000\ \text{L} = 1.000 \times 10^{-2}\ \text{mol}$
+2. HCl left over (= NaOH used): $0.1000\ \text{mol/L} \times 0.01240\ \text{L} = 1.240 \times 10^{-3}\ \text{mol}$
+3. HCl that reacted with the limestone:
+
+   $$
+   \small\begin{aligned}
+   &1.000 \times 10^{-2}\ \text{mol} - 1.240 \\[4pt]
+   &\quad \times 10^{-3}\ \text{mol} \\[4pt]
+   &= 8.760 \times 10^{-3}\ \text{mol}
+   \end{aligned}
+   $$
+
+4. $\ce{CaCO3 + 2HCl -> CaCl2 + H2O + CO2}$: $n(\ce{CaCO3}) = \tfrac{1}{2} \times 8.760 \times 10^{-3}\ \text{mol} = 4.380 \times 10^{-3}\ \text{mol}$
+5. Mass and purity:
+
+   $$
+   \small\begin{aligned}
+   &m = 4.380 \times 10^{-3}\ \text{mol} \\[4pt]
+   &\quad \times 100.09\ \tfrac{\text{g}}{\text{mol}} \\[4pt]
+   &= 0.4384\ \text{g} \\[4pt]
+   &\text{purity} = \frac{0.4384\ \text{g}}{0.500\ \text{g}} \\[4pt]
+   &\quad \times 100\% = 87.7\%
+   \end{aligned}
+   $$
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Including the rough titre">
+The rough titre is only a guide to where the end point is. Average only the accurate, concordant titres.
+</CommonMistake>
+
+<CommonMistake title="Forgetting the mole ratio">
+Sulfuric acid is diprotic: 1 mol $\ce{H2SO4}$ reacts with **2** mol NaOH. Using 1 : 1 doubles the answer.
+</CommonMistake>
+
+<CommonMistake title="Leaving volumes in mL">
+$n = c \times V$ needs $V$ in **litres** when $c$ is in mol/L: 23.45 mL = 0.02345 L.
+</CommonMistake>
+
+<NotationNote>
+- Record burette readings to two decimal places (e.g. 23.45 mL), and report the mean titre the same way.
+- Concentrations from careful titrations are usually given to 4 significant figures.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Use the mean of concordant titres (within about 0.10 mL); leave out the rough titre.
+- Path: $n = cV$ (known) → mole ratio → moles of unknown → $c = n/V$, mass or purity.
+- Scale up for dilutions: moles in flask = moles in aliquot × (flask volume ÷ aliquot volume).
+- Back titration: reacted = added − left over.
+</RememberThis>
