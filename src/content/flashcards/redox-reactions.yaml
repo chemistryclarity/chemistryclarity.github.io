@@ -37,3 +37,6 @@ cards:
   - id: rx-10
     front: 'What must be checked at the end of balancing a redox equation?'
     back: 'Both atoms and total charge balance, and electrons lost = electrons gained.'
+  - id: rx-11
+    front: 'How do you balance a redox equation in basic solution?'
+    back: 'Balance it as if in acid, then add as many OH⁻ as H⁺ to both sides, combine H⁺ + OH⁻ into H₂O, and cancel water.'

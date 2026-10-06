@@ -1,7 +1,7 @@
 ---
 title: Oxidation Numbers and Redox Reactions
 question: "How do you assign oxidation numbers and balance redox equations?"
-description: "Oxidation and reduction as electron transfer, rules for oxidation numbers, oxidizing and reducing agents, half-equations and balancing redox equations in acid."
+description: "Oxidation and reduction as electron transfer, rules for oxidation numbers, oxidizing and reducing agents, half-equations and balancing redox equations in acidic and basic solution."
 area: redox-and-electrochemistry
 level: intermediate
 order: 10
@@ -12,7 +12,7 @@ quiz: redox-reactions
 resources: [redox-reactions-worksheet]
 references: [brown-central-science]
 status: published
-lastReviewed: 2026-10-04
+lastReviewed: 2026-10-06
 assisted: true
 ---
 
@@ -77,6 +77,18 @@ Electrons appear on the **product** side of an oxidation and the **reactant** si
 6. Multiply the half-equations so the **electrons lost = electrons gained**, then add them and cancel.
 7. Check that **atoms and charge** both balance.
 
+### 4. Balancing redox equations in basic solution
+
+In basic solution there is almost no $\ce{H+}$, so the final equation must not contain it. The simplest method is to balance as if the solution were acidic, then **neutralize the $\ce{H+}$**:
+
+1. Balance the equation in acid, using steps 1–7 above.
+2. Add **as many $\ce{OH-}$ as there are $\ce{H+}$** to **both** sides of the equation.
+3. On the side with $\ce{H+}$, combine each $\ce{H+ + OH-}$ into $\ce{H2O}$.
+4. Cancel any water that appears on both sides.
+5. Check that **atoms and charge** both balance.
+
+You can apply these steps to each half-equation before adding them, or to the overall equation at the end: the result is the same.
+
 <Analogy>
 A redox reaction is like a sale: one person can only sell (give) something if another buys (takes) it. The seller is the reducing agent, giving away electrons; the buyer is the oxidizing agent, taking them. The number of items sold must equal the number bought.
 </Analogy>
@@ -132,6 +144,51 @@ Oxidation numbers are a bookkeeping tool, not real charges: in covalent molecule
 4. Check charge: left −1 + 8 + 10 = +17; right +2 + 15 = +17. ✓
 </Example>
 
+<Example title="Balancing in basic solution">
+**Question:** Balance $\ce{MnO4- + I- -> MnO2 + I2}$ in basic solution.
+
+1. Oxidation: $\ce{2I- -> I2 + 2e-}$
+2. Reduction, balanced first as if in acid (4 $\ce{H+}$ needed):
+
+   $$
+   \begin{aligned}
+   &\ce{MnO4- + 4H+ + 3e-} \\[2pt]
+   &\quad \ce{-> MnO2 + 2H2O}
+   \end{aligned}
+   $$
+
+3. Add 4 $\ce{OH-}$ to **both** sides; on the left, $\ce{4H+ + 4OH-}$ becomes $\ce{4H2O}$:
+
+   $$
+   \small\begin{aligned}
+   &\ce{MnO4- + 4H2O + 3e-} \\[2pt]
+   &\quad \ce{-> MnO2 + 2H2O} \\[2pt]
+   &\qquad \ce{+ 4OH-}
+   \end{aligned}
+   $$
+
+4. Cancel 2 $\ce{H2O}$ from each side:
+
+   $$
+   \small\begin{aligned}
+   &\ce{MnO4- + 2H2O + 3e-} \\[2pt]
+   &\quad \ce{-> MnO2 + 4OH-}
+   \end{aligned}
+   $$
+
+5. Electrons: multiply the reduction by 2 and the oxidation by 3 (6 electrons each), then add:
+
+   $$
+   \small\begin{aligned}
+   &\ce{2MnO4- + 6I- + 4H2O} \\[2pt]
+   &\quad \ce{-> 2MnO2 + 3I2} \\[2pt]
+   &\qquad \ce{+ 8OH-}
+   \end{aligned}
+   $$
+
+6. Check: O: 8 + 4 = 12 and 4 + 8 = 12; H: 8 and 8; charge: −2 − 6 = −8 and −8. ✓
+</Example>
+
 ## Common mistake
 
 <CommonMistake title="Mixing up oxidation and reduction">
@@ -140,6 +197,10 @@ Reduction is a **gain** of electrons, even though the oxidation number goes **do
 
 <CommonMistake title="Balancing atoms but not charge">
 $\ce{Fe^3+ + Cu -> Fe^2+ + Cu^2+}$ has balanced atoms but not charge (+3 on the left, +4 on the right). The correct equation is $\ce{2Fe^3+ + Cu -> 2Fe^2+ + Cu^2+}$.
+</CommonMistake>
+
+<CommonMistake title="Leaving H⁺ in a basic-solution answer">
+A balanced equation for a reaction in **basic** solution must contain $\ce{OH-}$ and $\ce{H2O}$, not $\ce{H+}$. Add the same number of $\ce{OH-}$ to both sides to turn every $\ce{H+}$ into water, and remember to add them to **both** sides.
 </CommonMistake>
 
 <CommonMistake title="Assuming oxygen is always −2">
@@ -159,4 +220,5 @@ In peroxides such as $\ce{H2O2}$, oxygen is −1; in $\ce{OF2}$ it is +2, becaus
 - Reducing agent = oxidized; oxidizing agent = reduced.
 - Oxidation numbers: element 0; ion = charge; F −1; H +1; O −2; sum = overall charge.
 - Balance in acid: atoms, then O with H₂O, H with H⁺, charge with e⁻; equalize electrons; check charge.
+- In base: balance in acid first, then add OH⁻ to both sides to turn H⁺ into H₂O, and cancel water.
 </RememberThis>
