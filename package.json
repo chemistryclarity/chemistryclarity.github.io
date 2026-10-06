@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/check-build.mjs",
+    "build": "astro build && pagefind --site dist && node scripts/check-build.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "pdfs": "astro build && node scripts/make-pdfs.mjs && npm run build"
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "pagefind": "^1.5.2",
     "typescript": "^6.0.3"
   }
 }

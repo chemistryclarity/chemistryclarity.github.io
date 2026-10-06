@@ -145,6 +145,11 @@ a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
 .prose th, .prose td { border: 1px solid var(--border); padding: var(--space-2) var(--space-3); text-align: left; }
 .prose th { background: var(--surface-2); }
 .prose .table-wrap, .prose .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: 0.2em; }
+/* Phones: a table wider than the screen scrolls sideways inside its own box instead of widening the page. */
+@media (max-width: 40rem) {
+  .prose table { display: block; overflow-x: auto; max-width: 100%; }
+  .prose th, .prose td { padding: var(--space-2); }
+}
 
 /* ---------- Motion preferences ---------- */
 @media (prefers-reduced-motion: reduce) {

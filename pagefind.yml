@@ -1,0 +1,6 @@
+# Site search index (built by `pagefind --site dist` after `astro build`; see package.json).
+# Maths is left out: KaTeX writes each formula twice plus its source code, which only adds noise to results.
+exclude_selectors:
+  - ".katex"
+  - ".katex-display"
+  - "nav[aria-label='Breadcrumb']"

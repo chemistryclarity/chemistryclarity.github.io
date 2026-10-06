@@ -1,0 +1,373 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAreas, getTopics } from '../lib/content';
+import { routes, url } from '../lib/url';
+
+// Site search. Results come from Pagefind (an index built from the published pages after `astro build`).
+// When nothing matches, the closest lessons are suggested from their titles (tolerant of spelling mistakes)
+// and from a list of everyday words, and visitors can search two trusted outside sites.
+const [areas, topics] = await Promise.all([getAreas(), getTopics()]);
+const areaTitle = Object.fromEntries(areas.map((a) => [a.id, a.data.title]));
+const lessons = topics.map((t) => ({
+  id: t.id,
+  t: t.data.title,
+  q: t.data.question,
+  d: t.data.description,
+  a: areaTitle[t.data.area.id] ?? '',
+  u: url(`/chemistry/${t.id}/`),
+}));
+
+// Everyday words and phrases that may not appear in the lessons, pointing to the lessons that cover them.
+const related: Record<string, string[]> = {
+  rust: ['batteries-fuel-cells-and-corrosion', 'redox-reactions'],
+  rusting: ['batteries-fuel-cells-and-corrosion', 'redox-reactions'],
+  battery: ['batteries-fuel-cells-and-corrosion', 'galvanic-cells'],
+  'pv nrt': ['gas-laws'],
+  'ideal gas': ['gas-laws', 'gas-mixtures-and-gas-stoichiometry'],
+  pressure: ['gas-laws', 'gas-mixtures-and-gas-stoichiometry'],
+  'half life': ['radioactive-decay', 'integrated-rate-laws'],
+  avogadro: ['mole-concept'],
+  'molar mass': ['mole-concept', 'percent-composition'],
+  yield: ['limiting-reactant', 'stoichiometry'],
+  plastic: ['polymers'],
+  chirality: ['stereoisomerism'],
+  chiral: ['stereoisomerism'],
+  vsepr: ['molecular-shapes'],
+  'dot structure': ['lewis-structures'],
+  'boiling point': ['intermolecular-forces', 'phase-changes-and-heating-curves'],
+  'freezing point': ['colligative-properties', 'phase-changes-and-heating-curves'],
+  antifreeze: ['colligative-properties'],
+  'equilibrium constant': ['chemical-equilibrium', 'gas-phase-equilibria'],
+  entropy: ['gibbs-free-energy'],
+  spontaneous: ['gibbs-free-energy'],
+  calorimetry: ['enthalpy'],
+  'rate law': ['reaction-rates', 'integrated-rate-laws'],
+  enzyme: ['reaction-mechanisms-and-catalysis'],
+  catalyst: ['reaction-mechanisms-and-catalysis', 'activation-energy'],
+  lattice: ['born-haber-cycles', 'metallic-bonding-and-solids'],
+  electroplating: ['electrolysis'],
+  'fuel cell': ['batteries-fuel-cells-and-corrosion'],
+  'nuclear power': ['fission-and-fusion'],
+  'pet scan': ['nuclear-medicine'],
+  'x ray': ['nuclear-medicine'],
+  mri: ['nmr-spectroscopy'],
+  'beer law': ['beer-lambert-law'],
+  absorbance: ['beer-lambert-law'],
+  'paper chromatography': ['chromatography'],
+  'acid rain': ['acids-and-bases', 'ph'],
+  vinegar: ['acids-and-bases', 'titration-calculations'],
+  antacid: ['acids-and-bases', 'titration-calculations'],
+  blood: ['buffers'],
+  'baking soda': ['acid-base-properties-of-salts', 'acids-and-bases'],
+  salt: ['acid-base-properties-of-salts', 'electrolytes-and-dissolving'],
+  oxidation: ['redox-reactions'],
+  'oxidation number': ['redox-reactions'],
+  benzene: ['benzene-and-aromatic-compounds'],
+  orbital: ['quantum-numbers-and-orbitals', 'electron-configuration'],
+  'flame test': ['light-and-atomic-spectra'],
+  rounding: ['significant-figures'],
+  'sig figs': ['significant-figures'],
+  kelvin: ['temperature-scales'],
+  conversion: ['unit-conversions'],
+};
+const ids = new Set(topics.map((t) => t.id));
+const relatedLive = Object.fromEntries(
+  Object.entries(related).map(([k, v]) => [k, v.filter((id) => ids.has(id))]).filter(([, v]) => v.length),
+);
+const subjects = areas
+  .filter((a) => topics.some((t) => t.data.area.id === a.id))
+  .map((a) => ({ t: a.data.title, u: url(`/learn/${a.id}/`) }));
+const types = [['Lesson', 'Lessons'], ['Quiz', 'Quizzes'], ['Flashcards', 'Flashcards'], ['Worksheet', 'Worksheets'], ['Explore', 'Explore'], ['Subject', 'Subjects']];
+---
+
+<BaseLayout title="Search" description="Search Chemistry Clarity lessons, quizzes, flashcards and worksheets." path="/search/" noindex>
+  <section class="search container">
+    <h1>Search</h1>
+    <form class="search__form" action={url('/search/')} method="get" role="search">
+      <label class="visually-hidden" for="search-q">Search Chemistry Clarity</label>
+      <input id="search-q" name="q" type="search" autocomplete="off" placeholder="Try “buffers”, “half-life” or “Lewis structures”" autofocus />
+      <button class="btn btn--primary" type="submit">Search</button>
+    </form>
+
+    <div class="search__types" role="group" aria-label="Show only">
+      <button type="button" class="chip" data-type="" aria-pressed="true">All</button>
+      {types.map(([t, label]) => <button type="button" class="chip" data-type={t} aria-pressed="false">{label}</button>)}
+    </div>
+
+    <section class="search__dym" hidden>
+      <h2>Did you mean</h2>
+      <ul class="search__dym-list" role="list"></ul>
+    </section>
+
+    <p class="search__status muted" aria-live="polite"></p>
+    <ol class="search__results" role="list"></ol>
+    <button type="button" class="btn btn--ghost search__more" hidden>Show more results</button>
+
+    <section class="search__suggest" hidden>
+      <h2>Related topics</h2>
+      <p class="muted search__suggest-note"></p>
+      <ul class="search__suggest-list" role="list"></ul>
+    </section>
+
+    <section class="search__outside" hidden>
+      <h2>Search more widely</h2>
+      <p class="muted">Two trusted chemistry organizations (these open in a new tab):</p>
+      <ul class="search__outside-list" role="list">
+        <li><a data-outside="rsc" href="https://edu.rsc.org/" target="_blank" rel="noopener">Royal Society of Chemistry Education</a><span class="muted"> · teaching resources, experiments and articles</span></li>
+        <li><a data-outside="acs" href="https://www.acs.org/education.html" target="_blank" rel="noopener">American Chemical Society</a><span class="muted"> · education resources and chemistry news</span></li>
+      </ul>
+    </section>
+
+    <section class="search__browse">
+      <h2>Browse by subject</h2>
+      <ul class="search__subjects" role="list">
+        {subjects.map((s) => <li><a href={s.u}>{s.t}</a></li>)}
+      </ul>
+      <p class="muted">Or see <a href={routes.learn()}>all subjects and lessons</a>.</p>
+    </section>
+  </section>
+
+  <script type="application/json" id="search-data" set:html={JSON.stringify({ lessons, related: relatedLive, pagefind: url('/pagefind/pagefind.js') })} />
+</BaseLayout>
+
+<script>
+  type Lesson = { id: string; t: string; q: string; d: string; a: string; u: string };
+  const data = JSON.parse(document.getElementById('search-data')!.textContent || '{}') as {
+    lessons: Lesson[]; related: Record<string, string[]>; pagefind: string;
+  };
+  const input = document.getElementById('search-q') as HTMLInputElement;
+  const form = document.querySelector<HTMLFormElement>('.search__form')!;
+  const status = document.querySelector<HTMLElement>('.search__status')!;
+  const list = document.querySelector<HTMLOListElement>('.search__results')!;
+  const more = document.querySelector<HTMLButtonElement>('.search__more')!;
+  const suggest = document.querySelector<HTMLElement>('.search__suggest')!;
+  const suggestList = document.querySelector<HTMLUListElement>('.search__suggest-list')!;
+  const suggestNote = document.querySelector<HTMLElement>('.search__suggest-note')!;
+  const outside = document.querySelector<HTMLElement>('.search__outside')!;
+  const dym = document.querySelector<HTMLElement>('.search__dym')!;
+  const dymList = document.querySelector<HTMLUListElement>('.search__dym-list')!;
+  const shownUrls = new Set<string>();
+  const browse = document.querySelector<HTMLElement>('.search__browse')!;
+  const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  // ---- Closest lessons, tolerant of spelling mistakes (letter-triplet similarity) ----
+  const norm = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  const stop = new Set(['the', 'and', 'for', 'how', 'what', 'why', 'does', 'with', 'from', 'into', 'are', 'its', 'you', 'your', 'can', 'use']);
+  const words = (s: string) => norm(s).split(' ').filter((w) => w.length > 2 && !stop.has(w));
+  const grams = (w: string) => { const p = `  ${w} `; const g = new Set<string>(); for (let i = 0; i < p.length - 2; i++) g.add(p.slice(i, i + 3)); return g; };
+  const sim = (a: Set<string>, b: Set<string>) => { let n = 0; a.forEach((x) => { if (b.has(x)) n++; }); return n / (a.size + b.size - n); };
+  const index = data.lessons.map((l) => ({
+    l,
+    title: words(l.t).map(grams),
+    rest: Array.from(new Set(words(`${l.q} ${l.d} ${l.a}`))).map(grams),
+  }));
+  // s: overall closeness (title, question, description, subject); title: closeness to the title alone.
+  function closest(q: string): { l: Lesson; s: number; title: number }[] {
+    const qn = ` ${norm(q)} `;
+    const boost = new Map<string, number>();
+    for (const [term, ids] of Object.entries(data.related)) if (qn.includes(` ${term} `)) ids.forEach((id, i) => boost.set(id, Math.max(boost.get(id) ?? 0, 1 - i * 0.1)));
+    const qw = words(q).map(grams);
+    const scored = index.map(({ l, title, rest }) => {
+      let s = 0, ts = 0;
+      for (const g of qw) {
+        const bt = Math.max(0, ...title.map((t) => sim(g, t)));
+        s += Math.max(bt, ...rest.map((t) => sim(g, t) * 0.75));
+        ts += bt;
+      }
+      const n = qw.length || 1;
+      const b = boost.get(l.id) ?? 0;
+      // Small tie-breaker: a shorter title that matches ("Stoichiometry") beats a longer one containing the word.
+      const tie = 0.01 * title.length;
+      return { l, s: s / n + b - tie, title: ts / n + b - tie };
+    });
+    return scored.filter((x) => x.s >= 0.34).sort((a, b) => b.s - a.s).slice(0, 6);
+  }
+
+  // ---- Pagefind ----
+  let pagefind: any = null;
+  async function loadPagefind() {
+    if (pagefind) return pagefind;
+    try {
+      pagefind = await import(/* @vite-ignore */ data.pagefind);
+      await pagefind.init?.();
+    } catch {
+      pagefind = null;
+    }
+    return pagefind;
+  }
+
+  let type = '';
+  let shown = 0;
+  let current: any[] = [];
+  let token = 0;
+  const PAGE = 10;
+
+  // Keep a result only if at least one highlighted word resembles a word typed (Pagefind can also
+  // return loose partial matches, e.g. for a misspelled or made-up word).
+  function relevant(q: string, d: any): boolean {
+    const typed = norm(q).split(' ').filter(Boolean);
+    const marked = Array.from(String(d.excerpt).matchAll(/<mark>(.*?)<\/mark>/g), (m) => norm(m[1])).join(' ').split(' ').filter(Boolean);
+    if (!marked.length) return true;
+    const prefix = (a: string, b: string) => a.length >= 4 && b.length >= 4 && a.slice(0, 4) === b.slice(0, 4);
+    return marked.some((m) => typed.some((t) => m === t || prefix(m, t) || sim(grams(m), grams(t)) >= 0.45));
+  }
+
+  async function renderMore() {
+    const batch = current.slice(shown, shown + PAGE);
+    for (const d of batch) {
+      if (shown < 5) shownUrls.add(d.url);
+      const li = document.createElement('li');
+      li.className = 'result';
+      const t = d.meta?.type ?? '';
+      li.innerHTML = `<a class="result__title" href="${esc(d.url)}">${esc(d.meta?.title ?? d.url)}</a>`
+        + (t ? `<span class="result__type">${esc(t)}</span>` : '')
+        + `<p class="result__excerpt">${d.excerpt}</p>`;
+      list.append(li);
+    }
+    shown += batch.length;
+    more.hidden = shown >= current.length;
+  }
+
+  const lessonLi = (l: Lesson) => `<li><a href="${esc(l.u)}">${esc(l.t)}</a><span class="muted"> · ${esc(l.a)}</span></li>`;
+
+  // "Did you mean": lessons whose titles closely match the words typed (or an everyday term) but are not
+  // already among the first results; this catches spelling mistakes that the index can't match.
+  function showDidYouMean(q: string, firstUrls: Set<string>) {
+    const matches = closest(q).filter((x) => x.title >= 0.5).sort((a, b) => b.title - a.title);
+    // If a lesson whose title matches is already among the first results, the search has done its job.
+    const best = matches.some((x) => firstUrls.has(x.l.u)) ? [] : matches.slice(0, 3).map((x) => x.l);
+    dymList.innerHTML = best.map(lessonLi).join('');
+    dym.hidden = !best.length;
+  }
+
+  function showSuggestions(q: string, none: boolean) {
+    const found = closest(q).map((x) => x.l);
+    suggestList.innerHTML = found.map(lessonLi).join('');
+    suggestNote.textContent = none
+      ? (found.length ? `We have no page with “${q}”. These lessons are the closest match:` : `We have no page with “${q}” yet. Try another word, browse the subjects below, or search more widely.`)
+      : 'You might also find these lessons useful:';
+    suggest.hidden = !found.length && !none;
+  }
+
+  async function run() {
+    const q = input.value.trim();
+    const my = ++token;
+    const u = new URL(location.href);
+    if (q) u.searchParams.set('q', q); else u.searchParams.delete('q');
+    if (type) u.searchParams.set('type', type); else u.searchParams.delete('type');
+    history.replaceState(null, '', u);
+    list.innerHTML = '';
+    shown = 0; current = []; more.hidden = true; dym.hidden = true; shownUrls.clear();
+    for (const a of document.querySelectorAll<HTMLAnchorElement>('[data-outside]')) {
+      a.href = a.dataset.outside === 'rsc'
+        ? (q ? `https://edu.rsc.org/searchresults?qkeyword=${encodeURIComponent(q)}` : 'https://edu.rsc.org/')
+        : (q ? `https://search.acs.org/?q=${encodeURIComponent(q)}` : 'https://www.acs.org/education.html');
+    }
+    if (!q) { status.textContent = ''; suggest.hidden = true; outside.hidden = true; browse.hidden = false; return; }
+    outside.hidden = false;
+    const pf = await loadPagefind();
+    if (my !== token) return;
+    if (!pf) {
+      status.textContent = 'Search is not available in this preview; showing the closest lessons instead.';
+      showSuggestions(q, true);
+      return;
+    }
+    const res = await pf.search(q, type ? { filters: { type } } : {});
+    if (my !== token) return;
+    const loaded = await Promise.all((res?.results ?? []).slice(0, 40).map((r: any) => r.data()));
+    if (my !== token) return;
+    current = loaded.filter((d) => relevant(q, d));
+    const n = current.length;
+    const capped = (res?.results?.length ?? 0) > 40 && n === 40;
+    status.textContent = n ? `${capped ? 'Top 40 results' : `${n} result${n === 1 ? '' : 's'}`} for “${q}”${type ? ` in ${type}` : ''}` : `No results for “${q}”${type ? ` in ${type}` : ''}.`;
+    if (n) await renderMore();
+    if (my !== token) return;
+    // Suggest related lessons when there is nothing (or very little) to show.
+    if (n) showDidYouMean(q, shownUrls);
+    if (n < 3) showSuggestions(q, n === 0); else suggest.hidden = true;
+    browse.hidden = n > 0;
+  }
+
+  let timer: number | undefined;
+  input.addEventListener('input', () => { clearTimeout(timer); timer = window.setTimeout(run, 250); });
+  form.addEventListener('submit', (e) => { e.preventDefault(); clearTimeout(timer); run(); });
+  more.addEventListener('click', () => renderMore());
+  chips.forEach((c) => c.addEventListener('click', () => {
+    type = c.dataset.type ?? '';
+    chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+    run();
+  }));
+
+  const params = new URLSearchParams(location.search);
+  input.value = params.get('q') ?? '';
+  const startType = params.get('type') ?? '';
+  const startChip = chips.find((c) => (c.dataset.type ?? '') === startType);
+  if (startChip) { type = startType; chips.forEach((o) => o.setAttribute('aria-pressed', String(o === startChip))); }
+  if (input.value) run();
+  if (!input.value) loadPagefind();
+</script>
+
+<style>
+  .search { padding-block: var(--space-6) var(--space-8); max-width: 48rem; }
+  .search h1 { margin-bottom: var(--space-4); }
+  .search__form { display: flex; gap: var(--space-2); }
+  .search__form input {
+    flex: 1;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0 var(--space-3);
+    font: inherit;
+    font-size: var(--step-0);
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+  }
+  .search__form input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .search__types { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-4) 0 var(--space-2); }
+  .chip {
+    font: inherit;
+    font-size: var(--step--1);
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .chip[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .search__status { min-height: 1.5em; margin: var(--space-3) 0; }
+  .search__results { list-style: none; padding: 0; margin: 0; }
+  .search__results :global(.result) { padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+  .search__results :global(.result__title) { font-weight: 700; font-size: var(--step-1); }
+  .search__results :global(.result__type) {
+    display: inline-block;
+    margin-left: var(--space-2);
+    padding: 0.05rem 0.5rem;
+    font-size: var(--step--2, 0.75rem);
+    font-weight: 700;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    vertical-align: middle;
+  }
+  .search__results :global(.result__excerpt) { margin: 0.3rem 0 0; color: var(--ink-soft); font-size: var(--step--1); }
+  .search__results :global(mark) { background: var(--accent-soft); color: var(--ink); padding: 0 0.1em; border-radius: 2px; }
+  .search__more { margin-top: var(--space-4); }
+  .search__more[hidden], .search [hidden] { display: none; }
+  .search__dym { margin-top: var(--space-3); padding: var(--space-3) var(--space-4); border: 1px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); }
+  .search__dym h2 { font-size: var(--step-0); margin: 0 0 var(--space-1); }
+  .search__dym-list { list-style: none; padding: 0; margin: 0; }
+  .search__dym-list li { padding: 0.25rem 0; }
+  .search__dym-list a { font-weight: 700; }
+  .search__suggest, .search__outside, .search__browse { margin-top: var(--space-6); }
+  .search__suggest h2, .search__outside h2, .search__browse h2 { font-size: var(--step-1); margin-bottom: var(--space-2); }
+  .search__suggest-list, .search__outside-list { list-style: none; padding: 0; margin: 0; }
+  .search__suggest-list li, .search__outside-list li { padding: 0.45rem 0; border-bottom: 1px solid var(--border); }
+  .search__suggest-list a, .search__outside-list a { font-weight: 650; }
+  .search__subjects { list-style: none; padding: 0; margin: 0 0 var(--space-3); display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: var(--space-1) var(--space-4); }
+  .search__subjects a { display: block; padding: 0.35rem 0; font-weight: 600; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

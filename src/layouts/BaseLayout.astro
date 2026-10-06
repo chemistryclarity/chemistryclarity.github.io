@@ -22,6 +22,31 @@ export interface Props {
 }
 
 const { draft = false, ...seo } = Astro.props;
+
+// Site search (Pagefind, built after astro build): index the main content of single content pages only.
+// Listing pages, drafts, print views and the search page itself are left out, so results point to real content.
+// Key: first path segment, then the number of segments a single content page has.
+const searchTypes: Record<string, [number, string]> = {
+  chemistry: [2, 'Lesson'],
+  quizzes: [2, 'Quiz'],
+  flashcards: [2, 'Flashcards'],
+  resources: [2, 'Worksheet'],
+  explore: [3, 'Explore'],
+  learn: [2, 'Subject'],
+  news: [2, 'News'],
+  notes: [2, 'Notes'],
+  videos: [2, 'Video'],
+};
+const simplePages = new Set(['about', 'editorial-standards', 'contact', 'privacy', 'terms', 'disclaimer']);
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const rule = searchTypes[segments[0] ?? ''];
+const searchType = seo.noindex || draft
+  ? undefined
+  : rule && segments.length === rule[0]
+    ? rule[1]
+    : segments.length === 1 && simplePages.has(segments[0])
+      ? 'Page'
+      : undefined;
 ---
 
 <!doctype html>
@@ -46,7 +71,7 @@ const { draft = false, ...seo } = Astro.props;
         </div>
       </div>
     )}
-    <main id="main" tabindex="-1">
+    <main id="main" tabindex="-1" data-pagefind-body={searchType ? '' : undefined} data-pagefind-filter={searchType ? `type:${searchType}` : undefined} data-pagefind-meta={searchType ? `type:${searchType}` : undefined}>
       <slot />
     </main>
     <SiteFooter />

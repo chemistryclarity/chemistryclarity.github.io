@@ -33,6 +33,11 @@ const jsonLd = [
     description: site.description,
     inLanguage: site.language,
     publisher: { '@id': `${absoluteUrl('/')}#organization` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${absoluteUrl('/search/')}?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
   },
 ];
 ---
@@ -47,6 +52,13 @@ const jsonLd = [
           Clear, visual explanations of the chemistry concepts students find hardest, with worked examples,
           flashcards and quizzes so you can check you really understand.
         </p>
+        <form class="hero__search" action={url('/search/')} method="get" role="search">
+          <label class="hero__search-label" for="hero-q">Search lessons, quizzes and worksheets</label>
+          <div class="hero__search-row">
+            <input id="hero-q" name="q" type="search" placeholder="e.g. buffers, half-life, Lewis structures" autocomplete="off" />
+            <button class="btn btn--primary" type="submit">Search</button>
+          </div>
+        </form>
         <div class="hero__actions">
           <a class="btn btn--primary" href={routes.learn()}>Start learning</a>
           <a class="btn btn--ghost" href="#how-it-works">How lessons work</a>
@@ -156,6 +168,22 @@ const jsonLd = [
   .hero h1 { max-width: 14ch; }
   .hero .lead { max-width: 36rem; }
   .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); padding-top: var(--space-2); }
+  .hero__search { margin: var(--space-4) 0 var(--space-3); max-width: 34rem; }
+  .hero__search-label { display: block; font-weight: 650; font-size: var(--step--1); margin-bottom: var(--space-2); }
+  .hero__search-row { display: flex; gap: var(--space-2); }
+  .hero__search-row input {
+    flex: 1;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0 var(--space-3);
+    font: inherit;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1, none);
+  }
+  .hero__search-row input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
   .hero__audience { font-size: var(--step--1); }
   .hero__art { max-width: 22rem; justify-self: center; width: 100%; }
   @media (min-width: 56rem) {

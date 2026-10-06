@@ -63,6 +63,10 @@ const alignEnd = new Set(['/news/', '/about/']);
 <header class="site-header">
   <div class="container site-header__inner">
     <Logo />
+    <a class="search-link" href={url('/search/')} aria-label="Search the site" aria-current={isActive('/search/') ? 'page' : undefined}>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2" /><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" /></svg>
+      <span class="search-link__text">Search</span>
+    </a>
     <nav aria-label="Main">
       <details class="menu">
         <summary class="menu__toggle">
@@ -115,6 +119,40 @@ const alignEnd = new Set(['/news/', '/about/']);
     justify-content: space-between;
     min-height: 4rem;
     gap: var(--space-4);
+  }
+
+  .site-header__inner > nav { flex: none; }
+  .search-link {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font-weight: 600;
+    font-size: var(--step--1);
+    text-decoration: none;
+  }
+  .search-link:hover, .search-link[aria-current='page'] { color: var(--accent); border-color: var(--accent); }
+  .search-link__text { display: none; }
+  @media (min-width: 30rem) { .search-link__text { display: inline; } }
+  @media (min-width: 64rem) {
+    .search-link { order: 3; margin-left: 0; border-color: transparent; background: none; padding: 0 var(--space-2); }
+    .search-link__text { display: none; }
+    .site-header__inner > nav { margin-left: auto; }
+  }
+  @media (min-width: 80rem) { .search-link__text { display: inline; } }
+  /* Narrow desktops: tighten the tabs so the search button fits beside them */
+  @media (min-width: 64rem) and (max-width: 79.99rem) {
+    .site-header__inner { gap: var(--space-2); }
+    .menu__link { padding-inline: 0.5rem !important; }
+    .search-link { padding: 0 0.35rem; }
   }
 
   /* Mobile: disclosure menu with sub-menus that open downward (works without JavaScript) */
