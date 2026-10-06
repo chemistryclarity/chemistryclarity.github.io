@@ -1,0 +1,39 @@
+# Flashcards: Gas-Phase and Heterogeneous Equilibria
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Gas-Phase and Heterogeneous Equilibria: Flashcards'
+description: 'Revise Kp, converting between Kc and Kp, heterogeneous equilibria and ICE tables with pressures.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: gp-01
+    front: 'What is Kp?'
+    back: 'The equilibrium constant written with partial pressures of gases (in atm) instead of concentrations.'
+  - id: gp-02
+    front: 'Write Kp for N₂ + 3H₂ ⇌ 2NH₃.'
+    back: '$K_\text{p} = \dfrac{(P_{\ce{NH3}})^2}{P_{\ce{N2}}(P_{\ce{H2}})^3}$'
+  - id: gp-03
+    front: 'Give the equation linking Kp and Kc.'
+    back: '$K_\text{p} = K_\text{c}(RT)^{\Delta n}$, with R = 0.08206 L·atm/(mol·K) and T in K.'
+  - id: gp-04
+    front: 'What is Δn in Kp = Kc(RT)^Δn?'
+    back: 'Moles of gaseous products − moles of gaseous reactants.'
+  - id: gp-05
+    front: 'When is Kp equal to Kc?'
+    back: 'When Δn = 0 (same number of gas moles on both sides), e.g. H₂ + I₂ ⇌ 2HI.'
+  - id: gp-06
+    front: 'What is a heterogeneous equilibrium?'
+    back: 'An equilibrium involving substances in more than one phase.'
+  - id: gp-07
+    front: 'Which substances are left out of K expressions?'
+    back: 'Pure solids and pure liquids.'
+  - id: gp-08
+    front: 'Write Kp for CaCO₃(s) ⇌ CaO(s) + CO₂(g).'
+    back: 'Kp = P(CO₂)'
+  - id: gp-09
+    front: 'P(N₂O₄) = 0.70 atm, P(NO₂) = 0.32 atm at equilibrium. Find Kp for N₂O₄ ⇌ 2NO₂.'
+    back: 'Kp = (0.32)² ÷ 0.70 = 0.15'
+  - id: gp-10
+    front: 'For C(s) + H₂O(g) ⇌ CO(g) + H₂(g), what is Δn?'
+    back: '+1 (2 gas moles − 1 gas mole; the solid is not counted).'

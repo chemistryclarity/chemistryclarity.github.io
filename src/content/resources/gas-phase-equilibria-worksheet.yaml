@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/gas-phase-equilibria-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Gas-Phase and Heterogeneous Equilibria Worksheet'
+description: '8 questions on writing Kp, heterogeneous equilibria, converting between Kc and Kp, Q versus K and ICE tables with pressures. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/gas-phase-equilibria-worksheet.pdf'
+answerKey: '/downloads/gas-phase-equilibria-worksheet-answers.pdf'
+preview: '/previews/gas-phase-equilibria-worksheet.png'
+status: review

@@ -1,0 +1,194 @@
+---
+title: Gas-Phase and Heterogeneous Equilibria
+question: "How do you write equilibrium constants with partial pressures, and what happens when solids or liquids take part?"
+description: "The equilibrium constant Kp in terms of partial pressures, converting between Kc and Kp with Kp = Kc(RT)^Δn, heterogeneous equilibria, and ICE tables with pressures."
+area: equilibrium
+level: intermediate
+order: 15
+prerequisites: [chemical-equilibrium, gas-mixtures-and-gas-stoichiometry]
+related: [chemical-equilibrium, le-chateliers-principle, gas-laws, gas-mixtures-and-gas-stoichiometry, solubility-equilibria]
+flashcards: gas-phase-equilibria
+quiz: gas-phase-equilibria
+resources: [gas-phase-equilibria-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Partial pressures in atm; R = 0.08206 L·atm/(mol·K); T = t(°C) + 273.15. K values in the examples are given data
+  for the exercise. Kp and Kc are written without units. Every calculation checked by computer.
+*/}
+
+## What is it?
+
+For reactions of gases, it is often easier to measure **partial pressures** than concentrations. The equilibrium constant written with partial pressures is $K_\text{p}$. For
+
+$$
+\ce{N2(g) + 3H2(g) <=> 2NH3(g)}
+$$
+
+$$
+K_\text{p} = \frac{(P_{\ce{NH3}})^2}{P_{\ce{N2}}\,(P_{\ce{H2}})^3}
+$$
+
+It has exactly the same form as $K_\text{c}$, with each partial pressure (in atm) in place of a concentration.
+
+A **heterogeneous** equilibrium involves more than one phase. **Pure solids and pure liquids are left out** of $K$, because their "concentration" does not change as they are used up. For the decomposition of limestone:
+
+$$
+\begin{aligned}
+&\ce{CaCO3(s) <=> CaO(s) + CO2(g)} \\[4pt]
+&K_\text{p} = P_{\ce{CO2}}
+\end{aligned}
+$$
+
+<KeyIdea>
+$K_\text{c}$ and $K_\text{p}$ describe the same equilibrium in different units. Because $P = \frac{n}{V}RT = cRT$ for each gas, they are linked by
+
+$$
+K_\text{p} = K_\text{c}\,(RT)^{\Delta n}
+$$
+
+where $\Delta n$ = moles of gaseous products − moles of gaseous reactants. When $\Delta n = 0$, $K_\text{p} = K_\text{c}$.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Industry.** Ammonia, sulfuric acid and methanol are made by gas-phase equilibria; engineers use $K_\text{p}$ to choose pressures and temperatures.
+- **The atmosphere.** Reactions such as $\ce{N2O4 <=> 2NO2}$ (a brown gas in smog) are gas equilibria.
+- **Solids and gases together.** Limestone kilns, rusting and the equilibrium vapour pressure of water are all heterogeneous equilibria.
+
+## How does it work?
+
+### 1. Writing Kp
+
+Products over reactants, each partial pressure raised to its coefficient; leave out solids and liquids.
+
+### 2. Converting between Kc and Kp
+
+1. Find $\Delta n$ from the **gas** coefficients only.
+2. Use $R = 0.08206$ L·atm/(mol·K) and $T$ in kelvin.
+3. $K_\text{p} = K_\text{c}(RT)^{\Delta n}$.
+
+### 3. ICE tables with pressures
+
+Pressures behave like concentrations: set up Initial, Change and Equilibrium rows in **atm**, substitute into $K_\text{p}$ and solve.
+
+<Analogy>
+Kc and Kp are like the same price written in two currencies. The exchange rate is $(RT)^{\Delta n}$. If the reaction has the same number of gas molecules on both sides, there is nothing to convert: the price is identical in both.
+</Analogy>
+
+<MorePrecisely>
+Strictly, equilibrium constants use dimensionless activities: each partial pressure is divided by the standard pressure (1 bar, or 1 atm in older tables), which is why $K$ has no units. Values of $K_\text{p}$ therefore depend slightly on whether pressures are in bar or atm. The $K$ in $\Delta G° = -RT\ln K$ is $K_\text{p}$ for gas reactions.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/gas-phase-equilibria/kc-kp.svg" alt="Three reactions with their Kp expressions and delta n values. N2 plus 3 H2 to 2 NH3: delta n equals minus 2, so Kp equals Kc times RT to the minus 2. H2 plus I2 to 2 HI: delta n equals 0, so Kp equals Kc. CaCO3 solid to CaO solid plus CO2 gas: only the gas appears, Kp equals the pressure of CO2." caption="Δn counts gas molecules only; solids and liquids are left out of K." width={360} height={260} />
+
+## Worked example
+
+<Example title="Kp from partial pressures">
+**Question:** At 25 °C, an equilibrium mixture contains $\ce{N2O4}$ at 0.70 atm and $\ce{NO2}$ at 0.32 atm. Calculate $K_\text{p}$ for $\ce{N2O4(g) <=> 2NO2(g)}$.
+
+$$
+\begin{aligned}
+&K_\text{p} = \frac{(P_{\ce{NO2}})^2}{P_{\ce{N2O4}}} = \frac{(0.32)^2}{0.70} \\[4pt]
+&= 0.15
+\end{aligned}
+$$
+</Example>
+
+<Example title="From Kc to Kp">
+**Question:** For $\ce{N2(g) + 3H2(g) <=> 2NH3(g)}$, $K_\text{c} = 0.50$ at 400 °C. Find $K_\text{p}$.
+
+1. $\Delta n = 2 - (1 + 3) = -2$; $T = 400 + 273.15 = 673.15$ K.
+2. $RT$:
+
+   $$
+   \small\begin{aligned}
+   &RT = 0.08206\ \tfrac{\text{L atm}}{\text{mol K}} \\[4pt]
+   &\quad \times 673.15\ \text{K} \\[4pt]
+   &= 55.24\ \text{L atm/mol}
+   \end{aligned}
+   $$
+
+3. Then, using the number 55.24 (K values are written without units):
+
+   $$
+   \begin{aligned}
+   &K_\text{p} = 0.50 \times (55.24)^{-2} \\[4pt]
+   &= 1.6 \times 10^{-4}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="A heterogeneous equilibrium">
+**Question:** Write $K_\text{c}$ and $K_\text{p}$ for $\ce{C(s) + H2O(g) <=> CO(g) + H2(g)}$.
+
+Carbon is a pure solid, so it is left out:
+
+$$
+\begin{aligned}
+&K_\text{c} = \frac{[\ce{CO}][\ce{H2}]}{[\ce{H2O}]} \\[4pt]
+&K_\text{p} = \frac{P_{\ce{CO}}\,P_{\ce{H2}}}{P_{\ce{H2O}}}
+\end{aligned}
+$$
+</Example>
+
+<Example title="An ICE table with pressures">
+**Question:** $\ce{PCl5(g) <=> PCl3(g) + Cl2(g)}$ has $K_\text{p} = 1.05$ at a certain temperature. Pure $\ce{PCl5}$ at 1.00 atm is allowed to reach equilibrium. Find the equilibrium partial pressures.
+
+1. ICE (atm): $\ce{PCl5}$: $1.00 - x$; $\ce{PCl3}$: $x$; $\ce{Cl2}$: $x$.
+2. Substitute:
+
+   $$
+   \begin{aligned}
+   &\frac{x^2}{1.00 - x} = 1.05 \\[4pt]
+   &x^2 + 1.05x - 1.05 = 0
+   \end{aligned}
+   $$
+
+3. Quadratic formula, positive root, with $a = 1$, $b = 1.05$, $c = -1.05$:
+
+   $$
+   \small\begin{aligned}
+   &x = \frac{-b + \sqrt{b^2 - 4ac}}{2a} \\[4pt]
+   &= \frac{-1.05 + \sqrt{5.3025}}{2} \\[4pt]
+   &= 0.626
+   \end{aligned}
+   $$
+
+4. $P_{\ce{PCl3}} = P_{\ce{Cl2}} = 0.626$ atm and $P_{\ce{PCl5}} = 1.00 - 0.626 = 0.374$ atm. Check: $\dfrac{0.626^2}{0.374} = 1.05$ ✓.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Including solids or liquids">
+In $\ce{CaCO3(s) <=> CaO(s) + CO2(g)}$, $K_\text{p} = P_{\ce{CO2}}$ only. Writing $\dfrac{P_{\ce{CaO}}P_{\ce{CO2}}}{P_{\ce{CaCO3}}}$ is wrong: solids have no partial pressure.
+</CommonMistake>
+
+<CommonMistake title="Counting all moles in Δn">
+Δn counts **gas** moles only. For $\ce{C(s) + H2O(g) <=> CO(g) + H2(g)}$, $\Delta n = 2 - 1 = +1$, not $2 - 2$.
+</CommonMistake>
+
+<CommonMistake title="Using the wrong R or temperature">
+With pressures in atm, use $R = 0.08206$ L·atm/(mol·K), not 8.314, and always convert °C to K.
+</CommonMistake>
+
+<NotationNote>
+- $P_{\ce{A}}$ means the partial pressure of A at equilibrium (in atm here).
+- Kc uses mol/L; Kp uses partial pressures. Both are quoted without units.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- $K_\text{p}$: same form as $K_\text{c}$, with partial pressures.
+- $K_\text{p} = K_\text{c}(RT)^{\Delta n}$; Δn = gas moles (products − reactants); R = 0.08206; T in K.
+- Leave pure solids and liquids out of K.
+- ICE tables work with pressures just as with concentrations.
+</RememberThis>

@@ -1,0 +1,194 @@
+---
+title: Solubility Equilibria
+question: "How much of an 'insoluble' salt actually dissolves, and when does a precipitate form?"
+description: "The solubility product Ksp, calculating molar solubility and Ksp, the common-ion effect, and comparing Q with Ksp to predict whether a precipitate forms."
+area: equilibrium
+level: intermediate
+order: 30
+prerequisites: [chemical-equilibrium, precipitation-and-net-ionic-equations]
+related: [chemical-equilibrium, le-chateliers-principle, precipitation-and-net-ionic-equations, concentration-units]
+flashcards: solubility-equilibria
+quiz: solubility-equilibria
+resources: [solubility-equilibria-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Typical Ksp values at 25 °C (tables differ slightly): AgCl 1.8 × 10⁻¹⁰, BaSO₄ 1.1 × 10⁻¹⁰, CaF₂ 3.9 × 10⁻¹¹,
+  Mg(OH)₂ 1.8 × 10⁻¹¹, Ag₂CrO₄ 1.1 × 10⁻¹², PbI₂ 9.7 × 10⁻⁹. Molar masses (g/mol): AgCl 143.32, CaF₂ 78.07, PbI₂ 461.0.
+  Ksp is written without units. Every calculation checked by computer.
+*/}
+
+## What is it?
+
+"Insoluble" salts are really **very slightly soluble**. When solid silver chloride is placed in water, a tiny amount dissolves until the solution is **saturated**. Then a dynamic equilibrium is set up between the solid and its ions:
+
+$$
+\ce{AgCl(s) <=> Ag+(aq) + Cl-(aq)}
+$$
+
+The equilibrium constant is the **solubility product**, $K_\text{sp}$:
+
+$$
+K_\text{sp} = [\ce{Ag+}][\ce{Cl-}] = 1.8 \times 10^{-10}
+$$
+
+The solid does not appear in the expression (its concentration is constant). Each ion concentration is raised to the power of its coefficient: for $\ce{CaF2(s) <=> Ca^2+(aq) + 2F-(aq)}$, $K_\text{sp} = [\ce{Ca^2+}][\ce{F-}]^2$.
+
+<KeyIdea>
+$K_\text{sp}$ is the **ceiling** for the product of the ion concentrations. If the ion product $Q$ is **below** $K_\text{sp}$, more solid can dissolve. If $Q$ is **above** $K_\text{sp}$, the solution is supersaturated and a **precipitate forms** until $Q = K_\text{sp}$.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Health.** Barium sulfate is swallowed for X-ray imaging of the gut: barium ions are toxic, but $\ce{BaSO4}$ is so insoluble ($K_\text{sp} \approx 10^{-10}$) that almost none dissolves. Kidney stones form when calcium oxalate exceeds its $K_\text{sp}$.
+- **Teeth.** Fluoride converts tooth enamel into a less soluble mineral, so it dissolves less in acid.
+- **Analysis and clean-up.** Chemists precipitate one ion while leaving others in solution, and remove heavy metals from waste water.
+
+## How does it work?
+
+### 1. Molar solubility
+
+The **molar solubility**, $s$, is the number of moles that dissolve per litre of saturated solution. Write the ion concentrations in terms of $s$:
+
+| Salt | Ions | $K_\text{sp}$ in terms of $s$ |
+|---|---|---|
+| AgCl, BaSO₄ (1 : 1) | $s$ and $s$ | $K_\text{sp} = s^2$ |
+| CaF₂, PbI₂, Mg(OH)₂ (1 : 2) | $s$ and $2s$ | $K_\text{sp} = s(2s)^2 = 4s^3$ |
+| Ag₂CrO₄ (2 : 1) | $2s$ and $s$ | $K_\text{sp} = 4s^3$ |
+
+Only compare $K_\text{sp}$ values directly for salts with the **same** ion ratio; otherwise, compare their molar solubilities.
+
+### 2. The common-ion effect
+
+If the solution already contains one of the ions, the equilibrium shifts to the left (Le Chatelier's principle), and **less** solid dissolves. Silver chloride is far less soluble in salt water than in pure water.
+
+### 3. Will a precipitate form?
+
+1. Find each ion concentration **after mixing** (allow for the total volume).
+2. Calculate the ion product $Q$ in the same form as $K_\text{sp}$.
+3. Compare: $Q > K_\text{sp}$: precipitate forms. $Q < K_\text{sp}$: no precipitate. $Q = K_\text{sp}$: saturated.
+
+<Analogy>
+$K_\text{sp}$ is like the capacity of a crowded room. While there is space (Q below Ksp), more people can come in. Once it is full (Q = Ksp), anyone else who arrives must leave again. If you already filled the room with one group (a common ion), there is less space for anyone else.
+</Analogy>
+
+<MorePrecisely>
+$K_\text{sp}$ depends on temperature. Simple $K_\text{sp}$ calculations ignore effects such as ion pairing and reactions of the ions with water: for example, the solubility of salts of weak acids (carbonates, phosphates, fluorides) **increases** in acid, because $\ce{H+}$ removes the anion. Strictly, equilibrium constants use activities rather than concentrations, which matters in concentrated solutions.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/solubility-equilibria/q-vs-ksp.svg" alt="A scale of the ion product Q. Below Ksp the solution is unsaturated and more solid can dissolve. At Ksp the solution is saturated, in equilibrium with the solid. Above Ksp the solution is supersaturated and a precipitate forms until Q falls to Ksp." caption="Comparing the ion product Q with Ksp predicts what happens." width={360} height={240} />
+
+## Worked example
+
+<Example title="Molar solubility of AgCl">
+**Question:** Calculate the molar solubility of AgCl ($K_\text{sp} = 1.8 \times 10^{-10}$) in mol/L and in g/L.
+
+1. $[\ce{Ag+}] = [\ce{Cl-}] = s$, so $K_\text{sp} = s^2$.
+2. Molar solubility:
+
+   $$
+   \begin{aligned}
+   &s = \sqrt{1.8 \times 10^{-10}} \\[4pt]
+   &= 1.3 \times 10^{-5}\ \text{mol/L}
+   \end{aligned}
+   $$
+
+3. In g/L: $1.34 \times 10^{-5}\ \text{mol/L} \times 143.32\ \text{g/mol} = 1.9 \times 10^{-3}\ \text{g/L}$, about 2 mg per litre.
+</Example>
+
+<Example title="A 1 : 2 salt">
+**Question:** Calculate the molar solubility of $\ce{CaF2}$ ($K_\text{sp} = 3.9 \times 10^{-11}$).
+
+1. $[\ce{Ca^2+}] = s$ and $[\ce{F-}] = 2s$, so $K_\text{sp} = s(2s)^2 = 4s^3$.
+2. Solve:
+
+   $$
+   \begin{aligned}
+   &s = \sqrt[3]{\frac{3.9 \times 10^{-11}}{4}} \\[4pt]
+   &= 2.1 \times 10^{-4}\ \text{mol/L}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Ksp from solubility">
+**Question:** The solubility of $\ce{PbI2}$ is 0.62 g/L. Calculate $K_\text{sp}$.
+
+1. Molar solubility: $s = \dfrac{0.62\ \text{g/L}}{461.0\ \text{g/mol}} = 1.34 \times 10^{-3}\ \text{mol/L}$
+2. $[\ce{Pb^2+}] = s$, $[\ce{I-}] = 2s$:
+
+   $$
+   \small\begin{aligned}
+   &K_\text{sp} = 4s^3 = 4 \times (1.345 \\[4pt]
+   &\quad \times 10^{-3})^3 \\[4pt]
+   &= 9.7 \times 10^{-9}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="The common-ion effect">
+**Question:** Calculate the molar solubility of AgCl in 0.10 mol/L NaCl.
+
+1. $[\ce{Cl-}] \approx 0.10$ mol/L (from the NaCl); $[\ce{Ag+}] = s$.
+2. $K_\text{sp} = s \times 0.10$, so
+
+   $$
+   \begin{aligned}
+   &s = \frac{1.8 \times 10^{-10}}{0.10} \\[4pt]
+   &= 1.8 \times 10^{-9}\ \text{mol/L}
+   \end{aligned}
+   $$
+
+3. That is about **7500 times less** than in pure water ($1.3 \times 10^{-5}$ mol/L).
+</Example>
+
+<Example title="Will a precipitate form?">
+**Question:** Equal volumes of 0.0010 mol/L $\ce{AgNO3}$ and 0.0010 mol/L NaCl are mixed. Does AgCl precipitate?
+
+1. Mixing equal volumes halves each concentration: $[\ce{Ag+}] = [\ce{Cl-}] = 5.0 \times 10^{-4}$ mol/L.
+2. Ion product:
+
+   $$
+   \small\begin{aligned}
+   &Q = (5.0 \times 10^{-4})(5.0 \\[4pt]
+   &\quad \times 10^{-4}) \\[4pt]
+   &= 2.5 \times 10^{-7}
+   \end{aligned}
+   $$
+
+3. $Q = 2.5 \times 10^{-7}$ is greater than $K_\text{sp} = 1.8 \times 10^{-10}$: **a precipitate forms**.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Forgetting to double (and square) the second ion">
+For $\ce{CaF2}$, $[\ce{F-}] = 2s$, and it is squared in $K_\text{sp}$: $K_\text{sp} = s(2s)^2 = 4s^3$, not $s^2$ or $2s^2$.
+</CommonMistake>
+
+<CommonMistake title="Comparing Ksp values of different types of salt">
+A smaller $K_\text{sp}$ does not always mean a less soluble salt. Ag₂CrO₄ ($K_\text{sp} = 1.1 \times 10^{-12}$) is actually **more** soluble than AgCl ($1.8 \times 10^{-10}$): $6.5 \times 10^{-5}$ versus $1.3 \times 10^{-5}$ mol/L. Compare molar solubilities.
+</CommonMistake>
+
+<CommonMistake title="Ignoring dilution when solutions are mixed">
+Mixing two solutions increases the volume, so every concentration falls. Recalculate the concentrations before working out $Q$.
+</CommonMistake>
+
+<NotationNote>
+- Solids are left out of $K_\text{sp}$ expressions; ion concentrations are in mol/L at equilibrium.
+- $K_\text{sp}$ values are usually quoted without units.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- $K_\text{sp}$ = product of the ion concentrations in a saturated solution, each raised to its coefficient.
+- 1 : 1 salts: $K_\text{sp} = s^2$. 1 : 2 or 2 : 1 salts: $K_\text{sp} = 4s^3$.
+- A common ion lowers the solubility.
+- $Q > K_\text{sp}$: precipitate. $Q < K_\text{sp}$: no precipitate. Remember to allow for dilution on mixing.
+</RememberThis>

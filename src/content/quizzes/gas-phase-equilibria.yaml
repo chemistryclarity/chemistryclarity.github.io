@@ -1,0 +1,79 @@
+# Quiz: Gas-Phase and Heterogeneous Equilibria
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Gas-Phase and Heterogeneous Equilibria: Quiz'
+description: 'Seven questions on Kp expressions, converting between Kc and Kp, heterogeneous equilibria and pressure ICE tables, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: gp-q1
+    prompt: 'What is Kp for CaCO₃(s) ⇌ CaO(s) + CO₂(g)?'
+    choices:
+      - 'P(CaO) × P(CO₂) ÷ P(CaCO₃)'
+      - 'P(CO₂)'
+      - '1 ÷ P(CO₂)'
+      - '[CaO][CO₂] ÷ [CaCO₃]'
+    answer: 'P(CO₂)'
+    explanation: 'The solids are left out, so only the gas remains: Kp = P(CO₂).'
+    difficulty: easy
+  - id: gp-q2
+    prompt: 'For which reaction is Kp = Kc?'
+    choices:
+      - 'N₂ + 3H₂ ⇌ 2NH₃'
+      - 'H₂ + I₂ ⇌ 2HI'
+      - '2SO₂ + O₂ ⇌ 2SO₃'
+      - 'N₂O₄ ⇌ 2NO₂'
+    answer: 'H₂ + I₂ ⇌ 2HI'
+    explanation: 'Δn = 2 − 2 = 0, so (RT)⁰ = 1 and Kp = Kc. The others have Δn = −2, −1 and +1.'
+    difficulty: easy
+  - id: gp-q3
+    prompt: 'What is Δn for 2SO₂(g) + O₂(g) ⇌ 2SO₃(g)?'
+    choices:
+      - '+1'
+      - '0'
+      - '−1'
+      - '−3'
+    answer: '−1'
+    explanation: 'Δn = gas moles of products − reactants = 2 − 3 = −1.'
+    difficulty: easy
+  - id: gp-q4
+    prompt: 'At equilibrium, P(SO₂) = 0.20 atm, P(O₂) = 0.10 atm and P(SO₃) = 1.2 atm. What is Kp for 2SO₂ + O₂ ⇌ 2SO₃?'
+    choices:
+      - '60'
+      - '360'
+      - '6.0'
+      - '0.0028'
+    answer: '360'
+    explanation: 'Kp = (1.2)² ÷ [(0.20)² × 0.10] = 1.44 ÷ 0.0040 = 360. 60 forgets to square the pressures.'
+    difficulty: medium
+  - id: gp-q5
+    prompt: 'For 2SO₂ + O₂ ⇌ 2SO₃, Kc = 280 at 1000 K. What is Kp?'
+    choices:
+      - '2.3 × 10⁴'
+      - '280'
+      - '3.41'
+      - '0.29'
+    answer: '3.41'
+    explanation: 'Δn = −1; RT = 0.08206 × 1000 = 82.06; Kp = 280 × (82.06)⁻¹ = 3.41. 2.3 × 10⁴ uses Δn = +1.'
+    difficulty: hard
+  - id: gp-q6
+    prompt: 'Which value of R is used in Kp = Kc(RT)^Δn when pressures are in atm?'
+    choices:
+      - '8.314 J/(mol·K)'
+      - '0.08206 L·atm/(mol·K)'
+      - '8.314 L·kPa/(mol·K)'
+      - '1.987 cal/(mol·K)'
+    answer: '0.08206 L·atm/(mol·K)'
+    explanation: 'Converting mol/L to atm needs R in L·atm/(mol·K).'
+    difficulty: medium
+  - id: gp-q7
+    prompt: 'For H₂ + I₂ ⇌ 2HI, Kp = 50. A mixture has P(H₂) = P(I₂) = 0.10 atm and P(HI) = 0.50 atm. In which direction does it shift?'
+    choices:
+      - 'Forward, because Q is less than K'
+      - 'Reverse, because Q is greater than K'
+      - 'No change'
+      - 'It cannot be decided'
+    answer: 'Forward, because Q is less than K'
+    explanation: 'Q = (0.50)² ÷ (0.10 × 0.10) = 25, less than K = 50, so more HI forms.'
+    difficulty: medium

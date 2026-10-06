@@ -1,0 +1,79 @@
+# Quiz: Solubility Equilibria
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Solubility Equilibria: Quiz'
+description: 'Seven questions on Ksp expressions, molar solubility, the common-ion effect and predicting precipitation, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: se-q1
+    prompt: 'What is the Ksp expression for Mg(OH)₂?'
+    choices:
+      - 'Ksp = [Mg²⁺][OH⁻]'
+      - 'Ksp = [Mg²⁺][OH⁻]²'
+      - 'Ksp = [Mg²⁺][OH⁻]² / [Mg(OH)₂]'
+      - 'Ksp = [Mg²⁺][2OH⁻]'
+    answer: 'Ksp = [Mg²⁺][OH⁻]²'
+    explanation: 'Mg(OH)₂(s) ⇌ Mg²⁺ + 2OH⁻. Each ion is raised to its coefficient, and the solid is left out.'
+    difficulty: easy
+  - id: se-q2
+    prompt: 'What is the molar solubility of BaSO₄ (Ksp = 1.1 × 10⁻¹⁰)?'
+    choices:
+      - '1.1 × 10⁻¹⁰ mol/L'
+      - '1.0 × 10⁻⁵ mol/L'
+      - '5.5 × 10⁻¹¹ mol/L'
+      - '3.0 × 10⁻⁴ mol/L'
+    answer: '1.0 × 10⁻⁵ mol/L'
+    explanation: 'For a 1 : 1 salt, Ksp = s², so s = √(1.1 × 10⁻¹⁰) = 1.0 × 10⁻⁵ mol/L.'
+    difficulty: easy
+  - id: se-q3
+    prompt: 'What is the molar solubility of CaF₂ (Ksp = 3.9 × 10⁻¹¹)?'
+    choices:
+      - '6.2 × 10⁻⁶ mol/L'
+      - '2.1 × 10⁻⁴ mol/L'
+      - '3.4 × 10⁻⁴ mol/L'
+      - '9.8 × 10⁻¹² mol/L'
+    answer: '2.1 × 10⁻⁴ mol/L'
+    explanation: 'Ksp = s(2s)² = 4s³, so s = ∛(3.9 × 10⁻¹¹ ÷ 4) = 2.1 × 10⁻⁴ mol/L. 6.2 × 10⁻⁶ wrongly uses s².'
+    difficulty: medium
+  - id: se-q4
+    prompt: 'How does adding NaCl affect the solubility of AgCl?'
+    choices:
+      - 'It increases it'
+      - 'It decreases it'
+      - 'No effect'
+      - 'It changes Ksp'
+    answer: 'It decreases it'
+    explanation: 'Cl⁻ is a common ion; the equilibrium AgCl(s) ⇌ Ag⁺ + Cl⁻ shifts left, so less AgCl dissolves. Ksp itself does not change.'
+    difficulty: medium
+  - id: se-q5
+    prompt: 'In a solution, [Ag⁺] = [Cl⁻] = 5.0 × 10⁻⁴ mol/L. Ksp(AgCl) = 1.8 × 10⁻¹⁰. What happens?'
+    choices:
+      - 'No precipitate: Q is less than Ksp'
+      - 'A precipitate forms: Q is greater than Ksp'
+      - 'The solution is exactly saturated'
+      - 'AgCl dissolves further'
+    answer: 'A precipitate forms: Q is greater than Ksp'
+    explanation: 'Q = (5.0 × 10⁻⁴)² = 2.5 × 10⁻⁷, which is greater than 1.8 × 10⁻¹⁰, so AgCl precipitates.'
+    difficulty: medium
+  - id: se-q6
+    prompt: 'Which salt is MORE soluble in water: AgCl (Ksp 1.8 × 10⁻¹⁰) or Ag₂CrO₄ (Ksp 1.1 × 10⁻¹²)?'
+    choices:
+      - 'AgCl, because its Ksp is larger'
+      - 'Ag₂CrO₄, because its molar solubility is larger'
+      - 'They are equally soluble'
+      - 'It cannot be decided'
+    answer: 'Ag₂CrO₄, because its molar solubility is larger'
+    explanation: 'AgCl: s = √Ksp = 1.3 × 10⁻⁵ mol/L. Ag₂CrO₄: s = ∛(Ksp ÷ 4) = 6.5 × 10⁻⁵ mol/L. Different ion ratios mean Ksp values cannot be compared directly.'
+    difficulty: hard
+  - id: se-q7
+    prompt: 'What is the molar solubility of AgCl in 0.10 mol/L NaCl? (Ksp = 1.8 × 10⁻¹⁰)'
+    choices:
+      - '1.3 × 10⁻⁵ mol/L'
+      - '1.8 × 10⁻⁹ mol/L'
+      - '1.8 × 10⁻¹¹ mol/L'
+      - '0.10 mol/L'
+    answer: '1.8 × 10⁻⁹ mol/L'
+    explanation: '[Cl⁻] ≈ 0.10 mol/L, so s = Ksp ÷ 0.10 = 1.8 × 10⁻⁹ mol/L, thousands of times less than in pure water.'
+    difficulty: hard

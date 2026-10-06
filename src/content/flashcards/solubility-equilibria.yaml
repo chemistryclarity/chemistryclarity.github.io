@@ -1,0 +1,39 @@
+# Flashcards: Solubility Equilibria
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Solubility Equilibria: Flashcards'
+description: 'Revise Ksp expressions, molar solubility, the common-ion effect and predicting precipitates.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: se-01
+    front: 'What is Ksp?'
+    back: 'The solubility product: the equilibrium constant for a slightly soluble salt dissolving, the product of its ion concentrations in a saturated solution.'
+  - id: se-02
+    front: 'Write the Ksp expression for CaF₂.'
+    back: '$K_\text{sp} = [\ce{Ca^2+}][\ce{F-}]^2$'
+  - id: se-03
+    front: 'Why is the solid left out of the Ksp expression?'
+    back: 'The concentration of a pure solid is constant.'
+  - id: se-04
+    front: 'How is Ksp related to the molar solubility s for a 1 : 1 salt such as AgCl?'
+    back: '$K_\text{sp} = s^2$'
+  - id: se-05
+    front: 'How is Ksp related to s for a 1 : 2 salt such as CaF₂?'
+    back: '$K_\text{sp} = s(2s)^2 = 4s^3$'
+  - id: se-06
+    front: 'What is the common-ion effect?'
+    back: 'A salt is less soluble in a solution that already contains one of its ions, because the equilibrium shifts to the left.'
+  - id: se-07
+    front: 'When does a precipitate form?'
+    back: 'When the ion product Q is greater than Ksp.'
+  - id: se-08
+    front: 'Calculate the molar solubility of AgCl (Ksp = 1.8 × 10⁻¹⁰).'
+    back: '$s = \sqrt{1.8 \times 10^{-10}} = 1.3 \times 10^{-5}$ mol/L'
+  - id: se-09
+    front: 'Why can''t you always compare Ksp values directly to rank solubility?'
+    back: 'Salts with different ion ratios have different Ksp formulas (s² vs 4s³); compare molar solubilities instead.'
+  - id: se-10
+    front: 'What must you do to concentrations when two solutions are mixed before calculating Q?'
+    back: 'Recalculate them for the new total volume (dilution).'

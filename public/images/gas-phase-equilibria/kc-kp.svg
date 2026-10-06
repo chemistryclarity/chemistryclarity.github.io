@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .card { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.2; }
+    .eq { fill: #14213d; font-size: 11.5px; font-weight: 700; }
+    .k { fill: #0f766e; font-size: 11px; font-weight: 700; }
+    .dn { fill: #b45309; font-size: 10.5px; font-weight: 700; }
+    .note { fill: #5b6577; font-size: 9.8px; }
+    .gas { fill: #2563eb; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .eq { fill: #e9edf5; }
+      .sub, .note { fill: #9aa5ba; }
+      .card { fill: #1b263d; stroke: #3a4763; }
+      .k { fill: #2dd4bf; }
+      .dn { fill: #fbbf24; }
+    }
+  </style>
+  <rect class="bg" width="360" height="260" rx="14"/>
+  <text class="t" x="16" y="28">Kp, Kc and Δn</text>
+  <text class="sub" x="16" y="45">Kp = Kc(RT)<tspan dy="-5" font-size="8">Δn</tspan><tspan dy="5"> · Δn counts gas moles only</tspan></text>
+
+  <rect class="card" x="14" y="56" width="332" height="58" rx="8"/>
+  <text class="eq" x="24" y="76">N₂(g) + 3H₂(g) ⇌ 2NH₃(g)</text>
+  <text class="dn" x="24" y="94">Δn = 2 − 4 = −2</text>
+  <text class="k" x="24" y="108">Kp = Kc(RT)⁻²: Kp is smaller than Kc</text>
+
+  <rect class="card" x="14" y="122" width="332" height="58" rx="8"/>
+  <text class="eq" x="24" y="142">H₂(g) + I₂(g) ⇌ 2HI(g)</text>
+  <text class="dn" x="24" y="160">Δn = 2 − 2 = 0</text>
+  <text class="k" x="24" y="174">Kp = Kc</text>
+
+  <rect class="card" x="14" y="188" width="332" height="62" rx="8"/>
+  <text class="eq" x="24" y="208">CaCO₃(s) ⇌ CaO(s) + CO₂(g)</text>
+  <text class="dn" x="24" y="226">Δn = 1 − 0 = +1 (solids not counted)</text>
+  <text class="k" x="24" y="242">Kp = P(CO₂) · solids left out of K</text>
+</svg>
