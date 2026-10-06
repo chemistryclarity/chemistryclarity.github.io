@@ -1,0 +1,79 @@
+# Quiz: Concentration Units
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Concentration Units: Quiz'
+description: 'Seven questions on mass percent, ppm, mole fraction, molality and converting between units, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: cu-q1
+    prompt: '12.0 g of sugar is dissolved in 188 g of water. What is the mass percent of sugar?'
+    choices:
+      - '6.00 %'
+      - '6.38 %'
+      - '12.0 %'
+      - '94.0 %'
+    answer: '6.00 %'
+    explanation: 'Mass of solution = 12.0 g + 188 g = 200. g, so 12.0 g ÷ 200. g × 100 % = 6.00 %. 6.38 % divides by the water only.'
+    difficulty: easy
+  - id: cu-q2
+    prompt: 'Which unit uses the mass of the solvent, not the solution?'
+    choices:
+      - 'Molarity'
+      - 'Molality'
+      - 'Mass percent'
+      - 'ppm'
+    answer: 'Molality'
+    explanation: 'Molality is moles of solute per kilogram of solvent. Mass percent and ppm use the mass of the whole solution; molarity uses the volume of solution.'
+    difficulty: easy
+  - id: cu-q3
+    prompt: 'A 500. g water sample contains 0.45 mg of fluoride. What is the concentration in ppm?'
+    choices:
+      - '0.90 ppm'
+      - '0.00090 ppm'
+      - '900 ppm'
+      - '0.45 ppm'
+    answer: '0.90 ppm'
+    explanation: '0.45 mg = 0.00045 g; (0.00045 g ÷ 500. g) × 10⁶ = 0.90 ppm.'
+    difficulty: medium
+  - id: cu-q4
+    prompt: 'A solution contains 1.0 mol of ethanol and 4.0 mol of water. What is the mole fraction of ethanol?'
+    choices:
+      - '0.25'
+      - '0.20'
+      - '0.80'
+      - '1.0'
+    answer: '0.20'
+    explanation: 'x = 1.0 mol ÷ (1.0 mol + 4.0 mol) = 0.20. 0.25 divides by the water only.'
+    difficulty: medium
+  - id: cu-q5
+    prompt: 'What is the molality of 18.0 g of glucose (180.16 g/mol) dissolved in 90.0 g of water?'
+    choices:
+      - '0.200 mol/kg'
+      - '1.11 mol/kg'
+      - '0.111 mol/kg'
+      - '1.00 mol/kg'
+    answer: '1.11 mol/kg'
+    explanation: 'n = 18.0 g ÷ 180.16 g/mol = 0.0999 mol; m = 0.0999 mol ÷ 0.0900 kg = 1.11 mol/kg. The water mass must be in kg.'
+    difficulty: medium
+  - id: cu-q6
+    prompt: 'Concentrated sulfuric acid is 98.0 % H₂SO₄ by mass, density 1.84 g/mL. What is its molarity? (H₂SO₄ 98.08 g/mol)'
+    choices:
+      - '1.84 mol/L'
+      - '10.0 mol/L'
+      - '18.4 mol/L'
+      - '98.0 mol/L'
+    answer: '18.4 mol/L'
+    explanation: '1.000 L has a mass of 1840 g, of which 0.980 × 1840 g = 1803 g is H₂SO₄; 1803 g ÷ 98.08 g/mol = 18.4 mol in 1.000 L.'
+    difficulty: hard
+  - id: cu-q7
+    prompt: 'Why is molality preferred to molarity for boiling-point elevation calculations?'
+    choices:
+      - 'It is easier to measure'
+      - 'It does not change with temperature'
+      - 'It is always larger'
+      - 'It uses the volume of solution'
+    answer: 'It does not change with temperature'
+    explanation: 'Molality uses masses, which don''t change on heating; molarity uses a volume, which expands as the solution warms.'
+    difficulty: medium

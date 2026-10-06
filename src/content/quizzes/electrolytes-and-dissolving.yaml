@@ -1,0 +1,79 @@
+# Quiz: Electrolytes and the Dissolving Process
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Electrolytes and Dissolving: Quiz'
+description: 'Seven questions on electrolytes, hydration, ion concentrations and energy changes on dissolving, with explanations.'
+level: beginner
+access: free
+status: review
+assisted: true
+questions:
+  - id: ed-q1
+    prompt: 'Which solution conducts electricity best?'
+    choices:
+      - '0.10 mol/L sugar'
+      - '0.10 mol/L ethanoic acid'
+      - '0.10 mol/L NaCl'
+      - 'Pure water'
+    answer: '0.10 mol/L NaCl'
+    explanation: 'NaCl is a strong electrolyte, fully split into ions. Ethanoic acid is only partly ionized, sugar forms no ions and pure water has very few.'
+    difficulty: easy
+  - id: ed-q2
+    prompt: 'Which substance is a non-electrolyte?'
+    choices:
+      - 'KOH'
+      - 'HNO₃'
+      - 'Ethanol'
+      - 'MgCl₂'
+    answer: 'Ethanol'
+    explanation: 'Ethanol dissolves as molecules and does not ionize. The others are a strong base, a strong acid and a soluble salt.'
+    difficulty: easy
+  - id: ed-q3
+    prompt: 'Around a dissolved Cl⁻ ion, water molecules point which atoms towards the ion?'
+    choices:
+      - 'Oxygen atoms'
+      - 'Hydrogen atoms'
+      - 'No particular atoms'
+      - 'Chlorine atoms'
+    answer: 'Hydrogen atoms'
+    explanation: 'The hydrogen atoms carry a partial positive charge (δ+), attracted to the negative chloride ion.'
+    difficulty: easy
+  - id: ed-q4
+    prompt: 'What is [Cl⁻] in 0.150 mol/L FeCl₃?'
+    choices:
+      - '0.050 mol/L'
+      - '0.150 mol/L'
+      - '0.300 mol/L'
+      - '0.450 mol/L'
+    answer: '0.450 mol/L'
+    explanation: 'Each FeCl₃ gives three Cl⁻ ions: 3 × 0.150 mol/L = 0.450 mol/L.'
+    difficulty: medium
+  - id: ed-q5
+    prompt: 'Which 0.10 mol/L solution has the highest total concentration of ions?'
+    choices:
+      - 'NaCl'
+      - 'CaCl₂'
+      - 'Glucose'
+      - 'Ethanoic acid'
+    answer: 'CaCl₂'
+    explanation: 'CaCl₂ gives 3 ions per formula unit (0.30 mol/L of ions); NaCl gives 2 (0.20 mol/L); ethanoic acid gives very few; glucose gives none.'
+    difficulty: medium
+  - id: ed-q6
+    prompt: 'Dissolving a salt makes the solution warmer. What does this tell you?'
+    choices:
+      - 'The lattice is very strong'
+      - 'Hydration releases more energy than breaking the lattice needs'
+      - 'The salt does not dissolve'
+      - 'Dissolving is endothermic'
+    answer: 'Hydration releases more energy than breaking the lattice needs'
+    explanation: 'A warmer solution means dissolving is exothermic: the energy released by hydrating the ions exceeds the energy needed to separate them.'
+    difficulty: medium
+  - id: ed-q7
+    prompt: '10.0 g of NH₄NO₃ (80.05 g/mol, ΔH(soln) = +25.7 kJ/mol) dissolves in water. How much heat is absorbed?'
+    choices:
+      - '3.21 kJ'
+      - '257 kJ'
+      - '0.125 kJ'
+      - '2.06 kJ'
+    answer: '3.21 kJ'
+    explanation: 'n = 10.0 g ÷ 80.05 g/mol = 0.1249 mol; q = 0.1249 mol × 25.7 kJ/mol = 3.21 kJ.'
+    difficulty: hard

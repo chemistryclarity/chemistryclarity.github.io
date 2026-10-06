@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .card { fill: #f3f1ea; stroke: #c9c5b8; stroke-width: 1.2; }
+    .name { fill: #14213d; font-size: 12px; font-weight: 700; }
+    .top { fill: #0f766e; font-size: 11px; font-weight: 700; }
+    .bot { fill: #b45309; font-size: 11px; font-weight: 700; }
+    .bar { stroke: #3d4657; stroke-width: 1.4; }
+    .ex { fill: #5b6577; font-size: 10px; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .name { fill: #e9edf5; }
+      .sub, .ex { fill: #9aa5ba; }
+      .card { fill: #1b263d; stroke: #3a4763; }
+      .top { fill: #2dd4bf; }
+      .bot { fill: #fbbf24; }
+      .bar { stroke: #c7cfdd; }
+    }
+  </style>
+  <rect class="bg" width="360" height="300" rx="14"/>
+  <text class="t" x="16" y="28">What each unit divides by</text>
+  <text class="sub" x="16" y="45">Teal: solute (top) · amber: what it is divided by (bottom)</text>
+
+  <!-- five rows -->
+  <g>
+    <rect class="card" x="16" y="58" width="328" height="42" rx="7"/>
+    <text class="name" x="28" y="84">Molarity</text>
+    <text class="top" x="230" y="74" text-anchor="middle">mol solute</text>
+    <line class="bar" x1="160" y1="79" x2="300" y2="79"/>
+    <text class="bot" x="230" y="93" text-anchor="middle">L of solution</text>
+  </g>
+  <g>
+    <rect class="card" x="16" y="106" width="328" height="42" rx="7"/>
+    <text class="name" x="28" y="132">Molality</text>
+    <text class="top" x="230" y="122" text-anchor="middle">mol solute</text>
+    <line class="bar" x1="160" y1="127" x2="300" y2="127"/>
+    <text class="bot" x="230" y="141" text-anchor="middle">kg of solvent only</text>
+  </g>
+  <g>
+    <rect class="card" x="16" y="154" width="328" height="42" rx="7"/>
+    <text class="name" x="28" y="174">Mass %</text>
+    <text class="ex" x="28" y="188">(× 100 %)</text>
+    <text class="top" x="230" y="170" text-anchor="middle">mass solute</text>
+    <line class="bar" x1="160" y1="175" x2="300" y2="175"/>
+    <text class="bot" x="230" y="189" text-anchor="middle">mass of solution</text>
+  </g>
+  <g>
+    <rect class="card" x="16" y="202" width="328" height="42" rx="7"/>
+    <text class="name" x="28" y="222">ppm</text>
+    <text class="ex" x="28" y="236">(× 10⁶)</text>
+    <text class="top" x="230" y="218" text-anchor="middle">mass solute</text>
+    <line class="bar" x1="160" y1="223" x2="300" y2="223"/>
+    <text class="bot" x="230" y="237" text-anchor="middle">mass of solution</text>
+  </g>
+  <g>
+    <rect class="card" x="16" y="250" width="328" height="42" rx="7"/>
+    <text class="name" x="28" y="276">Mole fraction</text>
+    <text class="top" x="230" y="266" text-anchor="middle">mol of one component</text>
+    <line class="bar" x1="160" y1="271" x2="300" y2="271"/>
+    <text class="bot" x="230" y="285" text-anchor="middle">total mol (all parts)</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+# Flashcards: Concentration Units
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Concentration Units: Flashcards'
+description: 'Revise molarity, molality, mass percent, ppm and mole fraction, and converting between them.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: cu-01
+    front: 'Define molarity.'
+    back: 'Moles of solute per litre of solution (mol/L).'
+  - id: cu-02
+    front: 'Define molality.'
+    back: 'Moles of solute per kilogram of solvent (mol/kg).'
+  - id: cu-03
+    front: 'Define mass percent.'
+    back: '(mass of solute ÷ mass of solution) × 100 %'
+  - id: cu-04
+    front: 'What is 1 ppm, and what is it roughly equal to in dilute water solutions?'
+    back: '1 g of solute per 10⁶ g of solution; about 1 mg/L.'
+  - id: cu-05
+    front: 'Define mole fraction.'
+    back: 'Moles of one component ÷ total moles of all components. No unit; all fractions add to 1.'
+  - id: cu-06
+    front: 'Which concentration units do not change with temperature?'
+    back: 'Molality, mass percent, ppm and mole fraction (they use masses, not volumes).'
+  - id: cu-07
+    front: 'What extra information do you need to convert molarity into molality?'
+    back: 'The density of the solution.'
+  - id: cu-08
+    front: '5.00 g NaCl in 95.0 g water: what is the mass percent?'
+    back: '5.00 g ÷ 100.0 g × 100 % = 5.00 %'
+  - id: cu-09
+    front: 'Why are molarity and molality almost equal for dilute aqueous solutions?'
+    back: '1 L of a dilute solution contains almost exactly 1 kg of water.'
+  - id: cu-10
+    front: 'Which concentration unit is used for colligative properties?'
+    back: 'Molality (mol/kg).'

@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/concentration-units-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'Concentration Units Worksheet'
+description: '8 questions on mass percent, ppm, mole fraction, molality and converting between concentration units with density. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/concentration-units-worksheet.pdf'
+answerKey: '/downloads/concentration-units-worksheet-answers.pdf'
+preview: '/previews/concentration-units-worksheet.png'
+status: review

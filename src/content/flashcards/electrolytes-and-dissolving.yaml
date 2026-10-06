@@ -1,0 +1,39 @@
+# Flashcards: Electrolytes and the Dissolving Process
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Electrolytes and Dissolving: Flashcards'
+description: 'Revise solutes and solvents, hydration, strong, weak and non-electrolytes, ion concentrations and energy changes on dissolving.'
+level: beginner
+access: free
+status: review
+assisted: true
+cards:
+  - id: ed-01
+    front: 'What are the solute and the solvent in a solution?'
+    back: 'Solute: the substance dissolved. Solvent: the substance it dissolves in (usually present in larger amount, often water).'
+  - id: ed-02
+    front: 'What is an electrolyte?'
+    back: 'A substance that forms ions in water, so its solution conducts electricity.'
+  - id: ed-03
+    front: 'Give examples of strong, weak and non-electrolytes.'
+    back: 'Strong: NaCl, HCl, NaOH. Weak: ethanoic acid, ammonia. Non-electrolyte: sugar, ethanol.'
+  - id: ed-04
+    front: 'What does "hydrated" mean for an ion?'
+    back: 'The ion is surrounded by water molecules, with their oppositely charged ends facing it.'
+  - id: ed-05
+    front: 'Which end of a water molecule faces a Na⁺ ion?'
+    back: 'The oxygen (δ−) end.'
+  - id: ed-06
+    front: 'Write the dissociation equation for CaCl₂.'
+    back: '$\ce{CaCl2(s) -> Ca^2+(aq) + 2Cl-(aq)}$'
+  - id: ed-07
+    front: 'What is [Cl⁻] in 0.150 mol/L CaCl₂?'
+    back: '2 × 0.150 mol/L = 0.300 mol/L'
+  - id: ed-08
+    front: 'Why does sugar solution not conduct electricity?'
+    back: 'Sugar dissolves as whole molecules and forms no ions.'
+  - id: ed-09
+    front: 'What two energy steps occur when an ionic solid dissolves?'
+    back: 'Breaking the lattice (endothermic) and hydrating the ions (exothermic).'
+  - id: ed-10
+    front: 'Why does dissolving NH₄NO₃ make water colder?'
+    back: 'Hydration releases less energy than breaking the lattice needs, so heat is taken from the water (ΔH positive).'

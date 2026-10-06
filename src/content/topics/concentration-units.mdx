@@ -1,0 +1,180 @@
+---
+title: Concentration Units
+question: "How many ways can you express how concentrated a solution is, and how do you convert between them?"
+description: "Mass percent, parts per million, mole fraction, molality and molarity: what each means, when it is used, and how to convert between them using density."
+area: solutions
+level: intermediate
+order: 15
+prerequisites: [molarity, mole-concept]
+related: [molarity, colligative-properties, density, electrolytes-and-dissolving]
+flashcards: concentration-units
+quiz: concentration-units
+resources: [concentration-units-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  Molar masses (g/mol): NaCl 58.44, H₂O 18.02, C₂H₅OH 46.07, C₆H₁₂O₆ 180.16, HCl 36.46.
+  For dilute aqueous solutions, 1 ppm ≈ 1 mg/L. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+A **concentration** tells you how much solute is in a given amount of solution or solvent. Different jobs use different units:
+
+| Unit | Definition | Typical use |
+|---|---|---|
+| **Molarity**, $c$ (mol/L) | $\dfrac{\text{mol solute}}{\text{L solution}}$ | Reactions and titrations in the lab |
+| **Mass percent**, % (m/m) | $\dfrac{\text{mass solute}}{\text{mass solution}} \times 100\%$ | Labels, concentrated reagents, alloys |
+| **Parts per million**, ppm | $\dfrac{\text{mass solute}}{\text{mass solution}} \times 10^{6}$ | Traces: pollutants, fluoride in water |
+| **Mole fraction**, $x$ | $\dfrac{\text{mol of component}}{\text{total mol}}$ | Gas mixtures, vapour pressure |
+| **Molality**, $m$ (mol/kg) | $\dfrac{\text{mol solute}}{\text{kg solvent}}$ | Colligative properties |
+
+<KeyIdea>
+Watch the **denominator**. Molarity divides by the volume of **solution**; molality divides by the mass of **solvent**; mass percent and ppm divide by the mass of **solution**. Converting between them is a matter of finding the missing amount, often with the **density** of the solution.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Safety and health.** Drinking-water limits are given in ppm or ppb (for example, fluoride is added at about 0.7 ppm); a 3 % hydrogen peroxide solution is safe on skin, but 30 % is corrosive.
+- **Temperature independence.** Molarity changes slightly as a solution expands when warmed; molality, mass percent and mole fraction do not, because they use masses.
+- **Reading labels.** Concentrated acids are sold as mass percent with a density; to use them in a reaction you need their molarity.
+
+## How does it work?
+
+### 1. Mass percent and ppm
+
+Both compare the mass of solute with the mass of the **whole solution** (solute + solvent). For very small amounts, ppm (and ppb, $\times 10^{9}$) avoid tiny percentages. In dilute water solutions, 1 L has a mass of about 1 kg, so **1 ppm ≈ 1 mg/L**.
+
+### 2. Mole fraction
+
+Convert every component to moles and divide each by the total. Mole fractions have no unit and always add up to 1.
+
+### 3. Molality
+
+Divide the moles of solute by the mass of **solvent in kilograms**. Because it doesn't depend on volume, molality is used for boiling-point and freezing-point calculations.
+
+### 4. Converting with density
+
+To go from a "per volume" unit to a "per mass" unit, take a convenient amount of solution (for example 1 L) and use the density to find its mass. Then split that mass into solute and solvent.
+
+<Analogy>
+Concentration units are like describing a fruit salad. You can say "one in five pieces is a strawberry" (mole fraction), "20 % of the weight is strawberry" (mass percent) or "three strawberries per bowl" (molarity). All describe the same salad; you just need to know how big the pieces and the bowl are to convert.
+</Analogy>
+
+<MorePrecisely>
+Mass percent is sometimes written % (w/w); volume percent, % (v/v), is used for liquid mixtures such as alcoholic drinks, and % (w/v) (grams per 100 mL) in medicine. For very dilute aqueous solutions, molarity and molality are almost equal, because 1 L of solution contains almost exactly 1 kg of water. The approximation 1 ppm ≈ 1 mg/L also holds only when the density is close to 1.00 g/mL.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/concentration-units/denominators.svg" alt="A solution drawn as a beaker containing solute particles in solvent. Arrows show what each unit divides by: molarity divides moles of solute by the litres of solution; molality divides moles of solute by the kilograms of solvent only; mass percent and ppm divide the mass of solute by the mass of the whole solution; mole fraction divides the moles of one component by the total moles." caption="The units differ in what they divide by: solution or solvent, volume or mass, moles or grams." width={360} height={300} />
+
+## Worked example
+
+<Example title="Mass percent">
+**Question:** 5.00 g of NaCl is dissolved in 95.0 g of water. What is the mass percent of NaCl?
+
+$$
+\small\begin{aligned}
+&\%\ \text{NaCl} \\[4pt]
+&= \frac{5.00\ \text{g}}{5.00\ \text{g} + 95.0\ \text{g}} \\[4pt]
+&\quad \times 100\% \\[4pt]
+&= 5.00\%
+\end{aligned}
+$$
+</Example>
+
+<Example title="Parts per million">
+**Question:** A 2.50 kg sample of water contains 3.5 mg of lead. Express the lead concentration in ppm.
+
+1. Convert to the same unit: 3.5 mg = 0.0035 g and 2.50 kg = 2500 g.
+2. Concentration:
+
+   $$
+   \begin{aligned}
+   &\text{ppm} = \frac{0.0035\ \text{g}}{2500\ \text{g}} \times 10^{6} \\[4pt]
+   &= 1.4\ \text{ppm}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="Mole fraction">
+**Question:** 23.0 g of ethanol is mixed with 54.0 g of water. Find the mole fraction of ethanol.
+
+1. Moles: ethanol $\dfrac{23.0\ \text{g}}{46.07\ \text{g/mol}} = 0.4992\ \text{mol}$; water $\dfrac{54.0\ \text{g}}{18.02\ \text{g/mol}} = 2.997\ \text{mol}$.
+2. Mole fraction:
+
+   $$
+   \small\begin{aligned}
+   &x_\text{ethanol} \\[4pt]
+   &= \frac{0.4992\ \text{mol}}{0.4992\ \text{mol} + 2.997\ \text{mol}} \\[4pt]
+   &= 0.143
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="From molarity to molality">
+**Question:** A 2.00 mol/L NaCl solution has a density of 1.08 g/mL. What is its molality?
+
+1. Take 1.000 L of solution. Its mass is $1000\ \text{mL} \times 1.08\ \text{g/mL} = 1080\ \text{g}$.
+2. Mass of NaCl: $2.00\ \text{mol} \times 58.44\ \text{g/mol} = 116.9\ \text{g}$.
+3. Mass of water: $1080\ \text{g} - 116.9\ \text{g} = 963.1\ \text{g} = 0.9631\ \text{kg}$.
+4. Molality:
+
+   $$
+   \begin{aligned}
+   &m = \frac{2.00\ \text{mol}}{0.9631\ \text{kg}} \\[4pt]
+   &= 2.08\ \text{mol/kg}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="From mass percent to molarity">
+**Question:** Concentrated hydrochloric acid is 37.0 % HCl by mass, with a density of 1.19 g/mL. What is its molarity?
+
+1. Take 1.000 L: mass of solution $= 1000\ \text{mL} \times 1.19\ \text{g/mL} = 1190\ \text{g}$.
+2. Mass of HCl $= 0.370 \times 1190\ \text{g} = 440.3\ \text{g}$.
+3. Moles and molarity:
+
+   $$
+   \small\begin{aligned}
+   &n = \frac{440.3\ \text{g}}{36.46\ \text{g/mol}} \\[4pt]
+   &= 12.08\ \text{mol} \\[4pt]
+   &c = \frac{12.08\ \text{mol}}{1.000\ \text{L}} \\[4pt]
+   &= 12.1\ \text{mol/L}
+   \end{aligned}
+   $$
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Dividing by the solvent instead of the solution">
+Mass percent uses the mass of the **solution**: 5.00 g of NaCl in 95.0 g of water is 5.00 %, not $\frac{5.00}{95.0} \times 100\% = 5.26\%$.
+</CommonMistake>
+
+<CommonMistake title="Confusing molarity and molality">
+Molarity ($c$ or $M$) is per **litre of solution**; molality ($m$) is per **kilogram of solvent**. They are close only for dilute water solutions.
+</CommonMistake>
+
+<CommonMistake title="Mixing units in ppm">
+Solute and solution must be in the **same** mass unit before multiplying by $10^{6}$: 3.5 mg in 2.50 kg means 0.0035 g in 2500 g.
+</CommonMistake>
+
+<NotationNote>
+- Molarity: mol/L, mol L⁻¹ or M. Molality: mol/kg or m (italic m, not to be confused with m for mass or metre).
+- 1 ppm = 1 mg/kg; 1 ppb = 1 μg/kg.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Molarity = mol solute ÷ L solution. Molality = mol solute ÷ kg solvent.
+- Mass percent = mass solute ÷ mass solution × 100 %; ppm uses × 10⁶.
+- Mole fraction = mol of component ÷ total mol; fractions add to 1.
+- Convert between volume-based and mass-based units with the density, starting from 1 L of solution.
+</RememberThis>
