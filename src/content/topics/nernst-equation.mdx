@@ -1,0 +1,183 @@
+---
+title: The Nernst Equation and Cell Potential
+question: "How does a cell's voltage change with concentration, and how is it linked to K and ΔG?"
+description: "Cell potentials under non-standard conditions with the Nernst equation, why batteries go flat, concentration cells, and the links between E°, ΔG° and the equilibrium constant K."
+area: redox-and-electrochemistry
+level: intermediate
+order: 25
+prerequisites: [galvanic-cells, chemical-equilibrium]
+related: [galvanic-cells, gibbs-free-energy, chemical-equilibrium, batteries-fuel-cells-and-corrosion]
+flashcards: nernst-equation
+quiz: nernst-equation
+resources: [nernst-equation-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  F = 96 485 C/mol; R = 8.314 J/(mol·K); at 25 °C, (RT/F) ln 10 = 0.0592 V. E° values as in Galvanic Cells:
+  Cu²⁺/Cu +0.34 V, Zn²⁺/Zn −0.76 V, Ag⁺/Ag +0.80 V. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+Standard cell potentials, $E°$, apply only when every dissolved species is at **1 mol/L** (and gases at 1 bar). Real cells are rarely standard, and as a battery runs, the concentrations change. The **Nernst equation** gives the actual cell potential $E$:
+
+$$
+E = E° - \frac{RT}{nF}\ln Q
+$$
+
+where $n$ is the number of electrons transferred, $F = 96\,485$ C/mol is the Faraday constant and $Q$ is the reaction quotient. At 25 °C this becomes:
+
+$$
+E = E° - \frac{0.0592\ \text{V}}{n}\log Q
+$$
+
+<KeyIdea>
+As a cell runs, products build up and reactants are used, so **Q increases** and **E falls**. When $Q$ reaches $K$, the reaction is at equilibrium and $E = 0$: the battery is **flat**.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Batteries.** The Nernst equation explains why a battery's voltage drops as it is used.
+- **Measuring concentrations.** pH meters and ion-selective electrodes measure a voltage that depends on concentration through the Nernst equation.
+- **Biology.** Nerve cells hold different ion concentrations inside and outside; the resulting voltage (membrane potential) is a concentration cell.
+
+## How does it work?
+
+### 1. Using the Nernst equation
+
+1. Write the balanced overall equation and find $E°_\text{cell}$ and $n$.
+2. Write $Q$ (products over reactants; leave out solids).
+3. Substitute into $E = E° - \frac{0.0592\ \text{V}}{n}\log Q$.
+
+### 2. Concentration cells
+
+Two half-cells of the **same** metal in solutions of **different** concentration still give a voltage, even though $E° = 0$. Electrons flow so as to make the concentrations equal: the dilute side is oxidized (anode) and the concentrated side is reduced (cathode).
+
+### 3. E°, ΔG° and K
+
+Three quantities describe how far a reaction "wants" to go, and each can be found from the others:
+
+$$
+\small\begin{aligned}
+&\Delta G° = -nFE° \\[4pt]
+&\Delta G° = -RT\ln K \\[4pt]
+&\log K \\[4pt]
+&= \frac{nE°}{0.0592\ \text{V}}\ \ \text{(at 25 °C)}
+\end{aligned}
+$$
+
+| $E°_\text{cell}$ | $\Delta G°$ | $K$ | Reaction at standard conditions |
+|---|---|---|---|
+| positive | negative | greater than 1 | spontaneous, products favoured |
+| zero | zero | 1 | at equilibrium |
+| negative | positive | less than 1 | non-spontaneous, reactants favoured |
+
+<Analogy>
+A cell is like water flowing between two tanks. $E°$ is the height difference when both tanks start at a standard level. As water flows, the upper tank empties and the lower one fills, so the height difference (E) shrinks until the levels are equal and the flow stops (equilibrium, E = 0).
+</Analogy>
+
+<MorePrecisely>
+The value 0.0592 V comes from $\frac{RT}{F}\ln 10$ at 298.15 K; at other temperatures use the full form. Because $\log K = nE°/0.0592$, a standard potential of only about 0.2 V for a 2-electron reaction already gives $K \approx 10^{7}$: small voltages correspond to very large equilibrium constants. Strictly, $Q$ uses activities, so the Nernst equation is most accurate for dilute solutions.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/nernst-equation/e-vs-logq.svg" alt="Graph of cell potential E against log Q for the zinc–copper cell. E equals 1.10 volts when log Q is zero (standard conditions) and falls in a straight line with slope minus 0.0296 volts per unit of log Q, reaching zero at log Q of about 37, where Q equals K and the cell is flat." caption="For the Zn–Cu cell, E falls by 0.0296 V for every tenfold increase in Q, reaching 0 when Q = K." width={360} height={280} />
+
+## Worked example
+
+<Example title="A non-standard Zn–Cu cell">
+**Question:** Calculate $E$ at 25 °C for $\ce{Zn(s) + Cu^2+(aq) -> Zn^2+(aq) + Cu(s)}$ when $[\ce{Zn^2+}] = 1.0$ mol/L and $[\ce{Cu^2+}] = 0.010$ mol/L.
+
+1. $E° = 0.34\ \text{V} - (-0.76\ \text{V}) = 1.10\ \text{V}$; $n = 2$.
+2. $Q = \dfrac{[\ce{Zn^2+}]}{[\ce{Cu^2+}]} = \dfrac{1.0}{0.010} = 100$
+3. Nernst:
+
+   $$
+   \small\begin{aligned}
+   &E = 1.10\ \text{V} \\[4pt]
+   &\quad - \frac{0.0592\ \text{V}}{2}\log 100 \\[4pt]
+   &= 1.10\ \text{V} - 0.0592\ \text{V} \\[4pt]
+   &= 1.04\ \text{V}
+   \end{aligned}
+   $$
+
+4. Less $\ce{Cu^2+}$ (a reactant) means a slightly lower voltage.
+</Example>
+
+<Example title="A concentration cell">
+**Question:** Two copper electrodes dip into 0.0010 mol/L and 1.0 mol/L $\ce{Cu^2+}$. Calculate the cell potential at 25 °C.
+
+1. $E° = 0$ V (same half-reaction); $n = 2$. The dilute side is the anode: $Q = \dfrac{[\ce{Cu^2+}]_\text{dilute}}{[\ce{Cu^2+}]_\text{concentrated}} = \dfrac{0.0010}{1.0}$.
+2. Nernst:
+
+   $$
+   \small\begin{aligned}
+   &E = 0 - \frac{0.0592\ \text{V}}{2}\log(1.0 \\[4pt]
+   &\quad \times 10^{-3}) \\[4pt]
+   &= 0.089\ \text{V}
+   \end{aligned}
+   $$
+</Example>
+
+<Example title="From E° to K">
+**Question:** Calculate $K$ at 25 °C for the Zn–Cu reaction ($E° = 1.10$ V, $n = 2$).
+
+$$
+\small\begin{aligned}
+&\log K = \frac{2 \times 1.10\ \text{V}}{0.0592\ \text{V}} \\[4pt]
+&= 37.16 \\[4pt]
+&K = 10^{37.16} = 1.5 \times 10^{37}
+\end{aligned}
+$$
+
+The reaction goes essentially to completion.
+</Example>
+
+<Example title="ΔG from E">
+**Question:** Calculate $\Delta G$ for the non-standard Zn–Cu cell above ($E = 1.04$ V).
+
+$$
+\small\begin{aligned}
+&\Delta G = -nFE \\[4pt]
+&= -2 \times 96\,485\ \tfrac{\text{C}}{\text{mol}} \times 1.04\ \text{V} \\[4pt]
+&= -2.01 \times 10^{5}\ \text{J/mol} \\[4pt]
+&= -201\ \text{kJ/mol}
+\end{aligned}
+$$
+
+(1 C × 1 V = 1 J.)
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Using the wrong n">
+$n$ is the number of electrons transferred in the **balanced overall** equation: 2 for Zn + Cu²⁺, not 1.
+</CommonMistake>
+
+<CommonMistake title="Getting Q upside down">
+$Q$ is products over reactants, like $K$. For $\ce{Zn + Cu^2+ -> Zn^2+ + Cu}$, $Q = [\ce{Zn^2+}]/[\ce{Cu^2+}]$. Solids (Zn, Cu) are left out.
+</CommonMistake>
+
+<CommonMistake title="Mixing ln and log">
+$\frac{RT}{nF}\ln Q$ and $\frac{0.0592\ \text{V}}{n}\log Q$ are the same at 25 °C. Don't use 0.0592 with ln.
+</CommonMistake>
+
+<NotationNote>
+- $E°$: standard potential; $E$: actual potential. $F$ = 96 485 C/mol.
+- 1 V = 1 J/C, so $nFE$ comes out in J/mol.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Nernst: $E = E° - \frac{RT}{nF}\ln Q$; at 25 °C, $E = E° - \frac{0.0592\ \text{V}}{n}\log Q$.
+- As the cell runs, Q rises and E falls; at equilibrium Q = K and E = 0.
+- Concentration cells: same electrodes, different concentrations, E° = 0 but E ≠ 0.
+- $\Delta G° = -nFE° = -RT\ln K$; $\log K = nE°/0.0592$ V at 25 °C.
+</RememberThis>

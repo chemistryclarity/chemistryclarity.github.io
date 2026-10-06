@@ -1,0 +1,79 @@
+# Quiz: Batteries, Fuel Cells and Corrosion
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'Batteries, Fuel Cells and Corrosion: Quiz'
+description: 'Seven questions on batteries, fuel cells, rusting and corrosion protection, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: bf-q1
+    prompt: 'What happens when a rechargeable battery is charged?'
+    choices:
+      - 'The spontaneous reaction runs faster'
+      - 'An external current drives the cell reaction in reverse'
+      - 'New electrodes are added'
+      - 'The electrolyte is replaced'
+    answer: 'An external current drives the cell reaction in reverse'
+    explanation: 'Charging is electrolysis: electrical energy forces the non-spontaneous reverse reaction, restoring the reactants.'
+    difficulty: easy
+  - id: bf-q2
+    prompt: 'What is the only product of a hydrogen–oxygen fuel cell?'
+    choices:
+      - 'Carbon dioxide'
+      - 'Water'
+      - 'Hydrogen peroxide'
+      - 'Ozone'
+    answer: 'Water'
+    explanation: 'Overall reaction: 2H₂ + O₂ → 2H₂O.'
+    difficulty: easy
+  - id: bf-q3
+    prompt: 'In which conditions does an iron nail rust fastest?'
+    choices:
+      - 'Dry air'
+      - 'Boiled water sealed from air'
+      - 'Salt water open to air'
+      - 'Oil'
+    answer: 'Salt water open to air'
+    explanation: 'Rusting needs oxygen and water; dissolved salt makes the water a better electrolyte and speeds the reaction.'
+    difficulty: easy
+  - id: bf-q4
+    prompt: 'Which metal could be used as a sacrificial anode to protect a steel pipeline?'
+    choices:
+      - 'Copper'
+      - 'Silver'
+      - 'Magnesium'
+      - 'Tin'
+    answer: 'Magnesium'
+    explanation: 'Magnesium (E° −2.37 V) is oxidized more easily than iron (−0.44 V), so it corrodes instead. Copper, silver and tin are less reactive than iron.'
+    difficulty: medium
+  - id: bf-q5
+    prompt: 'What is E°(cell) for rusting, 2Fe + O₂ + 4H⁺ → 2Fe²⁺ + 2H₂O? (O₂/H₂O +1.23 V; Fe²⁺/Fe −0.44 V)'
+    choices:
+      - '0.79 V'
+      - '1.67 V'
+      - '−1.67 V'
+      - '2.11 V'
+    answer: '1.67 V'
+    explanation: 'E°cell = E°cathode − E°anode = 1.23 V − (−0.44 V) = 1.67 V. 0.79 V comes from adding the values.'
+    difficulty: medium
+  - id: bf-q6
+    prompt: 'What is ΔG° per mole of H₂ in a hydrogen fuel cell? (n = 4 for 2H₂ + O₂; E° = 1.23 V)'
+    choices:
+      - '−119 kJ'
+      - '−237 kJ'
+      - '−475 kJ'
+      - '+237 kJ'
+    answer: '−237 kJ'
+    explanation: 'ΔG° = −4 × 96 485 C/mol × 1.23 V = −475 kJ for 2 mol H₂, which is −237 kJ per mole of H₂.'
+    difficulty: hard
+  - id: bf-q7
+    prompt: 'Why does a scratched tin coating make iron rust faster?'
+    choices:
+      - 'Tin reacts with water'
+      - 'Iron becomes the anode, because iron is more reactive than tin'
+      - 'Tin absorbs oxygen'
+      - 'Tin is a catalyst'
+    answer: 'Iron becomes the anode, because iron is more reactive than tin'
+    explanation: 'Where both metals touch the electrolyte, the more reactive iron is oxidized and the tin acts as the cathode, speeding corrosion of the iron.'
+    difficulty: hard

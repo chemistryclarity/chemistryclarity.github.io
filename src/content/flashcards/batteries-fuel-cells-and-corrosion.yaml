@@ -1,0 +1,39 @@
+# Flashcards: Batteries, Fuel Cells and Corrosion
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'Batteries, Fuel Cells and Corrosion: Flashcards'
+description: 'Revise primary and rechargeable batteries, fuel cells, how iron rusts and how corrosion is prevented.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: bf-01
+    front: 'What is a battery, in electrochemical terms?'
+    back: 'One or more galvanic cells: a spontaneous redox reaction drives electrons through a circuit.'
+  - id: bf-02
+    front: 'What is the difference between a primary and a secondary battery?'
+    back: 'Primary: used once. Secondary: rechargeable, by driving the reaction backwards with an external current (electrolysis).'
+  - id: bf-03
+    front: 'In a battery, which electrode is negative?'
+    back: 'The anode (oxidation); the cathode is positive.'
+  - id: bf-04
+    front: 'What moves between the electrodes in a lithium-ion battery?'
+    back: 'Li⁺ ions, between the graphite anode and the metal-oxide cathode.'
+  - id: bf-05
+    front: 'Give the overall reaction and E° of a hydrogen fuel cell.'
+    back: '2H₂ + O₂ → 2H₂O; E° = 1.23 V.'
+  - id: bf-06
+    front: 'What two substances are needed for iron to rust?'
+    back: 'Oxygen and water.'
+  - id: bf-07
+    front: 'Give the anode half-equation for rusting.'
+    back: '$\ce{Fe -> Fe^2+ + 2e-}$'
+  - id: bf-08
+    front: 'Why does salt speed up rusting?'
+    back: 'It makes the water a better electrolyte, so ions move more easily.'
+  - id: bf-09
+    front: 'Why does zinc protect iron even when the coating is scratched?'
+    back: 'Zinc (E° −0.76 V) is more easily oxidized than iron (−0.44 V), so it corrodes instead (sacrificial protection).'
+  - id: bf-10
+    front: 'How many coulombs is 2000 mAh?'
+    back: '2.000 A × 3600 s = 7200 C'

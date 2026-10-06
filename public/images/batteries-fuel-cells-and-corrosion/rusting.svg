@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .iron { fill: #9ca3af; stroke: #4b5563; stroke-width: 1.2; }
+    .drop { fill: #dbeafe; stroke: #3b82f6; stroke-width: 1.4; fill-opacity: 0.9; }
+    .pit { fill: #78350f; }
+    .rust { fill: #b45309; }
+    .lab { fill: #14213d; font-size: 10.5px; font-weight: 700; }
+    .an { fill: #b91c1c; font-size: 10px; font-weight: 700; }
+    .ca { fill: #1d4ed8; font-size: 10px; font-weight: 700; }
+    .eq { fill: #3d4657; font-size: 9.5px; }
+    .e { stroke: #7c3aed; stroke-width: 2; fill: none; stroke-dasharray: 5 3; }
+    .eh { fill: #7c3aed; }
+    .et { fill: #6d28d9; font-size: 10px; font-weight: 700; }
+    .air { fill: #5b6577; font-size: 10px; font-style: italic; }
+    .ar { stroke: #5b6577; stroke-width: 1.4; fill: none; }
+    .arh { fill: #5b6577; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t, .lab { fill: #e9edf5; }
+      .sub, .air { fill: #9aa5ba; }
+      .eq { fill: #c7cfdd; }
+      .iron { fill: #4b5563; stroke: #9ca3af; }
+      .drop { fill: #1e3a5f; stroke: #60a5fa; }
+      .an { fill: #fca5a5; } .ca { fill: #93c5fd; }
+      .e { stroke: #c4b5fd; } .eh { fill: #c4b5fd; } .et { fill: #c4b5fd; }
+      .ar { stroke: #9aa5ba; } .arh { fill: #9aa5ba; }
+    }
+  </style>
+  <defs>
+    <marker id="eh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="eh" d="M0 0 10 5 0 10z"/></marker>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="arh" d="M0 0 10 5 0 10z"/></marker>
+  </defs>
+  <rect class="bg" width="360" height="260" rx="14"/>
+  <text class="t" x="16" y="28">How iron rusts</text>
+  <text class="sub" x="16" y="45">A water drop on iron acts as a tiny galvanic cell.</text>
+
+  <!-- air / oxygen arrows -->
+  <text class="air" x="44" y="76">O₂ from air</text>
+  <path class="ar" d="M70 82 L88 112" marker-end="url(#ah)"/>
+  <text class="air" x="290" y="76" text-anchor="end">O₂ from air</text>
+  <path class="ar" d="M266 82 L250 112" marker-end="url(#ah)"/>
+
+  <!-- droplet -->
+  <path class="drop" d="M50 170 Q60 98 168 96 Q276 98 290 170 Z"/>
+  <!-- iron -->
+  <rect class="iron" x="14" y="170" width="332" height="44" rx="4"/>
+  <!-- pit (anode) under centre -->
+  <path class="pit" d="M150 170 Q168 186 186 170 Z"/>
+  <!-- rust ring -->
+  <ellipse class="rust" cx="110" cy="166" rx="10" ry="4"/><ellipse class="rust" cx="228" cy="166" rx="10" ry="4"/>
+
+  <!-- labels -->
+  <text class="an" x="168" y="132" text-anchor="middle">ANODE (centre)</text>
+  <text class="eq" x="168" y="146" text-anchor="middle">Fe → Fe²⁺ + 2e⁻</text>
+  <text class="ca" x="76" y="160" text-anchor="middle">CATHODE</text>
+  <text class="ca" x="262" y="160" text-anchor="middle">CATHODE</text>
+
+  <!-- electron flow in iron -->
+  <path class="e" d="M156 196 H76" marker-end="url(#eh)"/>
+  <path class="e" d="M180 196 H262" marker-end="url(#eh)"/>
+  <text class="et" x="168" y="208" text-anchor="middle">e⁻</text>
+  <text class="lab" x="180" y="232" text-anchor="middle">Electrons flow through the iron to the drop edge</text>
+  <text class="eq" x="180" y="250" text-anchor="middle">Cathode: O₂ + 2H₂O + 4e⁻ → 4OH⁻ · then Fe²⁺ → rust</text>
+</svg>

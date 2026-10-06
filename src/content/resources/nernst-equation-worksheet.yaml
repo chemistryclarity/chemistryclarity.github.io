@@ -1,0 +1,11 @@
+# Printable worksheet (free). Written in src/content/printables/nernst-equation-worksheet.mdx; PDFs are built automatically.
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW.
+title: 'The Nernst Equation Worksheet'
+description: '8 questions on the Nernst equation, concentration cells and converting between E°, ΔG° and K. Answer key included.'
+type: worksheet
+level: intermediate
+access: free
+file: '/downloads/nernst-equation-worksheet.pdf'
+answerKey: '/downloads/nernst-equation-worksheet-answers.pdf'
+preview: '/previews/nernst-equation-worksheet.png'
+status: review

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .t { fill: #14213d; font-size: 14px; font-weight: 700; }
+    .sub { fill: #5b6577; font-size: 11px; }
+    .ax { stroke: #3d4657; stroke-width: 1.5; fill: none; }
+    .grid { stroke: #d6d2c6; stroke-width: 1; stroke-dasharray: 3 3; }
+    .line { stroke: #0f766e; stroke-width: 3; }
+    .tick { fill: #5b6577; font-size: 10px; }
+    .axl { fill: #5b6577; font-size: 10.5px; font-weight: 600; }
+    .pt { fill: #7c3aed; }
+    .ptl { fill: #6d28d9; font-size: 10.5px; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #151e31; }
+      .t { fill: #e9edf5; }
+      .sub, .tick, .axl { fill: #9aa5ba; }
+      .ax { stroke: #c7cfdd; }
+      .grid { stroke: #2a3550; }
+      .line { stroke: #2dd4bf; }
+      .pt { fill: #c4b5fd; } .ptl { fill: #c4b5fd; }
+    }
+  </style>
+  <rect class="bg" width="360" height="280" rx="14"/>
+  <text class="t" x="16" y="28">Cell potential falls as Q rises</text>
+  <text class="sub" x="16" y="45">Zn–Cu cell at 25 °C: E = 1.10 V − (0.0592 V / 2) log Q</text>
+
+  <!-- plot: x = log Q from -5 to 40 -> x 60..340 (6.22 px per unit); y = E from 0 to 1.3 V -> y 240..70 (130.8 px per V) -->
+  <path class="ax" d="M60 62 V240 H342"/>
+  <line class="grid" x1="60" y1="96.1" x2="340" y2="96.1"/>
+  <text class="tick" x="54" y="244" text-anchor="end">0</text>
+  <text class="tick" x="54" y="99" text-anchor="end">1.10</text>
+  <text class="tick" x="54" y="171" text-anchor="end">0.55</text>
+  <line class="grid" x1="60" y1="168" x2="340" y2="168"/>
+  <text class="tick" x="91.1" y="256" text-anchor="middle">0</text>
+  <text class="tick" x="153.3" y="256" text-anchor="middle">10</text>
+  <text class="tick" x="215.5" y="256" text-anchor="middle">20</text>
+  <text class="tick" x="277.7" y="256" text-anchor="middle">30</text>
+  <text class="axl" x="16" y="62">E (V)</text>
+  <text class="axl" x="340" y="272" text-anchor="end">log Q →</text>
+
+  <!-- line from logQ=-5 (E=1.248) to logQ=37.16 (E=0) -->
+  <line class="line" x1="60" y1="76.8" x2="322.2" y2="240"/>
+
+  <!-- standard point logQ=0, E=1.10 -->
+  <circle class="pt" cx="91.1" cy="96.1" r="4.5"/>
+  <text class="ptl" x="100" y="90">standard: Q = 1, E = E° = 1.10 V</text>
+  <!-- logQ = 2, E = 1.04 -->
+  <circle class="pt" cx="103.5" cy="103.8" r="3.5"/>
+  <line x1="106" y1="104" x2="196" y2="118" stroke="#7c3aed" stroke-width="1" stroke-dasharray="2 2"/><text class="ptl" x="200" y="122">Q = 100: E = 1.04 V</text>
+  <!-- equilibrium -->
+  <circle class="pt" cx="322.2" cy="240" r="4.5"/>
+  <line x1="320" y1="236" x2="306" y2="168" stroke="#7c3aed" stroke-width="1" stroke-dasharray="2 2"/><text class="ptl" x="340" y="150" text-anchor="end">Q = K (log K = 37.16)</text><text class="ptl" x="340" y="163" text-anchor="end">E = 0: battery flat</text>
+</svg>

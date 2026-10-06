@@ -1,0 +1,79 @@
+# Quiz: The Nernst Equation and Cell Potential
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations and distractors checked by computer.
+title: 'The Nernst Equation: Quiz'
+description: 'Seven questions on the Nernst equation, concentration cells and the links between E°, ΔG° and K, with explanations.'
+level: intermediate
+access: free
+status: review
+assisted: true
+questions:
+  - id: ne-q1
+    prompt: 'As a galvanic cell discharges, what happens to Q and E?'
+    choices:
+      - 'Q increases, E increases'
+      - 'Q increases, E decreases'
+      - 'Q decreases, E decreases'
+      - 'Both stay constant'
+    answer: 'Q increases, E decreases'
+    explanation: 'Products accumulate, so Q rises; by the Nernst equation E = E° − (0.0592/n) log Q, E falls until it reaches zero at equilibrium.'
+    difficulty: easy
+  - id: ne-q2
+    prompt: 'What is the cell potential when the cell reaction is at equilibrium?'
+    choices:
+      - 'E°'
+      - '0 V'
+      - '1.00 V'
+      - 'It becomes negative'
+    answer: '0 V'
+    explanation: 'At equilibrium Q = K, there is no driving force and E = 0: the battery is flat.'
+    difficulty: easy
+  - id: ne-q3
+    prompt: 'For Zn + Cu²⁺ → Zn²⁺ + Cu (E° = 1.10 V), what is E when [Zn²⁺] = 1.0 M and [Cu²⁺] = 0.010 M?'
+    choices:
+      - '1.16 V'
+      - '1.10 V'
+      - '1.04 V'
+      - '0.98 V'
+    answer: '1.04 V'
+    explanation: 'Q = 1.0 ÷ 0.010 = 100; E = 1.10 V − (0.0592 V ÷ 2) × log 100 = 1.10 V − 0.0592 V = 1.04 V.'
+    difficulty: medium
+  - id: ne-q4
+    prompt: 'A silver concentration cell has [Ag⁺] = 0.0010 M on one side and 0.10 M on the other. What is E at 25 °C? (n = 1)'
+    choices:
+      - '0.0592 V'
+      - '0.118 V'
+      - '0.80 V'
+      - '0 V'
+    answer: '0.118 V'
+    explanation: 'E° = 0; Q = 0.0010 ÷ 0.10 = 0.010; E = 0 − 0.0592 V × log(0.010) = +0.118 V.'
+    difficulty: medium
+  - id: ne-q5
+    prompt: 'A reaction has E° = 0.46 V and n = 2. What is ΔG°?'
+    choices:
+      - '−44.4 kJ/mol'
+      - '−88.8 kJ/mol'
+      - '+88.8 kJ/mol'
+      - '−0.92 kJ/mol'
+    answer: '−88.8 kJ/mol'
+    explanation: 'ΔG° = −nFE° = −2 × 96 485 C/mol × 0.46 V = −88 770 J/mol = −88.8 kJ/mol.'
+    difficulty: medium
+  - id: ne-q6
+    prompt: 'For E° = 0.46 V and n = 2 at 25 °C, what is K?'
+    choices:
+      - '1.0 × 10⁰'
+      - '3.5 × 10⁷'
+      - '3.5 × 10¹⁵'
+      - '5.9 × 10⁻¹⁶'
+    answer: '3.5 × 10¹⁵'
+    explanation: 'log K = 2 × 0.46 ÷ 0.0592 = 15.54, so K = 10¹⁵·⁵⁴ = 3.5 × 10¹⁵. 3.5 × 10⁷ forgets n = 2.'
+    difficulty: hard
+  - id: ne-q7
+    prompt: 'A reaction has K = 1.0 × 10⁵ and n = 1 at 25 °C. What is E°?'
+    choices:
+      - '0.30 V'
+      - '0.059 V'
+      - '−0.30 V'
+      - '5.0 V'
+    answer: '0.30 V'
+    explanation: 'E° = (0.0592 V ÷ n) × log K = 0.0592 V × 5.0 = 0.296 V ≈ 0.30 V. K greater than 1 means E° is positive.'
+    difficulty: hard

@@ -1,0 +1,166 @@
+---
+title: Batteries, Fuel Cells and Corrosion
+question: "How do batteries and fuel cells work, why does iron rust, and how can rusting be stopped?"
+description: "Electrochemistry in everyday life: primary and rechargeable batteries, lithium-ion cells, hydrogen fuel cells, the electrochemistry of rusting, and how galvanizing and sacrificial anodes protect iron."
+area: redox-and-electrochemistry
+level: intermediate
+order: 35
+prerequisites: [galvanic-cells]
+related: [galvanic-cells, nernst-equation, electrolysis, redox-reactions, types-of-chemical-reactions]
+flashcards: batteries-fuel-cells-and-corrosion
+quiz: batteries-fuel-cells-and-corrosion
+resources: [batteries-fuel-cells-and-corrosion-worksheet]
+references: [brown-central-science]
+status: review
+lastReviewed: 2026-10-06
+assisted: true
+---
+
+{/*
+  DRAFTED WITH CLAUDE FOR YOUR REVIEW. Original wording; no text, examples or figures copied from any textbook.
+  E° (V): O₂ + 4H⁺ + 4e⁻ → 2H₂O +1.23; Fe²⁺/Fe −0.44; Zn²⁺/Zn −0.76; Mg²⁺/Mg −2.37; 2H⁺/H₂ 0.00.
+  Typical cell voltages: alkaline 1.5 V, lead–acid 2.0 V per cell, lithium-ion about 3.7 V.
+  F = 96 485 C/mol; 1 A·h = 3600 C. Every calculation checked by computer; units on every quantity.
+*/}
+
+## What is it?
+
+A **battery** is one or more galvanic cells packaged so that a spontaneous redox reaction pushes electrons through a circuit. A **fuel cell** is a galvanic cell that is fed its reactants continuously. **Corrosion** is a galvanic cell nobody wanted: metal slowly oxidized by its surroundings.
+
+| Device | Anode (oxidation, −) | Cathode (reduction, +) | Voltage per cell |
+|---|---|---|---|
+| Alkaline cell | zinc | manganese(IV) oxide | about 1.5 V |
+| Lead–acid (car) battery | lead | lead(IV) oxide, in sulfuric acid | about 2.0 V (six cells: 12 V) |
+| Lithium-ion | lithium in graphite | lithium metal oxide | about 3.7 V |
+| Hydrogen fuel cell | hydrogen | oxygen | 1.23 V (standard) |
+
+<KeyIdea>
+Every battery, fuel cell and rusting nail is the same thing: an **anode** where something is oxidized, a **cathode** where something is reduced, an **electrolyte** that lets ions move, and a path for electrons. Change the chemicals and you change the voltage.
+</KeyIdea>
+
+## Why does it matter?
+
+- **Energy storage.** Phones, laptops and electric cars run on lithium-ion batteries; grid storage helps renewable power.
+- **Clean energy.** Hydrogen fuel cells produce only water as their exhaust.
+- **Cost of corrosion.** Rust weakens bridges, pipelines and ships. Preventing it is a huge part of engineering.
+
+## How does it work?
+
+### 1. Primary and rechargeable batteries
+
+A **primary** battery (such as an alkaline cell) is used once: its reaction cannot easily be reversed. A **secondary** (rechargeable) battery is recharged by forcing current through it backwards, which drives the reaction in reverse: **electrolysis**. In a lithium-ion cell, $\ce{Li+}$ ions shuttle between the graphite anode and the metal-oxide cathode, in one direction during discharge and in the other during charging.
+
+### 2. The hydrogen fuel cell
+
+$$
+\begin{aligned}
+&\text{anode: } \ce{2H2 -> 4H+ + 4e-} \\[4pt]
+&\text{cathode: } \ce{O2 + 4H+ + 4e- -> 2H2O} \\[4pt]
+&\text{overall: } \ce{2H2 + O2 -> 2H2O}
+\end{aligned}
+$$
+
+$E°_\text{cell} = 1.23\ \text{V} - 0.00\ \text{V} = 1.23\ \text{V}$. Unlike a battery, a fuel cell does not run down as long as hydrogen and oxygen are supplied.
+
+### 3. How iron rusts
+
+Rusting needs **both oxygen and water**. A drop of water on iron acts as a tiny galvanic cell:
+
+- **Anode** (where the iron is pitted): $\ce{Fe -> Fe^2+ + 2e-}$
+- **Cathode** (at the edge of the drop, where oxygen dissolves): $\ce{O2 + 4H+ + 4e- -> 2H2O}$ (or, in neutral water, $\ce{O2 + 2H2O + 4e- -> 4OH-}$)
+
+The $\ce{Fe^2+}$ is then oxidized further by air to hydrated iron(III) oxide, $\ce{Fe2O3.xH2O}$: rust. **Salt** speeds rusting because it makes the water a better electrolyte.
+
+### 4. Preventing corrosion
+
+- **Barriers:** paint, oil, grease or plastic coating keep out water and oxygen.
+- **Galvanizing:** coating iron with **zinc**. Zinc ($E° = -0.76$ V) is more easily oxidized than iron ($-0.44$ V), so even if the coating is scratched, zinc corrodes **instead of** the iron.
+- **Sacrificial anodes:** blocks of magnesium or zinc are bolted to ship hulls and buried pipelines and slowly corrode in place of the steel.
+- **Alloys:** stainless steel contains chromium, which forms a protective oxide layer.
+
+<Analogy>
+A sacrificial anode is a bodyguard for the iron. Because magnesium or zinc gives up electrons more readily, the corrosion "attacks" the bodyguard first, and the iron is left untouched until the bodyguard is used up and replaced.
+</Analogy>
+
+<MorePrecisely>
+Coating iron with a **less** reactive metal, such as tin (tin cans) or copper, protects it only while the coating is unbroken; once scratched, the iron becomes the anode and corrodes **faster**. Aluminium does not rust away because it forms a thin, tough layer of $\ce{Al2O3}$ that seals the surface (passivation). Lithium-ion batteries can fail dangerously if overcharged or damaged, because the electrolyte is flammable.
+</MorePrecisely>
+
+## Visualise it
+
+<Figure src="/images/batteries-fuel-cells-and-corrosion/rusting.svg" alt="A water droplet on an iron surface. In the centre of the drop, where oxygen is scarce, iron atoms lose electrons and become Fe2+ ions: this is the anode. The electrons travel through the iron to the edge of the drop, where oxygen from the air is reduced: this is the cathode. Fe2+ ions and hydroxide ions meet in the water and form rust." caption="Rusting is a tiny galvanic cell: iron is oxidized under the drop; oxygen is reduced at its edge." width={360} height={260} />
+
+## Worked example
+
+<Example title="The energy of a fuel cell">
+**Question:** Calculate ΔG° for $\ce{2H2 + O2 -> 2H2O}$ in a fuel cell ($E° = 1.23$ V, $n = 4$), and per mole of hydrogen.
+
+$$
+\begin{aligned}
+&\Delta G° = -nFE° \\[4pt]
+&= -4 \times 96\,485\ \tfrac{\text{C}}{\text{mol}} \times 1.23\ \text{V} \\[4pt]
+&= -4.75 \times 10^{5}\ \text{J} = -475\ \text{kJ}
+\end{aligned}
+$$
+
+That is for 2 mol of $\ce{H2}$, so $-237$ kJ per mole of hydrogen.
+</Example>
+
+<Example title="The cell behind rusting">
+**Question:** Calculate $E°$ for the rusting cell $\ce{2Fe + O2 + 4H+ -> 2Fe^2+ + 2H2O}$.
+
+$$
+\small\begin{aligned}
+&E°_\text{cell} \\[4pt]
+&= E°_\text{cathode} - E°_\text{anode} \\[4pt]
+&= 1.23\ \text{V} - (-0.44\ \text{V}) \\[4pt]
+&= 1.67\ \text{V}
+\end{aligned}
+$$
+
+A large positive value: rusting is strongly spontaneous whenever oxygen and water are present.
+</Example>
+
+<Example title="Which metal protects iron?">
+**Question:** Which of zinc, magnesium and copper could act as a sacrificial anode for iron?
+
+Only a metal **more easily oxidized** than iron (more negative $E°$ than −0.44 V) protects it: **zinc** (−0.76 V) and **magnesium** (−2.37 V). Copper (+0.34 V) would make the iron corrode faster.
+</Example>
+
+<Example title="Battery capacity">
+**Question:** A phone battery is rated at 2000 mAh and about 3.7 V. Calculate (a) the charge it delivers (b) the moles of electrons (c) the mass of lithium that must move, if each $\ce{Li+}$ carries one electron's worth of charge (Li: 6.94 g/mol) (d) the energy stored.
+
+1. (a) $2.000\ \text{A h} \times 3600\ \text{s/h} = 7200\ \text{C}$ (1 A s = 1 C)
+2. (b) $\dfrac{7200\ \text{C}}{96\,485\ \text{C/mol}} = 0.07462\ \text{mol e}^-$
+3. (c) $0.07462\ \text{mol} \times 6.94\ \text{g/mol} = 0.518\ \text{g Li}$
+4. (d) $E = QV = 7200\ \text{C} \times 3.7\ \text{V} = 2.7 \times 10^{4}\ \text{J}$, about 27 kJ.
+</Example>
+
+## Common mistake
+
+<CommonMistake title="Thinking iron rusts in dry air or in pure, air-free water">
+Rusting needs **both** oxygen and water. Iron stays bright in dry air and in boiled water sealed from air.
+</CommonMistake>
+
+<CommonMistake title="Coating iron with any metal">
+Only a **more reactive** metal (zinc, magnesium) gives sacrificial protection. A less reactive coating (tin, copper) speeds corrosion once it is scratched.
+</CommonMistake>
+
+<CommonMistake title="Confusing a fuel cell with a battery">
+A battery stores its reactants inside and runs down. A fuel cell is supplied with fuel continuously and keeps working while fuel flows.
+</CommonMistake>
+
+<NotationNote>
+- In a battery the anode is the **negative** terminal and the cathode the **positive** terminal (the opposite of electrolysis).
+- mAh (milliampere-hours) measures charge: 1 mAh = 3.6 C.
+</NotationNote>
+
+## Remember this
+
+<RememberThis>
+- Batteries and fuel cells are galvanic cells: oxidation at the anode (−), reduction at the cathode (+).
+- Rechargeable batteries are recharged by electrolysis (reaction driven backwards).
+- Hydrogen fuel cell: $\ce{2H2 + O2 -> 2H2O}$, $E° = 1.23$ V, only water as exhaust.
+- Rusting needs oxygen and water; salt speeds it up. $E°_\text{cell} = 1.67$ V.
+- Protection: barriers, galvanizing and sacrificial anodes (metals with more negative E° than iron).
+</RememberThis>

@@ -1,0 +1,39 @@
+# Flashcards: The Nernst Equation and Cell Potential
+# DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All calculations checked by computer.
+title: 'The Nernst Equation: Flashcards'
+description: 'Revise the Nernst equation, why cell potential falls, concentration cells and the links between E°, ΔG° and K.'
+level: intermediate
+access: free
+status: review
+assisted: true
+cards:
+  - id: ne-01
+    front: 'State the Nernst equation.'
+    back: '$E = E° - \dfrac{RT}{nF}\ln Q$'
+  - id: ne-02
+    front: 'Give the Nernst equation at 25 °C with log.'
+    back: '$E = E° - \dfrac{0.0592\ \text{V}}{n}\log Q$'
+  - id: ne-03
+    front: 'Why does a battery''s voltage fall as it is used?'
+    back: 'Products build up and reactants are used, so Q increases and E decreases.'
+  - id: ne-04
+    front: 'What is E when the cell reaction reaches equilibrium?'
+    back: 'Zero: Q = K and the battery is flat.'
+  - id: ne-05
+    front: 'What is a concentration cell?'
+    back: 'A cell with the same electrode reaction on both sides but different concentrations; E° = 0 but E is not zero.'
+  - id: ne-06
+    front: 'In a concentration cell, which side is the anode?'
+    back: 'The more dilute side (it is oxidized, raising its concentration).'
+  - id: ne-07
+    front: 'Give the relationship between ΔG° and E°.'
+    back: '$\Delta G° = -nFE°$, with F = 96 485 C/mol.'
+  - id: ne-08
+    front: 'Give the relationship between E° and K at 25 °C.'
+    back: '$\log K = \dfrac{nE°}{0.0592\ \text{V}}$'
+  - id: ne-09
+    front: 'A cell has E° = 1.10 V and n = 2. What is K at 25 °C?'
+    back: 'log K = 2 × 1.10 ÷ 0.0592 = 37.16, so K = 1.5 × 10³⁷.'
+  - id: ne-10
+    front: 'If E° is positive, what are the signs of ΔG° and the size of K?'
+    back: 'ΔG° negative and K greater than 1: spontaneous, products favoured.'
