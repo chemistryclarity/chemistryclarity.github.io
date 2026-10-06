@@ -46,8 +46,8 @@
   <path class="up" d="M120 299.4 V273.1"/>
   <path class="up" d="M120 267.1 V236.7"/>
   <path class="up" d="M120 230.7 V88"/>
-  <text class="lB" x="148" y="289.3">+107.5 atomize Na</text>
-  <text class="lB" x="148" y="254.9">+121.3 atomize ½Cl₂</text>
+  <text class="lB" x="148" y="289.3">+107.5 sublimation</text>
+  <text class="lB" x="148" y="254.9">+121.3 atomization</text>
   <text class="lB" x="128" y="122">+495.8</text><text class="lB" x="128" y="136">IE₁ of Na</text>
   <path class="down" d="M296 86 V184.6"/><text class="lA" x="303" y="136.3">−348.6</text><text class="lA" x="303" y="150.3">EA of Cl</text>
   <path class="down" d="M296 190.6 V420.7"/><text class="lA" x="303" y="326.7">−787.2</text><text class="lA" x="303" y="340.7">lattice</text>

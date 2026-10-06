@@ -20,12 +20,12 @@ questions:
   - id: bh-q2
     prompt: 'Which step in a Born–Haber cycle is usually exothermic?'
     choices:
-      - 'Atomization of the metal'
+      - 'Sublimation of the metal'
       - 'First ionization energy of the metal'
       - 'First electron affinity of the non-metal'
       - 'Second electron affinity of oxygen'
     answer: 'First electron affinity of the non-metal'
-    explanation: 'The nucleus attracts the added electron, releasing energy. Atomization and ionization need energy, and adding a second electron to O⁻ is endothermic.'
+    explanation: 'The nucleus attracts the added electron, releasing energy. Sublimation, atomization and ionization need energy, and adding a second electron to O⁻ is endothermic.'
     difficulty: easy
   - id: bh-q3
     prompt: 'The Cl–Cl bond enthalpy is 242.6 kJ/mol. What value is used for the atomization of chlorine in the cycle for NaCl?'

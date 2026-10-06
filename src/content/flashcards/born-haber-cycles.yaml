@@ -24,7 +24,7 @@ cards:
     back: 'The electron is being added to an ion that is already negative (O⁻), so it is repelled; energy must be put in.'
   - id: bh-06
     front: 'Write the Born–Haber equation for lattice enthalpy.'
-    back: 'ΔH(latt) = ΔHf − (atomization enthalpies + ionization energies + electron affinities).'
+    back: 'ΔH(latt) = ΔHf − (sublimation of the metal + atomization of the non-metal + ionization energies + electron affinities).'
   - id: bh-07
     front: 'Which ionization energies are needed to form Mg²⁺(g)?'
     back: 'Both the first and the second: IE₁ + IE₂ = 737.7 kJ/mol + 1450.7 kJ/mol.'
@@ -37,3 +37,6 @@ cards:
   - id: bh-10
     front: 'What does it mean if a Born–Haber lattice enthalpy is more negative than the ionic-model value?'
     back: 'The bonding has some covalent character (for example in AgI), so it is stronger than pure ionic attraction predicts.'
+  - id: bh-11
+    front: 'What is the enthalpy of sublimation of sodium?'
+    back: 'The enthalpy change for Na(s) → Na(g), +107.5 kJ/mol: the energy to break up the metallic lattice into free gaseous atoms.'
