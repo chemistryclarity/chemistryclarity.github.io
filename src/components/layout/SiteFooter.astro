@@ -4,6 +4,7 @@ import { site, newsletterEnabled } from '../../config/site';
 import { footerNav } from '../../config/navigation';
 import { url } from '../../lib/url';
 import { getVisible } from '../../lib/content';
+import { socialLinks } from '../../config/socialLinks';
 
 const year = new Date().getFullYear();
 const years = year > site.copyrightStart ? `${site.copyrightStart}–${year}` : `${year}`;
@@ -14,11 +15,7 @@ const groups = footerNav
   .map((g) =>
     g.heading === 'Learn' && newsletterEnabled ? { ...g, links: [...g.links, { label: 'Newsletter', href: '/newsletter/' }] } : g,
   );
-const socials = Object.entries(site.social).filter(([, href]) => href);
-const socialLabels: Record<string, string> = {
-  youtube: 'YouTube', instagram: 'Instagram', tiktok: 'TikTok', facebook: 'Facebook',
-  x: 'X', threads: 'Threads', linkedin: 'LinkedIn', pinterest: 'Pinterest',
-};
+const socials = socialLinks();
 ---
 
 <footer class="site-footer">
@@ -28,7 +25,7 @@ const socialLabels: Record<string, string> = {
       <p class="muted">{site.tagline} Free, carefully checked explanations for anyone learning chemistry.</p>
       {socials.length > 0 && (
         <ul class="site-footer__social" role="list">
-          {socials.map(([key, href]) => <li><a href={href} rel="me noopener">{socialLabels[key] ?? key}</a></li>)}
+          {socials.map((s) => <li><a href={s.href} rel="me noopener" target="_blank">{s.label}</a></li>)}
         </ul>
       )}
     </div>

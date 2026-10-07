@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/layout/Breadcrumbs.astro';
+import { newsletterEnabled } from '../config/site';
+import { socialLinks } from '../config/socialLinks';
+import { url } from '../lib/url';
+
+// Social profiles come from Site settings → Social media links; a platform appears here as soon as it has an address.
+const socials = socialLinks();
+---
+
+<BaseLayout title="Connect with us" description="Follow Chemistry Clarity for new lessons, free worksheets and chemistry news, and tell us what you would like to see next." path="/connect/">
+  <section class="container section section--tight">
+    <Breadcrumbs items={[{ label: 'Connect with us' }]} />
+    <header class="head">
+      <h1>Connect with us</h1>
+      <p class="lead">Follow Chemistry Clarity for new lessons, free worksheets and chemistry news, and tell us what you would like to see next.</p>
+    </header>
+
+    <ul class="connect" role="list">
+      {socials.map((s) => (
+        <li class="connect__card">
+          <h2>{s.label}</h2>
+          <p class="muted">{s.blurb}</p>
+          <a class="btn btn--primary" href={s.href} target="_blank" rel="me noopener">Follow us on {s.label}<span class="visually-hidden"> (opens in a new tab)</span></a>
+        </li>
+      ))}
+      {newsletterEnabled && (
+        <li class="connect__card">
+          <h2>Newsletter</h2>
+          <p class="muted">New lessons and resources by email.</p>
+          <a class="btn btn--ghost" href={url('/newsletter/')}>Sign up</a>
+        </li>
+      )}
+      <li class="connect__card">
+        <h2>Contact and feedback</h2>
+        <p class="muted">Spotted a mistake, or want a topic covered? We read every message.</p>
+        <a class="btn btn--ghost" href={url('/contact/')}>Contact us</a>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .head { margin-bottom: var(--space-6); max-width: 46rem; }
+  .connect { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
+  .connect__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+  }
+  .connect__card h2 { font-size: var(--step-1); margin: 0; }
+  .connect__card p { margin: 0 0 var(--space-2); flex: 1; }
+  .connect__card .btn { align-self: flex-start; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>

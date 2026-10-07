@@ -7,6 +7,7 @@ export const mainNav = [
   { label: 'Explore', href: '/explore/' },
   { label: 'News', href: '/news/' },
   { label: 'About', href: '/about/' },
+  { label: 'Connect with us', short: 'Connect', href: '/connect/' },
 ];
 
 export const footerNav = [
@@ -29,6 +30,7 @@ export const footerNav = [
       { label: 'News', href: '/news/' },
       { label: 'Editorial standards', href: '/editorial-standards/' },
       { label: 'Contact', href: '/contact/' },
+      { label: 'Connect with us', href: '/connect/' },
     ],
   },
   {

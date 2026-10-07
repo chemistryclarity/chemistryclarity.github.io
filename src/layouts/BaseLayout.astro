@@ -37,7 +37,7 @@ const searchTypes: Record<string, [number, string]> = {
   notes: [2, 'Notes'],
   videos: [2, 'Video'],
 };
-const simplePages = new Set(['about', 'editorial-standards', 'contact', 'privacy', 'terms', 'disclaimer']);
+const simplePages = new Set(['about', 'editorial-standards', 'contact', 'privacy', 'terms', 'disclaimer', 'connect']);
 const segments = Astro.url.pathname.split('/').filter(Boolean);
 const rule = searchTypes[segments[0] ?? ''];
 const searchType = seo.noindex || draft

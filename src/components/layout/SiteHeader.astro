@@ -4,13 +4,14 @@ import { mainNav } from '../../config/navigation';
 import { url } from '../../lib/url';
 import { getAreas, getTopics, getVisible, groupByArea } from '../../lib/content';
 import { exploreSections, exploreSectionIds } from '../../config/explore';
+import { socialLinks } from '../../config/socialLinks';
 
 const current = Astro.url.pathname;
 const isActive = (href: string) => current.startsWith(url(href));
 
 // Sub-menus that open downward under each main tab. Subject lists are built from the
 // published lessons, so a new subject appears in the menu as soon as it has a lesson.
-type Link = { label: string; href: string };
+type Link = { label: string; href: string; external?: boolean };
 const [areas, topics, decks, quizzes, notes, videos] = await Promise.all([
   getAreas(), getTopics(), getVisible('flashcards'), getVisible('quizzes'), getVisible('notes'), getVisible('videos'),
 ]);
@@ -55,9 +56,14 @@ const children: Record<string, Link[]> = {
     { label: 'Editorial standards', href: '/editorial-standards/' },
     { label: 'Contact', href: '/contact/' },
   ],
+  // Social profiles open in a new tab; only those with an address are listed.
+  '/connect/': [
+    { label: 'All ways to connect', href: '/connect/' },
+    ...socialLinks().map((p) => ({ label: p.label, href: p.href, external: true })),
+  ],
 };
 const wide = new Set(['/learn/', '/flashcards/', '/quizzes/']);
-const alignEnd = new Set(['/news/', '/about/']);
+const alignEnd = new Set(['/news/', '/about/', '/connect/']);
 ---
 
 <header class="site-header">
@@ -87,11 +93,13 @@ const alignEnd = new Set(['/news/', '/about/']);
               <li>
                 <details class:list={['dd', { 'dd--wide': wide.has(item.href), 'dd--end': alignEnd.has(item.href) }]}>
                   <summary class="menu__link dd__toggle" aria-current={isActive(item.href) ? 'page' : undefined}>
-                    {item.label}<span class="dd__chev" aria-hidden="true"></span>
+                    {item.short ? (<><span class="lbl-full">{item.label}</span><span class="lbl-short">{item.short}</span></>) : item.label}<span class="dd__chev" aria-hidden="true"></span>
                   </summary>
                   <ul class="dd__panel" role="list">
                     {subs.map((s) => (
-                      <li><a href={url(s.href)}>{s.label}</a></li>
+                      <li>{s.external
+                        ? <a href={s.href} target="_blank" rel="me noopener">{s.label}<span class="ext" aria-hidden="true"> ↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+                        : <a href={url(s.href)}>{s.label}</a>}</li>
                     ))}
                   </ul>
                 </details>
@@ -142,17 +150,22 @@ const alignEnd = new Set(['/news/', '/about/']);
   .search-link:hover, .search-link[aria-current='page'] { color: var(--accent); border-color: var(--accent); }
   .search-link__text { display: none; }
   @media (min-width: 30rem) { .search-link__text { display: inline; } }
-  @media (min-width: 64rem) {
+  @media (min-width: 80rem) {
     .search-link { order: 3; margin-left: 0; border-color: transparent; background: none; padding: 0 var(--space-2); }
     .search-link__text { display: none; }
     .site-header__inner > nav { margin-left: auto; }
   }
-  @media (min-width: 80rem) { .search-link__text { display: inline; } }
-  /* Narrow desktops: tighten the tabs so the search button fits beside them */
-  @media (min-width: 64rem) and (max-width: 79.99rem) {
+  @media (min-width: 90rem) { .search-link__text { display: inline; } }
+  .lbl-short { display: none; }
+  .ext { font-size: 0.85em; color: var(--muted); }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  /* Smaller desktops (1280–1440 px): tighter tabs, short labels, search icon only */
+  @media (min-width: 80rem) and (max-width: 89.99rem) {
     .site-header__inner { gap: var(--space-2); }
     .menu__link { padding-inline: 0.5rem !important; }
     .search-link { padding: 0 0.35rem; }
+    .lbl-full { display: none; }
+    .lbl-short { display: inline; }
   }
 
   /* Mobile: disclosure menu with sub-menus that open downward (works without JavaScript) */
@@ -243,7 +256,7 @@ const alignEnd = new Set(['/news/', '/about/']);
   .dd__panel li:first-child a { font-weight: 700; color: var(--ink); }
 
   /* Desktop: horizontal tabs; each tab opens a panel downward */
-  @media (min-width: 64rem) {
+  @media (min-width: 80rem) {
     .menu__toggle { display: none; }
     .menu__list {
       position: static;
@@ -284,7 +297,7 @@ const alignEnd = new Set(['/news/', '/about/']);
   const menu = document.querySelector<HTMLDetailsElement>('.menu');
   const dds = Array.from(document.querySelectorAll<HTMLDetailsElement>('.dd'));
   if (menu) {
-    const mq = window.matchMedia("(min-width: 64rem)");
+    const mq = window.matchMedia("(min-width: 80rem)");
     const sync = () => { menu.open = mq.matches; dds.forEach((d) => (d.open = false)); };
     sync();
     mq.addEventListener('change', sync);
