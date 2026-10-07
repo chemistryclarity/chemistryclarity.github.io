@@ -1,15 +1,15 @@
 # Flashcards: Types of Chemical Reactions
 # DRAFTED WITH CLAUDE FOR YOUR REVIEW (assisted: true). All equations checked.
 title: 'Types of Chemical Reactions: Flashcards'
-description: 'Revise synthesis, decomposition, single and double displacement and combustion, and the activity series.'
+description: 'Revise combination (synthesis), decomposition, single and double displacement and combustion, and the activity series.'
 level: beginner
 access: free
 status: published
 assisted: true
 cards:
   - id: tr-01
-    front: 'Give the general pattern of a synthesis and a decomposition reaction.'
-    back: 'Synthesis: A + B → AB. Decomposition: AB → A + B.'
+    front: 'Give the general pattern of a combination (synthesis) and a decomposition reaction.'
+    back: 'Combination (synthesis): A + B → AB. Decomposition: AB → A + B.'
   - id: tr-02
     front: 'Give the general pattern of single and double displacement.'
     back: 'Single: A + BC → AC + B. Double: AB + CD → AD + CB.'

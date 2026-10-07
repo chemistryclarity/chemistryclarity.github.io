@@ -28,8 +28,8 @@
   <text class="sub" x="16" y="45">Each ball is an element or group of atoms.</text>
 
   <!-- helpers: ball r=10; letters inside -->
-  <!-- Row 1: synthesis y=80 -->
-  <text class="lab" x="16" y="72">Synthesis</text>
+  <!-- Row 1: combination (synthesis) y=80 -->
+  <text class="lab" x="16" y="72">Combination (synthesis)</text>
   <g transform="translate(0 88)">
     <circle class="a" cx="130" cy="0" r="10"/><text class="l" x="130" y="3" text-anchor="middle">A</text>
     <text class="op" x="152" y="5" text-anchor="middle">+</text>
