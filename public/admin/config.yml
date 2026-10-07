@@ -404,7 +404,7 @@ collections:
       - name: social
         label: Social media links
         file: src/config/social.json
-        description: Paste the full address of each profile (https://…). Leave empty to hide. Links appear in the footer of every page.
+        description: Paste the full public address of each profile (https://…). Leave empty to hide. Links appear in the "Connect with us" menu and page and in the footer of every page.
         fields:
           - { name: youtube, label: YouTube, widget: string, required: false }
           - { name: instagram, label: Instagram, widget: string, required: false }
