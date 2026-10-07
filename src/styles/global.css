@@ -149,6 +149,8 @@ a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
 @media (max-width: 40rem) {
   .prose table { display: block; overflow-x: auto; max-width: 100%; }
   .prose th, .prose td { padding: var(--space-2); }
+  /* mhchem adds invisible spacing characters (\vphantom{X}) that can poke a few pixels past a table cell. */
+  .prose { overflow-x: clip; }
 }
 
 /* ---------- Motion preferences ---------- */
