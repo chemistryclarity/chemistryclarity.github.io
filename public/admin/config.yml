@@ -328,6 +328,7 @@ collections:
           - { name: event, label: Event, widget: text }
       - { name: related, label: Related lessons, widget: relation, collection: topics, multiple: true, required: false, search_fields: [title, question] }
       - { name: seeAlso, label: Explore next, widget: relation, collection: explore, value_field: '{{slug}}', search_fields: [title], display_fields: [title], multiple: true, required: false }
+      - { name: youtubeShort, label: YouTube Short (video ID), widget: string, required: false, hint: 'The ID from the Short link, e.g. 8N2x6Bp3iTo from youtube.com/shorts/8N2x6Bp3iTo. Shown click-to-play beside the article.' }
       - name: sources
         label: Sources and further reading
         widget: list

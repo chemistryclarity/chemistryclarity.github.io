@@ -286,6 +286,8 @@ const explore = defineCollection({
     seeAlso: list(z.string()),
     /** Further reading (reputable sources). */
     sources: list(z.object({ label: z.string(), url: z.url() })),
+    /** YouTube Short about this article: its video ID (from youtube.com/shorts/<id>), shown click-to-play in the side column. */
+    youtubeShort: blank(z.string()),
     status,
     assisted: z.boolean().default(false),
     lastReviewed: blank(z.coerce.date()),

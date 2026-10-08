@@ -11,6 +11,7 @@ import Breadcrumbs from '../../../components/layout/Breadcrumbs.astro';
 import MathStyles from '../../../components/lesson/MathStyles.astro';
 import Timeline from '../../../components/explore/Timeline.astro';
 import ExploreCard from '../../../components/explore/ExploreCard.astro';
+import ShortEmbed from '../../../components/media/ShortEmbed.astro';
 import { lessonComponents } from '../../../components/lesson';
 import { getAll, isDraft, isVisible } from '../../../lib/content';
 import { exploreSections } from '../../../config/explore';
@@ -97,6 +98,7 @@ const fmtDate = (d: Date) => d.toLocaleDateString('en-GB', { day: 'numeric', mon
             )}
           </div>
         )}
+        {data.youtubeShort && <ShortEmbed id={data.youtubeShort} title={data.title} />}
         {toc.length > 2 && (
           <nav class="toc no-print" aria-label="On this page">
             <p class="toc__title">On this page</p>
