@@ -8,6 +8,7 @@ level: beginner
 access: free
 status: published
 assisted: true
+video: acids-and-bases-quiz
 
 questions:
   - id: ab-q1

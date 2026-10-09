@@ -160,6 +160,7 @@ collections:
       - { name: description, label: Description, widget: text }
       - { name: videoId, label: YouTube video ID, widget: string, required: false, hint: 'From youtube.com/watch?v=THIS-PART. Leave empty until uploaded.' }
       - { name: duration, label: Duration, widget: string, required: false, hint: 'Format PT#M#S, e.g. PT6M30S = 6 min 30 s' }
+      - { name: playButton, label: Play button corner (on the poster), widget: select, options: [left, right], default: left, required: false, hint: 'Lecture thumbnails: right. Quiz thumbnails: left.' }
       - { name: uploadDate, label: Upload date, widget: datetime, required: false, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD' }
       - { name: keyPoints, label: Key points, widget: list, required: false }
       - { name: level, label: Level, widget: select, options: [beginner, intermediate, advanced], required: false }

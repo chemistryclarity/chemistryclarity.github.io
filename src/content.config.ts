@@ -132,6 +132,8 @@ const videos = defineCollection({
     /** The ID from the YouTube link (youtube.com/watch?v=THIS_PART). Leave out until uploaded. */
     videoId: blank(z.string()),
     duration: blank(z.string()), // e.g. "PT6M30S" (6 min 30 s)
+    /** Corner for the play button on the poster image, so it doesn't cover the thumbnail's text. */
+    playButton: z.enum(['left', 'right']).default('left'),
     uploadDate: blank(z.coerce.date()),
     keyPoints: list(z.string()),
     level: blank(level),

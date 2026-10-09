@@ -1,17 +1,15 @@
 ---
-title: The Mole Concept Explained
-description: "[PLACEHOLDER] One or two sentences describing what the video covers."
-# videoId: "PASTE_YOUTUBE_ID_HERE"   (remove the # once the video is on YouTube)
-# duration: "PT6M30S"                (6 minutes 30 seconds)
-# uploadDate: 2026-11-01
+title: 'The Mole Concept in 5 Minutes'
+description: 'What a mole is, why chemists count in moles, molar mass, and the two conversions that solve almost every mole problem, with animated illustrations and a worked example.'
+videoId: 'u_0Qj8mg4MY'
+duration: 'PT6M35S'
+playButton: right
+uploadDate: 2026-10-10
 keyPoints:
-  - "[Key point 1]"
-  - "[Key point 2]"
-  - "[Key point 3]"
+  - '1 mol = 6.022 × 10²³ particles (Avogadro''s number)'
+  - 'Molar mass (g/mol) has the same number as the atomic or formula mass (u)'
+  - 'moles = mass ÷ molar mass; particles = moles × 6.022 × 10²³'
+  - 'Always ask: a mole of what?'
 level: beginner
-status: draft
+status: published
 ---
-
-## Transcript
-
-[OPTIONAL: paste the video transcript here. Transcripts help students who prefer reading, people who can't play sound, and search engines.]
