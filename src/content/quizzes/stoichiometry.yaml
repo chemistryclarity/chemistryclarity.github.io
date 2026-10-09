@@ -9,6 +9,7 @@ level: intermediate
 access: free
 status: published
 assisted: true
+video: stoichiometry-quiz
 
 questions:
   - id: st-q1
