@@ -100,6 +100,8 @@ const quizzes = defineCollection({
     access,
     status,
     assisted: z.boolean().default(false),
+    /** Video version of this quiz on YouTube (a file in src/content/videos), shown below the questions. */
+    video: blank(reference('videos')),
     questions: z
       .array(
         z

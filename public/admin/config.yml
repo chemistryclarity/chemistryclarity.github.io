@@ -128,6 +128,7 @@ collections:
       - { name: access, label: Access, widget: select, options: [free, premium], default: free }
       - { name: status, label: Status, widget: select, options: [draft, review, published], default: draft }
       - { name: assisted, label: Drafted with assistance, widget: boolean, default: false, required: false }
+      - { name: video, label: Video version (YouTube), widget: relation, collection: videos, value_field: '{{slug}}', search_fields: [title], display_fields: [title], required: false, hint: 'Shown below the questions.' }
       - name: questions
         label: Questions
         label_singular: Question

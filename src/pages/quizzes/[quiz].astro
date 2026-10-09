@@ -6,7 +6,9 @@ import UsedIn from '../../components/layout/UsedIn.astro';
 import LevelBadge from '../../components/cards/LevelBadge.astro';
 import MathStyles from '../../components/lesson/MathStyles.astro';
 import Quiz from '../../components/learning/Quiz.astro';
-import { getAll, getTopicsUsing, isDraft } from '../../lib/content';
+import VideoEmbed from '../../components/media/VideoEmbed.astro';
+import { getEntry } from 'astro:content';
+import { getAll, getTopicsUsing, isDraft, isVisible } from '../../lib/content';
 
 export const getStaticPaths = (async () => {
   const quizzes = await getAll('quizzes');
@@ -16,6 +18,8 @@ export const getStaticPaths = (async () => {
 const { quiz } = Astro.props;
 const topics = await getTopicsUsing('quiz', quiz.id);
 const description = quiz.data.description ?? `${quiz.data.questions.length}-question quiz on ${quiz.data.title}, with explanations.`;
+const videoEntry = quiz.data.video ? await getEntry(quiz.data.video) : undefined;
+const video = videoEntry && videoEntry.data.videoId && (isVisible(videoEntry) || isDraft(quiz)) ? videoEntry : undefined;
 ---
 
 <BaseLayout title={quiz.data.title} description={description} path={`/quizzes/${quiz.id}/`} draft={isDraft(quiz)}>
@@ -26,10 +30,20 @@ const description = quiz.data.description ?? `${quiz.data.questions.length}-ques
       <LevelBadge level={quiz.data.level} />
     </PageHeader>
     <Quiz quiz={quiz} />
+    {video && (
+      <section class="video-quiz" aria-labelledby="video-quiz-h">
+        <h2 id="video-quiz-h">Prefer to watch? Try the video quiz</h2>
+        <p class="muted">{video.data.description}</p>
+        <VideoEmbed video={video} />
+      </section>
+    )}
     <UsedIn topics={topics} />
   </div>
 </BaseLayout>
 
 <style>
   .narrow { max-width: calc(var(--measure) + 2 * var(--gutter)); }
+  .video-quiz { margin-top: var(--space-7); }
+  .video-quiz h2 { font-size: var(--step-1); }
+  .video-quiz > p { margin: var(--space-2) 0 var(--space-4); }
 </style>
