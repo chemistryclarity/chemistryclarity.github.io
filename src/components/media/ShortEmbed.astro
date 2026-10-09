@@ -4,8 +4,10 @@
  * Nothing is loaded from YouTube until the visitor presses play; uses the privacy-enhanced
  * (youtube-nocookie.com) player. Below the player, a link to watch it on YouTube.
  */
-import fs from 'node:fs';
 import { url } from '../../lib/url';
+
+/** Posters stored on the site: public/images/shorts/<id>.jpg (listed at build time). */
+const posters = Object.keys(import.meta.glob('/public/images/shorts/*.jpg'));
 
 export interface Props {
   /** The Short's video ID, e.g. "8N2x6Bp3iTo" from youtube.com/shorts/8N2x6Bp3iTo. */
@@ -14,7 +16,7 @@ export interface Props {
 }
 const { id, title } = Astro.props;
 /** Optional poster stored on the site (public/images/shorts/<id>.jpg, e.g. the Short's vertical thumbnail). */
-const poster = fs.existsSync(`public/images/shorts/${id}.jpg`) ? url(`/images/shorts/${id}.jpg`) : null;
+const poster = posters.includes(`/public/images/shorts/${id}.jpg`) ? url(`/images/shorts/${id}.jpg`) : null;
 ---
 
 <div class="short no-print">

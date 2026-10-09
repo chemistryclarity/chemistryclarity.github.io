@@ -1,6 +1,10 @@
 ---
 import type { GetStaticPaths } from 'astro';
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
+import MathStyles from '../../components/lesson/MathStyles.astro';
+import { lessonComponents } from '../../components/lesson';
+import QPreview from '../../components/resource/QPreview.astro';
+import DataBoxPreview from '../../components/resource/DataBoxPreview.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/layout/PageHeader.astro';
 import UsedIn from '../../components/layout/UsedIn.astro';
@@ -24,6 +28,9 @@ const href = (p?: string) => (p ? (p.startsWith('http') ? p : url(p)) : undefine
 const fileHref = href(data.file);
 const answerHref = href(data.answerKey);
 const typeLabel = resourceTypeLabel[data.type];
+// Free worksheets show their questions on the page (answers stay in the answer key), from the same file as the PDF.
+const printable = data.access === 'free' ? await getEntry('printables', resource.id) : undefined;
+const Preview = printable && printable.data.kind === 'worksheet' && isVisible(printable) ? (await render(printable)).Content : undefined;
 ---
 
 <BaseLayout title={data.title} description={data.description} path={`/resources/${resource.id}/`} draft={isDraft(resource)}>
@@ -69,6 +76,20 @@ const typeLabel = resourceTypeLabel[data.type];
       </div>
     </div>
 
+    {Preview && (
+      <section class="questions" aria-labelledby="questions-h">
+        <MathStyles />
+        <h2 id="questions-h">Preview the questions</h2>
+        <p class="muted">
+          All the questions on this worksheet{printable?.data.time ? ` (about ${printable.data.time})` : ''}. Download the PDF to print it with
+          space for working{answerHref ? '; the free answer key has full worked solutions' : ''}.
+        </p>
+        <div class="prose questions__body">
+          <Preview components={{ ...lessonComponents, Q: QPreview, DataBox: DataBoxPreview }} />
+        </div>
+      </section>
+    )}
+
     <UsedIn topics={topics} />
   </div>
 </BaseLayout>
@@ -106,4 +127,10 @@ const typeLabel = resourceTypeLabel[data.type];
   .resource__info .btn { justify-self: start; }
   .downloads { display: flex; flex-wrap: wrap; gap: var(--space-3); }
   .soon { color: var(--muted); font-size: var(--step--1); }
+  .questions { margin-top: var(--space-7); max-width: var(--measure); }
+  .questions h2 { font-size: var(--step-2); }
+  .questions > p { margin-top: var(--space-2); }
+  .questions__body { margin-top: var(--space-4); padding: var(--space-5); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+  .questions__body :global(h2) { font-size: var(--step-1); margin-top: var(--space-5); }
+  .questions__body :global(h2:first-child) { margin-top: 0; }
 </style>

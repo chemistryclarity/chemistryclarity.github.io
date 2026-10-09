@@ -1,0 +1,26 @@
+---
+/**
+ * Web version of a worksheet question (src/components/print/Q.astro) for the question preview
+ * on resource pages: number, question and marks, without the blank answer lines or boxes.
+ */
+export interface Props {
+  n: number | string;
+  lines?: number;
+  box?: number;
+  marks?: number;
+}
+const { n, marks } = Astro.props;
+---
+
+<div class="qp">
+  <span class="qp__n">{n}.</span>
+  <div class="qp__body"><slot /></div>
+  {marks && <span class="qp__marks">[{marks}]</span>}
+</div>
+
+<style>
+  .qp { display: grid; grid-template-columns: 2.2em 1fr auto; gap: 0.3em; align-items: baseline; margin-block: var(--space-3); }
+  .qp__n { font-weight: 700; }
+  .qp__body > :global(* + *) { margin-top: var(--space-2); }
+  .qp__marks { font-size: var(--step--1); color: var(--muted); white-space: nowrap; }
+</style>

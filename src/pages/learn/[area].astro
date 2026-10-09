@@ -3,8 +3,13 @@ import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/layout/Breadcrumbs.astro';
 import TopicCard from '../../components/cards/TopicCard.astro';
-import { getAreas, getTopicsByArea, levelLabel } from '../../lib/content';
-import { routes } from '../../lib/url';
+import { getAll, getAreas, getTopicsByArea, isVisible, levelLabel, resourceTypeLabel } from '../../lib/content';
+import { routes, url } from '../../lib/url';
+
+// Published practice material, for the "Practise" links (drafts are never linked).
+const visibleIds = async (c: 'flashcards' | 'quizzes') => new Set((await getAll(c)).filter(isVisible).map((e) => e.id));
+const [flashcardIds, quizIds] = await Promise.all([visibleIds('flashcards'), visibleIds('quizzes')]);
+const resourceById = new Map((await getAll('resources')).filter(isVisible).map((r) => [r.id, r]));
 
 export const getStaticPaths = (async () => {
   const areas = await getAreas();
@@ -42,10 +47,30 @@ const levels = (['beginner', 'intermediate', 'advanced'] as const)
         <section class="level-group" aria-labelledby={`level-${group.level}`}>
           <h2 id={`level-${group.level}`}>{levelLabel[group.level]}</h2>
           <ul class="cards" role="list">
-            {group.items.map((topic) => <li><TopicCard topic={topic} /></li>)}
+            {group.items.map((topic) => <li><TopicCard topic={topic} detailed /></li>)}
           </ul>
         </section>
       ))
+    )}
+    {topics.length > 0 && (
+      <section class="practise" aria-labelledby="practise-h">
+        <h2 id="practise-h">Practise {area.data.title.toLowerCase()}</h2>
+        <p class="muted">Check your understanding with free flashcards, quizzes and printable worksheets for each lesson.</p>
+        <ul class="practise__list" role="list">
+          {topics.map((t) => (
+            <li>
+              <a class="practise__topic" href={routes.topic(t.id)}>{t.data.title}</a>
+              <span class="practise__links">
+                {t.data.flashcards && flashcardIds.has(t.data.flashcards.id) && <a href={url(`/flashcards/${t.data.flashcards.id}/`)}>Flashcards</a>}
+                {t.data.quiz && quizIds.has(t.data.quiz.id) && <a href={url(`/quizzes/${t.data.quiz.id}/`)}>Quiz</a>}
+                {t.data.resources.map((r) => resourceById.get(r.id)).filter((r) => r !== undefined).map((r) => (
+                  <a href={url(`/resources/${r.id}/`)}>{resourceTypeLabel[r.data.type]}</a>
+                ))}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
     )}
   </div>
 </BaseLayout>
@@ -63,6 +88,13 @@ const levels = (['beginner', 'intermediate', 'advanced'] as const)
     gap: var(--space-4);
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
   }
+  .practise { margin-top: var(--space-8, var(--space-7)); max-width: var(--measure); }
+  .practise h2 { font-size: var(--step-2); }
+  .practise > p { margin-top: var(--space-2); }
+  .practise__list { list-style: none; padding: 0; margin-top: var(--space-4); display: grid; gap: var(--space-2); }
+  .practise__list li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-1) var(--space-4); padding-bottom: var(--space-2); border-bottom: 1px solid var(--border); }
+  .practise__topic { font-weight: 600; }
+  .practise__links { display: flex; flex-wrap: wrap; gap: var(--space-3); font-size: var(--step--1); }
   .empty {
     padding: var(--space-6);
     border: 1px dashed var(--border-strong);

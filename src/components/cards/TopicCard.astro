@@ -9,8 +9,10 @@ export interface Props {
   topic: CollectionEntry<'topics'>;
   /** Heading level for the card title, to keep the page outline correct. */
   as?: 'h2' | 'h3' | 'h4';
+  /** Also show the lesson's one-line description (subject-area pages). */
+  detailed?: boolean;
 }
-const { topic, as: Heading = 'h3' } = Astro.props;
+const { topic, as: Heading = 'h3', detailed = false } = Astro.props;
 const area = await getEntry(topic.data.area);
 ---
 
@@ -20,6 +22,7 @@ const area = await getEntry(topic.data.area);
     <a href={routes.topic(topic.id)}>{topic.data.title}</a>
   </Heading>
   <p class="card__question">{topic.data.question}</p>
+  {detailed && topic.data.description && <p class="card__desc">{topic.data.description}</p>}
   <div class="card__meta">
     <LevelBadge level={topic.data.level} />
     {isDraft(topic) && <span class="badge badge--draft">Draft</span>}
@@ -53,5 +56,6 @@ const area = await getEntry(topic.data.area);
   .card__title a:focus-visible { outline: none; }
   .card:has(a:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
   .card__question { color: var(--muted); font-size: var(--step--1); }
+  .card__desc { font-size: var(--step--1); }
   .card__meta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
 </style>
