@@ -1,8 +1,8 @@
 ---
 title: 'The Mole Concept in 5 Minutes'
 description: 'What a mole is, why chemists count in moles, molar mass, and the two conversions that solve almost every mole problem, with animated illustrations and a worked example.'
-videoId: 'u_0Qj8mg4MY'
-duration: 'PT6M35S'
+videoId: 'J70phiXjH1I'
+duration: 'PT7M31S'
 playButton: right
 uploadDate: 2026-10-10
 keyPoints:
